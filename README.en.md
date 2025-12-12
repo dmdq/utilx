@@ -7,9 +7,9 @@
   [![Nuxt.js](https://img.shields.io/badge/Nuxt.js-3.20.2-blue)](https://nuxt.com/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.0-38B2AC)](https://tailwindcss.com/)
   [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
-  [![GitHub stars](https://img.shields.io/github/stars/utilcn/util-toolkit?style=social)](https://github.com/utilcn/util-toolkit/stargazers)
-  [![GitHub forks](https://img.shields.io/github/forks/utilcn/util-toolkit?style=social)](https://github.com/utilcn/util-toolkit/network)
-  [![GitHub issues](https://img.shields.io/github/issues/utilcn/util-toolkit)](https://github.com/utilcn/util-toolkit/issues)
+  [![GitHub stars](https://img.shields.io/github/stars/dmdq/utilx?style=social)](https://github.com/dmdq/utilx/stargazers)
+  [![GitHub forks](https://img.shields.io/github/forks/dmdq/utilx?style=social)](https://github.com/dmdq/utilx/network)
+  [![GitHub issues](https://img.shields.io/github/issues/dmdq/utilx)](https://github.com/dmdq/utilx/issues)
 
   **🚀 A modern, ad-free developer toolbox with 80+ utilities**
 
@@ -104,10 +104,10 @@
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/utilcn/util-toolkit.git
+git clone https://github.com/dmdq/utilx.git
 
 # Navigate to the project directory
-cd util-toolkit
+cd utilx
 
 # Install dependencies
 npm install
@@ -159,7 +159,7 @@ pnpm generate
 ## 📁 Project Structure
 
 ```
-util-toolkit/
+utilx/
 ├── src/                    # Source code
 │   ├── assets/            # Static assets
 │   ├── components/        # Vue components
@@ -214,13 +214,13 @@ This project is licensed under the [MIT License](LICENSE).
 ## 📧 Contact
 
 - 📧 Email: skyin.lewis@gmail.com
-- 🐛 Report issues: [GitHub Issues](https://github.com/utilcn/util-toolkit/issues)
-- 💬 Feature requests: [GitHub Discussions](https://github.com/utilcn/util-toolkit/discussions)
+- 🐛 Report issues: [GitHub Issues](https://github.com/dmdq/utilx/issues)
+- 💬 Feature requests: [GitHub Discussions](https://github.com/dmdq/utilx/discussions)
 
 ---
 
 <div align="center">
   Made with ❤️ by Util.cn Team
 
-  [⭐ Star this repo](https://github.com/utilcn/util-toolkit) if it helped you!
+  [⭐ Star this repo](https://github.com/dmdq/utilx) if it helped you!
 </div>

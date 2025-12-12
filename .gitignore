@@ -145,3 +145,9 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+.nuxt
+.DS_Store
+.output
+.claude
+.vscode

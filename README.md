@@ -7,9 +7,9 @@
   [![Nuxt.js](https://img.shields.io/badge/Nuxt.js-3.20.2-blue)](https://nuxt.com/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4.0-38B2AC)](https://tailwindcss.com/)
   [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
-  [![GitHub stars](https://img.shields.io/github/stars/utilcn/util-toolkit?style=social)](https://github.com/utilcn/util-toolkit/stargazers)
-  [![GitHub forks](https://img.shields.io/github/forks/utilcn/util-toolkit?style=social)](https://github.com/utilcn/util-toolkit/network)
-  [![GitHub issues](https://img.shields.io/github/issues/utilcn/util-toolkit)](https://github.com/utilcn/util-toolkit/issues)
+  [![GitHub stars](https://img.shields.io/github/stars/dmdq/utilx?style=social)](https://github.com/dmdq/utilx/stargazers)
+  [![GitHub forks](https://img.shields.io/github/forks/dmdq/utilx?style=social)](https://github.com/dmdq/utilx/network)
+  [![GitHub issues](https://img.shields.io/github/issues/dmdq/utilx)](https://github.com/dmdq/utilx/issues)
 
   **🚀 现代化的开发者工具箱，无广告 · 纯本地计算 · 即开即用**
 
@@ -105,10 +105,10 @@
 ### 安装
 ```bash
 # 克隆项目
-git clone https://github.com/utilcn/util-toolkit.git
+git clone https://github.com/dmdq/utilx.git
 
 # 进入项目目录
-cd util-toolkit
+cd utilx
 
 # 安装依赖
 npm install
@@ -160,7 +160,7 @@ pnpm generate
 ## 📁 项目结构
 
 ```
-util-toolkit/
+utilx/
 ├── src/                    # 源代码
 │   ├── assets/            # 静态资源
 │   ├── components/        # Vue 组件
@@ -215,13 +215,13 @@ util-toolkit/
 ## 📧 联系方式
 
 - 📧 邮箱：skyin.lewis@gmail.com
-- 🐛 问题反馈：[GitHub Issues](https://github.com/utilcn/util-toolkit/issues)
-- 💬 功能建议：[GitHub Discussions](https://github.com/utilcn/util-toolkit/discussions)
+- 🐛 问题反馈：[GitHub Issues](https://github.com/dmdq/utilx/issues)
+- 💬 功能建议：[GitHub Discussions](https://github.com/dmdq/utilx/discussions)
 
 ---
 
 <div align="center">
   由 Util.cn 团队用 ❤️ 制作
 
-  [⭐ 如果这个项目对你有帮助，请给我们一个 Star！](https://github.com/utilcn/util-toolkit)
+  [⭐ 如果这个项目对你有帮助，请给我们一个 Star！](https://github.com/dmdq/utilx)
 </div>

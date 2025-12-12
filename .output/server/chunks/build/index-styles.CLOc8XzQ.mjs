@@ -1,8 +1,0 @@
-const index_vue_vue_type_style_index_0_scoped_299db09f_lang = "@keyframes breathe-299db09f{0%,to{opacity:.15;transform:translate(0) scale(1)}50%{opacity:.25;transform:translate(-10px,-10px) scale(1.1)}}.animate-breathe[data-v-299db09f]{animation:breathe-299db09f 8s ease-in-out infinite}@keyframes pulse-slow-299db09f{0%,to{opacity:.08;transform:scale(1)}50%{opacity:.12;transform:scale(1.05)}}.animate-pulse-slow[data-v-299db09f]{animation:pulse-slow-299db09f 4s ease-in-out infinite}.delay-1000[data-v-299db09f]{animation-delay:1s}.delay-2000[data-v-299db09f]{animation-delay:2s}.delay-4000[data-v-299db09f]{animation-delay:4s}.absolute.inset-0.-z-10[data-v-299db09f]{pointer-events:none}";
-
-const indexStyles_CLOc8XzQ = [
-  index_vue_vue_type_style_index_0_scoped_299db09f_lang
-];
-
-export { indexStyles_CLOc8XzQ as default };
-//# sourceMappingURL=index-styles.CLOc8XzQ.mjs.map

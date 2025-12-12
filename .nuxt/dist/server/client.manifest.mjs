@@ -1,1 +1,0 @@
-export { default } from "file:///Users/apple/Documents/code/util/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
