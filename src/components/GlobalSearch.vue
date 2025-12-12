@@ -203,21 +203,21 @@ const popularTools = computed(() => {
 const filteredTools = computed(() => {
   if (!searchQuery.value) return []
 
-  const query = searchQuery.value.toLowerCase()
+  const query = String(searchQuery.value || '').toLowerCase()
   return tools.filter(tool =>
-    tool.name.toLowerCase().includes(query) ||
-    tool.description.toLowerCase().includes(query) ||
-    tool.keywords.some(keyword => keyword.toLowerCase().includes(query))
+    String(tool.name || '').toLowerCase().includes(query) ||
+    String(tool.description || '').toLowerCase().includes(query) ||
+    (tool.keywords || []).some(keyword => String(keyword || '').toLowerCase().includes(query))
   )
 })
 
 const filteredPages = computed(() => {
   if (!searchQuery.value) return []
 
-  const query = searchQuery.value.toLowerCase()
+  const query = String(searchQuery.value || '').toLowerCase()
   return pages.filter(page =>
-    page.name.toLowerCase().includes(query) ||
-    page.description.toLowerCase().includes(query)
+    String(page.name || '').toLowerCase().includes(query) ||
+    String(page.description || '').toLowerCase().includes(query)
   )
 })
 

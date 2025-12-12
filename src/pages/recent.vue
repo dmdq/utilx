@@ -63,7 +63,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { 
   Clock, History, Trash2, Compass,Lock,
@@ -99,12 +99,22 @@ const iconMap = {
 }
 
 // 最近使用的工具
-const recentTools = computed(() => {
+const recentTools = ref([])
+
+// 更新最近使用的工具列表
+const updateRecentTools = () => {
   const recentIds = getRecentTools()
-  return recentIds
+  recentTools.value = recentIds
     .map(id => tools.find(tool => tool.id === id))
     .filter(Boolean)
-})
+}
+
+// 监听存储变化
+const handleStorageChange = (e) => {
+  if (e.key === 'recent-tools') {
+    updateRecentTools()
+  }
+}
 
 // 格式化浏览量
 const formatViewCount = (count) => {
@@ -129,10 +139,22 @@ const handleToolSelect = (tool) => {
 // 清空最近使用的工具
 const clearRecentToolsHandler = () => {
   clearRecentTools()
+  updateRecentTools()
 }
 
 // 获取图标组件
 const getIconComponent = (iconName) => {
   return iconMap[iconName] || FileText
 }
+
+// 组件挂载时初始化数据
+onMounted(() => {
+  updateRecentTools()
+  window.addEventListener('storage', handleStorageChange)
+})
+
+// 组件卸载时清理事件监听器
+onUnmounted(() => {
+  window.removeEventListener('storage', handleStorageChange)
+})
 </script>

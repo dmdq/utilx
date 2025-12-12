@@ -236,22 +236,22 @@ const currentCategoryName = computed(() => {
 const currentToolName = computed(() => {
   // 检查是否是静态页面（about, privacy, terms, cookie等）
   const staticPages = {
-    '/about': '关于我们',
-    '/privacy': '隐私政策',
-    '/terms': '服务条款',
-    '/cookie': 'Cookie政策'
+    '/about/': '关于我们',
+    '/privacy/': '隐私政策',
+    '/terms/': '服务条款',
+    '/cookie/': 'Cookie政策'
   }
 
   // 检查是否是特殊页面
   const specialPages = {
-    '/all': '全部工具',
-    '/explore': '工具探索',
-    '/favorites': '我的收藏',
-    '/recent': '最近使用',
-    '/feedback': '提交反馈',
-    '/cookie': 'Cookie政策',
-    '/faq': '常见问题',
-    '/sitemap': '站点地图'
+    '/all/': '全部工具',
+    '/explore/': '工具探索',
+    '/favorites/': '我的收藏',
+    '/recent/': '最近使用',
+    '/feedback/': '提交反馈',
+    '/cookie/': 'Cookie政策',
+    '/faq/': '常见问题',
+    '/sitemap/': '站点地图'
   }
 
   if (route && staticPages[route.path]) {
@@ -283,22 +283,22 @@ const pageTitle = computed(() => {
 
   // 检查是否是静态页面
   const staticPages = {
-    '/about': '关于我们',
-    '/privacy': '隐私政策',
-    '/terms': '服务条款',
-    '/cookie': 'Cookie政策'
+    '/about/': '关于我们',
+    '/privacy/': '隐私政策',
+    '/terms/': '服务条款',
+    '/cookie/': 'Cookie政策'
   }
 
   // 检查是否是特殊页面
   const specialPages = {
-    '/all': '全部工具',
-    '/explore': '工具探索',
-    '/favorites': '我的收藏',
-    '/recent': '最近使用',
-    '/feedback': '提交反馈',
-    '/cookie': 'Cookie政策',
-    '/faq': '常见问题',
-    '/sitemap': '站点地图'
+    '/all/': '全部工具',
+    '/explore/': '工具探索',
+    '/favorites/': '我的收藏',
+    '/recent/': '最近使用',
+    '/feedback/': '提交反馈',
+    '/cookie/': 'Cookie政策',
+    '/faq/': '常见问题',
+    '/sitemap/': '站点地图'
   }
 
   if (route && staticPages[route.path]) {
@@ -318,7 +318,7 @@ const showBreadcrumbs = computed(() => {
   if (route && route.path === '/') return false
 
   // 检查是否是分类页面
-  const categoryPages = ['/ai', '/crypto', '/dev', '/encode', '/format', '/image', '/network', '/text', '/time', '/all', '/sitemap']
+  const categoryPages = ['/ai/', '/crypto/', '/dev/', '/encode/', '/format/', '/image/', '/network/', '/text/', '/time/', '/all/', '/sitemap/']
 
   // 如果是分类页面或有分类名称或工具名称或页面标题，则显示面包屑
   return categoryPages.includes(route.path) || currentCategoryName.value !== '' || currentToolName.value !== '' || pageTitle.value !== ''
@@ -364,7 +364,7 @@ const handleCategoryChange = (category) => {
   if (category !== 'all') {
     router.push(`/${category}`)
   } else {
-    router.push('/all')
+    router.push('/all/')
   }
   
   // 在移动端设备上，路由跳转后关闭侧边栏
@@ -492,17 +492,6 @@ onMounted(() => {
   // 初始化并更新时间
   updateCurrentTime()
   const timeInterval = setInterval(updateCurrentTime, 1000)
-
-  // 检查并应用保存的主题
-  const savedTheme = localStorage.getItem('theme')
-  if (savedTheme === 'dark') {
-    document.documentElement.classList.add('dark')
-  } else if (savedTheme === 'light') {
-    document.documentElement.classList.remove('dark')
-  } else {
-    // 如果没有保存的主题设置，默认使用暗色主题
-    document.documentElement.classList.add('dark')
-  }
 
   // 在组件卸载时清理定时器
   onUnmounted(() => {

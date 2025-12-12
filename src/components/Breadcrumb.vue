@@ -41,7 +41,7 @@ const breadcrumbs = computed(() => {
       if (category) {
         paths.push({
           name: category.name,
-          path: `/${category.id}`
+          path: `/${category.id}/`
         })
       }
 
@@ -60,80 +60,80 @@ const breadcrumbs = computed(() => {
     if (category) {
       paths.push({
         name: category.name,
-        path: `/${categoryId}`
+        path: `/${categoryId}/`
       })
     }
     // 处理特殊页面
     else if (pathSegments[0] === 'all') {
       paths.push({
         name: '全部工具',
-        path: '/all'
+        path: '/all/'
       })
     }
     else if (pathSegments[0] === 'explore') {
       paths.push({
         name: '工具探索',
-        path: '/explore'
+        path: '/explore/'
       })
     }
     else if (pathSegments[0] === 'favorites') {
       paths.push({
         name: '我的收藏',
-        path: '/favorites'
+        path: '/favorites/'
       })
     }
     else if (pathSegments[0] === 'recent') {
       paths.push({
         name: '最近使用',
-        path: '/recent'
+        path: '/recent/'
       })
     }
     else if (pathSegments[0] === 'about') {
       paths.push({
         name: '关于我们',
-        path: '/about'
+        path: '/about/'
       })
     }
     else if (pathSegments[0] === 'privacy') {
       paths.push({
         name: '隐私政策',
-        path: '/privacy'
+        path: '/privacy/'
       })
     }
     else if (pathSegments[0] === 'terms') {
       paths.push({
         name: '服务条款',
-        path: '/terms'
+        path: '/terms/'
       })
     }
     else if (pathSegments[0] === 'feedback') {
       paths.push({
         name: '提交反馈',
-        path: '/feedback'
+        path: '/feedback/'
       })
     }
     else if (pathSegments[0] === 'ai') {
       paths.push({
         name: 'AI 导航',
-        path: '/ai'
+        path: '/ai/'
       })
     }
     else if (pathSegments[0] === 'faq') {
       paths.push({
         name: '常见问题',
-        path: '/faq'
+        path: '/faq/'
       })
     }
     else if (pathSegments[0] === 'cookie') {
       paths.push({
         name: 'Cookie政策',
-        path: '/cookie'
+        path: '/cookie/'
       })
     }
     else if (pathSegments[0] === 'sitemap') {
       paths.push({
         name: '站点地图',
-        path: '/sitemap'
+        path: '/sitemap/'
       })
     }
   }

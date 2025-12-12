@@ -141,14 +141,14 @@ const sidebarSearch = ref('')
 
 // 计算属性：过滤后的工具
 const filteredTools = computed(() => {
-  const searchTerm = (heroSearch.value || '').toLowerCase()
+  const searchTerm = String(heroSearch.value || '').toLowerCase()
 
   return tools.filter(tool => {
     const matchesCategory = currentCategory.value === 'all' || tool.category === currentCategory.value
     const matchesSearch = !searchTerm ||
-      tool.name.toLowerCase().includes(searchTerm) ||
-      tool.description.toLowerCase().includes(searchTerm) ||
-      tool.keywords.some(keyword => keyword.toLowerCase().includes(searchTerm))
+      String(tool.name || '').toLowerCase().includes(searchTerm) ||
+      String(tool.description || '').toLowerCase().includes(searchTerm) ||
+      (tool.keywords || []).some(keyword => String(keyword || '').toLowerCase().includes(searchTerm))
 
     return matchesCategory && matchesSearch
   })
@@ -164,7 +164,8 @@ const formatViewCount = (count) => {
   return `${count}`
 }
 
-const handleSearch = (term) => {
+const handleSearch = (event) => {
+  const term = event.target.value
   heroSearch.value = term
   sidebarSearch.value = term
 }

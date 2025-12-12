@@ -155,7 +155,7 @@
     </div>
     
     <div class="mt-8 text-center text-sm text-muted-foreground">
-      <p>下载即表示您同意我们的 <NuxtLink to="/terms" class="text-primary hover:underline">服务条款</NuxtLink> 和 <NuxtLink to="/privacy" class="text-primary hover:underline">隐私政策</NuxtLink></p>
+      <p>下载即表示您同意我们的 <NuxtLink to="/terms/" class="text-primary hover:underline">服务条款</NuxtLink> 和 <NuxtLink to="/privacy/" class="text-primary hover:underline">隐私政策</NuxtLink></p>
     </div>
     
    

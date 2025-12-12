@@ -46,7 +46,7 @@ Disallow: /dev/
 Disallow: /staging/
 
 # 站点地图
-Sitemap: https://util.cn/sitemap.xml
+Sitemap: https://www.util.cn/sitemap.xml
 
 # 爬取延迟（可选，对大型网站有用）
 Crawl-delay: 1

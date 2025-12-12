@@ -245,7 +245,7 @@ import { useSEO } from '~/composables/useSEO'
 
 // 使用SEO composable设置页面标题
 const { setPageTitle } = useSEO()
-setPageTitle('常用工具UTIL在线')
+setPageTitle('Util.cn 开源应用工具')
 
 // 添加 Open Graph 标签和 JSON Schema
 useHead({
@@ -253,13 +253,13 @@ useHead({
     { property: 'og:title', content: '有条工具 - 开发者的瑞士军刀 | UTIL在线工具集合' },
     { property: 'og:description', content: '无广告 · 纯本地计算 · 即开即用的在线工具平台。提供JSON格式化、Base64编码、时间戳转换、正则表达式测试等开发者常用工具。' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://util.cn/' },
-    { property: 'og:image', content: 'https://util.cn/logo.png' },
+    { property: 'og:url', content: 'https://www.util.cn/' },
+    { property: 'og:image', content: 'https://www.util.cn/logo.png' },
     { property: 'og:locale', content: 'zh_CN' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: '有条工具 - 开发者的瑞士军刀 | UTIL在线工具集合' },
     { name: 'twitter:description', content: '无广告 · 纯本地计算 · 即开即用的在线工具平台。提供JSON格式化、Base64编码、时间戳转换、正则表达式测试等开发者常用工具。' },
-    { name: 'twitter:image', content: 'https://util.cn/logo.png' }
+    { name: 'twitter:image', content: 'https://www.util.cn/logo.png' }
   ],
   script: [
     {
@@ -268,7 +268,7 @@ useHead({
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "有条工具 - 开发者的瑞士军刀",
-        "url": "https://util.cn/",
+        "url": "https://www.util.cn/",
         "description": "无广告 · 纯本地计算 · 即开即用的在线工具平台",
         "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试",
         "publisher": {
@@ -276,12 +276,12 @@ useHead({
           "name": "有条工具",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://util.cn/logo.png"
+            "url": "https://www.util.cn/logo.png"
           }
         },
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://util.cn/all/?search={search_term_string}",
+          "target": "https://www.util.cn/all/?search={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       })
@@ -323,12 +323,12 @@ const iconMap = {
 
 // 热门标签
 const popularTags = ref([
-  'JSON格式化',
+  'Markdown编辑器',
   '时间戳转换',
-  'Base64编码',
+  'MD5生成器',
   'Cron生成器',
   'JWT解码',
-  'URL编码'
+  '图片尺寸调整'
 ])
 
 // 推荐工具（新用户）

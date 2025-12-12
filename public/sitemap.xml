@@ -6,7 +6,7 @@
 
   <!-- 首页 -->
   <url>
-    <loc>https://util.cn/</loc>
+    <loc>https://www.util.cn/</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,42 +14,42 @@
 
   <!-- 静态页面 -->
   <url>
-    <loc>https://util.cn/about</loc>
+    <loc>https://www.util.cn/about</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/privacy</loc>
+    <loc>https://www.util.cn/privacy</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/terms</loc>
+    <loc>https://www.util.cn/terms</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/faq</loc>
+    <loc>https://www.util.cn/faq</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/feedback</loc>
+    <loc>https://www.util.cn/feedback</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/download</loc>
+    <loc>https://www.util.cn/download</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -57,70 +57,70 @@
 
   <!-- 分类页面 -->
   <url>
-    <loc>https://util.cn/ai</loc>
+    <loc>https://www.util.cn/ai</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/all</loc>
+    <loc>https://www.util.cn/all</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/crypto</loc>
+    <loc>https://www.util.cn/crypto</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/dev</loc>
+    <loc>https://www.util.cn/dev</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/encode</loc>
+    <loc>https://www.util.cn/encode</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/format</loc>
+    <loc>https://www.util.cn/format</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/image</loc>
+    <loc>https://www.util.cn/image</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/network</loc>
+    <loc>https://www.util.cn/network</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/text</loc>
+    <loc>https://www.util.cn/text</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://util.cn/time</loc>
+    <loc>https://www.util.cn/time</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -128,7 +128,7 @@
 
   <!-- 探索页面 -->
   <url>
-    <loc>https://util.cn/explore</loc>
+    <loc>https://www.util.cn/explore</loc>
     <lastmod>2025-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

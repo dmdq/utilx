@@ -564,7 +564,7 @@ const loadExample = (type) => {
 
   switch (type) {
     case 'url':
-      formData.value.url = 'https://util.cn'
+      formData.value.url = 'https://www.util.cn'
       break
 
     case 'wifi':
@@ -590,7 +590,7 @@ const loadExample = (type) => {
         organization: 'Util科技',
         phone: '13800138000',
         email: 'zhangsan@util.cn',
-        url: 'https://util.cn'
+        url: 'https://www.util.cn'
       }
       break
   }

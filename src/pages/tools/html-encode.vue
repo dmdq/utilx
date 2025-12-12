@@ -185,11 +185,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="p-3 bg-muted rounded-lg">
                 <p class="text-xs text-muted-foreground mb-1">原始:</p>
-                <code class="text-xs">© 2024 Company® - All rights reserved.</code>
+                <code class="text-xs">© 2025 Company® - All rights reserved.</code>
               </div>
               <div class="p-3 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg">
                 <p class="text-xs text-muted-foreground mb-1">编码:</p>
-                <code class="text-xs">&amp;copy; 2024 Company&amp;reg; - All rights reserved.</code>
+                <code class="text-xs">&amp;copy; 2025 Company&amp;reg; - All rights reserved.</code>
               </div>
             </div>
           </div>

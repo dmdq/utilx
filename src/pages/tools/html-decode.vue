@@ -178,11 +178,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="p-3 bg-muted rounded-lg">
                 <p class="text-xs text-muted-foreground mb-1">编码:</p>
-                <code class="text-xs">&amp;copy; 2024 &amp;reg; Company Ltd.</code>
+                <code class="text-xs">&amp;copy; 2025 &amp;reg; Company Ltd.</code>
               </div>
               <div class="p-3 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg">
                 <p class="text-xs text-muted-foreground mb-1">解码:</p>
-                <code class="text-xs">© 2024 ® Company Ltd.</code>
+                <code class="text-xs">© 2025 ® Company Ltd.</code>
               </div>
             </div>
           </div>
@@ -401,7 +401,7 @@ const decodeHTML = (text) => {
 
 // 加载示例
 const loadExample = () => {
-  inputText.value = '&lt;p&gt;Hello &amp; Welcome! &copy; 2024 Company&amp;reg;&lt;/p&gt;\n&amp;#72;&amp;#101;&amp;#108;&amp;#108;&amp;#111; &amp;#x57;&amp;#x6f;&amp;#x72;&amp;#x6c;&amp;#x64;'
+  inputText.value = '&lt;p&gt;Hello &amp; Welcome! &copy; 2025 Company&amp;reg;&lt;/p&gt;\n&amp;#72;&amp;#101;&amp;#108;&amp;#108;&amp;#111; &amp;#x57;&amp;#x6f;&amp;#x72;&amp;#x6c;&amp;#x64;'
 }
 
 // 监听输入变化

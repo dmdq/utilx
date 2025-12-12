@@ -9,171 +9,185 @@
     <!-- 工具交互区 -->
     <div class="mb-8">
       <!-- 工具栏 -->
-      <div class="bg-card border border-border rounded-t-lg p-3 flex items-center gap-2 flex-wrap">
+      <div class="bg-card border border-border rounded-t-lg px-2 py-2 flex items-center gap-1 flex-wrap">
         <!-- 常用格式按钮 -->
-        <div class="flex items-center gap-1">
+        <div class="flex items-center gap-0.5">
           <button
             @click="insertMarkdown('**', '**')"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="粗体"
           >
-            <Bold class="w-4 h-4" />
+            <Bold class="w-3.5 h-3.5" />
           </button>
           <button
             @click="insertMarkdown('*', '*')"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="斜体"
           >
-            <Italic class="w-4 h-4" />
+            <Italic class="w-3.5 h-3.5" />
           </button>
           <button
             @click="insertMarkdown('~~', '~~')"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="删除线"
           >
-            <Strikethrough class="w-4 h-4" />
+            <Strikethrough class="w-3.5 h-3.5" />
           </button>
         </div>
 
-        <div class="w-px h-6 bg-border" />
+        <div class="w-px h-5 bg-border" />
 
         <!-- 标题按钮 -->
-        <div class="flex items-center gap-1">
+        <div class="flex items-center gap-0.5">
           <button
             @click="insertHeading(1)"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="px-2 py-1 hover:bg-muted rounded transition-colors text-xs font-bold"
             title="一级标题"
           >
-            <h1 class="text-lg font-bold">H1</h1>
+            H1
           </button>
           <button
             @click="insertHeading(2)"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="px-2 py-1 hover:bg-muted rounded transition-colors text-xs font-bold"
             title="二级标题"
           >
-            <h2 class="text-lg font-bold">H2</h2>
+            H2
           </button>
           <button
             @click="insertHeading(3)"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="px-2 py-1 hover:bg-muted rounded transition-colors text-xs font-bold"
             title="三级标题"
           >
-            <h3 class="text-sm font-bold">H3</h3>
+            H3
           </button>
         </div>
 
-        <div class="w-px h-6 bg-border" />
+        <div class="w-px h-5 bg-border" />
 
         <!-- 列表按钮 -->
-        <div class="flex items-center gap-1">
+        <div class="flex items-center gap-0.5">
           <button
             @click="insertList('unordered')"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="无序列表"
           >
-            <List class="w-4 h-4" />
+            <List class="w-3.5 h-3.5" />
           </button>
           <button
             @click="insertList('ordered')"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="有序列表"
           >
-            <ListOrdered class="w-4 h-4" />
+            <ListOrdered class="w-3.5 h-3.5" />
           </button>
         </div>
 
-        <div class="w-px h-6 bg-border" />
+        <div class="w-px h-5 bg-border" />
 
         <!-- 链接和图片 -->
-        <div class="flex items-center gap-1">
+        <div class="flex items-center gap-0.5">
           <button
             @click="insertLink"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="插入链接"
           >
-            <Link class="w-4 h-4" />
+            <Link class="w-3.5 h-3.5" />
           </button>
           <button
             @click="insertImage"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="插入图片"
           >
-            <Image class="w-4 h-4" />
+            <Image class="w-3.5 h-3.5" />
           </button>
         </div>
 
-        <div class="w-px h-6 bg-border" />
+        <div class="w-px h-5 bg-border" />
 
         <!-- 代码和引用 -->
-        <div class="flex items-center gap-1">
+        <div class="flex items-center gap-0.5">
           <button
             @click="insertInlineCode"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="行内代码"
           >
-            <Code class="w-4 h-4" />
+            <Code class="w-3.5 h-3.5" />
           </button>
           <button
             @click="insertCodeBlock"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="代码块"
           >
-            <FileCode class="w-4 h-4" />
+            <FileCode class="w-3.5 h-3.5" />
           </button>
           <button
             @click="insertQuote"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="引用"
           >
-            <Quote class="w-4 h-4" />
+            <Quote class="w-3.5 h-3.5" />
           </button>
         </div>
 
-        <div class="w-px h-6 bg-border" />
+        <div class="w-px h-5 bg-border" />
 
         <!-- 分割线和表格 -->
-        <div class="flex items-center gap-1">
+        <div class="flex items-center gap-0.5">
           <button
             @click="insertHorizontalRule"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="分割线"
           >
-            <Minus class="w-4 h-4" />
+            <Minus class="w-3.5 h-3.5" />
           </button>
           <button
             @click="insertTable"
-            class="p-2 hover:bg-muted rounded transition-colors"
+            class="p-1.5 hover:bg-muted rounded transition-colors"
             title="插入表格"
           >
-            <Table class="w-4 h-4" />
+            <Table class="w-3.5 h-3.5" />
           </button>
         </div>
 
         <!-- 操作按钮 -->
-        <div class="ml-auto flex items-center gap-2">
+        <div class="ml-auto flex items-center gap-1.5">
           <button
             @click="clearEditor"
-            class="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            class="px-2.5 py-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
           >
             清空
           </button>
           <button
             @click="copyMarkdown"
-            class="px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            class="px-2.5 py-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
           >
-            复制 Markdown
+            复制
+          </button>
+          <button
+            @click="uploadMarkdown"
+            class="px-2.5 py-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
+          >
+            上传
           </button>
           <button
             @click="downloadMarkdown"
-            class="px-3 py-1.5 text-sm bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
+            class="px-2.5 py-1 text-xs bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
           >
             下载
           </button>
+          <!-- 隐藏的文件上传输入框 -->
+          <input
+            ref="fileInputRef"
+            type="file"
+            accept=".md,.markdown,.txt"
+            @change="handleFileUpload"
+            class="hidden"
+          />
         </div>
       </div>
 
       <!-- 编辑器和预览区 -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-t-0 rounded-b-lg min-h-[500px] h-[70vh]">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-t-0 border-border rounded-b-lg min-h-[500px] h-[70vh]">
         <!-- 编辑器 -->
         <div class="relative">
           <textarea
@@ -193,7 +207,33 @@
             ref="previewRef"
             @scroll="syncScroll"
             v-html="renderedMarkdown"
-            class="prose prose-sm max-w-none dark:prose-invert prose-headings:font-bold prose-a:text-primary prose-code:font-mono prose-pre:bg-background prose-pre:border prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded"
+            class="prose prose-sm max-w-none dark:prose-invert prose-headings:font-bold prose-headings:text-foreground"
+            :style="{
+              '--prose-h1-font-size': '1.875rem',
+              '--prose-h1-line-height': '2.25rem',
+              '--prose-h1-margin-top': '2rem',
+              '--prose-h1-margin-bottom': '1rem',
+              '--prose-h2-font-size': '1.5rem',
+              '--prose-h2-line-height': '2rem',
+              '--prose-h2-margin-top': '1.75rem',
+              '--prose-h2-margin-bottom': '0.75rem',
+              '--prose-h3-font-size': '1.25rem',
+              '--prose-h3-line-height': '1.75rem',
+              '--prose-h3-margin-top': '1.5rem',
+              '--prose-h3-margin-bottom': '0.5rem',
+              '--prose-h4-font-size': '1.125rem',
+              '--prose-h4-line-height': '1.75rem',
+              '--prose-h4-margin-top': '1.25rem',
+              '--prose-h4-margin-bottom': '0.5rem',
+              '--prose-h5-font-size': '1rem',
+              '--prose-h5-line-height': '1.5rem',
+              '--prose-h5-margin-top': '1rem',
+              '--prose-h5-margin-bottom': '0.5rem',
+              '--prose-h6-font-size': '0.875rem',
+              '--prose-h6-line-height': '1.25rem',
+              '--prose-h6-margin-top': '0.75rem',
+              '--prose-h6-margin-bottom': '0.25rem'
+            }"
           ></div>
         </div>
       </div>
@@ -425,7 +465,7 @@ import { ref, computed, watch, onMounted } from 'vue'
 import {
   Bold, Italic, Strikethrough, List, ListOrdered,
   Link, Image, Code, FileCode, Quote, Minus, Table,
-  HelpCircle, ChevronUp,
+  HelpCircle, ChevronUp, Upload,
   FileText, FileDiff, Type, Hash, FileJson, Terminal
 } from 'lucide-vue-next'
 import { marked } from 'marked'
@@ -443,6 +483,7 @@ const autoSave = ref(false)
 const lastSaved = ref('')
 const editorRef = ref(null)
 const previewRef = ref(null)
+const fileInputRef = ref(null)
 
 // SEO内容折叠状态
 const isSeoContentVisible = ref(true)
@@ -760,6 +801,36 @@ const downloadMarkdown = () => {
   URL.revokeObjectURL(url)
 }
 
+// 上传 Markdown
+const uploadMarkdown = () => {
+  fileInputRef.value.click()
+}
+
+// 处理文件上传
+const handleFileUpload = (event) => {
+  const file = event.target.files[0]
+  if (!file) return
+
+  const reader = new FileReader()
+  reader.onload = (e) => {
+    const content = e.target.result
+
+    // 如果当前内容不为空，提示用户是否替换
+    if (markdownText.value && markdownText.value.trim()) {
+      if (confirm('当前编辑器已有内容，是否要替换为上传的文件内容？')) {
+        markdownText.value = content
+      }
+    } else {
+      markdownText.value = content
+    }
+
+    // 重置文件输入框
+    event.target.value = ''
+  }
+
+  reader.readAsText(file)
+}
+
 // 切换SEO内容显示状态
 const toggleSeoContent = () => {
   isSeoContentVisible.value = !isSeoContentVisible.value
@@ -863,5 +934,97 @@ div::-webkit-scrollbar-thumb:hover {
 
 :deep(ol li) {
   @apply list-decimal;
+}
+
+/* 强制设置标题样式 */
+:deep(h1) {
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  font-weight: 700 !important;
+  color: hsl(var(--foreground)) !important;
+  border-bottom: 1px solid hsl(var(--border)) !important;
+  padding-bottom: 0.5rem !important;
+}
+
+:deep(h2) {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.75rem !important;
+  font-weight: 600 !important;
+  color: hsl(var(--foreground)) !important;
+  border-bottom: 1px solid hsl(var(--border) / 0.5) !important;
+  padding-bottom: 0.25rem !important;
+}
+
+:deep(h3) {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+:deep(h4) {
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+:deep(h5) {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+:deep(h6) {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.25rem !important;
+  font-weight: 600 !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+/* 其他元素样式增强 */
+:deep(p) {
+  margin-bottom: 1rem !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+:deep(ul), :deep(ol) {
+  margin: 1rem 0 !important;
+  padding-left: 1.5rem !important;
+}
+
+:deep(li) {
+  margin-bottom: 0.25rem !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+:deep(a) {
+  color: hsl(var(--primary)) !important;
+  text-decoration: none !important;
+}
+
+:deep(a:hover) {
+  text-decoration: underline !important;
+}
+
+:deep(blockquote) {
+  border-left: 4px solid hsl(var(--primary)) !important;
+  padding-left: 1rem !important;
+  margin: 1rem 0 !important;
+  color: hsl(var(--muted-foreground)) !important;
+  font-style: italic !important;
 }
 </style>

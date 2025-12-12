@@ -66,10 +66,10 @@
           </NuxtLink>
           
           <NuxtLink 
-            to="/explore" 
+            to="/explore/" 
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
             :class="[
-              $route.path === '/explore' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+              $route.path === '/explore/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
           >
@@ -78,10 +78,10 @@
           </NuxtLink>
           
           <NuxtLink
-            to="/recent"
+            to="/recent/"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
             :class="[
-              $route.path === '/recent' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+              $route.path === '/recent/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
           >
@@ -90,10 +90,10 @@
           </NuxtLink>
 
           <NuxtLink
-            to="/favorites"
+            to="/favorites/"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
             :class="[
-              $route.path === '/favorites' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+              $route.path === '/favorites/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
           >
@@ -102,10 +102,10 @@
           </NuxtLink>
 
           <NuxtLink
-            to="/sitemap"
+            to="/sitemap/"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
             :class="[
-              $route.path === '/sitemap' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+              $route.path === '/sitemap/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
           >
@@ -114,10 +114,10 @@
           </NuxtLink>
 
           <NuxtLink
-            to="/ai"
+            to="/ai/"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
             :class="[
-              $route.path === '/ai' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+              $route.path === '/ai/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
           >
@@ -135,30 +135,30 @@
       <div>
         <h3 class="px-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2" :class="{ 'lg:hidden': collapsed }">工具箱</h3>
         <nav class="space-y-0.5" id="categoryNav">
-          <button 
-            @click="setAllTools"
+          <NuxtLink
+            to="/all/"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
             :class="[
-              currentCategory === 'all' && $route.path !== '/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+              $route.path === '/all/' || (currentCategory === 'all' && $route.path !== '/') ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
           >
             <LayoutGrid class="w-4 h-4" />
             <span :class="{ 'lg:hidden': collapsed }">全部工具</span>
-          </button>
-          <button 
+          </NuxtLink>
+          <NuxtLink
             v-for="category in categoriesWithIcons"
             :key="category.id"
-            @click="setCategory(category.id)"
+            :to="`/${category.id}/`"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
             :class="[
-              currentCategory === category.id ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+              $route.path === `/${category.id}/` || currentCategory === category.id ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
           >
             <component :is="category.iconComponent" class="w-4 h-4" />
             <span :class="{ 'lg:hidden': collapsed }">{{ category.name }}</span>
-          </button>
+          </NuxtLink>
         </nav>
       </div>
 
@@ -166,7 +166,7 @@
 
     <!-- 底部用户/反馈区 -->
     <div class="p-4 border-t border-sidebar-border bg-sidebar" :class="{ 'lg:hidden': collapsed }">
-      <NuxtLink to="/feedback" class="flex items-center gap-3 px-2 py-2 rounded-md hover:bg-muted/50 transition-colors group">
+      <NuxtLink to="/feedback/" class="flex items-center gap-3 px-2 py-2 rounded-md hover:bg-muted/50 transition-colors group">
         <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center text-xs font-bold text-white">
           Dev
         </div>
@@ -181,7 +181,7 @@
 </template>
 
 <script setup>
-import { ref, defineEmits, defineProps, computed } from 'vue'
+import { defineProps, computed } from 'vue'
 import {
   Terminal, LayoutGrid, Code2, ShieldCheck, Server, ImageIcon,
   FileJson, Clock, ArrowRight, MessageSquarePlus, FileText, Lock,
@@ -215,7 +215,6 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(['category-change'])
 const route = useRoute()
 
 // 为每个分类添加图标组件
@@ -225,15 +224,4 @@ const categoriesWithIcons = computed(() => {
     iconComponent: iconMap[category.icon] || FileText
   }))
 })
-
-const setCategory = (category) => {
-  emit('category-change', category)
-}
-
-const setAllTools = () => {
-  // 跳转到/all路由
-  window.location.hash = '/all'
-  // 同时更新当前分类状态
-  emit('category-change', 'all')
-}
 </script>

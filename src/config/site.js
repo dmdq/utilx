@@ -13,7 +13,7 @@ export const siteConfig = {
   title: '有条工具 - 开发者的常用的工具集合',
 
   // SEO标题后缀（用于页面标题）
-  titleSuffix: ' | 效率百宝箱 - 有条工具',
+  titleSuffix: ' | 有条工具',
 
   // 网站描述
   description: '无广告 · 纯本地计算 · 即开即用的在线工具平台',

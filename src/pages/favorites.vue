@@ -64,7 +64,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, nextTick } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import {
   Heart, Compass, GripVertical,
@@ -120,8 +120,11 @@ const saveFavoriteOrder = (order) => {
   }
 }
 
-// 收藏的工具（支持排序）
-const favoriteTools = computed(() => {
+// 使用响应式存储收藏工具
+const favoriteTools = ref([])
+
+// 更新收藏工具列表
+const updateFavoriteTools = () => {
   const favoriteIds = getFavoriteTools()
   const savedOrder = getFavoriteOrder()
 
@@ -132,7 +135,7 @@ const favoriteTools = computed(() => {
 
   // 按保存的顺序排序
   if (savedOrder.length > 0) {
-    return favoriteToolsList.sort((a, b) => {
+    favoriteTools.value = favoriteToolsList.sort((a, b) => {
       const aIndex = savedOrder.indexOf(a.id)
       const bIndex = savedOrder.indexOf(b.id)
 
@@ -148,10 +151,20 @@ const favoriteTools = computed(() => {
       // 如果都不在保存的顺序中，按原始顺序排
       return favoriteIds.indexOf(a.id) - favoriteIds.indexOf(b.id)
     })
+  } else {
+    favoriteTools.value = favoriteToolsList
   }
+}
 
-  return favoriteToolsList
-})
+// 初始化收藏工具列表
+updateFavoriteTools()
+
+// 监听 storage 变化（其他标签页的变化）
+const handleStorageChange = (e) => {
+  if (e.key === 'favorite-tools' || e.key === 'favorite-tools-order') {
+    updateFavoriteTools()
+  }
+}
 
 // 格式化浏览量
 const formatViewCount = (count) => {
@@ -182,6 +195,12 @@ const getIconComponent = (iconName) => {
 onMounted(async () => {
   await nextTick()
 
+  // 初始化收藏工具列表
+  updateFavoriteTools()
+
+  // 监听 storage 事件
+  window.addEventListener('storage', handleStorageChange)
+
   if (sortableContainer.value) {
     useSortable(sortableContainer, favoriteTools, {
       animation: 150,
@@ -197,10 +216,18 @@ onMounted(async () => {
         // 保存新的排序
         saveFavoriteOrder(newOrder)
 
+        // 更新响应式数据
+        updateFavoriteTools()
+
         console.log('Favorite tools order updated:', newOrder)
       }
     })
   }
+})
+
+// 清理事件监听器
+onUnmounted(() => {
+  window.removeEventListener('storage', handleStorageChange)
 })
 </script>
 

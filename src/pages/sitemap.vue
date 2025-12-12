@@ -20,21 +20,21 @@
           <p class="text-sm text-muted-foreground">开发者效率工具箱首页</p>
         </a>
         <a
-          href="/all"
+          href="/all/"
           class="block p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
         >
           <h3 class="font-medium text-foreground mb-1">全部工具</h3>
           <p class="text-sm text-muted-foreground">浏览所有可用工具</p>
         </a>
         <a
-          href="/explore"
+          href="/explore/"
           class="block p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
         >
           <h3 class="font-medium text-foreground mb-1">工具探索</h3>
           <p class="text-sm text-muted-foreground">发现和探索工具</p>
         </a>
         <a
-          href="/ai"
+          href="/ai/"
           class="block p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
         >
           <h3 class="font-medium text-foreground mb-1">AI工具导航</h3>
@@ -53,7 +53,7 @@
         <NuxtLink
           v-for="category in categories"
           :key="category.id"
-          :to="'/' + category.id"
+          :to="'/' + category.id + '/'"
           class="block p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
         >
           <div class="flex items-center gap-3 mb-2">
@@ -140,28 +140,28 @@
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <NuxtLink
-          to="/about"
+          to="/about/"
           class="block p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
         >
           <h3 class="font-medium text-foreground mb-1">关于我们</h3>
           <p class="text-sm text-muted-foreground">了解 Util.cn 和我们的使命</p>
         </NuxtLink>
         <NuxtLink
-          to="/faq"
+          to="/faq/"
           class="block p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
         >
           <h3 class="font-medium text-foreground mb-1">常见问题</h3>
           <p class="text-sm text-muted-foreground">快速解答常见疑问</p>
         </NuxtLink>
         <NuxtLink
-          to="/feedback"
+          to="/feedback/"
           class="block p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
         >
           <h3 class="font-medium text-foreground mb-1">用户反馈</h3>
           <p class="text-sm text-muted-foreground">提交意见和建议</p>
         </NuxtLink>
         <NuxtLink
-          to="/download"
+          to="/download/"
           class="block p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
         >
           <h3 class="font-medium text-foreground mb-1">桌面版下载</h3>

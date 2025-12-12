@@ -1,0 +1,41 @@
+{
+  "name": "有条工具 - 开发者效率工具箱",
+  "short_name": "有条工具",
+  "description": "极简、高效、全能的开发者工具集合，支持编码解码、格式化、加密解密等多种功能",
+  "theme_color": "#6366f1",
+  "background_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "any",
+  "scope": "/",
+  "start_url": "/",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "logo-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+     {
+      "src": "logo-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+     {
+      "src": "logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+    
+  ],
+  "categories": [
+    "productivity",
+    "utilities",
+    "developer"
+  ]
+}

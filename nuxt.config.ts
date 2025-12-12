@@ -2,117 +2,54 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-
   devtools: { enabled: true },
   css: ['@/assets/css/main.css'],
   modules: [
     '@nuxtjs/tailwindcss',
-    ['@vite-pwa/nuxt', {
-      registerType: 'autoUpdate',
-      strategies: 'generateSW',
-      injectRegister: 'auto',
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-        navigateFallback: '/',
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 年
+    process.env.NODE_ENV === 'production' ? [
+      '@vite-pwa/nuxt', {
+        registerType: 'autoUpdate',
+        strategies: 'generateSW',
+        injectRegister: 'auto',
+        workbox: {
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+          navigateFallback: '/',
+          skipWaiting: true,
+          clientsClaim: true,
+          // 不要缓存错误页面
+          navigateFallbackDenylist: [/^\/200$/, /^\/404$/],
+          runtimeCaching: [
+            {
+              urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'google-fonts-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // 1 年
+                }
+              }
+            },
+            {
+              urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'gstatic-fonts-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // 1 年
+                }
               }
             }
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'gstatic-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 年
-              }
-            }
-          }
-        ]
-      },
-      client: {
-        installPrompt: true,
-        periodicSyncForUpdates: 30 * 60 * 1000 // 30 分钟
-      },
-      manifest: {
-        name: '有条工具 - 开发者效率工具箱',
-        short_name: '有条工具',
-        description: '极简、高效、全能的开发者工具集合，支持编码解码、格式化、加密解密等多种功能',
-        theme_color: '#6366f1',
-        background_color: '#0f172a',
-        display: 'standalone',
-        orientation: 'any',
-        scope: '/',
-        start_url: '/',
-        icons: [
-          {
-            src: 'favicon.ico',
-            sizes: '48x48',
-            type: 'image/x-icon'
-          },
-          {
-            src: 'favicon.png',
-            sizes: '32x32',
-            type: 'image/png'
-          },
-          {
-            src: 'icon-192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'icon-256.png',
-            sizes: '256x256',
-            type: 'image/png'
-          },
-          {
-            src: 'icon-512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          },
-          {
-            src: 'icon-512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable'
-          }
-        ],
-        categories: ['productivity', 'utilities', 'developer'],
-        shortcuts: [
-          {
-            name: 'JSON格式化',
-            short_name: 'JSON',
-            description: '格式化和验证JSON数据',
-            url: '/tools/json-formatter/',
-            icons: [{ src: 'icon-192.png', sizes: '192x192' }]
-          },
-          {
-            name: '时间戳转换',
-            short_name: '时间戳',
-            description: 'Unix时间戳与日期格式转换',
-            url: '/tools/unix-timestamp/',
-            icons: [{ src: 'icon-192.png', sizes: '192x192' }]
-          },
-          {
-            name: 'Base64编码',
-            short_name: 'Base64',
-            description: 'Base64编码和解码工具',
-            url: '/tools/base64-encoder/',
-            icons: [{ src: 'icon-192.png', sizes: '192x192' }]
-          }
-        ]
+          ]
+        },
+        client: {
+          installPrompt: true,
+          periodicSyncForUpdates: 30 * 60 * 1000 // 30 分钟
+        }
       }
-    }]
-  ],
+    ] : null
+  ].filter(Boolean),
 
   vite: {
     plugins: []
@@ -139,13 +76,12 @@ export default defineNuxtConfig({
     // 确保静态文件可以正确访问
     publicAssets: [
       {
-        baseURL: '/blog',
+        baseURL: '/blog/',
         dir: 'public/blog',
         maxAge: 60 * 60 * 24 * 365 // 1年缓存
       }
     ]
   },
-  // 添加初始化脚本来防止主题闪烁
   app: {
     head: {
       title: '有条工具 - 开发者的常用的工具集合',
@@ -165,24 +101,27 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon.png' },
         { rel: 'apple-touch-icon', href: '/icon-192.png' },
-        { rel: 'manifest', href: '/manifest.webmanifest' }
+        { rel: 'manifest', href: '/manifest.json' }
       ],
+      // 添加主题初始化脚本，在页面加载前执行
       script: [
         {
           innerHTML: `
             (function() {
               try {
-                const savedTheme = localStorage.getItem('theme');
+                // 获取保存的主题，如果没有则默认使用暗色主题
+                const savedTheme = localStorage.getItem('theme') || 'dark';
                 if (savedTheme === 'dark') {
                   document.documentElement.classList.add('dark');
-                } else if (savedTheme === 'light') {
-                  document.documentElement.classList.remove('dark');
                 } else {
-                  // 默认使用暗色主题
-                  document.documentElement.classList.add('dark');
+                  document.documentElement.classList.remove('dark');
+                }
+                // 确保主题被保存
+                if (!localStorage.getItem('theme')) {
+                  localStorage.setItem('theme', 'dark');
                 }
               } catch (e) {
-                // 如果localStorage不可用，默认使用暗色主题
+                // 如果 localStorage 不可用，默认使用暗色主题
                 document.documentElement.classList.add('dark');
               }
             })();
@@ -195,7 +134,7 @@ export default defineNuxtConfig({
   // 定义运行时配置
   runtimeConfig: {
     public: {
-      // 可以在这里定义公共配置
+      siteUrl: 'https://www.util.cn'
     }
   }
 })
