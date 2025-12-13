@@ -85,17 +85,12 @@
               </div>
             </div>
 
-            <!-- 超时设置 -->
-            <div>
-              <label class="block text-sm font-medium text-foreground mb-2">超时时间 (秒)</label>
-              <input
-                v-model.number="timeout"
-                type="number"
-                min="1"
-                max="10"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                :disabled="scanning"
-              />
+            <!-- 扫描提示 -->
+            <div class="p-3 bg-muted/50 rounded-lg">
+              <p class="text-sm text-muted-foreground">
+                <strong class="text-foreground">提示：</strong>
+                每次扫描会添加 500ms 延迟以避免请求过快。端口范围扫描建议不超过 20 个端口。
+              </p>
             </div>
 
             <!-- 快速示例 -->
@@ -620,36 +615,84 @@ const relatedTools = computed(() => {
 const startScan = async () => {
   if (!targetHost.value || scanning.value) return
 
+  // 获取要扫描的端口列表
+  const ports = getPortsToScan()
+
+  // 限制端口数量，避免扫描时间过长
+  if (ports.length > 50) {
+    error.value = `端口数量过多 (${ports.length}个)，请限制在50个以内`
+    return
+  }
+
   scanning.value = true
   error.value = ''
   scanResult.value = []
   scanProgress.value = 0
   scannedPorts.value = 0
   openPorts.value = 0
-
-  // 获取要扫描的端口列表
-  const ports = getPortsToScan()
   totalPorts.value = ports.length
 
   try {
-    // 模拟端口扫描
+    // 真实的端口扫描
     for (let i = 0; i < ports.length; i++) {
       const port = ports[i]
       currentPort.value = port
 
-      // 模拟扫描延迟
-      await new Promise(resolve => setTimeout(resolve, 100))
+      // 调用真实API检测单个端口，设置超时
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 500) // 500ms超时
 
-      // 随机生成扫描结果
-      const result = generateMockPortResult(port)
+      const response = await fetch(
+        `https://v2.xxapi.cn/api/tcping?address=${encodeURIComponent(targetHost.value)}&port=${port}`,
+        { signal: controller.signal }
+      )
+
+      // 清除超时定时器
+      clearTimeout(timeoutId)
+
+      let result
+      if (response.ok) {
+        const data = await response.json()
+
+        if (data.code === 200) {
+          // 端口开放
+          const portInfo = portServices[port] || {}
+          result = {
+            number: port,
+            status: 'open',
+            service: portInfo.service || '',
+            description: portInfo.description || '',
+            responseTime: parseInt(data.data.ping) || 0
+          }
+          openPorts.value++
+        } else {
+          // 端口关闭或连接失败
+          result = {
+            number: port,
+            status: 'closed',
+            service: (portServices[port] || {}).service || '',
+            description: (portServices[port] || {}).description || '',
+            responseTime: null
+          }
+        }
+      } else {
+        // 请求失败或超时，标记为过滤
+        result = {
+          number: port,
+          status: 'filtered',
+          service: (portServices[port] || {}).service || '',
+          description: (portServices[port] || {}).description || '',
+          responseTime: null,
+          error: response.status === 408 ? '请求超时' : '连接失败'
+        }
+      }
+
       scanResult.value.push(result)
-
       scannedPorts.value++
       scanProgress.value = Math.round((scannedPorts.value / totalPorts.value) * 100)
 
-      if (result.status === 'open') {
-        openPorts.value++
-      }
+      // 添加延迟避免请求过快
+      await new Promise(resolve => setTimeout(resolve, 500))
     }
 
     // 添加到历史记录
@@ -693,32 +736,6 @@ const getPortsToScan = () => {
   }
 }
 
-const generateMockPortResult = (port) => {
-  const portInfo = portServices[port] || {}
-  const random = Math.random()
-
-  // 模拟不同端口的状态概率
-  let status
-  if ([80, 443, 22, 21, 25].includes(port)) {
-    status = random < 0.8 ? 'open' : 'closed'
-  } else if ([8080, 3000, 8000].includes(port)) {
-    status = random < 0.3 ? 'open' : 'closed'
-  } else {
-    status = random < 0.1 ? 'open' : 'closed'
-  }
-
-  if (status === 'closed' && random < 0.2) {
-    status = 'filtered'
-  }
-
-  return {
-    number: port,
-    status: status,
-    service: portInfo.service || '',
-    description: portInfo.description || '',
-    responseTime: status === 'open' ? Math.floor(Math.random() * 200) + 10 : null
-  }
-}
 
 const loadExample = (event) => {
   const examples = {

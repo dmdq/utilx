@@ -5,13 +5,24 @@
   "author": "util.cn",
   "private": true,
   "scripts": {
-    "dev": "nuxt dev --host",
+    "dev": "./scripts/dev.sh nuxt dev --host",
+    "dev:fast": "./scripts/dev-fast.sh",
     "build": "nuxt build",
+    "build:app": "./scripts/build.sh",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "tauri": "tauri",
+    "tauri:dev": "./scripts/dev.sh npm run tauri dev --no-build-frontend",
+    "tauri:static": "npm run tauri dev",
+    "tauri:build": "tauri build",
+    "package:macos": "./scripts/package-macos.sh",
+    "package:macos-universal": "./scripts/package-macos-universal.sh",
+    "package:macos-simple": "./scripts/package-macos-simple.sh"
   },
   "dependencies": {
     "@nuxt/devtools": "^3.1.1",
+    "@tauri-apps/api": "^2.9.1",
+    "@tauri-apps/plugin-window-state": "^2.4.1",
     "@types/qrcode": "^1.5.6",
     "@vueuse/integrations": "^14.1.0",
     "crypto-js": "^4.2.0",
@@ -29,6 +40,8 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0",
+    "@tauri-apps/cli": "^2.9.6",
+    "@tauri-apps/plugin-shell": "^2.3.3",
     "@vite-pwa/nuxt": "^1.1.0"
   }
 }

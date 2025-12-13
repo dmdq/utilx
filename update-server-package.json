@@ -1,0 +1,24 @@
+{
+  "name": "util-update-server",
+  "version": "1.0.0",
+  "description": "Util 应用更新服务器",
+  "main": "update-server.js",
+  "scripts": {
+    "start": "node update-server.js",
+    "dev": "nodemon update-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["update", "server", "util", "tauri"],
+  "author": "util.cn",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "semver": "^7.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

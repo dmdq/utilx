@@ -7,7 +7,7 @@
         <div class="text-xs text-muted-foreground">
           <span class="mr-2">© 2025 有条工具</span>
           <span class="hidden sm:inline">|</span>
-          <span class="hidden sm:inline ml-2">无广告 · 纯本地计算 · 即开即用的在线工具平台</span>
+          <span class="hidden sm:inline ml-2">好用 · 高效 · 安全</span>
         </div>
 
         <!-- 中间快速链接 -->

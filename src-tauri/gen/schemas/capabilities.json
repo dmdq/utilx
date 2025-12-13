@@ -1,0 +1,1 @@
+{"desktop:default":{"identifier":"desktop:default","description":"Default permissions for the desktop platform.","local":true,"windows":["main"],"permissions":["core:default","core:window:default","shell:allow-open","opener:default"]}}

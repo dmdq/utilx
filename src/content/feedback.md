@@ -12,7 +12,7 @@
 - **技术支持**：skyin.lewis@gmail.com
 
 ### 💬 社交媒体
-- **QQ**：17898708
+- **QQ**：17898707
 - **Telegram**：[@kxlin](https://t.me/kxlin)
 - **Wechat**：kxlin0101
 

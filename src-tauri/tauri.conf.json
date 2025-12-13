@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "有条",
+  "version": "1.0.0",
+  "identifier": "cn.util.app",
+  "build": {
+    "frontendDist": "../dist"
+  },
+  "bundle": {
+    "active": true,
+    "category": "DeveloperTool",
+    "copyright": "Copyright © 2024 Util Team. All rights reserved.",
+    "resources": [],
+    "shortDescription": "开发者效率工具箱",
+    "longDescription": "Util 是一款专为开发者设计的效率工具箱，集成了多种常用开发工具，包括端口检查、Whois查询、二维码生成等功能，帮助开发者提升工作效率。",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "targets": [
+      "dmg",
+      "app"
+    ],
+    "macOS": {
+      "entitlements": "entitlements.plist",
+      "frameworks": [],
+      "providerShortName": "Util",
+      "signingIdentity": null,
+      "hardenedRuntime": true,
+      "minimumSystemVersion": "11.0"
+    }
+  },
+  "app": {
+    "security": {
+      "csp": null
+    },
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "有条工具 - Utilx",
+        "url": "/index.html",
+        "width": 1400,
+        "height": 760,
+        "minWidth": 800,
+        "minHeight": 600,
+        "center": true,
+        "resizable": true,
+        "decorations": true,
+        "alwaysOnTop": false
+      }
+    ]
+  },
+    "plugins": {
+    "shell": {
+      "open": true
+    },
+    "opener": {
+      "requireLiteralLeadingDot": false
+    }
+  }
+}

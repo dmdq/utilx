@@ -19,9 +19,11 @@
           <!-- 拖拽上传 -->
           <div
             class="border-2 border-dashed rounded-lg p-8 text-center hover:border-primary transition-colors cursor-pointer"
+            :class="{ 'border-primary bg-primary/5': isDragOver }"
             @drop="handleDrop"
-            @dragover.prevent
-            @dragleave.prevent
+            @dragover.prevent="isDragOver = true"
+            @dragleave.prevent="isDragOver = false"
+            @dragenter.prevent="isDragOver = true"
             @click="triggerFileInput"
           >
             <input
@@ -33,7 +35,14 @@
             />
             <ImageIcon class="w-12 h-12 mx-auto text-muted-foreground mb-4" />
             <p class="text-lg font-medium mb-2">拖拽图片到这里</p>
-            <p class="text-sm text-muted-foreground">支持 JPG、PNG、GIF 等格式</p>
+            <p class="text-sm text-muted-foreground mb-4">支持 JPG、PNG、GIF 等格式</p>
+            <button
+              type="button"
+              class="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+              @click.stop="triggerFileInput"
+            >
+              选择文件
+            </button>
           </div>
 
           <!-- 图片预览 -->
@@ -456,6 +465,8 @@ import { ref, computed } from 'vue'
 import { Info, ImageIcon, X, Settings, Download, Maximize2, RefreshCw, Zap, ArrowRight } from 'lucide-vue-next'
 import Breadcrumb from '~/components/Breadcrumb.vue'
 import JSZip from 'jszip'
+import { useTauri } from '~/composables/useTauri'
+import { useNotification } from '~/composables/useNotification'
 
 // 分类信息
 const category = { id: 'image', name: '图片处理', description: '图片处理工具集合' }
@@ -471,6 +482,7 @@ const isGenerating = ref(false)
 const generatedIcons = ref([])
 const previewMode = ref('grid')
 const fileInput = ref(null)
+const isDragOver = ref(false)
 
 // 自定义尺寸
 const customSizes = ref([
@@ -565,8 +577,10 @@ const handleDrop = (e) => {
 // 处理图片文件
 const processImageFile = (file) => {
   const reader = new FileReader()
+
   reader.onload = (e) => {
     const img = new Image()
+
     img.onload = () => {
       uploadedImage.value = {
         name: file.name,
@@ -575,8 +589,18 @@ const processImageFile = (file) => {
         height: img.height
       }
     }
+
+    img.onerror = (error) => {
+      console.error('Failed to load image:', error)
+    }
+
     img.src = e.target.result
   }
+
+  reader.onerror = (error) => {
+    console.error('FileReader failed:', error)
+  }
+
   reader.readAsDataURL(file)
 }
 
@@ -685,41 +709,113 @@ const getMimeType = () => {
   return mimeTypes[outputFormat.value] || 'image/png'
 }
 
+// 使用 Tauri composable 和通知系统
+const { downloadFile } = useTauri()
+const { showSuccess, showInfo } = useNotification()
+
 // 下载单个图标
-const downloadIcon = (icon) => {
-  const a = document.createElement('a')
-  a.href = icon.url
-  a.download = `icon_${icon.size}.${outputFormat.value}`
-  a.click()
+const downloadIcon = async (icon) => {
+  const filename = `icon_${icon.size}.${outputFormat.value}`
+  console.log('🎯 [ICON GENERATOR] Starting download for:', filename)
+
+  // 显示开始下载通知
+  showInfo(`正在下载 ${filename}...`)
+
+  try {
+    // 尝试使用 Tauri 下载
+    const result = await downloadFile(icon.url, filename)
+    console.log('🎯 [ICON GENERATOR] Download result:', result)
+
+    // 显示下载成功通知
+    showSuccess(`${filename} 下载完成！`)
+  } catch (error) {
+    console.error('🎯 [ICON GENERATOR] Download failed:', error)
+    console.log('🎯 [ICON GENERATOR] Falling back to web download')
+
+    // 降级到普通方式下载
+    const a = document.createElement('a')
+    a.href = icon.url
+    a.download = filename
+    a.target = '_blank'
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+
+    // 显示降级通知
+    showInfo(`开始下载: ${filename}`)
+  }
 }
 
 // 下载所有图标
 const downloadAll = async () => {
   if (generatedIcons.value.length === 0) return
 
+  const iconCount = generatedIcons.value.length
+  console.log('🎯 [ICON GENERATOR] Downloading all icons, count:', iconCount)
+
   if (outputFormat.value === 'ico') {
     // ICO 格式需要特殊处理
     // 这里简化处理，实际应该使用专门的库
-    downloadIcon(generatedIcons.value[0])
+    console.log('🎯 [ICON GENERATOR] ICO format, downloading first icon')
+    await downloadIcon(generatedIcons.value[0])
     return
   }
 
-  // 其他格式打包成 ZIP
-  const zip = new JSZip()
+  const filename = `icons_${outputFormat.value.toUpperCase()}.zip`
+  console.log('🎯 [ICON GENERATOR] Creating ZIP file:', filename)
 
-  generatedIcons.value.forEach(icon => {
-    zip.file(`icon_${icon.size}.${outputFormat.value}`, icon.blob)
-  })
+  // 显示开始打包通知
+  showInfo(`正在打包 ${iconCount} 个图标为 ZIP 文件...`)
 
-  const zipBlob = await zip.generateAsync({ type: 'blob' })
-  const url = URL.createObjectURL(zipBlob)
+  try {
+    // 其他格式打包成 ZIP
+    const zip = new JSZip()
 
-  const a = document.createElement('a')
-  a.href = url
-  a.download = `icons_${outputFormat.value.toUpperCase()}.zip`
-  a.click()
+    generatedIcons.value.forEach(icon => {
+      zip.file(`icon_${icon.size}.${outputFormat.value}`, icon.blob)
+    })
 
-  URL.revokeObjectURL(url)
+    const zipBlob = await zip.generateAsync({ type: 'blob' })
+    const url = URL.createObjectURL(zipBlob)
+
+    // 显示开始下载通知
+    showInfo(`正在下载 ${filename}...`)
+
+    // 尝试使用 Tauri 下载
+    const result = await downloadFile(url, filename)
+    console.log('🎯 [ICON GENERATOR] ZIP download result:', result)
+
+    // 显示下载成功通知
+    showSuccess(`${filename} 下载完成！包含 ${iconCount} 个图标`)
+
+    URL.revokeObjectURL(url)
+  } catch (error) {
+    console.error('🎯 [ICON GENERATOR] ZIP download failed:', error)
+    console.log('🎯 [ICON GENERATOR] Falling back to web download')
+
+    // 降级到普通方式下载
+    const zip = new JSZip()
+
+    generatedIcons.value.forEach(icon => {
+      zip.file(`icon_${icon.size}.${outputFormat.value}`, icon.blob)
+    })
+
+    const zipBlob = await zip.generateAsync({ type: 'blob' })
+    const url = URL.createObjectURL(zipBlob)
+
+    const a = document.createElement('a')
+    a.href = url
+    a.download = filename
+    a.target = '_blank'
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+
+    URL.revokeObjectURL(url)
+
+    // 显示降级通知
+    showInfo(`开始下载: ${filename}（包含 ${iconCount} 个图标）`)
+  }
 }
 
 // 格式化文件大小

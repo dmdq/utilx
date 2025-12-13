@@ -52,7 +52,39 @@ export default defineNuxtConfig({
   ].filter(Boolean),
 
   vite: {
-    plugins: []
+    plugins: [],
+    // 优化文件监视，减少文件句柄使用
+    server: {
+      fs: {
+        strict: false
+      },
+      watch: {
+        usePolling: true,
+        interval: 1000,
+        depth: 2,
+        ignored: [
+          '**/node_modules/**',
+          '**/.git/**',
+          '**/dist/**',
+          '**/.nuxt/**',
+          '**/target/**',
+          '**/.output/**',
+          '**/coverage/**'
+        ]
+      }
+    },
+    build: {
+      rollupOptions: {
+        onwarn: (warning, warn) => {
+          if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return
+          warn(warning)
+        }
+      }
+    },
+    optimizeDeps: {
+      include: [],
+      exclude: ['@tauri-apps/api']
+    }
   },
 
   compatibilityDate: '2025-12-10',
@@ -68,6 +100,10 @@ export default defineNuxtConfig({
     assets: './assets',
     app: '../app'
   },
+  // 设置自定义挂载点 - 移除 rootId 配置，使用默认值
+  // vueApp: {
+  //   rootId: 'app'
+  // },
   // 配置路由规则
   nitro: {
     prerender: {
@@ -88,7 +124,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: '无广告 · 纯本地计算 · 即开即用的在线工具平台' },
+        { name: 'description', content: '无广告 · 本地计算 · 即开即用的在线工具平台' },
         { name: 'theme-color', content: '#6366f1' },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
@@ -98,6 +134,9 @@ export default defineNuxtConfig({
         { name: 'msapplication-config', content: '/browserconfig.xml' }
       ],
       link: [
+        { rel: 'preload', href: '/_nuxt/entry.js', as: 'script' },
+        { rel: 'preload', href: '/_nuxt/app.css', as: 'style' },
+
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon.png' },
         { rel: 'apple-touch-icon', href: '/icon-192.png' },

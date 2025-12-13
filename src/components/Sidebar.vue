@@ -52,31 +52,33 @@
       <!-- 主要页面导航 -->
       <div>
         <nav class="space-y-0.5">
-          <NuxtLink 
-            to="/" 
+          <NuxtLink
+            to="/"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
             :class="[
               $route.path === '/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
             exact
+            @click="handleNavClick"
           >
             <Home class="w-4 h-4" />
             <span :class="{ 'lg:hidden': collapsed }">首页</span>
           </NuxtLink>
           
-          <NuxtLink 
-            to="/explore/" 
+          <NuxtLink
+            to="/explore/"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
             :class="[
               $route.path === '/explore/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
+            @click="handleNavClick"
           >
             <Compass class="w-4 h-4" />
             <span :class="{ 'lg:hidden': collapsed }">探索</span>
           </NuxtLink>
-          
+
           <NuxtLink
             to="/recent/"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
@@ -84,6 +86,7 @@
               $route.path === '/recent/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
+            @click="handleNavClick"
           >
             <Clock class="w-4 h-4" />
             <span :class="{ 'lg:hidden': collapsed }">最近使用</span>
@@ -96,6 +99,7 @@
               $route.path === '/favorites/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
+            @click="handleNavClick"
           >
             <Heart class="w-4 h-4 text-red-500" />
             <span :class="{ 'lg:hidden': collapsed }">我的收藏</span>
@@ -108,6 +112,7 @@
               $route.path === '/sitemap/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
+            @click="handleNavClick"
           >
             <Map class="w-4 h-4" />
             <span :class="{ 'lg:hidden': collapsed }">站点地图</span>
@@ -120,6 +125,7 @@
               $route.path === '/ai/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
+            @click="handleNavClick"
           >
             <Sparkles class="w-4 h-4 text-purple-500" />
             <span :class="{ 'lg:hidden': collapsed }">AI 导航</span>
@@ -142,6 +148,7 @@
               $route.path === '/all/' || (currentCategory === 'all' && $route.path !== '/') ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
+            @click="handleNavClick"
           >
             <LayoutGrid class="w-4 h-4" />
             <span :class="{ 'lg:hidden': collapsed }">全部工具</span>
@@ -155,6 +162,7 @@
               $route.path === `/${category.id}/` || currentCategory === category.id ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
               { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
             ]"
+            @click="handleNavClick"
           >
             <component :is="category.iconComponent" class="w-4 h-4" />
             <span :class="{ 'lg:hidden': collapsed }">{{ category.name }}</span>
@@ -166,7 +174,7 @@
 
     <!-- 底部用户/反馈区 -->
     <div class="p-4 border-t border-sidebar-border bg-sidebar" :class="{ 'lg:hidden': collapsed }">
-      <NuxtLink to="/feedback/" class="flex items-center gap-3 px-2 py-2 rounded-md hover:bg-muted/50 transition-colors group">
+      <NuxtLink to="/feedback/" class="flex items-center gap-3 px-2 py-2 rounded-md hover:bg-muted/50 transition-colors group" @click="handleNavClick">
         <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center text-xs font-bold text-white">
           Dev
         </div>
@@ -181,7 +189,7 @@
 </template>
 
 <script setup>
-import { defineProps, computed } from 'vue'
+import { defineProps, defineEmits, computed } from 'vue'
 import {
   Terminal, LayoutGrid, Code2, ShieldCheck, Server, ImageIcon,
   FileJson, Clock, ArrowRight, MessageSquarePlus, FileText, Lock,
@@ -204,6 +212,9 @@ const iconMap = {
   LayoutGrid
 }
 
+// 定义 emit 事件
+const emit = defineEmits(['close-sidebar'])
+
 const props = defineProps({
   collapsed: {
     type: Boolean,
@@ -216,6 +227,14 @@ const props = defineProps({
 })
 
 const route = useRoute()
+
+// 处理导航点击，移动端关闭侧边栏
+const handleNavClick = () => {
+  // 检查是否是移动端
+  if (window.innerWidth < 1024) {
+    emit('close-sidebar')
+  }
+}
 
 // 为每个分类添加图标组件
 const categoriesWithIcons = computed(() => {

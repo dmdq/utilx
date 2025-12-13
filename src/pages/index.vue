@@ -33,7 +33,7 @@
           v-model="searchQuery"
           type="text"
           class="block w-full rounded-xl border border-border/60 bg-card/40 backdrop-blur-sm pl-11 pr-24 py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-background/95 transition-all placeholder:text-muted-foreground/60"
-          placeholder="搜索你需要的工具，如 'JSON', 'MD5', '正则'  - Extend Your Creativity"
+          placeholder="搜索你需要的工具，如 Markdown , JSON , MD5 , 正则 , 图片 ... "
           @input="handleSearch"
           @keydown.enter="handleSearchEnter"
         >
@@ -251,14 +251,14 @@ setPageTitle('Util.cn 开源应用工具')
 useHead({
   meta: [
     { property: 'og:title', content: '有条工具 - 开发者的瑞士军刀 | UTIL在线工具集合' },
-    { property: 'og:description', content: '无广告 · 纯本地计算 · 即开即用的在线工具平台。提供JSON格式化、Base64编码、时间戳转换、正则表达式测试等开发者常用工具。' },
+    { property: 'og:description', content: '无广告 · 本地计算 · 即开即用的在线工具平台。提供JSON格式化、Base64编码、时间戳转换、正则表达式测试等开发者常用工具。' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://www.util.cn/' },
     { property: 'og:image', content: 'https://www.util.cn/logo.png' },
     { property: 'og:locale', content: 'zh_CN' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: '有条工具 - 开发者的瑞士军刀 | UTIL在线工具集合' },
-    { name: 'twitter:description', content: '无广告 · 纯本地计算 · 即开即用的在线工具平台。提供JSON格式化、Base64编码、时间戳转换、正则表达式测试等开发者常用工具。' },
+    { name: 'twitter:description', content: '无广告 · 本地计算 · 即开即用的在线工具平台。提供JSON格式化、Base64编码、时间戳转换、正则表达式测试等开发者常用工具。' },
     { name: 'twitter:image', content: 'https://www.util.cn/logo.png' }
   ],
   script: [
@@ -269,7 +269,7 @@ useHead({
         "@type": "WebSite",
         "name": "有条工具 - 开发者的瑞士军刀",
         "url": "https://www.util.cn/",
-        "description": "无广告 · 纯本地计算 · 即开即用的在线工具平台",
+        "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
         "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试",
         "publisher": {
           "@type": "Organization",

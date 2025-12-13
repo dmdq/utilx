@@ -23,28 +23,15 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">输入域名</label>
-              <div class="flex space-x-2">
-                <input
-                  v-model="domain"
-                  type="text"
-                  placeholder="例如: google.com"
-                  class="flex-1 px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
-                  @keyup.enter="queryWhois"
-                />
-                <select
-                  v-model="tld"
-                  class="px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
-                >
-                  <option value="">.com</option>
-                  <option value=".cn">.cn</option>
-                  <option value=".net">.net</option>
-                  <option value=".org">.org</option>
-                  <option value=".io">.io</option>
-                  <option value=".ai">.ai</option>
-                </select>
-              </div>
+              <input
+                v-model="domain"
+                type="text"
+                placeholder="例如: google.com"
+                class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                @keyup.enter="queryWhois"
+              />
               <p class="mt-1 text-xs text-muted-foreground">
-                输入域名，可省略顶级域名
+                请输入完整的域名（如：google.com）
               </p>
             </div>
 
@@ -108,7 +95,7 @@
 
           <textarea
             v-model="batchDomains"
-            placeholder="每行一个域名&#10;example.com&#10;test.org&#10;demo.net"
+            placeholder="每行一个域名，最多支持10个域名&#10;example.com&#10;test.org&#10;demo.net"
             class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground resize-none"
             rows="4"
           ></textarea>
@@ -157,7 +144,18 @@
       <div class="lg:col-span-2 space-y-6">
         <!-- 查询结果 -->
         <div v-if="whoisData" class="bg-card p-6 rounded-lg border border-border">
-          <div class="flex items-center justify-between mb-6">
+          <!-- 错误信息显示 -->
+          <div v-if="whoisData.error" class="mb-6 p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
+            <div class="flex items-center">
+              <AlertCircle class="h-5 w-5 text-destructive mr-2" />
+              <div>
+                <h4 class="font-semibold text-foreground">查询失败</h4>
+                <p class="text-sm text-muted-foreground mt-1">{{ whoisData.error }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div v-else class="flex items-center justify-between mb-6">
             <h3 class="text-xl font-semibold flex items-center text-foreground">
               <Icon name="lucide:info" class="h-6 w-6 mr-2 text-primary" />
               WHOIS信息 - {{ whoisData.domain }}
@@ -248,13 +246,17 @@
                   <span class="text-muted-foreground">姓名</span>
                   <span class="font-medium text-foreground">{{ whoisData.registrant.name || '隐私保护' }}</span>
                 </div>
-                <div class="flex justify-between py-2 border-b border-border">
+                <div v-if="whoisData.registrant.organization && whoisData.registrant.organization !== '-'" class="flex justify-between py-2 border-b border-border">
                   <span class="text-muted-foreground">组织</span>
-                  <span class="font-medium text-foreground">{{ whoisData.registrant.organization || '-' }}</span>
+                  <span class="font-medium text-foreground">{{ whoisData.registrant.organization }}</span>
                 </div>
-                <div class="flex justify-between py-2 border-b border-border">
+                <div v-if="whoisData.registrant.email && whoisData.registrant.email !== '-'" class="flex justify-between py-2 border-b border-border">
+                  <span class="text-muted-foreground">邮箱</span>
+                  <span class="font-medium text-foreground">{{ whoisData.registrant.email }}</span>
+                </div>
+                <div v-if="whoisData.registrant.country && whoisData.registrant.country !== '-'" class="flex justify-between py-2 border-b border-border">
                   <span class="text-muted-foreground">国家</span>
-                  <span class="font-medium text-foreground">{{ whoisData.registrant.country || '-' }}</span>
+                  <span class="font-medium text-foreground">{{ whoisData.registrant.country }}</span>
                 </div>
               </div>
             </div>
@@ -502,7 +504,6 @@ const category = categories.find(c => c.id === 'network')
 
 // 响应式数据
 const domain = ref('')
-const tld = ref('')
 const loading = ref(false)
 const whoisData = ref(null)
 const batchDomains = ref('')
@@ -571,52 +572,54 @@ const queryWhois = async () => {
   whoisData.value = null
 
   try {
-    // 模拟API调用
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    // 直接使用输入的完整域名
+    const fullDomain = domain.value.trim()
 
-    // 模拟返回数据
-    const mockData = {
-      domain: domain.value + tld.value,
-      status: '已注册',
-      createdDate: '1997-09-15',
-      expiryDate: '2028-09-14',
-      updatedDate: '2019-09-09',
-      registrar: 'GoDaddy.com, LLC',
-      registrarUrl: 'https://www.godaddy.com',
-      whoisServer: 'whois.godaddy.com',
-      registrant: {
-        name: 'Domains by Proxy, LLC',
-        organization: 'Domains by Proxy, LLC',
-        country: 'United States'
-      },
-      nameServers: [
-        'ns1.example.com',
-        'ns2.example.com',
-        'ns3.example.com',
-        'ns4.example.com'
-      ],
-      rawData: options.value.includeRaw ? `Domain Name: ${domain.value}${tld.value}
-Registry Domain ID: 123456789_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.godaddy.com
-Registrar URL: http://www.godaddy.com
-Updated Date: 2019-09-09T15:39:04Z
-Creation Date: 1997-09-15T04:00:00Z
-Registry Expiry Date: 2028-09-14T04:00:00Z
-Registrar: GoDaddy.com, LLC
-Registrar IANA ID: 146
-Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: 480-624-2505` : null
+    // 调用真实API
+    const response = await fetch(`https://v2.xxapi.cn/api/whois?domain=${encodeURIComponent(fullDomain)}`)
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
     }
 
-    whoisData.value = mockData
+    const result = await response.json()
+
+    if (result.code !== 200) {
+      throw new Error(result.msg || '查询失败')
+    }
+
+    // 解析API返回的数据
+    const data = result.data
+    const formattedData = {
+      domain: data['Domain Name'] || data.data?.domain_name || fullDomain,
+      status: parseDomainStatus(data.domain_status || data.data?.domain_status),
+      createdDate: formatDate(data['Registration Time'] || data.data?.registration_time),
+      expiryDate: formatDate(data['Expiration Time'] || data.data?.expiration_time),
+      updatedDate: formatDate(data['Updated Time'] || data.data?.updated_time),
+      registrar: data['Sponsoring Registrar'] || data['Registrar URL']?.replace(/https?:\/\//, '').replace(/\/$/, '') || '-',
+      registrarUrl: data['Registrar URL'] || '#',
+      whoisServer: '-',
+      registrant: {
+        name: data.Registrant || data.data?.registrant || '隐私保护',
+        organization: data.data?.registrant_organization || '-',
+        country: data.data?.registrant_country || '-',
+        email: data['Registrant Contact Email'] || data.data?.registrant_contact_email || '-'
+      },
+      nameServers: data['DNS Serve'] || data.data?.dns_serve || [],
+      rawData: options.value.includeRaw ? JSON.stringify(data, null, 2) : null
+    }
+
+    whoisData.value = formattedData
 
     // 添加到历史记录
-    addToHistory(domain.value + tld.value, mockData.registrar)
+    addToHistory(fullDomain, formattedData.registrar)
+
   } catch (error) {
     console.error('查询失败:', error)
+    const fullDomain = domain.value.trim()
     whoisData.value = {
-      domain: domain.value + tld.value,
-      error: '域名无效或查询失败'
+      domain: fullDomain,
+      error: error.message || '域名无效或查询失败'
     }
   } finally {
     loading.value = false
@@ -631,17 +634,36 @@ const batchQuery = async () => {
 
   const domains = batchDomains.value.split('\n').filter(d => d.trim())
 
-  for (const d of domains) {
+  // 限制批量查询数量，避免请求过多
+  const maxBatchSize = 10
+  const limitedDomains = domains.slice(0, maxBatchSize)
+
+  for (const d of limitedDomains) {
     try {
-      // 模拟查询
+      // 调用真实API
+      const response = await fetch(`https://v2.xxapi.cn/api/whois?domain=${encodeURIComponent(d.trim())}`)
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      const result = await response.json()
+
+      if (result.code === 200) {
+        const data = result.data
+        batchResults.value.push({
+          domain: data['Domain Name'] || data.data?.domain_name || d.trim(),
+          status: parseDomainStatus(data.domain_status || data.data?.domain_status),
+          registrar: data['Sponsoring Registrar'] || data['Registrar URL']?.replace(/https?:\/\//, '').replace(/\/$/, '') || '-',
+          expiryDate: formatDate(data['Expiration Time'] || data.data?.expiration_time)
+        })
+      } else {
+        throw new Error(result.msg || '查询失败')
+      }
+
+      // 添加延迟避免请求过快
       await new Promise(resolve => setTimeout(resolve, 500))
 
-      batchResults.value.push({
-        domain: d.trim(),
-        status: Math.random() > 0.3 ? '已注册' : '可注册',
-        registrar: Math.random() > 0.3 ? 'GoDaddy.com, LLC' : null,
-        expiryDate: Math.random() > 0.3 ? '2025-12-31' : null
-      })
     } catch (error) {
       batchResults.value.push({
         domain: d.trim(),
@@ -655,13 +677,53 @@ const batchQuery = async () => {
   batchLoading.value = false
 }
 
+const parseDomainStatus = (status) => {
+  if (!status) return '未知'
+
+  // 解析域名状态
+  if (status.includes('clientDeleteProhibited') || status.includes('serverDeleteProhibited')) {
+    return '已注册 (锁定)'
+  } else if (status.includes('clientTransferProhibited') || status.includes('serverTransferProhibited')) {
+    return '已注册 (转移锁定)'
+  } else if (status.includes('clientUpdateProhibited') || status.includes('serverUpdateProhibited')) {
+    return '已注册 (更新锁定)'
+  } else if (status.includes('OK')) {
+    return '已注册'
+  } else {
+    return '已注册'
+  }
+}
+
+const formatDate = (dateStr) => {
+  if (!dateStr) return '-'
+
+  try {
+    // 处理ISO格式的日期
+    const date = new Date(dateStr)
+    if (isNaN(date.getTime())) {
+      return dateStr // 如果无法解析，返回原始字符串
+    }
+    return date.toLocaleDateString('zh-CN', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    })
+  } catch (e) {
+    return dateStr
+  }
+}
+
 const getStatusClass = (status) => {
   switch (status) {
     case '已注册':
+    case '已注册 (锁定)':
+    case '已注册 (转移锁定)':
+    case '已注册 (更新锁定)':
       return 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'
     case '可注册':
       return 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400'
     case '查询失败':
+    case '未知':
       return 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'
     default:
       return 'bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400'

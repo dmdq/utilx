@@ -1,0 +1,10 @@
+{
+  "auto_check_enabled": true,
+  "check_interval_hours": 24,
+  "auto_download_hotfix": true,
+  "auto_install_hotfix": false,
+  "release_channel": "stable",
+  "update_server": "http://localhost:3001",
+  "last_check_time": null,
+  "ignored_versions": []
+}

@@ -13,10 +13,10 @@ export const siteConfig = {
   title: '有条工具 - 开发者的常用的工具集合',
 
   // SEO标题后缀（用于页面标题）
-  titleSuffix: ' | 有条工具',
+  titleSuffix: ' - 有条工具',
 
   // 网站描述
-  description: '无广告 · 纯本地计算 · 即开即用的在线工具平台',
+  description: '无广告 · 本地计算 · 即开即用的在线工具平台',
 
   // 网站关键词
   keywords: '在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试'

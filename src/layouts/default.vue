@@ -1,8 +1,9 @@
 <template>
   <div class="bg-background text-foreground h-screen overflow-hidden flex antialiased selection:bg-primary/30">
+
     <!-- 移动端遮罩 (点击关闭侧边栏) -->
-    <div 
-      id="mobileOverlay" 
+    <div
+      id="mobileOverlay"
       class="fixed inset-0 bg-black/60 z-40 backdrop-blur-sm transition-opacity lg:hidden"
       :class="{ 'hidden': !isSidebarOpen }"
       @click="toggleSidebar"
@@ -19,11 +20,12 @@
         'lg:w-20': isCollapsed 
       }"
     >
-      <Sidebar 
+      <Sidebar
         :collapsed="isCollapsed"
         :current-category="currentCategory"
         @category-change="handleCategoryChange"
         @search="$emit('search', $event)"
+        @close-sidebar="isSidebarOpen = false"
       />
       <!-- 伸缩按钮 -->
       <button 
@@ -132,7 +134,7 @@
             class="group flex items-center gap-1 px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors"
           >
             <Github class="w-4 h-4" />
-            <span class="hidden sm:inline">Star</span>
+            <span class="hidden sm:inline"></span>
           </a>
 
           <!-- 多语言切换, 暂时注释，待后续开发 -->
@@ -165,7 +167,7 @@
           >
             <Menu class="w-6 h-6" />
           </button>
-          <span class="font-bold">Util.cn</span>
+          <NuxtLink to="/" class="font-bold hover:text-primary transition-colors">Util.cn</NuxtLink>
         </div>
         <button class="p-2 text-muted-foreground" @click="openSearch">
           <Search class="w-5 h-5" />
@@ -192,6 +194,9 @@
 
     <!-- PWA 安装提示 -->
     <PWAInstallPrompt />
+
+    <!-- 通知组件 -->
+    <Notification />
   </div>
 
   
@@ -207,6 +212,7 @@ import Footer from '~/components/Footer.vue'
 import GlobalSearch from '~/components/GlobalSearch.vue'
 import Breadcrumb from '~/components/Breadcrumb.vue'
 import PWAInstallPrompt from '~/components/PWAInstallPrompt.vue'
+import Notification from '~/components/Notification.vue'
 import { siteConfig } from '~/config/site'
 import { categories } from '~/data/categories'
 import { tools } from '~/data/tools'
@@ -493,6 +499,20 @@ onMounted(() => {
   updateCurrentTime()
   const timeInterval = setInterval(updateCurrentTime, 1000)
 
+  // 通知 Tauri 主窗口页面已加载完成
+  if (window.__TAURI__) {
+    try {
+      // Tauri v2 API: 使用 getCurrentWindow 而不是 getCurrent
+      const { getCurrentWindow } = window.__TAURI__.window
+      const currentWindow = getCurrentWindow()
+      currentWindow.emit('tauri://created')
+      console.log('✅ Tauri 窗口事件发送成功')
+    } catch (error) {
+      console.warn('⚠️ Tauri 窗口事件发送失败:', error)
+      // 不阻断页面正常加载
+    }
+  }
+
   // 在组件卸载时清理定时器
   onUnmounted(() => {
     clearInterval(timeInterval)
@@ -514,5 +534,16 @@ onMounted(() => {
 
 .animate-fade-in {
   animation: fadeIn 0.2s ease-in-out;
+}
+
+/* 淡入淡出过渡效果 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

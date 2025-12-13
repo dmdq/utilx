@@ -1,0 +1,47 @@
+{
+  "title": "Util - 开发者效率工具箱",
+  "background": {
+    "path": "../src-tauri/dmg-background.png",
+    "alignment": "center",
+    "scaling": "none"
+  },
+  "icon-size": 100,
+  "window": {
+    "size": {
+      "width": 600,
+      "height": 400
+    },
+    "position": {
+      "x": 400,
+      "y": 300
+    }
+  },
+  "contents": [
+    {
+      "x": 150,
+      "y": 250,
+      "type": "file",
+      "path": "../dist/Util.app"
+    },
+    {
+      "x": 450,
+      "y": 250,
+      "type": "link",
+      "path": "/Applications"
+    }
+  ],
+  "format": "UDZO",
+  "compression-level": 9,
+  "window-pos": {
+    "x": 400,
+    "y": 300
+  },
+  "icon": "Util.app",
+  "hide-extension": "Util.app",
+  "app-drop-link": {
+    "x": 450,
+    "y": 250,
+    "width": 100,
+    "height": 100
+  }
+}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tauri API 测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Tauri API 注入测试</h1>
+
+        <div id="tauri-status" class="result info">检测中...</div>
+
+        <h2>环境信息</h2>
+        <pre id="debug-info"></pre>
+
+        <h2>功能测试</h2>
+        <button onclick="testTauriAPI()">测试 Tauri API</button>
+        <button onclick="testOpenLink()">测试打开链接</button>
+        <button onclick="window.location.reload()">重新加载</button>
+
+        <div id="test-results"></div>
+    </div>
+
+    <script>
+        // 创建 Tauri API 兼容性对象
+        if (!window.__TAURI__) {
+            console.log('🔧 创建 Tauri API 兼容层');
+            window.__TAURI__ = {
+                invoke: async (command, args = {}) => {
+                    console.log(`🔧 调用 Tauri 命令: ${command}`, args);
+                    // 这里会被 Tauri 实际的注入脚本覆盖
+                    return new Promise((resolve, reject) => {
+                        // 临时兼容，等待真正的 Tauri API 注入
+                        setTimeout(() => {
+                            if (window.__TAURI__ && window.__TAURI__.invoke) {
+                                resolve(window.__TAURI__.invoke(command, args));
+                            } else {
+                                reject(new Error('Tauri API not available'));
+                            }
+                        }, 100);
+                    });
+                },
+                opener: {
+                    openUrl: async (url) => {
+                        console.log(`🔧 模拟打开链接: ${url}`);
+                        // 降级到 window.open
+                        window.open(url, '_blank');
+                    },
+                    open: async (url) => {
+                        console.log(`🔧 模拟打开链接: ${url}`);
+                        // 降级到 window.open
+                        window.open(url, '_blank');
+                    }
+                }
+            };
+        }
+    </script>
+    <script>
+        console.log('🚀 开始加载 Tauri API 测试页面');
+
+        // 等待 DOM 完全加载
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('📄 DOM 加载完成');
+
+            // 等待一段时间让 Tauri API 注入
+            setTimeout(() => {
+                checkTauriEnvironment();
+            }, 1000);
+        });
+
+        function checkTauriEnvironment() {
+            const statusDiv = document.getElementById('tauri-status');
+            const debugDiv = document.getElementById('debug-info');
+
+            let debugInfo = {
+                userAgent: navigator.userAgent,
+                platform: navigator.platform,
+                href: window.location.href,
+                protocol: window.location.protocol,
+                host: window.location.host,
+                hasTauri: false,
+                tauriObject: null,
+                windowObject: window
+            };
+
+            // 检查 Tauri API
+            if (typeof window !== 'undefined' && window.__TAURI__) {
+                debugInfo.hasTauri = true;
+                debugInfo.tauriObject = Object.keys(window.__TAURI__);
+
+                statusDiv.className = 'result success';
+                statusDiv.textContent = '✅ Tauri API 检测成功！';
+
+                // 测试具体 API
+                const apiInfo = {
+                    invoke: typeof window.__TAURI__.invoke,
+                    opener: typeof window.__TAURI__.opener,
+                    shell: typeof window.__TAURI__.shell
+                };
+
+                debugDiv.innerHTML = 'Tauri 环境信息:\n' +
+                    JSON.stringify(debugInfo, null, 2) +
+                    '\n\nAPI 可用性:\n' +
+                    JSON.stringify(apiInfo, null, 2);
+
+            } else {
+                debugInfo.tauriObject = 'undefined';
+
+                statusDiv.className = 'result error';
+                statusDiv.textContent = '❌ Tauri API 未检测到';
+
+                debugDiv.innerHTML = '环境信息:\n' +
+                    JSON.stringify(debugInfo, null, 2) +
+                    '\n\n⚠️ 这说明页面没有在 Tauri 环境中运行';
+            }
+        }
+
+        async function testTauriAPI() {
+            const resultsDiv = document.getElementById('test-results');
+
+            if (typeof window !== 'undefined' && window.__TAURI__ && window.__TAURI__.invoke) {
+                try {
+                    const result = await window.__TAURI__.invoke('greet', { name: 'Tauri 测试' });
+                    resultsDiv.innerHTML = `<div class="result success">✅ Tauri Invoke 测试成功: ${result}</div>`;
+                } catch (error) {
+                    resultsDiv.innerHTML = `<div class="result error">❌ Tauri Invoke 测试失败: ${error.message}</div>`;
+                }
+            } else {
+                resultsDiv.innerHTML = `<div class="result error">❌ Tauri API 不可用</div>`;
+            }
+        }
+
+        async function testOpenLink() {
+            const resultsDiv = document.getElementById('test-results');
+            resultsDiv.innerHTML = `<div class="result info">🔄 正在测试多种打开链接的方法...</div>`;
+
+            let successCount = 0;
+            let results = [];
+
+            // 添加超时机制
+            const timeoutPromise = new Promise((_, reject) => {
+                setTimeout(() => reject(new Error('测试超时')), 5000);
+            });
+
+            async function testWithTimeout(testName, testFunction) {
+                try {
+                    await Promise.race([testFunction(), timeoutPromise]);
+                    results.push(`✅ ${testName} - 成功`);
+                    successCount++;
+                    return true;
+                } catch (error) {
+                    results.push(`❌ ${testName} - 错误: ${error.message}`);
+                    return false;
+                }
+            }
+
+            // 方法1：Tauri opener API
+            await testWithTimeout('Tauri Opener (openUrl)', async () => {
+                if (!window.__TAURI__ || !window.__TAURI__.opener) {
+                    throw new Error('Opener API 不可用');
+                }
+                console.log('🔧 测试 Tauri opener API');
+                console.log('Opener 方法:', Object.getOwnPropertyNames(window.__TAURI__.opener));
+
+                if (typeof window.__TAURI__.opener.openUrl !== 'function') {
+                    throw new Error('openUrl 方法不存在');
+                }
+
+                await window.__TAURI__.opener.openUrl('https://www.bing.com');
+            });
+
+            // 方法2：Tauri shell API
+            await testWithTimeout('Tauri Shell', async () => {
+                if (!window.__TAURI__ || !window.__TAURI__.shell) {
+                    throw new Error('Shell API 不可用');
+                }
+                console.log('🔧 测试 Tauri shell API');
+
+                if (typeof window.__TAURI__.shell.open !== 'function') {
+                    throw new Error('shell.open 方法不存在');
+                }
+
+                await window.__TAURI__.shell.open('https://www.google.com');
+            });
+
+            // 方法3：Tauri 自定义命令（现在使用系统命令）
+            await testWithTimeout('Tauri 自定义命令', async () => {
+                if (!window.__TAURI__ || !window.__TAURI__.invoke) {
+                    throw new Error('Invoke API 不可用');
+                }
+                console.log('🔧 测试 Tauri 自定义命令（使用系统命令）');
+
+                await window.__TAURI__.invoke('open_external_link', 'https://www.github.com');
+            });
+
+            // 方法4：window.open (不需要超时)
+            try {
+                console.log('🔧 测试 window.open');
+                const newWindow = window.open('https://www.stackoverflow.com', '_blank');
+                if (newWindow) {
+                    results.push('✅ window.open - 应该在应用内新窗口打开');
+                    successCount++;
+                } else {
+                    results.push('❌ window.open - 被阻止');
+                }
+            } catch (error) {
+                results.push(`❌ window.open - 错误: ${error.message}`);
+            }
+
+            // 显示结果
+            const statusClass = successCount > 0 ? 'success' : 'error';
+            const statusText = successCount > 0 ? `✅ ${successCount} 种方法成功` : '❌ 所有方法都失败';
+
+            resultsDiv.innerHTML = `
+                <div class="result ${statusClass}">${statusText}</div>
+                <div style="margin-top: 10px;">
+                    <strong>详细结果:</strong><br>
+                    ${results.map(r => `<div style="margin: 5px 0; font-size: 14px;">${r}</div>`).join('')}
+                </div>
+                <div style="margin-top: 15px; padding: 10px; background: #fff3cd; border-radius: 5px;">
+                    <strong>💡 提示:</strong> 请检查：
+                    <ul style="margin: 5px 0; padding-left: 20px;">
+                        <li>系统默认浏览器是否有新标签页打开</li>
+                        <li>查看终端是否有 Rust 错误日志</li>
+                        <li>macOS 安全设置是否阻止了应用打开浏览器</li>
+                    </ul>
+                </div>
+            `;
+        }
+
+        // 外部链接工具函数 - 可用于实际应用
+        async function openExternalLink(url) {
+            console.log('🔗 尝试打开外部链接:', url);
+
+            try {
+                // 优先使用系统命令（在开发环境中更可靠）
+                if (window.__TAURI__ && window.__TAURI__.invoke) {
+                    await window.__TAURI__.invoke('open_external_link', url);
+                    console.log('✅ 系统命令执行成功');
+                    return;
+                }
+            } catch (error) {
+                console.log('❌ 系统命令失败，尝试降级方案:', error.message);
+            }
+
+            // 降级到 window.open
+            try {
+                const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+                if (newWindow) {
+                    console.log('✅ window.open 成功');
+                } else {
+                    console.log('❌ window.open 被阻止');
+                    // 最后尝试：复制链接到剪贴板
+                    navigator.clipboard.writeText(url).then(() => {
+                        console.log('✅ 链接已复制到剪贴板，请手动打开');
+                    }).catch(err => {
+                        console.log('❌ 复制到剪贴板也失败:', err);
+                    });
+                }
+            } catch (error) {
+                console.log('❌ window.open 失败:', error.message);
+            }
+        }
+
+        // 定期检查 Tauri API 是否可用
+        let checkCount = 0;
+        const maxChecks = 10;
+
+        const checkInterval = setInterval(() => {
+            checkCount++;
+
+            if (typeof window !== 'undefined' && window.__TAURI__) {
+                console.log('✅ Tauri API 已注入，停止检查');
+                clearInterval(checkInterval);
+                checkTauriEnvironment();
+            } else if (checkCount >= maxChecks) {
+                console.log('❌ 超时：Tauri API 未注入');
+                clearInterval(checkInterval);
+                checkTauriEnvironment();
+            } else {
+                console.log(`⏳ 检查中... (${checkCount}/${maxChecks})`);
+            }
+        }, 500);
+    </script>
+</body>
+</html>

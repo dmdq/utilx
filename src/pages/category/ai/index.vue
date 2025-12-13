@@ -1,5 +1,6 @@
 <template>
   <div class="max-w-8xl mx-auto">
+
     <!-- 面包屑导航 -->
     <!-- <Breadcrumb :category="category" /> -->
 
@@ -28,7 +29,12 @@
                 <p class="text-sm text-muted-foreground mb-3">{{ tool.description }}</p>
                 <div class="flex items-center justify-between">
                   <span class="text-xs px-2 py-1 bg-muted rounded-full">{{ tool.company }}</span>
-                  <a :href="tool.url" target="_blank" class="text-sm text-primary hover:underline flex items-center gap-1">
+                  <a
+                    :href="tool.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-primary hover:underline flex items-center gap-1"
+                  >
                     访问 <ExternalLink class="w-3 h-3" />
                   </a>
                 </div>
@@ -55,7 +61,12 @@
                 <p class="text-sm text-muted-foreground mb-3">{{ tool.description }}</p>
                 <div class="flex items-center justify-between">
                   <span class="text-xs px-2 py-1 bg-muted rounded-full">{{ tool.company }}</span>
-                  <a :href="tool.url" target="_blank" class="text-sm text-primary hover:underline flex items-center gap-1">
+                  <a
+                    :href="tool.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-primary hover:underline flex items-center gap-1"
+                  >
                     访问 <ExternalLink class="w-3 h-3" />
                   </a>
                 </div>
@@ -82,7 +93,12 @@
                 <p class="text-sm text-muted-foreground mb-3">{{ tool.description }}</p>
                 <div class="flex items-center justify-between">
                   <span class="text-xs px-2 py-1 bg-muted rounded-full">{{ tool.company }}</span>
-                  <a :href="tool.url" target="_blank" class="text-sm text-primary hover:underline flex items-center gap-1">
+                  <a
+                    :href="tool.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-primary hover:underline flex items-center gap-1"
+                  >
                     访问 <ExternalLink class="w-3 h-3" />
                   </a>
                 </div>
@@ -109,7 +125,12 @@
                 <p class="text-sm text-muted-foreground mb-3">{{ tool.description }}</p>
                 <div class="flex items-center justify-between">
                   <span class="text-xs px-2 py-1 bg-muted rounded-full">{{ tool.company }}</span>
-                  <a :href="tool.url" target="_blank" class="text-sm text-primary hover:underline flex items-center gap-1">
+                  <a
+                    :href="tool.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-primary hover:underline flex items-center gap-1"
+                  >
                     访问 <ExternalLink class="w-3 h-3" />
                   </a>
                 </div>
@@ -136,7 +157,12 @@
                 <p class="text-sm text-muted-foreground mb-3">{{ tool.description }}</p>
                 <div class="flex items-center justify-between">
                   <span class="text-xs px-2 py-1 bg-muted rounded-full">{{ tool.company }}</span>
-                  <a :href="tool.url" target="_blank" class="text-sm text-primary hover:underline flex items-center gap-1">
+                  <a
+                    :href="tool.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-primary hover:underline flex items-center gap-1"
+                  >
                     访问 <ExternalLink class="w-3 h-3" />
                   </a>
                 </div>
@@ -163,7 +189,12 @@
                 <p class="text-sm text-muted-foreground mb-3">{{ tool.description }}</p>
                 <div class="flex items-center justify-between">
                   <span class="text-xs px-2 py-1 bg-muted rounded-full">{{ tool.company }}</span>
-                  <a :href="tool.url" target="_blank" class="text-sm text-primary hover:underline flex items-center gap-1">
+                  <a
+                    :href="tool.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-primary hover:underline flex items-center gap-1"
+                  >
                     访问 <ExternalLink class="w-3 h-3" />
                   </a>
                 </div>
@@ -190,7 +221,12 @@
                 <p class="text-sm text-muted-foreground mb-3">{{ tool.description }}</p>
                 <div class="flex items-center justify-between">
                   <span class="text-xs px-2 py-1 bg-muted rounded-full">{{ tool.company }}</span>
-                  <a :href="tool.url" target="_blank" class="text-sm text-primary hover:underline flex items-center gap-1">
+                  <a
+                    :href="tool.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-primary hover:underline flex items-center gap-1"
+                  >
                     访问 <ExternalLink class="w-3 h-3" />
                   </a>
                 </div>
@@ -201,6 +237,7 @@
       </section>
     </div>
 
+  
     <!-- 页脚说明 -->
     <div class="mt-16 pt-8 border-t border-border">
       <div class="text-center text-sm text-muted-foreground">
@@ -217,10 +254,7 @@ import {
   BarChart, Globe, ExternalLink, Bot, Zap, Sparkles,
   Cpu, Palette, FileVideo, Mic, TrendingUp, Brain, Search
 } from 'lucide-vue-next'
-import Breadcrumb from '~/components/Breadcrumb.vue'
 
-// 虚拟分类对象
-const category = { id: 'ai', name: 'AI工具', description: 'AI工具导航' }
 
 // 对话助手工具
 const chatTools = [
@@ -626,5 +660,6 @@ import { useSEO } from '~/composables/useSEO'
 // 使用SEO composable设置页面标题
 const { setPageTitle } = useSEO()
 setPageTitle('AI工具导航')
+
 
 </script>

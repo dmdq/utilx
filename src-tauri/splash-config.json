@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "duration": 1000,
+  "waitForMainPage": true,
+  "checkInterval": 100,
+  "maxWaitTime": 15000,
+  "windowSize": {
+    "width": 800,
+    "height": 600
+  },
+  "mainWindowSize": {
+    "width": 1400,
+    "height": 760
+  },
+  "centerWindow": true,
+  "development": {
+    "duration": 1500,
+    "checkInterval": 200,
+    "maxWaitTime": 15000
+  }
+}
