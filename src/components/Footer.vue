@@ -12,8 +12,8 @@
 
         <!-- 中间快速链接 -->
         <nav class="flex items-center gap-4 text-xs">
-          <NuxtLink to="/about/" class="text-muted-foreground hover:text-foreground transition-colors">
-            关于我们
+          <NuxtLink to="/faq/" class="text-muted-foreground hover:text-foreground transition-colors">
+            FAQ
           </NuxtLink>
           <NuxtLink to="/privacy/" class="text-muted-foreground hover:text-foreground transition-colors">
             隐私政策
@@ -21,6 +21,14 @@
           <NuxtLink to="/terms/" class="text-muted-foreground hover:text-foreground transition-colors">
             服务条款
           </NuxtLink>
+          <a
+            href="https://www.util.cn/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            博客
+          </a>
         </nav>
 
         <!-- 右侧特性标识 -->

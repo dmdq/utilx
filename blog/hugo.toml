@@ -1,0 +1,108 @@
+baseURL = '/blog/'
+languageCode = 'zh-cn'
+title = '有条工具 - 技术博客'
+theme = 'PaperMod'
+
+# 生成配置
+publishDir = 'public'
+
+# 网站配置
+[params]
+  # 网站描述
+  description = '有条工具官方技术博客 - 分享开发经验、工具使用技巧和技术见解'
+  # 关键词
+  keywords = ['开发者工具', '技术博客', '前端开发', '工具分享', '编程技巧']
+  # 作者
+  author = 'util.cn Team'
+
+  # PaperMod 主题配置
+  env = "production"
+
+  # 主页配置
+  [params.homeInfoParams]
+    Title = "欢迎来到有条工具技术博客"
+    Content = "这里是我们团队分享开发经验、技术见解和工具使用技巧的地方。"
+
+  # 社交图标配置
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/dmdq/utilx"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/feed.xml"
+
+  # 深色模式配置
+  [params.assets]
+    disableHLJS = true
+    disableFingerprinting = false
+    favicon = "/favicon.ico"
+
+  # 深色模式切换
+  [params.profileMode]
+    enabled = true
+    title = "有条工具 - 技术博客"
+    subtitle = "分享开发经验 · 工具技巧 · 技术见解"
+    imageUrl = "/logo-256.png"
+    imageTitle = "logo"
+    imageWidth = 120
+    imageHeight = 120
+
+# 菜单配置
+[menu]
+  [[menu.main]]
+    name = '有条工具'
+    title = '有条工具 - 开发者的常用工具集合：无广告 · 本地计算 · 即开即用的在线工具平台，提供JSON格式化、SQL格式化、Markdown编辑器等实用工具'
+    url = 'https://www.util.cn'
+    weight = 10
+  [[menu.main]]
+    name = '博客'
+    title = '有条工具 - 技术博客：分享开发经验、工具使用技巧和技术见解，助力开发者提升效率'
+    url = '/'
+    weight = 20
+  [[menu.main]]
+    name = '分类'
+    title = '文章分类 - 有条工具技术博客：按技术领域分类的优质文章，包括前端开发、工具使用、编程技巧等'
+    url = '/categories/'
+    weight = 30
+  [[menu.main]]
+    name = '标签'
+    title = '标签云 - 有条工具技术博客：通过标签快速找到感兴趣的技术文章和教程内容'
+    url = '/tags/'
+    weight = 40
+
+# 分类
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+# Markdown配置
+[markup]
+  [markup.highlight]
+    style = 'github-dark'
+    lineNos = true
+    lineNumbersInTable = true
+    tabWidth = 2
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+# 输出配置
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+  page = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+
+# RSS配置
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = 'application/rss+xml'
+    baseName = 'feed'
+
+# 构建设置
+[build]
+  writeStats = true

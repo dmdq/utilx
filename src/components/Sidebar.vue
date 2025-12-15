@@ -52,6 +52,7 @@
       <!-- 主要页面导航 -->
       <div>
         <nav class="space-y-0.5">
+          <!-- 首页 -->
           <NuxtLink
             to="/"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
@@ -65,7 +66,8 @@
             <Home class="w-4 h-4" />
             <span :class="{ 'lg:hidden': collapsed }">首页</span>
           </NuxtLink>
-          
+
+          <!-- 探索 -->
           <NuxtLink
             to="/explore/"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
@@ -79,19 +81,7 @@
             <span :class="{ 'lg:hidden': collapsed }">探索</span>
           </NuxtLink>
 
-          <NuxtLink
-            to="/recent/"
-            class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
-            :class="[
-              $route.path === '/recent/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
-              { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
-            ]"
-            @click="handleNavClick"
-          >
-            <Clock class="w-4 h-4" />
-            <span :class="{ 'lg:hidden': collapsed }">最近使用</span>
-          </NuxtLink>
-
+          <!-- 我的收藏 -->
           <NuxtLink
             to="/favorites/"
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
@@ -105,33 +95,69 @@
             <span :class="{ 'lg:hidden': collapsed }">我的收藏</span>
           </NuxtLink>
 
-          <NuxtLink
-            to="/sitemap/"
-            class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
-            :class="[
-              $route.path === '/sitemap/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
-              { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
-            ]"
-            @click="handleNavClick"
+          <!-- 更多按钮 -->
+          <button
+            class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors text-muted-foreground hover:bg-muted/50 hover:text-foreground"
+            :class="{ 'lg:justify-center lg:px-0 lg:gap-0': collapsed }"
+            @click="toggleMoreMenu"
           >
-            <Map class="w-4 h-4" />
-            <span :class="{ 'lg:hidden': collapsed }">站点地图</span>
-          </NuxtLink>
+            <MoreHorizontal class="w-4 h-4" />
+            <span :class="{ 'lg:hidden': collapsed }">更多</span>
+            <ChevronRight
+              class="w-3 h-3 ml-auto transition-transform"
+              :class="{ 'lg:hidden': collapsed || isMoreMenuExpanded ? 'rotate-90' : '' }"
+            />
+          </button>
 
-          <NuxtLink
-            to="/ai/"
-            class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
-            :class="[
-              $route.path === '/ai/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
-              { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
-            ]"
-            @click="handleNavClick"
+          <!-- 展开的更多菜单 -->
+          <div
+            v-if="isMoreMenuExpanded"
+            class="space-y-0.5 overflow-hidden transition-all duration-300"
+            :class="{ 'lg:hidden': collapsed }"
           >
-            <Sparkles class="w-4 h-4 text-purple-500" />
-            <span :class="{ 'lg:hidden': collapsed }">AI 导航</span>
-          </NuxtLink>
+            <!-- 最近使用 -->
+            <NuxtLink
+              to="/recent/"
+              class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors pl-8"
+              :class="[
+                $route.path === '/recent/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+                { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
+              ]"
+              @click="handleNavClick"
+            >
+              <Clock class="w-4 h-4" />
+              <span :class="{ 'lg:hidden': collapsed }">最近使用</span>
+            </NuxtLink>
 
-          </nav>
+            <!-- AI导航 -->
+            <NuxtLink
+              to="/ai/"
+              class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors pl-8"
+              :class="[
+                $route.path === '/ai/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+                { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
+              ]"
+              @click="handleNavClick"
+            >
+              <Sparkles class="w-4 h-4 text-purple-500" />
+              <span :class="{ 'lg:hidden': collapsed }">AI 导航</span>
+            </NuxtLink>
+
+            <!-- 站点地图 -->
+            <NuxtLink
+              to="/sitemap/"
+              class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors pl-8"
+              :class="[
+                $route.path === '/sitemap/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+                { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
+              ]"
+              @click="handleNavClick"
+            >
+              <Map class="w-4 h-4" />
+              <span :class="{ 'lg:hidden': collapsed }">站点地图</span>
+            </NuxtLink>
+          </div>
+        </nav>
       </div>
 
       <!-- 分割线 -->
@@ -189,11 +215,11 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, computed } from 'vue'
+import { ref, computed } from 'vue'
 import {
   Terminal, LayoutGrid, Code2, ShieldCheck, Server, ImageIcon,
   FileJson, Clock, ArrowRight, MessageSquarePlus, FileText, Lock,
-  Shield, Type, Wifi, Code, Image, Home, Compass, Sparkles, ChevronRight, Heart, Map
+  Shield, Type, Wifi, Code, Image, Home, Compass, Sparkles, ChevronRight, Heart, Map, MoreHorizontal
 } from 'lucide-vue-next'
 import { categories } from '~/data/categories'
 import { useRoute } from 'vue-router'
@@ -228,12 +254,20 @@ const props = defineProps({
 
 const route = useRoute()
 
+// 控制更多菜单的展开/收起
+const isMoreMenuExpanded = ref(false)
+
 // 处理导航点击，移动端关闭侧边栏
 const handleNavClick = () => {
   // 检查是否是移动端
   if (window.innerWidth < 1024) {
     emit('close-sidebar')
   }
+}
+
+// 切换更多菜单的展开/收起状态
+const toggleMoreMenu = () => {
+  isMoreMenuExpanded.value = !isMoreMenuExpanded.value
 }
 
 // 为每个分类添加图标组件

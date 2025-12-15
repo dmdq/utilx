@@ -252,6 +252,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { useSeoMeta } from 'nuxt/app'
 import {
   FileJson, Copy, Download, RotateCcw,
   FileText, Lock, Shield, Clock, Type, Wifi, Image, Code,
@@ -263,6 +264,25 @@ import { categories } from '~/data/categories'
 import { addRecentTool } from '~/composables/useTools'
 import ToolCard from '~/components/ToolCard.vue'
 import Breadcrumb from '~/components/Breadcrumb.vue'
+
+// SEO配置
+useSeoMeta({
+  title: 'CSV格式化工具 - 在线CSV美化与表格预览工具 | 有条工具',
+  meta: [
+    { name: 'description', content: '一款免费的在线 CSV 格式化工具。支持美化CSV数据，自动识别分隔符，表格预览，导出格式化后的CSV。支持逗号、分号、Tab和竖线分隔符，纯本地计算，数据隐私绝对安全。' },
+    { name: 'keywords', content: 'CSV格式化,CSV美化,CSV工具,在线CSV格式化,CSV表格预览,CSV分隔符,逗号分隔值,CSV编辑器,CSV转换,CSV查看器' },
+    { name: 'author', content: 'Util.cn' }
+  ],
+  og: {
+    title: 'CSV格式化工具 - 在线CSV美化与表格预览工具',
+    description: '一款免费的在线 CSV 格式化工具。支持美化CSV数据，自动识别分隔符，表格预览，导出格式化后的CSV。支持逗号、分号、Tab和竖线分隔符，纯本地计算，数据隐私绝对安全。'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CSV格式化工具 - 在线CSV美化与表格预览工具',
+    description: '一款免费的在线 CSV 格式化工具。支持美化CSV数据，自动识别分隔符，表格预览，导出格式化后的CSV。支持逗号、分号、Tab和竖线分隔符，纯本地计算，数据隐私绝对安全。'
+  }
+})
 
 definePageMeta({
   layout: 'default'

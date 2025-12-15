@@ -102,21 +102,26 @@ const iconMap = {
 
 // 获取收藏工具排序
 const getFavoriteOrder = () => {
-  try {
-    const savedOrder = localStorage.getItem('favorite-tools-order')
-    return savedOrder ? JSON.parse(savedOrder) : []
-  } catch (error) {
-    console.warn('Failed to load favorite tools order:', error)
-    return []
+  if (process.client) {
+    try {
+      const savedOrder = localStorage.getItem('favorite-tools-order')
+      return savedOrder ? JSON.parse(savedOrder) : []
+    } catch (error) {
+      console.warn('Failed to load favorite tools order:', error)
+      return []
+    }
   }
+  return []
 }
 
 // 保存收藏工具排序
 const saveFavoriteOrder = (order) => {
-  try {
-    localStorage.setItem('favorite-tools-order', JSON.stringify(order))
-  } catch (error) {
-    console.warn('Failed to save favorite tools order:', error)
+  if (process.client) {
+    try {
+      localStorage.setItem('favorite-tools-order', JSON.stringify(order))
+    } catch (error) {
+      console.warn('Failed to save favorite tools order:', error)
+    }
   }
 }
 

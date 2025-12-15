@@ -329,6 +329,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useSeoMeta } from '#app'
 import {
   FileText, FileDiff, GitCompare, HelpCircle, ChevronUp,
   Type, Hash, Code, RotateCcw, Copy, Download,
@@ -341,6 +342,20 @@ import { addRecentTool } from '~/composables/useTools'
 
 definePageMeta({
   layout: 'default'
+})
+
+// SEO Meta
+useSeoMeta({
+  title: '文本对比工具 - 在线文本差异比较器 | 有条工具',
+  description: '免费的在线文本差异对比工具，支持行级、单词级、字符级三种对比模式，实时高亮显示差异，提供导出功能。纯本地计算，数据安全，支持各种文本文件格式对比。',
+  keywords: '文本对比,文本差异,diff工具,文本比较,差异高亮,文件对比,代码对比,文档对比,在线工具,免费工具',
+  author: 'Util.cn',
+  ogTitle: '文本对比工具 - 免费在线文本差异比较器',
+  ogDescription: '专业的文本差异对比工具，支持多种对比模式，实时高亮显示差异，支持导出。纯本地计算，数据安全可靠。',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: '文本对比工具 - 免费在线文本差异比较',
+  twitterDescription: '免费在线文本差异对比工具，支持行级、单词级、字符级对比，差异高亮显示，支持导出功能。本地计算，数据安全。'
 })
 
 // 定义当前工具和分类

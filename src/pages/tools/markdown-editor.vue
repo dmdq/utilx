@@ -554,16 +554,20 @@ watch(markdownText, () => {
 
 onMounted(() => {
   // 从本地存储加载
-  const saved = localStorage.getItem('markdown-editor-content')
-  if (saved) {
-    markdownText.value = saved
+  if (process.client) {
+    const saved = localStorage.getItem('markdown-editor-content')
+    if (saved) {
+      markdownText.value = saved
+    }
   }
 })
 
 // 保存到本地存储
 const saveToLocalStorage = () => {
-  localStorage.setItem('markdown-editor-content', markdownText.value)
-  lastSaved.value = new Date().toLocaleTimeString()
+  if (process.client) {
+    localStorage.setItem('markdown-editor-content', markdownText.value)
+    lastSaved.value = new Date().toLocaleTimeString()
+  }
 }
 
 // 处理输入

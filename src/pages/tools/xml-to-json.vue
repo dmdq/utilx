@@ -284,7 +284,7 @@ useHead({
         '@type': 'WebApplication',
         name: 'XML转JSON工具',
         description: '免费在线 XML to JSON 转换工具，支持将 XML 数据快速转换为 JSON 格式',
-        url: 'https://util.example.com/tools/xml-to-json',
+        url: 'https://www.util.cn/tools/xml-to-json',
         applicationCategory: 'DeveloperApplication',
         operatingSystem: 'Any',
         offers: {

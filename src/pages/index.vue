@@ -68,7 +68,7 @@
       </div>
       
       <!-- 热门/快捷标签 -->
-      <div class="flex flex-wrap justify-center gap-2">
+      <div class="flex flex-wrap items-center justify-center gap-2">
         <span class="text-xs text-muted-foreground">热门搜索：</span>
         <button
           v-for="tag in popularTags"

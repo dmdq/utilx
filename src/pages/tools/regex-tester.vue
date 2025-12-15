@@ -364,6 +364,7 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue'
+import { useSeoMeta } from '#app'
 import {
   Search, FileText, CheckCircle, Copy, Beaker, Info, HelpCircle, ChevronUp,
   FileJson, Database, Link, Hash, Timer, FileDiff,
@@ -375,6 +376,20 @@ import {
 
 definePageMeta({
   layout: 'default'
+})
+
+// SEO Meta
+useSeoMeta({
+  title: '正则表达式测试工具 - 在线Regex匹配验证调试 | 有条工具',
+  description: '免费的正则表达式在线测试工具，支持实时匹配、语法高亮、常用正则表达式库、测试用例和详细解释。纯本地计算，数据安全，无需注册，助您快速调试和验证正则表达式。',
+  keywords: '正则表达式,regex,正则测试,在线调试,匹配验证,语法高亮,正则库,前端工具,免费工具',
+  author: 'Util.cn',
+  ogTitle: '正则表达式测试工具 - 免费在线Regex调试工具',
+  ogDescription: '专业的正则表达式在线测试工具，支持实时匹配、语法高亮、常用预设和详细解释。纯本地计算，数据绝对安全。',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: '正则表达式测试工具 - 免费在线Regex调试',
+  twitterDescription: '免费的正则表达式在线测试工具，支持实时匹配、语法高亮、常用正则库。本地计算，数据安全。'
 })
 
 // 定义当前工具和分类

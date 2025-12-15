@@ -38,7 +38,9 @@ Cookie 是小型文本文件，网站会将其存储在您的计算机或移动�
 - **Edge**：设置 > Cookie 和网站权限
 
 ### 禁用分析 Cookie
-如果您不希望被 Google Analytics 跟踪，可以安装 [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout)。
+如果您不希望被 Google Analytics 跟踪，可以安装 <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics Opt-out Browser Add-on</a>。
+
+
 
 ## Cookie 有效期
 

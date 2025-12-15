@@ -223,6 +223,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { useSeoMeta } from 'nuxt/app'
 import {
   FileJson, Copy, Download, RotateCcw,
   FileText, Lock, Shield, Clock, Type, Wifi, Image, Code,
@@ -234,6 +235,25 @@ import { categories } from '~/data/categories'
 import { addRecentTool } from '~/composables/useTools'
 import ToolCard from '~/components/ToolCard.vue'
 import Breadcrumb from '~/components/Breadcrumb.vue'
+
+// SEO配置
+useSeoMeta({
+  title: 'TOML格式化工具 - 在线TOML美化工具 | 有条工具',
+  meta: [
+    { name: 'description', content: '一款免费的在线 TOML 格式化工具。支持一键美化、格式化TOML配置文件，自动调整缩进，检查语法。支持键值对排序，保留注释，纯本地计算，数据隐私绝对安全。' },
+    { name: 'keywords', content: 'TOML格式化,TOML美化,TOML工具,在线TOML格式化,TOML配置文件,Cargo配置,Rust配置,配置文件格式化,TOML解析,TOML验证,TOML编辑器' },
+    { name: 'author', content: 'Util.cn' }
+  ],
+  og: {
+    title: 'TOML格式化工具 - 在线TOML美化工具',
+    description: '一款免费的在线 TOML 格式化工具。支持一键美化、格式化TOML配置文件，自动调整缩进，检查语法。支持键值对排序，保留注释，纯本地计算，数据隐私绝对安全。'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TOML格式化工具 - 在线TOML美化工具',
+    description: '一款免费的在线 TOML 格式化工具。支持一键美化、格式化TOML配置文件，自动调整缩进，检查语法。支持键值对排序，保留注释，纯本地计算，数据隐私绝对安全。'
+  }
+})
 
 definePageMeta({
   layout: 'default'

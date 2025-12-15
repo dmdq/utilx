@@ -1,0 +1,270 @@
+/* 有条工具 - PaperMod 主题自定义样式 */
+
+/* 强制深色模式 */
+:root {
+    --background: #09090b !important;
+    --foreground: #fafafa !important;
+    --card: #18181b !important;
+    --card-foreground: #fafafa !important;
+    --primary: #6366f1 !important;
+    --primary-foreground: #fafafa !important;
+    --secondary: #27272a !important;
+    --secondary-foreground: #fafafa !important;
+    --muted: #27272a !important;
+    --muted-foreground: #a1a1aa !important;
+    --accent: #27272a !important;
+    --accent-foreground: #fafafa !important;
+    --border: #27272a !important;
+    --input: #27272a !important;
+    --ring: #6366f1 !important;
+}
+
+/* 全局样式 */
+html, body {
+    background-color: #09090b !important;
+    color: #fafafa !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* 顶部导航栏 */
+.top-nav-container {
+    background-color: #09090b !important;
+    border-bottom: 1px solid #27272a !important;
+}
+
+.top-nav a {
+    color: #a1a1aa !important;
+}
+
+.top-nav a:hover {
+    color: #6366f1 !important;
+}
+
+/* Logo样式 */
+.logo a {
+    color: #fafafa !important;
+    font-weight: 600 !important;
+}
+
+/* 主页Profile卡片 */
+.profile {
+    background-color: #18181b !important;
+    border: 1px solid #27272a !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+.profile .profile-avatar {
+    border: 3px solid #27272a !important;
+}
+
+.profile .profile-name {
+    color: #fafafa !important;
+    background: linear-gradient(135deg, #fafafa, #6366f1) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.profile .profile-subtitle {
+    color: #a1a1aa !important;
+}
+
+/* 文章卡片样式 */
+.first-entry {
+    background-color: #18181b !important;
+    border: 1px solid #27272a !important;
+    border-radius: 16px !important;
+}
+
+.post-entry {
+    background-color: #18181b !important;
+    border: 1px solid #27272a !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+    margin-bottom: 1rem !important;
+}
+
+.post-entry:hover {
+    border-color: #6366f1 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15) !important;
+}
+
+.entry-header .entry-title {
+    color: #fafafa !important;
+    font-weight: 600 !important;
+}
+
+.entry-header .entry-title:hover {
+    color: #6366f1 !important;
+}
+
+.entry-footer .entry-meta {
+    color: #a1a1aa !important;
+}
+
+/* 文章详情页 */
+.post-header {
+    border-bottom: 1px solid #27272a !important;
+}
+
+.post-title {
+    color: #fafafa !important;
+    font-weight: 700 !important;
+}
+
+.post-content {
+    color: #fafafa !important;
+    line-height: 1.8 !important;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    color: #fafafa !important;
+}
+
+.post-content h2 {
+    border-bottom: 1px solid #27272a !important;
+}
+
+.post-content a {
+    color: #6366f1 !important;
+}
+
+.post-content blockquote {
+    background-color: #27272a !important;
+    border-left: 4px solid #6366f1 !important;
+    color: #a1a1aa !important;
+}
+
+/* 代码块样式 */
+.chroma {
+    background-color: #18181b !important;
+    color: #fafafa !important;
+    border-radius: 8px !important;
+}
+
+.chroma .ln {
+    color: #71717a !important;
+}
+
+/* 表格样式 */
+table {
+    background-color: #18181b !important;
+    border-color: #27272a !important;
+}
+
+th, td {
+    border-color: #27272a !important;
+}
+
+th {
+    background-color: #27272a !important;
+    color: #fafafa !important;
+}
+
+/* 标签和分类页 */
+.tag-cloud .tag-cloud-item {
+    background-color: #27272a !important;
+    border: 1px solid #3f3f46 !important;
+    color: #6366f1 !important;
+}
+
+.tag-cloud .tag-cloud-item:hover {
+    background-color: #6366f1 !important;
+    color: #fafafa !important;
+}
+
+/* 分页样式 */
+.pagination a {
+    background-color: #18181b !important;
+    border: 1px solid #27272a !important;
+    color: #fafafa !important;
+}
+
+.pagination a:hover {
+    border-color: #6366f1 !important;
+    color: #6366f1 !important;
+}
+
+/* 页脚样式 */
+.footer {
+    background-color: #18181b !important;
+    border-top: 1px solid #27272a !important;
+    color: #a1a1aa !important;
+}
+
+/* 侧边栏样式 */
+#TableOfContents {
+    background-color: #18181b !important;
+    border: 1px solid #27272a !important;
+    border-radius: 12px !important;
+}
+
+#TableOfContents ul li a {
+    color: #a1a1aa !important;
+}
+
+#TableOfContents ul li a:hover {
+    color: #6366f1 !important;
+}
+
+#TableOfContents ul li.active a {
+    color: #6366f1 !important;
+}
+
+/* 返回顶部按钮 */
+.top-link {
+    background-color: #6366f1 !important;
+    color: #fafafa !important;
+}
+
+/* 字体优化 */
+body, .post-content, .entry-content {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* 代码字体 */
+code, pre {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace !important;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(113, 113, 122, 0.5);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(113, 113, 122, 0.7);
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .post-entry {
+        border-radius: 8px !important;
+    }
+
+    .profile {
+        border-radius: 12px !important;
+    }
+}
+
+/* 隐藏PaperMod的默认主题切换（因为我们强制深色模式） */
+.theme-switch {
+    display: none !important;
+}

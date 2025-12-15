@@ -226,6 +226,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { useSeoMeta } from 'nuxt/app'
 import {
   Database, Copy, Download, RotateCcw,
   FileText, Lock, Shield, Clock, Type, Wifi, Image, Code,
@@ -237,6 +238,25 @@ import { categories } from '~/data/categories'
 import { addRecentTool } from '~/composables/useTools'
 import ToolCard from '~/components/ToolCard.vue'
 import Breadcrumb from '~/components/Breadcrumb.vue'
+
+// SEO配置
+useSeoMeta({
+  title: 'SQL格式化工具 - 在线SQL美化与格式化工具 | 有条工具',
+  meta: [
+    { name: 'description', content: '一款免费的在线 SQL 格式化工具。支持一键美化、格式化各种 SQL 语句，包括 SELECT、INSERT、UPDATE、DELETE 等。支持多种数据库方言，纯本地计算，数据隐私绝对安全。' },
+    { name: 'keywords', content: 'SQL格式化,SQL美化,SQL格式化工具,在线SQL工具,SQL语句格式化,MySQL格式化,PostgreSQL格式化,SQLite格式化,Oracle格式化,SQL Server格式化' },
+    { name: 'author', content: 'Util.cn' }
+  ],
+  og: {
+    title: 'SQL格式化工具 - 在线SQL美化与格式化工具',
+    description: '一款免费的在线 SQL 格式化工具。支持一键美化、格式化各种 SQL 语句，包括 SELECT、INSERT、UPDATE、DELETE 等。支持多种数据库方言，纯本地计算，数据隐私绝对安全。'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SQL格式化工具 - 在线SQL美化与格式化工具',
+    description: '一款免费的在线 SQL 格式化工具。支持一键美化、格式化各种 SQL 语句，包括 SELECT、INSERT、UPDATE、DELETE 等。支持多种数据库方言，纯本地计算，数据隐私绝对安全。'
+  }
+})
 
 definePageMeta({
   layout: 'default'

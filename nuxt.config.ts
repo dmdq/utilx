@@ -1,8 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config'
 
+const isDev = process.env.NODE_ENV === 'development'
+
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  // Nuxt 4.2.2 的新devtools配置
+  devtools: {
+    enabled: isDev,
+    // 启用Nuxt 4的新功能
+    timeline: {
+      enabled: isDev
+    }
+  },
   css: ['@/assets/css/main.css'],
   modules: [
     '@nuxtjs/tailwindcss',
@@ -53,15 +62,16 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [],
-    // 优化文件监视，减少文件句柄使用
-    server: {
+    // 开发环境优化
+    server: isDev ? {
       fs: {
         strict: false
       },
       watch: {
-        usePolling: true,
-        interval: 1000,
-        depth: 2,
+        // 开发环境使用更高效的监听
+        usePolling: false,
+        depth: 1,
+        // 排除更多文件以减少监听负担
         ignored: [
           '**/node_modules/**',
           '**/.git/**',
@@ -69,25 +79,107 @@ export default defineNuxtConfig({
           '**/.nuxt/**',
           '**/target/**',
           '**/.output/**',
-          '**/coverage/**'
+          '**/coverage/**',
+          '**/.vscode/**',
+          '**/.idea/**',
+          '**/scripts/**',
+          '**/*.log',
+          '**/README*.md',
+          '**/docs/**',
+          '**/src-tauri/**',
+          '!**/src-tauri/tauri.conf.json'
         ]
+      },
+      // 减少开发服务器的资源使用
+      hmr: {
+        overlay: false
+      }
+    } : {
+      fs: {
+        strict: false
       }
     },
     build: {
+      // 优化构建性能
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true
+        }
+      },
       rollupOptions: {
         onwarn: (warning, warn) => {
           if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return
           warn(warning)
+        },
+        // 优化依赖预构建
+        output: {
+          manualChunks: {
+            vendor: ['vue', 'vue-router'],
+            ui: ['naive-ui', '@vueuse/integrations'],
+            utils: ['crypto-js', 'marked', 'qrcode']
+          }
         }
-      }
+      },
+      // 提高构建速度
+      chunkSizeWarningLimit: 1000
     },
     optimizeDeps: {
-      include: [],
-      exclude: ['@tauri-apps/api']
-    }
+      // 预构建优化
+      include: [
+        'vue',
+        'vue-router',
+        'naive-ui',
+        'marked',
+        'crypto-js',
+        'qrcode',
+        'lucide-vue-next'
+      ],
+      exclude: [
+        '@tauri-apps/api',
+        'exifreader',
+        'jszip'
+      ],
+      // 强制重新构建
+      force: isDev
+    },
+    },
+
+  // Nuxt 4.2.2 兼容日期
+  compatibilityDate: '2024-11-25',
+
+  // Nuxt 4的新功能
+  features: {
+    // 启用内联CSS
+    inlineStyles: false,
+    // 开发日志
+    devLogs: isDev,
+    // 禁用不必要的脚本
+    noScripts: false
   },
 
-  compatibilityDate: '2025-12-10',
+  // 开发环境优化
+  ...(isDev ? {
+    // 启用SSR以确保资源路径正确
+    ssr: true,
+    // 减少构建时间
+    nitro: {
+      minify: false,
+      sourceMap: false,
+      prerender: {
+        routes: []
+      }
+    },
+    // 优化页面加载 - 启用进度条
+    loading: {
+      color: 'rgb(80, 80, 80)',
+      height: '1px',
+      continuous: true,
+      duration: 3000
+    }
+  } : {}),
+
   // 更新目录结构配置
   srcDir: 'src/',
   dir: {
@@ -96,9 +188,8 @@ export default defineNuxtConfig({
     middleware: 'middleware',
     plugins: 'plugins',
     modules: 'modules',
-    public: '../public',
-    assets: './assets',
-    app: '../app'
+    public: 'public',
+    assets: './assets'
   },
   // 设置自定义挂载点 - 移除 rootId 配置，使用默认值
   // vueApp: {
@@ -107,16 +198,20 @@ export default defineNuxtConfig({
   // 配置路由规则
   nitro: {
     prerender: {
-      routes: ['/ai', '/crypto', '/dev', '/encode', '/format', '/image', '/network', '/text', '/time', '/all']
+      routes: ['/', '/ai', '/crypto', '/dev', '/encode', '/format', '/image', '/network', '/text', '/time', '/all']
     },
-    // 确保静态文件可以正确访问
+    // 静态资源处理
     publicAssets: [
       {
-        baseURL: '/blog/',
-        dir: 'public/blog',
-        maxAge: 60 * 60 * 24 * 365 // 1年缓存
+        baseURL: '/',
+        dir: 'public',
+        maxAge: 60 * 60 * 24 * 365
       }
     ]
+  },
+  // 添加实验性配置以支持静态文件
+  experimental: {
+    payloadExtraction: false
   },
   app: {
     head: {
@@ -134,8 +229,8 @@ export default defineNuxtConfig({
         { name: 'msapplication-config', content: '/browserconfig.xml' }
       ],
       link: [
-        { rel: 'preload', href: '/_nuxt/entry.js', as: 'script' },
-        { rel: 'preload', href: '/_nuxt/app.css', as: 'style' },
+        // { rel: 'preload', href: '/_nuxt/entry.js', as: 'script' },
+        // { rel: 'preload', href: '/_nuxt/app.css', as: 'style' },
 
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon.png' },
@@ -170,10 +265,21 @@ export default defineNuxtConfig({
       ]
     }
   },
-  // 定义运行时配置
+  // 运行时配置
   runtimeConfig: {
+    private: {
+      // 私有配置，只在服务端可用
+    },
     public: {
-      siteUrl: 'https://www.util.cn'
+      siteUrl: process.env.NODE_ENV === 'production' ? 'https://www.util.cn' : 'http://localhost:3000'
+    }
+  },
+
+  // Nuxt 4的钩子
+  hooks: {
+    // 构建完成后钩子
+    'build:done': () => {
+      console.log('✅ Nuxt 4 构建完成')
     }
   }
 })

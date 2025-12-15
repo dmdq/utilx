@@ -224,6 +224,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { useSeoMeta } from 'nuxt/app'
 import {
   FileJson, Copy, Download, RotateCcw,
   FileText, Lock, Shield, Clock, Type, Wifi, Image, Code,
@@ -235,6 +236,25 @@ import { categories } from '~/data/categories'
 import { addRecentTool } from '~/composables/useTools'
 import ToolCard from '~/components/ToolCard.vue'
 import Breadcrumb from '~/components/Breadcrumb.vue'
+
+// SEO配置
+useSeoMeta({
+  title: 'CSS格式化工具 - 在线CSS美化与压缩工具 | 有条工具',
+  meta: [
+    { name: 'description', content: '一款免费的在线 CSS 格式化工具。支持一键美化、压缩CSS代码，自动调整缩进，规范CSS格式。支持2空格、4空格或Tab缩进，纯本地计算，数据隐私绝对安全。' },
+    { name: 'keywords', content: 'CSS格式化,CSS美化,CSS压缩,代码格式化,CSS格式化工具,在线CSS工具,CSS代码美化,CSS代码压缩,CSS缩进调整' },
+    { name: 'author', content: 'Util.cn' }
+  ],
+  og: {
+    title: 'CSS格式化工具 - 在线CSS美化与压缩工具',
+    description: '一款免费的在线 CSS 格式化工具。支持一键美化、压缩CSS代码，自动调整缩进，规范CSS格式。支持2空格、4空格或Tab缩进，纯本地计算，数据隐私绝对安全。'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CSS格式化工具 - 在线CSS美化与压缩工具',
+    description: '一款免费的在线 CSS 格式化工具。支持一键美化、压缩CSS代码，自动调整缩进，规范CSS格式。支持2空格、4空格或Tab缩进，纯本地计算，数据隐私绝对安全。'
+  }
+})
 
 definePageMeta({
   layout: 'default'

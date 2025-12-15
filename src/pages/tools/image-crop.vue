@@ -497,7 +497,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
-import { useSeoMeta } from 'nuxt/app'
+// useSeoMeta 已自动可用，无需导入
 import { 
   Upload, Image, CheckCircle, Settings, Scissors, Download, Edit, 
   RefreshCw, ArrowRight, Images, Check, Loader2, HelpCircle, ChevronUp
@@ -505,15 +505,21 @@ import {
 import { tools } from '~/data/tools'
 import { categories } from '~/data/categories'
 import { addRecentTool } from '~/composables/useTools'
-import JSZip from 'jszip'
+// JSZip 将在需要时动态导入
 
 // SEO配置
 useSeoMeta({
-  title: '图片裁剪工具 - 在线智能裁剪图片',
-  meta: [
-    { name: 'description', content: '免费在线图片裁剪工具，支持自由裁剪、固定比例裁剪、圆形裁剪等多种模式，提供精确的尺寸控制和批量处理功能。' },
-    { name: 'keywords', content: '图片裁剪,在线裁剪,图片编辑,自由裁剪,固定比例,圆形裁剪,批量裁剪' }
-  ]
+  title: '图片裁剪工具 - 在线智能裁剪图片 | 有条工具',
+  description: '免费在线图片裁剪工具，支持自由裁剪、固定比例裁剪、圆形裁剪等多种模式，提供精确的尺寸控制和批量处理功能。纯本地计算，数据隐私绝对安全。',
+  keywords: '图片裁剪,在线裁剪,图片编辑,自由裁剪,固定比例,圆形裁剪,批量裁剪,图片处理',
+  author: 'Util.cn',
+  ogTitle: '图片裁剪工具 - 在线智能裁剪图片',
+  ogDescription: '免费在线图片裁剪工具，支持自由裁剪、固定比例裁剪、圆形裁剪等多种模式，提供精确的尺寸控制和批量处理功能。',
+  ogType: 'website',
+  ogSiteName: '有条工具',
+  twitterCard: 'summary',
+  twitterTitle: '图片裁剪工具 - 在线智能裁剪图片',
+  twitterDescription: '免费在线图片裁剪工具，支持自由裁剪、固定比例裁剪、圆形裁剪等多种模式，提供精确的尺寸控制和批量处理功能。'
 })
 
 // 定义当前工具和分类
@@ -900,7 +906,9 @@ const downloadAll = async () => {
     return
   }
 
-  const zip = new JSZip()
+  // 动态导入 JSZip
+  const JSZip = await import('jszip')
+  const zip = new JSZip.default()
 
   croppedImages.value.forEach((result) => {
     const base64Data = result.data.split(',')[1]

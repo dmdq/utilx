@@ -1,0 +1,30 @@
+# Nuxt ignore file
+# 排除不需要监听的大文件目录
+
+# Tauri 相关
+src-tauri/**
+!src-tauri/tauri.conf.json
+
+# 构建输出
+dist
+.output
+target
+
+# 开发工具
+.vscode
+.idea
+coverage
+
+# 日志文件
+*.log
+
+# 缓存目录
+.nuxt
+.vite
+
+# 依赖目录
+node_modules
+
+# 临时文件
+*.tmp
+*.temp

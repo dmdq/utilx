@@ -39,7 +39,7 @@ Util.cn 是一个基于浏览器的工具平台，所有计算都在您的本地
 ### Google Analytics
 我们使用 Google Analytics 来了解网站访问情况。Google Analytics 使用 Cookie 收集匿名访问数据，这些数据不包含个人身份信息。
 
-您可以通过安装 [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout) 来禁用 Google Analytics。
+您可以通过安装 <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics Opt-out Browser Add-on</a> 来禁用 Google Analytics。
 
 ### 广告网络
 我们不使用任何第三方广告网络。

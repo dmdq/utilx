@@ -283,7 +283,7 @@ useHead({
         '@type': 'WebApplication',
         name: 'JSON转YAML工具',
         description: '免费在线 JSON to YAML 转换工具，支持将 JSON 数据快速转换为 YAML 格式',
-        url: 'https://util.example.com/tools/json-to-yaml',
+        url: 'https://www.util.cn/tools/json-to-yaml',
         applicationCategory: 'DeveloperApplication',
         operatingSystem: 'Any',
         offers: {

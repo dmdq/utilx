@@ -45,7 +45,12 @@
       <header class="hidden lg:flex h-16 border-b border-border items-center justify-between px-6 bg-background/80 backdrop-blur z-30">
         <!-- 左侧：面包屑导航 -->
         <div class="flex items-center" style="width: 280px;">
-          <Breadcrumb v-if="showBreadcrumbs" />
+          <Breadcrumb v-if="showBreadcrumbs && route.path !== '/'" />
+          <!-- 首页显示打字效果 -->
+          <div v-else-if="route.path === '/'" class="text-lg font-mono text-foreground">
+            <span class="inline-block">{{ typedText }}</span>
+            <span class="animate-pulse">|</span>
+          </div>
         </div>
 
         <!-- 中间：智能搜索中枢 -->
@@ -230,6 +235,11 @@ const userIP = ref('获取中...')
 const currentWidget = ref(0) // 0: IP地址, 1: 时间戳, 2: 文字tips
 const currentTime = ref('')
 const copySuccess = ref(false) // 复制成功状态
+const typedText = ref('') // 打字效果文本
+const typewriterTexts = ref(['Hello World', '好用工具就上有条', '高效、安全、免费',"Util.cn 您身边的工具助手"]) // 要循环打出的文本数组
+const currentTextIndex = ref(0) // 当前文本索引
+let typewriterTimer = null // 存储打字定时器ID
+let isTypewriterActive = ref(false) // 打字效果是否激活
 
 // 计算当前分类名称
 const currentCategoryName = computed(() => {
@@ -490,6 +500,55 @@ const fetchUserIP = async () => {
   }
 }
 
+// 清理打字效果定时器
+const clearTypewriterTimer = () => {
+  if (typewriterTimer) {
+    clearTimeout(typewriterTimer)
+    typewriterTimer = null
+  }
+  isTypewriterActive.value = false
+}
+
+// 打字效果
+const typewriterEffect = () => {
+  // 先清理之前的定时器
+  clearTypewriterTimer()
+  isTypewriterActive.value = true
+
+  const texts = typewriterTexts.value
+  let index = 0
+  let currentText = texts[currentTextIndex.value]
+
+  const typeChar = () => {
+    // 检查是否还在首页，如果已经离开则停止
+    if (!isTypewriterActive.value) {
+      return
+    }
+
+    if (index < currentText.length) {
+      typedText.value = currentText.substring(0, index + 1)
+      index++
+      typewriterTimer = setTimeout(typeChar, 150) // 每个字符间隔150ms
+    } else {
+      // 打完当前文本后等待1秒，然后清除文本并开始下一个
+      typewriterTimer = setTimeout(() => {
+        // 再次检查是否还在首页
+        if (!isTypewriterActive.value) {
+          return
+        }
+
+        typedText.value = ''
+        currentTextIndex.value = (currentTextIndex.value + 1) % texts.length
+        currentText = texts[currentTextIndex.value]
+        index = 0
+        typewriterTimer = setTimeout(typeChar, 1500) // 短暂停顿后开始下一个文本
+      }, 3000)
+    }
+  }
+
+  typeChar()
+}
+
 // 在组件挂载时初始化
 onMounted(() => {
   // 获取用户IP
@@ -498,6 +557,25 @@ onMounted(() => {
   // 初始化并更新时间
   updateCurrentTime()
   const timeInterval = setInterval(updateCurrentTime, 1000)
+
+  // 启动打字效果（仅在首页）
+  if (route.path === '/') {
+    typewriterEffect()
+  }
+
+  // 监听路由变化
+  watch(() => route.path, (newPath, oldPath) => {
+    // 离开首页时清理打字效果
+    if (oldPath === '/' && newPath !== '/') {
+      clearTypewriterTimer()
+    }
+    // 进入首页时启动打字效果
+    else if (newPath === '/' && oldPath !== '/') {
+      typedText.value = ''
+      currentTextIndex.value = 0 // 重置索引
+      typewriterEffect()
+    }
+  })
 
   // 通知 Tauri 主窗口页面已加载完成
   if (window.__TAURI__) {
@@ -516,6 +594,7 @@ onMounted(() => {
   // 在组件卸载时清理定时器
   onUnmounted(() => {
     clearInterval(timeInterval)
+    clearTypewriterTimer() // 清理打字效果定时器
   })
 })
 </script>

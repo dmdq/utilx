@@ -154,3 +154,4 @@ Temporary Items
 .env
 
 src-tauri/target
+public/blog

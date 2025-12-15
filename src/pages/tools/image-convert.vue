@@ -368,7 +368,7 @@
 import { ref, computed } from 'vue'
 import { Info, Plus, X, ImageIcon, RefreshCw, Download, Archive, Zap, Maximize2, Hash, ArrowRight } from 'lucide-vue-next'
 import Breadcrumb from '~/components/Breadcrumb.vue'
-import JSZip from 'jszip'
+// JSZip 将在需要时动态导入
 
 // 分类信息
 const category = { id: 'image', name: '图片处理', description: '图片处理工具集合' }
@@ -583,7 +583,9 @@ const downloadAll = async () => {
 
 // 下载为ZIP
 const downloadAllAsZip = async () => {
-  const zip = new JSZip()
+  // 动态导入 JSZip
+  const JSZip = await import('jszip')
+  const zip = new JSZip.default()
 
   for (const image of images.value) {
     if (image.convertedUrl) {

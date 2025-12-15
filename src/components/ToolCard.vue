@@ -35,6 +35,10 @@ const props = defineProps({
   isDraggable: {
     type: Boolean,
     default: false
+  },
+  disableLink: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -107,11 +111,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <NuxtLink
-    :to="getToolUrl(tool)"
+  <component
+    :is="disableLink ? 'div' : 'NuxtLink'"
+    :to="disableLink ? null : getToolUrl(tool)"
     class="tool-card group relative bg-card/40 backdrop-blur-sm border-0 rounded-xl p-5 hover:bg-card/70 hover:shadow-lg hover:shadow-primary/8 transition-all duration-300 cursor-pointer block h-full"
     :data-category="category"
-    @click.native="handleCardClick"
+    @click="!disableLink && handleCardClick"
   >
     <!-- 拖拽句柄 -->
     <div
@@ -143,12 +148,14 @@ onMounted(() => {
         <component :is="iconComponent" class="w-6 h-6" :style="{ color: getCategoryColor(category).icon }" />
       </div>
       <div>
-        <h4 
-          class="font-semibold text-foreground group-hover:text-primary transition-colors"
+        <NuxtLink
+          :to="getToolUrl(tool)"
+          class="font-semibold text-foreground group-hover:text-primary transition-colors hover:underline"
           :title="title"
+          @click.stop
         >
           {{ title }}
-        </h4>
+        </NuxtLink>
         <span 
           class="text-[10px] px-1.5 py-0.5 rounded"
           :class="getCategoryBadgeClass(category)"
@@ -162,14 +169,14 @@ onMounted(() => {
     </p>
     <div class="flex items-center justify-between text-xs text-muted-foreground border-t border-border/50 pt-3">
       <span>使用: {{ usageCount }}</span>
-      <NuxtLink 
+      <NuxtLink
         :to="getToolUrl(tool)"
-        class="group-hover:text-primary flex items-center gap-1"
+        class="group-hover:text-primary flex items-center gap-1 hover:text-primary transition-colors"
         @click.stop
       >
-        打开 
+        打开
         <ArrowRight class="w-3 h-3" />
       </NuxtLink>
     </div>
-  </NuxtLink>
+  </component>
 </template>

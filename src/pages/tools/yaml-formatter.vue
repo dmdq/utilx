@@ -248,6 +248,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { useSeoMeta } from 'nuxt/app'
 import {
   FileJson, Copy, Download, RotateCcw,
   FileText, Lock, Shield, Clock, Type, Wifi, Image, Code,
@@ -259,6 +260,25 @@ import { categories } from '~/data/categories'
 import { addRecentTool } from '~/composables/useTools'
 import ToolCard from '~/components/ToolCard.vue'
 import Breadcrumb from '~/components/Breadcrumb.vue'
+
+// SEO配置
+useSeoMeta({
+  title: 'YAML转换器 - YAML与JSON互转工具 | 有条工具',
+  meta: [
+    { name: 'description', content: '一款免费的在线 YAML 转换工具。支持 YAML 与 JSON 格式互相转换，格式化、验证 YAML 语法。智能识别结构，自动美化输出，支持注释保留，纯本地计算，数据隐私绝对安全。' },
+    { name: 'keywords', content: 'YAML转换器,YAML转JSON,JSON转YAML,YAML格式化,YAML验证,YAML工具,在线YAML转换,YAML解析,YAML编辑器,K8s配置,Docker配置' },
+    { name: 'author', content: 'Util.cn' }
+  ],
+  og: {
+    title: 'YAML转换器 - YAML与JSON互转工具',
+    description: '一款免费的在线 YAML 转换工具。支持 YAML 与 JSON 格式互相转换，格式化、验证 YAML 语法。智能识别结构，自动美化输出，支持注释保留，纯本地计算，数据隐私绝对安全。'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'YAML转换器 - YAML与JSON互转工具',
+    description: '一款免费的在线 YAML 转换工具。支持 YAML 与 JSON 格式互相转换，格式化、验证 YAML 语法。智能识别结构，自动美化输出，支持注释保留，纯本地计算，数据隐私绝对安全。'
+  }
+})
 
 definePageMeta({
   layout: 'default'

@@ -24,7 +24,7 @@ setPageTitle('常见问题')
 
 // SEO配置
 useSeoMeta({
-  title: '常见问题',
+  // title: '常见问题',
   description: 'Util.cn 工具使用常见问题解答，包括工具使用、隐私安全、性能限制、技术问题等，帮助您更好地使用我们的在线工具。',
   keywords: ['FAQ', '常见问题', '帮助', '使用指南', '问题解答']
 })

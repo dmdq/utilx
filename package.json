@@ -5,12 +5,23 @@
   "author": "util.cn",
   "private": true,
   "scripts": {
-    "dev": "./scripts/dev.sh nuxt dev --host",
+    "dev": "nuxt dev --host",
     "dev:fast": "./scripts/dev-fast.sh",
-    "build": "nuxt build",
+    "dev:ultra": "./scripts/dev-ultra-fast.sh",
+    "dev:config": "NUXT_PUBLIC_DEV_MODE=true nuxt dev --host --config nuxt.config.v4.ts",
+    "dev:v4": "nuxt dev --host --config nuxt.config.v4.ts",
+    "dev:watch": "WATCH=true nuxt dev --host",
+    "dev:blog": "concurrently \"nuxt dev --host\" \"npm run blog:watch\"",
+    "optimize": "./scripts/optimize-cache.sh",
+    "upgrade:nuxt": "./scripts/upgrade-nuxt.sh",
+    "build": "npm run blog:build && nuxt build",
     "build:app": "./scripts/build.sh",
+    "build:blog": "npm run blog:build",
+    "blog:build": "cd blog && hugo --minify && cp -r public/* ../public/blog/",
+    "blog:watch": "cd blog && hugo server --destination ../public/blog/ --watch --buildDrafts --buildFuture",
+    "blog:new": "cd blog && hugo new content/posts",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "npm run blog:build && nuxt generate",
     "tauri": "tauri",
     "tauri:dev": "./scripts/dev.sh npm run tauri dev --no-build-frontend",
     "tauri:static": "npm run tauri dev",
@@ -20,7 +31,7 @@
     "package:macos-simple": "./scripts/package-macos-simple.sh"
   },
   "dependencies": {
-    "@nuxt/devtools": "^3.1.1",
+    "@nuxt/devtools": "^2.0.0",
     "@tauri-apps/api": "^2.9.1",
     "@tauri-apps/plugin-window-state": "^2.4.1",
     "@types/qrcode": "^1.5.6",
@@ -32,16 +43,17 @@
     "lucide-vue-next": "^0.556.0",
     "marked": "^17.0.1",
     "naive-ui": "^2.43.2",
-    "nuxt": "^3.8.0",
+    "nuxt": "^4.2.2",
     "qrcode": "^1.5.4",
     "sortablejs": "^1.15.6",
-    "vue": "^3.3.0",
-    "vue-router": "^4.2.0"
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@tauri-apps/cli": "^2.9.6",
     "@tauri-apps/plugin-shell": "^2.3.3",
-    "@vite-pwa/nuxt": "^1.1.0"
+    "@vite-pwa/nuxt": "^1.1.0",
+    "concurrently": "^9.2.1"
   }
 }

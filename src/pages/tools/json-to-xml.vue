@@ -253,7 +253,7 @@ useHead({
         '@type': 'WebApplication',
         name: 'JSON转XML工具',
         description: '免费在线 JSON to XML 转换工具，支持将 JSON 数据快速转换为 XML 格式',
-        url: 'https://util.example.com/tools/json-to-xml',
+        url: 'https://www.util.cn/tools/json-to-xml',
         applicationCategory: 'DeveloperApplication',
         operatingSystem: 'Any',
         offers: {

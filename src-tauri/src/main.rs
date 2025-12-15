@@ -34,6 +34,7 @@ fn log_message(message: String) {
     eprintln!("🌐 [前端日志] {}", message);
 }
 
+
 // 保存调试信息
 #[tauri::command]
 async fn save_debug_info(info: String, app_handle: tauri::AppHandle) -> Result<String, String> {

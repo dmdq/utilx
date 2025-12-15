@@ -238,6 +238,21 @@ definePageMeta({
   layout: 'default'
 })
 
+// 设置页面的SEO元信息
+useSeoMeta({
+  title: 'XML格式化 - 在线XML美化与格式化工具 | 有条工具',
+  description: '免费的在线XML格式化工具，支持一键美化、压缩、语法错误检测及格式转换。纯本地计算，数据隐私绝对安全。支持2空格、4空格、Tab缩进，自动修复常见错误。',
+  keywords: 'XML格式化,XML美化,XML压缩,XML验证,在线XML工具,XML编辑器,XML语法检查,XML格式转换',
+  author: 'Util.cn',
+  ogTitle: 'XML格式化 - 在线XML美化与格式化工具',
+  ogDescription: '免费的在线XML格式化工具，支持一键美化、压缩、语法错误检测及格式转换。纯本地计算，数据隐私绝对安全。',
+  ogType: 'website',
+  ogSiteName: '有条工具',
+  twitterCard: 'summary',
+  twitterTitle: 'XML格式化 - 在线XML美化与格式化工具',
+  twitterDescription: '免费的在线XML格式化工具，支持一键美化、压缩、语法错误检测及格式转换。纯本地计算，数据隐私绝对安全。'
+})
+
 const router = useRouter()
 
 // 定义当前工具和分类

@@ -290,7 +290,7 @@ useHead({
         '@type': 'WebApplication',
         name: 'JSON转CSV工具',
         description: '免费在线 JSON to CSV 转换工具，支持将 JSON 数组或对象转换为 CSV 格式',
-        url: 'https://util.example.com/tools/json-to-csv',
+        url: 'https://www.util.cn/tools/json-to-csv',
         applicationCategory: 'DeveloperApplication',
         operatingSystem: 'Any',
         offers: {
