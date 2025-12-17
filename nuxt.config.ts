@@ -134,7 +134,10 @@ export default defineNuxtConfig({
         'marked',
         'crypto-js',
         'qrcode',
-        'lucide-vue-next'
+        'lucide-vue-next',
+        'pixi.js',
+        '@esotericsoftware/spine-webgl',
+        'pixi-spine'
       ],
       exclude: [
         '@tauri-apps/api',

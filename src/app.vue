@@ -1,6 +1,6 @@
 <script setup>
 import { initToolsData } from '~/composables/useTools'
-import { siteConfig } from '~/config/site'
+import { siteConfig } from '~/data/site'
 
 // 初始化工具数据
 initToolsData()

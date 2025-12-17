@@ -31,6 +31,7 @@
     "package:macos-simple": "./scripts/package-macos-simple.sh"
   },
   "dependencies": {
+    "@esotericsoftware/spine-webgl": "^4.2.96",
     "@nuxt/devtools": "^2.0.0",
     "@tauri-apps/api": "^2.9.1",
     "@tauri-apps/plugin-window-state": "^2.4.1",
@@ -39,11 +40,14 @@
     "crypto-js": "^4.2.0",
     "exifreader": "^4.33.1",
     "jsencrypt": "^3.5.4",
+    "jspdf": "^3.0.4",
     "jszip": "^3.10.1",
     "lucide-vue-next": "^0.556.0",
     "marked": "^17.0.1",
     "naive-ui": "^2.43.2",
     "nuxt": "^4.2.2",
+    "pixi-spine": "^4.0.6",
+    "pixi.js": "^8.14.3",
     "qrcode": "^1.5.4",
     "sortablejs": "^1.15.6",
     "vue": "^3.5.12",

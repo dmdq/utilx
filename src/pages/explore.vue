@@ -14,7 +14,7 @@
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div
-          v-for="category in categories"
+          v-for="category in categoriesWithCount"
           :key="category.id"
           class="bg-card border border-border rounded-xl p-5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group"
           @click="goToCategory(category.id)"
@@ -111,7 +111,9 @@ import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import {
   LayoutGrid, Star, Clock, ArrowRight,
-  FileJson, Database, Lock, Regex, Globe, Image as ImageIcon, Code
+  FileJson, Database, Lock, Regex, Globe, Image as ImageIcon, Code,
+  Calculator, FileText, Shield, Type, Wifi, BarChart, Heart, DollarSign, Zap,
+  Dice6, Heart as CardIcon, Circle, Utensils, Hash, List, Palette, Calendar, Quote
 } from 'lucide-vue-next'
 import { getCategoryColor as getCatColor } from '~/utils/categoryColors'
 import { ChevronRight } from 'lucide-vue-next'
@@ -138,15 +140,19 @@ const router = useRouter()
 
 // 图标映射
 const iconMap = {
-  FileJson, Database, Lock, Regex, Globe, ImageIcon, Code
+  FileJson, Database, Lock, Regex, Globe, ImageIcon, Code,
+  Calculator, FileText, Shield, Type, Wifi, LayoutGrid, BarChart, Heart, DollarSign, Zap, Clock, Star, ArrowRight,
+  Dice6, CardIcon, Circle, Utensils, Hash, List, Palette, Calendar, Quote
 }
 
-// 为分类添加工具计数
+// 为分类添加工具计数并按sort字段排序
 const categoriesWithCount = computed(() => {
-  return categories.map(category => ({
-    ...category,
-    toolCount: tools.filter(tool => tool.category === category.id).length
-  }))
+  return categories
+    .map(category => ({
+      ...category,
+      toolCount: tools.filter(tool => tool.category === category.id).length
+    }))
+    .sort((a, b) => a.sort - b.sort)
 })
 
 // 精选工具（热门工具）

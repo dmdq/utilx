@@ -220,14 +220,14 @@ import {
   Terminal, LayoutGrid, Code2, ShieldCheck, Server, ImageIcon,
   FileJson, Clock, ArrowRight, MessageSquarePlus, FileText, Lock,
   Shield, Type, Wifi, Code, Image, Home, Compass, Sparkles, ChevronRight, Heart, Map, MoreHorizontal,
-  Palette, Database, BarChart, Zap
+  Palette, Database, BarChart, Zap, Calculator, Activity, TrendingUp
 } from 'lucide-vue-next'
 import { categories } from '~/data/categories'
 import { useRoute } from 'vue-router'
 
 // 创建图标映射
 const iconMap = {
-  FileText,
+  Calculator,
   Lock,
   Shield,
   Clock,
@@ -236,11 +236,14 @@ const iconMap = {
   ImageIcon,
   Code,
   Image,
+  FileText,
   LayoutGrid,
   Palette,
   Database,
   BarChart,
-  Zap
+  Zap,
+  Activity,
+  TrendingUp
 }
 
 // 定义 emit 事件
@@ -275,11 +278,13 @@ const toggleMoreMenu = () => {
   isMoreMenuExpanded.value = !isMoreMenuExpanded.value
 }
 
-// 为每个分类添加图标组件
+// 为每个分类添加图标组件并按sort字段排序
 const categoriesWithIcons = computed(() => {
-  return categories.map(category => ({
-    ...category,
-    iconComponent: iconMap[category.icon] || FileText
-  }))
+  return categories
+    .map(category => ({
+      ...category,
+      iconComponent: iconMap[category.icon] || FileText
+    }))
+    .sort((a, b) => a.sort - b.sort)
 })
 </script>

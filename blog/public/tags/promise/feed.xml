@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Promise on 技术博客 - 有条工具</title>
+    <link>//localhost:1313///blog/tags/promise/</link>
+    <description>Recent content in Promise on 技术博客 - 有条工具</description>
+    <generator>Hugo -- 0.147.7</generator>
+    <language>zh-cn</language>
+    <copyright>2024-2025 有条工具技术博客</copyright>
+    <lastBuildDate>Wed, 18 Dec 2024 19:00:00 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313///blog/tags/promise/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript异步编程最佳实践：从回调到Async/Await的完整指南</title>
+      <link>//localhost:1313///blog/articles/javascript-async-programming-best-practices/</link>
+      <pubDate>Wed, 18 Dec 2024 19:00:00 +0800</pubDate>
+      <guid>//localhost:1313///blog/articles/javascript-async-programming-best-practices/</guid>
+      <description>JavaScript异步编程最佳实践完整指南，包含回调函数、Promise链、Async/Await模式、错误处理、并发控制等异步编程核心概念和实战技巧</description>
+    </item>
+  </channel>
+</rss>

@@ -1,4 +1,4 @@
-import { siteConfig } from '~/config/site'
+import { siteConfig } from '~/data/site'
 
 // SEO插件 - 全局管理页面标题
 export default defineNuxtPlugin(() => {

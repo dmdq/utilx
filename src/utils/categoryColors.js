@@ -62,6 +62,69 @@ export const categoryColors = {
     bg: 'rgba(229, 231, 235, 0.1)',           /* gray-200 with 10% opacity */
     border: 'rgba(229, 231, 235, 0.2)',          /* gray-200 with 20% opacity */
     glow: 'rgba(229, 231, 235, 0.3)'           /* gray-200 with 30% opacity */
+  },
+  // 🟨 计算工具 - 天空蓝
+  'calculate': {
+    icon: '#0EA5E9',                        /* sky-500 */
+    bg: 'rgba(14, 165, 233, 0.15)',          /* sky-500 with 15% opacity */
+    border: 'rgba(14, 165, 233, 0.3)',         /* sky-500 with 30% opacity */
+    glow: 'rgba(14, 165, 233, 0.4)'          /* sky-500 with 40% opacity */
+  },
+  // 🟣 设计工具 - 靛蓝
+  'design': {
+    icon: '#6366F1',                        /* indigo-500 */
+    bg: 'rgba(99, 102, 241, 0.15)',          /* indigo-500 with 15% opacity */
+    border: 'rgba(99, 102, 241, 0.3)',         /* indigo-500 with 30% opacity */
+    glow: 'rgba(99, 102, 241, 0.4)'          /* indigo-500 with 40% opacity */
+  },
+  // 🟢 数据处理 - 青绿
+  'data': {
+    icon: '#14B8A6',                        /* teal-500 */
+    bg: 'rgba(20, 184, 166, 0.15)',          /* teal-500 with 15% opacity */
+    border: 'rgba(20, 184, 166, 0.3)',         /* teal-500 with 30% opacity */
+    glow: 'rgba(20, 184, 166, 0.4)'          /* teal-500 with 40% opacity */
+  },
+  // 🟢 安全工具 - 翡翠绿
+  'security': {
+    icon: '#10B981',                        /* emerald-500 */
+    bg: 'rgba(16, 185, 129, 0.15)',          /* emerald-500 with 15% opacity */
+    border: 'rgba(16, 185, 129, 0.3)',         /* emerald-500 with 30% opacity */
+    glow: 'rgba(16, 185, 129, 0.4)'          /* emerald-500 with 40% opacity */
+  },
+  // 🟪 可视化工具 - 紫罗兰
+  'visualization': {
+    icon: '#8B5CF6',                        /* violet-500 */
+    bg: 'rgba(139, 92, 246, 0.15)',          /* violet-500 with 15% opacity */
+    border: 'rgba(139, 92, 246, 0.3)',         /* violet-500 with 30% opacity */
+    glow: 'rgba(139, 92, 246, 0.4)'          /* violet-500 with 40% opacity */
+  },
+  // 🌹 健康工具 - 玫瑰红
+  'health': {
+    icon: '#F43F5E',                        /* rose-500 */
+    bg: 'rgba(244, 63, 94, 0.15)',           /* rose-500 with 15% opacity */
+    border: 'rgba(244, 63, 94, 0.3)',          /* rose-500 with 30% opacity */
+    glow: 'rgba(244, 63, 94, 0.4)'           /* rose-500 with 40% opacity */
+  },
+  // 💚 金融工具 - 草绿
+  'finance': {
+    icon: '#22C55E',                        /* green-500 */
+    bg: 'rgba(34, 197, 94, 0.15)',           /* green-500 with 15% opacity */
+    border: 'rgba(34, 197, 94, 0.3)',          /* green-500 with 30% opacity */
+    glow: 'rgba(34, 197, 94, 0.4)'           /* green-500 with 40% opacity */
+  },
+  // 🟠 效率工具 - 琥珀
+  'productivity': {
+    icon: '#F59E0B',                        /* amber-500 */
+    bg: 'rgba(245, 158, 11, 0.15)',          /* amber-500 with 15% opacity */
+    border: 'rgba(245, 158, 11, 0.3)',         /* amber-500 with 30% opacity */
+    glow: 'rgba(245, 158, 11, 0.4)'          /* amber-500 with 40% opacity */
+  },
+  // 🟪 随机决策 - 紫红色
+  'random': {
+    icon: '#E11D48',                        /* fuchsia-600 */
+    bg: 'rgba(225, 29, 72, 0.15)',           /* fuchsia-600 with 15% opacity */
+    border: 'rgba(225, 29, 72, 0.3)',          /* fuchsia-600 with 30% opacity */
+    glow: 'rgba(225, 29, 72, 0.4)'           /* fuchsia-600 with 40% opacity */
   }
 }
 

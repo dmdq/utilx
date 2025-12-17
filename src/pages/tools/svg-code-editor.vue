@@ -75,13 +75,20 @@
                   v-model="canvasSettings.bgColor"
                   type="color"
                   class="w-12 h-8 rounded cursor-pointer"
+                  :disabled="canvasSettings.bgColor === 'transparent'"
                 >
-                <input
+                <select
                   v-model="canvasSettings.bgColor"
-                  type="text"
-                  placeholder="#ffffff"
                   class="flex-1 px-2 py-1 border rounded text-sm"
                 >
+                  <option value="transparent">透明背景</option>
+                  <option value="#ffffff">白色</option>
+                  <option value="#000000">黑色</option>
+                  <option value="#f3f4f6">浅灰</option>
+                  <option value="#3b82f6">蓝色</option>
+                  <option value="#ef4444">红色</option>
+                  <option value="#10b981">绿色</option>
+                </select>
               </div>
             </div>
             <div>
@@ -174,7 +181,12 @@
 
           <div
             class="border-2 border-dashed border-muted-foreground/20 rounded-lg overflow-hidden flex items-center justify-center"
-            :style="{ height: canvasSettings.height + 'px', backgroundColor: canvasSettings.bgColor }"
+            :style="{
+              height: canvasSettings.height + 'px',
+              backgroundColor: canvasSettings.bgColor === 'transparent' ? undefined : canvasSettings.bgColor,
+              backgroundImage: canvasSettings.bgColor === 'transparent' ? 'repeating-conic-gradient(#f0f0f0 0% 25%, transparent 0% 50%) 50% / 20px 20px' : undefined,
+              backgroundSize: '20px 20px'
+            }"
           >
             <div
               ref="previewContainer"
@@ -394,7 +406,7 @@ const svgError = ref('')
 const zoomLevel = ref(1)
 
 const canvasSettings = ref({
-  bgColor: '#ffffff',
+  bgColor: 'transparent',
   width: 400,
   height: 400,
   showGrid: false
@@ -449,7 +461,6 @@ const commonElements = [
 
 // 示例模板
 const simpleLogo = `<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="200" fill="#f3f4f6"/>
   <circle cx="100" cy="100" r="80" fill="#3b82f6"/>
   <text x="100" y="110" font-family="Arial" font-size="24" fill="white" text-anchor="middle">LOGO</text>
 </svg>`
@@ -674,9 +685,11 @@ const exportImage = async () => {
     canvas.width = canvasSettings.value.width * scale
     canvas.height = canvasSettings.value.height * scale
 
-    // 填充背景
-    ctx.fillStyle = canvasSettings.value.bgColor
-    ctx.fillRect(0, 0, canvas.width, canvas.height)
+    // 填充背景（JPEG不支持透明，必须填充白色背景）
+    if (exportFormat.value === 'jpeg' || canvasSettings.value.bgColor !== 'transparent') {
+      ctx.fillStyle = canvasSettings.value.bgColor === 'transparent' ? '#ffffff' : canvasSettings.value.bgColor
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
+    }
 
     // 将SVG转换为图片
     const img = new Image()
@@ -724,7 +737,10 @@ const downloadFile = (blob, filename) => {
 
 // 初始化
 onMounted(() => {
-  loadTemplate(templates[0])
+  // 确保画布背景为透明
+  canvasSettings.value.bgColor = 'transparent'
+  // 强制触发一次响应式更新
+  canvasSettings.value = { ...canvasSettings.value }
 })
 </script>
 

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spine动画编辑器测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-section {
+            background: #2a2a2a;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .success {
+            color: #4ade80;
+        }
+        .error {
+            color: #f87171;
+        }
+        .warning {
+            color: #fbbf24;
+        }
+        .info {
+            color: #60a5fa;
+        }
+        button {
+            background: #7c3aed;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #6d28d9;
+        }
+        pre {
+            background: #1a1a1a;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spine动画编辑器 - 测试页面</h1>
+
+        <div class="test-section">
+            <h2>WebGL支持检测</h2>
+            <p id="webgl-status">检测中...</p>
+        </div>
+
+        <div class="test-section">
+            <h2>依赖包检测</h2>
+            <p id="pixi-status">检测中...</p>
+            <p id="spine-status">检测中...</p>
+        </div>
+
+        <div class="test-section">
+            <h2>使用说明</h2>
+            <div class="info">
+                <h3>测试步骤：</h3>
+                <ol>
+                    <li>确保浏览器支持WebGL</li>
+                    <li>准备好Spine文件：
+                        <ul>
+                            <li>.spine 或 .json 或 .skel (骨架文件)</li>
+                            <li>.atlas (图集文件，可选但推荐)</li>
+                            <li>.png 或 .jpg (纹理文件)</li>
+                        </ul>
+                    </li>
+                    <li>访问主应用页面：<a href="/tools/spine-animation-editor/" target="_blank">Spine动画编辑器</a></li>
+                    <li>拖拽文件到左侧面板进行导入</li>
+                    <li>查看控制台日志了解详细信息</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>常见问题解决</h2>
+            <div class="warning">
+                <h3>如果看到黑色背景：</h3>
+                <ul>
+                    <li>检查浏览器控制台是否有错误信息</li>
+                    <li>确保上传了正确的Spine文件格式</li>
+                    <li>确保纹理图片路径与.atlas文件中的路径一致</li>
+                    <li>尝试刷新页面重新导入文件</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>控制台日志</h2>
+            <button onclick="clearLogs()">清空日志</button>
+            <button onclick="showSystemInfo()">系统信息</button>
+            <div id="console-output"></div>
+        </div>
+    </div>
+
+    <script>
+        // 重定向console.log到页面
+        const originalLog = console.log;
+        const originalError = console.error;
+        const originalWarn = console.warn;
+        const consoleOutput = document.getElementById('console-output');
+
+        function addLog(type, ...args) {
+            const div = document.createElement('div');
+            div.className = type;
+            div.style.marginBottom = '5px';
+            const timestamp = new Date().toLocaleTimeString();
+            div.innerHTML = `<span style="color: #888;">[${timestamp}]</span> ${args.join(' ')}`;
+            consoleOutput.appendChild(div);
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        }
+
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            addLog('info', ...args);
+        };
+
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            addLog('error', ...args);
+        };
+
+        console.warn = function(...args) {
+            originalWarn.apply(console, args);
+            addLog('warning', ...args);
+        };
+
+        function clearLogs() {
+            consoleOutput.innerHTML = '';
+        }
+
+        function showSystemInfo() {
+            console.log('=== 系统信息 ===');
+            console.log('User Agent:', navigator.userAgent);
+            console.log('WebGL支持:', checkWebGL());
+            console.log('屏幕分辨率:', `${screen.width}x${screen.height}`);
+            console.log('像素比:', window.devicePixelRatio);
+            console.log('当前URL:', window.location.href);
+        }
+
+        function checkWebGL() {
+            try {
+                const canvas = document.createElement('canvas');
+                const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                return gl !== null;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        async function checkDependencies() {
+            // 使用动态导入检测Pixi.js
+            try {
+                const pixi = await import('pixi.js');
+                document.getElementById('pixi-status').innerHTML =
+                    `<span class="success">✓ Pixi.js ${pixi.VERSION || '已安装'} 可以正常导入</span>`;
+            } catch (error) {
+                document.getElementById('pixi-status').innerHTML =
+                    `<span class="error">✗ Pixi.js 无法导入: ${error.message}</span>`;
+            }
+
+            // 使用动态导入检测Spine运行时
+            try {
+                const spine = await import('@esotericsoftware/spine-webgl');
+                document.getElementById('spine-status').innerHTML =
+                    `<span class="success">✓ Spine运行时 已安装并可以正常导入</span>`;
+            } catch (error) {
+                document.getElementById('spine-status').innerHTML =
+                    `<span class="error">✗ Spine运行时 无法导入: ${error.message}</span>`;
+            }
+        }
+
+        // 页面加载时执行检测
+        window.addEventListener('load', function() {
+            // WebGL检测
+            const webglStatus = document.getElementById('webgl-status');
+            if (checkWebGL()) {
+                webglStatus.innerHTML = '<span class="success">✓ WebGL 支持</span>';
+            } else {
+                webglStatus.innerHTML = '<span class="error">✗ WebGL 不支持，Spine动画将无法正常显示</span>';
+            }
+
+            // 依赖检测
+            checkDependencies();
+
+            // 显示系统信息
+            setTimeout(showSystemInfo, 1000);
+        });
+    </script>
+</body>
+</html>

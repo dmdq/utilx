@@ -1,4 +1,4 @@
-import { siteConfig } from '~/config/site'
+import { siteConfig } from '~/data/site'
 
 /**
  * 设置页面标题，自动添加SEO后缀

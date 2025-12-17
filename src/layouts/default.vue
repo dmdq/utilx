@@ -218,7 +218,7 @@ import GlobalSearch from '~/components/GlobalSearch.vue'
 import Breadcrumb from '~/components/Breadcrumb.vue'
 import PWAInstallPrompt from '~/components/PWAInstallPrompt.vue'
 import Notification from '~/components/Notification.vue'
-import { siteConfig } from '~/config/site'
+import { siteConfig } from '~/data/site'
 import { categories } from '~/data/categories'
 import { tools } from '~/data/tools'
 

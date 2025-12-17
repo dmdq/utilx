@@ -51,7 +51,7 @@
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <NuxtLink
-          v-for="category in categories"
+          v-for="category in sortedCategories"
           :key="category.id"
           :to="'/' + category.id + '/'"
           class="block p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
@@ -279,6 +279,11 @@ const filteredTools = computed(() => {
     tool.description.toLowerCase().includes(query) ||
     tool.keywords?.some(keyword => keyword.toLowerCase().includes(query))
   )
+})
+
+// 排序的分类
+const sortedCategories = computed(() => {
+  return categories.sort((a, b) => a.sort - b.sort)
 })
 </script>
 

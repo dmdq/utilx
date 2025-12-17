@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全屏功能测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+        .status {
+            margin: 20px 0;
+            padding: 10px;
+            background: #374151;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Spine编辑器全屏功能测试</h1>
+
+    <div class="status" id="status">
+        当前状态: 非全屏
+    </div>
+
+    <button onclick="testFullscreen()">
+        测试全屏功能
+    </button>
+
+    <button onclick="checkFullscreenSupport()">
+        检查浏览器支持
+    </button>
+
+    <button onclick="openSpineEditor()">
+        打开Spine编辑器
+    </button>
+
+    <script>
+        function testFullscreen() {
+            if (!document.fullscreenElement) {
+                // 尝试进入全屏
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) {
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.msRequestFullscreen) {
+                    document.documentElement.msRequestFullscreen();
+                } else {
+                    alert('您的浏览器不支持全屏功能');
+                }
+            } else {
+                // 退出全屏
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        }
+
+        function checkFullscreenSupport() {
+            const support = !!(
+                document.fullscreenEnabled ||
+                document.webkitFullscreenEnabled ||
+                document.mozFullScreenEnabled ||
+                document.msFullscreenEnabled
+            );
+
+            alert('浏览器全屏支持: ' + (support ? '是' : '否'));
+        }
+
+        function openSpineEditor() {
+            window.open('/tools/spine-animation-editor/', '_blank');
+        }
+
+        // 监听全屏状态变化
+        document.addEventListener('fullscreenchange', updateStatus);
+        document.addEventListener('webkitfullscreenchange', updateStatus);
+        document.addEventListener('mozfullscreenchange', updateStatus);
+        document.addEventListener('MSFullscreenChange', updateStatus);
+
+        function updateStatus() {
+            const isFullscreen = !!(
+                document.fullscreenElement ||
+                document.webkitFullscreenElement ||
+                document.mozFullScreenElement ||
+                document.msFullscreenElement
+            );
+
+            document.getElementById('status').textContent =
+                '当前状态: ' + (isFullscreen ? '全屏模式' : '非全屏模式');
+        }
+
+        // 页面加载时检查支持情况
+        checkFullscreenSupport();
+    </script>
+</body>
+</html>
