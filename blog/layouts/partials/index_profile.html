@@ -1,0 +1,263 @@
+<!-- Hero区块 - 美观大气布局 -->
+<div class="blog-hero">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="badge-text">🚀 技术驱动 · 创新引领</span>
+        </div>
+        <h1 class="hero-title">
+            <span class="title-line">探索技术</span>
+            <span class="title-line">无限可能</span>
+        </h1>
+        <p class="hero-subtitle">
+            分享前沿技术见解，解析实战开发经验，<br>
+            与开发者社区共同成长，构建更美好的数字世界
+        </p>
+        <div class="hero-cta">
+            <a href="#posts" class="cta-primary">开始探索</a>
+            <a href="./categories/" class="cta-secondary">浏览分类</a>
+        </div>
+    </div>
+    <div class="hero-visual">
+        <div class="code-snippet">
+            <div class="code-header">
+                <div class="code-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="code-title">terminal.js</span>
+            </div>
+            <div class="code-content">
+                <pre><code id="typing-text"></code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 两栏布局容器 -->
+<div class="blog-layout">
+    <!-- 左侧：文章列表 -->
+    <div class="main-content" id="posts">
+        <div class="posts-list">
+            {{- $pages := where site.RegularPages "Type" "posts" }}
+            {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+            {{- $sorted := sort $pages "Date" "desc" }}
+            {{- $posts := first 5 $sorted }}
+            {{- range $index, $post := $posts }}
+            <article class="post-item">
+                <div class="post-item-header">
+                    <div class="post-date">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>{{ .Date.Format "2006-01-02" }}</span>
+                    </div>
+                    {{- with .Params.categories }}
+                    <div class="post-category">
+                        {{- range first 1 . }}
+                        <span class="category-tag">{{ . }}</span>
+                        {{- end }}
+                    </div>
+                    {{- end }}
+                </div>
+
+                <h2 class="post-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+
+                <p class="post-excerpt">
+                    {{ .Params.summary | default .Summary | plainify | truncate 120 }}
+                </p>
+
+                <div class="post-meta">
+                    <span class="post-author">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                        {{ .Params.author | default "有条工具团队" }}
+                    </span>
+                    <span class="post-read-time">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        {{ .ReadingTime }}分钟
+                    </span>
+                </div>
+
+                {{- with .Params.tags }}
+                <div class="post-tags">
+                    {{- range first 3 . }}
+                    <span class="tag">{{ . }}</span>
+                    {{- end }}
+                </div>
+                {{- end }}
+
+                <div class="post-footer">
+                    <a href="{{ .Permalink }}" class="read-link">
+                        阅读全文
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            {{- end }}
+        </div>
+
+        <div class="load-more">
+            <a href="./posts/" class="load-more-btn">
+                查看更多文章
+            </a>
+        </div>
+
+        <!-- 移动端提示 -->
+        <div class="mobile-tip">
+            <p>💡 桌面端可查看博客分类、标签等更多功能</p>
+        </div>
+    </div>
+
+    <!-- 右侧：侧边栏 -->
+    <div class="sidebar">
+        <!-- RSS订阅 - 第一个模块 -->
+        <div class="sidebar-card subscribe">
+            <div class="card-header">
+                <h3>订阅更新</h3>
+            </div>
+            <div class="card-content">
+                <p>通过 RSS 订阅我们的最新文章</p>
+                <a href="./feed.xml" class="rss-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                    RSS 订阅
+                </a>
+            </div>
+        </div>
+
+        <!-- 博客信息卡片 - logo居中 -->
+        <div class="sidebar-card blog-info">
+            <div class="card-header">
+                <h3>关于博客</h3>
+            </div>
+            <div class="card-content">
+                <div class="blog-logo">
+                    {{- with site.Params.profileMode.imageUrl }}
+                    <img src="{{ . | absURL }}" alt="Logo" />
+                    {{- end }}
+                </div>
+                <h4>{{ site.Params.profileMode.title }}</h4>
+                <p>{{ site.Params.profileMode.subtitle }}</p>
+                <div class="blog-stats">
+                    <div class="stat">
+                        <span class="stat-number">{{ len (where site.RegularPages "Type" "posts") }}</span>
+                        <span class="stat-label">文章</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">{{ len (site.Taxonomies.categories) }}</span>
+                        <span class="stat-label">分类</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">{{ len (site.Taxonomies.tags) }}</span>
+                        <span class="stat-label">标签</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 最新公告 -->
+        <div class="sidebar-card">
+            <div class="card-header">
+                <h3>最新公告</h3>
+            </div>
+            <div class="card-content">
+                <div class="announcement">
+                    <div class="announcement-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </div>
+                    <div class="announcement-content">
+                        <p>我们的技术博客正式上线，欢迎关注和分享！</p>
+                        <span class="announcement-date">2025-12-15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分类列表 -->
+        <div class="sidebar-card">
+            <div class="card-header">
+                <h3>文章分类</h3>
+                <a href="./categories/" class="view-all">查看全部</a>
+            </div>
+            <div class="card-content">
+                <ul class="category-list">
+                    {{- range site.Taxonomies.categories }}
+                    <li>
+                        <a href="{{ .Page.Permalink }}">
+                            <span class="category-name">{{ .Page.Title }}</span>
+                            <span class="category-count">{{ .Count }}</span>
+                        </a>
+                    </li>
+                    {{- end }}
+                </ul>
+            </div>
+        </div>
+
+        <!-- 热门标签 -->
+        <div class="sidebar-card">
+            <div class="card-header">
+                <h3>热门标签</h3>
+            </div>
+            <div class="card-content">
+                <div class="tag-cloud">
+                    {{- range first 15 (sort (index site.Taxonomies "tags") "Count" "desc") }}
+                    <a href="{{ .Page.Permalink }}" class="sidebar-tag">
+                        {{ .Page.Title }}
+                        <span class="tag-count">{{ .Count }}</span>
+                    </a>
+                    {{- end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// 打字机效果
+const codeText = `const developer = {
+  name: "Tech Explorer",
+  skills: ["JavaScript", "Python", "Go"],
+  passion: "Building the Future",
+  mission: "Share Knowledge & Grow Together"
+};
+
+// Start your journey
+developer.build();
+developer.learn();
+developer.share();`;
+
+const typingElement = document.getElementById('typing-text');
+let charIndex = 0;
+
+function typeChar() {
+    if (charIndex < codeText.length) {
+        typingElement.textContent += codeText[charIndex];
+        charIndex++;
+        setTimeout(typeChar, 30);
+    }
+}
+
+// 页面加载后开始打字效果
+setTimeout(typeChar, 1000);
+</script>

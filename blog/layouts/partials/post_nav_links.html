@@ -1,0 +1,36 @@
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- if and (gt (len $pages) 1) (in $pages . ) }}
+<nav class="post-nav-modern">
+  <div class="nav-grid">
+    {{- with $pages.Prev . }}
+    <a href="{{ .Permalink }}" class="nav-card nav-prev">
+      <div class="nav-arrow">←</div>
+      <div class="nav-content">
+        <div class="nav-title">{{ .Title }}</div>
+      </div>
+    </a>
+    {{- else }}
+    <div class="nav-card nav-empty">
+      <div class="nav-content">
+        <div class="nav-title">已是第一篇</div>
+      </div>
+    </div>
+    {{- end }}
+
+    {{- with $pages.Next . }}
+    <a href="{{ .Permalink }}" class="nav-card nav-next">
+      <div class="nav-content">
+        <div class="nav-title">{{ .Title }}</div>
+      </div>
+      <div class="nav-arrow">→</div>
+    </a>
+    {{- else }}
+    <div class="nav-card nav-empty">
+      <div class="nav-content">
+        <div class="nav-title">已是最后一篇</div>
+      </div>
+    </div>
+    {{- end }}
+  </div>
+</nav>
+{{- end }}

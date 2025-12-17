@@ -135,16 +135,16 @@ const sidebarSearch = ref('')
 // 计算属性：过滤后的工具
 const filteredTools = computed(() => {
   const searchTerm = (heroSearch.value || '').toLowerCase()
-  
+
   return tools.filter(tool => {
     const matchesCategory = currentCategory.value === 'all' || tool.category === currentCategory.value
-    const matchesSearch = !searchTerm || 
-      tool.name.toLowerCase().includes(searchTerm) || 
+    const matchesSearch = !searchTerm ||
+      tool.name.toLowerCase().includes(searchTerm) ||
       tool.description.toLowerCase().includes(searchTerm) ||
       tool.keywords.some(keyword => keyword.toLowerCase().includes(searchTerm))
-    
+
     return matchesCategory && matchesSearch
-  })
+  }).sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
 })
 
 // 格式化浏览量

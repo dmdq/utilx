@@ -1,0 +1,38 @@
+{{ define "main" }}
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}
+      <p>{{ . }}</p>
+    {{ end }}
+  </header>
+
+  <div class="archives">
+    {{ range .Site.RegularPages.GroupByDate "2006" }}
+      <div class="archive-year">
+        <h2>{{ .Key }}</h2>
+        <div class="archive-months">
+          {{ range .GroupByDate "2006-01" }}
+            <div class="archive-month">
+              <h3>{{ .Key | time.Format "2006年01月" }}</h3>
+              <ul class="archive-posts">
+                {{ range .Pages }}
+                  <li>
+                    <time>{{ .Date.Format "01-02" }}</time>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    {{ with .Params.categories }}
+                      <span class="post-categories">
+                        {{ range first 1 . }}
+                          <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/">· {{ . }}</a>
+                        {{ end }}
+                      </span>
+                    {{ end }}
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

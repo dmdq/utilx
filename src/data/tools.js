@@ -9,6 +9,10 @@ export const tools = [
     viewCount: 15600,
     hot: true,
     new: false,
+    local: true,
+    sortOrder: 10,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ['JSON', '格式化', '美化', '压缩', '验证', '解析'],
     keywords: ['json', 'format', 'beautify', 'parser', 'validate']
   },
   {
@@ -20,6 +24,10 @@ export const tools = [
     viewCount: 6800,
     hot: false,
     new: true,
+    local: true,
+    sortOrder: 20,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ['JSON', 'XML', '转换', '数据格式', '序列化'],
     keywords: ['json', 'xml', 'convert', 'transform', 'data']
   },
   {
@@ -31,6 +39,10 @@ export const tools = [
     viewCount: 5600,
     hot: false,
     new: true,
+    local: true,
+    sortOrder: 30,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ['JSON', 'YAML', '转换', '配置文件', '数据格式'],
     keywords: ['json', 'yaml', 'convert', 'transform', 'config']
   },
   {
@@ -42,6 +54,10 @@ export const tools = [
     viewCount: 7200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 40,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
     keywords: ['json', 'csv', 'convert', 'table', 'export']
   },
   {
@@ -53,6 +69,10 @@ export const tools = [
     viewCount: 7200,
     hot: false,
     new: false,
+        local: true,
+    sortOrder: 50,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
     keywords: ['xml', 'format', 'beautify', 'parser']
   },
   {
@@ -64,6 +84,10 @@ export const tools = [
     viewCount: 6400,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 60,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
     keywords: ['xml', 'json', 'convert', 'transform', 'data']
   },
   {
@@ -75,6 +99,10 @@ export const tools = [
     viewCount: 9800,
     hot: false,
     new: false,
+        local: true,
+    sortOrder: 70,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
     keywords: ['sql', 'format', 'beautify', 'query']
   },
   {
@@ -86,6 +114,10 @@ export const tools = [
     viewCount: 8200,
     hot: false,
     new: false,
+        local: true,
+    sortOrder: 80,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
     keywords: ['css', 'format', 'beautify', 'compress', 'style']
   },
   {
@@ -97,6 +129,10 @@ export const tools = [
     viewCount: 7800,
     hot: false,
     new: false,
+        local: true,
+    sortOrder: 90,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
     keywords: ['html', 'format', 'beautify', 'markup']
   },
   {
@@ -108,6 +144,10 @@ export const tools = [
     viewCount: 6500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 100,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
     keywords: ['csv', 'format', 'beautify', 'table', 'preview']
   },
   {
@@ -119,6 +159,10 @@ export const tools = [
     viewCount: 5900,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 110,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
     keywords: ['yaml', 'format', 'beautify', 'config']
   },
   {
@@ -130,7 +174,56 @@ export const tools = [
     viewCount: 4200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 120,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
     keywords: ['toml', 'format', 'beautify', 'config']
+  },
+  {
+    id: 'toml-to-json',
+    name: 'TOML与JSON互转',
+    description: 'TOML与JSON格式互相转换',
+    category: 'format',
+    icon: 'FileText',
+    viewCount: 3800,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 130,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
+    keywords: ['toml', 'json', 'convert', 'config', 'data', 'transform']
+  },
+  {
+    id: 'html-to-markdown',
+    name: 'HTML转Markdown',
+    description: 'HTML转换为Markdown格式',
+    category: 'format',
+    icon: 'FileText',
+    viewCount: 4500,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 140,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
+    keywords: ['html', 'markdown', 'convert', 'md', 'text', 'transform']
+  },
+  {
+    id: 'markdown-to-html',
+    name: 'Markdown转HTML',
+    description: 'Markdown转换为HTML（支持扩展语法）',
+    category: 'format',
+    icon: 'FileText',
+    viewCount: 5200,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 150,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
+    keywords: ['markdown', 'html', 'convert', 'md', 'web', 'render']
   },
 
   // 编码解码 (encode)
@@ -143,6 +236,10 @@ export const tools = [
     viewCount: 12800,
     hot: true,
     new: false,
+        local: true,
+    sortOrder: 160,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["Base64","编码","工具","实用","在线"],
     keywords: ['base64', 'encode', 'decode', 'binary']
   },
   {
@@ -154,6 +251,10 @@ export const tools = [
     viewCount: 11500,
     hot: false,
     new: false,
+        local: true,
+    sortOrder: 170,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["Base64","编码","工具","实用","在线"],
     keywords: ['base64', 'decode', 'binary', 'restore']
   },
   {
@@ -165,6 +266,10 @@ export const tools = [
     viewCount: 8900,
     hot: false,
     new: false,
+        local: true,
+    sortOrder: 180,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["URL","编码","工具","实用","在线"],
     keywords: ['url', 'encode', 'percent', 'uri']
   },
   {
@@ -176,6 +281,10 @@ export const tools = [
     viewCount: 8500,
     hot: false,
     new: false,
+        local: true,
+    sortOrder: 190,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["URL","编码","工具","实用","在线"],
     keywords: ['url', 'decode', 'percent', 'uri']
   },
   {
@@ -187,6 +296,10 @@ export const tools = [
     viewCount: 6200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 200,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["HTML","编码","工具","实用","在线"],
     keywords: ['html', 'entity', 'encode', 'escape']
   },
   {
@@ -198,6 +311,10 @@ export const tools = [
     viewCount: 5800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 210,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["HTML","编码","工具","实用","在线"],
     keywords: ['html', 'entity', 'decode', 'unescape']
   },
   {
@@ -209,6 +326,10 @@ export const tools = [
     viewCount: 5800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 220,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["转换","工具","实用","在线","便捷"],
     keywords: ['unicode', 'utf', 'convert', 'encoding', 'character']
   },
   {
@@ -220,6 +341,10 @@ export const tools = [
     viewCount: 7300,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 230,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
     keywords: ['hex', 'hexadecimal', 'convert', 'base16', 'encoding']
   },
   {
@@ -231,6 +356,10 @@ export const tools = [
     viewCount: 6900,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 240,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
     keywords: ['binary', 'base2', 'convert', 'bit', 'encoding']
   },
   {
@@ -242,6 +371,10 @@ export const tools = [
     viewCount: 5100,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 250,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
     keywords: ['ascii', 'table', 'character', 'code', 'lookup']
   },
   {
@@ -253,6 +386,10 @@ export const tools = [
     viewCount: 4600,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 260,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
     keywords: ['morse', 'code', 'dot', 'dash', 'telegraph']
   },
   {
@@ -264,6 +401,10 @@ export const tools = [
     viewCount: 9800,
     hot: true,
     new: true,
+        local: true,
+    sortOrder: 270,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["二维码","生成","工具","实用","在线"],
     keywords: ['qrcode', 'qr', 'generate', '2d', 'barcode']
   },
 
@@ -277,6 +418,10 @@ export const tools = [
     viewCount: 11200,
     hot: true,
     new: false,
+        local: true,
+    sortOrder: 280,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['md5', 'hash', 'checksum', 'security']
   },
   {
@@ -288,6 +433,10 @@ export const tools = [
     viewCount: 9800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 290,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['sha', 'sha1', 'sha256', 'sha512', 'hash', 'security']
   },
   {
@@ -299,6 +448,10 @@ export const tools = [
     viewCount: 8500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 300,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['aes', 'encrypt', 'symmetric', 'security']
   },
   {
@@ -310,6 +463,10 @@ export const tools = [
     viewCount: 8000,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 310,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['aes', 'decrypt', 'symmetric', 'security']
   },
   {
@@ -321,6 +478,10 @@ export const tools = [
     viewCount: 7600,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 320,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['rsa', 'key', 'generate', 'public', 'private', 'asymmetric']
   },
   {
@@ -332,6 +493,10 @@ export const tools = [
     viewCount: 6800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 330,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['rsa', 'encrypt', 'asymmetric', 'security']
   },
   {
@@ -343,6 +508,10 @@ export const tools = [
     viewCount: 6500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 340,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['rsa', 'decrypt', 'asymmetric', 'security']
   },
   {
@@ -354,6 +523,10 @@ export const tools = [
     viewCount: 9200,
     hot: true,
     new: true,
+        local: true,
+    sortOrder: 350,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['bcrypt', 'password', 'hash', 'salt', 'security']
   },
   {
@@ -365,6 +538,10 @@ export const tools = [
     viewCount: 6400,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 360,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['bcrypt', 'password', 'verify', 'check', 'security']
   },
   {
@@ -376,6 +553,10 @@ export const tools = [
     viewCount: 5800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 370,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['hmac', 'signature', 'authentication', 'sha256', 'security']
   },
   {
@@ -387,6 +568,10 @@ export const tools = [
     viewCount: 11200,
     hot: true,
     new: false,
+        local: true,
+    sortOrder: 380,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['jwt', 'token', 'decode', 'parse', 'authorization', 'json']
   },
   {
@@ -398,6 +583,10 @@ export const tools = [
     viewCount: 8500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 390,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['jwt', 'token', 'verify', 'signature', 'authorization']
   },
   {
@@ -409,6 +598,10 @@ export const tools = [
     viewCount: 13500,
     hot: true,
     new: false,
+        local: true,
+    sortOrder: 400,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['uuid', 'guid', 'generate', 'unique', 'identifier']
   },
   {
@@ -420,6 +613,10 @@ export const tools = [
     viewCount: 4500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 410,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["加密","解密","安全","哈希","编码"],
     keywords: ['gmsm', 'sm2', 'sm3', 'sm4', 'chinese', 'crypto']
   },
 
@@ -433,6 +630,10 @@ export const tools = [
     viewCount: 14200,
     hot: true,
     new: false,
+        local: true,
+    sortOrder: 420,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["时间","日期","转换","计算","格式化"],
     keywords: ['timestamp', 'unix', 'date', 'convert', 'time']
   },
   {
@@ -444,6 +645,10 @@ export const tools = [
     viewCount: 7500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 430,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["时间","日期","转换","计算","格式化"],
     keywords: ['cron', 'expression', 'parse', 'schedule']
   },
   {
@@ -455,6 +660,10 @@ export const tools = [
     viewCount: 8000,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 440,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["时间","日期","转换","计算","格式化"],
     keywords: ['cron', 'expression', 'generate', 'schedule', 'visual']
   },
   {
@@ -466,6 +675,10 @@ export const tools = [
     viewCount: 6800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 450,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["时间","日期","转换","计算","格式化"],
     keywords: ['timezone', 'convert', 'time', 'gmt', 'utc']
   },
   {
@@ -477,6 +690,10 @@ export const tools = [
     viewCount: 7200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 460,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["时间","日期","转换","计算","格式化"],
     keywords: ['date', 'calculator', 'add', 'subtract', 'days']
   },
   {
@@ -488,6 +705,10 @@ export const tools = [
     viewCount: 6500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 470,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["时间","日期","转换","计算","格式化"],
     keywords: ['date', 'difference', 'calculate', 'days', 'duration']
   },
   {
@@ -499,6 +720,10 @@ export const tools = [
     viewCount: 4200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 480,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["时间","日期","转换","计算","格式化"],
     keywords: ['week', 'calculator', 'iso', 'weeknumber']
   },
   {
@@ -510,6 +735,10 @@ export const tools = [
     viewCount: 5500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 490,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["时间","日期","转换","计算","格式化"],
     keywords: ['age', 'calculator', 'birthday', 'years']
   },
   {
@@ -521,6 +750,10 @@ export const tools = [
     viewCount: 6200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 500,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["时间","日期","转换","计算","格式化"],
     keywords: ['countdown', 'timer', 'alarm', 'reminder']
   },
   {
@@ -532,6 +765,10 @@ export const tools = [
     viewCount: 4800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 510,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["时间","日期","转换","计算","格式化"],
     keywords: ['stopwatch', 'timer', 'chronometer', 'measure']
   },
   {
@@ -543,6 +780,10 @@ export const tools = [
     viewCount: 3800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 520,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["时间","日期","转换","计算","格式化"],
     keywords: ['workday', 'calculator', 'business', 'weekend']
   },
 
@@ -556,6 +797,10 @@ export const tools = [
     viewCount: 7600,
     hot: false,
     new: true,
+        local: false,
+    sortOrder: 530,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['regex', 'regexp', 'test', 'pattern', 'match']
   },
   {
@@ -567,6 +812,10 @@ export const tools = [
     viewCount: 6200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 540,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['regex', 'regexp', 'generate', 'visual', 'pattern']
   },
   {
@@ -578,6 +827,10 @@ export const tools = [
     viewCount: 6800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 550,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['text', 'diff', 'compare', 'difference', 'change']
   },
   {
@@ -589,6 +842,10 @@ export const tools = [
     viewCount: 5200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 560,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['case', 'convert', 'uppercase', 'lowercase', 'capitalize']
   },
   {
@@ -600,6 +857,10 @@ export const tools = [
     viewCount: 8500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 570,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['markdown', 'editor', 'preview', 'realtime', 'md']
   },
   {
@@ -611,6 +872,10 @@ export const tools = [
     viewCount: 4800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 580,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['text', 'count', 'word', 'character', 'statistics']
   },
   {
@@ -622,6 +887,10 @@ export const tools = [
     viewCount: 5800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 590,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['text', 'replace', 'find', 'substitute', 'batch']
   },
   {
@@ -633,6 +902,10 @@ export const tools = [
     viewCount: 4500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 600,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['line', 'sort', 'deduplicate', 'filter', 'unique']
   },
   {
@@ -644,6 +917,10 @@ export const tools = [
     viewCount: 3800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 610,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['json', 'path', 'query', 'xpath', 'select']
   },
   {
@@ -655,6 +932,10 @@ export const tools = [
     viewCount: 3500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 620,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['xpath', 'xml', 'test', 'query', 'path']
   },
   {
@@ -666,6 +947,10 @@ export const tools = [
     viewCount: 4200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 630,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['lorem', 'ipsum', 'text', 'generate', 'placeholder']
   },
   {
@@ -677,6 +962,10 @@ export const tools = [
     viewCount: 7200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 640,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['code', 'format', 'beautify', 'indent', 'syntax']
   },
   {
@@ -688,6 +977,10 @@ export const tools = [
     viewCount: 9800,
     hot: true,
     new: true,
+        local: true,
+    sortOrder: 650,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
     keywords: ['password', 'generate', 'secure', 'random', 'strong']
   },
 
@@ -701,6 +994,10 @@ export const tools = [
     viewCount: 9300,
     hot: false,
     new: false,
+        local: true,
+    sortOrder: 660,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['ip', 'address', 'lookup', 'geolocation', 'whois']
   },
   {
@@ -712,6 +1009,10 @@ export const tools = [
     viewCount: 6800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 670,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['whois', 'domain', 'lookup', 'register', 'dns']
   },
   {
@@ -723,6 +1024,10 @@ export const tools = [
     viewCount: 7200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 680,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['dns', 'lookup', 'record', 'query', 'domain']
   },
   {
@@ -734,6 +1039,10 @@ export const tools = [
     viewCount: 8500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 690,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['http', 'client', 'request', 'api', 'rest']
   },
   {
@@ -745,6 +1054,10 @@ export const tools = [
     viewCount: 5200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 700,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['websocket', 'ws', 'test', 'connection', 'realtime']
   },
   {
@@ -756,6 +1069,10 @@ export const tools = [
     viewCount: 6200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 710,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['ssl', 'certificate', 'tls', 'check', 'security']
   },
   {
@@ -767,6 +1084,10 @@ export const tools = [
     viewCount: 4800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 720,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['subnet', 'calculator', 'ip', 'network', 'cidr']
   },
   {
@@ -778,6 +1099,10 @@ export const tools = [
     viewCount: 5500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 730,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['port', 'scanner', 'check', 'network', 'open']
   },
   {
@@ -789,6 +1114,10 @@ export const tools = [
     viewCount: 6800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 740,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['curl', 'convert', 'http', 'request', 'code']
   },
   {
@@ -800,6 +1129,10 @@ export const tools = [
     viewCount: 4200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 750,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['http', 'request', 'header', 'analyze', 'debug']
   },
   {
@@ -811,6 +1144,10 @@ export const tools = [
     viewCount: 3800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 760,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['useragent', 'ua', 'parse', 'browser', 'detect']
   },
   {
@@ -822,6 +1159,10 @@ export const tools = [
     viewCount: 3200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 770,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
     keywords: ['mime', 'type', 'file', 'extension', 'content-type']
   },
 
@@ -835,6 +1176,10 @@ export const tools = [
     viewCount: 12500,
     hot: true,
     new: false,
+        local: false,
+    sortOrder: 780,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['image', 'compress', 'optimize', 'reduce', 'size']
   },
   {
@@ -846,6 +1191,10 @@ export const tools = [
     viewCount: 9800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 790,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['image', 'convert', 'format', 'jpg', 'png', 'webp']
   },
   {
@@ -857,6 +1206,10 @@ export const tools = [
     viewCount: 8500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 800,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['image', 'resize', 'scale', 'dimensions', 'size']
   },
   {
@@ -868,6 +1221,10 @@ export const tools = [
     viewCount: 6800,
     hot: false,
     new: false,
+        local: true,
+    sortOrder: 810,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['image', 'base64', 'convert', 'encode', 'data-uri']
   },
   {
@@ -879,6 +1236,10 @@ export const tools = [
     viewCount: 11200,
     hot: true,
     new: false,
+        local: true,
+    sortOrder: 820,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['color', 'picker', 'hex', 'rgb', 'hsl', 'palette']
   },
   {
@@ -890,6 +1251,10 @@ export const tools = [
     viewCount: 6200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 830,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['qrcode', 'qr', 'scan', 'read', 'decode']
   },
   {
@@ -901,6 +1266,10 @@ export const tools = [
     viewCount: 4800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 840,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['exif', 'metadata', 'image', 'photo', 'gps']
   },
   {
@@ -912,6 +1281,10 @@ export const tools = [
     viewCount: 5500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 850,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['icon', 'favicon', 'generate', 'ico', 'png']
   },
   {
@@ -923,6 +1296,10 @@ export const tools = [
     viewCount: 6200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 860,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['image', 'watermark', 'text', 'logo', 'copyright']
   },
   {
@@ -934,6 +1311,10 @@ export const tools = [
     viewCount: 7800,
     hot: false,
     new: true,
+        local: false,
+    sortOrder: 870,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['image', 'crop', 'cut', 'resize', 'edit']
   },
   {
@@ -945,6 +1326,10 @@ export const tools = [
     viewCount: 4500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 880,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['image', 'merge', 'combine', 'join', 'stitch']
   },
   {
@@ -956,6 +1341,10 @@ export const tools = [
     viewCount: 8800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 890,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["图片","图像","处理","转换","编辑"],
     keywords: ['screenshot', 'webpage', 'capture', 'url', 'fullpage']
   },
 
@@ -969,6 +1358,10 @@ export const tools = [
     viewCount: 9200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 900,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["生成","工具","实用","在线","便捷"],
     keywords: ['mock', 'data', 'generate', 'fake', 'test']
   },
   {
@@ -980,6 +1373,10 @@ export const tools = [
     viewCount: 6800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 910,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["生成","工具","实用","在线","便捷"],
     keywords: ['api', 'documentation', 'generate', 'swagger', 'openapi']
   },
   {
@@ -991,6 +1388,10 @@ export const tools = [
     viewCount: 5500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 920,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
     keywords: ['sql', 'model', 'class', 'generate', 'orm']
   },
   {
@@ -1002,6 +1403,10 @@ export const tools = [
     viewCount: 6200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 930,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["JSON","工具","实用","在线","便捷"],
     keywords: ['json', 'model', 'class', 'generate', 'typescript']
   },
   {
@@ -1013,6 +1418,10 @@ export const tools = [
     viewCount: 4200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 940,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["XML","工具","实用","在线","便捷"],
     keywords: ['xml', 'model', 'class', 'generate', 'xsd']
   },
   {
@@ -1024,6 +1433,10 @@ export const tools = [
     viewCount: 7500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 950,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
     keywords: ['swagger', 'api', 'documentation', 'viewer', 'openapi']
   },
   {
@@ -1035,6 +1448,10 @@ export const tools = [
     viewCount: 5800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 960,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["生成","工具","实用","在线","便捷"],
     keywords: ['git', 'command', 'generate', 'helper', 'cheatsheet']
   },
   {
@@ -1046,6 +1463,10 @@ export const tools = [
     viewCount: 4800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 970,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["生成","工具","实用","在线","便捷"],
     keywords: ['docker', 'command', 'generate', 'container', 'compose']
   },
   {
@@ -1057,6 +1478,10 @@ export const tools = [
     viewCount: 5200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 980,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["生成","工具","实用","在线","便捷"],
     keywords: ['linux', 'command', 'generate', 'shell', 'bash']
   },
   {
@@ -1068,6 +1493,10 @@ export const tools = [
     viewCount: 6500,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 990,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["正则","工具","实用","在线","便捷"],
     keywords: ['regex', 'cheatsheet', 'reference', 'pattern', 'syntax']
   },
   {
@@ -1079,6 +1508,10 @@ export const tools = [
     viewCount: 3800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 1000,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["转换","工具","实用","在线","便捷"],
     keywords: ['charset', 'encoding', 'convert', 'utf8', 'gbk']
   },
   {
@@ -1090,6 +1523,10 @@ export const tools = [
     viewCount: 6800,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 1010,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["生成","工具","实用","在线","便捷"],
     keywords: ['crontab', 'cron', 'generate', 'schedule', 'linux']
   },
   {
@@ -1101,6 +1538,376 @@ export const tools = [
     viewCount: 4200,
     hot: false,
     new: true,
+        local: true,
+    sortOrder: 1020,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["JSON","生成","工具","实用","在线"],
     keywords: ['json', 'schema', 'generate', 'validate', 'structure']
+  },
+  {
+    id: 'json-to-typescript',
+    name: 'JSON转TypeScript接口',
+    description: '根据JSON数据自动生成TypeScript类型定义',
+    category: 'dev',
+    icon: 'FileCode',
+    viewCount: 0,
+    hot: true,
+    new: true,
+        local: true,
+    sortOrder: 1030,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["JSON","生成","工具","实用","在线"],
+    keywords: ['json', 'typescript', 'interface', 'generate', 'type', 'ts']
+  },
+
+  // 网络工具 (network) 延续
+
+  // 数据格式化 (format) 延续
+  {
+    id: 'json-php-converter',
+    name: 'JSON与PHP数组转换',
+    description: 'JSON数据与PHP数组语法互相转换',
+    category: 'format',
+    icon: 'Code',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1040,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","转换","数据处理","文本工具","美化"],
+    keywords: ['json', 'php', 'array', 'convert', 'syntax', 'associative']
+  },
+
+  // 新增的20个高频工具
+  {
+    id: 'code-snippet-converter',
+    name: '代码片段转换',
+    description: '不同编程语言间代码片段转换（如Python↔JavaScript）',
+    category: 'dev',
+    icon: 'Code',
+    viewCount: 0,
+    hot: true,
+    new: true,
+        local: true,
+    sortOrder: 1050,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["转换","工具","实用","在线","便捷"],
+    keywords: ['code', 'snippet', 'convert', 'language', 'transpiler', 'python', 'javascript']
+  },
+  {
+    id: 'api-response-mocker',
+    name: 'API响应模拟器',
+    description: '根据JSON Schema自动生成模拟API响应数据',
+    category: 'dev',
+    icon: 'Database',
+    viewCount: 0,
+    hot: true,
+    new: true,
+        local: true,
+    sortOrder: 1060,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["生成","工具","实用","在线","便捷"],
+    keywords: ['api', 'mock', 'response', 'schema', 'test', 'generate']
+  },
+  {
+    id: 'sql-query-optimizer',
+    name: 'SQL查询优化器',
+    description: '分析SQL查询并提供优化建议',
+    category: 'dev',
+    icon: 'Database',
+    viewCount: 0,
+    hot: true,
+    new: true,
+        local: true,
+    sortOrder: 1070,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
+    keywords: ['sql', 'query', 'optimize', 'performance', 'analyze', 'explain']
+  },
+  {
+    id: 'css-layout-generator',
+    name: 'CSS布局生成器',
+    description: '可视化生成Flexbox和Grid布局代码',
+    category: 'design',
+    icon: 'Layout',
+    viewCount: 0,
+    hot: true,
+    new: true,
+        local: true,
+    sortOrder: 1080,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["CSS","生成","工具","实用","在线"],
+    keywords: ['css', 'flexbox', 'grid', 'layout', 'visual', 'generator']
+  },
+  {
+    id: 'svg-path-editor',
+    name: 'SVG路径编辑器',
+    description: '可视化编辑SVG path数据',
+    category: 'design',
+    icon: 'Image',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1090,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
+    keywords: ['svg', 'path', 'editor', 'vector', 'graphics', 'bezier']
+  },
+  {
+    id: 'data-sampling-tool',
+    name: '数据采样工具',
+    description: '对数据集进行采样、分桶、分组操作',
+    category: 'data',
+    icon: 'Filter',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1100,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
+    keywords: ['data', 'sampling', 'bucket', 'group', 'statistics', 'sample']
+  },
+  {
+    id: 'data-format-validator',
+    name: '数据格式验证器',
+    description: '验证身份证号、手机号、邮箱等格式',
+    category: 'text',
+    icon: 'Check',
+    viewCount: 0,
+    hot: true,
+    new: true,
+        local: true,
+    sortOrder: 1110,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
+    keywords: ['data', 'validate', 'format', 'phone', 'email', 'id-card']
+  },
+  {
+    id: 'data-masking-tool',
+    name: '数据脱敏工具',
+    description: '对敏感数据进行脱敏处理',
+    category: 'security',
+    icon: 'EyeOff',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1120,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
+    keywords: ['data', 'masking', 'desensitization', 'privacy', 'security', 'gdpr']
+  },
+  {
+    id: 'algorithm-complexity-calculator',
+    name: '算法复杂度计算器',
+    description: '分析代码片段的时间/空间复杂度',
+    category: 'dev',
+    icon: 'Cpu',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1130,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
+    keywords: ['algorithm', 'complexity', 'big-o', 'analysis', 'performance', 'time']
+  },
+  {
+    id: 'regex-debugger',
+    name: '正则表达式调试器',
+    description: '逐步调试正则表达式匹配过程',
+    category: 'text',
+    icon: 'Bug',
+    viewCount: 0,
+    hot: true,
+    new: true,
+        local: true,
+    sortOrder: 1140,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["文本","字符串","处理","编辑","格式"],
+    keywords: ['regex', 'debugger', 'step', 'match', 'pattern', 'debug']
+  },
+  {
+    id: 'env-variable-manager',
+    name: '环境变量管理器',
+    description: '.env文件格式转换、验证和管理',
+    category: 'dev',
+    icon: 'Settings',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1150,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["转换","验证","工具","实用","在线"],
+    keywords: ['env', 'environment', 'variable', '.env', 'config', 'manage']
+  },
+  {
+    id: 'docker-compose-editor',
+    name: 'Docker Compose编辑器',
+    description: '可视化编辑docker-compose.yml文件',
+    category: 'dev',
+    icon: 'Package',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1160,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
+    keywords: ['docker', 'compose', 'yaml', 'visual', 'editor', 'container']
+  },
+  {
+    id: 'nginx-config-generator',
+    name: 'Nginx配置生成器',
+    description: '根据需求生成Nginx配置文件',
+    category: 'network',
+    icon: 'Server',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1170,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["网络","HTTP","API","请求","通信"],
+    keywords: ['nginx', 'config', 'generator', 'server', 'proxy', 'load-balancer']
+  },
+  {
+    id: 'test-data-generator',
+    name: '测试数据生成器',
+    description: '根据业务规则生成测试数据',
+    category: 'dev',
+    icon: 'TestTube',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1180,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["生成","工具","实用","在线","便捷"],
+    keywords: ['test', 'data', 'generate', 'mock', 'fixture', 'unit-test']
+  },
+  {
+    id: 'web-component-analyzer',
+    name: 'Web组件分析器',
+    description: '分析HTML元素的可访问属性和事件',
+    category: 'dev',
+    icon: 'Code',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1190,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
+    keywords: ['web', 'component', 'analyzer', 'accessibility', 'aria', 'attributes']
+  },
+  {
+    id: 'data-structure-builder',
+    name: '数据结构构建器',
+    description: '可视化构建和操作数据结构',
+    category: 'visualization',
+    icon: 'Network',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1200,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
+    keywords: ['data', 'structure', 'tree', 'graph', 'visualization', 'build']
+  },
+  {
+    id: 'api-contract-tester',
+    name: 'API契约测试器',
+    description: '验证API请求响应是否符合契约',
+    category: 'dev',
+    icon: 'FileCheck',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1210,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["验证","工具","实用","在线","便捷"],
+    keywords: ['api', 'contract', 'test', 'validate', 'schema', 'openapi']
+  },
+  {
+    id: 'performance-benchmark',
+    name: '性能基准测试',
+    description: '对代码片段进行性能测试和对比',
+    category: 'dev',
+    icon: 'Zap',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1220,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
+    keywords: ['performance', 'benchmark', 'speed', 'comparison', 'optimization']
+  },
+  {
+    id: 'color-contrast-checker',
+    name: '颜色对比度检查',
+    description: '检查颜色对比度是否符合WCAG标准',
+    category: 'design',
+    icon: 'Palette',
+    viewCount: 0,
+    hot: true,
+    new: true,
+        local: true,
+    sortOrder: 1230,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["颜色","工具","实用","在线","便捷"],
+    keywords: ['color', 'contrast', 'accessibility', 'wcag', 'design', 'checker']
+  },
+  {
+    id: 'clipboard-manager-pro',
+    name: '增强剪贴板管理器',
+    description: '支持分类、搜索、格式化的剪贴板历史',
+    category: 'productivity',
+    icon: 'Clipboard',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1240,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["格式化","工具","实用","在线","便捷"],
+    keywords: ['clipboard', 'history', 'manager', 'categorized', 'search', 'copy']
+  },
+  {
+    id: 'json-to-protobuf',
+    name: 'JSON转Protobuf',
+    description: 'JSON数据转换为Protobuf定义文件，支持v2/v3版本',
+    category: 'dev',
+    icon: 'FileJson',
+    viewCount: 0,
+    hot: false,
+    new: true,
+        local: true,
+    sortOrder: 1250,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["JSON","转换","工具","实用","在线"],
+    keywords: ['json', 'protobuf', 'proto', 'converter', 'schema', 'grpc', 'message']
+  },
+  {
+    id: 'svg-code-editor',
+    name: 'SVG代码编辑器',
+    description: '实时编辑和预览SVG代码，支持导出多种图片格式',
+    category: 'design',
+    icon: 'Code',
+    viewCount: 0,
+    hot: true,
+    new: true,
+        local: true,
+    sortOrder: 1260,
+    lastUpdated: '2025-12-17 00:00:00',
+    tags: ["工具","实用","在线","便捷","高效"],
+    keywords: ['svg', 'editor', 'preview', 'export', 'logo', 'vector', 'graphics']
   }
 ]

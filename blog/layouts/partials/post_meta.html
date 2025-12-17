@@ -1,0 +1,154 @@
+{{- $scratch := newScratch }}
+
+<!-- 1. 先显示分类目录 -->
+{{- $categories := .Language.Params.Taxonomies.category | default "categories" }}
+{{- if ($.GetTerms $categories) }}
+{{- $scratch.Add "meta" (slice (printf `<div class="post-categories-inline">`)) }}
+{{- range ($.GetTerms $categories) }}
+{{- $scratch.Add "meta" (slice (printf `<a href="%s" class="category-link">%s</a>` .Permalink (.LinkTitle))) }}
+{{- end }}
+{{- $scratch.Add "meta" (slice (printf `</div>`)) }}
+{{- end }}
+
+<!-- 2. 显示时间（年-月-日格式） -->
+{{- if not .Date.IsZero -}}
+{{- $scratch.Add "meta" (slice (printf "<span class='post-date'>%s</span>" (.Date | time.Format "2006-01-02"))) }}
+{{- end }}
+
+<!-- 3. 其他元信息 -->
+{{- if (.Param "ShowReadingTime") -}}
+{{- $scratch.Add "meta" (slice (printf "<span class='post-reading-time'>%s</span>" (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime)))) }}
+{{- end }}
+
+{{- if (.Param "ShowWordCount") -}}
+{{- $scratch.Add "meta" (slice (printf "<span class='post-word-count'>%s</span>" (i18n "words" .WordCount | default (printf "%d words" .WordCount)))) }}
+{{- end }}
+
+{{- if not (.Param "hideAuthor") -}}
+{{- with (partial "author.html" .) }}
+{{- $scratch.Add "meta" (slice (printf "<span class='post-author'>%s</span>" .)) }}
+{{- end }}
+{{- end }}
+
+{{- with ($scratch.Get "meta") }}
+<div class="post-meta-content">
+  {{- delimit . "" | safeHTML -}}
+</div>
+{{- end }}
+
+<style>
+.post-meta-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+  font-size: 0.875rem;
+  color: #9ca3af !important; /* 浅色模式下的文字颜色 */
+}
+
+.post-categories-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e5e7eb !important;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0; /* 去除圆角 */
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.category-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.category-link::before {
+  content: '📁';
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.post-date,
+.post-reading-time,
+.post-word-count,
+.post-author {
+  color: #9ca3af !important;
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .post-meta-content {
+  color: #9ca3af !important; /* 深色模式下的文字颜色 */
+}
+
+[data-theme="dark"] .category-link {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e5e7eb !important;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .category-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .post-date,
+[data-theme="dark"] .post-reading-time,
+[data-theme="dark"] .post-word-count,
+[data-theme="dark"] .post-author {
+  color: #9ca3af !important;
+}
+
+/* 浅色模式适配 */
+[data-theme="light"] .post-meta-content {
+  color: #6c757d !important; /* 浅色模式下的文字颜色 */
+}
+
+[data-theme="light"] .category-link {
+  background: rgba(0, 0, 0, 0.05);
+  color: #495057 !important;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .category-link:hover {
+  background: rgba(0, 102, 204, 0.1);
+  color: #212529 !important;
+  border-color: rgba(0, 102, 204, 0.3);
+}
+
+[data-theme="light"] .post-date,
+[data-theme="light"] .post-reading-time,
+[data-theme="light"] .post-word-count,
+[data-theme="light"] .post-author {
+  color: #6c757d !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .post-meta-content {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .category-link {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}
+</style>

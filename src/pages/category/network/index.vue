@@ -54,6 +54,7 @@ const category = categories.find(c => c.id === 'network')
 // 当前分类的工具
 const categoryTools = computed(() => {
   return tools.filter(tool => tool.category === category.id)
+    .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
 })
 
 // 格式化浏览量

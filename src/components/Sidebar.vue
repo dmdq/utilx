@@ -219,7 +219,8 @@ import { ref, computed } from 'vue'
 import {
   Terminal, LayoutGrid, Code2, ShieldCheck, Server, ImageIcon,
   FileJson, Clock, ArrowRight, MessageSquarePlus, FileText, Lock,
-  Shield, Type, Wifi, Code, Image, Home, Compass, Sparkles, ChevronRight, Heart, Map, MoreHorizontal
+  Shield, Type, Wifi, Code, Image, Home, Compass, Sparkles, ChevronRight, Heart, Map, MoreHorizontal,
+  Palette, Database, BarChart, Zap
 } from 'lucide-vue-next'
 import { categories } from '~/data/categories'
 import { useRoute } from 'vue-router'
@@ -235,7 +236,11 @@ const iconMap = {
   ImageIcon,
   Code,
   Image,
-  LayoutGrid
+  LayoutGrid,
+  Palette,
+  Database,
+  BarChart,
+  Zap
 }
 
 // 定义 emit 事件

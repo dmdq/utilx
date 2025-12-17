@@ -1,0 +1,10 @@
+# URL重定向规则
+# 将旧的posts路径重定向到新的articles路径
+/blog/posts/* /blog/articles/:splat 301
+
+# 保留RSS feeds
+/blog/posts/feed.xml /blog/feed.xml 301
+/blog/posts/index.xml /blog/feed.xml 301
+
+# 保留旧的搜索路径
+/blog/search /blog/search/ 301

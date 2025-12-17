@@ -208,7 +208,7 @@ const filteredTools = computed(() => {
     String(tool.name || '').toLowerCase().includes(query) ||
     String(tool.description || '').toLowerCase().includes(query) ||
     (tool.keywords || []).some(keyword => String(keyword || '').toLowerCase().includes(query))
-  )
+  ).sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
 })
 
 const filteredPages = computed(() => {

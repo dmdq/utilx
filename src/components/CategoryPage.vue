@@ -36,6 +36,7 @@ const iconComponent = computed(() => {
 // 当前分类的工具
 const categoryTools = computed(() => {
   return props.tools.filter(tool => tool.category === props.category.id)
+    .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
 })
 
 // SEO内容映射

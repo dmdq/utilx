@@ -1,0 +1,413 @@
+{{- $content := .Content }}
+{{- $h1Headers := findRE `(?s)<h1[^>]*>.*?</h1>` $content }}
+{{- $h2Headers := findRE `(?s)<h2[^>]*>.*?</h2>` $content }}
+{{- $hasHeaders := or (len $h1Headers) (len $h2Headers) }}
+
+{{- if $hasHeaders }}
+<div class="sidebar-toc" id="sidebar-toc">
+  <div class="toc-header">
+    <div class="toc-title">目录</div>
+    <button class="toc-toggle" id="toc-toggle" aria-label="Toggle TOC">
+      <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="toc-content" id="toc-content">
+    <ul class="toc-list">
+      {{- range $index, $header := $h1Headers }}
+        {{- $title := replaceRE `(?s)<h1[^>]*>(.*?)</h1>` "$1" $header }}
+        {{- $cleanTitle := $title | plainify | replaceRE `\s*#?\s*$` "" }}
+        {{- $anchor := $cleanTitle | urlize }}
+        {{- $id := printf "h1-%d" $index }}
+        <li class="toc-item toc-h1">
+          <a href="#{{ $id }}" class="toc-item-link">
+            <span class="toc-dot dot-red"></span>
+            <span class="toc-item-text">{{ $cleanTitle }}</span>
+          </a>
+        </li>
+      {{- end }}
+
+      {{- range $h2Index, $header := $h2Headers }}
+        {{- $title := replaceRE `(?s)<h2[^>]*>(.*?)</h2>` "$1" $header }}
+        {{- $cleanTitle := $title | plainify | replaceRE `\s*#?\s*$` "" }}
+        {{- $anchor := $cleanTitle | urlize }}
+        {{- $id := printf "h2-%d" $h2Index }}
+        <li class="toc-item toc-h2">
+          <a href="#{{ $id }}" class="toc-item-link">
+            <span class="toc-item-text">{{ $cleanTitle }}</span>
+          </a>
+        </li>
+      {{- end }}
+    </ul>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toc = document.getElementById('sidebar-toc');
+  const tocToggle = document.getElementById('toc-toggle');
+  const tocContent = document.getElementById('toc-content');
+  const tocToggleIcon = tocToggle?.querySelector('.toc-toggle-icon');
+
+  if (!toc) return;
+
+  // 初始化折叠状态
+  let isCollapsed = false;
+
+  // 主折叠功能
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function() {
+      isCollapsed = !isCollapsed;
+
+      if (isCollapsed) {
+        tocContent.style.display = 'none';
+        toc.style.width = 'auto';
+        tocToggleIcon.innerHTML = '<path d="M9 18l6-6-6-6"/>';
+      } else {
+        tocContent.style.display = 'block';
+        toc.style.width = '200px';
+        tocToggleIcon.innerHTML = '<path d="M18 6L6 18M6 6l12 12"/>';
+      }
+    });
+  }
+
+  // 为文章中的标题添加对应的ID
+  const content = document.querySelector('.post-content');
+  if (content) {
+    // 为H1标题添加ID
+    const h1Headers = content.querySelectorAll('h1');
+    h1Headers.forEach((header, index) => {
+      header.id = `h1-${index}`;
+    });
+
+    // 为H2标题添加ID
+    const h2Headers = content.querySelectorAll('h2');
+    h2Headers.forEach((header, index) => {
+      header.id = `h2-${index}`;
+    });
+  }
+
+  // 平滑滚动
+  const tocLinks = document.querySelectorAll('.toc-item-link');
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        const headerHeight = document.querySelector('.post-header-main')?.offsetHeight || 0;
+        const offsetTop = targetElement.offsetTop - headerHeight - 20;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+</script>
+
+<style>
+/* 文章目录导航 - 参考截图样式 */
+.sidebar-toc {
+  position: sticky;
+  top: 2rem;
+  width: 200px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.sidebar-toc.hidden {
+  display: none;
+}
+
+/* 目录标题 */
+.toc-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fafbfc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toc-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.toc-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: #6b7280;
+}
+
+.toc-toggle:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.toc-toggle-icon {
+  transition: transform 0.2s ease;
+}
+
+/* 目录内容 */
+.toc-content {
+  padding: 12px 0;
+}
+
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc-item {
+  margin-bottom: 4px;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* 确保所有目录项默认显示 */
+.toc-h1, .toc-h2 {
+  display: block !important;
+}
+
+/* H2标题样式 */
+.toc-h2 {
+  margin-left: 0;
+}
+
+
+.toc-item-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: #374151 !important;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  font-weight: 400;
+}
+
+
+.toc-item-link:hover {
+  background: #f8fafc;
+  color: #1f2937 !important;
+}
+
+.toc-item-link.active {
+  background: #e0f2fe;
+  color: #01579b !important;
+  font-weight: 500;
+}
+
+/* 目录点标记 */
+.toc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-red {
+  background: #ef4444;
+}
+
+.dot-blue {
+  background: #2196f3;
+}
+
+
+/* 目录文字 */
+.toc-item-text {
+  color: #1f2937 !important;
+  font-weight: 400;
+  flex: 1;
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+/* 强制显示目录文字 */
+.toc-item-link .toc-item-text {
+  color: #1f2937 !important;
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 激活状态 */
+.toc-item.active .dot-red {
+  background: #d32f2f;
+}
+
+.toc-item.active .dot-blue {
+  background: #1976d2;
+}
+
+/* 深色模式 */
+[data-theme="dark"] .sidebar-toc {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .toc-header {
+  background: #111827;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .toc-title {
+  color: #f3f4f6 !important;
+}
+
+[data-theme="dark"] .toc-toggle {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .toc-toggle:hover {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+
+[data-theme="dark"] .toc-item-link {
+  color: #e5e7eb !important;
+}
+
+[data-theme="dark"] .toc-item-link:hover {
+  background: #374151;
+  color: #f9fafb !important;
+}
+
+
+[data-theme="dark"] .toc-item-link.active {
+  background: #0d47a1;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .toc-item-text {
+  color: #f9fafb !important;
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 强制显示深色模式目录文字 */
+[data-theme="dark"] .toc-item-link .toc-item-text {
+  color: #f9fafb !important;
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .sidebar-toc {
+    display: none;
+  }
+
+  .post-content-wrapper {
+    grid-template-columns: 1fr !important;
+    padding: 0 1rem !important;
+  }
+}
+</style>
+
+<style>
+/* 文章主布局样式 */
+.post-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 100%;
+}
+
+.post-content-main {
+  min-width: 0;
+}
+
+.post-sidebar {
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+  min-width: 0;
+}
+
+/* 标题头部样式 */
+.post-header-main {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border, #333333);
+}
+
+.post-header-main .post-title {
+  color: var(--primary, #ffffff) !important;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.post-header-main .post-description {
+  color: var(--secondary, #cccccc) !important;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.post-header-main .post-meta {
+  margin-bottom: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .post-content-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    padding: 0 1rem !important;
+  }
+
+  .post-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-header-main .post-title {
+    font-size: 2rem;
+  }
+
+  .post-header-main .post-description {
+    font-size: 1rem;
+  }
+}
+</style>
+{{- end }}

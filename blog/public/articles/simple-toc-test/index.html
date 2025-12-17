@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto" data-theme="auto">
+
+<head><script src="///blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=//blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>简化目录导航测试 | 技术博客 - 有条工具</title>
+<meta name="keywords" content="测试, 目录">
+<meta name="description" content="测试简化的目录导航功能">
+<meta name="author" content="util.cn Team">
+<link rel="canonical" href="//localhost:1313///blog/articles/simple-toc-test/">
+<link crossorigin="anonymous" href="///blog/assets/css/stylesheet.7e8505b7cdf8bb22ab2305e53c2700bb06c7e64faeb72cd3468823a9a3bd3d6e.css" integrity="sha256-foUFt834uyKrIwXlPCcAuwbH5k&#43;utyzTRogjqaO9PW4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="//localhost:1313///blog/articles/simple-toc-test/feed.xml" title="rss">
+<link rel="alternate" hreflang="zh-cn" href="//localhost:1313///blog/articles/simple-toc-test/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="stylesheet" href="/blog/css/custom.css" media="screen">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享",
+  "url": "https://www.util.cn/blog/",
+  "description": "有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。提供JSON格式化、SQL优化、Markdown编辑器等在线工具的详细使用指南，帮助开发者提升工作效率。",
+  "publisher": {
+    "@type": "Organization",
+    "name": "有条工具",
+    "url": "https://www.util.cn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.util.cn/blog/logo/logo-256.png",
+      "width": 256,
+      "height": 256
+    }
+  },
+  "potentialAction": [
+    {
+      "@type": "SearchAction",
+      "target": "https://www.util.cn/blog/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  ]
+}
+</script>
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享">
+<meta property="og:description" content="有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。提供JSON格式化、SQL优化、Markdown编辑器等在线工具的详细使用指南，帮助开发者提升工作效率。">
+<meta property="og:url" content="https://www.util.cn/blog/">
+<meta property="og:site_name" content="有条工具技术博客">
+<meta property="og:image" content="https://www.util.cn/blog/logo/logo-256.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享">
+<meta name="twitter:description" content="有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。">
+<meta name="twitter:image" content="https://www.util.cn/blog/logo/logo-256.png">
+
+
+<meta name="baidu-site-verification" content="">
+
+
+<meta name="category" content="技术博客,开发者工具,编程教程">
+<meta name="coverage" content="Worldwide">
+<meta name="distribution" content="Global">
+<meta name="rating" content="General">
+
+
+<script charset="UTF-8" id="51la_code" async crossorigin="anonymous" src="https://sdk.51.la/js-sdk-pro.min.js?id=3OM52V0xJAPv6ozF&hash=pro"></script>
+
+
+<script>
+
+window.addEventListener('load', function() {
+    
+    setTimeout(function() {
+        if (typeof la != 'undefined') {
+            console.log('51la统计已加载');
+        } else {
+            console.warn('51la统计加载失败，使用备用方案');
+            
+            (function() {
+                var script = document.createElement('script');
+                script.src = 'https://sdk.51.la/js-sdk-pro.min.js?id=3OM52V0xJAPv6ozF&hash=backup';
+                script.async = true;
+                document.head.appendChild(script);
+            })();
+        }
+    }, 3000);
+});
+</script><meta property="og:url" content="//localhost:1313///blog/articles/simple-toc-test/">
+  <meta property="og:site_name" content="技术博客 - 有条工具">
+  <meta property="og:title" content="简化目录导航测试">
+  <meta property="og:description" content="测试简化的目录导航功能">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-16T16:00:00+08:00">
+    <meta property="article:modified_time" content="2025-12-16T16:00:00+08:00">
+    <meta property="article:tag" content="测试">
+    <meta property="article:tag" content="目录">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="简化目录导航测试">
+<meta name="twitter:description" content="测试简化的目录导航功能">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "所有文章",
+      "item": "//localhost:1313///blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "简化目录导航测试",
+      "item": "//localhost:1313///blog/articles/simple-toc-test/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "简化目录导航测试",
+  "name": "简化目录导航测试",
+  "description": "测试简化的目录导航功能",
+  "keywords": [
+    "测试", "目录"
+  ],
+  "articleBody": "第一个主要标题 这里是第一个主要标题的内容，用来测试H1标题的显示。\n第一个二级标题 这是第一个H2标题的内容，应该显示在目录中，没有展开按钮，没有圆点标记。\n这个三级标题不会显示在目录中 这是一个H3标题，但不会显示在简化后的目录中。\n第二个二级标题 这是第二个H2标题的内容，用来测试多个H2标题的显示效果。\n第二个主要标题 第二个主要标题，测试多个H1标题的情况。\n第三个二级标题 这是第三个H2标题，应该正常显示在目录中。\n第四个二级标题 第四个H2标题，确保所有H2标题都能正确显示。\n",
+  "wordCount" : "14",
+  "inLanguage": "zh-cn",
+  "datePublished": "2025-12-16T16:00:00+08:00",
+  "dateModified": "2025-12-16T16:00:00+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "util.cn Team"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "//localhost:1313///blog/articles/simple-toc-test/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "技术博客 - 有条工具",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "//localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/blog/" accesskey="h" title="技术博客 - 有条工具 (Alt + H)">技术博客 - 有条工具</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="//localhost:1313/blog/posts/" title="所有文章列表 - 有条工具技术博客：查看所有技术文章和教程内容">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.util.cn" title="有条工具 - 开发者的常用工具集合：无广告 · 本地计算 · 即开即用的在线工具平台，提供JSON格式化、SQL格式化、Markdown编辑器等实用工具">
+                    <span>有条工具</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/blog/categories/" title="文章分类 - 有条工具技术博客：按技术领域分类的优质文章，包括前端开发、工具使用、编程技巧等">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/blog/tags/" title="标签云 - 有条工具技术博客：通过标签快速找到感兴趣的技术文章和教程内容">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/blog/archives/" title="文章归档 - 有条工具技术博客：按时间查看历史文章">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/blog/search/" title="搜索文章 - 有条工具技术博客：通过关键词搜索找到感兴趣的技术文章和教程内容，支持标题、内容、分类和标签搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+  </header><main class="main">
+
+<article class="post-single">
+   
+
+  
+  <div class="post-content-wrapper">
+    
+    <main class="post-content-main">
+      <header class="post-header-main">
+        
+        <h1 class="post-title entry-hint-parent">
+          简化目录导航测试
+        </h1>
+        <div class="post-meta">
+
+
+
+
+
+
+<div class="post-meta-content"><div class="post-categories-inline"><a href="//localhost:1313///blog/categories/%E6%B5%8B%E8%AF%95/" class="category-link">测试</a></div><span class='post-date'>2025-12-16</span><span class='post-author'>util.cn Team</span></div>
+
+<style>
+.post-meta-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+  font-size: 0.875rem;
+  color: #9ca3af !important;  
+}
+
+.post-categories-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e5e7eb !important;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0;  
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.category-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.category-link::before {
+  content: '📁';
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+.post-date,
+.post-reading-time,
+.post-word-count,
+.post-author {
+  color: #9ca3af !important;
+}
+
+ 
+[data-theme="dark"] .post-meta-content {
+  color: #9ca3af !important;  
+}
+
+[data-theme="dark"] .category-link {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e5e7eb !important;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .category-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .post-date,
+[data-theme="dark"] .post-reading-time,
+[data-theme="dark"] .post-word-count,
+[data-theme="dark"] .post-author {
+  color: #9ca3af !important;
+}
+
+ 
+[data-theme="light"] .post-meta-content {
+  color: #6c757d !important;  
+}
+
+[data-theme="light"] .category-link {
+  background: rgba(0, 0, 0, 0.05);
+  color: #495057 !important;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .category-link:hover {
+  background: rgba(0, 102, 204, 0.1);
+  color: #212529 !important;
+  border-color: rgba(0, 102, 204, 0.3);
+}
+
+[data-theme="light"] .post-date,
+[data-theme="light"] .post-reading-time,
+[data-theme="light"] .post-word-count,
+[data-theme="light"] .post-author {
+  color: #6c757d !important;
+}
+
+ 
+@media (max-width: 768px) {
+  .post-meta-content {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .category-link {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}
+</style>
+
+</div>
+      </header>
+      <div class="post-content"><h1 id="第一个主要标题">第一个主要标题<a hidden class="anchor" aria-hidden="true" href="#第一个主要标题">#</a></h1>
+<p>这里是第一个主要标题的内容，用来测试H1标题的显示。</p>
+<h2 id="第一个二级标题">第一个二级标题<a hidden class="anchor" aria-hidden="true" href="#第一个二级标题">#</a></h2>
+<p>这是第一个H2标题的内容，应该显示在目录中，没有展开按钮，没有圆点标记。</p>
+<h3 id="这个三级标题不会显示在目录中">这个三级标题不会显示在目录中<a hidden class="anchor" aria-hidden="true" href="#这个三级标题不会显示在目录中">#</a></h3>
+<p>这是一个H3标题，但不会显示在简化后的目录中。</p>
+<h2 id="第二个二级标题">第二个二级标题<a hidden class="anchor" aria-hidden="true" href="#第二个二级标题">#</a></h2>
+<p>这是第二个H2标题的内容，用来测试多个H2标题的显示效果。</p>
+<h1 id="第二个主要标题">第二个主要标题<a hidden class="anchor" aria-hidden="true" href="#第二个主要标题">#</a></h1>
+<p>第二个主要标题，测试多个H1标题的情况。</p>
+<h2 id="第三个二级标题">第三个二级标题<a hidden class="anchor" aria-hidden="true" href="#第三个二级标题">#</a></h2>
+<p>这是第三个H2标题，应该正常显示在目录中。</p>
+<h2 id="第四个二级标题">第四个二级标题<a hidden class="anchor" aria-hidden="true" href="#第四个二级标题">#</a></h2>
+<p>第四个H2标题，确保所有H2标题都能正确显示。</p>
+
+
+      </div>
+
+      <footer class="post-footer-modern">
+        
+<div class="post-tags-modern">
+  <span class="tags-label">🏷️ 标签</span>
+  <div class="tags-list">
+    <a href="//localhost:1313///blog/tags/%E6%B5%8B%E8%AF%95/" class="tag-pill">
+      测试
+    </a>
+    <a href="//localhost:1313///blog/tags/%E7%9B%AE%E5%BD%95/" class="tag-pill">
+      目录
+    </a>
+  </div>
+</div>
+
+<style>
+ 
+.post-footer-modern {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border, #333333);
+}
+
+ 
+.post-tags-modern {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tags-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--secondary, #999999) !important;
+  white-space: nowrap;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.tag-pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border, #333333);
+  border-radius: 0;
+  color: var(--secondary, #cccccc) !important;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tag-pill:hover {
+  background: var(--primary, #ffffff);
+  color: var(--background, #000000) !important;
+  border-color: var(--primary, #ffffff);
+  transform: translateY(-1px);
+}
+
+ 
+.post-nav-modern {
+  margin-top: 2rem;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.nav-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border, #333333);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-height: 80px;
+}
+
+.nav-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary, #ffffff);
+  transform: translateY(-2px);
+}
+
+.nav-card.nav-prev {
+  justify-content: flex-start;
+}
+
+.nav-card.nav-next {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.nav-card.nav-next .nav-content {
+  text-align: right;
+}
+
+.nav-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px dashed var(--border, #333333);
+  color: var(--secondary, #666666);
+}
+
+.nav-arrow {
+  font-size: 1.5rem;
+  color: var(--primary, #ffffff);
+  font-weight: 300;
+}
+
+.nav-content {
+  flex: 1;
+}
+
+.nav-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary, #ffffff) !important;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+ 
+[data-theme="light"] .post-footer-modern {
+  border-color: var(--border-light, #dee2e6);
+}
+
+[data-theme="light"] .tags-label {
+  color: var(--secondary-light, #6c757d) !important;
+}
+
+[data-theme="light"] .tag-pill {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--border-light, #dee2e6);
+  color: var(--secondary-light, #495057) !important;
+}
+
+[data-theme="light"] .tag-pill:hover {
+  background: var(--primary-light, #0066cc);
+  color: var(--background-light, #ffffff) !important;
+  border-color: var(--primary-light, #0066cc);
+}
+
+[data-theme="light"] .nav-card {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: var(--border-light, #dee2e6);
+}
+
+[data-theme="light"] .nav-card:hover {
+  background: rgba(0, 102, 204, 0.05);
+  border-color: var(--primary-light, #0066cc);
+}
+
+[data-theme="light"] .nav-empty {
+  background: rgba(0, 0, 0, 0.01);
+  border-color: var(--border-light, #dee2e6);
+  color: var(--secondary-light, #6c757d);
+}
+
+[data-theme="light"] .nav-arrow {
+  color: var(--primary-light, #0066cc);
+}
+
+[data-theme="light"] .nav-title {
+  color: var(--primary-light, #212529) !important;
+}
+
+ 
+@media (max-width: 768px) {
+  .nav-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .nav-card {
+    padding: 1rem;
+    min-height: 70px;
+  }
+
+  .nav-card.nav-next {
+    text-align: left;
+  }
+
+  .nav-card.nav-next .nav-content {
+    text-align: left;
+  }
+
+  .nav-title {
+    font-size: 0.875rem;
+  }
+
+  .post-tags-modern {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-arrow {
+    font-size: 1.25rem;
+  }
+
+  .nav-card {
+    padding: 0.875rem;
+  }
+
+  .nav-title {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 1;
+  }
+}
+</style>
+
+        
+<nav class="post-nav-modern">
+  <div class="nav-grid">
+    <a href="//localhost:1313///blog/articles/css-grid-flexbox-guide/" class="nav-card nav-prev">
+      <div class="nav-arrow">←</div>
+      <div class="nav-content">
+        <div class="nav-title">CSS Grid与Flexbox完全指南：现代布局实战技巧</div>
+      </div>
+    </a>
+    <div class="nav-card nav-empty">
+      <div class="nav-content">
+        <div class="nav-title">已是最后一篇</div>
+      </div>
+    </div>
+  </div>
+</nav>
+      </footer>
+    </main>
+
+    
+    <aside class="post-sidebar">
+<div class="sidebar-toc" id="sidebar-toc">
+  <div class="toc-header">
+    <div class="toc-title">目录</div>
+    <button class="toc-toggle" id="toc-toggle" aria-label="Toggle TOC">
+      <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="toc-content" id="toc-content">
+    <ul class="toc-list">
+        <li class="toc-item toc-h1">
+          <a href="#h1-0" class="toc-item-link">
+            <span class="toc-dot dot-red"></span>
+            <span class="toc-item-text">第一个主要标题</span>
+          </a>
+        </li>
+        <li class="toc-item toc-h1">
+          <a href="#h1-1" class="toc-item-link">
+            <span class="toc-dot dot-red"></span>
+            <span class="toc-item-text">第二个主要标题</span>
+          </a>
+        </li>
+        <li class="toc-item toc-h2">
+          <a href="#h2-0" class="toc-item-link">
+            <span class="toc-item-text">第一个二级标题</span>
+          </a>
+        </li>
+        <li class="toc-item toc-h2">
+          <a href="#h2-1" class="toc-item-link">
+            <span class="toc-item-text">第二个二级标题</span>
+          </a>
+        </li>
+        <li class="toc-item toc-h2">
+          <a href="#h2-2" class="toc-item-link">
+            <span class="toc-item-text">第三个二级标题</span>
+          </a>
+        </li>
+        <li class="toc-item toc-h2">
+          <a href="#h2-3" class="toc-item-link">
+            <span class="toc-item-text">第四个二级标题</span>
+          </a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toc = document.getElementById('sidebar-toc');
+  const tocToggle = document.getElementById('toc-toggle');
+  const tocContent = document.getElementById('toc-content');
+  const tocToggleIcon = tocToggle?.querySelector('.toc-toggle-icon');
+
+  if (!toc) return;
+
+  
+  let isCollapsed = false;
+
+  
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function() {
+      isCollapsed = !isCollapsed;
+
+      if (isCollapsed) {
+        tocContent.style.display = 'none';
+        toc.style.width = 'auto';
+        tocToggleIcon.innerHTML = '<path d="M9 18l6-6-6-6"/>';
+      } else {
+        tocContent.style.display = 'block';
+        toc.style.width = '200px';
+        tocToggleIcon.innerHTML = '<path d="M18 6L6 18M6 6l12 12"/>';
+      }
+    });
+  }
+
+  
+  const content = document.querySelector('.post-content');
+  if (content) {
+    
+    const h1Headers = content.querySelectorAll('h1');
+    h1Headers.forEach((header, index) => {
+      header.id = `h1-${index}`;
+    });
+
+    
+    const h2Headers = content.querySelectorAll('h2');
+    h2Headers.forEach((header, index) => {
+      header.id = `h2-${index}`;
+    });
+  }
+
+  
+  const tocLinks = document.querySelectorAll('.toc-item-link');
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        const headerHeight = document.querySelector('.post-header-main')?.offsetHeight || 0;
+        const offsetTop = targetElement.offsetTop - headerHeight - 20;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+</script>
+
+<style>
+ 
+.sidebar-toc {
+  position: sticky;
+  top: 2rem;
+  width: 200px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.sidebar-toc.hidden {
+  display: none;
+}
+
+ 
+.toc-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fafbfc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toc-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.toc-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: #6b7280;
+}
+
+.toc-toggle:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.toc-toggle-icon {
+  transition: transform 0.2s ease;
+}
+
+ 
+.toc-content {
+  padding: 12px 0;
+}
+
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc-item {
+  margin-bottom: 4px;
+  display: block !important;
+  visibility: visible !important;
+}
+
+ 
+.toc-h1, .toc-h2 {
+  display: block !important;
+}
+
+ 
+.toc-h2 {
+  margin-left: 0;
+}
+
+
+.toc-item-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: #374151 !important;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  font-weight: 400;
+}
+
+
+.toc-item-link:hover {
+  background: #f8fafc;
+  color: #1f2937 !important;
+}
+
+.toc-item-link.active {
+  background: #e0f2fe;
+  color: #01579b !important;
+  font-weight: 500;
+}
+
+ 
+.toc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-red {
+  background: #ef4444;
+}
+
+.dot-blue {
+  background: #2196f3;
+}
+
+
+ 
+.toc-item-text {
+  color: #1f2937 !important;
+  font-weight: 400;
+  flex: 1;
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+ 
+.toc-item-link .toc-item-text {
+  color: #1f2937 !important;
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+ 
+.toc-item.active .dot-red {
+  background: #d32f2f;
+}
+
+.toc-item.active .dot-blue {
+  background: #1976d2;
+}
+
+ 
+[data-theme="dark"] .sidebar-toc {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .toc-header {
+  background: #111827;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .toc-title {
+  color: #f3f4f6 !important;
+}
+
+[data-theme="dark"] .toc-toggle {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .toc-toggle:hover {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+
+[data-theme="dark"] .toc-item-link {
+  color: #e5e7eb !important;
+}
+
+[data-theme="dark"] .toc-item-link:hover {
+  background: #374151;
+  color: #f9fafb !important;
+}
+
+
+[data-theme="dark"] .toc-item-link.active {
+  background: #0d47a1;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .toc-item-text {
+  color: #f9fafb !important;
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+ 
+[data-theme="dark"] .toc-item-link .toc-item-text {
+  color: #f9fafb !important;
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+ 
+@media (max-width: 1024px) {
+  .sidebar-toc {
+    display: none;
+  }
+
+  .post-content-wrapper {
+    grid-template-columns: 1fr !important;
+    padding: 0 1rem !important;
+  }
+}
+</style>
+
+<style>
+ 
+.post-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 100%;
+}
+
+.post-content-main {
+  min-width: 0;
+}
+
+.post-sidebar {
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+  min-width: 0;
+}
+
+ 
+.post-header-main {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border, #333333);
+}
+
+.post-header-main .post-title {
+  color: var(--primary, #ffffff) !important;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.post-header-main .post-description {
+  color: var(--secondary, #cccccc) !important;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.post-header-main .post-meta {
+  margin-bottom: 0;
+}
+
+ 
+@media (max-width: 1024px) {
+  .post-content-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    padding: 0 1rem !important;
+  }
+
+  .post-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-header-main .post-title {
+    font-size: 2rem;
+  }
+
+  .post-header-main .post-description {
+    font-size: 1rem;
+  }
+}
+</style>
+    </aside>
+  </div>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>© 2024-2025 有条工具技术博客</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

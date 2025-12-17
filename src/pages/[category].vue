@@ -19,13 +19,18 @@ const categoryMap = {
   'ai': () => import('~/pages/category/ai/index.vue'),
   'all': () => import('~/pages/category/all/index.vue'),
   'crypto': () => import('~/pages/category/crypto/index.vue'),
+  'data': () => import('~/pages/category/data/index.vue'),
+  'design': () => import('~/pages/category/design/index.vue'),
   'dev': () => import('~/pages/category/dev/index.vue'),
   'encode': () => import('~/pages/category/encode/index.vue'),
   'format': () => import('~/pages/category/format/index.vue'),
   'image': () => import('~/pages/category/image/index.vue'),
   'network': () => import('~/pages/category/network/index.vue'),
+  'productivity': () => import('~/pages/category/productivity/index.vue'),
+  'security': () => import('~/pages/category/security/index.vue'),
   'text': () => import('~/pages/category/text/index.vue'),
-  'time': () => import('~/pages/category/time/index.vue')
+  'time': () => import('~/pages/category/time/index.vue'),
+  'visualization': () => import('~/pages/category/visualization/index.vue')
 }
 
 // 获取对应的分类组件

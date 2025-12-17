@@ -1,27 +1,67 @@
 baseURL = '/blog/'
 languageCode = 'zh-cn'
-title = '有条工具 - 技术博客'
+title = '技术博客 - 有条工具'
 theme = 'PaperMod'
+
+# SEO优化配置
+copyright = '© 2024-2025 有条工具技术博客'
+googleAnalytics = ''
+disqusShortname = ''
+
+# 时间格式
+defaultContentLanguage = 'zh-cn'
+timeFormat = '2006-01-02'
+timeFormatShort = '2006-01-02'
+
+# 启用emoji
+enableEmoji = true
 
 # 生成配置
 publishDir = 'public'
 
+# ==================== 分页配置 ====================
+[pagination]
+  pagerSize = 10              # 每页文章数
+  path = "page"               # 分页路径
+
+# ==================== URL别名配置 ====================
+[permalinks]
+  # 单篇文章 - 使用/articles/路径
+  posts = "/articles/:slug/"
+  articles = "/articles/:slug/"
+
+  # 分类和标签
+  categories = "/categories/:slug/"
+  tags = "/tags/:slug/"
+
+  # 归档页
+  archives = "/archives/:slug/"
+
 # 网站配置
 [params]
   # 网站描述
-  description = '有条工具官方技术博客 - 分享开发经验、工具使用技巧和技术见解'
+  description = '技术博客 - 有条工具：分享开发者工具使用教程、编程技巧和实战开发经验'
   # 关键词
-  keywords = ['开发者工具', '技术博客', '前端开发', '工具分享', '编程技巧']
+  keywords = ['开发者工具', '技术博客', '在线工具', '编程技巧', '前端开发', '工具教程']
   # 作者
   author = 'util.cn Team'
+
+  # 主要内容区域
+  mainSections = ['posts']
 
   # PaperMod 主题配置
   env = "production"
 
+  # 显示文章导航链接
+  ShowPostNavLinks = true
+
+  # 显示分享按钮
+  ShowShareButtons = true
+
   # 主页配置
   [params.homeInfoParams]
-    Title = "欢迎来到有条工具技术博客"
-    Content = "这里是我们团队分享开发经验、技术见解和工具使用技巧的地方。"
+    Title = "开发者工具使用教程 & 编程技巧分享"
+    Content = "分享JSON格式化、SQL优化、Markdown编辑器等开发者工具的详细使用教程和编程技巧，助力开发者提升工作效率。"
 
   # 社交图标配置
   [[params.socialIcons]]
@@ -41,9 +81,9 @@ publishDir = 'public'
   # 深色模式切换
   [params.profileMode]
     enabled = true
-    title = "有条工具 - 技术博客"
-    subtitle = "分享开发经验 · 工具技巧 · 技术见解"
-    imageUrl = "/logo-256.png"
+    title = "技术博客 - 有条工具"
+    subtitle = "开发者工具使用教程 & 编程技巧分享"
+    imageUrl = "/logo/logo-256.png"
     imageTitle = "logo"
     imageWidth = 120
     imageHeight = 120
@@ -51,14 +91,14 @@ publishDir = 'public'
 # 菜单配置
 [menu]
   [[menu.main]]
+    name = '文章'
+    title = '所有文章列表 - 有条工具技术博客：查看所有技术文章和教程内容'
+    url = '/posts/'
+    weight = 10
+  [[menu.main]]
     name = '有条工具'
     title = '有条工具 - 开发者的常用工具集合：无广告 · 本地计算 · 即开即用的在线工具平台，提供JSON格式化、SQL格式化、Markdown编辑器等实用工具'
     url = 'https://www.util.cn'
-    weight = 10
-  [[menu.main]]
-    name = '博客'
-    title = '有条工具 - 技术博客：分享开发经验、工具使用技巧和技术见解，助力开发者提升效率'
-    url = '/'
     weight = 20
   [[menu.main]]
     name = '分类'
@@ -70,6 +110,16 @@ publishDir = 'public'
     title = '标签云 - 有条工具技术博客：通过标签快速找到感兴趣的技术文章和教程内容'
     url = '/tags/'
     weight = 40
+  [[menu.main]]
+    name = '归档'
+    title = '文章归档 - 有条工具技术博客：按时间查看历史文章'
+    url = '/archives/'
+    weight = 50
+  [[menu.main]]
+    name = '搜索'
+    title = '搜索文章 - 有条工具技术博客：通过关键词搜索找到感兴趣的技术文章和教程内容，支持标题、内容、分类和标签搜索'
+    url = '/search/'
+    weight = 60
 
 # 分类
 [taxonomies]

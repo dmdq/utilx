@@ -58,7 +58,7 @@ blog/
     enabled = true
     title = "有条工具 - 技术博客"
     subtitle = "分享开发经验 · 工具技巧 · 技术见解"
-    imageUrl = "/logo-256.png"
+    imageUrl = "/logo/logo-256.png"
 ```
 
 ### 自定义CSS适配

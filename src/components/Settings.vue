@@ -571,12 +571,12 @@ const viewUpdateHistory = () => {
 
 // 打开网站
 const openWebsite = () => {
-  window.open('https://util.cn', '_blank')
+  window.open('https://www.util.cn', '_blank')
 }
 
 // 打开 GitHub
 const openGitHub = () => {
-  window.open('https://github.com/util-cn/utilx', '_blank')
+  window.open('https://github.com/dmdq/utilx', '_blank')
 }
 
 // 初始化

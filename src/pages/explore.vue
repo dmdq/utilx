@@ -151,7 +151,9 @@ const categoriesWithCount = computed(() => {
 
 // 精选工具（热门工具）
 const featuredTools = computed(() => {
-  return tools.filter(tool => tool.hot).slice(0, 8)
+  return tools.filter(tool => tool.hot)
+    .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
+    .slice(0, 8)
 })
 
 // 最近使用的工具

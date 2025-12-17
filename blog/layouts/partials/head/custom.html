@@ -1,0 +1,2 @@
+{{- $customCSS := resources.Get "css/custom.css" -}}
+<link rel="stylesheet" href="{{ $customCSS.RelPermalink }}" integrity="{{ $customCSS.Data.Integrity }}" media="screen">

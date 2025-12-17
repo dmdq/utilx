@@ -1,0 +1,228 @@
+{{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+{{- if $.GetTerms $tags }}
+<div class="post-tags-modern">
+  <span class="tags-label">🏷️ 标签</span>
+  <div class="tags-list">
+    {{- range $.GetTerms $tags }}
+    <a href="{{ .Permalink }}" class="tag-pill">
+      {{ .LinkTitle }}
+    </a>
+    {{- end }}
+  </div>
+</div>
+
+<style>
+/* 现代化底部布局样式 */
+.post-footer-modern {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border, #333333);
+}
+
+/* 标签样式 */
+.post-tags-modern {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tags-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--secondary, #999999) !important;
+  white-space: nowrap;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.tag-pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border, #333333);
+  border-radius: 0;
+  color: var(--secondary, #cccccc) !important;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tag-pill:hover {
+  background: var(--primary, #ffffff);
+  color: var(--background, #000000) !important;
+  border-color: var(--primary, #ffffff);
+  transform: translateY(-1px);
+}
+
+/* 导航样式 */
+.post-nav-modern {
+  margin-top: 2rem;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.nav-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border, #333333);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-height: 80px;
+}
+
+.nav-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary, #ffffff);
+  transform: translateY(-2px);
+}
+
+.nav-card.nav-prev {
+  justify-content: flex-start;
+}
+
+.nav-card.nav-next {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.nav-card.nav-next .nav-content {
+  text-align: right;
+}
+
+.nav-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px dashed var(--border, #333333);
+  color: var(--secondary, #666666);
+}
+
+.nav-arrow {
+  font-size: 1.5rem;
+  color: var(--primary, #ffffff);
+  font-weight: 300;
+}
+
+.nav-content {
+  flex: 1;
+}
+
+.nav-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary, #ffffff) !important;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 浅色模式适配 */
+[data-theme="light"] .post-footer-modern {
+  border-color: var(--border-light, #dee2e6);
+}
+
+[data-theme="light"] .tags-label {
+  color: var(--secondary-light, #6c757d) !important;
+}
+
+[data-theme="light"] .tag-pill {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--border-light, #dee2e6);
+  color: var(--secondary-light, #495057) !important;
+}
+
+[data-theme="light"] .tag-pill:hover {
+  background: var(--primary-light, #0066cc);
+  color: var(--background-light, #ffffff) !important;
+  border-color: var(--primary-light, #0066cc);
+}
+
+[data-theme="light"] .nav-card {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: var(--border-light, #dee2e6);
+}
+
+[data-theme="light"] .nav-card:hover {
+  background: rgba(0, 102, 204, 0.05);
+  border-color: var(--primary-light, #0066cc);
+}
+
+[data-theme="light"] .nav-empty {
+  background: rgba(0, 0, 0, 0.01);
+  border-color: var(--border-light, #dee2e6);
+  color: var(--secondary-light, #6c757d);
+}
+
+[data-theme="light"] .nav-arrow {
+  color: var(--primary-light, #0066cc);
+}
+
+[data-theme="light"] .nav-title {
+  color: var(--primary-light, #212529) !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .nav-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .nav-card {
+    padding: 1rem;
+    min-height: 70px;
+  }
+
+  .nav-card.nav-next {
+    text-align: left;
+  }
+
+  .nav-card.nav-next .nav-content {
+    text-align: left;
+  }
+
+  .nav-title {
+    font-size: 0.875rem;
+  }
+
+  .post-tags-modern {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-arrow {
+    font-size: 1.25rem;
+  }
+
+  .nav-card {
+    padding: 0.875rem;
+  }
+
+  .nav-title {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 1;
+  }
+}
+</style>
+{{- end }}

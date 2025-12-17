@@ -527,7 +527,7 @@ Frontend Interface ← Tauri IPC ← Rust Backend ← HTTP Request ← Update Se
 For questions or suggestions, please contact:
 - Email: support@util.cn
 - Website: https://util.cn
-- GitHub: https://github.com/util-cn/utilx
+- GitHub: https://github.com/dmdq/utilx
 
 ---
 

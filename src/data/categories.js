@@ -54,5 +54,40 @@ export const categories = [
     icon: 'Code',
     description: 'Mock数据、API文档、代码生成等工具',
     color: 'red'
+  },
+  {
+    id: 'design',
+    name: '设计工具',
+    icon: 'LayoutGrid',
+    description: 'CSS布局、颜色、SVG编辑等设计工具',
+    color: 'indigo'
+  },
+  {
+    id: 'data',
+    name: '数据处理',
+    icon: 'Database',
+    description: '数据采样、分析、可视化工具',
+    color: 'teal'
+  },
+  {
+    id: 'security',
+    name: '安全工具',
+    icon: 'Shield',
+    description: '数据脱敏、隐私保护、安全检测工具',
+    color: 'emerald'
+  },
+  {
+    id: 'visualization',
+    name: '可视化工具',
+    icon: 'BarChart',
+    description: '数据结构、算法、流程可视化工具',
+    color: 'violet'
+  },
+  {
+    id: 'productivity',
+    name: '效率工具',
+    icon: 'Zap',
+    description: '剪贴板管理、效率提升工具',
+    color: 'amber'
   }
 ]
