@@ -1,0 +1,645 @@
+<template>
+  <div class="max-w-8xl mx-auto">
+    <!-- 工具标题 -->
+    <div class="mt-4 mb-8">
+      <h1 class="text-3xl font-bold mb-3">理财收益计算器</h1>
+      <p class="text-muted-foreground">计算各类理财产品收益，支持定期存款、基金、债券、股票等多种投资方式的收益计算和风险评估</p>
+    </div>
+
+    <!-- 主要功能区域 -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- 左侧：参数输入 -->
+      <div class="lg:col-span-1 space-y-4">
+        <!-- 投资类型选择 -->
+        <div class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">投资类型</h2>
+          <div class="space-y-2">
+            <button
+              v-for="type in investmentTypes"
+              :key="type.id"
+              @click="formData.investmentType = type.id"
+              :class="[
+                'w-full p-3 rounded-lg border transition-all text-left',
+                formData.investmentType === type.id
+                  ? 'border-primary bg-primary/5 text-primary'
+                  : 'border-border hover:border-primary'
+              ]"
+            >
+              <div class="font-medium">{{ type.name }}</div>
+              <div class="text-sm text-muted-foreground">{{ type.description }}</div>
+            </button>
+          </div>
+        </div>
+
+        <!-- 基础参数 -->
+        <div class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">基础参数</h2>
+
+          <div class="space-y-4">
+            <!-- 投资本金 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">投资本金（元）</label>
+              <input
+                v-model.number="formData.principal"
+                @input="calculateInvestment"
+                type="number"
+                min="0"
+                step="1000"
+                placeholder="100000"
+                class="w-full px-3 py-2 border rounded-md"
+              >
+              <div class="mt-1 text-xs text-muted-foreground">
+                约 {{ formatCurrency(formData.principal) }}
+              </div>
+            </div>
+
+            <!-- 投资期限 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">投资期限</label>
+              <div class="flex gap-2">
+                <input
+                  v-model.number="formData.term"
+                  @input="calculateInvestment"
+                  type="number"
+                  min="1"
+                  placeholder="12"
+                  class="flex-1 px-3 py-2 border rounded-md"
+                >
+                <select v-model="formData.termUnit" class="px-3 py-2 border rounded-md">
+                  <option value="months">月</option>
+                  <option value="years">年</option>
+                </select>
+              </div>
+              <div class="mt-1 text-xs text-muted-foreground">
+                总计 {{ totalMonths }} 期
+              </div>
+            </div>
+
+            <!-- 预期年化收益率 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">预期年化收益率（%）</label>
+              <div class="flex gap-2">
+                <input
+                  v-model.number="formData.rate"
+                  @input="calculateInvestment"
+                  type="number"
+                  min="0"
+                  max="30"
+                  step="0.1"
+                  placeholder="4.5"
+                  class="flex-1 px-3 py-2 border rounded-md"
+                >
+                <span class="px-3 py-2 bg-muted rounded-md">%</span>
+              </div>
+              <!-- 收益率快捷选择 -->
+              <div class="mt-2 grid grid-cols-3 gap-1">
+                <button
+                  v-for="rate in [2, 3, 4, 5, 6, 8]"
+                  :key="rate"
+                  @click="formData.rate = rate; calculateInvestment()"
+                  class="px-2 py-1 text-xs bg-secondary hover:bg-secondary/80 rounded"
+                >
+                  {{ rate }}%
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 高级设置 -->
+        <div class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">高级设置</h2>
+
+          <div class="space-y-4">
+            <!-- 定期定投 -->
+            <div class="flex items-center space-x-2">
+              <input
+                id="regularInvestment"
+                v-model="formData.regularInvestment"
+                type="checkbox"
+                class="rounded"
+                @change="calculateInvestment"
+              >
+              <label for="regularInvestment" class="text-sm font-medium">定期定投</label>
+            </div>
+
+            <div v-if="formData.regularInvestment" class="pl-6 space-y-3">
+              <div>
+                <label class="block text-sm font-medium mb-2">每月定投金额（元）</label>
+                <input
+                  v-model.number="formData.monthlyAmount"
+                  @input="calculateInvestment"
+                  type="number"
+                  min="0"
+                  step="100"
+                  placeholder="5000"
+                  class="w-full px-3 py-2 border rounded-md"
+                >
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">每月定投日期</label>
+                <input
+                  v-model.number="formData.investDay"
+                  @input="calculateInvestment"
+                  type="number"
+                  min="1"
+                  max="28"
+                  placeholder="15"
+                  class="w-full px-3 py-2 border rounded-md"
+                >
+              </div>
+            </div>
+
+            <!-- 复利计算 -->
+            <div class="flex items-center space-x-2">
+              <input
+                id="compoundInterest"
+                v-model="formData.compoundInterest"
+                type="checkbox"
+                class="rounded"
+                checked
+                @change="calculateInvestment"
+              >
+              <label for="compoundInterest" class="text-sm font-medium">复利计算</label>
+            </div>
+
+            <div v-if="formData.compoundInterest" class="pl-6">
+              <label class="block text-sm font-medium mb-2">复利频率</label>
+              <select v-model="formData.compoundFrequency" @change="calculateInvestment" class="w-full px-3 py-2 border rounded-md">
+                <option value="annually">年复利</option>
+                <option value="semiannually">半年复利</option>
+                <option value="quarterly">季度复利</option>
+                <option value="monthly">月复利</option>
+                <option value="daily">日复利</option>
+              </select>
+            </div>
+
+            <!-- 税费设置 -->
+            <div class="flex items-center space-x-2">
+              <input
+                id="includeTax"
+                v-model="formData.includeTax"
+                type="checkbox"
+                class="rounded"
+                @change="calculateInvestment"
+              >
+              <label for="includeTax" class="text-sm font-medium">考虑税费</label>
+            </div>
+
+            <div v-if="formData.includeTax" class="pl-6 space-y-3">
+              <div>
+                <label class="block text-sm font-medium mb-2">收益率税率（%）</label>
+                <input
+                  v-model.number="formData.taxRate"
+                  @input="calculateInvestment"
+                  type="number"
+                  min="0"
+                  max="50"
+                  step="0.1"
+                  placeholder="20"
+                  class="w-full px-3 py-2 border rounded-md"
+                >
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">管理费率（%/年）</label>
+                <input
+                  v-model.number="formData.managementFee"
+                  @input="calculateInvestment"
+                  type="number"
+                  min="0"
+                  max="5"
+                  step="0.01"
+                  placeholder="1.5"
+                  class="w-full px-3 py-2 border rounded-md"
+                >
+              </div>
+            </div>
+
+            <!-- 风险评估 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">风险等级</label>
+              <select v-model="formData.riskLevel" @change="calculateInvestment" class="w-full px-3 py-2 border rounded-md">
+                <option value="low">低风险（保守型）</option>
+                <option value="medium">中等风险（稳健型）</option>
+                <option value="high">高风险（激进型）</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">预期年化波动率（%）</label>
+              <input
+                v-model.number="formData.expectedVolatility"
+                @input="calculateInvestment"
+                type="number"
+                min="0"
+                max="50"
+                step="0.1"
+                placeholder="10"
+                class="w-full px-3 py-2 border rounded-md"
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 计算按钮 -->
+        <button
+          @click="calculateInvestment"
+          class="w-full bg-primary text-primary-foreground py-3 px-6 rounded-md hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+          重新计算
+        </button>
+      </div>
+
+      <!-- 右侧：结果显示 -->
+      <div class="lg:col-span-2 space-y-6">
+        <!-- 核心结果 -->
+        <div v-if="results" class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4 text-green-600">计算结果</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <h3 class="font-medium mb-2">到期总金额</h3>
+              <p class="text-2xl font-bold text-blue-600">
+                {{ formatCurrency(results.totalAmount) }}
+              </p>
+            </div>
+            <div>
+              <h3 class="font-medium mb-2">总收益</h3>
+              <p class="text-2xl font-bold text-green-600">
+                {{ formatCurrency(results.netReturn) }}
+              </p>
+            </div>
+            <div>
+              <h3 class="font-medium mb-2">收益率</h3>
+              <p class="text-2xl font-bold text-purple-600">
+                {{ results.returnRate.toFixed(2) }}%
+              </p>
+            </div>
+          </div>
+
+          <!-- 收益详情 -->
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div class="space-y-2">
+              <h4 class="font-medium">投资明细</h4>
+              <div class="space-y-1">
+                <div class="flex justify-between">
+                  <span>本金：</span>
+                  <span>{{ formatCurrency(totalPrincipal) }}</span>
+                </div>
+                <div v-if="formData.regularInvestment" class="flex justify-between">
+                  <span>定投总额：</span>
+                  <span>{{ formatCurrency(results.totalRegularInvestment) }}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>基础收益：</span>
+                  <span>{{ formatCurrency(results.baseReturn) }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <h4 class="font-medium">费用扣除</h4>
+              <div class="space-y-1">
+                <div v-if="formData.includeTax" class="flex justify-between">
+                  <span>税费支出：</span>
+                  <span class="text-red-600">-{{ formatCurrency(results.totalTax) }}</span>
+                </div>
+                <div v-if="formData.includeTax" class="flex justify-between">
+                  <span>管理费用：</span>
+                  <span class="text-red-600">-{{ formatCurrency(results.managementFeeTotal) }}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>净收益：</span>
+                  <span class="text-green-600 font-medium">{{ formatCurrency(results.netReturn) }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 收益预测表格 -->
+        <div v-if="results" class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">收益预测</h2>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b">
+                  <th class="text-left p-2">时间</th>
+                  <th class="text-right p-2">本金</th>
+                  <th class="text-right p-2">收益</th>
+                  <th class="text-right p-2">总额</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(item, index) in results.projection" :key="index" class="border-b">
+                  <td class="p-2">{{ item.period }}</td>
+                  <td class="text-right p-2">{{ formatCurrency(item.principal) }}</td>
+                  <td class="text-right p-2 text-green-600">{{ formatCurrency(item.return) }}</td>
+                  <td class="text-right p-2 font-semibold">{{ formatCurrency(item.total) }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 风险分析 -->
+        <div v-if="results && formData.expectedVolatility" class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">风险分析</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="text-center p-3 bg-gray-50 rounded-lg">
+              <div class="text-lg font-bold text-gray-700">
+                {{ formatCurrency(results.optimisticReturn) }}
+              </div>
+              <div class="text-xs text-muted-foreground">乐观收益（+1σ）</div>
+            </div>
+            <div class="text-center p-3 bg-blue-50 rounded-lg">
+              <div class="text-lg font-bold text-blue-700">
+                {{ formatCurrency(results.totalAmount) }}
+              </div>
+              <div class="text-xs text-muted-foreground">期望收益</div>
+            </div>
+            <div class="text-center p-3 bg-red-50 rounded-lg">
+              <div class="text-lg font-bold text-red-700">
+                {{ formatCurrency(results.pessimisticReturn) }}
+              </div>
+              <div class="text-xs text-muted-foreground">悲观收益（-1σ）</div>
+            </div>
+          </div>
+
+          <div class="mt-4 text-sm text-muted-foreground space-y-1">
+            <p>• 投资有风险，入市需谨慎</p>
+            <p>• 过往业绩不代表未来表现</p>
+            <p>• 请根据自身风险承受能力选择合适的投资产品</p>
+            <p>• 建议分散投资，降低单一产品风险</p>
+          </div>
+        </div>
+
+        <!-- 投资建议 -->
+        <div v-if="results" class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">投资建议</h2>
+
+          <div class="text-sm text-muted-foreground space-y-2">
+            <p v-for="(suggestion, index) in investmentSuggestions" :key="index">
+              • {{ suggestion }}
+            </p>
+          </div>
+        </div>
+
+        <!-- 相关工具 -->
+        <div class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">相关工具推荐</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              v-for="tool in relatedTools"
+              :key="tool.id"
+              @click="navigateTo(`/tools/${tool.id}/`)"
+              class="border rounded-lg p-4 hover:bg-accent cursor-pointer transition-colors"
+            >
+              <div class="font-medium">{{ tool.name }}</div>
+              <div class="text-sm text-muted-foreground mt-1">{{ tool.description }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, computed } from 'vue'
+
+definePageMeta({
+  layout: 'default'
+})
+
+const formData = ref({
+  investmentType: 'fund',
+  principal: 100000,
+  term: 12,
+  termUnit: 'months',
+  rate: 4.5,
+  regularInvestment: false,
+  monthlyAmount: 5000,
+  investDay: 15,
+  compoundInterest: true,
+  compoundFrequency: 'monthly',
+  includeTax: false,
+  taxRate: 20,
+  managementFee: 1.5,
+  riskLevel: 'medium',
+  expectedVolatility: 10
+})
+
+const results = ref(null)
+
+// 投资类型
+const investmentTypes = [
+  { id: 'deposit', name: '定期存款', description: '银行定期存款，低风险低收益' },
+  { id: 'fund', name: '基金', description: '投资基金，分散风险' },
+  { id: 'bond', name: '债券', description: '政府或企业债券，中等风险' },
+  { id: 'stock', name: '股票', description: '股票投资，高风险高收益' },
+  { id: 'insurance', name: '保险理财', description: '保险理财产品，稳健增值' },
+  { id: 'gold', name: '黄金', description: '黄金投资，抗通胀保值' }
+]
+
+// 计算相关值
+const totalMonths = computed(() => {
+  return formData.value.termUnit === 'years' ? formData.value.term * 12 : formData.value.term
+})
+
+const totalPrincipal = computed(() => {
+  if (formData.value.regularInvestment) {
+    return formData.value.principal + (formData.value.monthlyAmount * totalMonths.value)
+  }
+  return formData.value.principal
+})
+
+// 相关工具推荐
+const relatedTools = computed(() => {
+  const financeTools = [
+    { id: 'loan-calculator', name: '贷款计算器', description: '计算房贷、车贷等月供金额、总利息和还款计划' },
+    { id: 'tax-calculator', name: '税务计算器', description: '计算个人所得税、增值税、企业所得税等税费' },
+    { id: 'retirement-planner', name: '退休储蓄规划器', description: '专业的退休储蓄计算工具，制定退休计划' },
+    { id: 'currency-converter', name: '汇率转换器', description: '150+国家货币实时汇率转换' }
+  ]
+  return financeTools
+})
+
+// 投资建议
+const investmentSuggestions = computed(() => {
+  if (!results.value) return []
+
+  const suggestions = []
+  const type = formData.value.investmentType
+  const risk = formData.value.riskLevel
+
+  if (risk === 'low') {
+    suggestions.push('建议配置国债、定期存款等低风险产品')
+    suggestions.push('可考虑货币基金作为流动性管理工具')
+    suggestions.push('建议保持60%以上的低风险资产配置')
+  } else if (risk === 'medium') {
+    suggestions.push('建议股债平衡配置，分散投资风险')
+    suggestions.push('可配置40-60%的股票型基金')
+    suggestions.push('建议定投指数基金，平滑市场波动')
+  } else {
+    suggestions.push('可适当配置成长型股票和混合基金')
+    suggestions.push('建议设置止盈止损点，控制风险')
+    suggestions.push('建议定期调整投资组合，保持目标配置')
+  }
+
+  if (formData.value.regularInvestment) {
+    suggestions.push('定投策略有助于平滑市场波动，建议长期坚持')
+  }
+
+  if (formData.value.rate > 8) {
+    suggestions.push('收益率较高，请注意相关风险，警惕高收益陷阱')
+  }
+
+  return suggestions
+})
+
+// 格式化货币
+const formatCurrency = (amount) => {
+  if (amount >= 10000) {
+    return `${(amount / 10000).toFixed(1)}万元`
+  }
+  return `${amount.toLocaleString()}元`
+}
+
+// 复利计算
+const calculateCompoundInterest = (principal, rate, periods, frequency = 1) => {
+  if (!formData.value.compoundInterest) {
+    return principal * (1 + rate / 100 * periods)
+  }
+
+  const n = frequency
+  const r = rate / 100
+  const t = periods / n
+
+  return principal * Math.pow(1 + r / n, periods)
+}
+
+// 计算投资收益
+const calculateInvestment = () => {
+  const years = formData.value.termUnit === 'years' ? formData.value.term : formData.value.term / 12
+  const months = formData.value.termUnit === 'years' ? formData.value.term * 12 : formData.value.term
+
+  // 计算复利频率
+  let compoundFrequency = 1
+  switch (formData.value.compoundFrequency) {
+    case 'annually': compoundFrequency = 1; break
+    case 'semiannually': compoundFrequency = 2; break
+    case 'quarterly': compoundFrequency = 4; break
+    case 'monthly': compoundFrequency = 12; break
+    case 'daily': compoundFrequency = 365; break
+  }
+
+  // 基础收益计算
+  let baseAmount = calculateCompoundInterest(
+    formData.value.principal,
+    formData.value.rate,
+    years * compoundFrequency,
+    compoundFrequency
+  )
+
+  // 定投收益计算
+  let totalRegularInvestment = 0
+  let regularInvestmentReturn = 0
+
+  if (formData.value.regularInvestment) {
+    totalRegularInvestment = formData.value.monthlyAmount * months
+    // 简化的定投复利计算
+    const monthlyRate = formData.value.rate / 100 / 12
+    for (let i = 1; i <= months; i++) {
+      const remainingPeriods = months - i + 1
+      regularInvestmentReturn += formData.value.monthlyAmount *
+        Math.pow(1 + monthlyRate, remainingPeriods / 12 * compoundFrequency) -
+        formData.value.monthlyAmount
+    }
+    baseAmount += totalRegularInvestment + regularInvestmentReturn
+  }
+
+  const baseReturn = baseAmount - formData.value.principal - totalRegularInvestment
+
+  // 税费计算
+  let totalTax = 0
+  let managementFeeTotal = 0
+
+  if (formData.value.includeTax) {
+    totalTax = baseReturn * (formData.value.taxRate / 100)
+    managementFeeTotal = baseAmount * (formData.value.managementFee / 100) * years
+  }
+
+  const netReturn = baseReturn - totalTax - managementFeeTotal
+  const totalAmount = formData.value.principal + totalRegularInvestment + netReturn
+  const returnRate = (netReturn / (formData.value.principal + totalRegularInvestment)) * 100
+
+  // 生成预测数据
+  const projection = generateProjection(years, compoundFrequency)
+
+  // 风险分析
+  let optimisticReturn = totalAmount
+  let pessimisticReturn = totalAmount
+
+  if (formData.value.expectedVolatility) {
+    const volatility = formData.value.expectedVolatility / 100
+    optimisticReturn = totalAmount * (1 + volatility * Math.sqrt(years))
+    pessimisticReturn = totalAmount * (1 - volatility * Math.sqrt(years))
+  }
+
+  results.value = {
+    totalAmount,
+    baseReturn,
+    totalTax,
+    managementFeeTotal,
+    netReturn,
+    totalRegularInvestment,
+    returnRate,
+    projection,
+    optimisticReturn,
+    pessimisticReturn
+  }
+}
+
+// 生成预测数据
+const generateProjection = (years, frequency) => {
+  const projection = []
+  const periods = Math.min(years, 5) // 最多显示5年
+  const compoundFrequency = frequency
+
+  for (let i = 1; i <= periods; i++) {
+    const periodYears = i
+    let principal = formData.value.principal
+    let totalRegularInvestment = 0
+
+    if (formData.value.regularInvestment) {
+      totalRegularInvestment = formData.value.monthlyAmount * 12 * periodYears
+      principal += totalRegularInvestment
+    }
+
+    const amount = calculateCompoundInterest(
+      formData.value.principal + (formData.value.regularInvestment ? totalRegularInvestment * 0.5 : 0),
+      formData.value.rate,
+      periodYears * compoundFrequency,
+      compoundFrequency
+    )
+
+    projection.push({
+      period: formData.value.termUnit === 'years' ? `第${i}年` : `第${i * 12}个月`,
+      principal: principal,
+      return: amount - principal,
+      total: amount
+    })
+  }
+
+  return projection
+}
+
+
+// 初始化计算
+calculateInvestment()
+</script>

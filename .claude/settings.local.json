@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(tree:*)",
+      "Bash(npm run dev)",
+      "Bash(openspec list:*)",
+      "Bash(openspec validate:*)",
+      "Bash(openspec status:*)",
+      "Bash(openspec --help:*)",
+      "Bash(npm install:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(rm -rf .nuxt:*)",
+      "Bash(rm -rf node_modules/.cache:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run tauri:*)",
+      "Bash(npx nuxi generate:*)",
+      "Bash(openspec archive:*)",
+      "Bash(openspec spec list:*)",
+      "Bash(cp -r blog/public/* ../public/blog/:*)",
+      "Bash(npm run blog:build:*)",
+      "Bash(npm run start:*)",
+      "Bash(npm run generate:*)",
+      "Bash(node:*)",
+      "Bash(openspec show:*)",
+      "Bash(taskkill:*)",
+      "Bash(nul)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

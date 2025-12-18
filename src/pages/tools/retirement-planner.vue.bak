@@ -1,0 +1,542 @@
+<template>
+  <div class="max-w-8xl mx-auto">
+    <!-- 工具标题 -->
+    <div class="mt-4 mb-8">
+      <h1 class="text-3xl font-bold mb-3">退休储蓄规划器</h1>
+      <p class="text-muted-foreground">专业的退休储蓄计算工具，帮助您制定合理的退休储蓄计划，考虑通胀率和多种收入来源，确保财务自由</p>
+    </div>
+
+    <!-- 主要功能区域 -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- 左侧：参数输入 -->
+      <div class="lg:col-span-1 space-y-4">
+        <!-- 基本信息 -->
+        <div class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">基本信息</h2>
+
+          <div class="space-y-4">
+            <!-- 当前年龄 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">当前年龄</label>
+              <input
+                v-model.number="formData.currentAge"
+                @input="calculateRetirement"
+                type="number"
+                min="18"
+                max="100"
+                placeholder="25"
+                class="w-full px-3 py-2 border rounded-md"
+              >
+              <div class="mt-1 text-xs text-muted-foreground">
+                建议范围：18-65岁
+              </div>
+            </div>
+
+            <!-- 退休年龄 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">退休年龄</label>
+              <input
+                v-model.number="formData.retirementAge"
+                @input="calculateRetirement"
+                type="number"
+                min="50"
+                max="100"
+                placeholder="60"
+                class="w-full px-3 py-2 border rounded-md"
+              >
+              <div class="mt-1 text-xs text-muted-foreground">
+                工作年限：{{ workingYears }}年
+              </div>
+            </div>
+
+            <!-- 预期寿命 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">预期寿命</label>
+              <input
+                v-model.number="formData.lifeExpectancy"
+                @input="calculateRetirement"
+                type="number"
+                min="70"
+                max="120"
+                placeholder="85"
+                class="w-full px-3 py-2 border rounded-md"
+              >
+              <div class="mt-1 text-xs text-muted-foreground">
+                退休生活：{{ retirementYears }}年
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 财务信息 -->
+        <div class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">财务信息</h2>
+
+          <div class="space-y-4">
+            <!-- 当前储蓄 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">当前储蓄总额（元）</label>
+              <input
+                v-model.number="formData.currentSavings"
+                @input="calculateRetirement"
+                type="number"
+                min="0"
+                step="10000"
+                placeholder="100000"
+                class="w-full px-3 py-2 border rounded-md"
+              >
+              <div class="mt-1 text-xs text-muted-foreground">
+                约 {{ formatCurrency(formData.currentSavings) }}
+              </div>
+            </div>
+
+            <!-- 月储蓄金额 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">月储蓄金额（元）</label>
+              <input
+                v-model.number="formData.monthlySavings"
+                @input="calculateRetirement"
+                type="number"
+                min="0"
+                step="500"
+                placeholder="5000"
+                class="w-full px-3 py-2 border rounded-md"
+              >
+              <div class="mt-1 text-xs text-muted-foreground">
+                年储蓄：{{ formatCurrency(formData.monthlySavings * 12) }}
+              </div>
+            </div>
+
+            <!-- 月收入 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">月收入（元）</label>
+              <input
+                v-model.number="formData.monthlyIncome"
+                @input="calculateRetirement"
+                type="number"
+                min="0"
+                step="1000"
+                placeholder="15000"
+                class="w-full px-3 py-2 border rounded-md"
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 投资设置 -->
+        <div class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">投资与通胀</h2>
+
+          <div class="space-y-4">
+            <!-- 预期年化收益率 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">预期年化收益率（%）</label>
+              <div class="flex gap-2">
+                <input
+                  v-model.number="formData.expectedReturn"
+                  @input="calculateRetirement"
+                  type="number"
+                  min="0"
+                  max="30"
+                  step="0.1"
+                  placeholder="6"
+                  class="flex-1 px-3 py-2 border rounded-md"
+                >
+                <span class="px-3 py-2 bg-muted rounded-md">%</span>
+              </div>
+              <!-- 收益率快捷选择 -->
+              <div class="mt-2 grid grid-cols-3 gap-1">
+                <button
+                  v-for="rate in [3, 5, 8, 10, 12, 15]"
+                  :key="rate"
+                  @click="formData.expectedReturn = rate; calculateRetirement()"
+                  class="px-2 py-1 text-xs bg-secondary hover:bg-secondary/80 rounded"
+                >
+                  {{ rate }}%
+                </button>
+              </div>
+            </div>
+
+            <!-- 年通胀率 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">预期年通胀率（%）</label>
+              <div class="flex gap-2">
+                <input
+                  v-model.number="formData.inflationRate"
+                  @input="calculateRetirement"
+                  type="number"
+                  min="0"
+                  max="10"
+                  step="0.1"
+                  placeholder="3"
+                  class="flex-1 px-3 py-2 border rounded-md"
+                >
+                <span class="px-3 py-2 bg-muted rounded-md">%</span>
+              </div>
+            </div>
+
+            <!-- 退休后收益率 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">退休后年化收益率（%）</label>
+              <div class="flex gap-2">
+                <input
+                  v-model.number="formData.retirementReturn"
+                  @input="calculateRetirement"
+                  type="number"
+                  min="0"
+                  max="15"
+                  step="0.1"
+                  placeholder="4"
+                  class="flex-1 px-3 py-2 border rounded-md"
+                >
+                <span class="px-3 py-2 bg-muted rounded-md">%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 退休目标 -->
+        <div class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">退休目标</h2>
+
+          <div class="space-y-4">
+            <!-- 退休后月收入目标 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">退休后月收入目标（元）</label>
+              <input
+                v-model.number="formData.retirementIncome"
+                @input="calculateRetirement"
+                type="number"
+                min="0"
+                step="1000"
+                placeholder="12000"
+                class="w-full px-3 py-2 border rounded-md"
+              >
+              <div class="mt-1 text-xs text-muted-foreground">
+                年收入目标：{{ formatCurrency(formData.retirementIncome * 12) }}
+              </div>
+            </div>
+
+            <!-- 遗产目标 -->
+            <div>
+              <label class="block text-sm font-medium mb-2">遗产目标（元）</label>
+              <input
+                v-model.number="formData.legacyAmount"
+                @input="calculateRetirement"
+                type="number"
+                min="0"
+                step="50000"
+                placeholder="500000"
+                class="w-full px-3 py-2 border rounded-md"
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 计算按钮 -->
+        <button
+          @click="calculateRetirement"
+          class="w-full bg-primary text-primary-foreground py-3 px-6 rounded-md hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          重新计算
+        </button>
+      </div>
+
+      <!-- 右侧：结果显示 -->
+      <div class="lg:col-span-2 space-y-6">
+        <!-- 核心结果 -->
+        <div v-if="results" class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4 text-green-600">计算结果</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-medium mb-2">退休时总储蓄</h3>
+              <p class="text-2xl font-bold text-blue-600">
+                {{ formatCurrency(results.totalRetirementSavings) }}
+              </p>
+              <p class="text-xs text-muted-foreground mt-1">
+                含投资收益：{{ formatCurrency(results.totalInvestmentReturns) }}
+              </p>
+            </div>
+            <div>
+              <h3 class="font-medium mb-2">退休所需总金额</h3>
+              <p class="text-2xl font-bold text-orange-600">
+                {{ formatCurrency(results.requiredAmount) }}
+              </p>
+              <p class="text-xs text-muted-foreground mt-1">
+                退休后支出 + 遗产目标
+              </p>
+            </div>
+            <div>
+              <h3 class="font-medium mb-2">储蓄缺口</h3>
+              <p :class="results.savingsGap > 0 ? 'text-2xl font-bold text-red-600' : 'text-2xl font-bold text-green-600'">
+                {{ formatCurrency(Math.abs(results.savingsGap)) }}
+              </p>
+              <p class="text-xs text-muted-foreground mt-1">
+                {{ results.savingsGap > 0 ? '资金不足' : '资金充足' }}
+              </p>
+            </div>
+            <div>
+              <h3 class="font-medium mb-2">建议月储蓄</h3>
+              <p class="text-2xl font-bold text-purple-600">
+                {{ formatCurrency(results.recommendedMonthlySavings) }}
+              </p>
+              <p class="text-xs text-muted-foreground mt-1">
+                当前：{{ formatCurrency(formData.monthlySavings) }}
+              </p>
+            </div>
+          </div>
+
+          <!-- 进度指示器 -->
+          <div class="mt-6">
+            <div class="flex justify-between text-sm mb-2">
+              <span>退休目标完成度</span>
+              <span>{{ Math.round((results.totalRetirementSavings / results.requiredAmount) * 100) }}%</span>
+            </div>
+            <div class="w-full bg-muted rounded-full h-2">
+              <div
+                class="h-2 rounded-full"
+                :class="results.savingsGap > 0 ? 'bg-red-500' : 'bg-green-500'"
+                :style="{ width: Math.min((results.totalRetirementSavings / results.requiredAmount) * 100, 100) + '%' }"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 详细分析 -->
+        <div v-if="results" class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">详细分析报告</h2>
+
+          <div class="space-y-6">
+            <!-- 储蓄增长分析 -->
+            <div>
+              <h3 class="font-medium mb-3">储蓄增长分析</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="space-y-1">
+                  <div class="flex justify-between">
+                    <span>当前储蓄：</span>
+                    <span class="font-medium">{{ formatCurrency(formData.currentSavings) }}</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>月储蓄总额：</span>
+                    <span class="font-medium">{{ formatCurrency(formData.monthlySavings * 12 * workingYears) }}</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>投资收益：</span>
+                    <span class="font-medium text-green-600">{{ formatCurrency(results.totalInvestmentReturns) }}</span>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="flex justify-between">
+                    <span>工作年限：</span>
+                    <span class="font-medium">{{ results.workingYears }}年</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>退休生活年限：</span>
+                    <span class="font-medium">{{ results.retirementYears }}年</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>实际年化收益：</span>
+                    <span class="font-medium">{{ (results.actualReturnRate * 100).toFixed(2) }}%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 退休后现金流 -->
+            <div>
+              <h3 class="font-medium mb-3">退休后现金流</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="space-y-1">
+                  <div class="flex justify-between">
+                    <span>退休后年收入：</span>
+                    <span class="font-medium">{{ formatCurrency(results.annualRetirementIncome) }}</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>退休后年支出：</span>
+                    <span class="font-medium">{{ formatCurrency(results.annualRetirementExpenses) }}</span>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="flex justify-between">
+                    <span>每年收支结余：</span>
+                    <span :class="results.annualRetirementSurplus >= 0 ? 'font-medium text-green-600' : 'font-medium text-red-600'">
+                      {{ formatCurrency(Math.abs(results.annualRetirementSurplus)) }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 理财建议 -->
+            <div>
+              <h3 class="font-medium mb-3">理财建议</h3>
+              <div class="text-sm text-muted-foreground space-y-2">
+                <p v-for="(suggestion, index) in suggestions" :key="index">
+                  • {{ suggestion }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 相关工具 -->
+        <div class="bg-card rounded-lg p-6">
+          <h2 class="text-lg font-semibold mb-4">相关工具推荐</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              v-for="tool in relatedTools"
+              :key="tool.id"
+              @click="navigateTo(`/tools/${tool.id}/`)"
+              class="border rounded-lg p-4 hover:bg-accent cursor-pointer transition-colors"
+            >
+              <div class="font-medium">{{ tool.name }}</div>
+              <div class="text-sm text-muted-foreground mt-1">{{ tool.description }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, computed } from 'vue'
+
+definePageMeta({
+  layout: 'default'
+})
+
+const formData = ref({
+  currentAge: 25,
+  retirementAge: 60,
+  lifeExpectancy: 85,
+  currentSavings: 100000,
+  monthlySavings: 5000,
+  monthlyIncome: 15000,
+  expectedReturn: 6,
+  inflationRate: 3,
+  retirementReturn: 4,
+  retirementIncome: 12000,
+  legacyAmount: 500000
+})
+
+const results = ref(null)
+
+// 计算相关值
+const workingYears = computed(() => formData.value.retirementAge - formData.value.currentAge)
+const retirementYears = computed(() => formData.value.lifeExpectancy - formData.value.retirementAge)
+
+// 相关工具推荐
+const relatedTools = computed(() => {
+  const financeTools = [
+    { id: 'loan-calculator', name: '贷款计算器', description: '计算房贷、车贷等月供金额、总利息和还款计划' },
+    { id: 'tax-calculator', name: '税务计算器', description: '计算个人所得税、增值税、企业所得税等税费' },
+    { id: 'roi-calculator', name: '投资回报计算器', description: '计算投资回报率、复合增长率、未来价值预测' },
+    { id: 'currency-converter', name: '汇率转换器', description: '150+国家货币实时汇率转换' }
+  ]
+  return financeTools
+})
+
+// 理财建议
+const suggestions = computed(() => {
+  if (!results.value) return []
+
+  const suggestions = []
+  if (results.value.savingsGap > 0) {
+    suggestions.push(`建议增加月储蓄至 ${formatCurrency(results.value.recommendedMonthlySavings)} 以达到退休目标`)
+    suggestions.push('考虑提高投资收益率以加速财富积累')
+  } else {
+    suggestions.push('当前储蓄计划充足，建议保持并考虑适当增加投资多样性')
+  }
+
+  suggestions.push('建议定投指数基金，分散投资风险')
+  suggestions.push('定期审视和调整退休计划，考虑通胀因素')
+  suggestions.push('考虑购买适当的保险产品，保障退休生活')
+
+  return suggestions
+})
+
+// 格式化货币
+const formatCurrency = (amount) => {
+  if (amount >= 10000) {
+    return `${(amount / 10000).toFixed(1)}万元`
+  }
+  return `${amount.toLocaleString()}元`
+}
+
+// 计算复利
+const calculateCompoundInterest = (principal, monthlyContribution, annualRate, years) => {
+  const monthlyRate = annualRate / 100 / 12
+  const months = years * 12
+
+  let futureValue = principal * Math.pow(1 + monthlyRate, months)
+  futureValue += monthlyContribution * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate)
+
+  return futureValue
+}
+
+// 计算退休储蓄
+const calculateRetirement = () => {
+  const workingYearsValue = workingYears.value
+  const retirementYearsValue = retirementYears.value
+
+  // 计算退休时总储蓄
+  const totalRetirementSavings = calculateCompoundInterest(
+    formData.value.currentSavings,
+    formData.value.monthlySavings,
+    formData.value.expectedReturn,
+    workingYearsValue
+  )
+
+  // 计算退休所需总金额（考虑通胀）
+  const inflationAdjustedExpenses = formData.value.retirementIncome * 12 *
+    Math.pow(1 + formData.value.inflationRate / 100, workingYearsValue)
+
+  const requiredAmount = inflationAdjustedExpenses * retirementYearsValue + formData.value.legacyAmount
+
+  // 计算投资收益
+  const totalContributions = formData.value.currentSavings + (formData.value.monthlySavings * 12 * workingYearsValue)
+  const totalInvestmentReturns = totalRetirementSavings - totalContributions
+
+  // 计算储蓄缺口
+  const savingsGap = requiredAmount - totalRetirementSavings
+
+  // 计算建议月储蓄
+  let recommendedMonthlySavings = formData.value.monthlySavings
+  if (savingsGap > 0) {
+    const monthlyRate = formData.value.expectedReturn / 100 / 12
+    const months = workingYearsValue * 12
+    const futureValueFactor = Math.pow(1 + monthlyRate, months)
+    recommendedMonthlySavings = (requiredAmount - formData.value.currentSavings * futureValueFactor) *
+      monthlyRate / (futureValueFactor - 1)
+  }
+
+  // 计算退休后现金流
+  const annualRetirementIncome = formData.value.retirementIncome * 12
+  const annualRetirementExpenses = formData.value.monthlyExpenses * 12 *
+    Math.pow(1 + formData.value.inflationRate / 100, workingYearsValue)
+  const annualRetirementSurplus = annualRetirementIncome - annualRetirementExpenses
+
+  results.value = {
+    workingYears: workingYearsValue,
+    retirementYears: retirementYearsValue,
+    totalRetirementSavings,
+    requiredAmount,
+    savingsGap,
+    recommendedMonthlySavings,
+    totalInvestmentReturns,
+    annualRetirementIncome,
+    annualRetirementExpenses,
+    annualRetirementSurplus,
+    actualReturnRate: totalInvestmentReturns / totalContributions
+  }
+}
+
+
+// 初始化计算
+calculateRetirement()
+</script>

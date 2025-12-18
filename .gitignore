@@ -149,7 +149,7 @@ Temporary Items
 .nuxt
 .DS_Store
 .output
-.claude
+# .claude
 .vscode
 .env
 

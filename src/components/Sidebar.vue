@@ -143,6 +143,20 @@
               <span :class="{ 'lg:hidden': collapsed }">AI 导航</span>
             </NuxtLink>
 
+            <!-- 标签导航 -->
+            <NuxtLink
+              to="/tags"
+              class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors pl-8"
+              :class="[
+                $route.path.startsWith('/tags') || $route.path.startsWith('/tag/') ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+                { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
+              ]"
+              @click="handleNavClick"
+            >
+              <Tag class="w-4 h-4 text-blue-500" />
+              <span :class="{ 'lg:hidden': collapsed }">标签导航</span>
+            </NuxtLink>
+
             <!-- 站点地图 -->
             <NuxtLink
               to="/sitemap/"
@@ -220,7 +234,7 @@ import {
   Terminal, LayoutGrid, Code2, ShieldCheck, Server, ImageIcon,
   FileJson, Clock, ArrowRight, MessageSquarePlus, FileText, Lock,
   Shield, Type, Wifi, Code, Image, Home, Compass, Sparkles, ChevronRight, Heart, Map, MoreHorizontal,
-  Palette, Database, BarChart, Zap, Calculator, Activity, TrendingUp
+  Palette, Database, BarChart, Zap, Calculator, Activity, TrendingUp, Tag
 } from 'lucide-vue-next'
 import { categories } from '~/data/categories'
 import { useRoute } from 'vue-router'

@@ -70,7 +70,7 @@ export default defineNuxtConfig({
       watch: {
         // 开发环境使用更高效的监听
         usePolling: false,
-        depth: 1,
+        depth: 2,
         // 排除更多文件以减少监听负担
         ignored: [
           '**/node_modules/**',
@@ -87,6 +87,7 @@ export default defineNuxtConfig({
           '**/README*.md',
           '**/docs/**',
           '**/src-tauri/**',
+          '**/*.bak',
           '!**/src-tauri/tauri.conf.json'
         ]
       },
@@ -117,7 +118,7 @@ export default defineNuxtConfig({
         output: {
           manualChunks: {
             vendor: ['vue', 'vue-router'],
-            ui: ['naive-ui', '@vueuse/integrations'],
+            ui: ['@vueuse/integrations'],
             utils: ['crypto-js', 'marked', 'qrcode']
           }
         }
@@ -130,7 +131,6 @@ export default defineNuxtConfig({
       include: [
         'vue',
         'vue-router',
-        'naive-ui',
         'marked',
         'crypto-js',
         'qrcode',
@@ -201,7 +201,29 @@ export default defineNuxtConfig({
   // 配置路由规则
   nitro: {
     prerender: {
-      routes: ['/', '/ai', '/crypto', '/dev', '/encode', '/format', '/image', '/network', '/text', '/time', '/all']
+      routes: [
+        '/',
+        '/all',
+        '/ai',
+        '/calculate',
+        '/crypto',
+        '/data',
+        '/design',
+        '/dev',
+        '/encode',
+        '/finance',
+        '/format',
+        '/health',
+        '/image',
+        '/network',
+        '/productivity',
+        '/random',
+        '/security',
+        '/text',
+        '/time',
+        '/visualization',
+        '/tags'
+      ]
     },
     // 静态资源处理
     publicAssets: [
@@ -210,7 +232,37 @@ export default defineNuxtConfig({
         dir: 'public',
         maxAge: 60 * 60 * 24 * 365
       }
-    ]
+    ],
+    // 开发环境优化
+    compressPublicAssets: !isDev,
+    // 优化构建输出
+    minify: !isDev,
+    // 优化路由缓存
+    routeRules: {
+      '/': { prerender: true },
+      '/all': { prerender: true },
+      '/ai/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/calculate/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/crypto/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/data/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/design/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/dev/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/encode/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/finance/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/format/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/health/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/image/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/network/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/productivity/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/random/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/security/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/text/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/time/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/visualization/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/tags': { prerender: true },
+      '/tags/**': { headers: { 'cache-control': 'public, max-age=3600' } },
+      '/tag/**': { headers: { 'cache-control': 'public, max-age=3600' } }
+    }
   },
   // 添加实验性配置以支持静态文件
   experimental: {
