@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>外链拦截器测试页面</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .test-section {
+      margin: 40px 0;
+      padding: 20px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+    }
+
+    .test-section h2 {
+      margin-top: 0;
+      color: #374151;
+    }
+
+    .link-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .link-item {
+      padding: 15px;
+      background: #f9fafb;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .link-item a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .link-item a:hover {
+      text-decoration: underline;
+    }
+
+    .link-type {
+      background: #e5e7eb;
+      color: #6b7280;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.875rem;
+    }
+
+    .controls {
+      background: #f3f4f6;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+    }
+
+    .btn.secondary {
+      background: #6b7280;
+    }
+
+    .btn.secondary:hover {
+      background: #4b5563;
+    }
+
+    .stats {
+      background: #e0f2fe;
+      border: 1px solid #0891b2;
+      border-radius: 6px;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>外链拦截器测试页面</h1>
+
+  <div class="controls">
+    <h3>控制面板</h3>
+    <button class="btn" onclick="showStats()">显示统计信息</button>
+    <button class="btn secondary" onclick="clearCache()">清除缓存</button>
+    <button class="btn" onclick="toggleInterceptor()">切换拦截器状态</button>
+    <button class="btn secondary" onclick="addInternalDomain()">添加内部域名</button>
+  </div>
+
+  <div class="test-section">
+    <h2>外部链接测试</h2>
+    <p>这些链接应该被拦截器拦截：</p>
+    <div class="link-list">
+      <div class="link-item">
+        <span class="link-type">外部</span>
+        <a href="https://www.google.com" target="_blank">Google</a>
+      </div>
+      <div class="link-item">
+        <span class="link-type">外部</span>
+        <a href="https://github.com" target="_blank">GitHub</a>
+      </div>
+      <div class="link-item">
+        <span class="link-type">外部</span>
+        <a href="https://stackoverflow.com" target="_blank">Stack Overflow</a>
+      </div>
+      <div class="link-item">
+        <span class="link-type">外部</span>
+        <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="test-section">
+    <h2>内部链接测试</h2>
+    <p>这些链接不应该被拦截器拦截：</p>
+    <div class="link-list">
+      <div class="link-item">
+        <span class="link-type">内部</span>
+        <a href="/">首页</a>
+      </div>
+      <div class="link-item">
+        <span class="link-type">内部</span>
+        <a href="/tools">工具页面</a>
+      </div>
+      <div class="link-item">
+        <span class="link-type">内部</span>
+        <a href="/all">所有工具</a>
+      </div>
+      <div class="link-item">
+        <span class="link-type">本地</span>
+        <a href="http://localhost:3000">本地开发服务器</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="test-section">
+    <h2>特殊情况测试</h2>
+    <div class="link-list">
+      <div class="link-item">
+        <span class="link-type">协议</span>
+        <a href="mailto:test@example.com">邮件链接</a>
+      </div>
+      <div class="link-item">
+        <span class="link-type">协议</span>
+        <a href="tel:+1234567890">电话链接</a>
+      </div>
+      <div class="link-item">
+        <span class="link-type">文件</span>
+        <a href="/files/document.pdf">PDF文件</a>
+      </div>
+      <div class="link-item">
+        <span class="link-type">锚点</span>
+        <a href="#top">页面顶部</a>
+      </div>
+      <div class="link-item">
+        <span class="link-type">JavaScript</span>
+        <a href="javascript:void(0)">JavaScript链接</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats" id="stats" style="display: none;">
+    <h3>统计信息</h3>
+    <div id="stats-content"></div>
+  </div>
+
+  <!-- 配置文件 -->
+  <script src="/js/external-link-config.js"></script>
+
+  <!-- 主拦截器脚本 -->
+  <script src="/js/external-link-interceptor.js"></script>
+
+  <script>
+    // 测试控制函数
+    function showStats() {
+      if (window.externalLinkInterceptor) {
+        const stats = window.externalLinkInterceptor.getStats();
+        const statsContent = document.getElementById('stats-content');
+        const statsDiv = document.getElementById('stats');
+
+        statsContent.innerHTML = `
+          <p><strong>拦截器状态:</strong> ${stats.enabled ? '启用' : '禁用'}</p>
+          <p><strong>当前域名:</strong> ${stats.currentDomain}</p>
+          <p><strong>缓存域名数量:</strong> ${stats.cachedDomains}</p>
+          <p><strong>内部域名数量:</strong> ${stats.internalDomains}</p>
+        `;
+
+        statsDiv.style.display = 'block';
+      }
+    }
+
+    function clearCache() {
+      if (window.externalLinkInterceptor) {
+        window.externalLinkInterceptor.clearCache();
+        alert('缓存已清除');
+        showStats();
+      }
+    }
+
+    function toggleInterceptor() {
+      if (window.externalLinkInterceptor) {
+        const currentStatus = window.externalLinkInterceptor.options.enabled;
+        window.externalLinkInterceptor.setEnabled(!currentStatus);
+        alert(`拦截器已${!currentStatus ? '启用' : '禁用'}`);
+        showStats();
+      }
+    }
+
+    function addInternalDomain() {
+      const domain = prompt('请输入要添加的内部域名:');
+      if (domain && window.externalLinkInterceptor) {
+        window.externalLinkInterceptor.addInternalDomain(domain);
+        alert(`已添加内部域名: ${domain}`);
+        showStats();
+      }
+    }
+
+    // 页面加载完成后显示初始统计
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        if (window.externalLinkInterceptor) {
+          console.log('外链拦截器已加载');
+          console.log('统计信息:', window.externalLinkInterceptor.getStats());
+          console.log('调试快捷键: Ctrl+Shift+E 显示调试信息');
+        }
+      }, 1000);
+    });
+
+    // 监听拦截器事件
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a');
+      if (link && window.externalLinkInterceptor) {
+        setTimeout(() => {
+          console.log('点击了链接:', link.href);
+          console.log('是否外部链接:', window.externalLinkInterceptor.isExternalLink(link.href));
+        }, 100);
+      }
+    });
+  </script>
+</body>
+</html>

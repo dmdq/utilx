@@ -1,0 +1,152 @@
+/* 外链拦截器样式 - 可选的自定义样式 */
+
+/* 如果你想覆盖默认样式，可以在这里添加 */
+
+/* 自定义确认页面的背景图片 */
+/*
+#external-link-confirm .confirm-dialog {
+  background-image: url('/images/pattern.jpg');
+  background-size: cover;
+  background-position: center;
+}
+*/
+
+/* 自定义按钮样式 */
+/*
+#external-link-confirm .btn-continue {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#external-link-confirm .btn-continue:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+*/
+
+/* 添加品牌色彩主题 */
+:root {
+  --confirm-primary: #3b82f6;
+  --confirm-primary-hover: #2563eb;
+  --confirm-secondary: #6b7280;
+  --confirm-background: #ffffff;
+  --confirm-text: #1f2937;
+  --confirm-border: #e5e7eb;
+}
+
+/* 深色模式主题 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --confirm-primary: #60a5fa;
+    --confirm-primary-hover: #3b82f6;
+    --confirm-secondary: #9ca3af;
+    --confirm-background: #1f2937;
+    --confirm-text: #f9fafb;
+    --confirm-border: #374151;
+  }
+}
+
+/* 应用主题变量 */
+#external-link-confirm .btn-continue {
+  background: var(--confirm-primary);
+}
+
+#external-link-confirm .btn-continue:hover {
+  background: var(--confirm-primary-hover);
+}
+
+#external-link-confirm .confirm-dialog {
+  background: var(--confirm-background);
+  color: var(--confirm-text);
+}
+
+#external-link-confirm .confirm-header,
+#external-link-confirm .confirm-actions {
+  border-color: var(--confirm-border);
+}
+
+/* 添加平滑过渡效果 */
+#external-link-confirm .confirm-dialog {
+  animation: slideInSmooth 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes slideInSmooth {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 添加脉冲动画到继续按钮 */
+#external-link-confirm .btn-continue:not(:disabled) {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+/* 添加悬浮效果 */
+#external-link-confirm .confirm-dialog {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* 移动端优化 */
+@media (max-width: 480px) {
+  #external-link-confirm .confirm-dialog {
+    margin: 10px;
+    border-radius: 12px;
+  }
+
+  #external-link-confirm .confirm-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #external-link-confirm .btn-cancel,
+  #external-link-confirm .btn-continue {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* 无障碍访问优化 */
+#external-link-confirm .btn-cancel:focus,
+#external-link-confirm .btn-continue:focus,
+#external-link-confirm .checkbox-label:focus-within {
+  outline: 2px solid var(--confirm-primary);
+  outline-offset: 2px;
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+  #external-link-confirm .confirm-dialog {
+    border: 2px solid var(--confirm-text);
+  }
+
+  #external-link-confirm .btn-cancel {
+    border: 2px solid var(--confirm-text);
+  }
+}
+
+/* 减少动画模式支持 */
+@media (prefers-reduced-motion: reduce) {
+  #external-link-confirm .confirm-dialog,
+  #external-link-confirm .btn-cancel,
+  #external-link-confirm .btn-continue {
+    animation: none;
+    transition: none;
+  }
+}

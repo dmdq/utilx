@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spine Player Test</title>
+    <link rel="stylesheet" href="/spine-player/spine-player.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .player-container {
+            width: 100%;
+            height: 400px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            background: #f8f9fa;
+        }
+        .status {
+            padding: 10px;
+            background: #e8f4fd;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .error {
+            background: #ffebee;
+            color: #c62828;
+        }
+        .success {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        .controls button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .controls button:hover {
+            background: #0056b3;
+        }
+        .controls button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spine Player 集成测试</h1>
+
+        <div id="status" class="status">正在加载 Spine Player...</div>
+
+        <div class="player-container" id="player-container"></div>
+
+        <div class="controls">
+            <button id="loadBtn" onclick="loadExampleAnimation()">加载示例动画</button>
+            <button id="clearBtn" onclick="clearAnimation()">清除动画</button>
+        </div>
+    </div>
+
+    <!-- Spine Player -->
+    <script src="/spine-player/spine-player.js"></script>
+    <script>
+        let spinePlayer = null;
+
+        const statusDiv = document.getElementById('status');
+        const playerContainer = document.getElementById('player-container');
+        const loadBtn = document.getElementById('loadBtn');
+        const clearBtn = document.getElementById('clearBtn');
+
+        // Spine resources
+        const SPINE_RESOURCES = {
+            jsonUrl: "http://localhost:3000/spineboy/export/spineboy.json",
+            atlasUrl: "http://localhost:3000/spineboy/export/spineboy.atlas",
+            defaultAnimation: "walk"
+        };
+
+        function updateStatus(message, isError = false) {
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${isError ? 'error' : 'success'}`;
+        }
+
+        function loadExampleAnimation() {
+            try {
+                updateStatus('正在加载 Spine 动画...');
+
+                // 清理之前的实例
+                if (spinePlayer) {
+                    spinePlayer.dispose();
+                    spinePlayer = null;
+                }
+
+                const config = {
+                    jsonUrl: SPINE_RESOURCES.jsonUrl,
+                    atlasUrl: SPINE_RESOURCES.atlasUrl,
+                    animation: SPINE_RESOURCES.defaultAnimation,
+                    backgroundColor: "#f0f4f8",
+                    showControls: true,
+                    success: function(player) {
+                        spinePlayer = player;
+                        updateStatus('Spine 动画加载成功！');
+                        console.log("Spine动画加载成功", player);
+                    },
+                    error: function(message) {
+                        updateStatus(`加载失败: ${message}`, true);
+                        console.error("Spine动画加载失败:", message);
+                    }
+                };
+
+                spinePlayer = new window.SpinePlayer(playerContainer, config);
+
+            } catch (error) {
+                updateStatus(`错误: ${error.message}`, true);
+                console.error('加载动画时出错:', error);
+            }
+        }
+
+        function clearAnimation() {
+            try {
+                if (spinePlayer) {
+                    spinePlayer.dispose();
+                    spinePlayer = null;
+                }
+                playerContainer.innerHTML = '';
+                updateStatus('动画已清除');
+            } catch (error) {
+                updateStatus(`清除动画时出错: ${error.message}`, true);
+            }
+        }
+
+        // 检查 Spine Player 是否已加载
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                if (typeof window.SpinePlayer !== 'undefined') {
+                    updateStatus('Spine Player 库已成功加载，可以开始使用！');
+                    loadBtn.disabled = false;
+                    clearBtn.disabled = false;
+                } else if (window.spine && window.spine.SpinePlayer) {
+                    window.SpinePlayer = window.spine.SpinePlayer;
+                    updateStatus('Spine Player 库已成功加载（通过 window.spine），可以开始使用！');
+                    loadBtn.disabled = false;
+                    clearBtn.disabled = false;
+                } else {
+                    updateStatus('Spine Player 库加载失败', true);
+                    console.error('window.SpinePlayer:', typeof window.SpinePlayer);
+                    console.error('window.spine:', typeof window.spine);
+                }
+            }, 300);
+        });
+    </script>
+</body>
+</html>
