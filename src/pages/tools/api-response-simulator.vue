@@ -365,7 +365,7 @@
             <div class="bg-muted px-3 py-2 text-sm font-medium">
               响应体
             </div>
-            <pre class="p-3 text-sm overflow-x-auto max-h-96 overflow-y-auto bg-white">{{ simulatedResponse || '点击"模拟请求"生成响应数据' }}</pre>
+            <pre class="p-3 text-sm overflow-x-auto max-h-96 overflow-y-auto bg-muted text-foreground">{{ simulatedResponse || '点击"模拟请求"生成响应数据' }}</pre>
           </div>
         </div>
 

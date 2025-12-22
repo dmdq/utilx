@@ -719,5 +719,5 @@ Web 安全是一个持续的过程，需要多层次的保护：
 
 **相关工具：**
 - [OWASP ZAP](https://www.zaproxy.org/) - 安全测试工具
-- [密码生成器](https://www.util.cn/tools/password-generator/)
-- [加密工具](https://www.util.cn/tools/encryption/)
+- [密码生成器](https://www.util.cn/password-generator/)
+- [加密工具](https://www.util.cn/crypto/)

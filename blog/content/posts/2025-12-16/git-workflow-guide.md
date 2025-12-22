@@ -711,8 +711,3 @@ Git是强大的版本控制工具，掌握其核心概念和最佳实践对现�
 记住，Git的学习是一个持续的过程。从基础操作开始，逐步掌握高级功能，根据团队需求选择合适的工作流程，才能充分发挥Git的威力。
 
 ---
-
-**相关工具推荐：**
-- [Git命令速查](https://www.util.cn/tools/git-cheatsheet/)
-- [Git分支可视化工具](https://www.util.cn/tools/git-branch-visualizer/)
-- [Git提交信息生成器](https://www.util.cn/tools/git-commit-generator/)

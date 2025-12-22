@@ -38,8 +38,8 @@
 ## 🎯 现已支持
 
 ### ✅ 完整的Spine功能
-- 真实Pixi.js WebGL渲染
-- 官方spine-webgl运行时
+- 官方Spine Player Web播放器
+- 高性能WebGL渲染
 - 动画播放控制
 - 皮肤切换
 - 多文件格式支持
@@ -72,8 +72,7 @@
 ## 📞 技术细节
 
 ### 已安装的依赖包
-- `pixi.js@8.14.3` - WebGL渲染引擎
-- `@esotericsoftware/spine-webgl@4.2.96` - Spine官方运行时
+- `@esotericsoftware/spine-player@latest` - Spine官方Web播放器
 
 ### 支持的Spine版本
 - ✅ Spine 3.8.x - 4.2.x

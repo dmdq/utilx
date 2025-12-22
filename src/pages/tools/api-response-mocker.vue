@@ -250,10 +250,127 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { FileCode, Settings, History, Database } from 'lucide-vue-next'
-import { useSEO } from '~/composables/useSEO'
+import { tools } from '~/data/tools'
+import { categories } from '~/data/categories'
+import { addRecentTool } from '~/composables/useTools'
 
-setPageTitle('API响应模拟器')
+definePageMeta({
+  layout: 'default'
+})
+
+// SEO配置
+useSeoMeta({
+  title: 'API响应模拟器 - JSON Schema数据生成工具 | Util工具箱',
+  description: '专业的API响应模拟工具，根据JSON Schema自动生成模拟API响应数据，支持多种数据类型和随机生成。完美用于API测试、前端开发和接口调试。',
+  keywords: 'API模拟器,JSON Schema,模拟数据,API测试,Mock数据,接口调试,前端开发,数据生成,RESTful API',
+  author: 'Util工具箱',
+  ogTitle: 'API响应模拟器 - 专业Mock数据生成工具',
+  ogDescription: '根据JSON Schema自动生成模拟API响应数据，支持多种数据类型和随机生成。API开发和测试必备工具。',
+  ogImage: 'https://util.cn/images/tools/api-response-mocker.png',
+  ogUrl: 'https://util.cn/tools/api-response-mocker',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'API响应模拟器 - JSON Schema数据生成',
+  twitterDescription: '专业API响应模拟工具，根据JSON Schema自动生成模拟数据，支持API测试和接口调试。',
+  twitterImage: 'https://util.cn/images/tools/api-response-mocker.png'
+})
+
+// JSON-LD 结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: 'API响应模拟器',
+            description: '专业的API响应模拟工具，根据JSON Schema自动生成模拟API响应数据',
+            url: 'https://util.cn/tools/api-response-mocker',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CNY'
+            },
+            featureList: [
+              'JSON Schema解析',
+              '自动数据生成',
+              '多种数据类型支持',
+              '随机数据生成',
+              '批量数据生成',
+              '中文数据支持',
+              '历史记录管理',
+              '数据统计信息'
+            ]
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: '首页',
+                item: 'https://util.cn'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '工具',
+                item: 'https://util.cn/tools'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'API响应模拟器',
+                item: 'https://util.cn/tools/api-response-mocker'
+              }
+            ]
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '什么是JSON Schema？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'JSON Schema是用于描述JSON数据结构的规范，定义数据类型、格式、约束等。它可以用于数据验证、文档生成和自动数据生成，是API开发中的重要标准。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'API模拟有什么用途？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'API模拟的用途：1）前端开发时模拟后端接口；2）API测试时生成测试数据；3）接口文档的实时演示；4）性能测试的数据准备；5）独立开发时避免依赖后端接口。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '如何使用API响应模拟器？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '使用步骤：1）输入或粘贴JSON Schema；2）配置生成参数（数量、策略等）；3）点击生成按钮；4）查看和复制生成的模拟数据；5）可导出为JSON格式供测试使用。'
+                }
+              }
+            ]
+          }
+        ]
+      })
+    }
+  ]
+})
+
+const router = useRouter()
+
+// 定义当前工具和分类
+const tool = tools.find(t => t.id === 'api-response-mocker')
+const category = categories.find(c => c.id === 'dev')
 
 const schemaInput = ref('')
 const mockDataOutput = ref('')
@@ -567,6 +684,11 @@ const loadFromHistory = (index) => {
 }
 
 onMounted(() => {
+  // 添加到最近使用
+  if (tool) {
+    addRecentTool(tool.id)
+  }
+
   // 加载默认示例
   loadExampleSchema('user')
 })

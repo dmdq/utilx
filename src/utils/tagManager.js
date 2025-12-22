@@ -1,4 +1,5 @@
 import { tools } from '~/data/tools'
+import { getTagInfo, tagDefinitions } from '~/data/tags'
 
 // 标签名称映射表 - 用于中文URL处理
 const tagMappings = {
@@ -93,24 +94,35 @@ class TagManager {
           const cleanTag = tag.trim()
           if (cleanTag.length === 0) return
 
+          // 获取标签定义信息
+          const tagInfo = getTagInfo(cleanTag)
+
+          // 调试：如果标签没有预定义，输出日志
+          if (!tagDefinitions.find(t => t.name === cleanTag) && !tagDefinitions.find(t => t.id === cleanTag)) {
+            console.log(`未预定义的标签: ${cleanTag}`, tagInfo)
+          }
+
           // 添加到标签映射
           if (!tagMap.has(cleanTag)) {
             tagMap.set(cleanTag, {
+              id: cleanTag,
               name: cleanTag,
               displayName: cleanTag,
               urlName: tagMappings[cleanTag] || this.generateUrlName(cleanTag),
               tools: [],
               toolCount: 0,
-              description: this.generateTagDescription(cleanTag),
-              categories: new Set()
+              description: tagInfo.description,
+              icon: tagInfo.icon,
+              categories: new Set(),
+              sort: tagInfo.sort || 999 // 使用预定义的排序，如果没有则使用999
             })
           }
 
-          // 更新标签信息
-          const tagInfo = tagMap.get(cleanTag)
-          tagInfo.tools.push(tool)
-          tagInfo.toolCount++
-          tagInfo.categories.add(tool.category)
+          // 更新标签信息 - 存储完整的工具对象
+          const tagEntry = tagMap.get(cleanTag)
+          tagEntry.tools.push(tool)
+          tagEntry.toolCount++
+          tagEntry.categories.add(tool.category)
         })
       }
     })
@@ -124,7 +136,8 @@ class TagManager {
         popularity: this.calculatePopularity(tag.toolCount, tag.tools)
       }))
       .sort((a, b) => {
-        // 按热度、工具数量、名称排序
+        // 优先按 sort 字段排序，然后按热度、工具数量、名称排序
+        if (a.sort !== b.sort) return a.sort - b.sort
         if (a.hot && !b.hot) return -1
         if (!a.hot && b.hot) return 1
         if (a.toolCount !== b.toolCount) return b.toolCount - a.toolCount
@@ -347,31 +360,24 @@ class TagManager {
 // 创建单例实例
 const tagManager = new TagManager()
 
-// 在客户端和服务端都可用
-export default defineNuxtPlugin(async (nuxtApp) => {
-  // 在服务端和客户端都初始化
-  if (process.server || process.client) {
-    await tagManager.init()
-  }
-
-  // 将实例注入到应用上下文
-  nuxtApp.provide('tagManager', tagManager)
-})
-
-// 直接导出实例，用于在组件中使用
+// 直接导出实例，用于在组件和插件中使用
 export { tagManager }
+export default tagManager
 
 // 导出类型定义
 export const TagManagerTypes = {
   Tag: {
+    id: String,
     name: String,
     displayName: String,
     urlName: String,
     tools: Array,
     toolCount: Number,
     description: String,
+    icon: String,
     categories: Array,
     hot: Boolean,
-    popularity: Number
+    popularity: Number,
+    sort: Number
   }
 }

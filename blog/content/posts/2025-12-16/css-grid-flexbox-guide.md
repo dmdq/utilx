@@ -923,6 +923,5 @@ CSS Grid和Flexbox都是强大的布局工具，它们不是竞争关系，而�
 ---
 
 **相关工具推荐：**
-- [CSS Grid生成器](https://www.util.cn/tools/css-grid-generator/)
-- [Flexbox布局生成器](https://www.util.cn/tools/flexbox-generator/)
-- [CSS压缩工具](https://www.util.cn/tools/css-minifier/)
+- [CSS 布局生成器](https://www.util.cn/tools/css-layout-generator/)
+- [CSS压缩工具](https://www.util.cn/tools/css-formatter/)

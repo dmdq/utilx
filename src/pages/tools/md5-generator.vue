@@ -246,41 +246,23 @@ const formatViewCount = (count) => {
 const generateMD5 = async () => {
   try {
     if (inputText.value) {
-      // 使用Web Crypto API计算MD5（需要手动实现，因为浏览器原生不支持MD5）
-      const encoder = new TextEncoder()
-      const data = encoder.encode(inputText.value)
-
-      // 简单的MD5实现（实际项目中应使用专门的库）
-      const hashBuffer = await crypto.subtle.digest('SHA-256', data)
-      const hashArray = Array.from(new Uint8Array(hashBuffer))
-      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
-
-      // 截取前32位模拟MD5（这不是真正的MD5，仅用于演示）
-      outputText.value = hashHex.substring(0, 32)
+      // 使用 Web Crypto API 计算 MD5（如果存在，优先使用）
+      // 注意: crypto.subtle.digest('SHA-256') 不是 MD5，只是一个占位符
+      // 实际使用 crypto-js 时，应该调用 calculateMD5
+      outputText.value = await calculateMD5(inputText.value); // 使用动态导入的 calculateMD5
     } else {
       outputText.value = ''
     }
   } catch (error) {
-    // 回退到简单的哈希实现
-    outputText.value = simpleMD5(inputText.value)
+    console.error('MD5 计算失败:', error);
+    outputText.value = '计算失败'; // 提供一个用户友好的错误提示
   }
 }
 
-// 简单的MD5实现（仅用于演示，实际应用中应使用专门的库）
-const simpleMD5 = (str) => {
-  // 这里使用一个简化的哈希函数模拟MD5
-  // 实际项目中建议使用 crypto-js 等专业库
-  let hash = 0
-  if (str.length === 0) return hash.toString(16).padStart(32, '0')
-
-  for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i)
-    hash = ((hash << 5) - hash) + char
-    hash = hash & hash
-  }
-
-  // 转换为32位十六进制字符串
-  return Math.abs(hash).toString(16).padStart(32, '0')
+// import CryptoJS from 'crypto-js' // 实际项目中建议使用 crypto-js 等专业库
+const calculateMD5 = async (text) => {
+  const CryptoJS = await import('crypto-js')
+  return CryptoJS.MD5(text).toString()
 }
 
 // 处理文件上传

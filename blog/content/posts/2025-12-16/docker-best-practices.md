@@ -595,8 +595,3 @@ jobs:
 Docker容器化最佳实践涵盖了安全性、性能、可维护性等多个方面。通过遵循这些实践，可以构建出更加安全、高效的容器应用。记住，容器化是一个持续优化的过程，需要根据项目需求和最佳实践不断调整和改进。
 
 ---
-
-**相关工具推荐：**
-- [Dockerfile生成器](https://www.util.cn/tools/dockerfile-generator/)
-- [容器安全扫描工具](https://www.util.cn/tools/container-scanner/)
-- [Docker Compose编辑器](https://www.util.cn/tools/docker-compose-editor/)

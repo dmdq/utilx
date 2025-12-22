@@ -2,7 +2,7 @@ export const categories = [
     {
     id: 'random',
     name: '随机决策',
-    icon: 'Dice6',
+    icon: 'Shuffle',
     description: '随机骰子、硬币、选择器等决策工具',
     color: 'fuchsia',
     sort: 1
@@ -18,7 +18,7 @@ export const categories = [
   {
     id: 'format',
     name: '数据格式化',
-    icon: 'FileText',
+    icon: 'Braces',
     description: 'JSON、XML、SQL等数据格式化工具',
     color: 'orange',
     sort: 3
@@ -34,7 +34,7 @@ export const categories = [
   {
     id: 'crypto',
     name: '加密安全',
-    icon: 'Shield',
+    icon: 'Key',
     description: 'MD5、SHA、AES等加密解密工具',
     color: 'green',
     sort: 0
@@ -87,15 +87,7 @@ export const categories = [
     color: 'indigo',
     sort: 0
   },
-  {
-    id: 'data',
-    name: '数据处理',
-    icon: 'Database',
-    description: '数据采样、分析、可视化工具',
-    color: 'teal',
-    sort: 0
-  },
-  {
+    {
     id: 'security',
     name: '安全工具',
     icon: 'Shield',
@@ -104,17 +96,17 @@ export const categories = [
     sort: 0
   },
   {
-    id: 'visualization',
-    name: '可视化工具',
-    icon: 'BarChart',
-    description: '数据结构、算法、流程可视化工具',
-    color: 'violet',
+    id: 'others',
+    name: '其他工具',
+    icon: 'Package',
+    description: '数据采样、数据结构可视化、剪贴板管理等工具',
+    color: 'slate',
     sort: 0
   },
   {
     id: 'health',
     name: '健康工具',
-    icon: 'Heart',
+    icon: 'Activity',
     description: 'BMI计算、健康指标、运动健身工具',
     color: 'rose',
     sort: 0
@@ -122,17 +114,9 @@ export const categories = [
   {
     id: 'finance',
     name: '金融工具',
-    icon: 'DollarSign',
+    icon: 'TrendingUp',
     description: '贷款计算、投资收益、汇率换算等金融工具',
     color: 'green',
     sort: 0
   },
-  {
-    id: 'productivity',
-    name: '效率工具',
-    icon: 'Zap',
-    description: '剪贴板管理、效率提升工具',
-    color: 'amber',
-    sort: 0
-  }
-]
+  ]

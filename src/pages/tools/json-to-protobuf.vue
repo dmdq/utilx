@@ -222,7 +222,7 @@
                 {{ protobufOutput.split('\n').length }} 行
               </span>
             </div>
-            <pre class="p-3 text-sm overflow-x-auto max-h-96 overflow-y-auto bg-white font-mono">{{ protobufOutput || '等待生成Protobuf定义...' }}</pre>
+            <pre class="p-3 text-sm overflow-x-auto max-h-96 overflow-y-auto bg-muted text-foreground font-mono">{{ protobufOutput || '等待生成Protobuf定义...' }}</pre>
           </div>
         </div>
 

@@ -816,4 +816,4 @@ RESTful API 设计的最佳实践：
 **相关工具：**
 - [Postman API 测试](https://www.postman.com/)
 - [Swagger Editor](https://editor.swagger.io/)
-- [API 文档生成器](https://www.util.cn/tools/api-docs/)
+- [API 文档生成器](https://www.util.cn/tools/api-doc/)

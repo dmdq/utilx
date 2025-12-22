@@ -145,7 +145,7 @@
 
             <!-- 标签导航 -->
             <NuxtLink
-              to="/tags"
+              to="/tags/"
               class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors pl-8"
               :class="[
                 $route.path.startsWith('/tags') || $route.path.startsWith('/tag/') ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
@@ -234,7 +234,8 @@ import {
   Terminal, LayoutGrid, Code2, ShieldCheck, Server, ImageIcon,
   FileJson, Clock, ArrowRight, MessageSquarePlus, FileText, Lock,
   Shield, Type, Wifi, Code, Image, Home, Compass, Sparkles, ChevronRight, Heart, Map, MoreHorizontal,
-  Palette, Database, BarChart, Zap, Calculator, Activity, TrendingUp, Tag
+  Palette, Database, BarChart, Zap, Calculator, Activity, TrendingUp, Tag, Shuffle, Braces, Key,
+  Package, DollarSign, Grid3x3
 } from 'lucide-vue-next'
 import { categories } from '~/data/categories'
 import { useRoute } from 'vue-router'
@@ -257,7 +258,13 @@ const iconMap = {
   BarChart,
   Zap,
   Activity,
-  TrendingUp
+  TrendingUp,
+  Shuffle,
+  Braces,
+  Key,
+  Package,
+  DollarSign,
+  Grid3x3
 }
 
 // 定义 emit 事件

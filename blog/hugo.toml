@@ -58,6 +58,15 @@ publishDir = 'public'
   # 显示分享按钮
   ShowShareButtons = true
 
+  # 封面配置
+  [params.cover]
+    # 默认封面图片
+    image = "/images/default-cover.svg"
+    # 是否启用响应式图片
+    responsiveImages = true
+    # 是否在新标签页中打开封面链接
+    linkFullImages = false
+
   # 主页配置
   [params.homeInfoParams]
     Title = "开发者工具使用教程 & 编程技巧分享"

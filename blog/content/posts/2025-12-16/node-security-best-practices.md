@@ -1112,8 +1112,3 @@ Node.js应用安全需要从多个层面考虑：
 安全是一个持续的过程，需要定期更新安全策略、监控安全事件、及时修复漏洞。记住，安全没有终点，只有持续改进。
 
 ---
-
-**相关工具推荐：**
-- [Node.js安全扫描工具](https://www.util.cn/tools/node-security-scanner/)
-- [JWT令牌生成器](https://www.util.cn/tools/jwt-generator/)
-- [密码加密工具](https://www.util.cn/tools/password-encrypter/)

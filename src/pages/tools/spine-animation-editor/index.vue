@@ -19,12 +19,21 @@
               </svg>
               文件导入
             </h3>
-            <button
-              class="text-xs px-2 py-1 bg-muted hover:bg-muted/80 rounded text-muted-foreground"
-              @click="clearFiles"
-            >
-              清空
-            </button>
+            <div class="flex gap-2">
+              <button
+                class="text-xs px-2 py-1 bg-primary hover:bg-primary/90 text-primary-foreground rounded disabled:opacity-50 disabled:cursor-not-allowed"
+                @click="applyAndParse"
+                :disabled="resourceFiles.length === 0 || isLoading"
+              >
+                应用
+              </button>
+              <button
+                class="text-xs px-2 py-1 bg-muted hover:bg-muted/80 rounded text-muted-foreground"
+                @click="clearFiles"
+              >
+                清空
+              </button>
+            </div>
           </div>
 
           <!-- 拖拽上传区域 -->
@@ -44,6 +53,8 @@
             <div v-if="!isFileDragging">
               <p class="text-xs text-gray-600 dark:text-gray-300 mb-1">拖拽文件到此处导入</p>
               <p class="text-xs text-gray-500 dark:text-gray-400">支持 .spine, .json, .skel, .atlas, .png</p>
+              <p class="text-xs text-blue-600 dark:text-blue-400 mt-2">💡 可多次上传不同文件夹的文件</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">点击应用按钮开始解析</p>
             </div>
             <div v-else class="text-indigo-600 dark:text-indigo-400">
               <p class="text-xs font-medium">松开以上传文件</p>
@@ -81,20 +92,34 @@
 
           <!-- 上传的文件列表 -->
           <div v-if="resourceFiles.length > 0" class="mt-4">
-            <h4 class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-2">已上传文件:</h4>
-            <div class="space-y-1 max-h-24 overflow-y-auto">
-              <div
-                v-for="(file, index) in resourceFiles.slice(0, 5)"
-                :key="index"
-                class="text-xs p-2 bg-gray-50 dark:bg-gray-800 rounded flex items-center justify-between"
-              >
-                <span class="truncate mr-2" :title="file.name">{{ file.name }}</span>
-                <span class="text-gray-500">{{ (file.size / 1024).toFixed(1) }}KB</span>
-              </div>
-              <div v-if="resourceFiles.length > 5" class="text-xs text-gray-500 text-center py-1">
-                还有 {{ resourceFiles.length - 5 }} 个文件...
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="text-xs font-medium text-gray-500 dark:text-gray-400">已上传文件 ({{ resourceFiles.length }})</h4>
+              <div class="text-xs text-blue-600 dark:text-blue-400">
+                {{ validateFiles(resourceFiles).valid ? '✅ 完整' : '❌ 不完整' }}
               </div>
             </div>
+            <div class="space-y-1 max-h-32 overflow-y-auto">
+              <div
+                v-for="(file, index) in resourceFiles"
+                :key="index"
+                class="text-xs p-2 bg-gray-50 dark:bg-gray-800 rounded flex items-center justify-between group hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
+                <span class="truncate mr-2" :title="file.name">
+                  <span class="text-gray-400 mr-1">{{ getFileIcon(file.name) }}</span>
+                  {{ file.name }}
+                </span>
+                <span class="text-gray-500">{{ (file.size / 1024).toFixed(1) }}KB</span>
+              </div>
+            </div>
+
+            <!-- 文件验证提示 -->
+            <div class="mt-2 p-2 text-xs" :class="validateFiles(resourceFiles).valid ? 'bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-400' : 'bg-yellow-50 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-400'">
+              {{ validateFiles(resourceFiles).message }}
+            </div>
+          </div>
+          <div v-else class="mt-4 text-xs text-gray-500 dark:text-gray-400 text-center">
+            <p>📂 还没有上传任何文件</p>
+            <p class="mt-1">支持多次上传，收集完成后点击应用</p>
           </div>
         </div>
 
@@ -246,31 +271,23 @@
             </div>
           </div>
 
-          <!-- 画布显示区域 -->
+          <!-- Spine Player 显示区域 -->
           <div v-else-if="spineLoaded" class="relative">
             <!-- 调试信息 -->
             <div class="absolute top-0 left-0 z-10 bg-yellow-500 text-black text-xs p-2">
               spineLoaded: {{ spineLoaded }} | isLoading: {{ isLoading }} | animations: {{ animations.length }}
             </div>
             <div
-              id="canvas-container"
+              id="spine-player-container"
               class="relative w-full h-96 bg-gray-900 rounded-lg overflow-hidden"
               :class="{ 'fixed inset-0 w-full h-full z-50 rounded-none': isFullscreen }"
-              @mousedown="handleMouseDown"
-              @mousemove="handleMouseMove"
-              @mouseup="handleMouseUp"
-              @mouseleave="handleMouseUp"
-              @wheel="handleWheel"
             >
-              <canvas
-                id="spine-canvas"
-                class="absolute top-0 left-0 w-full h-full cursor-move"
-              ></canvas>
+              <!-- Spine Player 将在这里渲染 -->
+            </div>
 
-              <!-- 缩放和位置指示器 -->
-              <div class="absolute top-2 left-2 bg-black/50 backdrop-blur-sm rounded px-2 py-1 text-xs text-white">
-                缩放: {{ Math.round(zoomLevel * 100) }}% | 拖动移动视图
-              </div>
+            <!-- 缩放和位置指示器 -->
+            <div class="absolute top-2 left-2 bg-black/50 backdrop-blur-sm rounded px-2 py-1 text-xs text-white">
+              动画: {{ currentAnimation || '未选择' }}
             </div>
 
             <!-- 全屏模式下的控制面板 -->
@@ -361,7 +378,7 @@
         </h2>
         <ul class="list-disc list-inside space-y-2 text-muted-foreground mb-6">
           <li><strong>多格式支持</strong>: 支持 .spine、.json、.skel 二进制格式，兼容 Spine 3.8-4.2 版本</li>
-          <li><strong>WebGL 加速</strong>: 基于 Pixi.js 的高性能 WebGL 渲染，确保流畅的动画播放体验</li>
+          <li><strong>Spine Player 引擎</strong>: 基于 Spine 官方播放器，确保动画的高保真渲染和完美兼容</li>
           <li><strong>实时预览</strong>: 即时查看动画效果，支持播放/暂停、速度调节等控制</li>
           <li><strong>批量导入</strong>: 支持拖拽多文件同时上传，自动识别文件类型</li>
           <li><strong>本地计算</strong>: 所有处理都在浏览器本地完成，动画数据不会上传到服务器</li>
@@ -427,7 +444,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import {
   HelpCircle, ChevronUp, FileText, Lock, Shield, Clock, Type, Wifi, Image, Code,
@@ -439,6 +456,112 @@ import { addRecentTool } from '~/composables/useTools'
 
 definePageMeta({
   layout: 'default'
+})
+
+// SEO配置
+useSeoMeta({
+  title: 'Spine动画编辑器 - 专业骨骼动画在线编辑与预览工具 | Util工具箱',
+  description: '专业的Spine骨骼动画在线编辑器，支持WebGL实时渲染、动画播放控制、皮肤切换等功能。支持.spine、.json、.skel格式，兼容Spine 3.8-4.2版本。纯本地计算，动画数据绝对安全。',
+  keywords: 'Spine动画编辑器,骨骼动画,2D动画,游戏动画,动画编辑器,WebGL动画,Spine运行时,动画预览,动画调试,游戏开发',
+  author: 'Util工具箱',
+  ogTitle: 'Spine动画编辑器 - 专业骨骼动画在线编辑工具',
+  ogDescription: '专业的Spine骨骼动画在线编辑器，支持实时渲染、多引擎导出。纯本地处理，数据安全可靠，游戏开发必备工具。',
+  ogImage: 'https://util.cn/images/tools/spine-animation-editor.png',
+  ogUrl: 'https://util.cn/tools/spine-animation-editor',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Spine动画编辑器 - 骨骼动画在线编辑与预览',
+  twitterDescription: '专业Spine骨骼动画编辑器，支持实时渲染和动画控制，游戏开发必备工具。',
+  twitterImage: 'https://util.cn/images/tools/spine-animation-editor.png'
+})
+
+// JSON-LD 结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: 'Spine动画编辑器',
+            description: '专业的Spine骨骼动画在线编辑器，支持WebGL实时渲染、动画播放控制、皮肤切换等功能',
+            url: 'https://util.cn/tools/spine-animation-editor',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CNY'
+            },
+            featureList: [
+              'WebGL实时渲染',
+              '动画播放控制',
+              '皮肤切换管理',
+              '多格式支持',
+              '多引擎导出',
+              '本地安全处理',
+              '骨骼编辑功能',
+              '动画调试工具'
+            ]
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: '首页',
+                item: 'https://util.cn'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '工具',
+                item: 'https://util.cn/tools'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Spine动画编辑器',
+                item: 'https://util.cn/tools/spine-animation-editor'
+              }
+            ]
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '什么是Spine动画？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'Spine是专业的2D骨骼动画制作工具，通过骨骼系统控制角色动画，比传统帧动画更高效、文件更小，广泛用于游戏开发。支持皮肤、混合、IK等高级功能。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Spine支持哪些文件格式？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'Spine支持多种格式：.spine（项目文件）、.json（数据格式）、.skel（骨骼二进制格式）、.atlas（纹理图集）、.png（纹理图片），兼容Spine 3.8-4.2版本。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Spine动画的优势是什么？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'Spine动画优势：1）文件体积小，节省存储空间；2）支持动态换装和皮肤切换；3）动画流畅自然；4）支持程序化控制；5）内存占用低；6）支持复杂的动画混合和IK。'
+                }
+              }
+            ]
+          }
+        ]
+      })
+    }
+  ]
 })
 
 const router = useRouter()
@@ -487,18 +610,16 @@ const isPlaying = ref(false)
 const playSpeed = ref(1.0)
 const dependenciesLoaded = ref(false)
 const dependencyStatus = ref('等待中...')
-let pixiApp = null
-let spineObject = null
+let spinePlayer = null
 
 // 视图控制相关
 const zoomLevel = ref(1.0)
-const panOffset = ref({ x: 0, y: 0 })
-const isViewDragging = ref(false)
-const dragStart = ref({ x: 0, y: 0 })
-const lastPanStart = ref({ x: 0, y: 0 })
 
 // 全屏相关
 const isFullscreen = ref(false)
+
+// 存储创建的 URL 对象用于清理
+const createdUrls = ref([])
 
 // SEO 内容折叠状态
 const isSeoContentVisible = ref(true)
@@ -535,11 +656,29 @@ const clearFiles = () => {
   currentAnimation.value = ''
   isPlaying.value = false
   spineLoaded.value = false
+  dependenciesLoaded.value = false
+  dependencyStatus.value = '等待中...'
   zoomLevel.value = 1.0
-  panOffset.value = { x: 0, y: 0 }
-  if (spineObject && pixiApp) {
-    pixiApp.stage.removeChild(spineObject)
-    spineObject = null
+  if (spinePlayer) {
+    spinePlayer.dispose()
+    spinePlayer = null
+  }
+  // 清空容器
+  const container = document.getElementById('spine-player-container')
+  if (container) {
+    container.innerHTML = ''
+  }
+  // 清理创建的 URL 对象
+  createdUrls.value.forEach(url => URL.revokeObjectURL(url))
+  createdUrls.value = []
+  // 清理全局图像数据
+  if (window.tempSpineImages) {
+    delete window.tempSpineImages
+    console.log('🧹 已清理全局图像数据')
+  }
+  if (window.tempSpineBlobUrls) {
+    delete window.tempSpineBlobUrls
+    console.log('🧹 已清理全局blob URL映射')
   }
 }
 
@@ -559,22 +698,66 @@ const handleDrop = (event) => {
 const handleFiles = async (files) => {
   if (files.length === 0) return
 
+  try {
+    // 合并新文件到现有文件列表（去重）
+    const existingFileNames = resourceFiles.value.map(f => f.name)
+    const newFiles = files.filter(file => !existingFileNames.includes(file.name))
+
+    if (newFiles.length > 0) {
+      resourceFiles.value = [...resourceFiles.value, ...newFiles]
+      console.log(`📁 已添加 ${newFiles.length} 个文件，总计 ${resourceFiles.value.length} 个文件`)
+    } else {
+      console.log('⚠️ 所有文件已存在，未添加重复文件')
+    }
+  } catch (error) {
+    console.error('文件添加失败:', error)
+  }
+}
+
+// 应用并解析文件
+const applyAndParse = async () => {
+  if (resourceFiles.value.length === 0) {
+    console.warn('没有可解析的文件')
+    return
+  }
+
+  console.log('🚀 开始应用和解析文件...')
+
+  // 显示确认对话框
+  const confirmed = confirm(`确认要开始解析 ${resourceFiles.value.length} 个文件吗？\n\n` +
+    resourceFiles.value.map(f => `• ${f.name}`).join('\n') +
+    '\n\n系统将验证所需资源文件是否满足要求。')
+
+  if (!confirmed) {
+    console.log('用户取消了解析操作')
+    return
+  }
+
   isLoading.value = true
   loadingProgress.value = 0
 
   try {
-    resourceFiles.value = files
     loadingProgress.value = 20
 
+    // 验证文件完整性
+    const validationResult = validateFiles(resourceFiles.value)
+    if (!validationResult.valid) {
+      alert(`文件验证失败：\n${validationResult.message}`)
+      isLoading.value = false
+      return
+    }
+
+    console.log('✅ 文件验证通过:', validationResult.message)
+
     // 分类文件
-    const skeletonFile = files.find(file =>
+    const skeletonFile = resourceFiles.value.find(file =>
       file.name.endsWith('.spine') ||
       file.name.endsWith('.json') ||
       file.name.endsWith('.skel')
     )
 
-    const atlasFile = files.find(file => file.name.endsWith('.atlas'))
-    const imageFiles = files.filter(file =>
+    const atlasFile = resourceFiles.value.find(file => file.name.endsWith('.atlas'))
+    const imageFiles = resourceFiles.value.filter(file =>
       file.name.endsWith('.png') ||
       file.name.endsWith('.jpg') ||
       file.name.endsWith('.jpeg')
@@ -582,102 +765,143 @@ const handleFiles = async (files) => {
 
     if (skeletonFile) {
       loadingProgress.value = 40
-      await loadSpineAnimation(skeletonFile, atlasFile, imageFiles)
+      await loadSpineAnimationWithPlayer(skeletonFile, atlasFile, imageFiles)
     } else {
-      console.warn('未找到骨架文件')
+      throw new Error('未找到骨架文件（.json/.spine/.skel）')
     }
 
     loadingProgress.value = 100
+    console.log('🎉 所有文件解析完成!')
 
   } catch (error) {
-    console.error('文件处理失败:', error)
+    console.error('文件解析失败:', error)
+    alert(`文件解析失败：${error.message}`)
   } finally {
-    // 无论成功还是失败，都要停止加载状态
     isLoading.value = false
     console.log('🔄 isLoading 已设置为 false')
   }
 }
 
-// 依赖库预加载函数
-const loadDependencies = async () => {
-  try {
-    dependenciesLoaded.value = false
-    dependencyStatus.value = '加载 PIXI.js...'
-    console.log('📦 开始预加载依赖库...')
+// 验证文件完整性
+const validateFiles = (files) => {
+  const skeletonFiles = files.filter(file =>
+    file.name.endsWith('.spine') ||
+    file.name.endsWith('.json') ||
+    file.name.endsWith('.skel')
+  )
 
-    // 检查并加载 PIXI.js
-    console.log('🔍 加载 PIXI.js...')
-    const PIXI = await import('pixi.js')
-    console.log('✅ PIXI.js 加载成功:', {
-      Application: !!PIXI.Application,
-      Container: !!PIXI.Container,
-      Graphics: !!PIXI.Graphics,
-      Text: !!PIXI.Text
-    })
+  const atlasFiles = files.filter(file => file.name.endsWith('.atlas'))
 
-    dependencyStatus.value = '加载 pixi-spine...'
-    // 检查并加载 pixi-spine
-    console.log('🔍 加载 pixi-spine...')
-    let pixiSpineAvailable = false
-    try {
-      const pixiSpine = await import('pixi-spine')
-      pixiSpineAvailable = !!pixiSpine
-      console.log('✅ pixi-spine 加载成功:', pixiSpineAvailable)
-    } catch (spineError) {
-      console.warn('⚠️ pixi-spine 加载失败，将使用基础动画:', spineError.message)
-    }
+  const imageFiles = files.filter(file =>
+    file.name.endsWith('.png') ||
+    file.name.endsWith('.jpg') ||
+    file.name.endsWith('.jpeg')
+  )
 
-    dependencyStatus.value = '检查 WebGL 支持...'
-    // 检查 WebGL 支持
-    const webglSupported = (() => {
-      try {
-        const canvas = document.createElement('canvas')
-        return !!(canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
-      } catch (e) {
-        return false
-      }
-    })()
-
-    console.log('🔍 WebGL 支持状态:', webglSupported ? '✅ 支持' : '❌ 不支持')
-
-    dependenciesLoaded.value = true
-    dependencyStatus.value = '依赖加载完成'
-
+  // 验证必要文件
+  if (skeletonFiles.length === 0) {
     return {
-      PIXI,
-      pixiSpineAvailable,
-      webglSupported
+      valid: false,
+      message: '缺少骨架文件（.json/.spine/.skel）'
     }
+  }
 
-  } catch (error) {
-    dependenciesLoaded.value = false
-    dependencyStatus.value = '加载失败'
-    console.error('❌ 依赖库加载失败:', error)
-    throw new Error(`依赖库加载失败: ${error.message}`)
+  if (skeletonFiles.length > 1) {
+    return {
+      valid: false,
+      message: '骨架文件过多，只需要一个骨架文件'
+    }
+  }
+
+  if (atlasFiles.length === 0) {
+    return {
+      valid: false,
+      message: '缺少图集文件（.atlas）'
+    }
+  }
+
+  if (imageFiles.length === 0) {
+    return {
+      valid: false,
+      message: '缺少图像文件（.png/.jpg/.jpeg）'
+    }
+  }
+
+  return {
+    valid: true,
+    message: `文件完整：骨架 x${skeletonFiles.length}, 图集 x${atlasFiles.length}, 图像 x${imageFiles.length}`
   }
 }
 
-// Spine 动画加载方法
-const loadSpineAnimation = async (skeletonFile, atlasFile, imageFiles) => {
+// 加载 Spine Player 动画
+const loadSpineAnimationWithPlayer = async (skeletonFile, atlasFile, imageFiles) => {
   try {
-    console.log('🚀 开始加载Spine动画...')
+    console.log('🚀 开始使用 Spine Player 加载动画...')
+    dependencyStatus.value = '加载 Spine Player 库...'
 
-    // 首先预加载依赖库
-    const dependencies = await loadDependencies()
-    console.log('📚 依赖库加载完成:', dependencies)
+    // 等待 Spine Player 库加载
+    await waitForSpinePlayer()
+    loadingProgress.value = 60
 
     // 读取骨架文件
     let skeletonData = null
-    if (skeletonFile.name.endsWith('.json')) {
+    let processedSkeletonUrl = null
+
+    if (skeletonFile.name.endsWith('.json') || skeletonFile.name.endsWith('.spine')) {
+      console.log('📄 开始读取 JSON 文件:', skeletonFile.name)
       const text = await readFileAsText(skeletonFile)
       skeletonData = JSON.parse(text)
-    } else {
-      // 二进制文件处理逻辑
-      skeletonData = {
-        _isBinary: true,
-        animations: ['idle', 'walk', 'run'],
-        bones: ['root', 'body']
+      console.log('📊 JSON 文件读取成功，包含 skeleton 字段:', !!skeletonData.skeleton)
+      console.log('📊 JSON 文件结构分析:', {
+        hasSkeleton: !!skeletonData.skeleton,
+        hasBones: !!skeletonData.bones,
+        bonesCount: skeletonData.bones ? skeletonData.bones.length : 0,
+        hasSlots: !!skeletonData.slots,
+        slotsCount: skeletonData.slots ? skeletonData.slots.length : 0,
+        hasSkins: !!skeletonData.skins,
+        skinsCount: skeletonData.skins ? Object.keys(skeletonData.skins).length : 0,
+        hasAnimations: !!skeletonData.animations,
+        animationsCount: skeletonData.animations ? (Array.isArray(skeletonData.animations) ? skeletonData.animations.length : Object.keys(skeletonData.animations).length) : 0
+      })
+
+      // 处理 JSON 中的图像路径
+      if (skeletonData.skeleton) {
+        console.log('🔧 skeleton 字段内容:', skeletonData.skeleton)
+
+        if (skeletonData.skeleton.images !== undefined) {
+          console.log('🔧 发现 JSON 中的 images 路径:', skeletonData.skeleton.images)
+          console.log('🖼️ 图像文件数量:', imageFiles.length)
+
+          // 暂时不修改 images 路径，让 Image 拦截器处理
+          console.log('ℹ️ 保持原始 images 路径不变，依赖 Image 拦截器处理')
+        } else {
+          console.log('ℹ️ JSON 文件中没有 images 字段')
+        }
+      } else {
+        console.log('❌ JSON 文件中没有 skeleton 字段')
       }
+
+      // 验证JSON结构的完整性
+      if (skeletonData.bones && skeletonData.bones.length > 0) {
+        console.log('✅ 骨架数据验证通过，找到', skeletonData.bones.length, '个骨骼')
+      } else {
+        console.warn('⚠️ 骨架数据验证失败：没有找到骨骼数据')
+      }
+
+      if (skeletonData.slots && skeletonData.slots.length > 0) {
+        console.log('✅ 插槽数据验证通过，找到', skeletonData.slots.length, '个插槽')
+      } else {
+        console.warn('⚠️ 插槽数据验证失败：没有找到插槽数据')
+      }
+
+      if (skeletonData.skins) {
+        console.log('✅ 皮肤数据验证通过')
+      } else {
+        console.warn('⚠️ 皮肤数据验证失败：没有找到皮肤数据')
+      }
+    } else if (skeletonFile.name.endsWith('.skel')) {
+      console.warn('⚠️ .skel 二进制文件需要转换为 JSON 格式')
+      throw new Error('目前不支持直接加载 .skel 文件，请使用 .json 或 .spine 格式')
     }
 
     // 提取动画列表
@@ -696,775 +920,480 @@ const loadSpineAnimation = async (skeletonFile, atlasFile, imageFiles) => {
     }
 
     console.log('🎬 检测到的动画:', animations.value)
+    loadingProgress.value = 80
 
-    spineLoaded.value = true
+    // 创建文件 URL 并存储它们以便后续清理
+    // 确保文件以 .json 扩展名创建，让 Spine Player 正确识别为JSON格式
+    const jsonFileName = skeletonFile.name.endsWith('.json') ?
+      skeletonFile.name :
+      skeletonFile.name.replace(/\.[^/.]+$/, '.json')
 
-    console.log('🔄 spineLoaded已设置为:', spineLoaded.value)
-    console.log('🎯 等待 watcher 检测 DOM 元素并初始化显示...')
+    // 创建一个包含正确文件名的 File 对象，这样 Spine Player 能正确识别格式
+    const jsonFile = new File(
+      [JSON.stringify(skeletonData, null, 2)],
+      jsonFileName,
+      { type: 'application/json' }
+    )
+    const skeletonUrl = URL.createObjectURL(jsonFile)
+    createdUrls.value.push(skeletonUrl)
 
-    if (animations.value.length > 0) {
-      playAnimation(animations.value[0])
+    // 使用重新创建的 JSON 文件 URL，确保正确的MIME类型
+    processedSkeletonUrl = skeletonUrl
+    console.log('🔄 使用重新创建的 JSON 文件 URL:', jsonFileName)
+
+    // 处理图像文件和 atlas 文件 - 保持原始格式
+    let processedAtlasUrl = null
+
+    if (atlasFile) {
+      console.log('📋 处理 Atlas 文件，保持原始格式')
+
+      // 直接使用原始 Atlas 文件，不做修改
+      // Spine Player 需要原始的 Atlas 格式来正确定位 regions
+      processedAtlasUrl = URL.createObjectURL(atlasFile)
+      createdUrls.value.push(processedAtlasUrl)
+      console.log('📄 使用原始 Atlas 文件 URL:', processedAtlasUrl)
+
+      // 读取 Atlas 文件内容来获取图像文件名
+      const atlasText = await readFileAsText(atlasFile)
+      const lines = atlasText.split('\n')
+
+      // 找到图像文件名
+      let imageFileName = null
+      for (const line of lines) {
+        const trimmedLine = line.trim()
+        if (trimmedLine && !trimmedLine.startsWith('#') && !trimmedLine.includes(':') &&
+            (trimmedLine.includes('.png') || trimmedLine.includes('.jpg') || trimmedLine.includes('.jpeg'))) {
+          imageFileName = trimmedLine
+          console.log('🔍 在 Atlas 中找到图像文件名:', imageFileName)
+          break
+        }
+      }
+
+      if (imageFileName) {
+        // 找到对应的图像文件并转换为Base64
+        const matchingImageFile = imageFiles.find(file => file.name === imageFileName)
+        if (matchingImageFile) {
+          console.log('🖼️ 开始转换图像为Base64:', imageFileName)
+          const imageDataUrl = await readFileAsDataURL(matchingImageFile)
+
+          // 将Base64图像数据添加到全局作用域
+          if (!window.tempSpineImages) {
+            window.tempSpineImages = {}
+          }
+          window.tempSpineImages[imageFileName] = imageDataUrl
+          console.log('🎨 图像数据已存储到全局作用域:', imageFileName)
+
+          // 同时创建一个与原始文件名匹配的blob URL映射，以防Spine Player需要
+          if (!window.tempSpineBlobUrls) {
+            window.tempSpineBlobUrls = {}
+          }
+          const blobUrl = URL.createObjectURL(matchingImageFile)
+          window.tempSpineBlobUrls[imageFileName] = blobUrl
+          createdUrls.value.push(blobUrl)
+          console.log('🔗 创建blob URL映射:', imageFileName, '->', blobUrl)
+        } else {
+          console.warn('⚠️ 未找到匹配的图像文件:', imageFileName)
+        }
+      } else {
+        console.warn('⚠️ 在 Atlas 文件中未找到图像文件名')
+      }
     }
 
+    // 验证骨架数据完整性
+    if (!skeletonData.bones || skeletonData.bones.length === 0) {
+      throw new Error('骨架文件缺少必需的骨骼数据')
+    }
+
+    if (!skeletonData.slots || skeletonData.slots.length === 0) {
+      console.warn('⚠️ 骨架文件缺少插槽数据，可能影响显示')
+    }
+
+    console.log('✅ 骨架数据验证通过，准备加载')
+
+    // 先停止加载状态并设置 spineLoaded 为 true 以显示容器
+    isLoading.value = false
+    spineLoaded.value = true
+
+    // 等待 DOM 更新
+    await nextTick()
+
+    // 获取容器
+    const container = document.getElementById('spine-player-container')
+    if (!container) {
+      throw new Error('找不到 Spine Player 容器')
+    }
+
+    // 暂时禁用Image拦截器，测试是否能解决Region问题
+    console.log('🔧 暂时禁用Image拦截器进行测试')
+    const originalImage = window.Image
+
+    // 拦截XMLHttpRequest以提供Base64图像数据（用于其他可能的请求）
+    const originalXHROpen = XMLHttpRequest.prototype.open
+    const originalXHRSend = XMLHttpRequest.prototype.send
+
+    XMLHttpRequest.prototype.open = function(method, url, ...args) {
+      console.log('🌐 XMLHttpRequest 拦截:', method, url)
+
+      // 检查是否是图像请求
+      if (url && (url.endsWith('.png') || url.endsWith('.jpg') || url.endsWith('.jpeg'))) {
+        const fileName = url.split('/').pop()
+        console.log('🖼️ 检测到图像请求:', fileName)
+
+        // 检查我们是否有对应的Base64数据
+        if (window.tempSpineImages && window.tempSpineImages[fileName]) {
+          console.log('✅ 找到Base64图像数据:', fileName)
+          this._base64Data = window.tempSpineImages[fileName]
+          this._isImageRequest = true
+        }
+      }
+
+      return originalXHROpen.call(this, method, url, ...args)
+    }
+
+    XMLHttpRequest.prototype.send = function(data) {
+      if (this._isImageRequest && this._base64Data) {
+        console.log('🎨 拦截图像请求，提供Base64数据')
+
+        // 模拟成功响应
+        Object.defineProperty(this, 'readyState', { value: 4, writable: false })
+        Object.defineProperty(this, 'status', { value: 200, writable: false })
+        Object.defineProperty(this, 'response', {
+          value: this._base64Data,
+          writable: false
+        })
+
+        // 触发事件
+        setTimeout(() => {
+          if (this.onreadystatechange) {
+            this.onreadystatechange()
+          }
+          if (this.onload) {
+            this.onload()
+          }
+        }, 0)
+
+        return
+      }
+
+      return originalXHRSend.call(this, data)
+    }
+
+    // 创建 Spine Player 配置
+    const config = {
+      jsonUrl: processedSkeletonUrl,
+      atlasUrl: processedAtlasUrl || atlasUrl,
+      animation: animations.value[0] || 'default',
+      backgroundColor: "#1a1a1a",
+      showControls: false, // 使用自定义控制
+      // 添加更多配置来确保使用我们提供的资源
+      premultipliedAlpha: false,
+      // 强制指定为JSON格式，防止被误认为二进制文件
+      json: true,
+      success: (player) => {
+        console.log('🎉 Spine Player success 回调被调用')
+        spinePlayer = player
+        loadingProgress.value = 100
+        isLoading.value = false
+        console.log('✅ Spine Player 加载成功')
+        console.log('📊 Spine Player 详情:', {
+          hasCanvas: !!player.canvas,
+          hasContext: !!player.context,
+          animationState: !!player.state,
+          hasSetAnimation: !!player.setAnimation,
+          hasPlay: !!player.play,
+          hasPause: !!player.pause
+        })
+
+        // 设置默认动画
+        if (animations.value.length > 0) {
+          currentAnimation.value = animations.value[0]
+          // Spine Player 会自动开始播放第一个动画
+          isPlaying.value = true
+          console.log('🎬 设置默认动画:', animations.value[0])
+        }
+      },
+      error: (message) => {
+        console.error('❌ Spine Player error 回调被调用:', message)
+        // 避免循环引用，只显示简单的错误信息
+        const errorMessage = typeof message === 'object' ?
+          (message.message || message.toString() || '未知错误') :
+          message
+        console.error('📊 错误详情:', errorMessage)
+
+        dependencyStatus.value = '加载失败'
+        // 加载失败时重置 spineLoaded
+        spineLoaded.value = false
+        isLoading.value = false
+        // 清空容器以显示错误信息
+        if (container) {
+          container.innerHTML = `
+            <div class="flex items-center justify-center h-full text-white">
+              <div class="text-center">
+                <p class="mb-2">❌ Spine Player 加载失败</p>
+                <p class="text-sm text-gray-400">${errorMessage}</p>
+                <p class="text-xs text-gray-500 mt-2">请检查文件格式是否正确</p>
+              </div>
+            </div>
+          `
+        }
+      }
+    }
+
+    console.log('🔧 Spine Player 配置:', {
+      jsonUrl: processedSkeletonUrl,
+      atlasUrl: processedAtlasUrl || atlasUrl,
+      animation: animations.value[0] || 'default',
+      numImageFiles: imageFiles.length
+    })
+
+    // 跳过 URL 可访问性测试，因为 blob URL 可能不支持 HEAD 请求
+    console.log('🔗 资源 URL 准备完成，Spine Player 将直接加载')
+
+    // 创建 Spine Player
+    console.log('🎮 开始创建 Spine Player...')
+    console.log('🔍 检查 Spine Player 库:', {
+      hasWindowSpinePlayer: !!window.SpinePlayer,
+      hasSpineObject: !!window.spine,
+      hasSpinePlayerInSpine: !!(window.spine && window.spine.SpinePlayer),
+      container: !!container,
+      containerId: container.id
+    })
+
+    // 添加容器事件监听来调试
+    const originalConsoleError = console.error
+    console.error = (...args) => {
+      originalConsoleError(...args)
+      if (args[0] && typeof args[0] === 'string' && args[0].includes('Spine')) {
+        console.log('🚨 捕获到 Spine 相关错误:', args)
+      }
+    }
+
+    let playerInstance = null
+    try {
+      if (window.SpinePlayer) {
+        console.log('🎯 使用 window.SpinePlayer 创建实例')
+        playerInstance = new window.SpinePlayer(container, config)
+      } else if (window.spine && window.spine.SpinePlayer) {
+        console.log('🎯 使用 window.spine.SpinePlayer 创建实例')
+        playerInstance = new window.spine.SpinePlayer(container, config)
+      } else {
+        throw new Error('Spine Player 库未加载')
+      }
+
+      console.log('🎮 Spine Player 实例已创建:', !!playerInstance)
+
+      // 添加一些额外的事件监听
+      setTimeout(() => {
+        console.log('⏰ 5秒后检查状态:', {
+          spinePlayer: !!spinePlayer,
+          playerInstance: !!playerInstance,
+          containerChildren: container.children.length,
+          containerContent: container.innerHTML.substring(0, 200)
+        })
+      }, 5000)
+
+    } catch (error) {
+      console.error('❌ 创建 Spine Player 时发生异常:', error)
+      throw error
+    }
+
+    // 恢复原始 console.error
+    setTimeout(() => {
+      console.error = originalConsoleError
+    }, 10000)
+
+    console.log('🎮 Spine Player 创建请求已发送')
+
+    dependenciesLoaded.value = true
+    dependencyStatus.value = '加载完成'
+
+    // 添加超时检测
+    setTimeout(() => {
+      if (isLoading.value) {
+        console.warn('⚠️ Spine Player 加载超时，可能遇到了问题')
+        dependencyStatus.value = '加载超时'
+        // 这里可以添加重试逻辑或显示错误信息
+      }
+    }, 10000) // 10秒超时
+
+    // 恢复原始方法（在加载完成后）
+    setTimeout(() => {
+      window.Image = originalImage
+      XMLHttpRequest.prototype.open = originalXHROpen
+      XMLHttpRequest.prototype.send = originalXHRSend
+      console.log('🔄 原始方法已恢复')
+    }, 15000) // 15秒后恢复，确保加载完成
+
   } catch (error) {
-    console.error('❌ Spine动画加载失败:', error)
+    console.error('❌ Spine Player 加载失败:', error)
+
+    // 恢复原始方法（在出错时）
+    window.Image = originalImage
+    XMLHttpRequest.prototype.open = originalXHROpen
+    XMLHttpRequest.prototype.send = originalXHRSend
+
+    // 出错时重置 spineLoaded
+    spineLoaded.value = false
     throw error
   }
 }
 
-const initializeSimpleDisplay = async () => {
-  let app = null
-
-  try {
-    console.log('=== 初始化Spine动画显示 ===')
-
-    // 确保依赖已加载
-    const PIXI = await import('pixi.js')
-    console.log('🔧 使用预加载的 PIXI:', !!PIXI.Application)
-
-    // 获取Canvas容器和Canvas元素
-    const canvasContainer = document.getElementById('canvas-container')
-    const canvas = document.getElementById('spine-canvas')
-
-    console.log('🔍 Canvas容器检查:', {
-      canvasContainer: !!canvasContainer,
-      canvas: !!canvas,
-      containerSize: canvasContainer ? {
-        width: canvasContainer.clientWidth,
-        height: canvasContainer.clientHeight
-      } : null
-    })
-
-    if (!canvasContainer || !canvas) {
-      console.error('❌ 找不到Canvas容器或Canvas元素')
-      return
-    }
-
-    // 确保Canvas尺寸正确
-    canvas.width = canvasContainer.clientWidth
-    canvas.height = canvasContainer.clientHeight
-    canvas.style.width = '100%'
-    canvas.style.height = '100%'
-
-    // 创建PIXI应用
-    app = new PIXI.Application()
-    await app.init({
-      canvas: canvas,
-      width: canvasContainer.clientWidth,
-      height: canvasContainer.clientHeight,
-      backgroundColor: 0x1a1a1a,
-      antialias: true,
-      resolution: window.devicePixelRatio || 1,
-      backgroundAlpha: 1
-    })
-
-    pixiApp = app
-    console.log('✅ PIXI应用已创建:', {
-      width: app.screen.width,
-      height: app.screen.height
-    })
-
-    // 尝试加载实际的Spine动画
-    await loadSpineAnimationData(app)
-
-    // 设置窗口大小改变时的处理
-    const resizeCanvas = () => {
-      if (!canvasContainer || !app) return
-      const newWidth = canvasContainer.clientWidth
-      const newHeight = canvasContainer.clientHeight
-      app.renderer.resize(newWidth, newHeight)
-      if (spineObject && spineObject.position) {
-        spineObject.position.set(newWidth / 2, newHeight / 2)
+// 等待 Spine Player 库加载
+const waitForSpinePlayer = () => {
+  return new Promise((resolve, reject) => {
+    const checkSpinePlayer = () => {
+      if (typeof window.SpinePlayer !== 'undefined' || (window.spine && window.spine.SpinePlayer)) {
+        if (!window.SpinePlayer && window.spine && window.spine.SpinePlayer) {
+          window.SpinePlayer = window.spine.SpinePlayer
+        }
+        console.log('✅ Spine Player 库已加载')
+        resolve()
+      } else {
+        // 动态加载 Spine Player
+        const script = document.createElement('script')
+        script.src = '/spine-player/spine-player.js'
+        script.onload = () => {
+          console.log('✅ Spine Player 库动态加载成功')
+          resolve()
+        }
+        script.onerror = () => {
+          reject(new Error('Spine Player 库加载失败'))
+        }
+        document.head.appendChild(script)
       }
     }
-    window.addEventListener('resize', resizeCanvas)
 
-    console.log('✅ Spine动画显示初始化完成')
-
-  } catch (error) {
-    console.error('❌ Spine动画显示初始化失败:', error)
-    // 如果Spine动画加载失败，显示占位符
-    if (app || pixiApp) {
-      await createPlaceholderDisplay(app || pixiApp)
-    }
-  }
+    // 立即检查
+    checkSpinePlayer()
+  })
 }
 
-// 加载Spine动画数据
-const loadSpineAnimationData = async (app) => {
+// 显示示例动画
+const showDefaultAnimation = async () => {
   try {
-    console.log('🎬 开始加载Spine动画数据...')
+    console.log('🚀 加载默认示例动画...')
+    isLoading.value = true
+    loadingProgress.value = 10
 
-    // 确保PIXI可用
-    const PIXI = await import('pixi.js')
+    // 等待 Spine Player 库加载
+    await waitForSpinePlayer()
+    loadingProgress.value = 20
 
-    // 尝试导入和注册pixi-spine
-    let pixiSpine = null
-    try {
-      pixiSpine = await import('pixi-spine')
-      console.log('✅ pixi-spine 导入成功')
-      console.log('📦 pixi-spine 导出的内容:', Object.keys(pixiSpine))
+    // 先停止加载状态并设置 spineLoaded 为 true 以显示容器
+    isLoading.value = false
+    spineLoaded.value = true
 
-      // 创建一个全局的spine命名空间对象，避免直接修改PIXI
-      const spineNamespace = {
-        Spine: pixiSpine.Spine,
-        SpineData: pixiSpine.SpineData,
-        SpinePlugin: pixiSpine.SpinePlugin
-      }
+    // 等待 DOM 更新
+    await nextTick()
+    loadingProgress.value = 30
 
-      // 尝试多种方式注册Spine类
-      // 方法1: 尝试直接使用导入的Spine类
-      if (pixiSpine.Spine) {
-        console.log('✅ 方法1: 直接使用pixiSpine.Spine')
-      }
-
-      // 方法2: 尝试创建PIXI.spine包装器（如果可能）
-      try {
-        const PIXIWithSpine = { ...PIXI }
-        PIXIWithSpine.spine = spineNamespace
-
-        // 检查是否可以成功创建
-        if (PIXIWithSpine.spine && PIXIWithSpine.spine.Spine) {
-          console.log('✅ 方法2: PIXI.spine包装器创建成功')
-        }
-      } catch (wrapperError) {
-        console.log('⚠️ 方法2失败:', wrapperError.message)
-      }
-
-      // 方法3: 直接注册到全局命名空间
-      try {
-        if (typeof window !== 'undefined') {
-          window.PIXI_SPINE = spineNamespace
-          console.log('✅ 方法3: 注册到全局window.PIXI_SPINE')
-        }
-      } catch (globalError) {
-        console.log('⚠️ 方法3失败:', globalError.message)
-      }
-
-      // 注册插件到PIXI应用（如果插件存在）
-      if (pixiSpine.SpinePlugin && PIXI.Application && !PIXI.Application.prototype.plugins?.includes(pixiSpine.SpinePlugin)) {
-        try {
-          // 创建可扩展的插件数组
-          if (!PIXI.Application.prototype.plugins) {
-            // 使用Object.defineProperty创建可扩展的属性
-            Object.defineProperty(PIXI.Application.prototype, 'plugins', {
-              value: [],
-              writable: true,
-              configurable: true
-            })
-          }
-          PIXI.Application.prototype.plugins.push(pixiSpine.SpinePlugin)
-          console.log('✅ pixi-spine 插件已注册')
-        } catch (pluginError) {
-          console.warn('⚠️ 插件注册失败:', pluginError.message)
-        }
-      }
-
-      console.log('🔍 最终Spine可用性检查:', {
-        直接导入: !!pixiSpine.Spine,
-        命名空间: !!spineNamespace.Spine,
-        全局: !!window?.PIXI_SPINE?.Spine,
-        构造函数类型: typeof pixiSpine.Spine
-      })
-
-      // 获取已上传的文件 - 移到try块外部
-      const skeletonFile = resourceFiles.value.find(file =>
-        file.name.endsWith('.json') || file.name.endsWith('.spine') || file.name.endsWith('.skel')
-      )
-      const atlasFile = resourceFiles.value.find(file => file.name.endsWith('.atlas'))
-      const imageFiles = resourceFiles.value.filter(file =>
-        file.name.endsWith('.png') || file.name.endsWith('.jpg') || file.name.endsWith('.jpeg')
-      )
-
-      if (!skeletonFile) {
-        console.warn('⚠️ 未找到骨架文件，创建占位符动画')
-        await createPlaceholderDisplay(app)
-        return
-      }
-
-      console.log('📄 处理文件:', {
-        skeleton: skeletonFile.name,
-        atlas: atlasFile?.name || '无',
-        images: imageFiles.map(f => f.name)
-      })
-
-      // 继续使用原始的pixiSpine对象，不依赖PIXI.spine
-      await loadRealSpineAnimation(app, skeletonFile, atlasFile, imageFiles, PIXI, pixiSpine)
-
-    } catch (spineError) {
-      console.warn('⚠️ pixi-spine 加载失败，使用回退方案:', spineError.message)
-      await handleSpineLoadError(app, skeletonFile)
-      return
+    // 获取容器
+    const container = document.getElementById('spine-player-container')
+    if (!container) {
+      throw new Error('找不到 Spine Player 容器')
     }
+
+    loadingProgress.value = 50
+
+    // 使用示例资源（不需要拦截，因为这些是静态文件）
+    const config = {
+      jsonUrl: "/spineboy/export/spineboy.json",
+      atlasUrl: "/spineboy/export/spineboy.atlas",
+      animation: "walk",
+      backgroundColor: "#1a1a1a",
+      showControls: false,
+      success: (player) => {
+        spinePlayer = player
+        loadingProgress.value = 100
+        isLoading.value = false
+
+        // 设置动画列表
+        animations.value = ['walk', 'run', 'idle', 'jump']
+        currentAnimation.value = 'walk'
+        isPlaying.value = true
+
+        console.log('✅ 示例动画加载成功')
+        console.log('💡 示例动画工作正常，说明 Spine Player 本身没问题')
+      },
+      error: (message) => {
+        console.error('❌ 示例动画加载失败:', message)
+        console.log('⚠️ 如果示例动画也失败，说明 Spine Player 配置有问题')
+        // 加载失败时重置 spineLoaded
+        spineLoaded.value = false
+
+        // 显示错误信息
+        container.innerHTML = `
+          <div class="flex items-center justify-center h-full text-white">
+            <div class="text-center">
+              <p class="mb-2">示例动画加载失败</p>
+              <p class="text-sm text-gray-400">${message}</p>
+              <p class="text-xs text-gray-500 mt-2">请检查 Spine Player 配置</p>
+            </div>
+          </div>
+        `
+      }
+    }
+
+    // 创建 Spine Player（不使用拦截器）
+    if (window.SpinePlayer) {
+      spinePlayer = new window.SpinePlayer(container, config)
+    } else if (window.spine && window.spine.SpinePlayer) {
+      spinePlayer = new window.spine.SpinePlayer(container, config)
+    }
+
+    dependenciesLoaded.value = true
+    dependencyStatus.value = '示例加载完成'
 
   } catch (error) {
-    console.error('❌ Spine动画数据加载失败:', error)
-    await createPlaceholderDisplay(app)
-  }
-}
-
-// 加载真实的Spine动画
-const loadRealSpineAnimation = async (app, skeletonFile, atlasFile, imageFiles, PIXI, pixiSpine) => {
-  try {
-    console.log('🎭 使用pixi-spine原生API加载Spine动画...')
-
-    if (!skeletonFile || !atlasFile || imageFiles.length === 0) {
-      throw new Error('缺少必要的Spine文件（骨架、图集或图片）')
-    }
-
-    // 使用新的原生Spine对象创建函数
-    const spineObject = await createNativeSpineObject(app, skeletonFile, atlasFile, imageFiles)
-
-    if (spineObject) {
-      // 设置全局spine对象
-      window.spineObject = spineObject
-      spineLoaded.value = true
-
-      // 提取动画列表 - 支持真正的pixi-spine对象和回退对象
-      let animationNames = []
-
-      if (spineObject.skeleton && spineObject.skeleton.data && spineObject.skeleton.data.animations) {
-        // 真正的pixi-spine对象
-        animationNames = spineObject.skeleton.data.animations.map(anim => anim.name)
-      } else if (spineObject._spineData && spineObject._spineData.animations) {
-        // 从附加的数据中提取动画名称
-        animationNames = Object.keys(spineObject._spineData.animations)
-      }
-
-      animations.value = animationNames
-
-      console.log('🎬 提取的动画列表:', animationNames)
-
-      // 设置默认动画
-      if (animationNames.length > 0) {
-        currentAnimation.value = animationNames[0]
-      }
-
-      console.log('✅ Spine对象加载成功!')
-      return
-    }
-
-    console.log('❌ pixi-spine原生加载失败，回退到自定义解析...')
-    throw new Error('pixi-spine原生加载失败')
-
-  } catch (error) {
-    console.error('❌ pixi-spine动画加载失败:', error)
-    // 显示错误状态
-    animations.value = []
-    currentAnimation.value = ''
+    console.error('❌ 加载示例动画失败:', error)
+    // 出错时重置 spineLoaded
     spineLoaded.value = false
-
-    // 可以选择创建占位符显示
-    await createPlaceholderDisplay(app)
   }
 }
 
-// 解析图集文件
-const parseAtlasFile = (atlasText) => {
-  try {
-    const lines = atlasText.split('\n').filter(line => line.trim())
-    const regions = []
 
-    console.log('🗺️ 解析图集文件:', lines.length, '行')
-
-    let currentRegion = null
-    let regionCount = 0
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i].trim()
-
-      if (!line) continue
-
-      if (!line.startsWith(' ') && !line.startsWith('\t')) {
-        // 新的区域名称
-        if (currentRegion) {
-          regions.push(currentRegion)
-          regionCount++
-        }
-        currentRegion = { name: line }
-      } else if (currentRegion && line.includes(':')) {
-        // 区域属性
-        const [key, value] = line.split(':').map(s => s.trim())
-        if (key && value) {
-          currentRegion[key] = value
-        }
-      }
-    }
-
-    // 添加最后一个区域
-    if (currentRegion) {
-      regions.push(currentRegion)
-      regionCount++
-    }
-
-    console.log('✅ 图集解析完成:', regionCount, '个区域')
-    return { regions, regionCount }
-
-  } catch (error) {
-    console.warn('⚠️ 图集解析失败:', error.message)
-    return { regions: [], regionCount: 0 }
-  }
-}
-
-// 解析二进制Spine数据的简化版本
-const parseBinarySpineData = (buffer) => {
-  try {
-    const view = new DataView(buffer)
-    const animations = []
-    const bones = []
-
-    // 尝试从二进制数据中提取动画名称
-    // 这是一个简化的解析，实际Spine二进制格式更复杂
-    const text = new TextDecoder('utf-8', { fatal: false }).decode(buffer)
-
-    // 查找常见的动画名称模式
-    const commonAnimations = ['idle', 'walk', 'run', 'jump', 'attack', 'death', 'aim', 'shoot']
-    commonAnimations.forEach(animName => {
-      if (text.toLowerCase().includes(animName)) {
-        animations.push({ name: animName, duration: 1000 })
-      }
-    })
-
-    // 如果没有找到动画，添加默认动画
-    if (animations.length === 0) {
-      animations.push({ name: 'idle', duration: 1000 })
-    }
-
-    return {
-      animations,
-      bones,
-      rawData: buffer
-    }
-  } catch (error) {
-    console.warn('⚠️ 二进制Spine数据解析失败，使用默认数据:', error.message)
-    return {
-      animations: [{ name: 'idle', duration: 1000 }],
-      bones: [],
-      rawData: buffer
-    }
-  }
-}
-
-// 从文件加载纹理
-const loadTextureFromFile = async (imageFile, PIXI) => {
-  try {
-    console.log('🔄 加载纹理文件:', imageFile.name)
-
-    const fileContent = await readFileAsArrayBuffer(imageFile)
-    const blob = new Blob([fileContent], { type: 'image/png' })
-    const blobUrl = URL.createObjectURL(blob)
-
-    let texture = null
-
-    // 尝试多种方法加载纹理
-    try {
-      // 方法1: 使用PIXI.Texture.fromURL (如果存在)
-      if (typeof PIXI.Texture.fromURL === 'function') {
-        texture = await PIXI.Texture.fromURL(blobUrl)
-        console.log('✅ 方法1成功: PIXI.Texture.fromURL')
-      } else {
-        throw new Error('PIXI.Texture.fromURL not available')
-      }
-    } catch (method1Error) {
-      console.warn('⚠️ 方法1失败:', method1Error.message)
-
-      try {
-        // 方法2: 使用PIXI.Assets.load
-        const loadedAsset = await PIXI.Assets.load(blobUrl)
-        texture = loadedAsset.texture || loadedAsset || PIXI.Texture.WHITE
-        console.log('✅ 方法2成功: PIXI.Assets.load')
-      } catch (method2Error) {
-        console.warn('⚠️ 方法2失败:', method2Error.message)
-
-        // 方法3: 使用Canvas创建纹理
-        if (typeof window !== 'undefined' && window.Image) {
-          const image = new window.Image()
-          image.src = blobUrl
-          await new Promise((resolve, reject) => {
-            image.onload = () => {
-              const canvas = document.createElement('canvas')
-              const ctx = canvas.getContext('2d')
-              canvas.width = image.width
-              canvas.height = image.height
-              ctx.drawImage(image, 0, 0)
-
-              try {
-                texture = PIXI.Texture.from(canvas)
-                console.log('✅ 方法3成功: Canvas纹理创建')
-                resolve()
-              } catch (canvasError) {
-                const colorCanvas = document.createElement('canvas')
-                colorCanvas.width = 100
-                colorCanvas.height = 100
-                const colorCtx = colorCanvas.getContext('2d')
-                colorCtx.fillStyle = '#4ade80'
-                colorCtx.fillRect(0, 0, 100, 100)
-
-                texture = PIXI.Texture.from(colorCanvas)
-                console.log('✅ 方法3回退: 彩色矩形纹理')
-                resolve()
-              }
-            }
-            image.onerror = reject
-          })
-        } else {
-          texture = PIXI.Texture.WHITE
-          console.log('✅ 使用白色占位符纹理')
-        }
-      }
-    }
-
-    console.log('✅ 纹理加载完成:', {
-      width: texture.width,
-      height: texture.height,
-      valid: texture.valid
-    })
-
-    return texture
-  } catch (error) {
-    console.warn('⚠️ 纹理加载失败，使用白色占位符:', error.message)
-    return PIXI.Texture.WHITE
-  }
-}
-
-// 创建真实Spine动画容器
-// 创建pixi-spine原生动画对象
-const createNativeSpineObject = async (app, skeletonFile, atlasFile, imageFiles) => {
-  try {
-    console.log('🎭 创建pixi-spine原生动画对象...')
-
-    // 动态导入PIXI和pixi-spine
-    const PIXI = await import('pixi.js')
-    const pixiSpine = await import('pixi-spine')
-
-    console.log('📦 库加载状态:', {
-      PIXI: !!PIXI,
-      pixiSpine: !!pixiSpine,
-      Spine: !!pixiSpine.Spine
-    })
-
-    if (!atlasFile || imageFiles.length === 0) {
-      throw new Error('缺少图集文件或图片文件')
-    }
-
-    // 解析图集文件
-    const atlasText = await readFileAsText(atlasFile)
-    console.log('📖 图集文件解析完成')
-
-    // 加载图片纹理 - 使用多种方法
-    const imageUrl = URL.createObjectURL(imageFiles[0])
-    let texture = null
-
-    try {
-      // 方法1: 使用PIXI.Texture.fromURL
-      texture = await PIXI.Texture.fromURL(imageUrl)
-      console.log('✅ 方法1成功: PIXI.Texture.fromURL')
-    } catch (error1) {
-      console.warn('⚠️ 方法1失败:', error1.message)
-
-      try {
-        // 方法2: 使用PIXI.Assets.load 但先注册解析器
-        const blob = await fetch(imageUrl).then(r => r.blob())
-        const imageBitmap = await createImageBitmap(blob)
-        texture = PIXI.Texture.from(imageBitmap)
-        console.log('✅ 方法2成功: ImageBitmap')
-      } catch (error2) {
-        console.warn('⚠️ 方法2失败:', error2.message)
-
-        try {
-          // 方法3: 使用HTML Image元素
-          const img = new Image()
-          await new Promise((resolve, reject) => {
-            img.onload = resolve
-            img.onerror = reject
-            img.src = imageUrl
-          })
-          texture = PIXI.Texture.from(img)
-          console.log('✅ 方法3成功: HTML Image')
-        } catch (error3) {
-          console.warn('⚠️ 方法3失败:', error3.message)
-
-          // 方法4: 创建一个简单的占位符纹理
-          const canvas = document.createElement('canvas')
-          canvas.width = 256
-          canvas.height = 256
-          const ctx = canvas.getContext('2d')
-          ctx.fillStyle = '#4ade80'
-          ctx.fillRect(0, 0, 256, 256)
-          texture = PIXI.Texture.from(canvas)
-          console.log('✅ 方法4: 使用占位符纹理')
-        }
-      }
-    }
-
-    console.log('🖼️ 图片纹理加载完成:', { width: texture.width, height: texture.height })
-
-    // 解析骨架数据
-    let spineData
-    if (skeletonFile) {
-      if (skeletonFile.name.endsWith('.json') || skeletonFile.name.endsWith('.spine')) {
-        const skeletonText = await readFileAsText(skeletonFile)
-        spineData = JSON.parse(skeletonText)
-        console.log('✅ JSON骨架数据解析成功')
-      } else {
-        console.log('⚠️ 二进制.skel文件暂不支持原生解析')
-        return null
-      }
-    }
-
-    if (!spineData) {
-      console.log('❌ 缺少骨架数据')
-      return null
-    }
-
-    // 方法1: 使用原生pixi-spine构造函数
-    try {
-      console.log('🔄 尝试使用pixi-spine原生构造函数...')
-
-      // 先将纹理添加到缓存，使用文件名作为键
-      const imageFileName = imageFiles[0].name
-      PIXI.utils.TextureCache[imageFileName] = texture
-
-      // 修改spineData，确保图片引用正确
-      if (spineData.skins) {
-        Object.values(spineData.skins).forEach(skin => {
-          if (skin.attachments) {
-            Object.values(skin.attachments).forEach(slotMap => {
-              Object.values(slotMap).forEach(attachment => {
-                if (attachment && attachment.path) {
-                  // 确保附件路径正确
-                  if (!attachment.path.includes('.')) {
-                    attachment.path = imageFileName
-                  }
-                }
-              })
-            })
-          }
-        })
-      }
-
-      // 创建原生Spine对象
-      const spineObject = new pixiSpine.Spine(spineData, atlasText)
-
-      console.log('✅ pixi-spine原生对象创建成功!')
-      console.log('📊 对象属性:', {
-        hasState: !!spineObject.state,
-        hasSkeleton: !!spineObject.skeleton,
-        animations: spineObject.skeleton.data.animations?.map(a => a.name) || []
-      })
-
-      // 设置位置
-      spineObject.x = app.screen.width / 2
-      spineObject.y = app.screen.height / 2
-
-      // 添加到舞台
-      app.stage.addChild(spineObject)
-
-      return spineObject
-
-    } catch (nativeError) {
-      console.log('❌ 原生构造函数失败:', nativeError.message)
-
-      // 方法2: 尝试使用简化数据
-      try {
-        console.log('🔄 尝试简化数据...')
-
-        // 创建最简化的spine数据
-        const simplifiedData = {
-          skeleton: {
-            bones: spineData.bones || [],
-            slots: spineData.slots || [],
-            skins: spineData.skins || {},
-            width: spineData.width || 500,
-            height: spineData.height || 500,
-            version: spineData.version || "3.8",
-            hash: spineData.hash || ""
-          },
-          animations: spineData.animations || {}
-        }
-
-        // 尝试再次创建
-        const spineObject = new pixiSpine.Spine(simplifiedData, atlasText)
-
-        console.log('✅ 简化数据Spine对象创建成功!')
-
-        // 设置位置
-        spineObject.x = app.screen.width / 2
-        spineObject.y = app.screen.height / 2
-
-        // 添加到舞台
-        app.stage.addChild(spineObject)
-
-        return spineObject
-
-      } catch (manualError) {
-        console.log('❌ 简化数据也失败:', manualError.message)
-      }
-    }
-
-    // 方法3: 创建一个基于纹理的回退显示
-    try {
-      console.log('🔄 创建基于纹理的回退显示...')
-
-      // 创建一个容器来显示纹理
-      const spineContainer = new PIXI.Container()
-
-      // 添加纹理精灵
-      const sprite = new PIXI.Sprite(texture)
-      sprite.anchor.set(0.5)
-
-      // 调整大小以适应画布
-      const maxDimension = Math.max(sprite.width, sprite.height)
-      if (maxDimension > 400) {
-        sprite.scale.set(400 / maxDimension)
-      }
-
-      spineContainer.addChild(sprite)
-
-      // 附加原始数据以供动画列表提取
-      spineContainer._spineData = spineData
-
-      // 添加模拟的Spine属性
-      spineContainer.state = {
-        setAnimation: (trackIndex, animationName, loop) => {
-          console.log('🎬 回退模式设置动画:', animationName)
-        },
-        data: { skeletonData: { animations: [] } }
-      }
-
-      spineContainer.skeleton = {
-        data: { animations: [] },
-        bones: [],
-        findBone: () => ({ x: 0, y: 0, rotation: 0 }),
-        updateWorldTransform: () => {}
-      }
-
-      // 添加简单的动画效果
-      let time = 0
-      app.ticker.add(() => {
-        time += 0.016
-        sprite.rotation = Math.sin(time) * 0.1
-        sprite.scale.set(1 + Math.sin(time * 2) * 0.05)
-      })
-
-      // 设置位置
-      spineContainer.x = app.screen.width / 2
-      spineContainer.y = app.screen.height / 2
-
-      // 添加到舞台
-      app.stage.addChild(spineContainer)
-
-      console.log('✅ 回退显示创建成功!')
-      return spineContainer
-
-    } catch (fallbackError) {
-      console.log('❌ 回退显示也失败:', fallbackError.message)
-    }
-
-    return null
-
-  } catch (error) {
-    console.error('❌ 创建pixi-spine原生对象失败:', error)
-    return null
-  }
-}
-
-// 创建占位符显示
-const createPlaceholderDisplay = async (app) => {
-  console.log('🎭 创建占位符动画显示')
-
-  // 确保PIXI可用
-  const PIXI = await import('pixi.js')
-
-  if (!app && pixiApp) {
-    app = pixiApp
-  }
-
-  const container = new PIXI.Container()
-
-  // 创建一个简单的占位符动画
-  const placeholder = new PIXI.Graphics()
-  placeholder.circle(0, 0, 40)
-  placeholder.fill(0x6366f1)
-  placeholder.stroke({ color: 0xffffff, width: 2 })
-
-  const text = new PIXI.Text({
-    text: 'Spine文件\n未找到或解析失败',
-    style: {
-      fontFamily: 'Arial, sans-serif',
-      fontSize: 14,
-      fill: 0xffffff,
-      align: 'center'
-    }
-  })
-  text.anchor.set(0.5)
-  container.addChild(placeholder)
-  container.addChild(text)
-
-  spineObject = container
-  spineObject.x = app.screen.width / 2
-  spineObject.y = app.screen.height / 2
-
-  app.stage.addChild(spineObject)
-
-  // 简单动画
-  app.ticker.add(() => {
-    if (isPlaying.value && spineObject) {
-      const time = Date.now() * 0.001
-      placeholder.scale.set(1 + Math.sin(time * playSpeed.value) * 0.2)
-    }
-  })
-}
 
 // 动画控制方法
 const playAnimation = (animationName) => {
   currentAnimation.value = animationName
   console.log('🎬 播放动画:', animationName)
+  console.log('📊 Spine Player 状态检查:', {
+    spinePlayer: !!spinePlayer,
+    hasSetAnimation: spinePlayer?.setAnimation ? true : false,
+    spineLoaded: spineLoaded.value,
+    isLoading: isLoading.value
+  })
 
-  // 如果有增强的Spine对象，切换动画
-  if (spineObject && spineObject.state) {
+  // 使用 Spine Player 播放动画
+  if (spinePlayer && spinePlayer.setAnimation) {
     try {
-      // 使用增强的Spine API设置动画
-      spineObject.state.setAnimation(0, animationName, true)
+      spinePlayer.setAnimation(animationName)
 
-      // 添加调试信息
-      console.log('✅ 动画切换成功:', {
-        动画名称: animationName,
-        对象类型: spineObject.constructor?.name,
-        动画状态: spineObject._currentAnimation,
-        暂停状态: spineObject._animationPaused,
-        播放状态: isPlaying.value,
-        播放速度: playSpeed.value
-      })
-
-      // 确保动画立即开始显示效果
-      if (!isPlaying.value) {
+      // 如果当前是暂停状态，开始播放
+      if (!isPlaying.value && spinePlayer.play) {
+        spinePlayer.play()
         isPlaying.value = true
-        console.log('🟢 自动开始播放动画')
       }
 
+      console.log('✅ 动画切换成功:', animationName)
     } catch (error) {
       console.error('❌ 动画切换失败:', error)
-      console.log('🔍 Spine对象状态检查:', {
-        hasState: !!spineObject.state,
-        hasSkeleton: !!spineObject.skeleton,
-        stateType: typeof spineObject.state,
-        stateSetAnimation: typeof spineObject.state?.setAnimation,
-        currentAnimation: spineObject._currentAnimation,
-        isPaused: spineObject._animationPaused
-      })
     }
-  } else if (spineObject) {
-    console.log('🔍 Spine对象缺少state属性:', {
-      对象存在: !!spineObject,
-      对象类型: spineObject.constructor?.name,
-      可用属性: Object.keys(spineObject).slice(0, 15), // 显示更多属性
-      hasAnimation: 'animation' in spineObject,
-      hasState: 'state' in spineObject,
-      hasSkeleton: 'skeleton' in spineObject
-    })
   } else {
-    console.log('⚠️ 没有可用的Spine对象来播放动画')
+    console.log('⚠️ Spine Player 不可用')
+
+    // 尝试等待一下 Spine Player 初始化
+    if (spineLoaded.value && !spinePlayer) {
+      console.log('🔄 spineLoaded 为 true 但 spinePlayer 为 null，尝试等待初始化...')
+      setTimeout(() => {
+        if (spinePlayer) {
+          console.log('✅ Spine Player 已初始化，重新尝试播放动画')
+          playAnimation(animationName)
+        } else {
+          console.error('❌ Spine Player 初始化超时')
+        }
+      }, 1000)
+    }
   }
 }
 
@@ -1473,69 +1402,37 @@ const togglePlay = () => {
   isPlaying.value = !isPlaying.value
   console.log('🎮', isPlaying.value ? '开始播放动画' : '暂停播放动画', '速度:', playSpeed.value + 'x')
 
-  // 如果有增强的Spine对象，控制播放状态
-  if (spineObject && spineObject.state) {
+  // 使用 Spine Player 控制播放
+  if (spinePlayer) {
     try {
       if (isPlaying.value) {
-        // 使用当前选择的动画，如果没有则使用第一个可用动画
-        const animationToPlay = currentAnimation.value || (animations.value.length > 0 ? animations.value[0] : 'idle')
-
-        // 设置动画和速度
-        spineObject.state.setAnimation(0, animationToPlay, true)
-        spineObject.state.timeScale = playSpeed.value
-
-        // 确保动画不处于暂停状态
-        spineObject._animationPaused = false
-
-        console.log('✅ 增强Spine动画开始播放:', {
-          动画名称: animationToPlay,
-          播放速度: playSpeed.value,
-          对象类型: spineObject.constructor?.name
-        })
+        // 如果有当前动画，设置并播放
+        if (currentAnimation.value && spinePlayer.setAnimation) {
+          spinePlayer.setAnimation(currentAnimation.value)
+        }
+        if (spinePlayer.play) {
+          spinePlayer.play()
+        }
+        console.log('✅ Spine Player 开始播放')
       } else {
-        // 暂停动画但不完全清除轨道
-        spineObject._animationPaused = true
-        console.log('⏸️ 增强Spine动画已暂停 (保留动画状态)')
+        if (spinePlayer.pause) {
+          spinePlayer.pause()
+        }
+        console.log('⏸️ Spine Player 已暂停')
       }
     } catch (error) {
-      console.error('❌ 增强Spine播放状态更新失败:', error)
-      console.log('🔍 详细状态信息:', {
-        hasState: !!spineObject.state,
-        stateType: typeof spineObject.state,
-        availableAnimations: animations.value,
-        currentAnimation: currentAnimation.value,
-        isPaused: spineObject._animationPaused
-      })
+      console.error('❌ Spine Player 播放控制失败:', error)
     }
-  } else if (spineObject) {
-    console.log('🔍 增强Spine对象状态检查 (无state):', {
-      存在: !!spineObject,
-      类型: spineObject.constructor?.name,
-      有状态: !!spineObject.state,
-      有骨架: !!spineObject.skeleton,
-      暂停状态: spineObject._animationPaused,
-      当前动画: spineObject._currentAnimation,
-      可用属性: Object.keys(spineObject).slice(0, 12)
-    })
-  }
-
-  // 确保在播放时动画能立即开始
-  if (isPlaying.value && spineObject) {
-    console.log('📊 播放状态确认:', {
-      spineObject存在: !!spineObject,
-      动画列表: animations.value,
-      当前动画: currentAnimation.value,
-      播放速度: playSpeed.value,
-      动画暂停状态: spineObject._animationPaused
-    })
+  } else {
+    console.log('⚠️ Spine Player 不可用')
   }
 }
 
 // 监听播放速度变化
 watch(playSpeed, (newSpeed) => {
-  if (spineObject && spineObject.state && isPlaying.value) {
+  if (spinePlayer && spinePlayer.setTimeScale && isPlaying.value) {
     try {
-      spineObject.state.timeScale = newSpeed
+      spinePlayer.setTimeScale(newSpeed)
       console.log('⚡ 动画速度更新:', newSpeed)
     } catch (error) {
       console.error('❌ 动画速度更新失败:', error)
@@ -1544,99 +1441,17 @@ watch(playSpeed, (newSpeed) => {
 })
 
 
-// 视图控制方法
+// 视图控制方法 - Spine Player 不支持直接的缩放和平移
 const zoomIn = () => {
-  zoomLevel.value = Math.min(zoomLevel.value + 0.2, 3.0)
-  updateViewTransform()
+  console.log('⚠️ Spine Player 暂不支持缩放功能')
 }
 
 const zoomOut = () => {
-  zoomLevel.value = Math.max(zoomLevel.value - 0.2, 0.1)
-  updateViewTransform()
+  console.log('⚠️ Spine Player 暂不支持缩放功能')
 }
 
 const resetZoom = () => {
-  zoomLevel.value = 1.0
-  panOffset.value = { x: 0, y: 0 }
-  updateViewTransform()
-}
-
-const updateViewTransform = () => {
-  if (spineObject && pixiApp) {
-    spineObject.scale.set(zoomLevel.value)
-    spineObject.x = (pixiApp.screen.width / 2) + panOffset.value.x
-    spineObject.y = (pixiApp.screen.height / 2) + panOffset.value.y
-    console.log('🔄 视图变换已更新:', {
-      缩放: zoomLevel.value,
-      位置: { x: spineObject.x, y: spineObject.y }
-    })
-  }
-}
-
-// 鼠标事件处理
-const handleMouseDown = (event) => {
-  if (event.button === 0) { // 左键
-    isViewDragging.value = true
-    dragStart.value = { x: event.clientX, y: event.clientY }
-    lastPanStart.value = { ...panOffset.value }
-    event.preventDefault()
-  }
-}
-
-const handleMouseMove = (event) => {
-  if (isViewDragging.value) {
-    const deltaX = event.clientX - dragStart.value.x
-    const deltaY = event.clientY - dragStart.value.y
-    panOffset.value = {
-      x: lastPanStart.value.x + deltaX,
-      y: lastPanStart.value.y + deltaY
-    }
-    updateViewTransform()
-  }
-}
-
-const handleMouseUp = () => {
-  isViewDragging.value = false
-}
-
-const handleWheel = (event) => {
-  event.preventDefault()
-  const delta = event.deltaY > 0 ? -0.1 : 0.1
-  const newZoom = Math.max(0.1, Math.min(3.0, zoomLevel.value + delta))
-
-  // 以鼠标位置为中心进行缩放
-  if (pixiApp && spineObject) {
-    const canvasContainer = document.getElementById('canvas-container')
-    if (!canvasContainer) return
-
-    const rect = canvasContainer.getBoundingClientRect()
-    const mouseX = event.clientX - rect.left
-    const mouseY = event.clientY - rect.top
-
-    // 计算缩放前的偏移量
-    const worldX = (mouseX - spineObject.x) / zoomLevel.value
-    const worldY = (mouseY - spineObject.y) / zoomLevel.value
-
-    // 更新缩放级别
-    zoomLevel.value = newZoom
-
-    // 计算缩放后的偏移量，使鼠标位置保持不变
-    spineObject.x = mouseX - worldX * zoomLevel.value
-    spineObject.y = mouseY - worldY * zoomLevel.value
-    spineObject.scale.set(zoomLevel.value)
-
-    // 更新偏移量
-    panOffset.value = {
-      x: spineObject.x - (pixiApp.screen.width / 2),
-      y: spineObject.y - (pixiApp.screen.height / 2)
-    }
-
-    console.log('🖱️ 鼠标滚轮缩放:', {
-      新缩放: zoomLevel.value,
-      鼠标位置: { x: mouseX, y: mouseY },
-      对象位置: { x: spineObject.x, y: spineObject.y }
-    })
-  }
+  console.log('⚠️ Spine Player 暂不支持缩放功能')
 }
 
 // 全屏方法
@@ -1665,6 +1480,31 @@ const readFileAsText = (file) => {
   })
 }
 
+// 读取文件为DataURL（Base64）
+const readFileAsDataURL = (file) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = (e) => resolve(e.target.result)
+    reader.onerror = (e) => reject(e)
+    reader.readAsDataURL(file)
+  })
+}
+
+// 获取文件类型图标
+const getFileIcon = (fileName) => {
+  const extension = fileName.split('.').pop().toLowerCase()
+  const iconMap = {
+    'json': '📄',
+    'spine': '🦴',
+    'skel': '🦴',
+    'atlas': '📋',
+    'png': '🖼️',
+    'jpg': '🖼️',
+    'jpeg': '🖼️'
+  }
+  return iconMap[extension] || '📁'
+}
+
 const readFileAsArrayBuffer = (file) => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
@@ -1679,52 +1519,6 @@ watch(isLoading, async (newValue, oldValue) => {
   console.log('🔄 isLoading 状态变化:', { from: oldValue, to: newValue })
 })
 
-// 监听 spineLoaded 状态变化
-watch(spineLoaded, async (newValue, oldValue) => {
-  console.log('🔄 spineLoaded 状态变化:', { from: oldValue, to: newValue })
-  console.log('📊 当前状态:', {
-    spineLoaded: spineLoaded.value,
-    isLoading: isLoading.value,
-    animations: animations.value.length
-  })
-
-  if (newValue === true) {
-    // 当 spineLoaded 变为 true 时，等待 DOM 更新
-    await nextTick()
-
-    // 多次尝试检查DOM是否可用
-    let attempts = 0
-    const maxAttempts = 20
-    const checkInterval = 50
-
-    const checkDOM = async () => {
-      attempts++
-      const container = document.getElementById('canvas-container')
-      const canvas = document.getElementById('spine-canvas')
-
-      console.log(`🔍 Watcher第${attempts}次DOM检查:`, {
-        container: !!container,
-        canvas: !!canvas,
-        isLoading: isLoading.value
-      })
-
-      if (container && canvas) {
-        console.log('✅ Watcher找到DOM元素，开始初始化显示')
-        try {
-          await initializeSimpleDisplay()
-        } catch (error) {
-          console.error('❌ 显示初始化失败:', error)
-        }
-      } else if (attempts < maxAttempts) {
-        setTimeout(checkDOM, checkInterval)
-      } else {
-        console.error('❌ Watcher DOM元素等待超时')
-      }
-    }
-
-    checkDOM()
-  }
-})
 
 // 生命周期
 onMounted(async () => {
@@ -1740,35 +1534,22 @@ onMounted(async () => {
 
   console.log('🚀 Spine动画编辑器组件已挂载')
 
-  // 检查基础环境
-  const webglSupported = (() => {
-    try {
-      const canvas = document.createElement('canvas')
-      return !!(canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
-    } catch (e) {
-      return false
-    }
-  })()
+  // 等待 Spine Player 加载
+  await waitForSpinePlayer()
 
-  console.log('📋 环境检查:', {
-    WebGL: webglSupported ? '✅ 支持' : '❌ 不支持',
-    PIXI: '📦 将动态导入',
-    pixiSpine: '📦 将动态导入',
-    浏览器: navigator.userAgent.split(' ')[0]
-  })
-
-  // 预热依赖库（可选，不阻塞初始化）
-  try {
-    console.log('🔥 预热依赖库...')
-    // 这里可以预热依赖库，但不阻塞组件挂载
-  } catch (error) {
-    console.log('⚠️ 依赖预热失败，将在需要时加载:', error.message)
-  }
+  // 显示默认示例动画
+  setTimeout(() => {
+    showDefaultAnimation()
+  }, 500)
 })
 
 onUnmounted(() => {
-  if (pixiApp) {
-    pixiApp.destroy(true)
+  if (spinePlayer) {
+    spinePlayer.dispose()
+    spinePlayer = null
   }
+  // 清理所有创建的 URL 对象
+  createdUrls.value.forEach(url => URL.revokeObjectURL(url))
+  createdUrls.value = []
 })
 </script>

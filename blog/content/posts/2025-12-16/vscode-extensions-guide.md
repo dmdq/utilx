@@ -1148,8 +1148,3 @@ VS Code扩展开发为开发者提供了强大的定制化能力。通过本文�
 记住，好的扩展应该解决实际问题、提供良好的用户体验，并且保持稳定和高效。开始你的VS Code扩展开发之旅吧！
 
 ---
-
-**相关工具推荐：**
-- [VS Code扩展生成器](https://www.util.cn/tools/vscode-extension-generator/)
-- [TypeScript编译器](https://www.util.cn/tools/typescript-compiler/)
-- [JSON格式化工具](https://www.util.cn/tools/json-formatter/)

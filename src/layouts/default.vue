@@ -202,6 +202,9 @@
 
     <!-- 通知组件 -->
     <Notification />
+
+    <!-- 快捷工具 -->
+    <QuickTools />
   </div>
 
   
@@ -218,6 +221,7 @@ import GlobalSearch from '~/components/GlobalSearch.vue'
 import Breadcrumb from '~/components/Breadcrumb.vue'
 import PWAInstallPrompt from '~/components/PWAInstallPrompt.vue'
 import Notification from '~/components/Notification.vue'
+import QuickTools from '~/components/QuickTools.vue'
 import { siteConfig } from '~/data/site'
 import { categories } from '~/data/categories'
 import { tools } from '~/data/tools'
@@ -267,7 +271,8 @@ const currentToolName = computed(() => {
     '/feedback/': '提交反馈',
     '/cookie/': 'Cookie政策',
     '/faq/': '常见问题',
-    '/sitemap/': '站点地图'
+    '/sitemap/': '站点地图',
+     '/tags/': '标签导航'
   }
 
   if (route && staticPages[route.path]) {
@@ -314,7 +319,8 @@ const pageTitle = computed(() => {
     '/feedback/': '提交反馈',
     '/cookie/': 'Cookie政策',
     '/faq/': '常见问题',
-    '/sitemap/': '站点地图'
+    '/sitemap/': '站点地图',
+    '/tags/': '标签导航'
   }
 
   if (route && staticPages[route.path]) {
@@ -323,6 +329,26 @@ const pageTitle = computed(() => {
 
   if (route && specialPages[route.path]) {
     return specialPages[route.path]
+  }
+
+  // 检查是否是标签详情页
+  if (route && route.path.startsWith('/tag/') && route.path.endsWith('/')) {
+    const pathParts = route.path.split('/').filter(part => part)
+    if (pathParts.length >= 2) {
+      const tagId = pathParts[1]
+      // 从标签数据中获取标签名称，使用同步导入
+      try {
+        const { getTagInfo } = require('~/data/tags')
+        const tagInfo = getTagInfo(tagId)
+        if (tagInfo.name) {
+          return `${tagInfo.name}标签`
+        }
+      } catch (error) {
+        console.warn('Failed to load tag info:', error)
+      }
+      // 如果获取失败，使用标签ID并格式化
+      return tagId.charAt(0).toUpperCase() + tagId.slice(1) + '标签'
+    }
   }
 
   return ''
@@ -334,10 +360,10 @@ const showBreadcrumbs = computed(() => {
   if (route && route.path === '/') return false
 
   // 检查是否是分类页面
-  const categoryPages = ['/ai/', '/crypto/', '/dev/', '/encode/', '/format/', '/image/', '/network/', '/text/', '/time/', '/all/', '/sitemap/']
+  const categoryPages = ['/ai/', '/crypto/', '/dev/', '/encode/', '/format/', '/image/', '/network/', '/text/', '/time/', '/all/', '/sitemap/', '/tags/']
 
-  // 如果是分类页面或有分类名称或工具名称或页面标题，则显示面包屑
-  return categoryPages.includes(route.path) || currentCategoryName.value !== '' || currentToolName.value !== '' || pageTitle.value !== ''
+  // 如果是分类页面、标签页面、标签详情页或有分类名称或工具名称或页面标题，则显示面包屑
+  return categoryPages.includes(route.path) || route.path.startsWith('/tag/') || currentCategoryName.value !== '' || currentToolName.value !== '' || pageTitle.value !== ''
 })
 
 // 监听路由变化来更新当前分类
@@ -411,15 +437,81 @@ const copyWidgetContent = async () => {
       break
   }
 
+  // 优先使用现代 Clipboard API
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(contentToCopy)
+      copySuccess.value = true
+      setTimeout(() => {
+        copySuccess.value = false
+      }, 2000)
+      return
+    } catch (err) {
+      console.warn('Clipboard API 失败，尝试备用方案:', err)
+    }
+  }
+
+  // 降级方案：使用传统的 document.execCommand
   try {
-    await navigator.clipboard.writeText(contentToCopy)
-    copySuccess.value = true
-    setTimeout(() => {
-      copySuccess.value = false
-    }, 2000)
+    const textArea = document.createElement('textarea')
+    textArea.value = contentToCopy
+    textArea.style.position = 'fixed'
+    textArea.style.left = '-999999px'
+    textArea.style.top = '-999999px'
+    document.body.appendChild(textArea)
+    textArea.focus()
+    textArea.select()
+
+    const successful = document.execCommand('copy')
+    document.body.removeChild(textArea)
+
+    if (successful) {
+      copySuccess.value = true
+      setTimeout(() => {
+        copySuccess.value = false
+      }, 2000)
+    } else {
+      throw new Error('复制命令执行失败')
+    }
   } catch (err) {
     console.error('复制失败:', err)
+    // 作为最后的备用方案，显示内容让用户手动复制
+    showFallbackCopy(contentToCopy)
   }
+}
+
+// 备用复制方案：显示内容供用户手动复制
+const showFallbackCopy = (content) => {
+  // 创建一个临时的模态框显示内容
+  const modal = document.createElement('div')
+  modal.style.cssText = `
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 9999;
+    max-width: 90%;
+    text-align: center;
+  `
+
+  modal.innerHTML = `
+    <div style="margin-bottom: 10px; font-weight: bold;">请手动复制以下内容:</div>
+    <div style="padding: 10px; background: #f5f5f5; border-radius: 4px; margin-bottom: 15px; word-break: break-all; font-family: monospace;">${content}</div>
+    <button onclick="this.parentElement.remove()" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">关闭</button>
+  `
+
+  document.body.appendChild(modal)
+
+  // 3秒后自动关闭
+  setTimeout(() => {
+    if (modal.parentElement) {
+      modal.remove()
+    }
+  }, 3000)
 }
 
 // 更新时间戳
@@ -565,6 +657,23 @@ onMounted(() => {
 
   // 监听路由变化
   watch(() => route.path, (newPath, oldPath) => {
+    // 路由切换时滚动到顶部
+    if (newPath !== oldPath) {
+      const scrollContainer = document.getElementById('scrollContainer')
+      if (scrollContainer) {
+        scrollContainer.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
+      } else {
+        // 备用方案：window 滚动
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
+      }
+    }
+
     // 离开首页时清理打字效果
     if (oldPath === '/' && newPath !== '/') {
       clearTypewriterTimer()

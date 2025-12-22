@@ -394,7 +394,4 @@ Vue 3的响应式系统通过Proxy带来了以下改进：
 
 ---
 
-**相关文章：**
-- [Vue 3 Composition API使用指南](/vue3-composition-api-guide/)
-- [前端性能优化实战](/frontend-performance-optimization/)
-- [TypeScript最佳实践](/typescript-best-practices/)
+

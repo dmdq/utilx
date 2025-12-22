@@ -492,9 +492,127 @@
 
 <script setup>
 import { ref, reactive, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { Info, Calculator, TrendingUp, Target, AlertTriangle, CheckCircle, ChevronDown, Gift } from 'lucide-vue-next'
-import RelatedTools from '~/components/RelatedTools.vue'
-import SeoContent from '~/components/SeoContent.vue'
+import { tools } from '~/data/tools'
+import { categories } from '~/data/categories'
+import { addRecentTool } from '~/composables/useTools'
+
+definePageMeta({
+  layout: 'default'
+})
+
+// SEO配置
+useSeoMeta({
+  title: '年终奖计算器 - 个税计算与发放优化方案 | Util工具箱',
+  description: '专业年终奖个税计算工具，支持单独计税和综合计税两种模式，提供最优发放策略和合法节税方案。智能避税率陷阱，帮您最大化年终奖收入。',
+  keywords: '年终奖计算器,年终奖个税,个税计算,税率陷阱,节税优化,年终奖发放方案,个税筹划,合法避税',
+  author: 'Util工具箱',
+  ogTitle: '年终奖计算器 - 专业个税优化与节税工具',
+  ogDescription: '精确计算年终奖个税，提供最优发放策略，合法节税。智能避税率陷阱，帮您最大化年终奖收入。',
+  ogImage: 'https://util.cn/images/tools/year-end-bonus-calculator.png',
+  ogUrl: 'https://util.cn/tools/year-end-bonus-calculator',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: '年终奖计算器 - 个税优化与发放方案分析',
+  twitterDescription: '专业年终奖个税计算工具，支持单独计税和综合计税，提供最优发放策略，合法节税。',
+  twitterImage: 'https://util.cn/images/tools/year-end-bonus-calculator.png'
+})
+
+// JSON-LD 结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: '年终奖计算器',
+            description: '专业年终奖个税计算工具，支持单独计税和综合计税，提供最优发放策略和合法节税方案',
+            url: 'https://util.cn/tools/year-end-bonus-calculator',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CNY'
+            },
+            featureList: [
+              '年终奖个税计算',
+              '单独计税优化',
+              '综合计税对比',
+              '税率陷阱识别',
+              '发放方案分析',
+              '节税策略建议',
+              '多方案对比',
+              '税后收入计算'
+            ]
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: '首页',
+                item: 'https://util.cn'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '工具',
+                item: 'https://util.cn/tools'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: '年终奖计算器',
+                item: 'https://util.cn/tools/year-end-bonus-calculator'
+              }
+            ]
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '年终奖个税如何计算？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '年终奖个税可选择单独计税或并入综合所得计税。单独计税时，将年终奖除以12个月，按月换算后确定税率和速算扣除数，然后按全额计算应纳税额。每个纳税年度只能使用一次单独计税优惠。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '什么是年终奖税率陷阱？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '年终奖税率陷阱是指在某些临界点附近，多发1元钱可能导致多交数千元个税的现象。主要出现在36000元、144000元、300000元、420000元、660000元、960000元等临界点。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '如何优化年终奖发放方案？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '优化年终奖发放：1）避开税率陷阱临界点；2）合理分配月薪和年终奖比例；3）考虑分拆发放；4）充分利用专项扣除；5）对比单独计税和综合计税效果；6）结合其他收入进行整体税务筹划。'
+                }
+              }
+            ]
+          }
+        ]
+      })
+    }
+  ]
+})
+
+const router = useRouter()
+
+// 定义当前工具和分类
+const tool = tools.find(t => t.id === 'year-end-bonus-calculator')
+const category = categories.find(c => c.id === 'finance')
 
 // 计算模式
 const calculationModes = [
@@ -893,6 +1011,11 @@ const toggleAllFAQs = () => {
 faqs.forEach(faq => {
   faq.isOpen = false
 })
+
+// 添加到最近使用
+if (tool) {
+  addRecentTool(tool.id)
+}
 
 // 计算初始结果
 calculateBonusTax()

@@ -21,7 +21,6 @@ const categoryMap = {
   'random': () => import('~/pages/category/random/index.vue'),
   'calculate': () => import('~/pages/category/calculate/index.vue'),
   'crypto': () => import('~/pages/category/crypto/index.vue'),
-  'data': () => import('~/pages/category/data/index.vue'),
   'design': () => import('~/pages/category/design/index.vue'),
   'dev': () => import('~/pages/category/dev/index.vue'),
   'encode': () => import('~/pages/category/encode/index.vue'),
@@ -30,11 +29,10 @@ const categoryMap = {
   'health': () => import('~/pages/category/health/index.vue'),
   'image': () => import('~/pages/category/image/index.vue'),
   'network': () => import('~/pages/category/network/index.vue'),
-  'productivity': () => import('~/pages/category/productivity/index.vue'),
+  'others': () => import('~/pages/category/others/index.vue'),
   'security': () => import('~/pages/category/security/index.vue'),
   'text': () => import('~/pages/category/text/index.vue'),
-  'time': () => import('~/pages/category/time/index.vue'),
-  'visualization': () => import('~/pages/category/visualization/index.vue')
+  'time': () => import('~/pages/category/time/index.vue')
 }
 
 // 获取对应的分类组件

@@ -465,8 +465,3 @@ TypeScript类型体操不仅仅是技术挑战，更是编程思维的锻炼。�
 记住，类型编程的目的是让代码更安全、更清晰。在追求类型技巧的同时，也要保持代码的可读性和可维护性。
 
 ---
-
-**相关资源：**
-- [TypeScript官方文档](https://www.typescriptlang.org/docs/)
-- [TypeScript类型体操挑战](https://github.com/type-challenges/type-challenges)
-- [TypeScript进阶技巧](/typescript-advanced-techniques/)

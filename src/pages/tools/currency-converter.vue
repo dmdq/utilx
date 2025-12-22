@@ -315,6 +315,112 @@ definePageMeta({
   layout: 'default'
 })
 
+// SEO配置
+useSeoMeta({
+  title: '汇率转换器 - 150+国家货币实时汇率换算工具 | Util工具箱',
+  description: '专业汇率转换工具，支持150+国家货币实时汇率转换、历史汇率查询和汇率走势分析。适用于出境旅游、国际贸易、跨境投资等场景，提供精准汇率计算。',
+  keywords: '汇率转换器,货币换算,实时汇率,外汇汇率,汇率查询,美元汇率,人民币汇率,欧元汇率,货币转换',
+  author: 'Util工具箱',
+  ogTitle: '汇率转换器 - 专业货币汇率换算工具',
+  ogDescription: '支持150+国家货币实时汇率转换，提供历史汇率查询和汇率走势分析。专业精准，操作简单，满足各种汇率换算需求。',
+  ogImage: 'https://util.cn/images/tools/currency-converter.png',
+  ogUrl: 'https://util.cn/tools/currency-converter',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: '汇率转换器 - 实时货币汇率换算',
+  twitterDescription: '专业汇率转换工具，支持150+国家货币实时换算，历史汇率查询，汇率走势分析，满足各类汇率需求。',
+  twitterImage: 'https://util.cn/images/tools/currency-converter.png'
+})
+
+// JSON-LD 结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: '汇率转换器',
+            description: '专业的汇率转换工具，支持150+国家货币实时汇率转换、历史汇率查询和汇率走势分析',
+            url: 'https://util.cn/tools/currency-converter',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CNY'
+            },
+            featureList: [
+              '150+国家货币支持',
+              '实时汇率转换',
+              '历史汇率查询',
+              '汇率走势分析',
+              '货币快速转换',
+              '汇率排名对比',
+              '汇率统计分析',
+              '数据导出功能'
+            ]
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: '首页',
+                item: 'https://util.cn'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '工具',
+                item: 'https://util.cn/tools'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: '汇率转换器',
+                item: 'https://util.cn/tools/currency-converter'
+              }
+            ]
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '什么是汇率？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '汇率是两种货币之间的兑换比率，表示一种货币用另一种货币表示的价格。例如，1美元=7.2人民币，表示1美元可以兑换7.2人民币。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '汇率为什么会波动？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '汇率波动受多种因素影响：1）国际贸易收支；2）利率差异；3）通货膨胀率；4）政治稳定性；5）央行政策干预；6）市场投机行为等。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '如何查询历史汇率？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '可以通过本工具的历史汇率查询功能，选择具体日期即可查询该日期的汇率。银行官网、金融数据网站和专业外汇平台也提供历史汇率查询服务。'
+                }
+              }
+            ]
+          }
+        ]
+      })
+    }
+  ]
+})
+
 const router = useRouter()
 
 // 定义当前工具和分类

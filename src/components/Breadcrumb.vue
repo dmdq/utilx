@@ -136,6 +136,57 @@ const breadcrumbs = computed(() => {
         path: '/sitemap/'
       })
     }
+    else if (pathSegments[0] === 'tags') {
+      paths.push({
+        name: '标签导航',
+        path: '/tags/'
+      })
+    }
+  }
+
+  // 解析标签详情页面路径 /tag/tag-id/
+  else if (pathSegments.length >= 2 && pathSegments[0] === 'tag') {
+    const tagId = pathSegments[1]
+
+    // 首先添加标签导航页面
+    paths.push({
+      name: '标签导航',
+      path: '/tags/'
+    })
+
+    // 解码URL编码的标签ID
+    let decodedTagId
+    try {
+      decodedTagId = decodeURIComponent(tagId)
+    } catch (error) {
+      console.warn('Failed to decode tag ID:', tagId, error)
+      decodedTagId = tagId
+    }
+
+    // 获取标签信息
+    try {
+      const { getTagInfo } = require('~/data/tags')
+      const tagInfo = getTagInfo(decodedTagId)
+      if (tagInfo.name) {
+        paths.push({
+          name: `${tagInfo.name}标签`,
+          path: `/tag/${tagId}/`
+        })
+      } else {
+        // 如果找不到标签信息，使用解码后的标签ID
+        paths.push({
+          name: decodedTagId + '标签',
+          path: `/tag/${tagId}/`
+        })
+      }
+    } catch (error) {
+      console.warn('Failed to load tag info:', error)
+      // 如果获取失败，使用解码后的标签ID
+      paths.push({
+        name: decodedTagId + '标签',
+        path: `/tag/${tagId}/`
+      })
+    }
   }
 
   // 兼容props方式（用于静态页面）

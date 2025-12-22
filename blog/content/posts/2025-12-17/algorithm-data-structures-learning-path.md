@@ -1407,8 +1407,3 @@ function testSolution() {
 通过系统的学习和持续的练习，你一定能够掌握算法与数据结构，成为优秀的程序员。
 
 ---
-
-**相关文章：**
-- [LeetCode解题技巧总结](/leetcode-tips/)
-- [动态规划经典题目解析](/dynamic-programming-classics/)
-- [系统设计面试指南](/system-design-interview/)

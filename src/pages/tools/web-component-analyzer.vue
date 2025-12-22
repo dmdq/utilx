@@ -46,10 +46,127 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useSEO } from '~/composables/useSEO'
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+import { tools } from '~/data/tools'
+import { categories } from '~/data/categories'
+import { addRecentTool } from '~/composables/useTools'
 
-setPageTitle('Web组件分析器')
+definePageMeta({
+  layout: 'default'
+})
+
+// SEO配置
+useSeoMeta({
+  title: 'Web组件分析器 - HTML元素可访问属性和事件分析工具 | Util工具箱',
+  description: '专业的Web组件分析工具，分析HTML元素的可访问属性和事件。支持React、Vue、Angular等框架组件分析，帮助优化代码质量和用户体验。',
+  keywords: 'Web组件分析器,组件分析,HTML分析,可访问性检查,ARIA属性,事件分析,React组件,Vue组件,Angular组件,代码质量',
+  author: 'Util工具箱',
+  ogTitle: 'Web组件分析器 - 专业HTML元素和属性分析工具',
+  ogDescription: '分析Web组件结构、依赖关系和性能指标。支持多框架，帮助优化代码质量和用户体验。',
+  ogImage: 'https://util.cn/images/tools/web-component-analyzer.png',
+  ogUrl: 'https://util.cn/tools/web-component-analyzer',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Web组件分析器 - HTML可访问性和事件分析',
+  twitterDescription: '专业Web组件分析工具，分析HTML元素的可访问属性和事件，优化代码质量。',
+  twitterImage: 'https://util.cn/images/tools/web-component-analyzer.png'
+})
+
+// JSON-LD 结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: 'Web组件分析器',
+            description: '专业的Web组件分析工具，分析HTML元素的可访问属性和事件',
+            url: 'https://util.cn/tools/web-component-analyzer',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CNY'
+            },
+            featureList: [
+              'HTML元素分析',
+              '可访问属性检测',
+              '事件监听器分析',
+              '多框架支持',
+              '依赖关系分析',
+              '性能指标评估',
+              '代码质量检查',
+              '结构化报告'
+            ]
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: '首页',
+                item: 'https://util.cn'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '工具',
+                item: 'https://util.cn/tools'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Web组件分析器',
+                item: 'https://util.cn/tools/web-component-analyzer'
+              }
+            ]
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '什么是Web组件分析？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'Web组件分析是指对网页组件进行结构、属性、事件等多维度分析，检查可访问性、性能优化点和代码质量，帮助开发者创建更好的用户界面组件。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '为什么要分析ARIA属性？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'ARIA属性对网站可访问性至关重要：1）帮助屏幕阅读器理解页面结构；2）改善残障用户体验；3）符合WCAG标准；4）提升SEO效果；5）扩大用户群体覆盖范围。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '如何优化组件性能？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '组件性能优化：1）减少不必要的重渲染；2）优化事件监听器；3）使用虚拟滚动；4）合理拆分组件；5）避免深度嵌套；6）使用React.memo、Vue.memo等优化技术。'
+                }
+              }
+            ]
+          }
+        ]
+      })
+    }
+  ]
+})
+
+const router = useRouter()
+
+// 定义当前工具和分类
+const tool = tools.find(t => t.id === 'web-component-analyzer')
+const category = categories.find(c => c.id === 'dev')
 
 const framework = ref('react')
 const componentCode = ref('')
@@ -67,4 +184,16 @@ const analyzeCode = () => {
     dependencies: imports.length
   }
 }
+
+// 添加到最近使用
+if (tool) {
+  addRecentTool(tool.id)
+}
+
+// 组件挂载
+onMounted(() => {
+  if (tool) {
+    addRecentTool(tool.id)
+  }
+})
 </script>

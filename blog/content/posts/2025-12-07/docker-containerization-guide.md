@@ -761,7 +761,5 @@ Docker 容器化的最佳实践：
 
 ---
 
-**相关工具：**
+**相关资源：**
 - [Docker 官方文档](https://docs.docker.com/)
-- [容器编排工具](https://www.util.cn/tools/container-orchestrator/)
-- [Docker 配置生成器](https://www.util.cn/tools/docker-config/)

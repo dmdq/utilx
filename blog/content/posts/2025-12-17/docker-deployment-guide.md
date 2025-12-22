@@ -965,8 +965,3 @@ Docker容器化部署提供了强大的应用隔离和部署能力。通过掌�
 记住，容器化不仅仅是打包应用，更是构建现代化、可扩展应用架构的基础。持续学习和实践这些技术，将帮助你构建更加健壮和高效的应用系统。
 
 ---
-
-**相关文章：**
-- [Kubernetes入门指南](/kubernetes-getting-started/)
-- [微服务架构设计](/microservices-architecture/)
-- [DevOps最佳实践](/devops-best-practices/)

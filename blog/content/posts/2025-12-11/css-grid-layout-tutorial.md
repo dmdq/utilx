@@ -473,4 +473,3 @@ CSS Grid 是一个强大的布局工具，它提供了：
 **相关工具：**
 - [Grid Garden](https://cssgridgarden.com/) - Grid 游戏化学习
 - [CSS Grid Generator](https://cssgrid-generator.io/) - 可视化 Grid 生成器
-- [Grid 布局调试工具](https://www.util.cn/tools/css-grid-debugger/)

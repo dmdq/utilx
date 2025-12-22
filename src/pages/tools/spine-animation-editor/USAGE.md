@@ -3,8 +3,7 @@
 ## ✅ 环境要求已满足
 
 项目已安装以下必要依赖：
-- ✅ `pixi.js@latest` - WebGL渲染引擎
-- ✅ `@esotericsoftware/spine-webgl@latest` - Spine官方运行时
+- ✅ `@esotericsoftware/spine-player@latest` - Spine官方Web播放器
 
 ## 🚀 快速开始
 
@@ -51,7 +50,7 @@
 **查看控制台日志**:
 ```javascript
 // 正常加载日志示例:
-Pixi.js初始化成功
+Spine Player初始化成功
 开始加载Spine动画数据...
 找到 4 个动画, 2 个皮肤
 Spine动画加载成功
@@ -70,7 +69,7 @@ Spine动画加载失败: JSON.parse: unexpected character
 ### 问题3: 依赖问题
 运行以下命令重新安装依赖：
 ```bash
-npm install pixi.js @esotericsoftware/spine-webgl
+npm install @esotericsoftware/spine-player
 ```
 
 ## 📁 文件格式说明
@@ -125,7 +124,7 @@ head
 - **通用**: 导出JSON配置文件
 
 ### 性能优化
-- 使用WebGL硬件加速
+- 使用Spine Player内置优化
 - 支持高DPI显示器
 - 自动内存管理
 
@@ -140,5 +139,5 @@ head
 ## 🔗 相关链接
 
 - [Spine官方文档](https://esotericsoftware.com/spine-documentation)
-- [Pixi.js官方文档](https://pixijs.io/)
+- [Spine Player文档](https://esotericsoftware.com/spine-player-documentation)
 - [WebGL支持检测](test.html)

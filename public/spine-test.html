@@ -65,7 +65,6 @@
 
         <div class="test-section">
             <h2>依赖包检测</h2>
-            <p id="pixi-status">检测中...</p>
             <p id="spine-status">检测中...</p>
         </div>
 
@@ -166,24 +165,14 @@
         }
 
         async function checkDependencies() {
-            // 使用动态导入检测Pixi.js
+            // 使用动态导入检测Spine Player
             try {
-                const pixi = await import('pixi.js');
-                document.getElementById('pixi-status').innerHTML =
-                    `<span class="success">✓ Pixi.js ${pixi.VERSION || '已安装'} 可以正常导入</span>`;
-            } catch (error) {
-                document.getElementById('pixi-status').innerHTML =
-                    `<span class="error">✗ Pixi.js 无法导入: ${error.message}</span>`;
-            }
-
-            // 使用动态导入检测Spine运行时
-            try {
-                const spine = await import('@esotericsoftware/spine-webgl');
+                const spine = await import('@esotericsoftware/spine-player');
                 document.getElementById('spine-status').innerHTML =
-                    `<span class="success">✓ Spine运行时 已安装并可以正常导入</span>`;
+                    `<span class="success">✓ Spine Player 已安装并可以正常导入</span>`;
             } catch (error) {
                 document.getElementById('spine-status').innerHTML =
-                    `<span class="error">✗ Spine运行时 无法导入: ${error.message}</span>`;
+                    `<span class="error">✗ Spine Player 无法导入: ${error.message}</span>`;
             }
         }
 

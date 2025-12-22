@@ -604,8 +604,3 @@ class VirtualTable {
 记住，性能优化的最终目标是提升用户体验，而不是盲目追求极致的性能指标。在优化时，要平衡性能、开发成本和维护成本，选择最适合项目的优化方案。
 
 ---
-
-**相关文章：**
-- [React性能优化最佳实践](/react-performance-best-practices/)
-- [Vue 3性能优化技巧](/vue3-performance-tips/)
-- [Web性能测试指南](/web-performance-testing/)

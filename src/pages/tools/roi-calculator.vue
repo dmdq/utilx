@@ -434,6 +434,112 @@ definePageMeta({
   layout: 'default'
 })
 
+// SEO配置
+useSeoMeta({
+  title: '投资回报计算器 - ROI、复利、定投收益计算工具 | Util工具箱',
+  description: '专业的投资回报计算工具，支持ROI计算、复利增长、定投收益分析。实时计算年化收益率、净收益、回收期等关键指标，帮助您制定科学的投资理财策略。',
+  keywords: '投资回报计算器,ROI计算,复利计算,定投计算,投资收益,年化收益率,理财工具,投资分析',
+  author: 'Util工具箱',
+  ogTitle: '投资回报计算器 - 专业ROI复利定投计算工具',
+  ogDescription: '专业的投资回报计算工具，支持ROI、复利、定投等多种计算模式，实时分析投资收益和风险，科学制定投资策略。',
+  ogImage: 'https://util.cn/images/tools/roi-calculator.png',
+  ogUrl: 'https://util.cn/tools/roi-calculator',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: '投资回报计算器 - ROI复利定投收益计算',
+  twitterDescription: '专业的投资回报计算工具，支持ROI计算、复利分析、定投收益预测，科学制定投资理财策略。',
+  twitterImage: 'https://util.cn/images/tools/roi-calculator.png'
+})
+
+// JSON-LD 结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: '投资回报计算器',
+            description: '专业的投资回报计算工具，支持ROI计算、复利增长、定投收益分析',
+            url: 'https://util.cn/tools/roi-calculator',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CNY'
+            },
+            featureList: [
+              'ROI投资回报率计算',
+              '复利增长计算',
+              '定投收益分析',
+              '年化收益率计算',
+              '投资回收期分析',
+              '投资风险评估',
+              '收益曲线可视化',
+              '投资报告导出'
+            ]
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: '首页',
+                item: 'https://util.cn'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '工具',
+                item: 'https://util.cn/tools'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: '投资回报计算器',
+                item: 'https://util.cn/tools/roi-calculator'
+              }
+            ]
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '什么是ROI投资回报率？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'ROI（Return on Investment）是投资回报率的缩写，计算公式：ROI = (最终价值 - 总投资) / 总投资 × 100%。ROI是衡量投资盈利能力的重要指标，数值越高表示投资收益越好。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '复利和单利有什么区别？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '复利是指利息也会产生利息，即利滚利；单利只有本金产生利息。长期来看，复利的收益远高于单利。爱因斯坦称复利为世界第八大奇迹。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '定投有什么优势？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '定投（定期定额投资）的优势：1）平摊市场波动风险，避免在高点一次性投入；2）强制储蓄，培养良好投资习惯；3）享受复利效应，长期收益可观；4）操作简单，适合普通投资者。'
+                }
+              }
+            ]
+          }
+        ]
+      })
+    }
+  ]
+})
+
 const router = useRouter()
 
 // 定义当前工具和分类

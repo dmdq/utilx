@@ -554,4 +554,3 @@ React 性能优化是一个持续的过程，需要从多个维度考虑：
 - [React 性能分析工具](https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html)
 - [Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse)
-- [React 性能优化指南](https://www.util.cn/tools/react-performance/)

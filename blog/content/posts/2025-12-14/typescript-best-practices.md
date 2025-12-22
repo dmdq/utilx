@@ -354,4 +354,3 @@ TypeScript 的最佳实践可以帮助我们构建更安全、更可维护的应
 **相关工具：**
 - [TypeScript Playground](https://www.typescriptlang.org/play)
 - [JSON 转 TypeScript 接口工具](https://www.util.cn/tools/json-to-typescript/)
-- [TypeScript 配置生成器](https://www.util.cn/tools/typescript-config/)

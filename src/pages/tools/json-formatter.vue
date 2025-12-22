@@ -241,6 +241,103 @@ definePageMeta({
   layout: 'default'
 })
 
+// SEO配置
+useSeoMeta({
+  title: 'JSON格式化工具 - 在线JSON解析、验证与美化 | Util工具箱',
+  description: '免费在线JSON格式化工具，支持JSON美化、压缩、语法错误检测与树形视图展示。纯本地计算，数据安全隐私。一键格式化JSON，提升开发效率。',
+  keywords: 'JSON格式化,JSON解析,JSON验证,JSON美化,在线JSON工具,JSON压缩,JSON格式化器,JSON查看器',
+  author: 'Util工具箱',
+  ogTitle: 'JSON格式化工具 - 免费在线JSON解析美化工具',
+  ogDescription: '专业的JSON格式化工具，支持一键美化、压缩、语法验证。纯前端处理，数据安全可靠，支持多种缩进格式和自动修复。',
+  ogImage: 'https://util.cn/images/tools/json-formatter.png',
+  ogUrl: 'https://util.cn/tools/json-formatter',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'JSON格式化工具 - 免费在线JSON解析美化',
+  twitterDescription: '专业的JSON格式化工具，支持一键美化、压缩、语法验证。纯前端处理，数据安全可靠。',
+  twitterImage: 'https://util.cn/images/tools/json-formatter.png'
+})
+
+// JSON-LD 结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: 'JSON格式化工具',
+            description: '免费在线JSON格式化、解析和验证工具',
+            url: 'https://util.cn/tools/json-formatter',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CNY'
+            },
+            featureList: [
+              'JSON格式化美化',
+              'JSON压缩最小化',
+              '语法错误检测',
+              '自动修复常见错误',
+              '本地安全处理',
+              '多种缩进格式',
+              '一键复制下载'
+            ]
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: '首页',
+                item: 'https://util.cn'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '工具',
+                item: 'https://util.cn/tools'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'JSON格式化',
+                item: 'https://util.cn/tools/json-formatter'
+              }
+            ]
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '在线JSON格式化安全吗？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '绝对安全。我们的JSON格式化工具采用纯前端技术实现，所有处理都在您的浏览器本地完成，数据不会上传到任何服务器，确保隐私安全。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'JSON和XML有什么区别？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'JSON和XML都是数据交换格式，但JSON更加轻量级，语法更简洁；XML使用标签标记数据，而JSON使用键值对；JSON解析速度更快，占用带宽更少；JSON原生支持数组和对象结构。'
+                }
+              }
+            ]
+          }
+        ]
+      })
+    }
+  ]
+})
+
 const router = useRouter()
 
 // 定义当前工具和分类

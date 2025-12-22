@@ -296,7 +296,7 @@ const generatedCode = computed(() => {
   css += '.item {\n'
   css += '  padding: 1rem;\n'
   css += '  background-color: #f3f4f6;\n'
-  css += '  border: 1px solid #e5e7eb;\n'
+  css += '  border: 1px solid hsl(var(--border));\n'
   css += '  border-radius: 0.375rem;\n'
   css += '  text-align: center;\n'
   css += '}'
@@ -361,7 +361,7 @@ const downloadCode = () => {
 .preview-item {
   padding: 1rem;
   background-color: #f3f4f6;
-  border: 1px solid #e5e7eb;
+  border: 1px solid hsl(var(--border));;
   border-radius: 0.375rem;
   text-align: center;
   font-weight: 500;

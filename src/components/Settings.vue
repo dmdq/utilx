@@ -804,8 +804,8 @@ onMounted(() => {
 
 .settings-footer {
   padding: 16px 20px;
-  border-top: 1px solid #e5e7eb;
-  background-color: #f9fafb;
+  border-top: 1px solid hsl(var(--border));;
+  background-color: hsl(var(--border));;
 }
 
 .app-info {

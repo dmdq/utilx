@@ -8,13 +8,12 @@
     "dev": "nuxt dev --host",
     "dev:fast": "./scripts/dev-fast.sh",
     "dev:ultra": "./scripts/dev-ultra-fast.sh",
-    "dev:config": "NUXT_PUBLIC_DEV_MODE=true nuxt dev --host --config nuxt.config.v4.ts",
     "dev:v4": "nuxt dev --host --config nuxt.config.v4.ts",
     "dev:watch": "WATCH=true nuxt dev --host",
     "dev:blog": "concurrently \"nuxt dev --host\" \"npm run blog:watch\"",
     "optimize": "./scripts/optimize-cache.sh",
     "upgrade:nuxt": "./scripts/upgrade-nuxt.sh",
-    "build": "npm run blog:build && nuxt build",
+    "build": "concurrently \"npm run blog:build\" \"nuxt build\"",
     "build:app": "./scripts/build.sh",
     "build:blog": "npm run blog:build",
     "blog:build": "cd blog && hugo --minify && cp -r public/* ../public/blog/",
@@ -31,10 +30,11 @@
     "package:macos-simple": "./scripts/package-macos-simple.sh"
   },
   "dependencies": {
+    "@esotericsoftware/spine-player": "^4.2.96",
     "@esotericsoftware/spine-webgl": "^4.2.96",
-    "@nuxt/devtools": "^2.0.0",
-    "@tauri-apps/api": "^2.9.1",
-    "@tauri-apps/plugin-window-state": "^2.4.1",
+    "@tauri-apps/api": "2.9.1",
+    "@tauri-apps/plugin-shell": "2.3.3",
+    "@tauri-apps/plugin-window-state": "2.4.1",
     "@types/qrcode": "^1.5.6",
     "@vueuse/integrations": "^14.1.0",
     "crypto-js": "^4.2.0",
@@ -44,19 +44,18 @@
     "jszip": "^3.10.1",
     "lucide-vue-next": "^0.556.0",
     "marked": "^17.0.1",
-    "nuxt": "^4.2.2",
-    "pixi-spine": "^4.0.6",
-    "pixi.js": "^8.14.3",
+    "nuxt": "4.2.2",
     "qrcode": "^1.5.4",
     "sortablejs": "^1.15.6",
-    "vue": "^3.5.12",
-    "vue-router": "^4.4.5"
+    "vue": "3.5.12",
+    "web-vitals": "^4.2.4"
   },
   "devDependencies": {
+    "@nuxt/devtools": "^1.0.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@tauri-apps/cli": "^2.9.6",
-    "@tauri-apps/plugin-shell": "^2.3.3",
     "@vite-pwa/nuxt": "^1.1.0",
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "rollup-plugin-visualizer": "^6.0.5"
   }
 }

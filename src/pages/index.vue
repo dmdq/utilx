@@ -37,7 +37,15 @@
           @input="handleSearch"
           @keydown.enter="handleSearchEnter"
         >
-        <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+        <div class="absolute inset-y-0 right-0 pr-3 flex items-center gap-2">
+          <!-- 智能剪贴板检测按钮 -->
+          <button
+            @click="detectClipboardContent"
+            class="text-xs text-muted-foreground/60 bg-background/80 backdrop-blur-sm border border-border/40 px-2 py-1.5 rounded-lg shadow-sm hover:bg-primary/10 hover:text-primary transition-colors"
+            title="检测剪贴板内容"
+          >
+            <Clipboard class="w-3 h-3" />
+          </button>
           <span class="text-xs text-muted-foreground/60 font-mono bg-background/80 backdrop-blur-sm border border-border/40 px-2 py-1.5 rounded-lg shadow-sm hidden sm:inline-flex items-center gap-1">
             <kbd class="text-[11px] font-semibold bg-muted/50 px-1.5 py-0.5 rounded border border-border/30">⌘</kbd>
             <kbd class="text-[11px] font-semibold bg-muted/50 px-1.5 py-0.5 rounded border border-border/30">K</kbd>
@@ -231,7 +239,7 @@ import {
   Search, Clock, Trash2, X, Lock, Zap, Heart,
   FileJson, FileText, Database, Link, Hash, Timer, Regex, FileDiff,
   Globe, FolderOpen, GitBranch, Type, Wifi, Image, Code,
-  Shield, Layout
+  Shield, Layout, Clipboard
 } from 'lucide-vue-next'
 import { categories } from '~/data/categories'
 import { tools } from '~/data/tools'
@@ -409,11 +417,17 @@ import { getCategoryColor as getCatColor } from '~/utils/categoryColors'
 // 获取分类对应的霓虹色彩
 const getCategoryColor = getCatColor
 
-// 检测剪贴板内容
+// 检测剪贴板内容（仅在用户主动交互时调用）
 const detectClipboardContent = async () => {
+  // 只有在用户上下文中（如点击、粘贴事件）才尝试读取剪贴板
+  if (!navigator.clipboard || !window.isSecureContext) {
+    console.log('当前环境不支持剪贴板API')
+    return
+  }
+
   try {
     const text = await navigator.clipboard.readText()
-    
+
     // 检测不同类型的内容
     if (text.startsWith('{') && text.endsWith('}')) {
       try {
@@ -428,7 +442,7 @@ const detectClipboardContent = async () => {
         // 不是有效的JSON
       }
     }
-    
+
     // 检测时间戳
     if (/^\d{10,13}$/.test(text)) {
       clipboardSuggestion.value = {
@@ -438,7 +452,7 @@ const detectClipboardContent = async () => {
       }
       return
     }
-    
+
     // 检测Base64
     if (/^[A-Za-z0-9+/]*={0,2}$/.test(text) && text.length > 10) {
       clipboardSuggestion.value = {
@@ -448,7 +462,7 @@ const detectClipboardContent = async () => {
       }
       return
     }
-    
+
     // 检测JWT
     if (text.startsWith('eyJ') && text.includes('.')) {
       clipboardSuggestion.value = {
@@ -459,8 +473,8 @@ const detectClipboardContent = async () => {
       return
     }
   } catch (error) {
-    // 无法读取剪贴板，静默处理
-    console.log('无法读取剪贴板内容')
+    // 用户拒绝权限或其他错误，静默处理
+    console.log('剪贴板访问被拒绝或不支持:', error.message)
   }
 }
 
@@ -474,9 +488,9 @@ const handlePaste = (event) => {
 onMounted(() => {
   // 添加粘贴事件监听器
   window.addEventListener('paste', handlePaste)
-  
-  // 页面加载时检测一次剪贴板
-  detectClipboardContent()
+
+  // 移除页面加载时自动检测剪贴板的功能
+  // detectClipboardContent()  // 注释掉自动检测
 })
 
 // 在组件卸载时移除事件监听器

@@ -681,5 +681,4 @@ Vue 3 Composition API 提供了：
 
 **相关资源：**
 - [Vue 3 官方文档](https://v3.vuejs.org/)
-- [Composition API 示例](https://www.util.cn/tools/vue-composition-api/)
 - [Vue 3 迁移指南](https://v3-migration.vuejs.org/)

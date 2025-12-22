@@ -287,7 +287,7 @@
           <!-- 结果预览 -->
           <div class="border rounded-md overflow-hidden">
             <div class="bg-muted px-3 py-2 text-sm font-medium">脱敏后数据</div>
-            <pre class="p-3 text-sm overflow-x-auto max-h-96 overflow-y-auto bg-white">{{ maskedData || '点击"执行脱敏"按钮开始处理' }}</pre>
+            <pre class="p-3 text-sm overflow-x-auto max-h-96 overflow-y-auto bg-muted text-foreground">{{ maskedData || '点击"执行脱敏"按钮开始处理' }}</pre>
           </div>
         </div>
 

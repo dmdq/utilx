@@ -1,554 +1,1496 @@
 <template>
   <div class="max-w-8xl mx-auto">
-    <!-- 面包屑导航 -->
-    <!-- <Breadcrumb :category="category" /> -->
-
-    <!-- 工具标题 -->
-    <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">RSA加密</h1>
-      <p class="text-muted-foreground max-w-3xl">RSA非对称加密工具，使用公钥加密数据，只有对应的私钥才能解密。支持大分段加密和多种输出格式。</p>
+    <!-- Hero 头部区 - 区域1：工具标题描述 -->
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-foreground mb-3">二维码生成器</h1>
+      <p class="text-muted-foreground">快速生成二维码，支持文本、网址、WiFi等多种格式</p>
     </div>
 
-    <!-- 加密设置 -->
-    <div class="border border-border rounded-lg p-6 mb-8">
-      <h3 class="text-lg font-semibold mb-4">加密设置</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div>
-          <label class="text-sm font-medium mb-2 block">密钥格式</label>
-          <select
-            v-model="keyFormat"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-          >
-            <option value="PEM">PEM格式</option>
-            <option value="DER">DER格式</option>
-            <option value="JWK">JWK格式</option>
-          </select>
-        </div>
-        <div>
-          <label class="text-sm font-medium mb-2 block">输出格式</label>
-          <select
-            v-model="outputFormat"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-          >
-            <option value="base64">Base64</option>
-            <option value="hex">十六进制</option>
-            <option value="json">JSON格式</option>
-          </select>
-        </div>
-        <div>
-          <label class="text-sm font-medium mb-2 block">加密方案</label>
-          <select
-            v-model="encryptionScheme"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-          >
-            <option value="RSA-OAEP">RSA-OAEP (推荐)</option>
-            <option value="RSAES-PKCS1-v1_5">PKCS1 v1.5</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <!-- 公钥输入 -->
-    <div class="border border-border rounded-lg p-6 mb-8">
-      <h3 class="text-lg font-semibold mb-4">公钥</h3>
-      <div class="space-y-4">
-        <div class="flex items-center gap-4">
-          <label class="flex items-center gap-2 cursor-pointer">
-            <input
-              type="file"
-              ref="publicKeyFile"
-              @change="handleKeyFileUpload"
-              accept=".pem,.pub,.key"
-              class="hidden"
-            >
-            <span class="px-3 py-1 text-sm bg-primary/10 text-primary rounded-md hover:bg-primary/20 transition-colors">
-              导入公钥文件
-            </span>
-          </label>
-          <button
-            @click="loadExampleKey"
-            class="px-3 py-1 text-sm bg-secondary/10 text-secondary-foreground rounded-md hover:bg-secondary/20 transition-colors"
-          >
-            加载示例公钥
-          </button>
-        </div>
-        <textarea
-          v-model="publicKey"
-          placeholder="粘贴PEM格式的公钥，如：-----BEGIN PUBLIC KEY-----..."
-          class="w-full h-32 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
-        ></textarea>
-        <div v-if="publicKeyInfo" class="text-sm text-muted-foreground">
-          <span>密钥位数：{{ publicKeyInfo.bits }}位</span>
-          <span class="ml-4">指纹：{{ publicKeyInfo.fingerprint }}</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 主要功能区域 -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-      <!-- 输入区域 -->
-      <div class="space-y-4">
-        <div class="flex items-center justify-between">
-          <label class="text-lg font-semibold">原始数据</label>
-          <div class="flex items-center gap-2">
-            <button
-              @click="clearInput"
-              class="px-3 py-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              清空
-            </button>
-            <label class="flex items-center gap-2 cursor-pointer">
-              <input
-                type="file"
-                ref="dataFile"
-                @change="handleDataFileUpload"
-                class="hidden"
+    <!-- 工具交互区 - 区域2：工具显示区域 -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <!-- 左侧控制面板 -->
+      <div class="lg:col-span-1 space-y-4">
+        <!-- 文件导入区域 -->
+        <div class="bg-card border border-border rounded-lg p-4">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-medium text-foreground flex items-center">
+              <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+              </svg>
+              文件导入
+            </h3>
+            <div class="flex gap-2">
+              <button
+                class="text-xs px-2 py-1 bg-primary hover:bg-primary/90 text-primary-foreground rounded disabled:opacity-50 disabled:cursor-not-allowed"
+                @click="applyAndParse"
+                :disabled="resourceFiles.length === 0 || isLoading"
               >
-              <span class="px-3 py-1 text-sm bg-primary/10 text-primary rounded-md hover:bg-primary/20 transition-colors">
-                选择文件
+                应用
+              </button>
+              <button
+                class="text-xs px-2 py-1 bg-muted hover:bg-muted/80 rounded text-muted-foreground"
+                @click="clearFiles"
+              >
+                清空
+              </button>
+            </div>
+          </div>
+
+          <!-- 拖拽上传区域 -->
+          <div
+            @dragover.prevent="isFileDragging = true"
+            @dragenter.prevent="isFileDragging = true"
+            @dragleave="isFileDragging = false"
+            @drop="handleDrop"
+            class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-4 text-center hover:border-indigo-500 transition-all cursor-pointer"
+            :class="{ 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20': isFileDragging }"
+            @click="openFile"
+          >
+            <svg class="w-8 h-8 mx-auto mb-2 text-gray-400" :class="{ 'text-indigo-500': isFileDragging }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+            </svg>
+
+            <div v-if="!isFileDragging">
+              <p class="text-xs text-gray-600 dark:text-gray-300 mb-1">拖拽文件到此处导入</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">支持 .spine, .json, .skel, .atlas, .png</p>
+              <p class="text-xs text-blue-600 dark:text-blue-400 mt-2">💡 可多次上传不同文件夹的文件</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">点击应用按钮开始解析</p>
+            </div>
+            <div v-else class="text-indigo-600 dark:text-indigo-400">
+              <p class="text-xs font-medium">松开以上传文件</p>
+            </div>
+          </div>
+
+          <input
+            ref="fileInput"
+            type="file"
+            multiple
+            accept=".spine,.json,.skel,.atlas,.png,.jpg,.jpeg"
+            @change="handleFileSelect"
+            class="hidden"
+          />
+
+          <!-- 文件状态显示 -->
+          <div class="mt-4 space-y-2">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-gray-600 dark:text-gray-400">骨架文件</span>
+              <span :class="hasSkeletonFile ? 'text-green-600' : 'text-red-600'">
+                {{ hasSkeletonFile ? '✓ 已加载' : '✗ 需要导入' }}
               </span>
-            </label>
+            </div>
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-gray-600 dark:text-gray-400">图集文件</span>
+              <span :class="hasAtlasFile ? 'text-green-600' : hasSkeletonFile ? 'text-yellow-600' : 'text-red-600'">
+                {{ hasAtlasFile ? '✓ 已加载' : hasSkeletonFile ? '! 建议导入' : '✗ 需要导入' }}
+              </span>
+            </div>
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-gray-600 dark:text-gray-400">纹理文件</span>
+              <span class="text-gray-900 dark:text-white">{{ textureFiles.length }} 个</span>
+            </div>
+          </div>
+
+          <!-- 上传的文件列表 -->
+          <div v-if="resourceFiles.length > 0" class="mt-4">
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="text-xs font-medium text-gray-500 dark:text-gray-400">已上传文件 ({{ resourceFiles.length }})</h4>
+              <div class="text-xs text-blue-600 dark:text-blue-400">
+                {{ validateFiles(resourceFiles).valid ? '✓ 完整' : '✗ 不完整' }}
+              </div>
+            </div>
+            <div class="space-y-1 max-h-32 overflow-y-auto">
+              <div
+                v-for="(file, index) in resourceFiles"
+                :key="index"
+                class="text-xs p-2 bg-gray-50 dark:bg-gray-800 rounded flex items-center justify-between group hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
+                <span class="truncate mr-2" :title="file.name">
+                  <span class="text-gray-400 mr-1">{{ getFileIcon(file.name) }}</span>
+                  {{ file.name }}
+                </span>
+                <span class="text-gray-500">{{ (file.size / 1024).toFixed(1) }}KB</span>
+              </div>
+            </div>
+
+            <!-- 文件验证提示 -->
+            <div class="mt-2 p-2 text-xs" :class="validateFiles(resourceFiles).valid ? 'bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-400' : 'bg-yellow-50 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-400'">
+              {{ validateFiles(resourceFiles).message }}
+            </div>
+          </div>
+          <div v-else class="mt-4 text-xs text-gray-500 dark:text-gray-400 text-center">
+            <p>📂 还没有上传任何文件</p>
+            <p class="mt-1">支持多次上传，收集完成后点击应用</p>
           </div>
         </div>
-        <textarea
-          v-model="plainText"
-          placeholder="请输入要加密的文本或数据..."
-          class="w-full h-64 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
-        ></textarea>
-        <div class="text-sm text-muted-foreground">
-          字符数：{{ plainText.length }}
-          <span v-if="publicKeyInfo" class="ml-4">
-            最大长度：{{ publicKeyInfo.maxEncryptLength }} 字节
-          </span>
-        </div>
-      </div>
 
-      <!-- 输出区域 -->
-      <div class="space-y-4">
-        <div class="flex items-center justify-between">
-          <label class="text-lg font-semibold">加密结果</label>
-          <div class="flex items-center gap-2">
+        <!-- 动画列表 -->
+        <div v-if="animations.length > 0" class="bg-card border border-border rounded-lg p-4">
+          <h3 class="text-sm font-medium text-foreground mb-3 flex items-center">
+            <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            动画列表
+          </h3>
+          <div class="space-y-1 max-h-32 overflow-y-auto">
             <button
-              @click="copyToClipboard(encryptedResult)"
-              :disabled="!encryptedResult"
-              class="px-3 py-1 text-sm bg-primary/10 text-primary rounded-md hover:bg-primary/20 transition-colors disabled:opacity-50"
+              v-for="animation in animations"
+              :key="animation"
+              @click="playAnimation(animation)"
+              :class="[
+                'w-full text-left p-2 rounded text-xs transition-colors',
+                currentAnimation === animation
+                  ? 'bg-primary text-primary-foreground'
+                  : 'hover:bg-muted text-muted-foreground hover:text-foreground'
+              ]"
             >
-              {{ copyButtonText }}
-            </button>
-            <button
-              @click="downloadResult"
-              :disabled="!encryptedResult"
-              class="px-3 py-1 text-sm bg-secondary/10 text-secondary-foreground rounded-md hover:bg-secondary/20 transition-colors disabled:opacity-50"
-            >
-              下载
+              {{ animation }}
             </button>
           </div>
         </div>
-        <textarea
-          v-model="encryptedResult"
-          placeholder="加密结果将显示在这里..."
-          readonly
-          class="w-full h-64 p-4 border border-border rounded-lg bg-muted/50 resize-none font-mono text-sm"
-        ></textarea>
-        <div class="text-sm text-muted-foreground">
-          长度：{{ encryptedResult.length }}
-          <span v-if="encryptedChunks > 1" class="ml-4 text-primary">
-            分段加密：{{ encryptedChunks }} 块
-          </span>
+
+        <!-- 播放控制 -->
+        <div v-if="spineLoaded" class="bg-card border border-border rounded-lg p-4">
+          <h3 class="text-sm font-medium text-foreground mb-3 flex items-center">
+            <svg class="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+            播放控制
+          </h3>
+          <div class="space-y-3">
+            <!-- 播放按钮 -->
+            <button
+              @click="togglePlay"
+              :class="[
+                'w-full py-2 px-4 rounded-lg text-sm font-medium transition-colors',
+                isPlaying
+                  ? 'bg-red-500 hover:bg-red-600 text-white'
+                  : 'bg-primary hover:bg-primary/90 text-primary-foreground'
+              ]"
+            >
+              <div class="flex items-center justify-center">
+                <svg v-if="!isPlaying" class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <svg v-else class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                {{ isPlaying ? '暂停' : '播放' }}
+              </div>
+            </button>
+
+            <!-- 播放速度 -->
+            <div>
+              <label class="text-xs text-muted-foreground">播放速度: {{ playSpeed }}x</label>
+              <input
+                v-model="playSpeed"
+                type="range"
+                min="0.1"
+                max="2"
+                step="0.1"
+                class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+              />
+            </div>
+
+            <!-- 缩放控制 -->
+            <div>
+              <label class="text-xs text-muted-foreground">缩放: {{ Math.round(zoomLevel * 100) }}%</label>
+              <div class="flex gap-2 mt-1">
+                <button
+                  @click="zoomOut"
+                  class="flex-1 px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded"
+                >
+                  缩小
+                </button>
+                <button
+                  @click="resetZoom"
+                  class="flex-1 px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded"
+                >
+                  重置
+                </button>
+                <button
+                  @click="zoomIn"
+                  class="flex-1 px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded"
+                >
+                  放大
+                </button>
+              </div>
+              <input
+                v-model="zoomLevel"
+                type="range"
+                min="0.1"
+                max="3"
+                step="0.1"
+                class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 mt-1"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- 全屏按钮 -->
+        <button
+          @click="toggleFullscreen"
+          class="w-full py-2 px-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
+        >
+          <svg v-if="!isFullscreen" class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+          </svg>
+          <svg v-else class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+          {{ isFullscreen ? '退出全屏' : '全屏模式' }}
+        </button>
+      </div>
+
+      <!-- 右侧显示区域 -->
+      <div class="lg:col-span-3">
+        <div class="bg-card border border-border rounded-lg p-6 h-full">
+          <!-- 加载进度 -->
+          <div v-if="isLoading" class="flex flex-col items-center justify-center h-96">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>
+            <p class="text-sm text-muted-foreground mb-2">加载Spine资源中...</p>
+            <div class="w-64 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+              <div
+                class="h-full bg-primary transition-all duration-300"
+                :style="{ width: loadingProgress + '%' }"
+              ></div>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">{{ loadingProgress }}%</p>
+
+            <!-- 依赖加载状态 -->
+            <div class="mt-4 text-center">
+              <p class="text-xs text-gray-600 dark:text-gray-400 mb-1">依赖加载状态:</p>
+              <div class="flex items-center justify-center space-x-2">
+                <div :class="[
+                  'w-2 h-2 rounded-full',
+                  dependenciesLoaded ? 'bg-green-500' : 'bg-yellow-500 animate-pulse'
+                ]"></div>
+                <p class="text-xs text-gray-500 dark:text-gray-400">{{ dependencyStatus }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spine Player 显示区域 -->
+          <div v-else-if="spineLoaded" class="relative">
+            <!-- 调试信息 -->
+            <div class="absolute top-0 left-0 z-10 bg-yellow-500 text-black text-xs p-2">
+              spineLoaded: {{ spineLoaded }} | isLoading: {{ isLoading }} | animations: {{ animations.length }}
+            </div>
+            <div
+              id="spine-player-container"
+              class="relative w-full h-96 bg-gray-900 rounded-lg overflow-hidden"
+              :class="{ 'fixed inset-0 w-full h-full z-50 rounded-none': isFullscreen }"
+            >
+              <!-- Spine Player 将在这里渲染 -->
+            </div>
+
+            <!-- 缩放和位置指示器 -->
+            <div class="absolute top-2 left-2 bg-black/50 backdrop-blur-sm rounded px-2 py-1 text-xs text-white">
+              动画: {{ currentAnimation || '未选择' }}
+            </div>
+
+            <!-- 全屏模式下的控制面板 -->
+            <div v-if="isFullscreen" class="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-lg p-4">
+              <div class="text-white space-y-2">
+                <button
+                  @click="toggleFullscreen"
+                  class="px-3 py-2 bg-white/20 hover:bg-white/30 rounded text-sm"
+                >
+                  退出全屏
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 初始状态 -->
+          <div v-else class="flex flex-col items-center justify-center h-96">
+            <div class="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-medium text-foreground mb-2">Spine动画编辑器</h3>
+            <p class="text-sm text-muted-foreground text-center max-w-md mb-4">
+              支持.spine、.json、.skel格式的骨骼动画文件，兼容Spine 3.8-4.2版本
+            </p>
+            <div class="flex flex-wrap gap-2 justify-center">
+              <span class="px-2 py-1 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 text-xs rounded-full">
+                WebGL加速
+              </span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200 text-xs rounded-full">
+                实时预览
+              </span>
+              <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900/20 text-purple-800 dark:text-purple-200 text-xs rounded-full">
+                本地计算
+              </span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- 操作按钮 -->
-    <div class="flex flex-wrap gap-4 mb-8">
-      <button
-        @click="encryptData"
-        :disabled="!publicKey || !plainText"
-        class="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        加密数据
-      </button>
-      <button
-        @click="largeFileEncrypt"
-        :disabled="!publicKey"
-        class="px-6 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        大文件加密
-      </button>
-    </div>
+      <!-- SEO 内容长尾区 - 区域3：SEO描述区域 -->
+      <div class="p-6 mb-12 relative">
+        <!-- 折叠按钮 -->
+        <button
+          @click="toggleSeoContent"
+          class="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
+          :title="isSeoContentVisible ? '折叠内容' : '展开内容'"
+        >
+          <HelpCircle v-if="!isSeoContentVisible" class="w-5 h-5" />
+          <ChevronUp v-else class="w-5 h-5" />
+        </button>
 
-    <!-- 加密详情 -->
-    <div v-if="encryptDetails" class="border border-border rounded-lg p-6 mb-8">
-      <h3 class="text-lg font-semibold mb-4">加密详情</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-        <div>
-          <span class="text-muted-foreground">加密算法：</span>
-          <span>{{ encryptDetails.algorithm }}</span>
-        </div>
-        <div>
-          <span class="text-muted-foreground">密钥长度：</span>
-          <span>{{ encryptDetails.keySize }} 位</span>
-        </div>
-        <div>
-          <span class="text-muted-foreground">原始数据长度：</span>
-          <span>{{ encryptDetails.originalLength }} 字节</span>
-        </div>
-        <div>
-          <span class="text-muted-foreground">加密后长度：</span>
-          <span>{{ encryptDetails.encryptedLength }} 字节</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- RSA加密说明 -->
-    <div class="border border-border rounded-lg p-6 mb-8">
-      <h3 class="text-lg font-semibold mb-4">RSA加密说明</h3>
-      <div class="space-y-4">
-        <div>
-          <h4 class="font-medium text-primary mb-2">加密原理</h4>
-          <p class="text-sm text-muted-foreground">
-            RSA使用公钥加密数据，只有对应的私钥才能解密。公钥可以公开分享，用于加密；私钥必须保密，用于解密。
+        <!-- 内容区域 -->
+        <div v-show="isSeoContentVisible">
+          <h2 class="text-2xl font-bold text-foreground mb-4 flex items-center">
+            <span class="text-primary mr-2">#</span>
+            什么是 Spine 动画？
+          </h2>
+          <p class="text-muted-foreground mb-4">
+            Spine 是款专业的 2D 骨骼动画编辑工具，广泛应用于游戏开发、动画制作等领域。
+            它通过骨骼系统和皮肤贴图的组合，让开发者能够创建流畅、高效的角色动画。
+            相比传统的逐帧动画，Spine 骨骼动画具有文件体积小、动画过渡自然、易于控制等优势。
           </p>
-        </div>
-        <div>
-          <h4 class="font-medium text-primary mb-2">加密限制</h4>
-          <div class="bg-muted/50 rounded-lg p-4">
-            <ul class="text-sm space-y-1">
-              <li>• RSA不能直接加密大数据，有长度限制</li>
-              <li>• 2048位密钥最大加密245字节</li>
-              <li>• 3072位密钥最大加密373字节</li>
-              <li>• 4096位密钥最大加密501字节</li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h4 class="font-medium text-primary mb-2">加密方案对比</h4>
-          <div class="overflow-x-auto">
-            <table class="w-full text-sm border border-border">
-              <thead class="bg-muted/50">
-                <tr>
-                  <th class="border border-border px-4 py-2 text-left">方案</th>
-                  <th class="border border-border px-4 py-2 text-left">安全性</th>
-                  <th class="border border-border px-4 py-2 text-left">性能</th>
-                  <th class="border border-border px-4 py-2 text-left">推荐场景</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="border border-border px-4 py-2 font-medium">RSA-OAEP</td>
-                  <td class="border border-border px-4 py-2 text-green-600">高</td>
-                  <td class="border border-border px-4 py-2">中等</td>
-                  <td class="border border-border px-4 py-2">新应用推荐</td>
-                </tr>
-                <tr>
-                  <td class="border border-border px-4 py-2 font-medium">PKCS1 v1.5</td>
-                  <td class="border border-border px-4 py-2 text-amber-600">中等</td>
-                  <td class="border border-border px-4 py-2 text-green-600">快</td>
-                  <td class="border border-border px-4 py-2">兼容性要求</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div>
-          <h4 class="font-medium text-primary mb-2">大文件加密方案</h4>
-          <ul class="text-sm space-y-1">
-            <li>• 混合加密：生成随机AES密钥加密数据，用RSA加密AES密钥</li>
-            <li>• 分段加密：将数据分成小块，分别用RSA加密</li>
-            <li>• 数字信封：结合对称加密和非对称加密的优势</li>
+          <p class="text-muted-foreground">
+            Spine 动画系统由骨架（Skeleton）、皮肤（Skin）、动画（Animation）等核心概念组成。
+            骨架定义了角色的骨骼结构，皮肤控制贴图显示，动画则定义了骨骼的运动轨迹。
+            这种分离式的设计让同一个角色可以轻松切换不同的外观和动画效果。
+          </p>
+
+          <h2 class="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center">
+            <span class="text-primary mr-2">#</span>
+            如何使用本工具
+          </h2>
+          <ol class="list-decimal list-inside space-y-2 text-muted-foreground mb-6">
+            <li>准备您的 Spine 动画文件，包括骨架文件（.spine/.json/.skel）、图集文件（.atlas）和纹理图片（.png）</li>
+            <li>将文件拖拽到左侧文件导入区域，或点击选择文件进行上传</li>
+            <li>工具会自动识别文件格式并解析动画数据</li>
+            <li>使用右侧画布查看动画效果，左侧控制面板进行动画播放控制</li>
+            <li>支持播放速度调节、全屏模式等高级功能</li>
+          </ol>
+
+          <h2 class="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center">
+            <span class="text-primary mr-2">#</span>
+            核心功能特性
+          </h2>
+          <ul class="list-disc list-inside space-y-2 text-muted-foreground mb-6">
+            <li><strong>多格式支持</strong>: 支持 .spine、.json、.skel 二进制格式，兼容 Spine 3.8-4.2 版本</li>
+            <li><strong>Spine Player 引擎</strong>: 基于 Spine 官方播放器，确保动画的高保真渲染和完美兼容</li>
+            <li><strong>实时预览</strong>: 即时查看动画效果，支持播放/暂停、速度调节等控制</li>
+            <li><strong>批量导入</strong>: 支持拖拽多文件同时上传，自动识别文件类型</li>
+            <li><strong>本地计算</strong>: 所有处理都在浏览器本地完成，动画数据不会上传到服务器</li>
+            <li><strong>全屏模式</strong>: 支持全屏查看动画效果，提供沉浸式的预览体验</li>
+            <li><strong>错误恢复</strong>: 智能的文件解析和错误恢复机制，即使文件有问题也能显示动画效果</li>
           </ul>
         </div>
       </div>
-    </div>
 
-    <!-- 相关工具 -->
-    <div class="space-y-4">
-      <h3 class="text-lg font-semibold">相关工具</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <ToolCard
-          v-for="tool in relatedTools"
-          :key="tool.id"
-          :tool="tool"
-          :title="tool.name"
-          :description="tool.description"
-          :category="tool.category"
-          :usage-count="formatViewCount(tool.viewCount)"
-          :icon="tool.icon"
-          @select="handleToolSelect"
-        />
-      </div>
+      <!-- 相关推荐区 - 区域4：相关工具推荐 -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-foreground mb-4">您可能还需要...</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <NuxtLink
+            v-for="relatedTool in relatedTools"
+            :key="relatedTool.id"
+            :to="`/tools/${relatedTool.id}`"
+            class="block p-4 bg-card border border-border rounded-lg hover:bg-accent transition-colors"
+          >
+            <div class="flex items-center gap-2 mb-2">
+              <component
+                :is="iconMap[relatedTool.icon]"
+                class="w-5 h-5 text-primary"
+              />
+              <span class="font-medium text-foreground">{{ relatedTool.name }}</span>
+            </div>
+            <p class="text-sm text-muted-foreground line-clamp-2">{{ relatedTool.description }}</p>
+          </NuxtLink>
+        </div>
+      </section>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
-import { categories } from '~/data/categories'
+import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
+import { useRouter } from 'vue-router'
+import {
+  HelpCircle, ChevronUp, FileText, Lock, Shield, Clock, Type, Wifi, Image, Code,
+  Database, Link, Hash, Timer, Regex, FileDiff,
+  Globe, FolderOpen, GitBranch
+} from 'lucide-vue-next'
 import { tools } from '~/data/tools'
+import { categories } from '~/data/categories'
 import { addRecentTool } from '~/composables/useTools'
 import Breadcrumb from '~/components/Breadcrumb.vue'
 import ToolCard from '~/components/ToolCard.vue'
-import { JSEncrypt } from 'jsencrypt'
 
 definePageMeta({
   layout: 'default'
 })
 
-const category = categories.find(c => c.id === 'crypto')
+// SEO配置
+useSeoMeta({
+  title: 'Spine动画编辑器 - 专业骨骼动画在线编辑与预览工具 | Util工具箱',
+  description: '专业的Spine骨骼动画在线编辑器，支持WebGL实时渲染、动画播放控制、皮肤切换等功能。支持.spine、.json、.skel格式，兼容Spine 3.8-4.2版本。纯本地计算，动画数据绝对安全。',
+  keywords: 'Spine动画编辑器,骨骼动画,2D动画,游戏动画,动画编辑器,WebGL动画,Spine运行时,动画预览,动画调试,游戏开发',
+  author: 'Util工具箱',
+  ogTitle: 'Spine动画编辑器 - 专业骨骼动画在线编辑工具',
+  ogDescription: '专业的Spine骨骼动画在线编辑器，支持实时渲染和动画控制，纯本地处理，数据安全可靠，游戏开发必备工具。',
+  ogImage: 'https://util.cn/images/tools/spine-animation-editor.png',
+  ogUrl: 'https://util.cn/tools/spine-animation-editor',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Spine动画编辑器 - 骨骼动画在线编辑与预览',
+  twitterDescription: '专业Spine骨骼动画编辑器，支持实时渲染和动画控制，游戏开发必备工具。',
+  twitterImage: 'https://util.cn/images/tools/spine-animation-editor.png'
+})
 
-// 响应式数据
-const publicKey = ref('')
-const plainText = ref('')
-const encryptedResult = ref('')
-const keyFormat = ref('PEM')
-const outputFormat = ref('base64')
-const encryptionScheme = ref('RSA-OAEP')
-const publicKeyFile = ref(null)
-const dataFile = ref(null)
-const copyButtonText = ref('复制')
-const encryptedChunks = ref(0)
-const encryptDetails = ref(null)
-const publicKeyInfo = ref(null)
+// JSON-LD 结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: 'Spine动画编辑器',
+            description: '专业的Spine骨骼动画在线编辑器，支持WebGL实时渲染、动画播放控制、皮肤切换等功能',
+            url: 'https://util.cn/tools/spine-animation-editor',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CNY'
+            },
+            featureList: [
+              'WebGL实时渲染',
+              '动画播放控制',
+              '皮肤切换管理',
+              '多格式支持',
+              '多引擎导出',
+              '本地安全处理',
+              '骨骼编辑功能',
+              '动画调试工具'
+            ]
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: '首页',
+                item: 'https://util.cn'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '工具',
+                item: 'https://util.cn/tools'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Spine动画编辑器',
+                item: 'https://util.cn/tools/spine-animation-editor'
+              }
+            ]
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '什么是Spine动画？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'Spine是专业的2D骨骼动画制作工具，广泛应用于游戏开发、动画制作等领域。它通过骨骼系统和皮肤贴图的组合，让开发者能够创建流畅、高效的角色动画。相比传统的逐帧动画，Spine骨骼动画具有文件体积小、动画过渡自然、易于控制等优势。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Spine支持哪些文件格式？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'Spine支持多种格式：.spine（项目文件）、.json（数据格式）、.skel（骨骼二进制格式）、.atlas（纹理图集）、.png（纹理图片），兼容Spine 3.8-4.2版本。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Spine动画的优势是什么？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'Spine动画优势：1）文件体积小，节省存储空间；2）支持动态换装和皮肤切换；3）动画流畅自然；4）支持程序化控制；5）内存占用低；6）支持复杂的动画混合和IK。'
+                }
+              }
+            ]
+          }
+        ]
+      })
+    }
+  ]
+})
+
+const router = useRouter()
+
+// 定义当前工具和分类
+const tool = tools.find(t => t.id === 'spine-animation-editor')
+const category = categories.find(c => c.id === 'dev')
+
+// 图标映射
+const iconMap = {
+  FileText, Lock, Shield, Clock, Type, Wifi, Image, Code,
+  Database, Link, Hash, Timer, Regex, FileDiff,
+  Globe, FolderOpen, GitBranch
+}
 
 // 相关工具
 const relatedTools = computed(() => {
-  return tools.filter(tool =>
-    tool.category === 'crypto' &&
-    tool.id !== 'rsa-encrypt'
-  ).slice(0, 4)
+  // 获取相关工具：同一分类下的其他工具 + 推荐工具
+  const sameCategory = tools.filter(t =>
+    t.category === 'dev' && t.id !== 'spine-animation-editor'
+  ).slice(0, 2)
+
+  // 添加一些推荐工具
+  const recommended = [
+    tools.find(t => t.id === 'svg-code-editor'),
+    tools.find(t => t.id === 'image-to-pdf'),
+    tools.find(t => t.id === 'image-format-converter'),
+    tools.find(t => t.id === 'json-formatter')
+  ].filter(Boolean)
+
+  return [...sameCategory, ...recommended].slice(0, 4)
 })
 
-// 格式化浏览量
-const formatViewCount = (count) => {
-  if (count >= 10000) {
-    return `${(count / 10000).toFixed(1)}w+`
-  } else if (count >= 1000) {
-    return `${(count / 1000).toFixed(1)}k+`
-  }
-  return `${count}`
+// 文件处理相关
+const fileInput = ref(null)
+const isFileDragging = ref(false)
+const resourceFiles = ref([])
+const isLoading = ref(false)
+const loadingProgress = ref(0)
+
+// Spine 相关
+const spineLoaded = ref(false)
+const animations = ref([])
+const currentAnimation = ref('')
+const isPlaying = ref(false)
+const playSpeed = ref(1.0)
+const dependenciesLoaded = ref(false)
+const dependencyStatus = ref('等待中...')
+let spinePlayer = null
+
+// 视图控制相关
+const zoomLevel = ref(1.0)
+
+// 全屏相关
+const isFullscreen = ref(false)
+
+// 存储创建的 URL 对象用于清理
+const createdUrls = ref([])
+
+// SEO 内容折叠状态
+const isSeoContentVisible = ref(true)
+
+// 计算属性
+const hasSkeletonFile = computed(() => {
+  return resourceFiles.value.some(file =>
+    file.name.endsWith('.spine') ||
+    file.name.endsWith('.json') ||
+    file.name.endsWith('.skel')
+  )
+})
+
+const hasAtlasFile = computed(() => {
+  return resourceFiles.value.some(file => file.name.endsWith('.atlas'))
+})
+
+const textureFiles = computed(() => {
+  return resourceFiles.value.filter(file =>
+    file.name.endsWith('.png') ||
+    file.name.endsWith('.jpg') ||
+    file.name.endsWith('.jpeg')
+  )
+})
+
+// 文件操作方法
+const openFile = () => {
+  fileInput.value?.click()
 }
 
-// 监听公钥变化
-watch(publicKey, (newKey) => {
-  if (newKey) {
-    analyzePublicKey(newKey)
-  } else {
-    publicKeyInfo.value = null
+const clearFiles = () => {
+  resourceFiles.value = []
+  animations.value = []
+  currentAnimation.value = ''
+  isPlaying.value = false
+  spineLoaded.value = false
+  dependenciesLoaded.value = false
+  dependencyStatus.value = '等待中...'
+  zoomLevel.value = 1.0
+  if (spinePlayer) {
+    spinePlayer.dispose()
+    spinePlayer = null
   }
-})
+  // 清空容器
+  const container = document.getElementById('spine-player-container')
+  if (container) {
+    container.innerHTML = ''
+  }
+  // 清理创建的 URL 对象
+  createdUrls.value.forEach(url => URL.revokeObjectURL(url))
+  createdUrls.value = []
+  // 清理全局图像数据
+  if (window.tempSpineImages) {
+    delete window.tempSpineImages
+    console.log('🧹 已清理全局图像数据')
+  }
+  if (window.tempSpineBlobUrls) {
+    delete window.tempSpineBlobUrls
+    console.log('🧹 已清理全局blob URL映射')
+  }
+}
 
-// 分析公钥
-const analyzePublicKey = (key) => {
+const handleFileSelect = (event) => {
+  const files = Array.from(event.target.files)
+  handleFiles(files)
+}
+
+const handleDrop = (event) => {
+  event.preventDefault()
+  isFileDragging.value = false
+
+  const files = Array.from(event.dataTransfer.files)
+  handleFiles(files)
+}
+
+const handleFiles = async (files) => {
+  if (files.length === 0) return
+
   try {
-    const jsEncrypt = new JSEncrypt()
-    jsEncrypt.setPublicKey(key)
+    // 合并新文件到现有文件列表（去重）
+    const existingFileNames = resourceFiles.value.map(f => f.name)
+    const newFiles = files.filter(file => !existingFileNames.includes(file.name))
 
-    // 获取密钥信息（这里使用模拟数据）
-    const keyLength = key.includes('2048') ? 2048 : key.includes('3072') ? 3072 : key.includes('4096') ? 4096 : 2048
-    const maxEncrypt = Math.floor((keyLength - 42) / 8) // OAEP填充
-
-    publicKeyInfo.value = {
-      bits: keyLength,
-      maxEncryptLength: maxEncrypt,
-      fingerprint: generateFingerprint(key)
+    if (newFiles.length > 0) {
+      resourceFiles.value = [...resourceFiles.value, ...newFiles]
+      console.log(`📁 已添加 ${newFiles.length} 个文件，总计 ${resourceFiles.value.length} 个文件`)
+    } else {
+      console.log('⚠️ 所有文件已存在，未添加重复文件')
     }
   } catch (error) {
-    publicKeyInfo.value = null
+    console.error('文件添加失败:', error)
   }
 }
 
-// 生成密钥指纹（模拟）
-const generateFingerprint = (key) => {
-  return 'SHA256:' + Array.from({length: 32}, () =>
-    Math.floor(Math.random() * 16).toString(16)
-  ).join('').substring(0, 16)
-}
-
-// 加载示例公钥
-const loadExampleKey = () => {
-  publicKey.value = `-----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu1SU1LfVLPHCozMxH2Mo
-4lgOEePzNm0tRgeLezV6ffAt0gunVTLw7onLRnrUhgUXOJwnLHkNxf85pSz9CVD
-MF3rJIcIZA1V6ZhrlYQpzlzR8mTh/8I8Aj7geWRZJ1dGif4RPvqVY2/6cR1brvN
-Tq+Jz5gZHOjWNPmwKBMvmv8N+Lt+MPTk1VjM2OL8YKRM/pj6RVJ8f/5BDD3G21H
-0O39SFTwS1wQp5B0jpbWxGBTDmbzDbi8JqSn4UnBxOBF5eBmHm1TQRrvFFXRz8n
-jpZvKJBbfjQjKY7YNGTo3iQYpPOmHgaE3FBaZ1AiLGgzwI87hjCkN3gpbJnzJNR
-9QIDAQAB
------END PUBLIC KEY-----`
-}
-
-// 加密数据
-const encryptData = async () => {
-  if (!publicKey.value || !plainText.value) {
-    alert('请输入公钥和要加密的数据')
+// 应用并解析文件
+const applyAndParse = async () => {
+  if (resourceFiles.value.length === 0) {
+    console.warn('没有可解析的文件')
     return
   }
 
+  console.log('🚀 开始应用和解析文件...')
+
+  // 显示确认对话框
+  const confirmed = confirm(`确认要开始解析 ${resourceFiles.value.length} 个文件吗？\n\n` +
+    resourceFiles.value.map(f => `• ${f.name}`).join('\n') +
+    '\n\n系统将验证所需资源文件是否满足要求。')
+
+  if (!confirmed) {
+    console.log('用户取消了解析操作')
+    return
+  }
+
+  isLoading.value = true
+  loadingProgress.value = 20
+
   try {
-    // 检查数据长度
-    const dataBytes = new TextEncoder().encode(plainText.value)
-    if (dataBytes.length > publicKeyInfo.value?.maxEncryptLength) {
-      if (!confirm(`数据长度(${dataBytes.length}字节)超过最大加密长度(${publicKeyInfo.value.maxEncryptLength}字节)。\n\n是否使用混合加密方案？`)) {
-        return
-      }
-      await hybridEncrypt()
+    loadingProgress.value = 20
+
+    // 验证文件完整性
+    const validationResult = validateFiles(resourceFiles.value)
+    if (!validationResult.valid) {
+      alert(`文件验证失败：\n${validationResult.message}`)
+      isLoading.value = false
       return
     }
 
-    // 直接RSA加密
-    const jsEncrypt = new JSEncrypt()
-    jsEncrypt.setPublicKey(publicKey.value)
+    console.log('✅ 文件验证通过:', validationResult.message)
 
-    const encrypted = jsEncrypt.encrypt(plainText.value)
-    if (encrypted) {
-      encryptedResult.value = encrypted
-      encryptedChunks.value = 1
+    // 分类文件
+    const skeletonFile = resourceFiles.value.find(file =>
+      file.name.endsWith('.spine') ||
+      file.name.endsWith('.json') ||
+      file.name.endsWith('.skel')
+    )
 
-      encryptDetails.value = {
-        algorithm: `RSA-${publicKeyInfo.value?.bits || 2048}-${encryptionScheme.value}`,
-        keySize: publicKeyInfo.value?.bits || 2048,
-        originalLength: dataBytes.length,
-        encryptedLength: encrypted.length
-      }
+    const atlasFile = resourceFiles.value.find(file => file.name.endsWith('.atlas'))
+    const imageFiles = resourceFiles.value.filter(file =>
+      file.name.endsWith('.png') ||
+      file.name.endsWith('.jpg') ||
+      file.name.endsWith('.jpeg')
+    )
+
+    if (skeletonFile) {
+      loadingProgress.value = 40
+      await loadSpineAnimationWithPlayer(skeletonFile, atlasFile, imageFiles)
     } else {
-      alert('加密失败，请检查公钥格式')
+      throw new Error('未找到骨架文件（.json/.spine/.skel）')
     }
+
+    loadingProgress.value = 100
+    console.log('🎉 所有文件解析完成!')
+
   } catch (error) {
-    alert('加密错误：' + error.message)
+    console.error('文件解析失败:', error)
+    alert(`文件解析失败：${error.message}`)
+  } finally {
+    isLoading.value = false
+    console.log('🔄 isLoading 已设置为 false')
   }
 }
 
-// 混合加密（用于大文件）
-const hybridEncrypt = async () => {
-  // 生成随机AES密钥
-  const aesKey = Array.from({length: 32}, () =>
-    Math.floor(Math.random() * 256)
+// 验证文件完整性
+const validateFiles = (files) => {
+  const skeletonFiles = files.filter(file =>
+    file.name.endsWith('.spine') ||
+    file.name.endsWith('.json') ||
+    file.name.endsWith('.skel')
   )
 
-  // 使用AES加密数据（这里简化处理）
-  const dataBytes = new TextEncoder().encode(plainText.value)
+  const atlasFiles = files.filter(file => file.name.endsWith('.atlas'))
 
-  // 使用RSA加密AES密钥
-  const jsEncrypt = new JSEncrypt()
-  jsEncrypt.setPublicKey(publicKey.value)
-  const aesKeyBase64 = btoa(String.fromCharCode(...aesKey))
-  const encryptedAesKey = jsEncrypt.encrypt(aesKeyBase64)
+  const imageFiles = files.filter(file =>
+    file.name.endsWith('.png') ||
+    file.name.endsWith('.jpg') ||
+    file.name.endsWith('.jpeg')
+  )
 
-  // 组合结果
-  const result = {
-    type: 'hybrid',
-    encryptedKey: encryptedAesKey,
-    algorithm: 'AES-256-CBC',
-    iv: Array.from({length: 16}, () => Math.floor(Math.random() * 256))
-      .map(b => b.toString(16).padStart(2, '0')).join(''),
-    data: btoa(plainText.value) // 简化，实际应该用AES加密
+  // 验证必要文件
+  if (skeletonFiles.length === 0) {
+    return {
+      valid: false,
+      message: '缺少骨架文件（.json/.spine/.skel）'
+    }
   }
 
-  encryptedResult.value = JSON.stringify(result, null, 2)
-  encryptedChunks.value = 1
+  if (skeletonFiles.length > 1) {
+    return {
+      valid: false,
+      message: '骨架文件过多，只需要一个骨架文件'
+    }
+  }
 
-  encryptDetails.value = {
-    algorithm: `RSA-${publicKeyInfo.value?.bits || 2048} + AES-256`,
-    keySize: publicKeyInfo.value?.bits || 2048,
-    originalLength: dataBytes.length,
-    encryptedLength: encryptedResult.value.length
+  if (atlasFiles.length === 0) {
+    return {
+      valid: false,
+      message: '缺少图集文件（.atlas）'
+    }
+  }
+
+  if (imageFiles.length === 0) {
+    return {
+      valid: false,
+      message: '缺少图像文件（.png/.jpg/.jpeg）'
+    }
+  }
+
+  return {
+    valid: true,
+    message: `文件完整：骨架 x${skeletonFiles.length}, 图集 x${atlasFiles.length}, 图像 x${imageFiles.length}`
   }
 }
 
-// 大文件加密
-const largeFileEncrypt = () => {
-  alert('大文件加密功能需要选择文件，建议使用混合加密方案：\n\n1. 生成随机AES密钥\n2. 使用AES加密文件内容\n3. 使用RSA加密AES密钥')
-}
-
-// 处理公钥文件上传
-const handleKeyFileUpload = (event) => {
-  const file = event.target.files[0]
-  if (!file) return
-
-  const reader = new FileReader()
-  reader.onload = (e) => {
-    publicKey.value = e.target.result
-  }
-  reader.readAsText(file)
-}
-
-// 处理数据文件上传
-const handleDataFileUpload = (event) => {
-  const file = event.target.files[0]
-  if (!file) return
-
-  if (file.size > 1024 * 1024) { // 1MB
-    alert('文件过大，建议使用大文件加密方案')
-    return
-  }
-
-  const reader = new FileReader()
-  reader.onload = (e) => {
-    plainText.value = e.target.result
-  }
-  reader.readAsText(file)
-}
-
-// 复制到剪贴板
-const copyToClipboard = async (text) => {
+// 加载 Spine Player 动画
+const loadSpineAnimationWithPlayer = async (skeletonFile, atlasFile, imageFiles) => {
   try {
-    await navigator.clipboard.writeText(text)
-    copyButtonText.value = '已复制'
+    console.log('🚀 开始使用 Spine Player 加载动画...')
+    dependencyStatus.value = '加载 Spine Player 库...'
+
+    // 等待 Spine Player 库加载
+    await waitForSpinePlayer()
+    loadingProgress.value = 60
+
+    // 读取骨架文件
+    let skeletonData = null
+    let processedSkeletonUrl = null
+
+    if (skeletonFile.name.endsWith('.json') || skeletonFile.name.endsWith('.spine')) {
+      console.log('📄 开始读取 JSON 文件:', skeletonFile.name)
+      const text = await readFileAsText(skeletonFile)
+      skeletonData = JSON.parse(text)
+      console.log('📊 JSON 文件读取成功，包含 skeleton 字段:', !!skeletonData.skeleton)
+      console.log('📊 JSON 文件结构分析:', {
+        hasSkeleton: !!skeletonData.skeleton,
+        hasBones: !!skeletonData.bones,
+        bonesCount: skeletonData.bones ? skeletonData.bones.length : 0,
+        hasSlots: !!skeletonData.slots,
+        slotsCount: skeletonData.slots ? skeletonData.slots.length : 0,
+        hasSkins: !!skeletonData.skins,
+        skinsCount: skeletonData.skins ? Object.keys(skeletonData.skins).length : 0,
+        hasAnimations: !!skeletonData.animations,
+        animationsCount: skeletonData.animations ? (Array.isArray(skeletonData.animations) ? skeletonData.animations.length : Object.keys(skeletonData.animations).length) : 0
+      })
+
+      // 处理 JSON 中的图像路径
+      if (skeletonData.skeleton) {
+        console.log('🔧 skeleton 字段内容:', skeletonData.skeleton)
+
+        if (skeletonData.skeleton.images !== undefined) {
+          console.log('🔧 发现 JSON 中的 images 路径:', skeletonData.skeleton.images)
+          console.log('🖼️ 图像文件数量:', imageFiles.length)
+
+          // 暂时不修改 images 路径，让 Image 拦截器处理
+          console.log('ℹ️ 保持原始 images 路径不变，依赖 Image 拦截器处理')
+        } else {
+          console.log('ℹ️ JSON 文件中没有 images 字段')
+        }
+      } else {
+        console.log('❌ JSON 文件中没有 skeleton 字段')
+      }
+
+      // 验证JSON结构的完整性
+      if (skeletonData.bones && skeletonData.bones.length > 0) {
+        console.log('✅ 骨架数据验证通过，找到', skeletonData.bones.length, '个骨骼')
+      } else {
+        console.warn('⚠️ 骨架数据验证失败：没有找到骨骼数据')
+      }
+
+      if (skeletonData.slots && skeletonData.slots.length > 0) {
+        console.log('✅ 插槽数据验证通过，找到', skeletonData.slots.length, '个插槽')
+      } else {
+        console.warn('⚠️ 插槽数据验证失败：没有找到插槽数据')
+      }
+
+      if (skeletonData.skins) {
+        console.log('✅ 皮肤数据验证通过')
+      } else {
+        console.warn('⚠️ 皮肤数据验证失败：没有找到皮肤数据')
+      }
+    } else if (skeletonFile.name.endsWith('.skel')) {
+      console.warn('⚠️ .skel 二进制文件需要转换为 JSON 格式')
+      throw new Error('目前不支持直接加载 .skel 文件，请使用 .json 或 .spine 格式')
+    }
+
+    // 提取动画列表
+    if (skeletonData && skeletonData.animations) {
+      if (Array.isArray(skeletonData.animations)) {
+        animations.value = skeletonData.animations.map((anim, index) =>
+          typeof anim === 'string' ? anim : anim.name || `animation_${index}`
+        )
+      } else if (typeof skeletonData.animations === 'object') {
+        animations.value = Object.keys(skeletonData.animations)
+      } else {
+        animations.value = ['default']
+      }
+    } else {
+      animations.value = ['default']
+    }
+
+    console.log('🎬 检测到的动画:', animations.value)
+    loadingProgress.value = 80
+
+    // 创建文件 URL 并存储它们以便后续清理
+    // 确保文件以 .json 扩展名创建，让 Spine Player 正确识别为JSON格式
+    const jsonFileName = skeletonFile.name.endsWith('.json') ?
+      skeletonFile.name :
+      skeletonFile.name.replace(/\.[^/.]+$/, '.json')
+
+    // 创建一个包含正确文件名的 File 对象，这样 Spine Player 能正确识别格式
+    const jsonFile = new File(
+      [JSON.stringify(skeletonData, null, 2)],
+      jsonFileName,
+      { type: 'application/json' }
+    )
+    const skeletonUrl = URL.createObjectURL(jsonFile)
+    createdUrls.value.push(skeletonUrl)
+
+    // 使用重新创建的 JSON 文件 URL，确保正确的MIME类型
+    processedSkeletonUrl = skeletonUrl
+    console.log('🔄 使用重新创建的 JSON 文件 URL:', jsonFileName)
+
+    // 处理图像文件和 atlas 文件 - 保持原始格式
+    let processedAtlasUrl = null
+
+    if (atlasFile) {
+      console.log('📋 处理 Atlas 文件，保持原始格式')
+
+      // 直接使用原始 Atlas 文件，不做修改
+      // Spine Player 需要原始的 Atlas 格式来正确定位 regions
+      processedAtlasUrl = URL.createObjectURL(atlasFile)
+      createdUrls.value.push(processedAtlasUrl)
+      console.log('📄 使用原始 Atlas 文件 URL:', processedAtlasUrl)
+
+      // 读取 Atlas 文件内容来获取图像文件名
+      const atlasText = await readFileAsText(atlasFile)
+      const lines = atlasText.split('\n')
+
+      // 找到图像文件名
+      let imageFileName = null
+      for (const line of lines) {
+        const trimmedLine = line.trim()
+        if (trimmedLine && !trimmedLine.startsWith('#') && !trimmedLine.includes(':') &&
+            (trimmedLine.includes('.png') || trimmedLine.includes('.jpg') || trimmedLine.includes('.jpeg'))) {
+          imageFileName = trimmedLine
+          console.log('🔍 在 Atlas 中找到图像文件名:', imageFileName)
+          break
+        }
+      }
+
+      if (imageFileName) {
+        // 找到对应的图像文件并转换为Base64
+        const matchingImageFile = imageFiles.find(file => file.name === imageFileName)
+        if (matchingImageFile) {
+          console.log('🖼️ 开始转换图像为Base64:', imageFileName)
+          const imageDataUrl = await readFileAsDataURL(matchingImageFile)
+
+          // 将Base64图像数据添加到全局作用域
+          if (!window.tempSpineImages) {
+            window.tempSpineImages = {}
+          }
+          window.tempSpineImages[imageFileName] = imageDataUrl
+          console.log('🎨 图像数据已存储到全局作用域:', imageFileName)
+
+          // 同时创建一个与原始文件名匹配的blob URL映射，以防Spine Player需要
+          if (!window.tempSpineBlobUrls) {
+            window.tempSpineBlobUrls = {}
+          }
+          const blobUrl = URL.createObjectURL(matchingImageFile)
+          window.tempSpineBlobUrls[imageFileName] = blobUrl
+          createdUrls.value.push(blobUrl)
+          console.log('🔗 创建blob URL映射:', imageFileName, '->', blobUrl)
+        } else {
+          console.warn('⚠️ 未找到匹配的图像文件:', imageFileName)
+        }
+      } else {
+        console.warn('⚠️ 在 Atlas 文件中未找到图像文件名')
+      }
+    }
+
+    // 验证骨架数据完整性
+    if (!skeletonData.bones || skeletonData.bones.length === 0) {
+      throw new Error('骨架文件缺少必需的骨骼数据')
+    }
+
+    if (!skeletonData.slots || skeletonData.slots.length === 0) {
+      console.warn('⚠️ 骨架文件缺少插槽数据，可能影响显示')
+    }
+
+    console.log('✅ 骨架数据验证通过，准备加载')
+
+    // 先停止加载状态并设置 spineLoaded 为 true 以显示容器
+    isLoading.value = false
+    spineLoaded.value = true
+
+    // 等待 DOM 更新
+    await nextTick()
+
+    // 获取容器
+    const container = document.getElementById('spine-player-container')
+    if (!container) {
+      throw new Error('找不到 Spine Player 容器')
+    }
+
+    // 暂时禁用Image拦截器，测试是否能解决Region问题
+    console.log('🔧 暂时禁用Image拦截器进行测试')
+    const originalImage = window.Image
+
+    // 拦截XMLHttpRequest以提供Base64图像数据（用于其他可能的请求）
+    const originalXHROpen = XMLHttpRequest.prototype.open
+    const originalXHRSend = XMLHttpRequest.prototype.send
+
+    XMLHttpRequest.prototype.open = function(method, url, ...args) {
+      console.log('🌐 XMLHttpRequest 拦截:', method, url)
+
+      // 检查是否是图像请求
+      if (url && (url.endsWith('.png') || url.endsWith('.jpg') || url.endsWith('.jpeg'))) {
+        const fileName = url.split('/').pop()
+        console.log('🖼️ 检测到图像请求:', fileName)
+
+        // 检查我们是否有对应的Base64数据
+        if (window.tempSpineImages && window.tempSpineImages[fileName]) {
+          console.log('✅ 找到Base64图像数据:', fileName)
+          this._base64Data = window.tempSpineImages[fileName]
+          this._isImageRequest = true
+        }
+      }
+
+      return originalXHROpen.call(this, method, url, ...args)
+    }
+
+    XMLHttpRequest.prototype.send = function(data) {
+      if (this._isImageRequest && this._base64Data) {
+        console.log('🎨 拦截图像请求，提供Base64数据')
+
+        // 模拟成功响应
+        Object.defineProperty(this, 'readyState', { value: 4, writable: false })
+        Object.defineProperty(this, 'status', { value: 200, writable: false })
+        Object.defineProperty(this, 'response', {
+          value: this._base64Data,
+          writable: false
+        })
+
+        // 触发事件
+        setTimeout(() => {
+          if (this.onreadystatechange) {
+            this.onreadystatechange()
+          }
+          if (this.onload) {
+            this.onload()
+          }
+        }, 0)
+
+        return
+      }
+
+      return originalXHRSend.call(this, data)
+    }
+
+    // 创建 Spine Player 配置
+    const config = {
+      jsonUrl: processedSkeletonUrl,
+      atlasUrl: processedAtlasUrl || atlasUrl,
+      animation: animations.value[0] || 'default',
+      backgroundColor: "#1a1a1a",
+      showControls: false, // 使用自定义控制
+      // 添加更多配置来确保使用我们提供的资源
+      premultipliedAlpha: false,
+      // 强制指定为JSON格式，防止被误认为二进制文件
+      json: true,
+      success: (player) => {
+        console.log('🎉 Spine Player success 回调被调用')
+        spinePlayer = player
+        loadingProgress.value = 100
+        isLoading.value = false
+        console.log('✅ Spine Player 加载成功')
+        console.log('📊 Spine Player 详情:', {
+          hasCanvas: !!player.canvas,
+          hasContext: !!player.context,
+          animationState: !!player.state,
+          hasSetAnimation: !!player.setAnimation,
+          hasPlay: !!player.play,
+          hasPause: !!player.pause
+        })
+
+        // 设置默认动画
+        if (animations.value.length > 0) {
+          currentAnimation.value = animations.value[0]
+          // Spine Player 会自动开始播放第一个动画
+          isPlaying.value = true
+          console.log('🎬 设置默认动画:', animations.value[0])
+        }
+      },
+      error: (message) => {
+        console.error('❌ Spine Player error 回调被调用:', message)
+        // 避免循环引用，只显示简单的错误信息
+        const errorMessage = typeof message === 'object' ?
+          (message.message || message.toString() || '未知错误') :
+          message
+        console.error('📊 错误详情:', errorMessage)
+
+        dependencyStatus.value = '加载失败'
+        // 加载失败时重置 spineLoaded
+        spineLoaded.value = false
+        isLoading.value = false
+        // 清空容器以显示错误信息
+        if (container) {
+          container.innerHTML = `
+            <div class="flex items-center justify-center h-full text-white">
+              <div class="text-center">
+                <p class="mb-2">❌ Spine Player 加载失败</p>
+                <p class="text-sm text-gray-400">${errorMessage}</p>
+                <p class="text-xs text-gray-500 mt-2">请检查文件格式是否正确</p>
+              </div>
+            </div>
+          `
+        }
+      }
+    }
+
+    console.log('🔧 Spine Player 配置:', {
+      jsonUrl: processedSkeletonUrl,
+      atlasUrl: processedAtlasUrl || atlasUrl,
+      animation: animations.value[0] || 'default',
+      numImageFiles: imageFiles.length
+    })
+
+    // 跳过 URL 可访问性测试，因为 blob URL 可能不支持 HEAD 请求
+    console.log('🔗 资源 URL 准备完成，Spine Player 将直接加载')
+
+    // 创建 Spine Player
+    console.log('🎮 开始创建 Spine Player...')
+    console.log('🔍 检查 Spine Player 库:', {
+      hasWindowSpinePlayer: !!window.SpinePlayer,
+      hasSpineObject: !!window.spine,
+      hasSpinePlayerInSpine: !!(window.spine && window.spine.SpinePlayer),
+      container: !!container,
+      containerId: container.id
+    })
+
+    // 添加容器事件监听来调试
+    const originalConsoleError = console.error
+    console.error = (...args) => {
+      originalConsoleError(...args)
+      if (args[0] && typeof args[0] === 'string' && args[0].includes('Spine')) {
+        console.log('🚨 捕获到 Spine 相关错误:', args)
+      }
+    }
+
+    let playerInstance = null
+    try {
+      if (window.SpinePlayer) {
+        console.log('🎯 使用 window.SpinePlayer 创建实例')
+        playerInstance = new window.SpinePlayer(container, config)
+      } else if (window.spine && window.spine.SpinePlayer) {
+        console.log('🎯 使用 window.spine.SpinePlayer 创建实例')
+        playerInstance = new window.spine.SpinePlayer(container, config)
+      } else {
+        throw new Error('Spine Player 库未加载')
+      }
+
+      console.log('🎮 Spine Player 实例已创建:', !!playerInstance)
+
+      // 添加一些额外的事件监听
+      setTimeout(() => {
+        console.log('⏰ 5秒后检查状态:', {
+          spinePlayer: !!spinePlayer,
+          playerInstance: !!playerInstance,
+          containerChildren: container.children.length,
+          containerContent: container.innerHTML.substring(0, 200)
+        })
+      }, 5000)
+
+    } catch (error) {
+      console.error('❌ 创建 Spine Player 时发生异常:', error)
+      throw error
+    }
+
+    // 恢复原始 console.error
     setTimeout(() => {
-      copyButtonText.value = '复制'
-    }, 2000)
+      console.error = originalConsoleError
+    }, 10000)
+
+    console.log('🎮 Spine Player 创建请求已发送')
+
+    dependenciesLoaded.value = true
+    dependencyStatus.value = '加载完成'
+
+    // 添加超时检测
+    setTimeout(() => {
+      if (isLoading.value) {
+        console.warn('⚠️ Spine Player 加载超时，可能遇到了问题')
+        dependencyStatus.value = '加载超时'
+        // 这里可以添加重试逻辑或显示错误信息
+      }
+    }, 10000) // 10秒超时
+
+    // 恢复原始方法（在加载完成后）
+    setTimeout(() => {
+      window.Image = originalImage
+      XMLHttpRequest.prototype.open = originalXHROpen
+      XMLHttpRequest.prototype.send = originalXHRSend
+      console.log('🔄 原始方法已恢复')
+    }, 15000) // 15秒后恢复，确保加载完成
+
   } catch (error) {
-    console.error('复制失败:', error)
+    console.error('❌ Spine Player 加载失败:', error)
+
+    // 恢复原始方法（在出错时）
+    window.Image = originalImage
+    XMLHttpRequest.prototype.open = originalXHROpen
+    XMLHttpRequest.prototype.send = originalXHRSend
+
+    // 出错时重置 spineLoaded
+    spineLoaded.value = false
+    throw error
   }
 }
 
-// 下载结果
-const downloadResult = () => {
-  if (!encryptedResult.value) return
+// 显示默认示例动画
+const showDefaultAnimation = async () => {
+  try {
+    console.log('🚀 加载默认示例动画...')
+    isLoading.value = true
+    loadingProgress.value = 10
 
-  let content
-  if (outputFormat.value === 'json') {
+    // 等待 Spine Player 库加载
+    await waitForSpinePlayer()
+    loadingProgress.value = 20
+
+    // 先停止加载状态并设置 spineLoaded 为 true 以显示容器
+    isLoading.value = false
+    spineLoaded.value = true
+
+    // 等待 DOM 更新
+    await nextTick()
+    loadingProgress.value = 30
+
+    // 获取容器
+    const container = document.getElementById('spine-player-container')
+    if (!container) {
+      throw new Error('找不到 Spine Player 容器')
+    }
+
+    loadingProgress.value = 50
+
+    // 使用示例资源（不需要拦截，因为这些是静态文件）
+    const config = {
+      jsonUrl: "/spineboy/export/spineboy.json",
+      atlasUrl: "/spineboy/export/spineboy.atlas",
+      animation: "walk",
+      backgroundColor: "#1a1a1a",
+      showControls: false,
+      success: (player) => {
+        spinePlayer = player
+        loadingProgress.value = 100
+        isLoading.value = false
+
+        // 设置动画列表
+        animations.value = ['walk', 'run', 'idle', 'jump']
+        currentAnimation.value = 'walk'
+        isPlaying.value = true
+
+        console.log('✅ 示例动画加载成功')
+        console.log('💡 示例动画工作正常，说明 Spine Player 本身没问题')
+      },
+      error: (message) => {
+        console.error('❌ 示例动画加载失败:', message)
+        console.log('⚠️ 如果示例动画也失败，说明 Spine Player 配置有问题')
+        // 加载失败时重置 spineLoaded
+        spineLoaded.value = false
+
+        // 显示错误信息
+        container.innerHTML = `
+          <div class="flex items-center justify-center h-full text-white">
+            <div class="text-center">
+              <p class="mb-2">❌ Spine Player 加载失败</p>
+              <p class="text-sm text-gray-400">${message}</p>
+              <p class="text-xs text-gray-500 mt-2">请检查 Spine Player 配置</p>
+            </div>
+          </div>
+        `
+      }
+    }
+
+    // 创建 Spine Player（不使用拦截器）
+    if (window.SpinePlayer) {
+      spinePlayer = new window.SpinePlayer(container, config)
+    } else if (window.spine && window.spine.SpinePlayer) {
+      spinePlayer = new window.spine.SpinePlayer(container, config)
+    }
+
+    dependenciesLoaded.value = true
+    dependencyStatus.value = '示例加载完成'
+
+  } catch (error) {
+    console.error('❌ 加载示例动画失败:', error)
+    // 出错时重置 spineLoaded
+    spineLoaded.value = false
+  }
+}
+
+
+// 动画控制方法
+const playAnimation = (animationName) => {
+  currentAnimation.value = animationName
+  console.log('🎬 播放动画:', animationName)
+  console.log('📊 Spine Player 状态检查:', {
+    spinePlayer: !!spinePlayer,
+    hasSetAnimation: spinePlayer?.setAnimation ? true : false,
+    spineLoaded: spineLoaded.value,
+    isLoading: isLoading.value
+  })
+
+  // 使用 Spine Player 播放动画
+  if (spinePlayer && spinePlayer.setAnimation) {
     try {
-      const jsonData = JSON.parse(encryptedResult.value)
-      content = JSON.stringify(jsonData, null, 2)
-    } catch {
-      content = encryptedResult.value
+      spinePlayer.setAnimation(animationName)
+
+      // 如果当前是暂停状态，开始播放
+      if (!isPlaying.value && spinePlayer.play) {
+        spinePlayer.play()
+        isPlaying.value = true
+      }
+
+      console.log('✅ 动画切换成功:', animationName)
+    } catch (error) {
+      console.error('❌ 动画切换失败:', error)
     }
   } else {
-    content = encryptedResult.value
+    console.log('⚠️ Spine Player 不可用')
+
+    // 尝试等待一下 Spine Player 初始化
+    if (spineLoaded.value && !spinePlayer) {
+      console.log('🔄 spineLoaded 为 true 但 spinePlayer 为 null，尝试等待初始化...')
+      setTimeout(() => {
+        if (spinePlayer) {
+          console.log('✅ Spine Player 已初始化，重新尝试播放动画')
+          playAnimation(animationName)
+        } else {
+          console.error('❌ Spine Player 初始化超时')
+        }
+      }, 1000)
+    }
   }
-
-  const blob = new Blob([content], { type: 'text/plain' })
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = `rsa-encrypted-${Date.now()}.txt`
-  a.click()
-  URL.revokeObjectURL(url)
 }
 
-// 清空输入
-const clearInput = () => {
-  plainText.value = ''
-  encryptedResult.value = ''
-  encryptDetails.value = null
+// 更新动画播放控制
+const togglePlay = () => {
+  isPlaying.value = !isPlaying.value
+  console.log('🎮', isPlaying.value ? '开始播放动画' : '暂停播放动画', '速度:', playSpeed.value + 'x')
+
+  // 使用 Spine Player 控制播放
+  if (spinePlayer) {
+    try {
+      if (isPlaying.value) {
+        // 如果有当前动画，设置并播放
+        if (currentAnimation.value && spinePlayer.setAnimation) {
+          spinePlayer.setAnimation(currentAnimation.value)
+        }
+        if (spinePlayer.play) {
+          spinePlayer.play()
+        }
+        console.log('✅ Spine Player 开始播放')
+      } else {
+        if (spinePlayer.pause) {
+          spinePlayer.pause()
+        }
+        console.log('⏸️ Spine Player 已暂停')
+      }
+    } catch (error) {
+      console.error('❌ Spine Player 播放控制失败:', error)
+    }
+  } else {
+    console.log('⚠️ Spine Player 不可用')
+  }
 }
 
-// 工具选择处理
-const handleToolSelect = (tool) => {
-  const toolUrl = `/tools/${tool.id}/`
-  navigateTo(toolUrl)
-  addRecentTool(tool.id)
-}
-
-// 添加到最近使用
-addRecentTool('rsa-encrypt')
-
-// SEO配置
-useSeoMeta({
-  title: 'RSA加密 - 在线RSA公钥加密工具',
-  description: '免费在线RSA加密工具，支持RSA-OAEP和PKCS1加密方案，可加密文本和数据，保护信息安全传输。',
-  keywords: ['RSA', '公钥加密', '非对称加密', 'RSA-OAEP', 'PKCS1', '数据加密']
+// 监听播放速度变化
+watch(playSpeed, (newSpeed) => {
+  if (spinePlayer && spinePlayer.setTimeScale && isPlaying.value) {
+    try {
+      spinePlayer.setTimeScale(newSpeed)
+      console.log('⚡ 动画速度更新:', newSpeed)
+    } catch (error) {
+      console.error('❌ 动画速度更新失败:', error)
+    }
+  }
 })
 
+
+// 视图控制方法 - Spine Player 不支持直接的缩放和平移
+const zoomIn = () => {
+  console.log('⚠️ Spine Player 暂不支持缩放功能')
+}
+
+const zoomOut = () => {
+  console.log('⚠️ Spine Player 暂不支持缩放功能')
+}
+
+const resetZoom = () => {
+  console.log('⚠️ Spine Player 暂不支持缩放功能')
+}
+
+// 全屏方法
+const toggleFullscreen = () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen()
+    isFullscreen.value = true
+  } else {
+    document.exitFullscreen()
+    isFullscreen.value = false
+  }
+}
+
+// SEO 内容折叠方法
+const toggleSeoContent = () => {
+  isSeoContentVisible.value = !isSeoContentVisible.value
+}
+
+// 工具函数
+const readFileAsText = (file) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = (e) => resolve(e.target.result)
+    reader.onerror = (e) => reject(e)
+    reader.readAsText(file)
+  })
+}
+
+// 读取文件为DataURL（Base64）
+const readFileAsDataURL = (file) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = (e) => resolve(e.target.result)
+    reader.onerror = (e) => reject(e)
+    reader.readAsDataURL(file)
+  })
+}
+
+// 获取文件类型图标
+const getFileIcon = (fileName) => {
+  const extension = fileName.split('.').pop().toLowerCase()
+  const iconMap = {
+    'json': '📄',
+    'spine': '🦴',
+    'skel': '🦴',
+    'atlas': '📋',
+    'png': '🖼️',
+    'jpg': '🖼️',
+    'jpeg': '🖼️'
+  }
+  return iconMap[extension] || '📁'
+}
+
+const readFileAsArrayBuffer = (file) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = (e) => resolve(e.target.result)
+    reader.onerror = (e) => reject(e)
+    reader.readAsArrayBuffer(file)
+  })
+}
+
+// 监听 isLoading 状态变化
+watch(isLoading, async (newValue, oldValue) => {
+  console.log('🔄 isLoading 状态变化:', { from: oldValue, to: newValue })
+})
+
+
+// 生命周期
+onMounted(async () => {
+  // 添加到最近使用
+  if (tool) {
+    addRecentTool(tool.id)
+  }
+
+  // 监听全屏变化
+  document.addEventListener('fullscreenchange', () => {
+    isFullscreen.value = !!document.fullscreenElement
+  })
+
+  console.log('🚀 Spine动画编辑器组件已挂载')
+
+  // 等待 Spine Player 加载
+  await waitForSpinePlayer()
+
+  // 显示默认示例动画
+  setTimeout(() => {
+    showDefaultAnimation()
+  }, 500)
+})
+
+onUnmounted(() => {
+  if (spinePlayer) {
+    spinePlayer.dispose()
+    spinePlayer = null
+  }
+  // 清理所有创建的 URL 对象
+  createdUrls.value.forEach(url => URL.revokeObjectURL(url))
+  createdUrls.value = []
+})
 </script>

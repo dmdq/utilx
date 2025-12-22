@@ -890,8 +890,3 @@ if (cluster.isMaster) {
 通过遵循这些最佳实践，你可以构建出易于使用、维护和扩展的RESTful API，为开发者提供优秀的API体验。
 
 ---
-
-**相关文章：**
-- [GraphQL vs RESTful API对比](/graphql-vs-restful-api/)
-- [API安全防护指南](/api-security-guide/)
-- [微服务架构设计](/microservices-architecture/)

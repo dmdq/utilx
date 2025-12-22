@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -13,55 +14,67 @@ export default defineNuxtConfig({
     }
   },
   css: ['@/assets/css/main.css'],
+
   modules: [
     '@nuxtjs/tailwindcss',
-    process.env.NODE_ENV === 'production' ? [
-      '@vite-pwa/nuxt', {
-        registerType: 'autoUpdate',
-        strategies: 'generateSW',
-        injectRegister: 'auto',
-        workbox: {
-          globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-          navigateFallback: '/',
-          skipWaiting: true,
-          clientsClaim: true,
-          // 不要缓存错误页面
-          navigateFallbackDenylist: [/^\/200$/, /^\/404$/],
-          runtimeCaching: [
-            {
-              urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-              handler: 'CacheFirst',
-              options: {
-                cacheName: 'google-fonts-cache',
-                expiration: {
-                  maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // 1 年
-                }
-              }
-            },
-            {
-              urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-              handler: 'CacheFirst',
-              options: {
-                cacheName: 'gstatic-fonts-cache',
-                expiration: {
-                  maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // 1 年
-                }
-              }
-            }
-          ]
-        },
-        client: {
-          installPrompt: true,
-          periodicSyncForUpdates: 30 * 60 * 1000 // 30 分钟
-        }
-      }
-    ] : null
-  ].filter(Boolean),
+    // PWA模块仅在生产环境启用，且配置独立
+    process.env.NODE_ENV === 'production' ? '@vite-pwa/nuxt' : undefined
+  ].filter(Boolean) as string[], // 确保类型正确
+
+  // modules: [
+  //   '@nuxtjs/tailwindcss',
+  //   process.env.NODE_ENV === 'production' ? [
+  //     '@vite-pwa/nuxt', {
+  //       registerType: 'autoUpdate',
+  //       strategies: 'generateSW',
+  //       injectRegister: 'auto',
+  //       workbox: {
+  //         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+  //         navigateFallback: '/',
+  //         skipWaiting: true,
+  //         clientsClaim: true,
+  //         // 不要缓存错误页面
+  //         navigateFallbackDenylist: [/^\/200$/, /^\/404$/],
+  //         runtimeCaching: [
+  //           {
+  //             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+  //             handler: 'CacheFirst',
+  //             options: {
+  //               cacheName: 'google-fonts-cache',
+  //               expiration: {
+  //                 maxEntries: 10,
+  //                 maxAgeSeconds: 60 * 60 * 24 * 365 // 1 年
+  //               }
+  //             }
+  //           },
+  //           {
+  //             urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+  //             handler: 'CacheFirst',
+  //             options: {
+  //               cacheName: 'gstatic-fonts-cache',
+  //               expiration: {
+  //                 maxEntries: 10,
+  //                 maxAgeSeconds: 60 * 60 * 24 * 365 // 1 年
+  //               }
+  //             }
+  //           }
+  //         ]
+  //       },
+  //       client: {
+  //         installPrompt: true,
+  //         periodicSyncForUpdates: 30 * 60 * 1000 // 30 分钟
+  //       }
+  //     }
+  //   ] : null
+  // ].filter(Boolean),
 
   vite: {
-    plugins: [],
+    plugins: [
+      visualizer({
+        open: false,
+        filename: 'stats.html'
+      })
+    ],
     // 开发环境优化
     server: isDev ? {
       fs: {
@@ -117,11 +130,13 @@ export default defineNuxtConfig({
         // 优化依赖预构建
         output: {
           manualChunks: {
-            vendor: ['vue', 'vue-router'],
-            ui: ['@vueuse/integrations'],
-            utils: ['crypto-js', 'marked', 'qrcode']
+            vendor: ['vue'], // 核心框架
+            ui: ['lucide-vue-next', '@vueuse/integrations'], // UI工具
+            utils: ['crypto-js', 'marked', 'qrcode', 'sortablejs'], // 工具库
+            graphics: ['@esotericsoftware/spine-player'] // 图形库
           }
-        }
+        },
+        external: ['web-vitals/attribution']
       },
       // 提高构建速度
       chunkSizeWarningLimit: 1000
@@ -135,9 +150,7 @@ export default defineNuxtConfig({
         'crypto-js',
         'qrcode',
         'lucide-vue-next',
-        'pixi.js',
-        '@esotericsoftware/spine-webgl',
-        'pixi-spine'
+        '@esotericsoftware/spine-player'
       ],
       exclude: [
         '@tauri-apps/api',
@@ -194,10 +207,6 @@ export default defineNuxtConfig({
     public: 'public',
     assets: './assets'
   },
-  // 设置自定义挂载点 - 移除 rootId 配置，使用默认值
-  // vueApp: {
-  //   rootId: 'app'
-  // },
   // 配置路由规则
   nitro: {
     prerender: {
@@ -234,7 +243,7 @@ export default defineNuxtConfig({
       }
     ],
     // 开发环境优化
-    compressPublicAssets: !isDev,
+    compressPublicAssets: false,
     // 优化构建输出
     minify: !isDev,
     // 优化路由缓存
@@ -276,17 +285,10 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: '无广告 · 本地计算 · 即开即用的在线工具平台' },
         { name: 'theme-color', content: '#6366f1' },
-        { name: 'apple-mobile-web-app-capable', content: 'yes' },
-        { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-        { name: 'apple-mobile-web-app-title', content: '有条工具' },
-        { name: 'application-name', content: '有条工具' },
         { name: 'msapplication-TileColor', content: '#6366f1' },
         { name: 'msapplication-config', content: '/browserconfig.xml' }
       ],
       link: [
-        // { rel: 'preload', href: '/_nuxt/entry.js', as: 'script' },
-        // { rel: 'preload', href: '/_nuxt/app.css', as: 'style' },
-
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon.png' },
         { rel: 'apple-touch-icon', href: '/icon-192.png' },
@@ -294,27 +296,8 @@ export default defineNuxtConfig({
       ],
       // 添加主题初始化脚本，在页面加载前执行
       script: [
-        {
-          innerHTML: `
-            (function() {
-              try {
-                // 获取保存的主题，如果没有则默认使用暗色主题
-                const savedTheme = localStorage.getItem('theme') || 'dark';
-                if (savedTheme === 'dark') {
-                  document.documentElement.classList.add('dark');
-                } else {
-                  document.documentElement.classList.remove('dark');
-                }
-                // 确保主题被保存
-                if (!localStorage.getItem('theme')) {
-                  localStorage.setItem('theme', 'dark');
-                }
-              } catch (e) {
-                // 如果 localStorage 不可用，默认使用暗色主题
-                document.documentElement.classList.add('dark');
-              }
-            })();
-          `,
+                {
+          innerHTML: `(function(){try{const t=localStorage.getItem('theme')||'dark';document.documentElement.classList[t==='dark'?'add':'remove']('dark');if(!localStorage.getItem('theme'))localStorage.setItem('theme','dark')}catch(e){document.documentElement.classList.add('dark')}})();`,
           type: 'text/javascript'
         }
       ]

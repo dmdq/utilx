@@ -19,5 +19,16 @@ export const siteConfig = {
   description: '无广告 · 本地计算 · 即开即用的在线工具平台',
 
   // 网站关键词
-  keywords: '在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试'
+  keywords: '在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试',
+
+  // 快捷工具配置
+  quickTools: {
+    // 返回顶部工具
+    backToTop: {
+      enabled: true, // 默认开启
+      threshold: 0.2, // 滚动到20%时显示，降低阈值使其更容易触发
+      showDuration: 300, // 显示动画时长(ms)
+      hideDuration: 200 // 隐藏动画时长(ms)
+    }
+  }
 }

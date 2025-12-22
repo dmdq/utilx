@@ -980,6 +980,41 @@ const toggleAllFAQs = () => {
   })
 }
 
+// SEO设置
+useSeoMeta({
+  title: '个人养老金计算器 - 个税抵扣与退休收益分析',
+  description: '免费个人养老金计算器，计算个税抵扣优惠和退休收益预测，支持多方案对比分析。帮助您充分利用税收优惠，合理规划退休生活，享受复利增长。',
+  keywords: ['个人养老金计算器', '个税抵扣', '养老金税收优惠', '退休规划', '养老理财', '养老金收益计算', '个税筹划', '退休金计算', '养老保险', '税收递延'],
+  schema: {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: '个人养老金计算器',
+    description: '免费的在线个人养老金计算工具，支持个税抵扣计算、退休收益预测、多方案对比分析，帮助充分利用税收优惠进行退休规划。',
+    url: 'https://util.iskytrip.com/tools/pension-calculator',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Any',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'CNY'
+    },
+    featureList: [
+      '个税抵扣计算',
+      '退休收益预测',
+      '多方案对比',
+      '税收优惠分析',
+      '复利效应计算',
+      '退休规划建议',
+      '投资策略推荐',
+      'FAQ问答'
+    ],
+    audience: {
+      '@type': 'Audience',
+      audienceType: '个人养老金参与者'
+    }
+  }
+})
+
 // 初始化
 faqs.forEach(faq => {
   faq.isOpen = false

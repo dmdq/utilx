@@ -998,8 +998,3 @@ Web无障碍是每个开发者都应该重视的责任。通过实施这些最�
 记住，无障碍不是锦上添花，而是基本要求。从项目开始就考虑无障碍，会比后期修复成本低得多。让我们一起构建人人可访问的Web世界！
 
 ---
-
-**相关工具推荐：**
-- [无障碍测试工具](https://www.util.cn/tools/accessibility-tester/)
-- [色彩对比度检查器](https://www.util.cn/tools/color-contrast/)
-- [ARIA生成器](https://www.util.cn/tools/aria-generator/)

@@ -1,6 +1,6 @@
 export default defineNuxtPlugin(() => {
-  // 只在客户端执行
-  if (process.client) {
+  // 只在生产环境且客户端执行
+  if (process.client && process.env.NODE_ENV === 'production') {
     // 加载51la统计代码
     (function() {
       var la = document.createElement('script');

@@ -481,6 +481,158 @@ definePageMeta({
   layout: 'default'
 })
 
+// SEO配置
+useSeoMeta({
+  title: '税务计算器 - 个人所得税、增值税、企业所得税计算工具 | Util工具箱',
+  description: '2025年最新税务计算器，支持个人所得税、增值税、企业所得税在线计算。包含专项扣除、社保公积金、税率和速算扣除数等专业功能，准确快速计算各类税费。',
+  keywords: '税务计算器,个人所得税计算,增值税计算,企业所得税,个税计算器,税费计算,2025税率,专项扣除,社保公积金',
+  author: 'Util工具箱',
+  ogTitle: '专业税务计算器 - 免费个税增值税企业所得税计算',
+  ogDescription: '2025年最新税务计算器，支持个人所得税、增值税、企业所得税在线计算。实时更新税率，专业准确，操作简单。',
+  ogImage: 'https://util.cn/images/tools/tax-calculator.png',
+  ogUrl: 'https://util.cn/tools/tax-calculator',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: '税务计算器 - 个税增值税企业所得税计算',
+  twitterDescription: '专业税务计算工具，支持2025年最新税率，计算个人所得税、增值税、企业所得税，准确快速。',
+  twitterImage: 'https://util.cn/images/tools/tax-calculator.png'
+})
+
+// JSON-LD 结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: '税务计算器',
+            description: '专业的税务计算工具，支持个人所得税、增值税、企业所得税计算',
+            url: 'https://util.cn/tools/tax-calculator',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CNY'
+            },
+            featureList: [
+              '个人所得税计算',
+              '增值税计算',
+              '企业所得税计算',
+              '2025年最新税率',
+              '专项扣除计算',
+              '社保公积金计算',
+              '速算扣除数计算',
+              '税后收入计算'
+            ],
+            screenshot: 'https://util.cn/images/tools/tax-calculator-screenshot.png'
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: '首页',
+                item: 'https://util.cn'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '工具',
+                item: 'https://util.cn/tools'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: '税务计算器',
+                item: 'https://util.cn/tools/tax-calculator'
+              }
+            ]
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '个人所得税怎么计算？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '个人所得税计算公式：应纳税额 = 应纳税所得额 × 适用税率 - 速算扣除数。应纳税所得额 = 税前收入 - 起征点(5000元) - 社保公积金 - 专项扣除。2025年个人所得税起征点为5000元/月，采用7级超额累进税率。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '增值税税率是多少？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '2025年增值税税率：一般纳税人13%、小规模纳税人3%、服务业6%、交通运输业9%、建筑业9%。计算公式：应交增值税 = 销项税额 - 进项税额。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '企业所得税税率是多少？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '2025年企业所得税标准税率为25%。小型微利企业税率20%，高新技术企业税率15%。计算公式：应交企业所得税 = 应纳税所得额 × 税率。'
+                }
+              }
+            ]
+          },
+          {
+            '@type': 'Service',
+            name: '税务计算服务',
+            description: '提供专业的税务计算服务',
+            provider: {
+              '@type': 'Organization',
+              name: 'Util工具箱',
+              url: 'https://util.cn'
+            },
+            serviceType: 'Tax Calculation Service',
+            areaServed: '中国',
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: '税务计算服务目录',
+              itemListElement: [
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: '个人所得税计算'
+                  },
+                  price: '0',
+                  priceCurrency: 'CNY'
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: '增值税计算'
+                  },
+                  price: '0',
+                  priceCurrency: 'CNY'
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: '企业所得税计算'
+                  },
+                  price: '0',
+                  priceCurrency: 'CNY'
+                }
+              ]
+            }
+          }
+        ]
+      })
+    }
+  ]
+})
+
 const router = useRouter()
 
 // 定义当前工具和分类

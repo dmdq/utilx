@@ -616,8 +616,3 @@ Git 高级技巧能够显著提升开发效率：
 掌握这些技巧将帮助你更专业地使用 Git，提升团队协作效率。
 
 ---
-
-**相关工具：**
-- [Git 可视化工具](https://www.util.cn/tools/git-visualizer/)
-- [分支策略设计器](https://www.util.cn/tools/git-branch-strategy/)
-- [Git 命令速查表](https://www.util.cn/tools/git-cheatsheet/)

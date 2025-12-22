@@ -1243,8 +1243,3 @@ const retry = () => {
 记住，工程化的最终目标是让开发者更专注于业务逻辑，而不是被工具和流程所束缚。选择适合团队的工具和流程，并持续优化和改进。
 
 ---
-
-**相关文章：**
-- [Vite构建工具深入解析](/vite-deep-dive/)
-- [Vue 3 Composition API最佳实践](/vue3-composition-best-practices/)
-- [前端性能优化实战](/frontend-performance-optimization/)

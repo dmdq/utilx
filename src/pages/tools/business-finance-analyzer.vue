@@ -315,9 +315,127 @@
 
 <script setup>
 import { ref, reactive, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { BarChart3, TrendingUp, AlertTriangle, CheckCircle, AlertCircle, TrendingDown, DollarSign, Target } from 'lucide-vue-next'
-import RelatedTools from '~/components/RelatedTools.vue'
-import SeoContent from '~/components/SeoContent.vue'
+import { tools } from '~/data/tools'
+import { categories } from '~/data/categories'
+import { addRecentTool } from '~/composables/useTools'
+
+definePageMeta({
+  layout: 'default'
+})
+
+// SEO配置
+useSeoMeta({
+  title: '企业财务分析器 - 财务健康度评估与财务指标分析 | Util工具箱',
+  description: '专业的企业财务分析工具，分析流动比率、负债率、利润率等关键财务指标，提供财务健康度评估和经营建议。帮助企业管理者快速了解财务状况，制定改进策略。',
+  keywords: '企业财务分析,财务健康度,财务指标分析,流动比率,资产负债率,利润率分析,财务风险评估,经营分析',
+  author: 'Util工具箱',
+  ogTitle: '企业财务分析器 - 专业财务健康度评估工具',
+  ogDescription: '分析企业财务指标，提供财务健康度评估和经营建议。专业准确，操作简单，助力企业财务决策。',
+  ogImage: 'https://util.cn/images/tools/business-finance-analyzer.png',
+  ogUrl: 'https://util.cn/tools/business-finance-analyzer',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: '企业财务分析器 - 财务指标与健康度评估',
+  twitterDescription: '专业企业财务分析工具，分析关键财务指标，提供财务健康度评估和经营建议。',
+  twitterImage: 'https://util.cn/images/tools/business-finance-analyzer.png'
+})
+
+// JSON-LD 结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: '企业财务分析器',
+            description: '专业的企业财务分析工具，分析财务指标，提供财务健康度评估和经营建议',
+            url: 'https://util.cn/tools/business-finance-analyzer',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CNY'
+            },
+            featureList: [
+              '流动比率分析',
+              '资产负债率计算',
+              '利润率评估',
+              '净资产收益率',
+              '财务健康度评分',
+              '行业对比分析',
+              '风险评估',
+              '经营建议'
+            ]
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: '首页',
+                item: 'https://util.cn'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '工具',
+                item: 'https://util.cn/tools'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: '企业财务分析器',
+                item: 'https://util.cn/tools/business-finance-analyzer'
+              }
+            ]
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '什么是流动比率？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '流动比率是流动资产与流动负债的比率，反映企业短期偿债能力。一般认为流动比率在1.5-2.0之间比较健康，低于1.0可能面临短期偿债压力。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '资产负债率多少合适？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '资产负债率一般控制在30%-70%之间。制造业通常在60%左右，科技业较低约30%，零售业较高约70%。过高会增加财务风险，过低可能影响资产使用效率。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '如何提高企业盈利能力？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': '提高盈利能力的途径：1）优化产品结构，提高高毛利产品比重；2）控制成本费用，提升运营效率；3）加强应收账款管理，提高资金周转；4）拓展新市场，增加销售收入；5）技术创新，提升产品附加值。'
+                }
+              }
+            ]
+          }
+        ]
+      })
+    }
+  ]
+})
+
+const router = useRouter()
+
+// 定义当前工具和分类
+const tool = tools.find(t => t.id === 'business-finance-analyzer')
+const category = categories.find(c => c.id === 'finance')
 
 // 分析模式
 const analysisModes = [
@@ -685,6 +803,11 @@ const getCurrentTime = () => {
     hour: '2-digit',
     minute: '2-digit'
   })
+}
+
+// 添加到最近使用
+if (tool) {
+  addRecentTool(tool.id)
 }
 
 // 初始化

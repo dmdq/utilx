@@ -1000,7 +1000,3 @@ React性能优化需要从多个层面考虑：
 
 ---
 
-**相关工具推荐：**
-- [React代码优化工具](https://www.util.cn/tools/react-optimizer/)
-- [Bundle分析器](https://www.util.cn/tools/bundle-analyzer/)
-- [性能监控工具](https://www.util.cn/tools/performance-monitor/)

@@ -266,10 +266,127 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { Server, Globe, Shield, Network, FileText } from 'lucide-vue-next'
-import { useSEO } from '~/composables/useSEO'
+import { tools } from '~/data/tools'
+import { categories } from '~/data/categories'
+import { addRecentTool } from '~/composables/useTools'
 
-setPageTitle('Nginx配置生成器')
+definePageMeta({
+  layout: 'default'
+})
+
+// SEO配置
+useSeoMeta({
+  title: 'Nginx配置生成器 - 专业Web服务器配置文件生成工具 | Util工具箱',
+  description: '专业的Nginx配置生成工具，根据需求快速生成Nginx配置文件，支持反向代理、负载均衡、SSL证书、虚拟主机等配置。可视化操作，一键生成标准配置。',
+  keywords: 'Nginx配置生成器,Nginx配置,Web服务器,反向代理,负载均衡,SSL配置,虚拟主机,配置文件,服务器配置,Nginx教程',
+  author: 'Util工具箱',
+  ogTitle: 'Nginx配置生成器 - 专业Web服务器配置工具',
+  ogDescription: '快速生成Nginx配置文件，支持反向代理、负载均衡、SSL等。可视化操作，一键生成标准配置，提升运维效率。',
+  ogImage: 'https://util.cn/images/tools/nginx-config-generator.png',
+  ogUrl: 'https://util.cn/tools/nginx-config-generator',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Nginx配置生成器 - 反向代理和负载均衡配置',
+  twitterDescription: '专业Nginx配置生成工具，支持反向代理、负载均衡、SSL配置，快速生成标准配置文件。',
+  twitterImage: 'https://util.cn/images/tools/nginx-config-generator.png'
+})
+
+// JSON-LD 结构化数据
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebApplication',
+            name: 'Nginx配置生成器',
+            description: '专业的Nginx配置生成工具，支持反向代理、负载均衡、SSL等配置',
+            url: 'https://util.cn/tools/nginx-config-generator',
+            applicationCategory: 'DeveloperApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CNY'
+            },
+            featureList: [
+              '反向代理配置',
+              '负载均衡设置',
+              'SSL证书配置',
+              '虚拟主机管理',
+              '安全配置优化',
+              '缓存策略设置',
+              '日志记录配置',
+              '性能优化建议'
+            ]
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: '首页',
+                item: 'https://util.cn'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: '工具',
+                item: 'https://util.cn/tools'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Nginx配置生成器',
+                item: 'https://util.cn/tools/nginx-config-generator'
+              }
+            ]
+          },
+          {
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '什么是Nginx？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'Nginx是一个高性能的HTTP和反向代理Web服务器，同时也提供了IMAP/POP3/SMTP服务。以高性能、低内存占用、配置简单而闻名，广泛用于Web服务、API网关、负载均衡等场景。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Nginx有哪些常用配置？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'Nginx常用配置：1）反向代理到后端服务；2）负载均衡多个后端；3）SSL/TLS加密；4）虚拟主机配置；5）缓存优化；6）访问控制；7）日志记录；8）安全防护等。'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: '如何配置负载均衡？',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  'text': 'Nginx负载均衡配置：使用upstream模块定义后端服务器组，通过proxy_pass转发请求。支持轮询（round_robin）、IP哈希（ip_hash）、最少连接（least_conn）等负载均衡算法。'
+                }
+              }
+            ]
+          }
+        ]
+      })
+    }
+  ]
+})
+
+const router = useRouter()
+
+// 定义当前工具和分类
+const tool = tools.find(t => t.id === 'nginx-config-generator')
+const category = categories.find(c => c.id === 'network')
 
 const config = ref({
   serverName: 'example.com',
@@ -483,6 +600,11 @@ const loadTemplate = (type) => {
 }
 
 onMounted(() => {
+  // 添加到最近使用
+  if (tool) {
+    addRecentTool(tool.id)
+  }
+
   generateConfig()
 })
 </script>

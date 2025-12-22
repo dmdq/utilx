@@ -8,112 +8,72 @@
 
 - **前端框架**: Vue 3 + TypeScript + Composition API
 - **构建工具**: Vite
-- **动画渲染**: Pixi.js (WebGL渲染，性能最佳)
-- **Spine解析**: spine-ts官方运行时
+- **动画渲染**: Spine Player (官方Web播放器)
+- **Spine解析**: spine-player官方运行时
 
 ## 依赖安装
 
-### 1. 安装Pixi.js
+### 1. 安装Spine Player
 
 ```bash
-npm install pixi.js
+npm install @esotericsoftware/spine-player
 # 或者
-yarn add pixi.js
+yarn add @esotericsoftware/spine-player
 ```
 
-### 2. 安装Spine运行时
+### 2. 引入Spine Player CSS
 
-```bash
-npm install @esotericsoftware/spine-webgl
-# 或者
-yarn add @esotericsoftware/spine-webgl
-```
-
-### 3. 安装类型定义（TypeScript）
-
-```bash
-npm install --save-dev @types/pixi.js
-# 或者
-yarn add --dev @types/pixi.js
+在项目中引入Spine Player的CSS文件：
+```html
+<link rel="stylesheet" href="/spine-player/spine-player.css">
 ```
 
 ## 核心功能集成
 
-### 1. Pixi.js初始化
+### 1. Spine Player初始化
 
-在页面中初始化Pixi.js应用：
+在页面中初始化Spine Player：
 
 ```typescript
 // src/composables/useSpineRuntime.ts
-import * as PIXI from 'pixi.js'
-import * as spine from '@esotericsoftware/spine-webgl'
+import { spine } from '@esotericsoftware/spine-player'
 
 export function useSpineRuntime() {
-  let app = null
-  let spineInstance = null
+  let spinePlayer = null
 
-  const initPixiApp = (canvas: HTMLCanvasElement) => {
-    app = new PIXI.Application({
-      view: canvas,
-      backgroundColor: 0x1a1a1a,
-      antialias: true,
-      resolution: window.devicePixelRatio || 1
+  const initSpinePlayer = (container: HTMLElement) => {
+    spinePlayer = new spine.SpinePlayer(container, {
+      // 配置选项
+      backgroundColor: '#1a1a1a',
+      alpha: true,
+      scale: 1
     })
 
-    // 启动渲染循环
-    app.ticker.add(update)
+    return spinePlayer
   }
 
-  const update = (delta: number) => {
-    if (spineInstance && animationState) {
-      // 更新动画状态
-      animationState.update(app.ticker.deltaMS / 1000)
-      animationState.apply(spineInstance.skeleton)
-      spineInstance.skeleton.updateWorldTransform()
-    }
-  }
-
-  return { initPixiApp, update }
+  return { initSpinePlayer }
 }
 ```
 
 ### 2. Spine动画加载
 
 ```typescript
-const loadSpineAnimation = async (skeletonData: ArrayBuffer, atlasText: string) => {
+const loadSpineAnimation = async (skeletonData: string | ArrayBuffer, atlasData: string, textureFile: File) => {
   try {
-    // 创建纹理图集
-    const atlas = new spine.TextureAtlas(atlasText, (path) => {
-      // 加载纹理图片
-      return PIXI.Texture.from(path)
-    })
+    if (!spinePlayer) {
+      throw new Error('Spine Player 未初始化')
+    }
 
-    // 创建附件加载器
-    const atlasLoader = new spine.AtlasAttachmentLoader(atlas)
+    // 加载动画资源
+    await spinePlayer.loadFromData(skeletonData, atlasData, textureFile)
 
-    // 解析骨架数据
-    const binaryReader = new spine.BinaryReader(new DataView(skeletonData))
-    const skeletonBinary = new spine.SkeletonBinary(atlasLoader)
-    skeletonBinary.scale = 1.0
+    // 设置配置
+    spinePlayer.setAnimation(0, 'idle', true) // 默认播放idle动画
+    spinePlayer.scale = 1.0
+    spinePlayer.animationState.timeScale = 1.0
 
-    const skeletonData = skeletonBinary.readSkeletonData(binaryReader)
-
-    // 创建骨架实例
-    const skeleton = new spine.Skeleton(skeletonData)
-    skeleton.setToSetupPose()
-
-    // 创建动画状态
-    const animationStateData = new spine.AnimationStateData(skeletonData)
-    const animationState = new spine.AnimationState(animationStateData)
-
-    // 创建Spine精灵并添加到舞台
-    spineInstance = new PIXI.spine.Spine(skeletonData)
-    app.stage.addChild(spineInstance)
-
-    // 设置动画状态
-    spineInstance.state = animationState
-
-    return { skeleton, animationState, spineInstance }
+    return spinePlayer
   } catch (error) {
     console.error('加载Spine动画失败:', error)
     throw error
@@ -127,7 +87,7 @@ const loadSpineAnimation = async (skeletonData: ArrayBuffer, atlasText: string) 
 const handleFileUpload = async (files: FileList) => {
   let skeletonFile = null
   let atlasFile = null
-  const textureFiles = []
+  let textureFile = null
 
   // 分类文件
   Array.from(files).forEach(file => {
@@ -137,23 +97,17 @@ const handleFileUpload = async (files: FileList) => {
     } else if (ext === 'atlas') {
       atlasFile = file
     } else if (['png', 'jpg', 'jpeg'].includes(ext)) {
-      textureFiles.push(file)
+      textureFile = file
     }
   })
 
-  if (skeletonFile) {
-    // 读取骨架数据
-    const skeletonData = await readFileAsArrayBuffer(skeletonFile)
-    const atlasText = atlasFile ? await readFileAsText(atlasFile) : ''
-
-    // 加载纹理
-    for (const textureFile of textureFiles) {
-      const texture = await createImageBitmap(textureFile)
-      PIXI.BaseImage.from(texture)
-    }
+  if (skeletonFile && atlasFile && textureFile) {
+    // 读取文件数据
+    const skeletonData = await readFileAsText(skeletonFile)
+    const atlasText = await readFileAsText(atlasFile)
 
     // 加载Spine动画
-    await loadSpineAnimation(skeletonData, atlasText)
+    await loadSpineAnimation(skeletonData, atlasText, textureFile)
   }
 }
 ```
@@ -162,78 +116,55 @@ const handleFileUpload = async (files: FileList) => {
 
 将以下代码替换现有页面中的模拟代码：
 
-### 1. 替换initializePixi函数
+### 1. 替换initializeSpinePlayer函数
 
 ```typescript
-const initializePixi = async () => {
-  if (!canvas.value) return
+const initializeSpinePlayer = async () => {
+  if (!container.value) return
 
-  // 导入Pixi.js
-  const PIXI = await import('pixi.js')
+  // 导入Spine Player
+  const { spine } = await import('@esotericsoftware/spine-player')
 
-  pixiApp = new PIXI.Application({
-    view: canvas.value,
-    backgroundColor: parseInt(backgroundColor.value.replace('#', '0x')),
-    antialias: true,
-    resolution: window.devicePixelRatio || 1
+  spinePlayer = new spine.SpinePlayer(container.value, {
+    backgroundColor: backgroundColor.value,
+    alpha: true,
+    scale: 1.0
   })
 
-  // 添加到渲染循环
-  pixiApp.ticker.add(updateAnimation)
-
-  // 设置画布大小
-  resizeCanvas()
+  // 设置容器大小
+  resizeContainer()
 }
 ```
 
 ### 2. 替换loadSpineAnimation函数
 
 ```typescript
-const loadSpineAnimation = async (spineData, atlasText) => {
+const loadSpineAnimation = async (skeletonData, atlasText, textureFile) => {
   try {
-    // 导入Spine运行时
-    const spine = await import('@esotericsoftware/spine-webgl')
+    if (!spinePlayer) {
+      throw new Error('Spine Player 未初始化')
+    }
 
-    // 解析纹理图集
-    const atlas = new spine.TextureAtlas(atlasText, (path) => {
-      // 从已加载的纹理中获取
-      const texture = currentProject.textures.get(path)
-      return PIXI.Texture.from(texture)
-    })
-
-    // 创建附件加载器
-    const atlasLoader = new spine.AtlasAttachmentLoader(atlas)
-
-    // 解析骨架数据
-    const binaryReader = new spine.BinaryReader(new DataView(spineData))
-    const skeletonBinary = new spine.SkeletonBinary(atlasLoader)
-    skeletonBinary.scale = 1.0
-
-    const skeletonData = skeletonBinary.readSkeletonData(binaryReader)
-
-    // 创建Spine实例
-    spineInstance = new PIXI.spine.Spine(skeletonData)
-    pixiApp.stage.addChild(spineInstance)
-
-    // 设置动画状态
-    animationState = spineInstance.state
+    // 加载动画资源到Spine Player
+    await spinePlayer.loadFromData(skeletonData, atlasText, textureFile)
 
     // 提取动画信息
-    animations.value = skeletonData.animations.map(anim => ({
+    const spineData = spinePlayer.skeleton.data
+    animations.value = spineData.animations.map(anim => ({
       name: anim.name,
       duration: anim.duration
     }))
 
     // 提取皮肤信息
-    skins.value = skeletonData.skins.map(skin => ({
+    skins.value = spineData.skins.map(skin => ({
       name: skin.name
     }))
 
     // 提取骨骼信息
-    bones.value = extractBoneHierarchy(skeletonData)
+    bones.value = extractBoneHierarchy(spineData)
 
     // 提取插槽信息
-    slots.value = skeletonData.slots.map(slot => ({
+    slots.value = spineData.slots.map(slot => ({
       name: slot.name
     }))
 
@@ -249,27 +180,24 @@ const loadSpineAnimation = async (spineData, atlasText) => {
 }
 ```
 
-### 3. 添加动画更新函数
+### 3. 添加动画控制函数
 
 ```typescript
-const updateAnimation = (delta) => {
-  if (spineInstance && animationState && isPlaying.value) {
-    // 更新动画时间
-    animationState.update(delta * playSpeed.value)
-    animationState.apply(spineInstance.skeleton)
-    spineInstance.skeleton.updateWorldTransform()
+const updateAnimation = () => {
+  if (spinePlayer && isPlaying.value) {
+    // 更新播放速度
+    spinePlayer.animationState.timeScale = playSpeed.value
 
-    // 更新当前时间
-    if (currentAnimation.value) {
-      currentTime.value += delta * playSpeed.value
+    // 更新当前时间（从Spine Player获取）
+    if (spinePlayer.animationState && spinePlayer.animationState.tracks[0]) {
+      const track = spinePlayer.animationState.tracks[0]
+      currentTime.value = track.animationTime
 
       // 检查是否需要循环
       if (currentTime.value >= totalTime.value) {
-        if (loop.value) {
-          currentTime.value = 0
-        } else {
-          currentTime.value = totalTime.value
+        if (!loop.value) {
           isPlaying.value = false
+          spinePlayer.animationState.clearTracks()
         }
       }
     }
@@ -335,17 +263,13 @@ const exportAsGodot = () => {
 
 ```typescript
 onUnmounted(() => {
-  // 清理Pixi.js资源
-  if (pixiApp) {
-    pixiApp.destroy(true, { children: true, texture: true, baseTexture: true })
+  // 清理Spine Player资源
+  if (spinePlayer) {
+    spinePlayer.dispose()
+    spinePlayer = null
   }
 
-  // 清理Spine资源
-  if (spineInstance) {
-    spineInstance.destroy()
-  }
-
-  // 清理纹理
+  // 清理文件引用
   currentProject.textures.clear()
 })
 ```
@@ -382,21 +306,23 @@ const returnToPool = (key, object) => {
 1. **纹理加载失败**: 检查.atlas文件中的路径是否正确
 2. **动画不播放**: 确保动画名称正确且存在
 3. **性能问题**: 检查是否有过多的动画实例同时运行
-4. **内存泄漏**: 确保正确清理Pixi.js和Spine资源
+4. **内存泄漏**: 确保正确清理Spine Player资源
 
 ### 调试技巧
 
 ```typescript
-// 启用Spine调试信息
-spine.webgl.SpineDebug = true
+// 启用Spine Player调试信息
+spinePlayer?.setDebug(true)
 
-// 监控渲染性能
-pixiApp.ticker.add((delta) => {
-  const fps = Math.round(1000 / (delta * 16.67))
-  if (fps < 30) {
-    console.warn('性能警告:', fps, 'FPS')
+// 监控性能
+setInterval(() => {
+  if (spinePlayer && spinePlayer.animationState) {
+    const fps = Math.round(spinePlayer.fps)
+    if (fps < 30) {
+      console.warn('性能警告:', fps, 'FPS')
+    }
   }
-})
+}, 1000)
 ```
 
 通过以上集成指南，可以将Spine动画编辑器完全集成到现有的工具平台中，提供专业的Spine动画预览和编辑功能。

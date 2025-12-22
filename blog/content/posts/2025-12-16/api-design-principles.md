@@ -897,6 +897,5 @@ RESTful API设计需要考虑多个方面，包括资源定义、HTTP方法使�
 ---
 
 **相关工具推荐：**
-- [API测试工具](https://www.util.cn/tools/api-tester/)
+- [API测试工具](https://www.util.cn/tools/api-contract-tester/)
 - [JSON格式化工具](https://www.util.cn/tools/json-formatter/)
-- [REST API文档生成器](https://www.util.cn/tools/api-docs-generator/)
