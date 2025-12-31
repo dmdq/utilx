@@ -251,20 +251,20 @@ import { useSEO } from '~/composables/useSEO'
 
 // 使用SEO composable设置页面标题
 const { setPageTitle } = useSEO()
-setPageTitle('Util.cn 开源应用工具')
+setPageTitle('开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT | 有条工具')
 
 // 添加 Open Graph 标签和 JSON Schema
 useHead({
   meta: [
-    { property: 'og:title', content: '有条工具 - 开发者的瑞士军刀 | UTIL在线工具集合' },
-    { property: 'og:description', content: '无广告 · 本地计算 · 即开即用的在线工具平台。提供JSON格式化、Base64编码、时间戳转换、正则表达式测试等开发者常用工具。' },
+    { property: 'og:title', content: '开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT | 有条工具' },
+    { property: 'og:description', content: '为开发者打造的免费工具箱。JSON格式化、Base64编解码、正则表达式测试、MD5加密、时间戳转换、JWT解码、Cron表达式生成等100+工具。纯本地计算，数据不上传，安全高效。' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://www.util.cn/' },
     { property: 'og:image', content: 'https://www.util.cn/logo.png' },
     { property: 'og:locale', content: 'zh_CN' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: '有条工具 - 开发者的瑞士军刀 | UTIL在线工具集合' },
-    { name: 'twitter:description', content: '无广告 · 本地计算 · 即开即用的在线工具平台。提供JSON格式化、Base64编码、时间戳转换、正则表达式测试等开发者常用工具。' },
+    { name: 'twitter:title', content: '开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT | 有条工具' },
+    { name: 'twitter:description', content: '为开发者打造的免费工具箱。JSON格式化、Base64编解码、正则表达式测试、MD5加密、时间戳转换、JWT解码、Cron表达式生成等100+工具。纯本地计算，数据不上传，安全高效。' },
     { name: 'twitter:image', content: 'https://www.util.cn/logo.png' }
   ],
   script: [
@@ -273,10 +273,10 @@ useHead({
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "有条工具 - 开发者的瑞士军刀",
+        "name": "开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT | 有条工具",
         "url": "https://www.util.cn/",
-        "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
-        "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试",
+        "description": "为开发者打造的免费工具箱。JSON格式化、Base64编解码、正则表达式测试、MD5加密、时间戳转换、JWT解码、Cron表达式生成等100+工具。纯本地计算，数据不上传，安全高效。",
+        "keywords": "开发者工具, 在线工具箱, JSON格式化, Base64编解码, 正则表达式, MD5加密, JWT解码, 时间戳转换, Cron表达式, UUID生成",
         "publisher": {
           "@type": "Organization",
           "name": "有条工具",

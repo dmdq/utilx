@@ -20,7 +20,6 @@ setPageTitle('提交反馈')
 
 // SEO配置
 useSeoMeta({
-  title: '提交反馈',
   description: '向Util提交问题反馈、功能建议或商务合作。我们重视每一个用户的反馈，致力于提供更好的在线工具服务。',
   keywords: ['反馈', '建议', '问题反馈', '联系我们', '商务合作']
 })

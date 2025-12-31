@@ -47,7 +47,16 @@
       "Bash(ls:*)",
       "Bash(wc -l:*)",
       "Bash(npm run sitemap)",
-      "Bash(npm run build:blog)"
+      "Bash(npm run build:blog)",
+      "Bash(npx vue-tsc:*)",
+      "Bash(test:*)",
+      "Bash(cat:*)",
+      "Bash(for tool in \"complex-number-calculator\" \"vector-calculator\" \"fuel-calculator\" \"roi-calculator\" \"depreciation-calculator\" \"calories-calculator\")",
+      "Bash(do if [ -f \"/Users/apple/Documents/code/util/src/pages/tools/$tool.vue\" ])",
+      "Bash(then echo \"$tool exists\")",
+      "Bash(else echo \"$tool missing\")",
+      "Bash(fi)",
+      "Bash(/Users/apple/.nvm/versions/node/v22.21.1/bin/node /Users/apple/Documents/code/util/scripts/generate-sitemap.js:*)"
     ],
     "deny": [],
     "ask": []

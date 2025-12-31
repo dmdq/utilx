@@ -5,7 +5,7 @@
       <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
         <!-- 左侧版权信息 -->
         <div class="text-xs text-muted-foreground">
-          <span class="mr-2">© 2025 有条工具</span>
+          <span class="mr-2">© 2026 有条工具</span>
           <span class="hidden sm:inline">|</span>
           <span class="hidden sm:inline ml-2">好用 · 高效 · 安全</span>
         </div>

@@ -4,6 +4,7 @@ import { useRouter, useRoute } from 'vue-router'
 import { ChevronRight, Home } from 'lucide-vue-next'
 import { categories } from '~/data/categories'
 import { tools } from '~/data/tools'
+import { getTagInfo } from '~/data/tags'
 
 const props = defineProps({
   category: {

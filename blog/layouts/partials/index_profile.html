@@ -202,7 +202,7 @@
             </div>
             <div class="card-content">
                 <ul class="category-list">
-                    {{- range site.Taxonomies.categories }}
+                    {{- range $index, $item := (first 10 (sort site.Taxonomies.categories "Count" "desc")) }}
                     <li>
                         <a href="{{ .Page.Permalink }}">
                             <span class="category-name">{{ .Page.Title }}</span>

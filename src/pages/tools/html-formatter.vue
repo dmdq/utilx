@@ -511,7 +511,7 @@ const loadExample = () => {
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 示例网站. 保留所有权利.</p>
+        <p>&copy; 2026 示例网站. 保留所有权利.</p>
     </footer>
 </body>
 </html>`

@@ -83,20 +83,20 @@
             <!-- 显示内容区域 -->
             <div class="absolute left-3 top-0 right-20 flex flex-col transition-transform duration-300 ease-in-out" :style="{ transform: `translateY(-${currentWidget * 32}px)` }">
               <!-- 0: IP地址 -->
-              <div class="flex items-center gap-2 h-8 whitespace-nowrap">
+              <div class="flex items-center gap-2 h-8 whitespace-nowrap overflow-hidden">
                 <Globe class="w-4 h-4 text-muted-foreground flex-shrink-0" />
-                      <span class="text-sm font-mono text-muted-foreground flex-1" style="max-width: 140px;">IP: {{ userIP }}</span>
+                <span class="text-sm font-mono text-muted-foreground flex-1 truncate" :title="userIP">IP: {{ userIP }}</span>
               </div>
               <!-- 1: 时间戳 -->
-              <div class="flex items-center gap-2 h-8 whitespace-nowrap">
+              <div class="flex items-center gap-2 h-8 whitespace-nowrap overflow-hidden">
                 <Clock class="w-4 h-4 text-muted-foreground flex-shrink-0" />
-                      <span class="text-sm font-mono text-muted-foreground flex-1" style="max-width: 140px;">{{ currentTime }}</span>
+                <span class="text-sm font-mono text-muted-foreground flex-1 truncate" :title="currentTime">{{ currentTime }}</span>
               </div>
 
               <!-- 2: 文字tips -->
-              <div class="flex items-center gap-2 h-8 whitespace-nowrap">
+              <div class="flex items-center gap-2 h-8 whitespace-nowrap overflow-hidden">
                 <Sparkles class="w-4 h-4 text-muted-foreground flex-shrink-0" />
-                      <span class="text-sm text-muted-foreground flex-1" style="max-width: 140px;">为效率而生, Just Util.cn</span>
+                <span class="text-sm text-muted-foreground flex-1 truncate">为效率而生, Just Util.cn</span>
               </div>
             </div>
 

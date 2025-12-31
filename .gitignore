@@ -154,5 +154,7 @@ Temporary Items
 .env
 
 src-tauri/target
-public/blog
 stats.html
+# Don't ignore the entire public/blog directory, we need its contents
+# public/blog
+# blog/public

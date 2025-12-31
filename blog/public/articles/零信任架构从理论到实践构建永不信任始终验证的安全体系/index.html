@@ -1,0 +1,651 @@
+<!doctype html><html lang=zh-cn dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>零信任架构从理论到实践：构建永不信任、始终验证的安全体系 | 技术博客 - 有条工具</title><meta name=keywords content="零信任架构,身份验证,微分段,安全架构,ZTNA"><meta name=description content="深入探讨零信任安全架构的核心原则、技术实现和部署策略，帮助组织构建适应现代威胁环境的安全体系。"><meta name=author content="有条工具团队"><link rel=canonical href=/blog/articles/%E9%9B%B6%E4%BF%A1%E4%BB%BB%E6%9E%B6%E6%9E%84%E4%BB%8E%E7%90%86%E8%AE%BA%E5%88%B0%E5%AE%9E%E8%B7%B5%E6%9E%84%E5%BB%BA%E6%B0%B8%E4%B8%8D%E4%BF%A1%E4%BB%BB%E5%A7%8B%E7%BB%88%E9%AA%8C%E8%AF%81%E7%9A%84%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB/><link crossorigin=anonymous href=/blog/assets/css/stylesheet.7e8505b7cdf8bb22ab2305e53c2700bb06c7e64faeb72cd3468823a9a3bd3d6e.css integrity="sha256-foUFt834uyKrIwXlPCcAuwbH5k+utyzTRogjqaO9PW4=" rel="preload stylesheet" as=style><link rel=icon href=/favicon.ico><link rel=icon type=image/png sizes=16x16 href=/blog/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=/blog/favicon-32x32.png><link rel=apple-touch-icon href=/blog/apple-touch-icon.png><link rel=mask-icon href=/blog/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=/blog/articles/%E9%9B%B6%E4%BF%A1%E4%BB%BB%E6%9E%B6%E6%9E%84%E4%BB%8E%E7%90%86%E8%AE%BA%E5%88%B0%E5%AE%9E%E8%B7%B5%E6%9E%84%E5%BB%BA%E6%B0%B8%E4%B8%8D%E4%BF%A1%E4%BB%BB%E5%A7%8B%E7%BB%88%E9%AA%8C%E8%AF%81%E7%9A%84%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB/feed.xml title=rss><link rel=alternate hreflang=zh-cn href=/blog/articles/%E9%9B%B6%E4%BF%A1%E4%BB%BB%E6%9E%B6%E6%9E%84%E4%BB%8E%E7%90%86%E8%AE%BA%E5%88%B0%E5%AE%9E%E8%B7%B5%E6%9E%84%E5%BB%BA%E6%B0%B8%E4%B8%8D%E4%BF%A1%E4%BB%BB%E5%A7%8B%E7%BB%88%E9%AA%8C%E8%AF%81%E7%9A%84%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script src=/js/external-link-config.js></script><script src=/js/external-link-interceptor.js></script><link rel=stylesheet href=/blog/css/custom.css media=screen><script type=application/ld+json>{"@context":"https://schema.org","@type":"WebSite","name":"技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享","url":"https://www.util.cn/blog/","description":"有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。提供JSON格式化、SQL优化、Markdown编辑器等在线工具的详细使用指南，帮助开发者提升工作效率。","publisher":{"@type":"Organization","name":"有条工具","url":"https://www.util.cn","logo":{"@type":"ImageObject","url":"https://www.util.cn/blog/logo/logo-256.png","width":256,"height":256}},"potentialAction":[{"@type":"SearchAction","target":"https://www.util.cn/blog/search?q={search_term_string}","query-input":"required name=search_term_string"}]}</script><meta property="og:type" content="website"><meta property="og:title" content="技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享"><meta property="og:description" content="有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。提供JSON格式化、SQL优化、Markdown编辑器等在线工具的详细使用指南，帮助开发者提升工作效率。"><meta property="og:url" content="https://www.util.cn/blog/"><meta property="og:site_name" content="有条工具技术博客"><meta property="og:image" content="https://www.util.cn/blog/logo/logo-256.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享"><meta name=twitter:description content="有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。"><meta name=twitter:image content="https://www.util.cn/blog/logo/logo-256.png"><meta name=baidu-site-verification content><meta name=category content="技术博客,开发者工具,编程教程"><meta name=coverage content="Worldwide"><meta name=distribution content="Global"><meta name=rating content="General"><script id=51la_code async crossorigin=anonymous src="https://sdk.51.la/js-sdk-pro.min.js?id=3OM52V0xJAPv6ozF&hash=pro"></script><script>window.addEventListener("load",function(){setTimeout(function(){typeof la!="undefined"?console.log("51la统计已加载"):(console.warn("51la统计加载失败，使用备用方案"),function(){var e=document.createElement("script");e.src="https://sdk.51.la/js-sdk-pro.min.js?id=3OM52V0xJAPv6ozF&hash=backup",e.async=!0,document.head.appendChild(e)}())},3e3)})</script><meta property="og:url" content="/blog/articles/%E9%9B%B6%E4%BF%A1%E4%BB%BB%E6%9E%B6%E6%9E%84%E4%BB%8E%E7%90%86%E8%AE%BA%E5%88%B0%E5%AE%9E%E8%B7%B5%E6%9E%84%E5%BB%BA%E6%B0%B8%E4%B8%8D%E4%BF%A1%E4%BB%BB%E5%A7%8B%E7%BB%88%E9%AA%8C%E8%AF%81%E7%9A%84%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB/"><meta property="og:site_name" content="技术博客 - 有条工具"><meta property="og:title" content="零信任架构从理论到实践：构建永不信任、始终验证的安全体系"><meta property="og:description" content="深入探讨零信任安全架构的核心原则、技术实现和部署策略，帮助组织构建适应现代威胁环境的安全体系。"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-12-31T12:00:00+08:00"><meta property="article:modified_time" content="2025-12-31T12:00:00+08:00"><meta property="article:tag" content="零信任"><meta property="article:tag" content="网络安全"><meta property="article:tag" content="身份认证"><meta property="article:tag" content="访问控制"><meta name=twitter:card content="summary"><meta name=twitter:title content="零信任架构从理论到实践：构建永不信任、始终验证的安全体系"><meta name=twitter:description content="深入探讨零信任安全架构的核心原则、技术实现和部署策略，帮助组织构建适应现代威胁环境的安全体系。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"所有文章","item":"/blog/posts/"},{"@type":"ListItem","position":2,"name":"零信任架构从理论到实践：构建永不信任、始终验证的安全体系","item":"/blog/articles/%E9%9B%B6%E4%BF%A1%E4%BB%BB%E6%9E%B6%E6%9E%84%E4%BB%8E%E7%90%86%E8%AE%BA%E5%88%B0%E5%AE%9E%E8%B7%B5%E6%9E%84%E5%BB%BA%E6%B0%B8%E4%B8%8D%E4%BF%A1%E4%BB%BB%E5%A7%8B%E7%BB%88%E9%AA%8C%E8%AF%81%E7%9A%84%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"零信任架构从理论到实践：构建永不信任、始终验证的安全体系","name":"零信任架构从理论到实践：构建永不信任、始终验证的安全体系","description":"深入探讨零信任安全架构的核心原则、技术实现和部署策略，帮助组织构建适应现代威胁环境的安全体系。","keywords":["零信任架构","身份验证","微分段","安全架构","ZTNA"],"articleBody":"引言 传统边界安全模型已无法应对现代威胁。零信任架构（Zero Trust）以\"永不信任，始终验证\"为核心理念，正在成为安全架构的新标准。\n一、零信任核心原则 1.1 核心概念 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # 零信任架构原则 class ZeroTrustPrinciples: \"\"\"零信任核心原则\"\"\" principles = { \"Verify Explicitly\": \"始终验证，永不信任\", \"Use Least Privilege\": \"最小权限访问\", \"Assume Breach\": \"假设已被攻破\" } def __init__(self): # 信任评估模型 self.trust_score = 0 self.context_factors = [ 'identity', 'device_health', 'location', 'behavior_pattern', 'time' ] 1.2 身份与访问管理 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 # 现代身份认证系统 from datetime import datetime, timedelta import secrets class IdentityProvider: \"\"\"身份提供商\"\"\" def __init__(self): self.sessions = {} self.mfa_providers = {} async def authenticate(self, credentials, context): \"\"\"多因素认证\"\"\" # 1. 验证身份 user = await self._verify_identity(credentials) # 2. 检查设备健康 device_trust = await self._check_device_health(context['device_id']) # 3. 评估上下文风险 risk_score = await self._assess_risk(context) # 4. 决定认证要求 if risk_score \u003e 0.7: # 高风险：需要MFA mfa_required = True else: mfa_required = False # 5. 执行认证 if mfa_required: mfa_result = await self._perform_mfa(user['id']) if not mfa_result['success']: raise AuthenticationException(\"MFA failed\") # 6. 颁发令牌 token = await self._issue_token(user, context) return { 'access_token': token, 'expires_in': 3600, 'refresh_enabled': True } async def _issue_token(self, user, context): \"\"\"颁发令牌\"\"\" # JWT令牌 payload = { 'user_id': user['id'], 'roles': user['roles'], 'permissions': user['permissions'], 'device_id': context['device_id'], 'location': context['location'], 'iat': datetime.now().timestamp(), 'exp': (datetime.now() + timedelta(hours=1)).timestamp() } # 添加信任评分 trust_score = await self._calculate_trust_score(user, context) payload['trust_score'] = trust_score return self._encode_jwt(payload) # 细粒度访问控制 class AccessControlEngine: \"\"\"访问控制引擎\"\"\" def __init__(self, policy_engine): self.policy_engine = policy_engine async def check_access(self, request): \"\"\"检查访问权限\"\"\" # 策略评估 decision = await self.policy_engine.evaluate({ 'subject': request.subject, 'action': request.action, 'resource': request.resource, 'context': request.context }) return decision['allow'], decision['reason'] # 策略定义示例 ABAC_POLICIES = [ { \"name\": \"Document Access Policy\", \"conditions\": { \"resource.type\": \"document\", \"resource.classification\": [\"public\", \"internal\", \"confidential\"], \"subject.roles\": [\"employee\", \"contractor\", \"partner\"], \"context.location\": [\"office\", \"remote\"], \"context.time\": [\"business_hours\", \"any\"] }, \"rules\": [ { \"effect\": \"allow\", \"conditions\": { \"resource.classification\": \"public\", \"subject.roles\": [\"employee\", \"contractor\", \"partner\"] } }, { \"effect\": \"allow\", \"conditions\": { \"resource.classification\": \"internal\", \"subject.roles\": [\"employee\"], \"context.location\": [\"office\"] } }, { \"effect\": \"deny\", \"conditions\": { \"resource.classification\": \"confidential\", \"subject.roles\": [\"contractor\", \"partner\"] } } ] } ] 1.3 微分段 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 # 网络微分段实现 class MicroSegmentation: \"\"\"网络微分段\"\"\" def __init__(self): self.segments = {} self.policies = {} def create_segment(self, segment_config): \"\"\"创建网段\"\"\" segment_id = segment_config['id'] self.segments[segment_id] = { 'name': segment_config['name'], 'workloads': [], 'allowed_traffic': segment_config['allowed_traffic'], 'inspection_level': segment_config['inspection_level'] } def apply_policy(self, policy): \"\"\"应用策略\"\"\" policy_id = policy['id'] self.policies[policy_id] = { 'source': policy['source_segment'], 'destination': policy['destination_segment'], 'ports': policy['ports'], 'protocols': policy['protocols'], 'action': policy['action'], # allow/deny/inspect 'inspection': policy.get('inspection', 'none') } def enforce_policy(self, traffic): \"\"\"强制执行策略\"\"\" # 查找匹配的策略 for policy_id, policy in self.policies.items(): if self._traffic_matches_policy(traffic, policy): if policy['action'] == 'deny': return False, \"Policy denied\" elif policy['action'] == 'inspect': # 深度包检测 if not self._deep_inspect(traffic, policy['inspection']): return False, \"Inspection failed\" return True, \"Allowed\" 二、零信任架构实施 2.1 实施路线图 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 # 零信任实施阶段 class ZeroTrustRoadmap: \"\"\"零信任实施路线图\"\"\" phases = [ { \"phase\": 1, \"name\": \"发现与评估\", \"duration\": \"1-3个月\", \"tasks\": [ \"资产发现与分类\", \"数据流分析\", \"现有安全评估\", \"基线建立\" ] }, { \"phase\": 2, \"name\": \"身份现代化\", \"duration\": \"3-6个月\", \"tasks\": [ \"部署MFA\", \"实施SSO\", \"建立特权访问管理\", \"部署IAM系统\" ] }, { \"phase\": 3, \"name\": \"设备信任\", \"duration\": \"3-6个月\", \"tasks\": [ \"部署MDM\", \"实施设备健康检查\", \"建立设备信任评分\", \"部署EDR\" ] }, { \"phase\": 4, \"name\": \"网络分段\", \"duration\": \"6-12个月\", \"tasks\": [ \"实施软件定义边界\", \"部署微隔离\", \"建立零信任网络访问\", \"实施东西向流量监控\" ] }, { \"phase\": 5, \"name\": \"数据保护\", \"duration\": \"6-12个月\", \"tasks\": [ \"实施数据分类\", \"部署加密\", \"建立DLP\", \"实施CASB\" ] } ] 2.2 监控与审计 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 # 零信任监控系统 class ZeroTrustMonitor: \"\"\"零信任监控\"\"\" def __init__(self): self.events = [] self.alerts = [] def log_access_event(self, event): \"\"\"记录访问事件\"\"\" event_data = { 'timestamp': datetime.now(), 'subject': event['subject'], 'action': event['action'], 'resource': event['resource'], 'result': event['result'], 'context': event['context'], 'trust_score': event['trust_score'] } self.events.append(event_data) # 实时风险评估 self._assess_risk(event_data) def _assess_risk(self, event): \"\"\"评估风险\"\"\" # 异常检测 anomalies = self._detect_anomalies(event) if anomalies: alert = { 'level': 'high', 'type': 'anomaly_detected', 'details': anomalies, 'event': event } self.alerts.append(alert) self._trigger_alert(alert) def _detect_anomalies(self, event): \"\"\"检测异常\"\"\" anomalies = [] # 1. 异常时间访问 hour = event['timestamp'].hour if hour \u003c 6 or hour \u003e 22: anomalies.append(\"非工作时间访问\") # 2. 异常位置访问 if event['context']['location'] == 'unknown': anomalies.append(\"未知位置访问\") # 3. 异常设备 if event['context']['device_trust'] \u003c 0.5: anomalies.append(\"低信任设备访问\") # 4. 异常行为模式 if self._is_unusual_behavior(event): anomalies.append(\"异常行为模式\") return anomalies 总结 零信任架构是现代安全的必然选择。成功实施需要：\n高层支持与文化变革 分阶段实施 持续监控和优化 技术与流程并重 相关工具推荐\nUUID生成器 - 唯一标识 Hash计算工具 - 数据校验 ","wordCount":"916","inLanguage":"zh-cn","datePublished":"2025-12-31T12:00:00+08:00","dateModified":"2025-12-31T12:00:00+08:00","author":{"@type":"Person","name":"有条工具团队"},"mainEntityOfPage":{"@type":"WebPage","@id":"/blog/articles/%E9%9B%B6%E4%BF%A1%E4%BB%BB%E6%9E%B6%E6%9E%84%E4%BB%8E%E7%90%86%E8%AE%BA%E5%88%B0%E5%AE%9E%E8%B7%B5%E6%9E%84%E5%BB%BA%E6%B0%B8%E4%B8%8D%E4%BF%A1%E4%BB%BB%E5%A7%8B%E7%BB%88%E9%AA%8C%E8%AF%81%E7%9A%84%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB/"},"publisher":{"@type":"Organization","name":"技术博客 - 有条工具","logo":{"@type":"ImageObject","url":"/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=/blog/ accesskey=h title="技术博客 - 有条工具 (Alt + H)">技术博客 - 有条工具</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=/blog/posts/ title="所有文章列表 - 有条工具技术博客：查看所有技术文章和教程内容"><span>文章</span></a></li><li><a href=https://www.util.cn title="有条工具 - 开发者的常用工具集合：无广告 · 本地计算 · 即开即用的在线工具平台，提供JSON格式化、SQL格式化、Markdown编辑器等实用工具"><span>有条工具</span>&nbsp;
+<svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a></li><li><a href=/blog/categories/ title="文章分类 - 有条工具技术博客：按技术领域分类的优质文章，包括前端开发、工具使用、编程技巧等"><span>分类</span></a></li><li><a href=/blog/tags/ title="标签云 - 有条工具技术博客：通过标签快速找到感兴趣的技术文章和教程内容"><span>标签</span></a></li><li><a href=/blog/archives/ title="文章归档 - 有条工具技术博客：按时间查看历史文章"><span>归档</span></a></li><li><a href=/blog/search/ title="搜索文章 - 有条工具技术博客：通过关键词搜索找到感兴趣的技术文章和教程内容，支持标题、内容、分类和标签搜索"><span>搜索</span></a></li></ul></nav></header><main class=main><article class=post-single><div class=post-content-wrapper><main class=post-content-main><header class=post-header-main><h1 class="post-title entry-hint-parent">零信任架构从理论到实践：构建永不信任、始终验证的安全体系</h1><div class=post-description>深入探讨零信任安全架构的核心原则、技术实现和部署策略，帮助组织构建适应现代威胁环境的安全体系。</div><div class=post-meta><div class=post-meta-content><div class=post-categories-inline><a href=/blog/categories/%E5%AE%89%E5%85%A8/ class=category-link>安全</a><a href=/blog/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/ class=category-link>架构设计</a></div><span class=post-date>2025-12-31</span><span class=post-author>有条工具团队</span></div><style>.post-meta-content{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;font-family:sf mono,monaco,courier new,monospace;font-size:.875rem;color:#9ca3af !important}.post-categories-inline{display:inline-flex;align-items:center;gap:.5rem}.category-link{display:inline-flex;align-items:center;gap:.25rem;padding:.25rem .75rem;background:rgba(255,255,255,.1);color:#e5e7eb !important;text-decoration:none;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;border:1px solid rgba(255,255,255,.2);border-radius:0;transition:all .3s ease;white-space:nowrap}.category-link:hover{background:rgba(255,255,255,.2);color:#fff !important;border-color:rgba(255,255,255,.3);transform:translateY(-1px)}.category-link::before{content:'📁';font-size:.7rem;opacity:.8}.post-date,.post-reading-time,.post-word-count,.post-author{color:#9ca3af !important}[data-theme=dark] .post-meta-content{color:#9ca3af !important}[data-theme=dark] .category-link{background:rgba(255,255,255,.1);color:#e5e7eb !important;border-color:rgba(255,255,255,.2)}[data-theme=dark] .category-link:hover{background:rgba(255,255,255,.2);color:#fff !important;border-color:rgba(255,255,255,.3)}[data-theme=dark] .post-date,[data-theme=dark] .post-reading-time,[data-theme=dark] .post-word-count,[data-theme=dark] .post-author{color:#9ca3af !important}[data-theme=light] .post-meta-content{color:#6c757d !important}[data-theme=light] .category-link{background:rgba(0,0,0,5%);color:#495057 !important;border-color:rgba(0,0,0,.15)}[data-theme=light] .category-link:hover{background:rgba(0,102,204,.1);color:#212529 !important;border-color:rgba(0,102,204,.3)}[data-theme=light] .post-date,[data-theme=light] .post-reading-time,[data-theme=light] .post-word-count,[data-theme=light] .post-author{color:#6c757d !important}@media(max-width:768px){.post-meta-content{gap:.5rem;font-size:.8rem}.category-link{padding:.2rem .6rem;font-size:.7rem}}</style></div></header><div class=post-content><h2 id=引言>引言<a hidden class=anchor aria-hidden=true href=#引言>#</a></h2><p>传统边界安全模型已无法应对现代威胁。零信任架构（Zero Trust）以"永不信任，始终验证"为核心理念，正在成为安全架构的新标准。</p><h2 id=一零信任核心原则>一、零信任核心原则<a hidden class=anchor aria-hidden=true href=#一零信任核心原则>#</a></h2><h3 id=11-核心概念>1.1 核心概念<a hidden class=anchor aria-hidden=true href=#11-核心概念>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 零信任架构原则</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>ZeroTrustPrinciples</span>:
+</span></span><span style=display:flex><span>    <span style=color:#a5d6ff>&#34;&#34;&#34;零信任核心原则&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    principles <span style=color:#ff7b72;font-weight:700>=</span> {
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;Verify Explicitly&#34;</span>: <span style=color:#a5d6ff>&#34;始终验证，永不信任&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;Use Least Privilege&#34;</span>: <span style=color:#a5d6ff>&#34;最小权限访问&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;Assume Breach&#34;</span>: <span style=color:#a5d6ff>&#34;假设已被攻破&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>__init__</span>(self):
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 信任评估模型</span>
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>trust_score <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>0</span>
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>context_factors <span style=color:#ff7b72;font-weight:700>=</span> [
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;identity&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;device_health&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;location&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;behavior_pattern&#39;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;time&#39;</span>
+</span></span><span style=display:flex><span>        ]
+</span></span></code></pre></td></tr></table></div></div><h3 id=12-身份与访问管理>1.2 身份与访问管理<a hidden class=anchor aria-hidden=true href=#12-身份与访问管理>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 67
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 68
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 69
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 70
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 71
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 72
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 73
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 74
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 75
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 76
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 77
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 78
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 79
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 80
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 81
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 82
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 83
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 84
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 85
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 86
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 87
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 88
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 89
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 90
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 91
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 92
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 93
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 94
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 95
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 96
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 97
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 98
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 99
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">100
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">101
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">102
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">103
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">104
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">105
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">106
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">107
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">108
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">109
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">110
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">111
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">112
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">113
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">114
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">115
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">116
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">117
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">118
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">119
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">120
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">121
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">122
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">123
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 现代身份认证系统</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>from</span> <span style=color:#ff7b72>datetime</span> <span style=color:#ff7b72>import</span> datetime, timedelta
+</span></span><span style=display:flex><span><span style=color:#ff7b72>import</span> <span style=color:#ff7b72>secrets</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>IdentityProvider</span>:
+</span></span><span style=display:flex><span>    <span style=color:#a5d6ff>&#34;&#34;&#34;身份提供商&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>__init__</span>(self):
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>sessions <span style=color:#ff7b72;font-weight:700>=</span> {}
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>mfa_providers <span style=color:#ff7b72;font-weight:700>=</span> {}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>async</span> <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>authenticate</span>(self, credentials, context):
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;多因素认证&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 1. 验证身份</span>
+</span></span><span style=display:flex><span>        user <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>_verify_identity(credentials)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 2. 检查设备健康</span>
+</span></span><span style=display:flex><span>        device_trust <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>_check_device_health(context[<span style=color:#a5d6ff>&#39;device_id&#39;</span>])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 3. 评估上下文风险</span>
+</span></span><span style=display:flex><span>        risk_score <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>_assess_risk(context)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 4. 决定认证要求</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>if</span> risk_score <span style=color:#ff7b72;font-weight:700>&gt;</span> <span style=color:#a5d6ff>0.7</span>:
+</span></span><span style=display:flex><span>            <span style=color:#8b949e;font-style:italic># 高风险：需要MFA</span>
+</span></span><span style=display:flex><span>            mfa_required <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#79c0ff>True</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>else</span>:
+</span></span><span style=display:flex><span>            mfa_required <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#79c0ff>False</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 5. 执行认证</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>if</span> mfa_required:
+</span></span><span style=display:flex><span>            mfa_result <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>_perform_mfa(user[<span style=color:#a5d6ff>&#39;id&#39;</span>])
+</span></span><span style=display:flex><span>            <span style=color:#ff7b72>if</span> <span style=color:#ff7b72;font-weight:700>not</span> mfa_result[<span style=color:#a5d6ff>&#39;success&#39;</span>]:
+</span></span><span style=display:flex><span>                <span style=color:#ff7b72>raise</span> AuthenticationException(<span style=color:#a5d6ff>&#34;MFA failed&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 6. 颁发令牌</span>
+</span></span><span style=display:flex><span>        token <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>_issue_token(user, context)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> {
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;access_token&#39;</span>: token,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;expires_in&#39;</span>: <span style=color:#a5d6ff>3600</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;refresh_enabled&#39;</span>: <span style=color:#79c0ff>True</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>async</span> <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>_issue_token</span>(self, user, context):
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;颁发令牌&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># JWT令牌</span>
+</span></span><span style=display:flex><span>        payload <span style=color:#ff7b72;font-weight:700>=</span> {
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;user_id&#39;</span>: user[<span style=color:#a5d6ff>&#39;id&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;roles&#39;</span>: user[<span style=color:#a5d6ff>&#39;roles&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;permissions&#39;</span>: user[<span style=color:#a5d6ff>&#39;permissions&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;device_id&#39;</span>: context[<span style=color:#a5d6ff>&#39;device_id&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;location&#39;</span>: context[<span style=color:#a5d6ff>&#39;location&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;iat&#39;</span>: datetime<span style=color:#ff7b72;font-weight:700>.</span>now()<span style=color:#ff7b72;font-weight:700>.</span>timestamp(),
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;exp&#39;</span>: (datetime<span style=color:#ff7b72;font-weight:700>.</span>now() <span style=color:#ff7b72;font-weight:700>+</span> timedelta(hours<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>1</span>))<span style=color:#ff7b72;font-weight:700>.</span>timestamp()
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 添加信任评分</span>
+</span></span><span style=display:flex><span>        trust_score <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>_calculate_trust_score(user, context)
+</span></span><span style=display:flex><span>        payload[<span style=color:#a5d6ff>&#39;trust_score&#39;</span>] <span style=color:#ff7b72;font-weight:700>=</span> trust_score
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> self<span style=color:#ff7b72;font-weight:700>.</span>_encode_jwt(payload)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 细粒度访问控制</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>AccessControlEngine</span>:
+</span></span><span style=display:flex><span>    <span style=color:#a5d6ff>&#34;&#34;&#34;访问控制引擎&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>__init__</span>(self, policy_engine):
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>policy_engine <span style=color:#ff7b72;font-weight:700>=</span> policy_engine
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>async</span> <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>check_access</span>(self, request):
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;检查访问权限&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 策略评估</span>
+</span></span><span style=display:flex><span>        decision <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>policy_engine<span style=color:#ff7b72;font-weight:700>.</span>evaluate({
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;subject&#39;</span>: request<span style=color:#ff7b72;font-weight:700>.</span>subject,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;action&#39;</span>: request<span style=color:#ff7b72;font-weight:700>.</span>action,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;resource&#39;</span>: request<span style=color:#ff7b72;font-weight:700>.</span>resource,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;context&#39;</span>: request<span style=color:#ff7b72;font-weight:700>.</span>context
+</span></span><span style=display:flex><span>        })
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> decision[<span style=color:#a5d6ff>&#39;allow&#39;</span>], decision[<span style=color:#a5d6ff>&#39;reason&#39;</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 策略定义示例</span>
+</span></span><span style=display:flex><span>ABAC_POLICIES <span style=color:#ff7b72;font-weight:700>=</span> [
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;name&#34;</span>: <span style=color:#a5d6ff>&#34;Document Access Policy&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;conditions&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;resource.type&#34;</span>: <span style=color:#a5d6ff>&#34;document&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;resource.classification&#34;</span>: [<span style=color:#a5d6ff>&#34;public&#34;</span>, <span style=color:#a5d6ff>&#34;internal&#34;</span>, <span style=color:#a5d6ff>&#34;confidential&#34;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;subject.roles&#34;</span>: [<span style=color:#a5d6ff>&#34;employee&#34;</span>, <span style=color:#a5d6ff>&#34;contractor&#34;</span>, <span style=color:#a5d6ff>&#34;partner&#34;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;context.location&#34;</span>: [<span style=color:#a5d6ff>&#34;office&#34;</span>, <span style=color:#a5d6ff>&#34;remote&#34;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;context.time&#34;</span>: [<span style=color:#a5d6ff>&#34;business_hours&#34;</span>, <span style=color:#a5d6ff>&#34;any&#34;</span>]
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;rules&#34;</span>: [
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;effect&#34;</span>: <span style=color:#a5d6ff>&#34;allow&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;conditions&#34;</span>: {
+</span></span><span style=display:flex><span>                    <span style=color:#a5d6ff>&#34;resource.classification&#34;</span>: <span style=color:#a5d6ff>&#34;public&#34;</span>,
+</span></span><span style=display:flex><span>                    <span style=color:#a5d6ff>&#34;subject.roles&#34;</span>: [<span style=color:#a5d6ff>&#34;employee&#34;</span>, <span style=color:#a5d6ff>&#34;contractor&#34;</span>, <span style=color:#a5d6ff>&#34;partner&#34;</span>]
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>            },
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;effect&#34;</span>: <span style=color:#a5d6ff>&#34;allow&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;conditions&#34;</span>: {
+</span></span><span style=display:flex><span>                    <span style=color:#a5d6ff>&#34;resource.classification&#34;</span>: <span style=color:#a5d6ff>&#34;internal&#34;</span>,
+</span></span><span style=display:flex><span>                    <span style=color:#a5d6ff>&#34;subject.roles&#34;</span>: [<span style=color:#a5d6ff>&#34;employee&#34;</span>],
+</span></span><span style=display:flex><span>                    <span style=color:#a5d6ff>&#34;context.location&#34;</span>: [<span style=color:#a5d6ff>&#34;office&#34;</span>]
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>            },
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;effect&#34;</span>: <span style=color:#a5d6ff>&#34;deny&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;conditions&#34;</span>: {
+</span></span><span style=display:flex><span>                    <span style=color:#a5d6ff>&#34;resource.classification&#34;</span>: <span style=color:#a5d6ff>&#34;confidential&#34;</span>,
+</span></span><span style=display:flex><span>                    <span style=color:#a5d6ff>&#34;subject.roles&#34;</span>: [<span style=color:#a5d6ff>&#34;contractor&#34;</span>, <span style=color:#a5d6ff>&#34;partner&#34;</span>]
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        ]
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>]
+</span></span></code></pre></td></tr></table></div></div><h3 id=13-微分段>1.3 微分段<a hidden class=anchor aria-hidden=true href=#13-微分段>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">48
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 网络微分段实现</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>MicroSegmentation</span>:
+</span></span><span style=display:flex><span>    <span style=color:#a5d6ff>&#34;&#34;&#34;网络微分段&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>__init__</span>(self):
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>segments <span style=color:#ff7b72;font-weight:700>=</span> {}
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>policies <span style=color:#ff7b72;font-weight:700>=</span> {}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>create_segment</span>(self, segment_config):
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;创建网段&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        segment_id <span style=color:#ff7b72;font-weight:700>=</span> segment_config[<span style=color:#a5d6ff>&#39;id&#39;</span>]
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>segments[segment_id] <span style=color:#ff7b72;font-weight:700>=</span> {
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;name&#39;</span>: segment_config[<span style=color:#a5d6ff>&#39;name&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;workloads&#39;</span>: [],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;allowed_traffic&#39;</span>: segment_config[<span style=color:#a5d6ff>&#39;allowed_traffic&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;inspection_level&#39;</span>: segment_config[<span style=color:#a5d6ff>&#39;inspection_level&#39;</span>]
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>apply_policy</span>(self, policy):
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;应用策略&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        policy_id <span style=color:#ff7b72;font-weight:700>=</span> policy[<span style=color:#a5d6ff>&#39;id&#39;</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>policies[policy_id] <span style=color:#ff7b72;font-weight:700>=</span> {
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;source&#39;</span>: policy[<span style=color:#a5d6ff>&#39;source_segment&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;destination&#39;</span>: policy[<span style=color:#a5d6ff>&#39;destination_segment&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;ports&#39;</span>: policy[<span style=color:#a5d6ff>&#39;ports&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;protocols&#39;</span>: policy[<span style=color:#a5d6ff>&#39;protocols&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;action&#39;</span>: policy[<span style=color:#a5d6ff>&#39;action&#39;</span>],  <span style=color:#8b949e;font-style:italic># allow/deny/inspect</span>
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;inspection&#39;</span>: policy<span style=color:#ff7b72;font-weight:700>.</span>get(<span style=color:#a5d6ff>&#39;inspection&#39;</span>, <span style=color:#a5d6ff>&#39;none&#39;</span>)
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>enforce_policy</span>(self, traffic):
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;强制执行策略&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 查找匹配的策略</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>for</span> policy_id, policy <span style=color:#ff7b72;font-weight:700>in</span> self<span style=color:#ff7b72;font-weight:700>.</span>policies<span style=color:#ff7b72;font-weight:700>.</span>items():
+</span></span><span style=display:flex><span>            <span style=color:#ff7b72>if</span> self<span style=color:#ff7b72;font-weight:700>.</span>_traffic_matches_policy(traffic, policy):
+</span></span><span style=display:flex><span>                <span style=color:#ff7b72>if</span> policy[<span style=color:#a5d6ff>&#39;action&#39;</span>] <span style=color:#ff7b72;font-weight:700>==</span> <span style=color:#a5d6ff>&#39;deny&#39;</span>:
+</span></span><span style=display:flex><span>                    <span style=color:#ff7b72>return</span> <span style=color:#79c0ff>False</span>, <span style=color:#a5d6ff>&#34;Policy denied&#34;</span>
+</span></span><span style=display:flex><span>                <span style=color:#ff7b72>elif</span> policy[<span style=color:#a5d6ff>&#39;action&#39;</span>] <span style=color:#ff7b72;font-weight:700>==</span> <span style=color:#a5d6ff>&#39;inspect&#39;</span>:
+</span></span><span style=display:flex><span>                    <span style=color:#8b949e;font-style:italic># 深度包检测</span>
+</span></span><span style=display:flex><span>                    <span style=color:#ff7b72>if</span> <span style=color:#ff7b72;font-weight:700>not</span> self<span style=color:#ff7b72;font-weight:700>.</span>_deep_inspect(traffic, policy[<span style=color:#a5d6ff>&#39;inspection&#39;</span>]):
+</span></span><span style=display:flex><span>                        <span style=color:#ff7b72>return</span> <span style=color:#79c0ff>False</span>, <span style=color:#a5d6ff>&#34;Inspection failed&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> <span style=color:#79c0ff>True</span>, <span style=color:#a5d6ff>&#34;Allowed&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=二零信任架构实施>二、零信任架构实施<a hidden class=anchor aria-hidden=true href=#二零信任架构实施>#</a></h2><h3 id=21-实施路线图>2.1 实施路线图<a hidden class=anchor aria-hidden=true href=#21-实施路线图>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">62
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 零信任实施阶段</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>ZeroTrustRoadmap</span>:
+</span></span><span style=display:flex><span>    <span style=color:#a5d6ff>&#34;&#34;&#34;零信任实施路线图&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    phases <span style=color:#ff7b72;font-weight:700>=</span> [
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;phase&#34;</span>: <span style=color:#a5d6ff>1</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;name&#34;</span>: <span style=color:#a5d6ff>&#34;发现与评估&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;duration&#34;</span>: <span style=color:#a5d6ff>&#34;1-3个月&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;tasks&#34;</span>: [
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;资产发现与分类&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;数据流分析&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;现有安全评估&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;基线建立&#34;</span>
+</span></span><span style=display:flex><span>            ]
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;phase&#34;</span>: <span style=color:#a5d6ff>2</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;name&#34;</span>: <span style=color:#a5d6ff>&#34;身份现代化&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;duration&#34;</span>: <span style=color:#a5d6ff>&#34;3-6个月&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;tasks&#34;</span>: [
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;部署MFA&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;实施SSO&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;建立特权访问管理&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;部署IAM系统&#34;</span>
+</span></span><span style=display:flex><span>            ]
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;phase&#34;</span>: <span style=color:#a5d6ff>3</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;name&#34;</span>: <span style=color:#a5d6ff>&#34;设备信任&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;duration&#34;</span>: <span style=color:#a5d6ff>&#34;3-6个月&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;tasks&#34;</span>: [
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;部署MDM&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;实施设备健康检查&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;建立设备信任评分&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;部署EDR&#34;</span>
+</span></span><span style=display:flex><span>            ]
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;phase&#34;</span>: <span style=color:#a5d6ff>4</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;name&#34;</span>: <span style=color:#a5d6ff>&#34;网络分段&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;duration&#34;</span>: <span style=color:#a5d6ff>&#34;6-12个月&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;tasks&#34;</span>: [
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;实施软件定义边界&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;部署微隔离&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;建立零信任网络访问&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;实施东西向流量监控&#34;</span>
+</span></span><span style=display:flex><span>            ]
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;phase&#34;</span>: <span style=color:#a5d6ff>5</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;name&#34;</span>: <span style=color:#a5d6ff>&#34;数据保护&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;duration&#34;</span>: <span style=color:#a5d6ff>&#34;6-12个月&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#34;tasks&#34;</span>: [
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;实施数据分类&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;部署加密&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;建立DLP&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#34;实施CASB&#34;</span>
+</span></span><span style=display:flex><span>            ]
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    ]
+</span></span></code></pre></td></tr></table></div></div><h3 id=22-监控与审计>2.2 监控与审计<a hidden class=anchor aria-hidden=true href=#22-监控与审计>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">67
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 零信任监控系统</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>ZeroTrustMonitor</span>:
+</span></span><span style=display:flex><span>    <span style=color:#a5d6ff>&#34;&#34;&#34;零信任监控&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>__init__</span>(self):
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>events <span style=color:#ff7b72;font-weight:700>=</span> []
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>alerts <span style=color:#ff7b72;font-weight:700>=</span> []
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>log_access_event</span>(self, event):
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;记录访问事件&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        event_data <span style=color:#ff7b72;font-weight:700>=</span> {
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;timestamp&#39;</span>: datetime<span style=color:#ff7b72;font-weight:700>.</span>now(),
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;subject&#39;</span>: event[<span style=color:#a5d6ff>&#39;subject&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;action&#39;</span>: event[<span style=color:#a5d6ff>&#39;action&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;resource&#39;</span>: event[<span style=color:#a5d6ff>&#39;resource&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;result&#39;</span>: event[<span style=color:#a5d6ff>&#39;result&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;context&#39;</span>: event[<span style=color:#a5d6ff>&#39;context&#39;</span>],
+</span></span><span style=display:flex><span>            <span style=color:#a5d6ff>&#39;trust_score&#39;</span>: event[<span style=color:#a5d6ff>&#39;trust_score&#39;</span>]
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>events<span style=color:#ff7b72;font-weight:700>.</span>append(event_data)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 实时风险评估</span>
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>_assess_risk(event_data)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>_assess_risk</span>(self, event):
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;评估风险&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 异常检测</span>
+</span></span><span style=display:flex><span>        anomalies <span style=color:#ff7b72;font-weight:700>=</span> self<span style=color:#ff7b72;font-weight:700>.</span>_detect_anomalies(event)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>if</span> anomalies:
+</span></span><span style=display:flex><span>            alert <span style=color:#ff7b72;font-weight:700>=</span> {
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#39;level&#39;</span>: <span style=color:#a5d6ff>&#39;high&#39;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#39;type&#39;</span>: <span style=color:#a5d6ff>&#39;anomaly_detected&#39;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#39;details&#39;</span>: anomalies,
+</span></span><span style=display:flex><span>                <span style=color:#a5d6ff>&#39;event&#39;</span>: event
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            self<span style=color:#ff7b72;font-weight:700>.</span>alerts<span style=color:#ff7b72;font-weight:700>.</span>append(alert)
+</span></span><span style=display:flex><span>            self<span style=color:#ff7b72;font-weight:700>.</span>_trigger_alert(alert)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>_detect_anomalies</span>(self, event):
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;检测异常&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        anomalies <span style=color:#ff7b72;font-weight:700>=</span> []
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 1. 异常时间访问</span>
+</span></span><span style=display:flex><span>        hour <span style=color:#ff7b72;font-weight:700>=</span> event[<span style=color:#a5d6ff>&#39;timestamp&#39;</span>]<span style=color:#ff7b72;font-weight:700>.</span>hour
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>if</span> hour <span style=color:#ff7b72;font-weight:700>&lt;</span> <span style=color:#a5d6ff>6</span> <span style=color:#ff7b72;font-weight:700>or</span> hour <span style=color:#ff7b72;font-weight:700>&gt;</span> <span style=color:#a5d6ff>22</span>:
+</span></span><span style=display:flex><span>            anomalies<span style=color:#ff7b72;font-weight:700>.</span>append(<span style=color:#a5d6ff>&#34;非工作时间访问&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 2. 异常位置访问</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>if</span> event[<span style=color:#a5d6ff>&#39;context&#39;</span>][<span style=color:#a5d6ff>&#39;location&#39;</span>] <span style=color:#ff7b72;font-weight:700>==</span> <span style=color:#a5d6ff>&#39;unknown&#39;</span>:
+</span></span><span style=display:flex><span>            anomalies<span style=color:#ff7b72;font-weight:700>.</span>append(<span style=color:#a5d6ff>&#34;未知位置访问&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 3. 异常设备</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>if</span> event[<span style=color:#a5d6ff>&#39;context&#39;</span>][<span style=color:#a5d6ff>&#39;device_trust&#39;</span>] <span style=color:#ff7b72;font-weight:700>&lt;</span> <span style=color:#a5d6ff>0.5</span>:
+</span></span><span style=display:flex><span>            anomalies<span style=color:#ff7b72;font-weight:700>.</span>append(<span style=color:#a5d6ff>&#34;低信任设备访问&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 4. 异常行为模式</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>if</span> self<span style=color:#ff7b72;font-weight:700>.</span>_is_unusual_behavior(event):
+</span></span><span style=display:flex><span>            anomalies<span style=color:#ff7b72;font-weight:700>.</span>append(<span style=color:#a5d6ff>&#34;异常行为模式&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> anomalies
+</span></span></code></pre></td></tr></table></div></div><h2 id=总结>总结<a hidden class=anchor aria-hidden=true href=#总结>#</a></h2><p>零信任架构是现代安全的必然选择。成功实施需要：</p><ol><li>高层支持与文化变革</li><li>分阶段实施</li><li>持续监控和优化</li><li>技术与流程并重</li></ol><blockquote><p><strong>相关工具推荐</strong></p><ul><li><a href=https://www.util.cn/tools/uuid/>UUID生成器</a> - 唯一标识</li><li><a href=https://www.util.cn/tools/hash/>Hash计算工具</a> - 数据校验</li></ul></blockquote></div><footer class=post-footer-modern><div class=post-tags-modern><span class=tags-label>🏷️ 标签</span><div class=tags-list><a href=/blog/tags/%E9%9B%B6%E4%BF%A1%E4%BB%BB/ class=tag-pill>零信任
+</a><a href=/blog/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/ class=tag-pill>网络安全
+</a><a href=/blog/tags/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81/ class=tag-pill>身份认证
+</a><a href=/blog/tags/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/ class=tag-pill>访问控制</a></div></div><style>.post-footer-modern{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border,#333333)}.post-tags-modern{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}.tags-label{font-size:.875rem;font-weight:600;color:var(--secondary,#999999) !important;white-space:nowrap}.tags-list{display:flex;flex-wrap:wrap;gap:.5rem;flex:1}.tag-pill{display:inline-block;padding:.25rem .75rem;background:rgba(255,255,255,5%);border:1px solid var(--border,#333333);border-radius:0;color:var(--secondary,#cccccc) !important;text-decoration:none;font-size:.8rem;font-weight:500;transition:all .2s ease}.tag-pill:hover{background:var(--primary,#ffffff);color:var(--background,#000000) !important;border-color:var(--primary,#ffffff);transform:translateY(-1px)}.post-nav-modern{margin-top:2rem}.nav-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.nav-card{display:flex;align-items:center;gap:1rem;padding:1.25rem;background:rgba(255,255,255,2%);border:1px solid var(--border,#333333);border-radius:12px;text-decoration:none;transition:all .2s ease;min-height:80px}.nav-card:hover{background:rgba(255,255,255,5%);border-color:var(--primary,#ffffff);transform:translateY(-2px)}.nav-card.nav-prev{justify-content:flex-start}.nav-card.nav-next{justify-content:flex-end;text-align:right}.nav-card.nav-next .nav-content{text-align:right}.nav-empty{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,1%);border:1px dashed var(--border,#333333);color:var(--secondary,#666666)}.nav-arrow{font-size:1.5rem;color:var(--primary,#ffffff);font-weight:300}.nav-content{flex:1}.nav-title{font-size:.95rem;font-weight:600;color:var(--primary,#ffffff) !important;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}[data-theme=light] .post-footer-modern{border-color:var(--border-light,#dee2e6)}[data-theme=light] .tags-label{color:var(--secondary-light,#6c757d) !important}[data-theme=light] .tag-pill{background:rgba(0,0,0,5%);border-color:var(--border-light,#dee2e6);color:var(--secondary-light,#495057) !important}[data-theme=light] .tag-pill:hover{background:var(--primary-light,#0066cc);color:var(--background-light,#ffffff) !important;border-color:var(--primary-light,#0066cc)}[data-theme=light] .nav-card{background:rgba(0,0,0,2%);border-color:var(--border-light,#dee2e6)}[data-theme=light] .nav-card:hover{background:rgba(0,102,204,5%);border-color:var(--primary-light,#0066cc)}[data-theme=light] .nav-empty{background:rgba(0,0,0,1%);border-color:var(--border-light,#dee2e6);color:var(--secondary-light,#6c757d)}[data-theme=light] .nav-arrow{color:var(--primary-light,#0066cc)}[data-theme=light] .nav-title{color:var(--primary-light,#212529) !important}@media(max-width:768px){.nav-grid{grid-template-columns:1fr;gap:.75rem}.nav-card{padding:1rem;min-height:70px}.nav-card.nav-next{text-align:left}.nav-card.nav-next .nav-content{text-align:left}.nav-title{font-size:.875rem}.post-tags-modern{flex-direction:column;gap:.75rem}}@media(max-width:480px){.nav-arrow{font-size:1.25rem}.nav-card{padding:.875rem}.nav-title{font-size:.8rem;-webkit-line-clamp:1}}</style><nav class=post-nav-modern><div class=nav-grid><a href=/blog/articles/edge-ai%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%9C%A8%E8%B5%84%E6%BA%90%E5%8F%97%E9%99%90%E8%AE%BE%E5%A4%87%E4%B8%8A%E9%83%A8%E7%BD%B2%E6%99%BA%E8%83%BD%E5%BA%94%E7%94%A8/ class="nav-card nav-prev"><div class=nav-arrow>←</div><div class=nav-content><div class=nav-title>Edge AI架构设计：在资源受限设备上部署智能应用</div></div></a><a href=/blog/articles/%E5%BC%80%E5%8F%91%E8%80%85%E4%BD%93%E9%AA%8Cdx%E8%AE%BE%E8%AE%A1%E5%83%8F%E8%AE%BE%E8%AE%A1%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E4%B8%80%E6%A0%B7%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E4%BD%93%E9%AA%8C/ class="nav-card nav-next"><div class=nav-content><div class=nav-title>开发者体验(DX)设计：像设计用户体验一样设计开发体验</div></div><div class=nav-arrow>→</div></a></div></nav></footer></main><aside class=post-sidebar><div class=sidebar-toc id=sidebar-toc><div class=toc-header><div class=toc-title>目录</div><button class=toc-toggle id=toc-toggle aria-label="Toggle TOC">
+<svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div><div class=toc-content id=toc-content><ul class=toc-list><li class="toc-item toc-h2"><a href=#h2-0 class=toc-item-link><span class=toc-item-text>引言</span></a></li><li class="toc-item toc-h2"><a href=#h2-1 class=toc-item-link><span class=toc-item-text>一、零信任核心原则</span></a></li><li class="toc-item toc-h2"><a href=#h2-2 class=toc-item-link><span class=toc-item-text>二、零信任架构实施</span></a></li><li class="toc-item toc-h2"><a href=#h2-3 class=toc-item-link><span class=toc-item-text>总结</span></a></li></ul></div></div><script>document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("sidebar-toc"),t=document.getElementById("toc-toggle"),o=document.getElementById("toc-content"),i=t?.querySelector(".toc-toggle-icon");if(!e)return;let n=!1;t&&t.addEventListener("click",function(){n=!n,n?(o.style.display="none",e.style.width="auto",i.innerHTML='<path d="M9 18l6-6-6-6"/>'):(o.style.display="block",e.style.width="200px",i.innerHTML='<path d="M18 6L6 18M6 6l12 12"/>')});const s=document.querySelector(".post-content");if(s){const e=s.querySelectorAll("h1");e.forEach((e,t)=>{e.id=`h1-${t}`});const t=s.querySelectorAll("h2");t.forEach((e,t)=>{e.id=`h2-${t}`})}const a=document.querySelectorAll(".toc-item-link");a.forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();const n=this.getAttribute("href").substring(1),t=document.getElementById(n);if(t){const e=document.querySelector(".post-header-main")?.offsetHeight||0,n=t.offsetTop-e-20;window.scrollTo({top:n,behavior:"smooth"})}})})})</script><style>.sidebar-toc{position:sticky;top:2rem;width:200px;background:#fff;border:1px solid #e5e7eb;border-radius:4px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.1);z-index:100}.sidebar-toc.hidden{display:none}.toc-header{padding:12px 16px;border-bottom:1px solid #e5e7eb;background:#fafbfc;display:flex;align-items:center;justify-content:space-between}.toc-title{margin:0;font-size:13px;font-weight:500;color:#374151 !important;font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;text-transform:uppercase;letter-spacing:1px}.toc-toggle{background:0 0;border:none;cursor:pointer;padding:4px;border-radius:4px;display:flex;align-items:center;justify-content:center;transition:all .2s ease;color:#6b7280}.toc-toggle:hover{background:#e5e7eb;color:#374151}.toc-toggle-icon{transition:transform .2s ease}.toc-content{padding:12px 0}.toc-list{list-style:none;margin:0;padding:0}.toc-item{margin-bottom:4px;display:block !important;visibility:visible !important}.toc-h1,.toc-h2{display:block !important}.toc-h2{margin-left:0}.toc-item-link{display:flex;align-items:center;gap:8px;padding:8px 12px;color:#374151 !important;text-decoration:none;font-size:13px;line-height:1.4;border-radius:3px;transition:all .2s ease;font-weight:400}.toc-item-link:hover{background:#f8fafc;color:#1f2937 !important}.toc-item-link.active{background:#e0f2fe;color:#01579b !important;font-weight:500}.toc-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}.dot-red{background:#ef4444}.dot-blue{background:#2196f3}.toc-item-text{color:#1f2937 !important;font-weight:400;flex:1;display:inline !important;visibility:visible !important;opacity:1 !important;font-size:13px !important;line-height:1.4 !important}.toc-item-link .toc-item-text{color:#1f2937 !important;display:inline !important;visibility:visible !important;opacity:1 !important}.toc-item.active .dot-red{background:#d32f2f}.toc-item.active .dot-blue{background:#1976d2}[data-theme=dark] .sidebar-toc{background:#1f2937;border-color:#374151;box-shadow:0 1px 3px rgba(0,0,0,.3)}[data-theme=dark] .toc-header{background:#111827;border-color:#374151}[data-theme=dark] .toc-title{color:#f3f4f6 !important}[data-theme=dark] .toc-toggle{color:#9ca3af}[data-theme=dark] .toc-toggle:hover{background:#374151;color:#f3f4f6}[data-theme=dark] .toc-item-link{color:#e5e7eb !important}[data-theme=dark] .toc-item-link:hover{background:#374151;color:#f9fafb !important}[data-theme=dark] .toc-item-link.active{background:#0d47a1;color:#fff !important}[data-theme=dark] .toc-item-text{color:#f9fafb !important;display:inline !important;visibility:visible !important;opacity:1 !important}[data-theme=dark] .toc-item-link .toc-item-text{color:#f9fafb !important;display:inline !important;visibility:visible !important;opacity:1 !important}@media(max-width:1024px){.sidebar-toc{display:none}.post-content-wrapper{grid-template-columns:1fr !important;padding:0 1rem !important}}</style><style>.post-content-wrapper{display:grid;grid-template-columns:1fr 200px;gap:2rem;padding:0 2rem;max-width:100%}.post-content-main{min-width:0}.post-sidebar{position:sticky;top:2rem;height:fit-content;min-width:0}.post-header-main{margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--border,#333333)}.post-header-main .post-title{color:var(--primary,#ffffff) !important;font-size:2.5rem;font-weight:700;line-height:1.2;margin-bottom:1rem}.post-header-main .post-description{color:var(--secondary,#cccccc) !important;font-size:1.1rem;line-height:1.6;margin-bottom:1rem}.post-header-main .post-meta{margin-bottom:0}@media(max-width:1024px){.post-content-wrapper{grid-template-columns:1fr !important;gap:1rem;padding:0 1rem !important}.post-sidebar{display:none}}@media(max-width:768px){.post-header-main .post-title{font-size:2rem}.post-header-main .post-description{font-size:1rem}}</style></aside></div></article></main><footer class=footer><span>© 2024-2025 有条工具技术博客</span> ·</footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>

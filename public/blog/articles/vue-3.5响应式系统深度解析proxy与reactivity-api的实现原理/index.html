@@ -1,0 +1,838 @@
+<!doctype html><html lang=zh-cn dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Vue 3.5响应式系统深度解析：Proxy与Reactivity API的实现原理 | 技术博客 - 有条工具</title><meta name=keywords content="Vue 3.5响应式,Proxy代理,Reactivity API,ref与reactive,computed计算属性,effect副作用,依赖收集,响应式原理"><meta name=description content="深入探索Vue 3.5响应式系统的内部机制，包括Proxy代理原理、Reactivity API使用方法、响应式追踪与触发机制，以及性能优化最佳实践。"><meta name=author content="有条工具团队"><link rel=canonical href=/blog/articles/vue-3.5%E5%93%8D%E5%BA%94%E5%BC%8F%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90proxy%E4%B8%8Ereactivity-api%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/><link crossorigin=anonymous href=/blog/assets/css/stylesheet.7e8505b7cdf8bb22ab2305e53c2700bb06c7e64faeb72cd3468823a9a3bd3d6e.css integrity="sha256-foUFt834uyKrIwXlPCcAuwbH5k+utyzTRogjqaO9PW4=" rel="preload stylesheet" as=style><link rel=icon href=/favicon.ico><link rel=icon type=image/png sizes=16x16 href=/blog/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=/blog/favicon-32x32.png><link rel=apple-touch-icon href=/blog/apple-touch-icon.png><link rel=mask-icon href=/blog/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=/blog/articles/vue-3.5%E5%93%8D%E5%BA%94%E5%BC%8F%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90proxy%E4%B8%8Ereactivity-api%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/feed.xml title=rss><link rel=alternate hreflang=zh-cn href=/blog/articles/vue-3.5%E5%93%8D%E5%BA%94%E5%BC%8F%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90proxy%E4%B8%8Ereactivity-api%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script src=/js/external-link-config.js></script><script src=/js/external-link-interceptor.js></script><link rel=stylesheet href=/blog/css/custom.css media=screen><script type=application/ld+json>{"@context":"https://schema.org","@type":"WebSite","name":"技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享","url":"https://www.util.cn/blog/","description":"有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。提供JSON格式化、SQL优化、Markdown编辑器等在线工具的详细使用指南，帮助开发者提升工作效率。","publisher":{"@type":"Organization","name":"有条工具","url":"https://www.util.cn","logo":{"@type":"ImageObject","url":"https://www.util.cn/blog/logo/logo-256.png","width":256,"height":256}},"potentialAction":[{"@type":"SearchAction","target":"https://www.util.cn/blog/search?q={search_term_string}","query-input":"required name=search_term_string"}]}</script><meta property="og:type" content="website"><meta property="og:title" content="技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享"><meta property="og:description" content="有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。提供JSON格式化、SQL优化、Markdown编辑器等在线工具的详细使用指南，帮助开发者提升工作效率。"><meta property="og:url" content="https://www.util.cn/blog/"><meta property="og:site_name" content="有条工具技术博客"><meta property="og:image" content="https://www.util.cn/blog/logo/logo-256.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享"><meta name=twitter:description content="有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。"><meta name=twitter:image content="https://www.util.cn/blog/logo/logo-256.png"><meta name=baidu-site-verification content><meta name=category content="技术博客,开发者工具,编程教程"><meta name=coverage content="Worldwide"><meta name=distribution content="Global"><meta name=rating content="General"><script id=51la_code async crossorigin=anonymous src="https://sdk.51.la/js-sdk-pro.min.js?id=3OM52V0xJAPv6ozF&hash=pro"></script><script>window.addEventListener("load",function(){setTimeout(function(){typeof la!="undefined"?console.log("51la统计已加载"):(console.warn("51la统计加载失败，使用备用方案"),function(){var e=document.createElement("script");e.src="https://sdk.51.la/js-sdk-pro.min.js?id=3OM52V0xJAPv6ozF&hash=backup",e.async=!0,document.head.appendChild(e)}())},3e3)})</script><meta property="og:url" content="/blog/articles/vue-3.5%E5%93%8D%E5%BA%94%E5%BC%8F%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90proxy%E4%B8%8Ereactivity-api%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/"><meta property="og:site_name" content="技术博客 - 有条工具"><meta property="og:title" content="Vue 3.5响应式系统深度解析：Proxy与Reactivity API的实现原理"><meta property="og:description" content="深入探索Vue 3.5响应式系统的内部机制，包括Proxy代理原理、Reactivity API使用方法、响应式追踪与触发机制，以及性能优化最佳实践。"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-12-24T08:00:00+08:00"><meta property="article:modified_time" content="2025-12-24T08:00:00+08:00"><meta property="article:tag" content="Vue 3.5"><meta property="article:tag" content="响应式系统"><meta property="article:tag" content="Proxy"><meta property="article:tag" content="Reactive API"><meta property="article:tag" content="源码解析"><meta name=twitter:card content="summary"><meta name=twitter:title content="Vue 3.5响应式系统深度解析：Proxy与Reactivity API的实现原理"><meta name=twitter:description content="深入探索Vue 3.5响应式系统的内部机制，包括Proxy代理原理、Reactivity API使用方法、响应式追踪与触发机制，以及性能优化最佳实践。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"所有文章","item":"/blog/posts/"},{"@type":"ListItem","position":2,"name":"Vue 3.5响应式系统深度解析：Proxy与Reactivity API的实现原理","item":"/blog/articles/vue-3.5%E5%93%8D%E5%BA%94%E5%BC%8F%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90proxy%E4%B8%8Ereactivity-api%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Vue 3.5响应式系统深度解析：Proxy与Reactivity API的实现原理","name":"Vue 3.5响应式系统深度解析：Proxy与Reactivity API的实现原理","description":"深入探索Vue 3.5响应式系统的内部机制，包括Proxy代理原理、Reactivity API使用方法、响应式追踪与触发机制，以及性能优化最佳实践。","keywords":["Vue 3.5响应式","Proxy代理","Reactivity API","ref与reactive","computed计算属性","effect副作用","依赖收集","响应式原理"],"articleBody":"引言 Vue 3.5带来了更强大的响应式系统，相比Vue 2的Object.defineProperty，Vue 3全面采用ES6 Proxy实现响应式。这一改变不仅解决了Vue 2的诸多限制，还提供了更好的性能和更灵活的API设计。本文将深入剖析Vue 3.5响应式系统的实现原理和使用技巧。\n一、Proxy基础与响应式原理 1.1 为什么选择Proxy Vue 2的局限性\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // Vue 2 - Object.defineProperty的限制 const vm = new Vue({ data: { items: ['a', 'b', 'c'] } }) // ❌ 无法检测数组索引直接赋值 vm.items[0] = 'd' // 不会触发更新 // ❌ 无法检测数组长度变化 vm.items.length = 0 // 不会触发更新 // ❌ 无法检测新增属性 vm.newProp = 'value' // 不会触发更新 Vue 3 Proxy的优势\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // Vue 3 - Proxy完美解决 import { reactive } from 'vue' const state = reactive({ items: ['a', 'b', 'c'] }) // ✅ 支持数组索引赋值 state.items[0] = 'd' // 触发更新 // ✅ 支持数组长度变化 state.items.length = 0 // 触发更新 // ✅ 支持动态属性（虽然需通过响应式API） state.newProp = 'value' // 通过响应式API会正确追踪 1.2 Proxy核心拦截操作 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 // 简化版响应式实现原理 function reactive(obj) { return new Proxy(obj, { get(target, key, receiver) { // 依赖收集 track(target, key) const result = Reflect.get(target, key, receiver) // 嵌套对象递归代理 if (typeof result === 'object' \u0026\u0026 result !== null) { return reactive(result) } return result }, set(target, key, value, receiver) { const oldValue = target[key] const result = Reflect.set(target, key, value, receiver) // 触发更新 if (oldValue !== value) { trigger(target, key) } return result }, deleteProperty(target, key) { const hadKey = key in target const result = Reflect.deleteProperty(target, key) if (hadKey) { trigger(target, key) } return result }, has(target, key) { track(target, key) return Reflect.has(target, key) }, ownKeys(target) { track(target, ITERATE_KEY) return Reflect.ownKeys(target) } }) } 1.3 Proxy可拦截的13种操作 拦截器 触发条件 响应式应用 get 读取属性 依赖收集 set 设置属性 触发更新 deleteProperty 删除属性 触发更新 has in操作符 依赖收集 ownKeys Object.keys等 迭代追踪 getOwnPropertyDescriptor Object.getOwnPropertyDescriptor 依赖收集 defineProperty Object.defineProperty 触发更新 getPrototypeOf Object.getPrototypeOf 依赖收集 setPrototypeOf Object.setPrototypeOf 触发更新 apply 函数调用 响应式函数 construct new操作符 响应式类 二、Reactivity API详解 2.1 reactive()深度剖析 基本用法\n1 2 3 4 5 6 7 8 9 10 11 12 13 import { reactive } from 'vue' // 创建响应式对象 const state = reactive({ count: 0, user: { name: 'Alice', age: 25 } }) // 嵌套对象自动转为响应式 state.user.name = 'Bob' // ✅ 触发更新 响应式转换限制\n1 2 3 4 5 6 7 8 9 10 11 // ❌ 不支持原始值 const count = reactive(0) // 警告：无法将原始值转为响应式 // ❌ 解构失去响应性 const { count } = state count++ // 不会触发更新 // ✅ 使用toRefs解构 import { toRefs } from 'vue' const { count: countRef } = toRefs(state) countRef.value++ // ✅ 触发更新 2.2 ref()使用场景 ref的本质\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 // ref实现原理（简化版） function ref(value) { const refObject = { get value() { track(refObject, 'value') return _value }, set value(newValue) { _value = newValue trigger(refObject, 'value') } } return refObject } 最佳实践\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 import { ref, reactive } from 'vue' // 场景1：原始值响应式 const count = ref(0) const message = ref('Hello') // 场景2：单一对象替代reactive const user = ref({ name: 'Alice', age: 25 }) // 场景3：模板中自动解包 // {{ count }} // 无需.value // 场景4： reactive对象中的ref自动解包 const state = reactive({ count: ref(0) }) console.log(state.count) // ✅ 直接访问，无需.value 2.3 computed计算属性 缓存机制原理\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 import { ref, computed } from 'vue' const firstName = ref('John') const lastName = ref('Doe') const fullName = computed({ get() { console.log('计算fullName') return firstName.value + ' ' + lastName.value }, set(newValue) { [firstName.value, lastName.value] = newValue.split(' ') } }) // 首次访问：计算并缓存 console.log(fullName.value) // \"计算fullName\" \"John Doe\" // 再次访问：使用缓存 console.log(fullName.value) // \"John Doe\" (无日志) // 依赖变化：重新计算 firstName.value = 'Jane' console.log(fullName.value) // \"计算fullName\" \"Jane Doe\" 可写计算属性\n1 2 3 4 5 6 7 8 9 10 11 12 13 const count = ref(1) const double = computed({ get() { return count.value * 2 }, set(value) { count.value = value / 2 } }) double.value = 10 console.log(count.value) // 5 2.4 watch与watchEffect watchEffect自动追踪\n1 2 3 4 5 6 7 8 9 10 11 import { ref, watchEffect } from 'vue' const count = ref(0) const doubled = ref(0) // 自动追踪内部使用的响应式数据 watchEffect(() =\u003e { doubled.value = count.value * 2 }) count.value++ // 自动触发effect watch精确监听\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 import { ref, watch } from 'vue' const count = ref(0) const count2 = ref(0) // 监听单个源 watch(count, (newValue, oldValue) =\u003e { console.log(`count: ${oldValue} -\u003e ${newValue}`) }) // 监听多个源 watch([count, count2], ([newCount, newCount2], [oldCount, oldCount2]) =\u003e { console.log('多个值变化') }) // 监听getter函数 watch( () =\u003e count.value * 2, (value) =\u003e { console.log('double:', value) } ) // 深度监听对象 const state = reactive({ count: 0 }) watch( () =\u003e state, (newValue) =\u003e { console.log('state changed') }, { deep: true } ) 三、依赖收集与触发机制 3.1 effect与track effect副作用函数\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 // 全局activeEffect栈 let activeEffect = null const effectStack = [] function effect(fn) { const effectFn = () =\u003e { try { effectStack.push(effectFn) activeEffect = effectFn return fn() } finally { effectStack.pop() activeEffect = effectStack[effectStack.length - 1] } } effectFn() return effectFn } 依赖收集track\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 // targetMap结构：WeakMap","wordCount":"1583","inLanguage":"zh-cn","datePublished":"2025-12-24T08:00:00+08:00","dateModified":"2025-12-24T08:00:00+08:00","author":{"@type":"Person","name":"有条工具团队"},"mainEntityOfPage":{"@type":"WebPage","@id":"/blog/articles/vue-3.5%E5%93%8D%E5%BA%94%E5%BC%8F%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90proxy%E4%B8%8Ereactivity-api%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/"},"publisher":{"@type":"Organization","name":"技术博客 - 有条工具","logo":{"@type":"ImageObject","url":"/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=/blog/ accesskey=h title="技术博客 - 有条工具 (Alt + H)">技术博客 - 有条工具</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=/blog/posts/ title="所有文章列表 - 有条工具技术博客：查看所有技术文章和教程内容"><span>文章</span></a></li><li><a href=https://www.util.cn title="有条工具 - 开发者的常用工具集合：无广告 · 本地计算 · 即开即用的在线工具平台，提供JSON格式化、SQL格式化、Markdown编辑器等实用工具"><span>有条工具</span>&nbsp;
+<svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a></li><li><a href=/blog/categories/ title="文章分类 - 有条工具技术博客：按技术领域分类的优质文章，包括前端开发、工具使用、编程技巧等"><span>分类</span></a></li><li><a href=/blog/tags/ title="标签云 - 有条工具技术博客：通过标签快速找到感兴趣的技术文章和教程内容"><span>标签</span></a></li><li><a href=/blog/archives/ title="文章归档 - 有条工具技术博客：按时间查看历史文章"><span>归档</span></a></li><li><a href=/blog/search/ title="搜索文章 - 有条工具技术博客：通过关键词搜索找到感兴趣的技术文章和教程内容，支持标题、内容、分类和标签搜索"><span>搜索</span></a></li></ul></nav></header><main class=main><article class=post-single><div class=post-content-wrapper><main class=post-content-main><header class=post-header-main><h1 class="post-title entry-hint-parent">Vue 3.5响应式系统深度解析：Proxy与Reactivity API的实现原理</h1><div class=post-description>深入探索Vue 3.5响应式系统的内部机制，包括Proxy代理原理、Reactivity API使用方法、响应式追踪与触发机制，以及性能优化最佳实践。</div><div class=post-meta><div class=post-meta-content><div class=post-categories-inline><a href=/blog/categories/vue.js/ class=category-link>Vue.js</a><a href=/blog/categories/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/ class=category-link>前端框架</a></div><span class=post-date>2025-12-24</span><span class=post-author>有条工具团队</span></div><style>.post-meta-content{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;font-family:sf mono,monaco,courier new,monospace;font-size:.875rem;color:#9ca3af !important}.post-categories-inline{display:inline-flex;align-items:center;gap:.5rem}.category-link{display:inline-flex;align-items:center;gap:.25rem;padding:.25rem .75rem;background:rgba(255,255,255,.1);color:#e5e7eb !important;text-decoration:none;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;border:1px solid rgba(255,255,255,.2);border-radius:0;transition:all .3s ease;white-space:nowrap}.category-link:hover{background:rgba(255,255,255,.2);color:#fff !important;border-color:rgba(255,255,255,.3);transform:translateY(-1px)}.category-link::before{content:'📁';font-size:.7rem;opacity:.8}.post-date,.post-reading-time,.post-word-count,.post-author{color:#9ca3af !important}[data-theme=dark] .post-meta-content{color:#9ca3af !important}[data-theme=dark] .category-link{background:rgba(255,255,255,.1);color:#e5e7eb !important;border-color:rgba(255,255,255,.2)}[data-theme=dark] .category-link:hover{background:rgba(255,255,255,.2);color:#fff !important;border-color:rgba(255,255,255,.3)}[data-theme=dark] .post-date,[data-theme=dark] .post-reading-time,[data-theme=dark] .post-word-count,[data-theme=dark] .post-author{color:#9ca3af !important}[data-theme=light] .post-meta-content{color:#6c757d !important}[data-theme=light] .category-link{background:rgba(0,0,0,5%);color:#495057 !important;border-color:rgba(0,0,0,.15)}[data-theme=light] .category-link:hover{background:rgba(0,102,204,.1);color:#212529 !important;border-color:rgba(0,102,204,.3)}[data-theme=light] .post-date,[data-theme=light] .post-reading-time,[data-theme=light] .post-word-count,[data-theme=light] .post-author{color:#6c757d !important}@media(max-width:768px){.post-meta-content{gap:.5rem;font-size:.8rem}.category-link{padding:.2rem .6rem;font-size:.7rem}}</style></div></header><div class=post-content><h2 id=引言>引言<a hidden class=anchor aria-hidden=true href=#引言>#</a></h2><p>Vue 3.5带来了更强大的响应式系统，相比Vue 2的Object.defineProperty，Vue 3全面采用ES6 Proxy实现响应式。这一改变不仅解决了Vue 2的诸多限制，还提供了更好的性能和更灵活的API设计。本文将深入剖析Vue 3.5响应式系统的实现原理和使用技巧。</p><h2 id=一proxy基础与响应式原理>一、Proxy基础与响应式原理<a hidden class=anchor aria-hidden=true href=#一proxy基础与响应式原理>#</a></h2><h3 id=11-为什么选择proxy>1.1 为什么选择Proxy<a hidden class=anchor aria-hidden=true href=#11-为什么选择proxy>#</a></h3><p><strong>Vue 2的局限性</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// Vue 2 - Object.defineProperty的限制
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> vm <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>new</span> Vue({
+</span></span><span style=display:flex><span>  data<span style=color:#ff7b72;font-weight:700>:</span> {
+</span></span><span style=display:flex><span>    items<span style=color:#ff7b72;font-weight:700>:</span> [<span style=color:#a5d6ff>&#39;a&#39;</span>, <span style=color:#a5d6ff>&#39;b&#39;</span>, <span style=color:#a5d6ff>&#39;c&#39;</span>]
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ❌ 无法检测数组索引直接赋值
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>vm.items[<span style=color:#a5d6ff>0</span>] <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>&#39;d&#39;</span> <span style=color:#8b949e;font-style:italic>// 不会触发更新
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ❌ 无法检测数组长度变化
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>vm.items.length <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>0</span> <span style=color:#8b949e;font-style:italic>// 不会触发更新
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ❌ 无法检测新增属性
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>vm.newProp <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>&#39;value&#39;</span> <span style=color:#8b949e;font-style:italic>// 不会触发更新
+</span></span></span></code></pre></td></tr></table></div></div><p><strong>Vue 3 Proxy的优势</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// Vue 3 - Proxy完美解决
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>import</span> { reactive } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> state <span style=color:#ff7b72;font-weight:700>=</span> reactive({
+</span></span><span style=display:flex><span>  items<span style=color:#ff7b72;font-weight:700>:</span> [<span style=color:#a5d6ff>&#39;a&#39;</span>, <span style=color:#a5d6ff>&#39;b&#39;</span>, <span style=color:#a5d6ff>&#39;c&#39;</span>]
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ✅ 支持数组索引赋值
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>state.items[<span style=color:#a5d6ff>0</span>] <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>&#39;d&#39;</span> <span style=color:#8b949e;font-style:italic>// 触发更新
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ✅ 支持数组长度变化
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>state.items.length <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>0</span> <span style=color:#8b949e;font-style:italic>// 触发更新
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ✅ 支持动态属性（虽然需通过响应式API）
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>state.newProp <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>&#39;value&#39;</span> <span style=color:#8b949e;font-style:italic>// 通过响应式API会正确追踪
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=12-proxy核心拦截操作>1.2 Proxy核心拦截操作<a hidden class=anchor aria-hidden=true href=#12-proxy核心拦截操作>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">47
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 简化版响应式实现原理
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>function</span> reactive(obj) {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> <span style=color:#ff7b72>new</span> Proxy(obj, {
+</span></span><span style=display:flex><span>    get(target, key, receiver) {
+</span></span><span style=display:flex><span>      <span style=color:#8b949e;font-style:italic>// 依赖收集
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>      track(target, key)
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>const</span> result <span style=color:#ff7b72;font-weight:700>=</span> Reflect.get(target, key, receiver)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#8b949e;font-style:italic>// 嵌套对象递归代理
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>      <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72>typeof</span> result <span style=color:#ff7b72;font-weight:700>===</span> <span style=color:#a5d6ff>&#39;object&#39;</span> <span style=color:#ff7b72;font-weight:700>&amp;&amp;</span> result <span style=color:#ff7b72;font-weight:700>!==</span> <span style=color:#79c0ff>null</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> reactive(result)
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>return</span> result
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    set(target, key, value, receiver) {
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>const</span> oldValue <span style=color:#ff7b72;font-weight:700>=</span> target[key]
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>const</span> result <span style=color:#ff7b72;font-weight:700>=</span> Reflect.set(target, key, value, receiver)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#8b949e;font-style:italic>// 触发更新
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>      <span style=color:#ff7b72>if</span> (oldValue <span style=color:#ff7b72;font-weight:700>!==</span> value) {
+</span></span><span style=display:flex><span>        trigger(target, key)
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>return</span> result
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    deleteProperty(target, key) {
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>const</span> hadKey <span style=color:#ff7b72;font-weight:700>=</span> key <span style=color:#ff7b72>in</span> target
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>const</span> result <span style=color:#ff7b72;font-weight:700>=</span> Reflect.deleteProperty(target, key)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>if</span> (hadKey) {
+</span></span><span style=display:flex><span>        trigger(target, key)
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>return</span> result
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    has(target, key) {
+</span></span><span style=display:flex><span>      track(target, key)
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>return</span> Reflect.has(target, key)
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    ownKeys(target) {
+</span></span><span style=display:flex><span>      track(target, ITERATE_KEY)
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>return</span> Reflect.ownKeys(target)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  })
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></td></tr></table></div></div><h3 id=13-proxy可拦截的13种操作>1.3 Proxy可拦截的13种操作<a hidden class=anchor aria-hidden=true href=#13-proxy可拦截的13种操作>#</a></h3><table><thead><tr><th>拦截器</th><th>触发条件</th><th>响应式应用</th></tr></thead><tbody><tr><td>get</td><td>读取属性</td><td>依赖收集</td></tr><tr><td>set</td><td>设置属性</td><td>触发更新</td></tr><tr><td>deleteProperty</td><td>删除属性</td><td>触发更新</td></tr><tr><td>has</td><td>in操作符</td><td>依赖收集</td></tr><tr><td>ownKeys</td><td>Object.keys等</td><td>迭代追踪</td></tr><tr><td>getOwnPropertyDescriptor</td><td>Object.getOwnPropertyDescriptor</td><td>依赖收集</td></tr><tr><td>defineProperty</td><td>Object.defineProperty</td><td>触发更新</td></tr><tr><td>getPrototypeOf</td><td>Object.getPrototypeOf</td><td>依赖收集</td></tr><tr><td>setPrototypeOf</td><td>Object.setPrototypeOf</td><td>触发更新</td></tr><tr><td>apply</td><td>函数调用</td><td>响应式函数</td></tr><tr><td>construct</td><td>new操作符</td><td>响应式类</td></tr></tbody></table><h2 id=二reactivity-api详解>二、Reactivity API详解<a hidden class=anchor aria-hidden=true href=#二reactivity-api详解>#</a></h2><h3 id=21-reactive深度剖析>2.1 reactive()深度剖析<a hidden class=anchor aria-hidden=true href=#21-reactive深度剖析>#</a></h3><p><strong>基本用法</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { reactive } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 创建响应式对象
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> state <span style=color:#ff7b72;font-weight:700>=</span> reactive({
+</span></span><span style=display:flex><span>  count<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>0</span>,
+</span></span><span style=display:flex><span>  user<span style=color:#ff7b72;font-weight:700>:</span> {
+</span></span><span style=display:flex><span>    name<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#39;Alice&#39;</span>,
+</span></span><span style=display:flex><span>    age<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>25</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 嵌套对象自动转为响应式
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>state.user.name <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>&#39;Bob&#39;</span> <span style=color:#8b949e;font-style:italic>// ✅ 触发更新
+</span></span></span></code></pre></td></tr></table></div></div><p><strong>响应式转换限制</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ❌ 不支持原始值
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> count <span style=color:#ff7b72;font-weight:700>=</span> reactive(<span style=color:#a5d6ff>0</span>) <span style=color:#8b949e;font-style:italic>// 警告：无法将原始值转为响应式
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ❌ 解构失去响应性
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> { count } <span style=color:#ff7b72;font-weight:700>=</span> state
+</span></span><span style=display:flex><span>count<span style=color:#ff7b72;font-weight:700>++</span> <span style=color:#8b949e;font-style:italic>// 不会触发更新
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ✅ 使用toRefs解构
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>import</span> { toRefs } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> { count<span style=color:#ff7b72;font-weight:700>:</span> countRef } <span style=color:#ff7b72;font-weight:700>=</span> toRefs(state)
+</span></span><span style=display:flex><span>countRef.value<span style=color:#ff7b72;font-weight:700>++</span> <span style=color:#8b949e;font-style:italic>// ✅ 触发更新
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=22-ref使用场景>2.2 ref()使用场景<a hidden class=anchor aria-hidden=true href=#22-ref使用场景>#</a></h3><p><strong>ref的本质</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ref实现原理（简化版）
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>function</span> ref(value) {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>const</span> refObject <span style=color:#ff7b72;font-weight:700>=</span> {
+</span></span><span style=display:flex><span>    get value() {
+</span></span><span style=display:flex><span>      track(refObject, <span style=color:#a5d6ff>&#39;value&#39;</span>)
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>return</span> _value
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    set value(newValue) {
+</span></span><span style=display:flex><span>      _value <span style=color:#ff7b72;font-weight:700>=</span> newValue
+</span></span><span style=display:flex><span>      trigger(refObject, <span style=color:#a5d6ff>&#39;value&#39;</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> refObject
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></td></tr></table></div></div><p><strong>最佳实践</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { ref, reactive } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 场景1：原始值响应式
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> count <span style=color:#ff7b72;font-weight:700>=</span> ref(<span style=color:#a5d6ff>0</span>)
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> message <span style=color:#ff7b72;font-weight:700>=</span> ref(<span style=color:#a5d6ff>&#39;Hello&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 场景2：单一对象替代reactive
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> user <span style=color:#ff7b72;font-weight:700>=</span> ref({
+</span></span><span style=display:flex><span>  name<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#39;Alice&#39;</span>,
+</span></span><span style=display:flex><span>  age<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>25</span>
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 场景3：模板中自动解包
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// &lt;template&gt;{{ count }}&lt;/template&gt; // 无需.value
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 场景4： reactive对象中的ref自动解包
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> state <span style=color:#ff7b72;font-weight:700>=</span> reactive({
+</span></span><span style=display:flex><span>  count<span style=color:#ff7b72;font-weight:700>:</span> ref(<span style=color:#a5d6ff>0</span>)
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>console.log(state.count) <span style=color:#8b949e;font-style:italic>// ✅ 直接访问，无需.value
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=23-computed计算属性>2.3 computed计算属性<a hidden class=anchor aria-hidden=true href=#23-computed计算属性>#</a></h3><p><strong>缓存机制原理</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">24
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { ref, computed } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> firstName <span style=color:#ff7b72;font-weight:700>=</span> ref(<span style=color:#a5d6ff>&#39;John&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> lastName <span style=color:#ff7b72;font-weight:700>=</span> ref(<span style=color:#a5d6ff>&#39;Doe&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> fullName <span style=color:#ff7b72;font-weight:700>=</span> computed({
+</span></span><span style=display:flex><span>  get() {
+</span></span><span style=display:flex><span>    console.log(<span style=color:#a5d6ff>&#39;计算fullName&#39;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>return</span> firstName.value <span style=color:#ff7b72;font-weight:700>+</span> <span style=color:#a5d6ff>&#39; &#39;</span> <span style=color:#ff7b72;font-weight:700>+</span> lastName.value
+</span></span><span style=display:flex><span>  },
+</span></span><span style=display:flex><span>  set(newValue) {
+</span></span><span style=display:flex><span>    [firstName.value, lastName.value] <span style=color:#ff7b72;font-weight:700>=</span> newValue.split(<span style=color:#a5d6ff>&#39; &#39;</span>)
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 首次访问：计算并缓存
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>console.log(fullName.value) <span style=color:#8b949e;font-style:italic>// &#34;计算fullName&#34; &#34;John Doe&#34;
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 再次访问：使用缓存
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>console.log(fullName.value) <span style=color:#8b949e;font-style:italic>// &#34;John Doe&#34; (无日志)
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 依赖变化：重新计算
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>firstName.value <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>&#39;Jane&#39;</span>
+</span></span><span style=display:flex><span>console.log(fullName.value) <span style=color:#8b949e;font-style:italic>// &#34;计算fullName&#34; &#34;Jane Doe&#34;
+</span></span></span></code></pre></td></tr></table></div></div><p><strong>可写计算属性</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>const</span> count <span style=color:#ff7b72;font-weight:700>=</span> ref(<span style=color:#a5d6ff>1</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> <span style=color:#ff7b72>double</span> <span style=color:#ff7b72;font-weight:700>=</span> computed({
+</span></span><span style=display:flex><span>  get() {
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>return</span> count.value <span style=color:#ff7b72;font-weight:700>*</span> <span style=color:#a5d6ff>2</span>
+</span></span><span style=display:flex><span>  },
+</span></span><span style=display:flex><span>  set(value) {
+</span></span><span style=display:flex><span>    count.value <span style=color:#ff7b72;font-weight:700>=</span> value <span style=color:#ff7b72;font-weight:700>/</span> <span style=color:#a5d6ff>2</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>double</span>.value <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>10</span>
+</span></span><span style=display:flex><span>console.log(count.value) <span style=color:#8b949e;font-style:italic>// 5
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=24-watch与watcheffect>2.4 watch与watchEffect<a hidden class=anchor aria-hidden=true href=#24-watch与watcheffect>#</a></h3><p><strong>watchEffect自动追踪</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { ref, watchEffect } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> count <span style=color:#ff7b72;font-weight:700>=</span> ref(<span style=color:#a5d6ff>0</span>)
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> doubled <span style=color:#ff7b72;font-weight:700>=</span> ref(<span style=color:#a5d6ff>0</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 自动追踪内部使用的响应式数据
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>watchEffect(() =&gt; {
+</span></span><span style=display:flex><span>  doubled.value <span style=color:#ff7b72;font-weight:700>=</span> count.value <span style=color:#ff7b72;font-weight:700>*</span> <span style=color:#a5d6ff>2</span>
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>count.value<span style=color:#ff7b72;font-weight:700>++</span> <span style=color:#8b949e;font-style:italic>// 自动触发effect
+</span></span></span></code></pre></td></tr></table></div></div><p><strong>watch精确监听</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">32
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { ref, watch } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> count <span style=color:#ff7b72;font-weight:700>=</span> ref(<span style=color:#a5d6ff>0</span>)
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> count2 <span style=color:#ff7b72;font-weight:700>=</span> ref(<span style=color:#a5d6ff>0</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 监听单个源
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>watch(count, (newValue, oldValue) =&gt; {
+</span></span><span style=display:flex><span>  console.log(<span style=color:#a5d6ff>`count: </span><span style=color:#a5d6ff>${</span>oldValue<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff> -&gt; </span><span style=color:#a5d6ff>${</span>newValue<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>`</span>)
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 监听多个源
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>watch([count, count2], ([newCount, newCount2], [oldCount, oldCount2]) =&gt; {
+</span></span><span style=display:flex><span>  console.log(<span style=color:#a5d6ff>&#39;多个值变化&#39;</span>)
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 监听getter函数
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>watch(
+</span></span><span style=display:flex><span>  () =&gt; count.value <span style=color:#ff7b72;font-weight:700>*</span> <span style=color:#a5d6ff>2</span>,
+</span></span><span style=display:flex><span>  (value) =&gt; {
+</span></span><span style=display:flex><span>    console.log(<span style=color:#a5d6ff>&#39;double:&#39;</span>, value)
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 深度监听对象
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> state <span style=color:#ff7b72;font-weight:700>=</span> reactive({ count<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>0</span> })
+</span></span><span style=display:flex><span>watch(
+</span></span><span style=display:flex><span>  () =&gt; state,
+</span></span><span style=display:flex><span>  (newValue) =&gt; {
+</span></span><span style=display:flex><span>    console.log(<span style=color:#a5d6ff>&#39;state changed&#39;</span>)
+</span></span><span style=display:flex><span>  },
+</span></span><span style=display:flex><span>  { deep<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#79c0ff>true</span> }
+</span></span><span style=display:flex><span>)
+</span></span></code></pre></td></tr></table></div></div><h2 id=三依赖收集与触发机制>三、依赖收集与触发机制<a hidden class=anchor aria-hidden=true href=#三依赖收集与触发机制>#</a></h2><h3 id=31-effect与track>3.1 effect与track<a hidden class=anchor aria-hidden=true href=#31-effect与track>#</a></h3><p><strong>effect副作用函数</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 全局activeEffect栈
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>let</span> activeEffect <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#79c0ff>null</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> effectStack <span style=color:#ff7b72;font-weight:700>=</span> []
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>function</span> effect(fn) {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>const</span> effectFn <span style=color:#ff7b72;font-weight:700>=</span> () =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>try</span> {
+</span></span><span style=display:flex><span>      effectStack.push(effectFn)
+</span></span><span style=display:flex><span>      activeEffect <span style=color:#ff7b72;font-weight:700>=</span> effectFn
+</span></span><span style=display:flex><span>      <span style=color:#ff7b72>return</span> fn()
+</span></span><span style=display:flex><span>    } <span style=color:#ff7b72>finally</span> {
+</span></span><span style=display:flex><span>      effectStack.pop()
+</span></span><span style=display:flex><span>      activeEffect <span style=color:#ff7b72;font-weight:700>=</span> effectStack[effectStack.length <span style=color:#ff7b72;font-weight:700>-</span> <span style=color:#a5d6ff>1</span>]
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  effectFn()
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> effectFn
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></td></tr></table></div></div><p><strong>依赖收集track</strong></p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// targetMap结构：WeakMap&lt;target, Map&lt;key, Set&lt;effect&gt;&gt;&gt;
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> targetMap <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>new</span> WeakMap()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>function</span> track(target, key) {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72;font-weight:700>!</span>activeEffect) <span style=color:#ff7b72>return</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>let</span> depsMap <span style=color:#ff7b72;font-weight:700>=</span> targetMap.get(target)
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72;font-weight:700>!</span>depsMap) {
+</span></span><span style=display:flex><span>    targetMap.set(target, (depsMap <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>new</span> Map()))
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>let</span> dep <span style=color:#ff7b72;font-weight:700>=</span> depsMap.get(key)
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72;font-weight:700>!</span>dep) {
+</span></span><span style=display:flex><span>    depsMap.set(key, (dep <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>new</span> Set()))
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  dep.add(activeEffect)
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></td></tr></table></div></div><h3 id=32-trigger触发更新>3.2 trigger触发更新<a hidden class=anchor aria-hidden=true href=#32-trigger触发更新>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>function</span> trigger(target, key) {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>const</span> depsMap <span style=color:#ff7b72;font-weight:700>=</span> targetMap.get(target)
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72;font-weight:700>!</span>depsMap) <span style=color:#ff7b72>return</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>const</span> dep <span style=color:#ff7b72;font-weight:700>=</span> depsMap.get(key)
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72;font-weight:700>!</span>dep) <span style=color:#ff7b72>return</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#8b949e;font-style:italic>// 复制并执行所有effect
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>  <span style=color:#ff7b72>const</span> effects <span style=color:#ff7b72;font-weight:700>=</span> [...dep]
+</span></span><span style=display:flex><span>  effects.forEach(effect =&gt; effect())
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></td></tr></table></div></div><h3 id=33-完整流程示例>3.3 完整流程示例<a hidden class=anchor aria-hidden=true href=#33-完整流程示例>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 1. 创建响应式对象
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> state <span style=color:#ff7b72;font-weight:700>=</span> reactive({ count<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>0</span> })
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 2. 创建副作用
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>effect(() =&gt; {
+</span></span><span style=display:flex><span>  console.log(<span style=color:#a5d6ff>&#39;count is:&#39;</span>, state.count)
+</span></span><span style=display:flex><span>  <span style=color:#8b949e;font-style:italic>// 读取state.count时触发track
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>  <span style=color:#8b949e;font-style:italic>// track(state, &#39;count&#39;) -&gt; 将当前effect加入依赖
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 3. 修改值
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>state.count<span style=color:#ff7b72;font-weight:700>++</span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// set拦截器触发trigger
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// trigger(state, &#39;count&#39;) -&gt; 执行所有依赖的effect
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=四响应式进阶api>四、响应式进阶API<a hidden class=anchor aria-hidden=true href=#四响应式进阶api>#</a></h2><h3 id=41-torefs与toref>4.1 toRefs与toRef<a hidden class=anchor aria-hidden=true href=#41-torefs与toref>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">23
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { reactive, toRefs, toRef } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> state <span style=color:#ff7b72;font-weight:700>=</span> reactive({
+</span></span><span style=display:flex><span>  count<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>0</span>,
+</span></span><span style=display:flex><span>  message<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#39;Hello&#39;</span>
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 解构整个对象为refs
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> { count, message } <span style=color:#ff7b72;font-weight:700>=</span> toRefs(state)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 解构单个属性
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> countRef <span style=color:#ff7b72;font-weight:700>=</span> toRef(state, <span style=color:#a5d6ff>&#39;count&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 用于函数返回响应式对象
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>function</span> useFeature() {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>const</span> state <span style=color:#ff7b72;font-weight:700>=</span> reactive({
+</span></span><span style=display:flex><span>    count<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>0</span>,
+</span></span><span style=display:flex><span>    loading<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#79c0ff>false</span>
+</span></span><span style=display:flex><span>  })
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> toRefs(state) <span style=color:#8b949e;font-style:italic>// 保持响应性
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> { count, loading } <span style=color:#ff7b72;font-weight:700>=</span> useFeature()
+</span></span></code></pre></td></tr></table></div></div><h3 id=42-readonly与shallowreadonly>4.2 readonly与shallowReadonly<a hidden class=anchor aria-hidden=true href=#42-readonly与shallowreadonly>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { reactive, readonly, shallowReadonly } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> original <span style=color:#ff7b72;font-weight:700>=</span> reactive({
+</span></span><span style=display:flex><span>  count<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>0</span>,
+</span></span><span style=display:flex><span>  nested<span style=color:#ff7b72;font-weight:700>:</span> {
+</span></span><span style=display:flex><span>    value<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>1</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 深度只读
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> copy <span style=color:#ff7b72;font-weight:700>=</span> readonly(original)
+</span></span><span style=display:flex><span>copy.count<span style=color:#ff7b72;font-weight:700>++</span> <span style=color:#8b949e;font-style:italic>// ⚠️ 警告：正在修改只读属性
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 浅度只读（顶层只读，嵌套可修改）
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> shallow <span style=color:#ff7b72;font-weight:700>=</span> shallowReadonly(original)
+</span></span><span style=display:flex><span>shallow.count<span style=color:#ff7b72;font-weight:700>++</span> <span style=color:#8b949e;font-style:italic>// ⚠️ 警告
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>shallow.nested.value<span style=color:#ff7b72;font-weight:700>++</span> <span style=color:#8b949e;font-style:italic>// ✅ 不报警告
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=43-shallowreactive与markraw>4.3 shallowReactive与markRaw<a hidden class=anchor aria-hidden=true href=#43-shallowreactive与markraw>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { reactive, shallowReactive, markRaw } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 浅度响应式（只有顶层是响应式）
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> shallow <span style=color:#ff7b72;font-weight:700>=</span> shallowReactive({
+</span></span><span style=display:flex><span>  count<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>0</span>,
+</span></span><span style=display:flex><span>  nested<span style=color:#ff7b72;font-weight:700>:</span> {
+</span></span><span style=display:flex><span>    value<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>1</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>shallow.count<span style=color:#ff7b72;font-weight:700>++</span> <span style=color:#8b949e;font-style:italic>// ✅ 触发更新
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>shallow.nested.value<span style=color:#ff7b72;font-weight:700>++</span> <span style=color:#8b949e;font-style:italic>// ❌ 不触发更新
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 标记对象永不转为响应式
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> foo <span style=color:#ff7b72;font-weight:700>=</span> markRaw({
+</span></span><span style=display:flex><span>  value<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>1</span>
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> state <span style=color:#ff7b72;font-weight:700>=</span> reactive({
+</span></span><span style=display:flex><span>  foo <span style=color:#8b949e;font-style:italic>// 不会被转为响应式
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>})
+</span></span></code></pre></td></tr></table></div></div><h3 id=44-customref自定义响应式>4.4 customRef自定义响应式<a hidden class=anchor aria-hidden=true href=#44-customref自定义响应式>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">24
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { customRef } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 带防抖的ref
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>function</span> useDebouncedRef(value, delay <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>200</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>let</span> timeout
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> customRef((track, trigger) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>return</span> {
+</span></span><span style=display:flex><span>      get() {
+</span></span><span style=display:flex><span>        track()
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> value
+</span></span><span style=display:flex><span>      },
+</span></span><span style=display:flex><span>      set(newValue) {
+</span></span><span style=display:flex><span>        clearTimeout(timeout)
+</span></span><span style=display:flex><span>        timeout <span style=color:#ff7b72;font-weight:700>=</span> setTimeout(() =&gt; {
+</span></span><span style=display:flex><span>          value <span style=color:#ff7b72;font-weight:700>=</span> newValue
+</span></span><span style=display:flex><span>          trigger()
+</span></span><span style=display:flex><span>        }, delay)
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  })
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> search <span style=color:#ff7b72;font-weight:700>=</span> useDebouncedRef(<span style=color:#a5d6ff>&#39;&#39;</span>)
+</span></span><span style=display:flex><span>search.value <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>&#39;test&#39;</span> <span style=color:#8b949e;font-style:italic>// 200ms后才触发更新
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=五性能优化最佳实践>五、性能优化最佳实践<a hidden class=anchor aria-hidden=true href=#五性能优化最佳实践>#</a></h2><h3 id=51-避免不必要的响应式>5.1 避免不必要的响应式<a hidden class=anchor aria-hidden=true href=#51-避免不必要的响应式>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { ref, shallowRef, markRaw } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 大数据使用shallowRef
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> hugeList <span style=color:#ff7b72;font-weight:700>=</span> shallowRef([])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 更新时触发更新
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>hugeList.value <span style=color:#ff7b72;font-weight:700>=</span> newList
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 静态配置使用markRaw
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> staticConfig <span style=color:#ff7b72;font-weight:700>=</span> markRaw({
+</span></span><span style=display:flex><span>  apiKey<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#39;xxx&#39;</span>,
+</span></span><span style=display:flex><span>  endpoint<span style=color:#ff7b72;font-weight:700>:</span> <span style=color:#a5d6ff>&#39;https://api.example.com&#39;</span>
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> state <span style=color:#ff7b72;font-weight:700>=</span> reactive({
+</span></span><span style=display:flex><span>  config<span style=color:#ff7b72;font-weight:700>:</span> staticConfig <span style=color:#8b949e;font-style:italic>// 不会转为响应式
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>})
+</span></span></code></pre></td></tr></table></div></div><h3 id=52-v-memo优化>5.2 v-memo优化<a hidden class=anchor aria-hidden=true href=#52-v-memo优化>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">6
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-vue data-lang=vue><span style=display:flex><span>&lt;<span style=color:#7ee787>template</span>&gt;
+</span></span><span style=display:flex><span>  <span style=color:#8b949e;font-style:italic>&lt;!--</span> 仅在item.id变化时重新渲染 <span style=color:#ff7b72;font-weight:700>--&gt;</span>
+</span></span><span style=display:flex><span>  &lt;<span style=color:#7ee787>div</span> <span style=color:#7ee787>v-for</span><span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;item in list&#34; :key=&#34;item.id&#34; v-memo=&#34;[item.id]&#34;</span>&gt;
+</span></span><span style=display:flex><span>    {{ item.name }}
+</span></span><span style=display:flex><span>  &lt;/<span style=color:#7ee787>div</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#7ee787>template</span>&gt;
+</span></span></code></pre></td></tr></table></div></div><h3 id=53-计算属性缓存>5.3 计算属性缓存<a hidden class=anchor aria-hidden=true href=#53-计算属性缓存>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">9
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ✅ 使用computed缓存
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> filteredList <span style=color:#ff7b72;font-weight:700>=</span> computed(() =&gt; {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> list.value.filter(item =&gt; item.active)
+</span></span><span style=display:flex><span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// ❌ 避免在方法中重复计算
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>function</span> getFilteredList() {
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>return</span> list.value.filter(item =&gt; item.active) <span style=color:#8b949e;font-style:italic>// 每次调用都重新计算
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>}
+</span></span></code></pre></td></tr></table></div></div><h2 id=六调试技巧>六、调试技巧<a hidden class=anchor aria-hidden=true href=#六调试技巧>#</a></h2><h3 id=61-devtools插件>6.1 devtools插件<a hidden class=anchor aria-hidden=true href=#61-devtools插件>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">6
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { createApp } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>import</span> App from <span style=color:#a5d6ff>&#39;./App.vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> app <span style=color:#ff7b72;font-weight:700>=</span> createApp(App)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>app.config.devtools <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#79c0ff>true</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=62-ontrack与ontrigger>6.2 onTrack与onTrigger<a hidden class=anchor aria-hidden=true href=#62-ontrack与ontrigger>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#ff7b72>import</span> { ref, watchEffect } from <span style=color:#a5d6ff>&#39;vue&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>watchEffect(
+</span></span><span style=display:flex><span>  () =&gt; {
+</span></span><span style=display:flex><span>    console.log(<span style=color:#a5d6ff>&#39;effect执行&#39;</span>)
+</span></span><span style=display:flex><span>  },
+</span></span><span style=display:flex><span>  {
+</span></span><span style=display:flex><span>    onTrack({ target, key, type }) {
+</span></span><span style=display:flex><span>      console.log(<span style=color:#a5d6ff>&#39;追踪:&#39;</span>, target, key, type)
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    onTrigger({ target, key, type, oldValue, newValue }) {
+</span></span><span style=display:flex><span>      console.log(<span style=color:#a5d6ff>&#39;触发:&#39;</span>, target, key, type, oldValue, newValue)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>)
+</span></span></code></pre></td></tr></table></div></div><h2 id=总结>总结<a hidden class=anchor aria-hidden=true href=#总结>#</a></h2><p>Vue 3.5的响应式系统通过Proxy和精心设计的API提供了强大的响应式能力：</p><ol><li><strong>Proxy优于Object.defineProperty</strong>：更全面的拦截能力，更好的性能</li><li><strong>reactive与ref各司其职</strong>：对象用reactive，原始值用ref</li><li><strong>computed自动缓存</strong>：减少不必要的计算</li><li><strong>watch精确控制</strong>：灵活的监听选项</li><li><strong>性能优化关键</strong>：合理使用shallow系列API和markRaw</li></ol><p>掌握这些原理和技巧，将帮助您构建更高效、更可维护的Vue应用。</p><blockquote><p><strong>相关工具推荐</strong></p><ul><li><a href=https://www.util.cn/tools/json-formatter/>JSON格式化工具</a> - JSON数据处理</li><li><a href=https://www.util.cn/tools/base64-encode/>Base64编码工具</a> - 编码转换</li><li><a href=https://www.util.cn/tools/url-encode/>URL编码工具</a> - URL参数处理</li></ul></blockquote></div><footer class=post-footer-modern><div class=post-tags-modern><span class=tags-label>🏷️ 标签</span><div class=tags-list><a href=/blog/tags/vue-3.5/ class=tag-pill>Vue 3.5
+</a><a href=/blog/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%B3%BB%E7%BB%9F/ class=tag-pill>响应式系统
+</a><a href=/blog/tags/proxy/ class=tag-pill>Proxy
+</a><a href=/blog/tags/reactive-api/ class=tag-pill>Reactive API
+</a><a href=/blog/tags/%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/ class=tag-pill>源码解析</a></div></div><style>.post-footer-modern{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border,#333333)}.post-tags-modern{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}.tags-label{font-size:.875rem;font-weight:600;color:var(--secondary,#999999) !important;white-space:nowrap}.tags-list{display:flex;flex-wrap:wrap;gap:.5rem;flex:1}.tag-pill{display:inline-block;padding:.25rem .75rem;background:rgba(255,255,255,5%);border:1px solid var(--border,#333333);border-radius:0;color:var(--secondary,#cccccc) !important;text-decoration:none;font-size:.8rem;font-weight:500;transition:all .2s ease}.tag-pill:hover{background:var(--primary,#ffffff);color:var(--background,#000000) !important;border-color:var(--primary,#ffffff);transform:translateY(-1px)}.post-nav-modern{margin-top:2rem}.nav-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.nav-card{display:flex;align-items:center;gap:1rem;padding:1.25rem;background:rgba(255,255,255,2%);border:1px solid var(--border,#333333);border-radius:12px;text-decoration:none;transition:all .2s ease;min-height:80px}.nav-card:hover{background:rgba(255,255,255,5%);border-color:var(--primary,#ffffff);transform:translateY(-2px)}.nav-card.nav-prev{justify-content:flex-start}.nav-card.nav-next{justify-content:flex-end;text-align:right}.nav-card.nav-next .nav-content{text-align:right}.nav-empty{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,1%);border:1px dashed var(--border,#333333);color:var(--secondary,#666666)}.nav-arrow{font-size:1.5rem;color:var(--primary,#ffffff);font-weight:300}.nav-content{flex:1}.nav-title{font-size:.95rem;font-weight:600;color:var(--primary,#ffffff) !important;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}[data-theme=light] .post-footer-modern{border-color:var(--border-light,#dee2e6)}[data-theme=light] .tags-label{color:var(--secondary-light,#6c757d) !important}[data-theme=light] .tag-pill{background:rgba(0,0,0,5%);border-color:var(--border-light,#dee2e6);color:var(--secondary-light,#495057) !important}[data-theme=light] .tag-pill:hover{background:var(--primary-light,#0066cc);color:var(--background-light,#ffffff) !important;border-color:var(--primary-light,#0066cc)}[data-theme=light] .nav-card{background:rgba(0,0,0,2%);border-color:var(--border-light,#dee2e6)}[data-theme=light] .nav-card:hover{background:rgba(0,102,204,5%);border-color:var(--primary-light,#0066cc)}[data-theme=light] .nav-empty{background:rgba(0,0,0,1%);border-color:var(--border-light,#dee2e6);color:var(--secondary-light,#6c757d)}[data-theme=light] .nav-arrow{color:var(--primary-light,#0066cc)}[data-theme=light] .nav-title{color:var(--primary-light,#212529) !important}@media(max-width:768px){.nav-grid{grid-template-columns:1fr;gap:.75rem}.nav-card{padding:1rem;min-height:70px}.nav-card.nav-next{text-align:left}.nav-card.nav-next .nav-content{text-align:left}.nav-title{font-size:.875rem}.post-tags-modern{flex-direction:column;gap:.75rem}}@media(max-width:480px){.nav-arrow{font-size:1.25rem}.nav-card{padding:.875rem}.nav-title{font-size:.8rem;-webkit-line-clamp:1}}</style><nav class=post-nav-modern><div class=nav-grid><a href=/blog/articles/%E8%90%A5%E9%94%80%E5%BD%92%E5%9B%A0%E4%B8%8Eroi%E5%88%86%E6%9E%90%E7%A7%91%E5%AD%A6%E8%A1%A1%E9%87%8F%E6%AF%8F%E4%B8%80%E5%88%86%E8%90%A5%E9%94%80%E6%8A%95%E5%85%A5/ class="nav-card nav-prev"><div class=nav-arrow>←</div><div class=nav-content><div class=nav-title>营销归因与ROI分析：科学衡量每一分营销投入</div></div></a><a href=/blog/articles/nuxt-4%E6%96%B0%E7%89%B9%E6%80%A7%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97%E4%B8%8B%E4%B8%80%E4%BB%A3vue%E5%85%A8%E6%A0%88%E6%A1%86%E6%9E%B6%E7%9A%84%E8%BF%9B%E5%8C%96%E4%B9%8B%E8%B7%AF/ class="nav-card nav-next"><div class=nav-content><div class=nav-title>Nuxt 4新特性完全指南：下一代Vue全栈框架的进化之路</div></div><div class=nav-arrow>→</div></a></div></nav></footer></main><aside class=post-sidebar><div class=sidebar-toc id=sidebar-toc><div class=toc-header><div class=toc-title>目录</div><button class=toc-toggle id=toc-toggle aria-label="Toggle TOC">
+<svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div><div class=toc-content id=toc-content><ul class=toc-list><li class="toc-item toc-h2"><a href=#h2-0 class=toc-item-link><span class=toc-item-text>引言</span></a></li><li class="toc-item toc-h2"><a href=#h2-1 class=toc-item-link><span class=toc-item-text>一、Proxy基础与响应式原理</span></a></li><li class="toc-item toc-h2"><a href=#h2-2 class=toc-item-link><span class=toc-item-text>二、Reactivity API详解</span></a></li><li class="toc-item toc-h2"><a href=#h2-3 class=toc-item-link><span class=toc-item-text>三、依赖收集与触发机制</span></a></li><li class="toc-item toc-h2"><a href=#h2-4 class=toc-item-link><span class=toc-item-text>四、响应式进阶API</span></a></li><li class="toc-item toc-h2"><a href=#h2-5 class=toc-item-link><span class=toc-item-text>五、性能优化最佳实践</span></a></li><li class="toc-item toc-h2"><a href=#h2-6 class=toc-item-link><span class=toc-item-text>六、调试技巧</span></a></li><li class="toc-item toc-h2"><a href=#h2-7 class=toc-item-link><span class=toc-item-text>总结</span></a></li></ul></div></div><script>document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("sidebar-toc"),t=document.getElementById("toc-toggle"),o=document.getElementById("toc-content"),i=t?.querySelector(".toc-toggle-icon");if(!e)return;let n=!1;t&&t.addEventListener("click",function(){n=!n,n?(o.style.display="none",e.style.width="auto",i.innerHTML='<path d="M9 18l6-6-6-6"/>'):(o.style.display="block",e.style.width="200px",i.innerHTML='<path d="M18 6L6 18M6 6l12 12"/>')});const s=document.querySelector(".post-content");if(s){const e=s.querySelectorAll("h1");e.forEach((e,t)=>{e.id=`h1-${t}`});const t=s.querySelectorAll("h2");t.forEach((e,t)=>{e.id=`h2-${t}`})}const a=document.querySelectorAll(".toc-item-link");a.forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();const n=this.getAttribute("href").substring(1),t=document.getElementById(n);if(t){const e=document.querySelector(".post-header-main")?.offsetHeight||0,n=t.offsetTop-e-20;window.scrollTo({top:n,behavior:"smooth"})}})})})</script><style>.sidebar-toc{position:sticky;top:2rem;width:200px;background:#fff;border:1px solid #e5e7eb;border-radius:4px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.1);z-index:100}.sidebar-toc.hidden{display:none}.toc-header{padding:12px 16px;border-bottom:1px solid #e5e7eb;background:#fafbfc;display:flex;align-items:center;justify-content:space-between}.toc-title{margin:0;font-size:13px;font-weight:500;color:#374151 !important;font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;text-transform:uppercase;letter-spacing:1px}.toc-toggle{background:0 0;border:none;cursor:pointer;padding:4px;border-radius:4px;display:flex;align-items:center;justify-content:center;transition:all .2s ease;color:#6b7280}.toc-toggle:hover{background:#e5e7eb;color:#374151}.toc-toggle-icon{transition:transform .2s ease}.toc-content{padding:12px 0}.toc-list{list-style:none;margin:0;padding:0}.toc-item{margin-bottom:4px;display:block !important;visibility:visible !important}.toc-h1,.toc-h2{display:block !important}.toc-h2{margin-left:0}.toc-item-link{display:flex;align-items:center;gap:8px;padding:8px 12px;color:#374151 !important;text-decoration:none;font-size:13px;line-height:1.4;border-radius:3px;transition:all .2s ease;font-weight:400}.toc-item-link:hover{background:#f8fafc;color:#1f2937 !important}.toc-item-link.active{background:#e0f2fe;color:#01579b !important;font-weight:500}.toc-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}.dot-red{background:#ef4444}.dot-blue{background:#2196f3}.toc-item-text{color:#1f2937 !important;font-weight:400;flex:1;display:inline !important;visibility:visible !important;opacity:1 !important;font-size:13px !important;line-height:1.4 !important}.toc-item-link .toc-item-text{color:#1f2937 !important;display:inline !important;visibility:visible !important;opacity:1 !important}.toc-item.active .dot-red{background:#d32f2f}.toc-item.active .dot-blue{background:#1976d2}[data-theme=dark] .sidebar-toc{background:#1f2937;border-color:#374151;box-shadow:0 1px 3px rgba(0,0,0,.3)}[data-theme=dark] .toc-header{background:#111827;border-color:#374151}[data-theme=dark] .toc-title{color:#f3f4f6 !important}[data-theme=dark] .toc-toggle{color:#9ca3af}[data-theme=dark] .toc-toggle:hover{background:#374151;color:#f3f4f6}[data-theme=dark] .toc-item-link{color:#e5e7eb !important}[data-theme=dark] .toc-item-link:hover{background:#374151;color:#f9fafb !important}[data-theme=dark] .toc-item-link.active{background:#0d47a1;color:#fff !important}[data-theme=dark] .toc-item-text{color:#f9fafb !important;display:inline !important;visibility:visible !important;opacity:1 !important}[data-theme=dark] .toc-item-link .toc-item-text{color:#f9fafb !important;display:inline !important;visibility:visible !important;opacity:1 !important}@media(max-width:1024px){.sidebar-toc{display:none}.post-content-wrapper{grid-template-columns:1fr !important;padding:0 1rem !important}}</style><style>.post-content-wrapper{display:grid;grid-template-columns:1fr 200px;gap:2rem;padding:0 2rem;max-width:100%}.post-content-main{min-width:0}.post-sidebar{position:sticky;top:2rem;height:fit-content;min-width:0}.post-header-main{margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--border,#333333)}.post-header-main .post-title{color:var(--primary,#ffffff) !important;font-size:2.5rem;font-weight:700;line-height:1.2;margin-bottom:1rem}.post-header-main .post-description{color:var(--secondary,#cccccc) !important;font-size:1.1rem;line-height:1.6;margin-bottom:1rem}.post-header-main .post-meta{margin-bottom:0}@media(max-width:1024px){.post-content-wrapper{grid-template-columns:1fr !important;gap:1rem;padding:0 1rem !important}.post-sidebar{display:none}}@media(max-width:768px){.post-header-main .post-title{font-size:2rem}.post-header-main .post-description{font-size:1rem}}</style></aside></div></article></main><footer class=footer><span>© 2024-2025 有条工具技术博客</span> ·</footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
