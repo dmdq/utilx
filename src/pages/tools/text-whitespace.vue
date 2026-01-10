@@ -236,13 +236,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '空格格式化工具 - 统一空格Tab、去除多余空白',
   ogDescription: '免费在线空格格式化工具，统一Tab和空格、去除多余空白、去除行尾空格、删除空行。',
-  ogImage: 'https://util.cn/images/tools/text-whitespace.png',
-  ogUrl: 'https://util.cn/tools/text-whitespace',
+  ogImage: 'https://www.util.cn/images/tools/text-whitespace.png',
+  ogUrl: 'https://www.util.cn/tools/text-whitespace',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '空格格式化工具 - 统一空格Tab、去除多余空白',
   twitterDescription: '免费在线空格格式化工具，统一Tab和空格、去除多余空白、去除行尾空格、删除空行。',
-  twitterImage: 'https://util.cn/images/tools/text-whitespace.png'
+  twitterImage: 'https://www.util.cn/images/tools/text-whitespace.png'
 })
 
 // JSON-LD 结构化数据
@@ -257,7 +257,7 @@ useHead({
             '@type': 'WebApplication',
             name: '空格格式化工具',
             description: '免费在线空格格式化工具，统一Tab和空格、去除多余空白',
-            url: 'https://util.cn/tools/text-whitespace',
+            url: 'https://www.util.cn/tools/text-whitespace',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -281,19 +281,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '空格格式化',
-                item: 'https://util.cn/tools/text-whitespace'
+                item: 'https://www.util.cn/tools/text-whitespace'
               }
             ]
           },

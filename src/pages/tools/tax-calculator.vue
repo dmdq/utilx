@@ -487,13 +487,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '专业税务计算器 - 免费个税增值税企业所得税计算',
   ogDescription: '2025年最新税务计算器，支持个人所得税、增值税、企业所得税在线计算。实时更新税率，专业准确，操作简单。',
-  ogImage: 'https://util.cn/images/tools/tax-calculator.png',
-  ogUrl: 'https://util.cn/tools/tax-calculator',
+  ogImage: 'https://www.util.cn/images/tools/tax-calculator.png',
+  ogUrl: 'https://www.util.cn/tools/tax-calculator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '税务计算器 - 个税增值税企业所得税计算',
   twitterDescription: '专业税务计算工具，支持2025年最新税率，计算个人所得税、增值税、企业所得税，准确快速。',
-  twitterImage: 'https://util.cn/images/tools/tax-calculator.png'
+  twitterImage: 'https://www.util.cn/images/tools/tax-calculator.png'
 })
 
 // JSON-LD 结构化数据
@@ -508,7 +508,7 @@ useHead({
             '@type': 'WebApplication',
             name: '税务计算器',
             description: '专业的税务计算工具，支持个人所得税、增值税、企业所得税计算',
-            url: 'https://util.cn/tools/tax-calculator',
+            url: 'https://www.util.cn/tools/tax-calculator',
             applicationCategory: 'FinanceApplication',
             operatingSystem: 'Any',
             offers: {
@@ -526,7 +526,7 @@ useHead({
               '速算扣除数计算',
               '税后收入计算'
             ],
-            screenshot: 'https://util.cn/images/tools/tax-calculator-screenshot.png'
+            screenshot: 'https://www.util.cn/images/tools/tax-calculator-screenshot.png'
           },
           {
             '@type': 'BreadcrumbList',
@@ -535,19 +535,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '税务计算器',
-                item: 'https://util.cn/tools/tax-calculator'
+                item: 'https://www.util.cn/tools/tax-calculator'
               }
             ]
           },
@@ -587,7 +587,7 @@ useHead({
             provider: {
               '@type': 'Organization',
               name: 'Util工具箱',
-              url: 'https://util.cn'
+              url: 'https://www.util.cn'
             },
             serviceType: 'Tax Calculation Service',
             areaServed: '中国',

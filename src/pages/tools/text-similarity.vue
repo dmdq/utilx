@@ -235,13 +235,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '文本相似度计算工具 - 编辑距离算法对比',
   ogDescription: '基于编辑距离算法计算两段文本的相似度，支持内容去重、查重检测、版本对比。',
-  ogImage: 'https://util.cn/images/tools/text-similarity.png',
-  ogUrl: 'https://util.cn/tools/text-similarity',
+  ogImage: 'https://www.util.cn/images/tools/text-similarity.png',
+  ogUrl: 'https://www.util.cn/tools/text-similarity',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '文本相似度计算工具 - 编辑距离算法对比',
   twitterDescription: '基于编辑距离算法计算两段文本的相似度，支持内容去重、查重检测。',
-  twitterImage: 'https://util.cn/images/tools/text-similarity.png'
+  twitterImage: 'https://www.util.cn/images/tools/text-similarity.png'
 })
 
 // JSON-LD 结构化数据
@@ -256,7 +256,7 @@ useHead({
             '@type': 'WebApplication',
             name: '文本相似度计算工具',
             description: '在线文本相似度计算工具，基于编辑距离算法',
-            url: 'https://util.cn/tools/text-similarity',
+            url: 'https://www.util.cn/tools/text-similarity',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -280,19 +280,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '文本相似度',
-                item: 'https://util.cn/tools/text-similarity'
+                item: 'https://www.util.cn/tools/text-similarity'
               }
             ]
           },

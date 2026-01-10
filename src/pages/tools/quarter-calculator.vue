@@ -138,7 +138,7 @@ useHead({
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: '季度计算器',
-      url: 'https://util.cn/tools/quarter-calculator'
+      url: 'https://www.util.cn/tools/quarter-calculator'
     })
   }]
 })

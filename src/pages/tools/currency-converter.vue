@@ -321,13 +321,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '汇率转换器 - 专业货币汇率换算工具',
   ogDescription: '支持150+国家货币实时汇率转换，提供历史汇率查询和汇率走势分析。专业精准，操作简单，满足各种汇率换算需求。',
-  ogImage: 'https://util.cn/images/tools/currency-converter.png',
-  ogUrl: 'https://util.cn/tools/currency-converter',
+  ogImage: 'https://www.util.cn/images/tools/currency-converter.png',
+  ogUrl: 'https://www.util.cn/tools/currency-converter',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '汇率转换器 - 实时货币汇率换算',
   twitterDescription: '专业汇率转换工具，支持150+国家货币实时换算，历史汇率查询，汇率走势分析，满足各类汇率需求。',
-  twitterImage: 'https://util.cn/images/tools/currency-converter.png'
+  twitterImage: 'https://www.util.cn/images/tools/currency-converter.png'
 })
 
 // JSON-LD 结构化数据
@@ -342,7 +342,7 @@ useHead({
             '@type': 'WebApplication',
             name: '汇率转换器',
             description: '专业的汇率转换工具，支持150+国家货币实时汇率转换、历史汇率查询和汇率走势分析',
-            url: 'https://util.cn/tools/currency-converter',
+            url: 'https://www.util.cn/tools/currency-converter',
             applicationCategory: 'FinanceApplication',
             operatingSystem: 'Any',
             offers: {
@@ -368,19 +368,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '汇率转换器',
-                item: 'https://util.cn/tools/currency-converter'
+                item: 'https://www.util.cn/tools/currency-converter'
               }
             ]
           },

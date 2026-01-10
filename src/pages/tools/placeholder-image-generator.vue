@@ -203,13 +203,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '占位图生成器 - 免费在线占位图片制作',
   ogDescription: '专业的占位图生成工具，自定义尺寸颜色文字，一键生成占位图片。支持实时预览和代码导出。',
-  ogImage: 'https://util.cn/images/tools/placeholder-image-generator.png',
-  ogUrl: 'https://util.cn/tools/placeholder-image-generator',
+  ogImage: 'https://www.util.cn/images/tools/placeholder-image-generator.png',
+  ogUrl: 'https://www.util.cn/tools/placeholder-image-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '占位图生成器 - 免费在线占位图片制作',
   twitterDescription: '专业的占位图生成工具，自定义尺寸颜色文字，一键生成占位图片。',
-  twitterImage: 'https://util.cn/images/tools/placeholder-image-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/placeholder-image-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -224,7 +224,7 @@ useHead({
             '@type': 'WebApplication',
             name: '占位图生成器',
             description: '免费在线占位图生成工具，自定义尺寸颜色和文字',
-            url: 'https://util.cn/tools/placeholder-image-generator',
+            url: 'https://www.util.cn/tools/placeholder-image-generator',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -248,19 +248,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '占位图生成器',
-                item: 'https://util.cn/tools/placeholder-image-generator'
+                item: 'https://www.util.cn/tools/placeholder-image-generator'
               }
             ]
           },

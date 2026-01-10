@@ -260,13 +260,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '色盲模拟器 - 免费在线色盲视觉模拟',
   ogDescription: '专业的色盲模拟工具，模拟红色盲、绿色盲、蓝色盲等视觉效果。帮助您创建色盲友好的设计。',
-  ogImage: 'https://util.cn/images/tools/color-blindness-simulator.png',
-  ogUrl: 'https://util.cn/tools/color-blindness-simulator',
+  ogImage: 'https://www.util.cn/images/tools/color-blindness-simulator.png',
+  ogUrl: 'https://www.util.cn/tools/color-blindness-simulator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '色盲模拟器 - 免费在线色盲视觉模拟',
   twitterDescription: '专业的色盲模拟工具，模拟红色盲、绿色盲、蓝色盲等视觉效果。',
-  twitterImage: 'https://util.cn/images/tools/color-blindness-simulator.png'
+  twitterImage: 'https://www.util.cn/images/tools/color-blindness-simulator.png'
 })
 
 // JSON-LD 结构化数据
@@ -281,7 +281,7 @@ useHead({
             '@type': 'WebApplication',
             name: '色盲模拟器',
             description: '免费在线色盲模拟工具，支持多种色盲类型视觉模拟',
-            url: 'https://util.cn/tools/color-blindness-simulator',
+            url: 'https://www.util.cn/tools/color-blindness-simulator',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -305,19 +305,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '色盲模拟器',
-                item: 'https://util.cn/tools/color-blindness-simulator'
+                item: 'https://www.util.cn/tools/color-blindness-simulator'
               }
             ]
           },

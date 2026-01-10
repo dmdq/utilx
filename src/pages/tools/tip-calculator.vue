@@ -347,7 +347,7 @@ useHead({
             '@type': 'WebApplication',
             name: '小费计算器',
             description: '在线小费计算器，快速计算餐厅小费和分账金额',
-            url: 'https://util.cn/tools/tip-calculator',
+            url: 'https://www.util.cn/tools/tip-calculator',
             applicationCategory: 'FinanceApplication',
             operatingSystem: 'Any',
             offers: {
@@ -371,19 +371,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '小费计算器',
-                item: 'https://util.cn/tools/tip-calculator'
+                item: 'https://www.util.cn/tools/tip-calculator'
               }
             ]
           },

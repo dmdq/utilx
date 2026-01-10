@@ -508,13 +508,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '年终奖计算器 - 专业个税优化与节税工具',
   ogDescription: '精确计算年终奖个税，提供最优发放策略，合法节税。智能避税率陷阱，帮您最大化年终奖收入。',
-  ogImage: 'https://util.cn/images/tools/year-end-bonus-calculator.png',
-  ogUrl: 'https://util.cn/tools/year-end-bonus-calculator',
+  ogImage: 'https://www.util.cn/images/tools/year-end-bonus-calculator.png',
+  ogUrl: 'https://www.util.cn/tools/year-end-bonus-calculator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '年终奖计算器 - 个税优化与发放方案分析',
   twitterDescription: '专业年终奖个税计算工具，支持单独计税和综合计税，提供最优发放策略，合法节税。',
-  twitterImage: 'https://util.cn/images/tools/year-end-bonus-calculator.png'
+  twitterImage: 'https://www.util.cn/images/tools/year-end-bonus-calculator.png'
 })
 
 // JSON-LD 结构化数据
@@ -529,7 +529,7 @@ useHead({
             '@type': 'WebApplication',
             name: '年终奖计算器',
             description: '专业年终奖个税计算工具，支持单独计税和综合计税，提供最优发放策略和合法节税方案',
-            url: 'https://util.cn/tools/year-end-bonus-calculator',
+            url: 'https://www.util.cn/tools/year-end-bonus-calculator',
             applicationCategory: 'FinanceApplication',
             operatingSystem: 'Any',
             offers: {
@@ -555,19 +555,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '年终奖计算器',
-                item: 'https://util.cn/tools/year-end-bonus-calculator'
+                item: 'https://www.util.cn/tools/year-end-bonus-calculator'
               }
             ]
           },

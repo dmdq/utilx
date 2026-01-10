@@ -398,7 +398,7 @@ useHead({
             '@type': 'WebApplication',
             name: '复数计算器',
             description: '在线复数计算器，支持复数加减乘除运算',
-            url: 'https://util.cn/tools/complex-number-calculator',
+            url: 'https://www.util.cn/tools/complex-number-calculator',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'Any',
             offers: {

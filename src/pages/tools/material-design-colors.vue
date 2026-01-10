@@ -162,13 +162,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'Material Design色板 - MD3官方颜色参考',
   ogDescription: 'Material Design 3官方色板参考，包含Primary、Secondary、Tertiary核心色系。',
-  ogImage: 'https://util.cn/images/tools/material-design-colors.png',
-  ogUrl: 'https://util.cn/tools/material-design-colors',
+  ogImage: 'https://www.util.cn/images/tools/material-design-colors.png',
+  ogUrl: 'https://www.util.cn/tools/material-design-colors',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Material Design色板 - MD3官方颜色参考',
   twitterDescription: 'Material Design 3官方色板参考，包含Primary、Secondary、Tertiary核心色系。',
-  twitterImage: 'https://util.cn/images/tools/material-design-colors.png'
+  twitterImage: 'https://www.util.cn/images/tools/material-design-colors.png'
 })
 
 // JSON-LD 结构化数据
@@ -183,7 +183,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'Material Design色板参考工具',
             description: 'Material Design 3官方色板参考工具',
-            url: 'https://util.cn/tools/material-design-colors',
+            url: 'https://www.util.cn/tools/material-design-colors',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -206,19 +206,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'Material Design色板',
-                item: 'https://util.cn/tools/material-design-colors'
+                item: 'https://www.util.cn/tools/material-design-colors'
               }
             ]
           },

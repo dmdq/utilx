@@ -453,13 +453,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '理财收益计算器 - 专业投资收益计算工具',
   ogDescription: '专业的理财收益计算工具，支持多种投资方式，提供收益计算、风险评估和投资组合优化建议。',
-  ogImage: 'https://util.cn/images/tools/investment-calculator.png',
-  ogUrl: 'https://util.cn/tools/investment-calculator',
+  ogImage: 'https://www.util.cn/images/tools/investment-calculator.png',
+  ogUrl: 'https://www.util.cn/tools/investment-calculator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '理财收益计算器 - 专业投资收益计算',
   twitterDescription: '专业的理财收益计算工具，支持定期存款、基金、债券等多种投资方式，提供收益计算和风险评估。',
-  twitterImage: 'https://util.cn/images/tools/investment-calculator.png'
+  twitterImage: 'https://www.util.cn/images/tools/investment-calculator.png'
 })
 
 // JSON-LD 结构化数据
@@ -474,7 +474,7 @@ useHead({
             '@type': 'WebApplication',
             name: '理财收益计算器',
             description: '专业的理财收益计算工具，支持定期存款、基金、债券、理财等多种投资方式，提供收益计算、风险评估和投资组合优化建议',
-            url: 'https://util.cn/tools/investment-calculator',
+            url: 'https://www.util.cn/tools/investment-calculator',
             applicationCategory: 'FinanceApplication',
             operatingSystem: 'Any',
             offers: {
@@ -500,19 +500,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '理财收益计算器',
-                item: 'https://util.cn/tools/investment-calculator'
+                item: 'https://www.util.cn/tools/investment-calculator'
               }
             ]
           },

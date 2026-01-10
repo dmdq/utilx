@@ -282,13 +282,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'Nginx配置生成器 - 专业Web服务器配置工具',
   ogDescription: '快速生成Nginx配置文件，支持反向代理、负载均衡、SSL等。可视化操作，一键生成标准配置，提升运维效率。',
-  ogImage: 'https://util.cn/images/tools/nginx-config-generator.png',
-  ogUrl: 'https://util.cn/tools/nginx-config-generator',
+  ogImage: 'https://www.util.cn/images/tools/nginx-config-generator.png',
+  ogUrl: 'https://www.util.cn/tools/nginx-config-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Nginx配置生成器 - 反向代理和负载均衡配置',
   twitterDescription: '专业Nginx配置生成工具，支持反向代理、负载均衡、SSL配置，快速生成标准配置文件。',
-  twitterImage: 'https://util.cn/images/tools/nginx-config-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/nginx-config-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -303,7 +303,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'Nginx配置生成器',
             description: '专业的Nginx配置生成工具，支持反向代理、负载均衡、SSL等配置',
-            url: 'https://util.cn/tools/nginx-config-generator',
+            url: 'https://www.util.cn/tools/nginx-config-generator',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -329,19 +329,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'Nginx配置生成器',
-                item: 'https://util.cn/tools/nginx-config-generator'
+                item: 'https://www.util.cn/tools/nginx-config-generator'
               }
             ]
           },

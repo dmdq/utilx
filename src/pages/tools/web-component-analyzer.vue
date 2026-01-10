@@ -62,13 +62,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'Web组件分析器 - 专业HTML元素和属性分析工具',
   ogDescription: '分析Web组件结构、依赖关系和性能指标。支持多框架，帮助优化代码质量和用户体验。',
-  ogImage: 'https://util.cn/images/tools/web-component-analyzer.png',
-  ogUrl: 'https://util.cn/tools/web-component-analyzer',
+  ogImage: 'https://www.util.cn/images/tools/web-component-analyzer.png',
+  ogUrl: 'https://www.util.cn/tools/web-component-analyzer',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Web组件分析器 - HTML可访问性和事件分析',
   twitterDescription: '专业Web组件分析工具，分析HTML元素的可访问属性和事件，优化代码质量。',
-  twitterImage: 'https://util.cn/images/tools/web-component-analyzer.png'
+  twitterImage: 'https://www.util.cn/images/tools/web-component-analyzer.png'
 })
 
 // JSON-LD 结构化数据
@@ -83,7 +83,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'Web组件分析器',
             description: '专业的Web组件分析工具，分析HTML元素的可访问属性和事件',
-            url: 'https://util.cn/tools/web-component-analyzer',
+            url: 'https://www.util.cn/tools/web-component-analyzer',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -109,19 +109,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'Web组件分析器',
-                item: 'https://util.cn/tools/web-component-analyzer'
+                item: 'https://www.util.cn/tools/web-component-analyzer'
               }
             ]
           },

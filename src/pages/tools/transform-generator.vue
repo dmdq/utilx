@@ -307,13 +307,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'CSS变换生成器 - transform可视化工具',
   ogDescription: '专业的CSS transform生成工具，支持可视化调节旋转、缩放、倾斜、平移等变换效果。',
-  ogImage: 'https://util.cn/images/tools/transform-generator.png',
-  ogUrl: 'https://util.cn/tools/transform-generator',
+  ogImage: 'https://www.util.cn/images/tools/transform-generator.png',
+  ogUrl: 'https://www.util.cn/tools/transform-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'CSS变换生成器 - transform可视化',
   twitterDescription: '专业的CSS transform生成工具，支持可视化调节各种变换效果。',
-  twitterImage: 'https://util.cn/images/tools/transform-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/transform-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -328,7 +328,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'CSS变换生成器',
             description: '在线CSS transform可视化生成工具',
-            url: 'https://util.cn/tools/transform-generator',
+            url: 'https://www.util.cn/tools/transform-generator',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -352,19 +352,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'CSS变换生成器',
-                item: 'https://util.cn/tools/transform-generator'
+                item: 'https://www.util.cn/tools/transform-generator'
               }
             ]
           }

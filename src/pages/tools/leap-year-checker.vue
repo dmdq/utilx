@@ -340,7 +340,7 @@ useHead({
             '@type': 'WebApplication',
             name: '闰年检查器',
             description: '在线闰年检查工具，快速查询年份是否为闰年',
-            url: 'https://util.cn/tools/leap-year-checker',
+            url: 'https://www.util.cn/tools/leap-year-checker',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {

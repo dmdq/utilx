@@ -240,7 +240,7 @@ useHead({
             '@type': 'WebApplication',
             name: '凯撒密码工具',
             description: '在线凯撒密码加密与解密工具',
-            url: 'https://util.cn/tools/caesar-cipher',
+            url: 'https://www.util.cn/tools/caesar-cipher',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -264,19 +264,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '凯撒密码',
-                item: 'https://util.cn/tools/caesar-cipher'
+                item: 'https://www.util.cn/tools/caesar-cipher'
               }
             ]
           }

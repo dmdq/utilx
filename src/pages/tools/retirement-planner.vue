@@ -454,13 +454,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '退休储蓄规划器 - 专业退休养老计划制定工具',
   ogDescription: '专业的退休规划工具，计算退休目标储蓄金额和月储蓄建议，考虑通胀率和多种收入来源，帮助制定合理的退休规划。',
-  ogImage: 'https://util.cn/images/tools/retirement-planner.png',
-  ogUrl: 'https://util.cn/tools/retirement-planner',
+  ogImage: 'https://www.util.cn/images/tools/retirement-planner.png',
+  ogUrl: 'https://www.util.cn/tools/retirement-planner',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '退休储蓄规划器 - 专业退休养老计划制定',
   twitterDescription: '专业的退休规划工具，计算退休目标储蓄金额和月储蓄建议，考虑通胀率和多种收入来源。',
-  twitterImage: 'https://util.cn/images/tools/retirement-planner.png'
+  twitterImage: 'https://www.util.cn/images/tools/retirement-planner.png'
 })
 
 // JSON-LD 结构化数据
@@ -475,7 +475,7 @@ useHead({
             '@type': 'WebApplication',
             name: '退休储蓄规划器',
             description: '专业的退休储蓄规划工具，计算退休目标储蓄金额和月储蓄建议，考虑通胀率和多种收入来源',
-            url: 'https://util.cn/tools/retirement-planner',
+            url: 'https://www.util.cn/tools/retirement-planner',
             applicationCategory: 'FinanceApplication',
             operatingSystem: 'Any',
             offers: {
@@ -501,19 +501,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '退休储蓄规划器',
-                item: 'https://util.cn/tools/retirement-planner'
+                item: 'https://www.util.cn/tools/retirement-planner'
               }
             ]
           },

@@ -182,13 +182,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '排卵期计算器 - 免费在线排卵期预测工具',
   ogDescription: '专业的排卵期计算工具，支持排卵日、排卵期、易受孕期计算。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/ovulation-calculator.png',
-  ogUrl: 'https://util.cn/tools/ovulation-calculator',
+  ogImage: 'https://www.util.cn/images/tools/ovulation-calculator.png',
+  ogUrl: 'https://www.util.cn/tools/ovulation-calculator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '排卵期计算器 - 免费在线排卵期预测',
   twitterDescription: '专业的排卵期计算工具，支持排卵日、排卵期、易受孕期计算。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/ovulation-calculator.png'
+  twitterImage: 'https://www.util.cn/images/tools/ovulation-calculator.png'
 })
 
 // JSON-LD 结构化数据
@@ -203,7 +203,7 @@ useHead({
             '@type': 'WebApplication',
             name: '排卵期计算器',
             description: '免费在线排卵期计算器，支持排卵日和排卵期预测',
-            url: 'https://util.cn/tools/ovulation-calculator',
+            url: 'https://www.util.cn/tools/ovulation-calculator',
             applicationCategory: 'HealthApplication',
             operatingSystem: 'Any',
             offers: {
@@ -228,19 +228,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '排卵期计算器',
-                item: 'https://util.cn/tools/ovulation-calculator'
+                item: 'https://www.util.cn/tools/ovulation-calculator'
               }
             ]
           },

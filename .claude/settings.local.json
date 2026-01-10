@@ -93,7 +93,10 @@
       "Bash(for tool in grid-system-generator aspect-ratio-calculator em-breakpoint-generator color-blindness-simulator icon-font-generator svg-icon-library qr-code-generator favicon-generator placeholder-image-generator css-counter-generator blend-mode-tool mask-image-generator background-pattern-generator text-shadow-generator box-shadow-inset-generator letter-spacing-tool line-height-calculator typography-scale golden-ratio-calculator border-radius-generator transform-generator css-filter-generator backdrop-filter-generator clip-path-generator pro-color-picker color-palette-generator gradient-text-generator tailwind-color-palette material-design-colors color-naming-tool spacing-calculator)",
       "Bash(for file in src/pages/tools/*.vue)",
       "Bash(do if grep -q \"Icons\\\\|Mask\\\\|Height\" \"$file\")",
-      "Bash(for tool in caesar-cipher base-encoding otp-generator ssh-key-generator ripemd160-hash blake2-hash hkdf-generator semester-calculator holiday-calculator solar-term-calculator work-hours-calculator time-diff-visual leap-year-checker lunar-calendar time-unit-convert timestamp-batch-convert timezone-lookup quarter-calculator date-formatter)"
+      "Bash(for tool in caesar-cipher base-encoding otp-generator ssh-key-generator ripemd160-hash blake2-hash hkdf-generator semester-calculator holiday-calculator solar-term-calculator work-hours-calculator time-diff-visual leap-year-checker lunar-calendar time-unit-convert timestamp-batch-convert timezone-lookup quarter-calculator date-formatter)",
+      "Bash(NODE_OPTIONS=\"--max-old-space-size=8192\" /Users/apple/.nvm/versions/node/v22.21.1/bin/npx nuxt build:*)",
+      "Bash(PATH=\"/Users/apple/.nvm/versions/node/v22.21.1/bin:$PATH\" npx nuxt build:*)",
+      "Bash(source:*)"
     ],
     "deny": [],
     "ask": []

@@ -213,7 +213,7 @@ useHead({
         '@type': 'WebApplication',
         name: 'SSH密钥生成器',
         description: '在线RSA/Ed25519密钥对生成工具',
-        url: 'https://util.cn/tools/ssh-key-generator',
+        url: 'https://www.util.cn/tools/ssh-key-generator',
         applicationCategory: 'DeveloperApplication',
         operatingSystem: 'Any'
       })

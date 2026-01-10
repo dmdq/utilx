@@ -206,13 +206,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'HTML转纯文本工具 - 去除HTML标签提取文本',
   ogDescription: '去除HTML标签提取纯文本内容，支持保留链接、图片、标题、列表等格式。',
-  ogImage: 'https://util.cn/images/tools/html-to-text.png',
-  ogUrl: 'https://util.cn/tools/html-to-text',
+  ogImage: 'https://www.util.cn/images/tools/html-to-text.png',
+  ogUrl: 'https://www.util.cn/tools/html-to-text',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'HTML转纯文本工具 - 去除HTML标签提取文本',
   twitterDescription: '去除HTML标签提取纯文本内容，支持保留链接、图片、标题、列表等格式。',
-  twitterImage: 'https://util.cn/images/tools/html-to-text.png'
+  twitterImage: 'https://www.util.cn/images/tools/html-to-text.png'
 })
 
 // JSON-LD 结构化数据
@@ -227,7 +227,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'HTML转纯文本工具',
             description: '在线HTML转纯文本工具，去除HTML标签提取纯文本内容',
-            url: 'https://util.cn/tools/html-to-text',
+            url: 'https://www.util.cn/tools/html-to-text',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -251,19 +251,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'HTML转纯文本',
-                item: 'https://util.cn/tools/html-to-text'
+                item: 'https://www.util.cn/tools/html-to-text'
               }
             ]
           },

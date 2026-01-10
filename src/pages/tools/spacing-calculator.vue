@@ -232,13 +232,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '间距计算器 - 设计间距系统生成工具',
   ogDescription: '基于基准单位和比例类型生成统一的设计间距系统。',
-  ogImage: 'https://util.cn/images/tools/spacing-calculator.png',
-  ogUrl: 'https://util.cn/tools/spacing-calculator',
+  ogImage: 'https://www.util.cn/images/tools/spacing-calculator.png',
+  ogUrl: 'https://www.util.cn/tools/spacing-calculator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '间距计算器 - 设计间距系统生成工具',
   twitterDescription: '基于基准单位和比例类型生成统一的设计间距系统。',
-  twitterImage: 'https://util.cn/images/tools/spacing-calculator.png'
+  twitterImage: 'https://www.util.cn/images/tools/spacing-calculator.png'
 })
 
 // JSON-LD 结构化数据
@@ -253,7 +253,7 @@ useHead({
             '@type': 'WebApplication',
             name: '间距计算器',
             description: '在线设计间距系统生成工具',
-            url: 'https://util.cn/tools/spacing-calculator',
+            url: 'https://www.util.cn/tools/spacing-calculator',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -276,19 +276,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '间距计算器',
-                item: 'https://util.cn/tools/spacing-calculator'
+                item: 'https://www.util.cn/tools/spacing-calculator'
               }
             ]
           },

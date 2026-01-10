@@ -660,4 +660,4 @@ useHead({
 - [Vue 3 官方文档](https://vuejs.org/)
 - [Nuxt.js 开发指南](https://nuxt.com/)
 - [Chart.js 图表库](https://www.chartjs.org/)
-- [Util工具箱](https://util.cn) - 查看完整工具集合
+- [Util工具箱](https://www.util.cn) - 查看完整工具集合

@@ -184,13 +184,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '混合模式工具 - 免费在线CSS混合模式可视化',
   ogDescription: '专业的CSS mix-blend-mode可视化工具，实时预览所有16种混合模式效果，一键复制CSS代码。',
-  ogImage: 'https://util.cn/images/tools/blend-mode-tool.png',
-  ogUrl: 'https://util.cn/tools/blend-mode-tool',
+  ogImage: 'https://www.util.cn/images/tools/blend-mode-tool.png',
+  ogUrl: 'https://www.util.cn/tools/blend-mode-tool',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '混合模式工具 - 免费在线CSS混合模式可视化',
   twitterDescription: '专业的CSS mix-blend-mode可视化工具，实时预览所有16种混合模式效果。',
-  twitterImage: 'https://util.cn/images/tools/blend-mode-tool.png'
+  twitterImage: 'https://www.util.cn/images/tools/blend-mode-tool.png'
 })
 
 // JSON-LD 结构化数据
@@ -205,7 +205,7 @@ useHead({
             '@type': 'WebApplication',
             name: '混合模式工具',
             description: '免费在线CSS mix-blend-mode可视化工具，预览各种混合模式效果',
-            url: 'https://util.cn/tools/blend-mode-tool',
+            url: 'https://www.util.cn/tools/blend-mode-tool',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -229,19 +229,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '混合模式工具',
-                item: 'https://util.cn/tools/blend-mode-tool'
+                item: 'https://www.util.cn/tools/blend-mode-tool'
               }
             ]
           },

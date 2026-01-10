@@ -419,13 +419,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '文本分割合并工具 - 按行/字符/分隔符分割合并文本',
   ogDescription: '专业的文本分割合并工具，支持按行、字符、自定义分隔符分割或合并文本。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/text-split-merge.png',
-  ogUrl: 'https://util.cn/tools/text-split-merge',
+  ogImage: 'https://www.util.cn/images/tools/text-split-merge.png',
+  ogUrl: 'https://www.util.cn/tools/text-split-merge',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '文本分割合并工具 - 按行/字符/分隔符分割合并文本',
   twitterDescription: '专业的文本分割合并工具，支持按行、字符、自定义分隔符分割或合并文本。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/text-split-merge.png'
+  twitterImage: 'https://www.util.cn/images/tools/text-split-merge.png'
 })
 
 // JSON-LD 结构化数据
@@ -440,7 +440,7 @@ useHead({
             '@type': 'WebApplication',
             name: '文本分割合并工具',
             description: '在线文本分割合并工具，支持按行、字符、自定义分隔符分割或合并文本',
-            url: 'https://util.cn/tools/text-split-merge',
+            url: 'https://www.util.cn/tools/text-split-merge',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -467,19 +467,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '文本分割合并',
-                item: 'https://util.cn/tools/text-split-merge'
+                item: 'https://www.util.cn/tools/text-split-merge'
               }
             ]
           }

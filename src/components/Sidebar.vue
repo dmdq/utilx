@@ -35,13 +35,13 @@
           <!-- <Terminal class="w-5 h-5" /> -->
         </div>
         <div :class="{ 'lg:hidden': collapsed }">
-          <h1 
+          <p 
             class="font-bold text-lg tracking-tight cursor-pointer"
             @click="$router.push('/')"
-          >Util.cn</h1>
+          >有条工具</p>
           <div class="flex items-center gap-1.5">
             <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-            <span class="text-[10px] text-muted-foreground uppercase font-mono">System Online v1.0.0</span>
+            <span class="text-[10px] text-muted-foreground uppercase font-mono">System Online v1.1.0</span>
           </div>
         </div>
       </div>

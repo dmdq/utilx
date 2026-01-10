@@ -213,7 +213,7 @@ function transliterateChinese(text: string): string {
     '的': 'de', '了': 'le', '是': 'shi', '在': 'zai', '和': 'he', '与': 'yu',
     '我': 'wo', '你': 'ni', '他': 'ta', '她': 'ta', '它': 'ta',
     '这': 'zhe', '那': 'na', '有': 'you', '个': 'ge', '为': 'wei',
-    '之': 'zhi', '了': 'le', '等': 'deng', '及': 'ji', '而': 'er',
+    '之': 'zhi', '等': 'deng', '及': 'ji', '而': 'er',
     '教': 'jiao', '程': 'cheng', '入': 'ru', '门': 'men', '学': 'xue'
   }
 

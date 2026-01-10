@@ -440,13 +440,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '投资回报计算器 - 专业ROI复利定投计算工具',
   ogDescription: '专业的投资回报计算工具，支持ROI、复利、定投等多种计算模式，实时分析投资收益和风险，科学制定投资策略。',
-  ogImage: 'https://util.cn/images/tools/roi-calculator.png',
-  ogUrl: 'https://util.cn/tools/roi-calculator',
+  ogImage: 'https://www.util.cn/images/tools/roi-calculator.png',
+  ogUrl: 'https://www.util.cn/tools/roi-calculator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '投资回报计算器 - ROI复利定投收益计算',
   twitterDescription: '专业的投资回报计算工具，支持ROI计算、复利分析、定投收益预测，科学制定投资理财策略。',
-  twitterImage: 'https://util.cn/images/tools/roi-calculator.png'
+  twitterImage: 'https://www.util.cn/images/tools/roi-calculator.png'
 })
 
 // JSON-LD 结构化数据
@@ -461,7 +461,7 @@ useHead({
             '@type': 'WebApplication',
             name: '投资回报计算器',
             description: '专业的投资回报计算工具，支持ROI计算、复利增长、定投收益分析',
-            url: 'https://util.cn/tools/roi-calculator',
+            url: 'https://www.util.cn/tools/roi-calculator',
             applicationCategory: 'FinanceApplication',
             operatingSystem: 'Any',
             offers: {
@@ -487,19 +487,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '投资回报计算器',
-                item: 'https://util.cn/tools/roi-calculator'
+                item: 'https://www.util.cn/tools/roi-calculator'
               }
             ]
           },

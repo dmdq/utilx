@@ -357,13 +357,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '文本清洗工具 - 在线去除特殊字符、空白字符、控制字符',
   ogDescription: '专业的文本清洗工具，支持去除特殊字符、多余空白、不可见字符、控制字符。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/text-cleaner.png',
-  ogUrl: 'https://util.cn/tools/text-cleaner',
+  ogImage: 'https://www.util.cn/images/tools/text-cleaner.png',
+  ogUrl: 'https://www.util.cn/tools/text-cleaner',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '文本清洗工具 - 在线去除特殊字符、空白字符、控制字符',
   twitterDescription: '专业的文本清洗工具，支持去除特殊字符、多余空白、不可见字符、控制字符。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/text-cleaner.png'
+  twitterImage: 'https://www.util.cn/images/tools/text-cleaner.png'
 })
 
 // JSON-LD 结构化数据
@@ -378,7 +378,7 @@ useHead({
             '@type': 'WebApplication',
             name: '文本清洗工具',
             description: '在线文本清洗工具，支持去除特殊字符、多余空白、不可见字符、控制字符',
-            url: 'https://util.cn/tools/text-cleaner',
+            url: 'https://www.util.cn/tools/text-cleaner',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -407,19 +407,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '文本清洗',
-                item: 'https://util.cn/tools/text-cleaner'
+                item: 'https://www.util.cn/tools/text-cleaner'
               }
             ]
           }

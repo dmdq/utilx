@@ -185,8 +185,8 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '字间距工具 - letter-spacing可视化',
   ogDescription: '专业的在线字间距调整工具，实时预览letter-spacing效果。',
-  ogImage: 'https://util.cn/images/tools/letter-spacing-tool.png',
-  ogUrl: 'https://util.cn/tools/letter-spacing-tool',
+  ogImage: 'https://www.util.cn/images/tools/letter-spacing-tool.png',
+  ogUrl: 'https://www.util.cn/tools/letter-spacing-tool',
   ogType: 'website'
 })
 
@@ -202,7 +202,7 @@ useHead({
             '@type': 'WebApplication',
             name: '字间距工具',
             description: '在线字间距调整工具，实时预览letter-spacing效果',
-            url: 'https://util.cn/tools/letter-spacing-tool',
+            url: 'https://www.util.cn/tools/letter-spacing-tool',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -225,19 +225,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '字间距工具',
-                item: 'https://util.cn/tools/letter-spacing-tool'
+                item: 'https://www.util.cn/tools/letter-spacing-tool'
               }
             ]
           }

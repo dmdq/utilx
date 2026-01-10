@@ -190,13 +190,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '背景图案生成器 - 免费在线CSS图案制作',
   ogDescription: '专业的CSS背景图案生成工具，创建网格、点阵、斜线等背景图案。自定义颜色尺寸，实时预览，代码一键复制。',
-  ogImage: 'https://util.cn/images/tools/background-pattern-generator.png',
-  ogUrl: 'https://util.cn/tools/background-pattern-generator',
+  ogImage: 'https://www.util.cn/images/tools/background-pattern-generator.png',
+  ogUrl: 'https://www.util.cn/tools/background-pattern-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '背景图案生成器 - 免费在线CSS图案制作',
   twitterDescription: '专业的CSS背景图案生成工具，创建网格、点阵、斜线等背景图案。自定义颜色尺寸。',
-  twitterImage: 'https://util.cn/images/tools/background-pattern-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/background-pattern-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -211,7 +211,7 @@ useHead({
             '@type': 'WebApplication',
             name: '背景图案生成器',
             description: '免费在线CSS背景图案生成工具，创建各种背景图案',
-            url: 'https://util.cn/tools/background-pattern-generator',
+            url: 'https://www.util.cn/tools/background-pattern-generator',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -235,19 +235,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '背景图案生成器',
-                item: 'https://util.cn/tools/background-pattern-generator'
+                item: 'https://www.util.cn/tools/background-pattern-generator'
               }
             ]
           },

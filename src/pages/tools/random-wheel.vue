@@ -203,13 +203,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '随机大转盘 - 专业抽奖转盘工具',
   ogDescription: '支持自定义奖项和权重的专业转盘抽奖工具，完美适用于各种抽奖场景。',
-  ogImage: 'https://util.cn/images/tools/random-wheel.png',
-  ogUrl: 'https://util.cn/tools/random-wheel',
+  ogImage: 'https://www.util.cn/images/tools/random-wheel.png',
+  ogUrl: 'https://www.util.cn/tools/random-wheel',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '随机大转盘 - 专业抽奖转盘工具',
   twitterDescription: '支持自定义奖项和权重的专业转盘抽奖工具，完美适用于各种抽奖场景。',
-  twitterImage: 'https://util.cn/images/tools/random-wheel.png'
+  twitterImage: 'https://www.util.cn/images/tools/random-wheel.png'
 })
 
 // JSON-LD 结构化数据
@@ -224,7 +224,7 @@ useHead({
             '@type': 'WebApplication',
             name: '随机大转盘',
             description: '自定义奖项的转盘抽奖工具，支持编辑奖项内容和概率',
-            url: 'https://util.cn/tools/random-wheel',
+            url: 'https://www.util.cn/tools/random-wheel',
             applicationCategory: 'EntertainmentApplication',
             operatingSystem: 'Any',
             offers: {
@@ -248,25 +248,25 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '随机决策',
-                item: 'https://util.cn/tools?category=random'
+                item: 'https://www.util.cn/tools?category=random'
               },
               {
                 '@type': 'ListItem',
                 position: 4,
                 name: '随机大转盘',
-                item: 'https://util.cn/tools/random-wheel'
+                item: 'https://www.util.cn/tools/random-wheel'
               }
             ]
           }

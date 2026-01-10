@@ -54,7 +54,9 @@
 <meta name="rating" content="General">
 
 <!-- 51la网站统计 -->
-<script charset="UTF-8" id="51la_code" async crossorigin="anonymous" src="https://sdk.51.la/js-sdk-pro.min.js?id=3OM52V0xJAPv6ozF&hash=pro"></script>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3OM52V0xJAPv6ozF",ck:"3OM52V0xJAPv6ozF"})</script>
+
 
 <!-- 备用统计代码 - 防止主统计失败 -->
 <script>
@@ -69,7 +71,7 @@ window.addEventListener('load', function() {
             // 这里可以添加备用统计代码
             (function() {
                 var script = document.createElement('script');
-                script.src = 'https://sdk.51.la/js-sdk-pro.min.js?id=3OM52V0xJAPv6ozF&hash=backup';
+                script.src = 'https://sdk.51.la/js-sdk-pro.min.js?id=3OM52V0xJAPv6ozF&ck=3OM52V0xJAPv6ozF';
                 script.async = true;
                 document.head.appendChild(script);
             })();

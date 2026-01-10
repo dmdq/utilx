@@ -232,13 +232,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '繁简体转换工具 - 繁体字与简体字互转',
   ogDescription: '免费在线繁简体转换工具，支持繁体字与简体字相互转换，支持常见词汇转换。',
-  ogImage: 'https://util.cn/images/tools/traditional-simplified.png',
-  ogUrl: 'https://util.cn/tools/traditional-simplified',
+  ogImage: 'https://www.util.cn/images/tools/traditional-simplified.png',
+  ogUrl: 'https://www.util.cn/tools/traditional-simplified',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '繁简体转换工具 - 繁体字与简体字互转',
   twitterDescription: '免费在线繁简体转换工具，支持繁体字与简体字相互转换，支持常见词汇转换。',
-  twitterImage: 'https://util.cn/images/tools/traditional-simplified.png'
+  twitterImage: 'https://www.util.cn/images/tools/traditional-simplified.png'
 })
 
 // JSON-LD 结构化数据
@@ -253,7 +253,7 @@ useHead({
             '@type': 'WebApplication',
             name: '繁简体转换工具',
             description: '免费在线繁简体转换工具，支持繁体字与简体字相互转换',
-            url: 'https://util.cn/tools/traditional-simplified',
+            url: 'https://www.util.cn/tools/traditional-simplified',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -276,19 +276,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '繁简体转换',
-                item: 'https://util.cn/tools/traditional-simplified'
+                item: 'https://www.util.cn/tools/traditional-simplified'
               }
             ]
           },

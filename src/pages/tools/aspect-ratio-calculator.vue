@@ -235,13 +235,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '宽高比计算器 - 免费在线宽高比计算工具',
   ogDescription: '专业的宽高比计算工具，支持常用比例预设、实时预览、CSS代码生成。帮助您快速计算和锁定元素宽高比。',
-  ogImage: 'https://util.cn/images/tools/aspect-ratio-calculator.png',
-  ogUrl: 'https://util.cn/tools/aspect-ratio-calculator',
+  ogImage: 'https://www.util.cn/images/tools/aspect-ratio-calculator.png',
+  ogUrl: 'https://www.util.cn/tools/aspect-ratio-calculator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '宽高比计算器 - 免费在线宽高比计算',
   twitterDescription: '专业的宽高比计算工具，支持常用比例预设、实时预览、CSS代码生成。',
-  twitterImage: 'https://util.cn/images/tools/aspect-ratio-calculator.png'
+  twitterImage: 'https://www.util.cn/images/tools/aspect-ratio-calculator.png'
 })
 
 // JSON-LD 结构化数据
@@ -256,7 +256,7 @@ useHead({
             '@type': 'WebApplication',
             name: '宽高比计算器',
             description: '免费在线宽高比计算工具，支持常用比例预设和CSS代码生成',
-            url: 'https://util.cn/tools/aspect-ratio-calculator',
+            url: 'https://www.util.cn/tools/aspect-ratio-calculator',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -279,19 +279,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '宽高比计算器',
-                item: 'https://util.cn/tools/aspect-ratio-calculator'
+                item: 'https://www.util.cn/tools/aspect-ratio-calculator'
               }
             ]
           },

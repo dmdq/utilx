@@ -255,13 +255,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'EM断点生成器 - 免费在线px转em工具',
   ogDescription: '专业的EM断点生成工具，支持像素值转em单位、媒体查询代码自动生成。帮助您创建更精准的响应式布局。',
-  ogImage: 'https://util.cn/images/tools/em-breakpoint-generator.png',
-  ogUrl: 'https://util.cn/tools/em-breakpoint-generator',
+  ogImage: 'https://www.util.cn/images/tools/em-breakpoint-generator.png',
+  ogUrl: 'https://www.util.cn/tools/em-breakpoint-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'EM断点生成器 - 免费在线px转em',
   twitterDescription: '专业的EM断点生成工具，支持像素值转em单位、媒体查询代码自动生成。',
-  twitterImage: 'https://util.cn/images/tools/em-breakpoint-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/em-breakpoint-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -276,7 +276,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'EM断点生成器',
             description: '免费在线EM断点生成工具，支持px转em和媒体查询代码生成',
-            url: 'https://util.cn/tools/em-breakpoint-generator',
+            url: 'https://www.util.cn/tools/em-breakpoint-generator',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -299,19 +299,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'EM断点生成器',
-                item: 'https://util.cn/tools/em-breakpoint-generator'
+                item: 'https://www.util.cn/tools/em-breakpoint-generator'
               }
             ]
           },

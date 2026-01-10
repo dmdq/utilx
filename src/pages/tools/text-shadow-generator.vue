@@ -199,8 +199,8 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '文字阴影生成器 - text-shadow可视化工具',
   ogDescription: '专业的在线text-shadow生成工具，支持多层文字阴影效果、实时预览、一键复制CSS代码。',
-  ogImage: 'https://util.cn/images/tools/text-shadow-generator.png',
-  ogUrl: 'https://util.cn/tools/text-shadow-generator',
+  ogImage: 'https://www.util.cn/images/tools/text-shadow-generator.png',
+  ogUrl: 'https://www.util.cn/tools/text-shadow-generator',
   ogType: 'website'
 })
 
@@ -216,7 +216,7 @@ useHead({
             '@type': 'WebApplication',
             name: '文字阴影生成器',
             description: '在线text-shadow生成工具，创建多层文字阴影效果',
-            url: 'https://util.cn/tools/text-shadow-generator',
+            url: 'https://www.util.cn/tools/text-shadow-generator',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -239,19 +239,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '文字阴影生成器',
-                item: 'https://util.cn/tools/text-shadow-generator'
+                item: 'https://www.util.cn/tools/text-shadow-generator'
               }
             ]
           }

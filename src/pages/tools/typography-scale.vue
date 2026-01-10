@@ -201,8 +201,8 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '字体比例系统 - 和谐的字体层级',
   ogDescription: '专业的在线字体比例系统生成工具，基于音乐音阶生成和谐的字体大小层级。',
-  ogImage: 'https://util.cn/images/tools/typography-scale.png',
-  ogUrl: 'https://util.cn/tools/typography-scale',
+  ogImage: 'https://www.util.cn/images/tools/typography-scale.png',
+  ogUrl: 'https://www.util.cn/tools/typography-scale',
   ogType: 'website'
 })
 
@@ -218,7 +218,7 @@ useHead({
             '@type': 'WebApplication',
             name: '字体比例系统',
             description: '在线字体比例系统生成工具，基于音乐音阶生成和谐的字体大小层级',
-            url: 'https://util.cn/tools/typography-scale',
+            url: 'https://www.util.cn/tools/typography-scale',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -241,19 +241,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '字体比例系统',
-                item: 'https://util.cn/tools/typography-scale'
+                item: 'https://www.util.cn/tools/typography-scale'
               }
             ]
           }

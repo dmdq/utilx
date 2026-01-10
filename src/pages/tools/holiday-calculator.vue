@@ -333,7 +333,7 @@ useHead({
             '@type': 'WebApplication',
             name: '中国法定节假日查询工具',
             description: '在线查询中国法定节假日安排、调休信息',
-            url: 'https://util.cn/tools/holiday-calculator',
+            url: 'https://www.util.cn/tools/holiday-calculator',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -349,19 +349,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '节假日查询',
-                item: 'https://util.cn/tools/holiday-calculator'
+                item: 'https://www.util.cn/tools/holiday-calculator'
               }
             ]
           }

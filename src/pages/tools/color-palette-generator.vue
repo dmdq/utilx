@@ -254,13 +254,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '调色板生成器 - 专业配色方案生成工具',
   ogDescription: '基于色彩理论的智能配色工具，支持8种专业配色规则，一键生成和谐色彩组合。',
-  ogImage: 'https://util.cn/images/tools/color-palette-generator.png',
-  ogUrl: 'https://util.cn/tools/color-palette-generator',
+  ogImage: 'https://www.util.cn/images/tools/color-palette-generator.png',
+  ogUrl: 'https://www.util.cn/tools/color-palette-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '调色板生成器 - 在线配色方案生成',
   twitterDescription: '支持8种专业配色规则，一键生成和谐配色方案。',
-  twitterImage: 'https://util.cn/images/tools/color-palette-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/color-palette-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -275,7 +275,7 @@ useHead({
             '@type': 'WebApplication',
             name: '调色板生成器',
             description: '在线配色方案生成工具，支持多种配色规则',
-            url: 'https://util.cn/tools/color-palette-generator',
+            url: 'https://www.util.cn/tools/color-palette-generator',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -299,19 +299,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '调色板生成器',
-                item: 'https://util.cn/tools/color-palette-generator'
+                item: 'https://www.util.cn/tools/color-palette-generator'
               }
             ]
           },

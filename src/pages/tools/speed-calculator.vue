@@ -461,7 +461,7 @@ useHead({
             '@type': 'WebApplication',
             name: '速度计算器',
             description: '在线速度计算器，支持速度/时间/距离互转计算',
-            url: 'https://util.cn/tools/speed-calculator',
+            url: 'https://www.util.cn/tools/speed-calculator',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {

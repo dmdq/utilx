@@ -172,7 +172,7 @@
           >
             <Menu class="w-6 h-6" />
           </button>
-          <NuxtLink to="/" class="font-bold hover:text-primary transition-colors">Util.cn</NuxtLink>
+          <NuxtLink to="/" class="font-bold hover:text-primary transition-colors">有条工具</NuxtLink>
         </div>
         <button class="p-2 text-muted-foreground" @click="openSearch">
           <Search class="w-5 h-5" />
@@ -535,10 +535,10 @@ const fetchUserIP = async () => {
   try {
     // 使用多个IP服务作为备选
     const ipServices = [
+      'https://api.ip.sb/ip',
+      'https://ifconfig.me/ip',
       'https://api.ipify.org?format=json',
       'https://ipapi.co/json/',
-      'https://api.ip.sb/ip',
-      'https://ifconfig.me/ip'
     ]
 
     // 先尝试从 localStorage 获取缓存的IP（缓存1小时）

@@ -215,13 +215,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '文本转义工具 - HTML/XML/JSON/SQL特殊字符转义',
   ogDescription: '专业的文本转义工具，支持HTML、XML、JSON、SQL、URL转义和反转义。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/text-escape.png',
-  ogUrl: 'https://util.cn/tools/text-escape',
+  ogImage: 'https://www.util.cn/images/tools/text-escape.png',
+  ogUrl: 'https://www.util.cn/tools/text-escape',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '文本转义工具 - HTML/XML/JSON/SQL特殊字符转义',
   twitterDescription: '专业的文本转义工具，支持HTML、XML、JSON、SQL、URL转义和反转义。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/text-escape.png'
+  twitterImage: 'https://www.util.cn/images/tools/text-escape.png'
 })
 
 // JSON-LD 结构化数据
@@ -236,7 +236,7 @@ useHead({
             '@type': 'WebApplication',
             name: '文本转义工具',
             description: '在线文本转义工具，支持HTML、XML、JSON、SQL、URL转义和反转义',
-            url: 'https://util.cn/tools/text-escape',
+            url: 'https://www.util.cn/tools/text-escape',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -262,19 +262,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '文本转义',
-                item: 'https://util.cn/tools/text-escape'
+                item: 'https://www.util.cn/tools/text-escape'
               }
             ]
           },

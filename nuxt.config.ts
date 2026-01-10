@@ -5,7 +5,7 @@ import { visualizer } from 'rollup-plugin-visualizer'
 const isDev = process.env.NODE_ENV === 'development'
 
 export default defineNuxtConfig({
-  // Nuxt 4.2.2 的新devtools配置
+  // Nuxt 4.0.0 的新devtools配置
   devtools: {
     enabled: isDev,
     // 启用Nuxt 4的新功能
@@ -112,13 +112,15 @@ export default defineNuxtConfig({
     // 开发环境优化
     server: isDev ? {
       fs: {
-        strict: false
+        strict: false,
+        // 限制文件监听数量
+        maxRooms: 100
       },
       watch: {
         // 开发环境使用更高效的监听
         usePolling: false,
-        depth: 2,
-        // 排除更多文件以减少监听负担
+        depth: 0,
+        // 排除更多文件以减少监听负担（解决 EMFILE 错误）
         ignored: [
           '**/node_modules/**',
           '**/.git/**',
@@ -135,13 +137,39 @@ export default defineNuxtConfig({
           '**/docs/**',
           '**/src-tauri/**',
           '**/*.bak',
-          '!**/src-tauri/tauri.conf.json'
+          '!**/src-tauri/tauri.conf.json',
+          // 排除 blog 目录（避免监听大量博客文件）
+          '**/blog/**',
+          '**/blog/content/**',
+          '**/blog/public/**',
+          '**/blog/layouts/**',
+          '**/blog/themes/**',
+          // 排除构建产物
+          '**/*.min.js',
+          '**/*.min.css',
+          // 排除图片和媒体文件
+          '**/*.{png,jpg,jpeg,gif,svg,ico,webp,mp4,mp3,wav,ogg}',
+          // 排除字体文件
+          '**/*.{woff,woff2,ttf,eot}',
+          // 排除测试文件
+          '**/__tests__/**',
+          '**/*.test.{js,ts,vue}',
+          '**/*.spec.{js,ts,vue}',
+          // 排除数据文件（避免监听大型JSON文件）
+          '**/data/**/*.json',
+          '**/public/**',
+          // 排除所有工具页面（440个文件）
+          '**/src/pages/tools/**'
         ]
       },
       // 减少开发服务器的资源使用
       hmr: {
-        overlay: false
-      }
+        overlay: false,
+        // 降低热更新频率
+        timeout: 5000
+      },
+      // 优化中间件
+      middlewareMode: false
     } : {
       fs: {
         strict: false
@@ -174,8 +202,6 @@ export default defineNuxtConfig({
       // 提高构建速度
       chunkSizeWarningLimit: 1000
     },
-    // 外部依赖配置（对开发和生产环境都生效）
-    external: [],
     optimizeDeps: {
       // 预构建优化
       include: [
@@ -192,12 +218,12 @@ export default defineNuxtConfig({
         'exifreader',
         'jszip'
       ],
-      // 强制重新构建
-      force: isDev
+      // 移除强制重新构建，大幅提升启动速度
+      force: false
     },
     },
 
-  // Nuxt 4.2.2 兼容日期
+  // Nuxt 4.0.0 兼容日期
   compatibilityDate: '2024-11-25',
 
   // Nuxt 4的新功能
@@ -214,14 +240,6 @@ export default defineNuxtConfig({
   ...(isDev ? {
     // 启用SSR以确保资源路径正确
     ssr: true,
-    // 减少构建时间
-    nitro: {
-      minify: false,
-      sourceMap: false,
-      prerender: {
-        routes: []
-      }
-    },
     // 优化页面加载 - 启用进度条
     loading: {
       color: 'rgb(80, 80, 80)',
@@ -253,25 +271,13 @@ export default defineNuxtConfig({
         '/',
         '/all',
         '/about',
-        '/faq',
-        '/privacy',
-        '/terms',
-        '/ai',
-        '/crypto',
-        '/dev',
-        '/encode',
-        '/format',
-        '/image',
-        '/network',
-        '/text',
-        '/time',
         '/tags',
         '/sitemap'
       ],
       // 优化预渲染配置
-      concurrency: 1, // 减少并发数
+      concurrency: 5, // 提高并发数加快预渲染
       failOnError: false, // 遇到错误不中断构建
-      interval: 100 // 添加间隔，避免过快渲染
+      interval: 0 // 移除间隔，加快渲染速度
     },
     // 静态资源处理
     publicAssets: [

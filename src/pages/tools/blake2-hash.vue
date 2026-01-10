@@ -168,7 +168,7 @@ useHead({
         '@type': 'WebApplication',
         name: 'BLAKE2哈希计算器',
         description: '在线BLAKE2b/BLAKE2s哈希计算工具',
-        url: 'https://util.cn/tools/blake2-hash',
+        url: 'https://www.util.cn/tools/blake2-hash',
         applicationCategory: 'DeveloperApplication',
         operatingSystem: 'Any'
       })

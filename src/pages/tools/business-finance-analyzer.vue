@@ -331,13 +331,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '企业财务分析器 - 专业财务健康度评估工具',
   ogDescription: '分析企业财务指标，提供财务健康度评估和经营建议。专业准确，操作简单，助力企业财务决策。',
-  ogImage: 'https://util.cn/images/tools/business-finance-analyzer.png',
-  ogUrl: 'https://util.cn/tools/business-finance-analyzer',
+  ogImage: 'https://www.util.cn/images/tools/business-finance-analyzer.png',
+  ogUrl: 'https://www.util.cn/tools/business-finance-analyzer',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '企业财务分析器 - 财务指标与健康度评估',
   twitterDescription: '专业企业财务分析工具，分析关键财务指标，提供财务健康度评估和经营建议。',
-  twitterImage: 'https://util.cn/images/tools/business-finance-analyzer.png'
+  twitterImage: 'https://www.util.cn/images/tools/business-finance-analyzer.png'
 })
 
 // JSON-LD 结构化数据
@@ -352,7 +352,7 @@ useHead({
             '@type': 'WebApplication',
             name: '企业财务分析器',
             description: '专业的企业财务分析工具，分析财务指标，提供财务健康度评估和经营建议',
-            url: 'https://util.cn/tools/business-finance-analyzer',
+            url: 'https://www.util.cn/tools/business-finance-analyzer',
             applicationCategory: 'FinanceApplication',
             operatingSystem: 'Any',
             offers: {
@@ -378,19 +378,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '企业财务分析器',
-                item: 'https://util.cn/tools/business-finance-analyzer'
+                item: 'https://www.util.cn/tools/business-finance-analyzer'
               }
             ]
           },

@@ -247,13 +247,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'JSON格式化工具 - 免费在线JSON解析美化工具',
   ogDescription: '专业的JSON格式化工具，支持一键美化、压缩、语法验证。纯前端处理，数据安全可靠，支持多种缩进格式和自动修复。',
-  ogImage: 'https://util.cn/images/tools/json-formatter.png',
-  ogUrl: 'https://util.cn/tools/json-formatter',
+  ogImage: 'https://www.util.cn/images/tools/json-formatter.png',
+  ogUrl: 'https://www.util.cn/tools/json-formatter',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'JSON格式化工具 - 免费在线JSON解析美化',
   twitterDescription: '专业的JSON格式化工具，支持一键美化、压缩、语法验证。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/json-formatter.png'
+  twitterImage: 'https://www.util.cn/images/tools/json-formatter.png'
 })
 
 // JSON-LD 结构化数据
@@ -268,7 +268,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'JSON格式化工具',
             description: '免费在线JSON格式化、解析和验证工具',
-            url: 'https://util.cn/tools/json-formatter',
+            url: 'https://www.util.cn/tools/json-formatter',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -293,19 +293,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'JSON格式化',
-                item: 'https://util.cn/tools/json-formatter'
+                item: 'https://www.util.cn/tools/json-formatter'
               }
             ]
           },

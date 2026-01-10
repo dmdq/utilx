@@ -255,13 +255,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '维吉尼亚密码工具 - 多表替换加密解密',
   ogDescription: '使用密钥进行多表替换加密和解密，安全性高于凯撒密码，支持自动转换大小写。',
-  ogImage: 'https://util.cn/images/tools/vigenere-cipher.png',
-  ogUrl: 'https://util.cn/tools/vigenere-cipher',
+  ogImage: 'https://www.util.cn/images/tools/vigenere-cipher.png',
+  ogUrl: 'https://www.util.cn/tools/vigenere-cipher',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '维吉尼亚密码工具 - 多表替换加密解密',
   twitterDescription: '使用密钥进行多表替换加密和解密，安全性高于凯撒密码。',
-  twitterImage: 'https://util.cn/images/tools/vigenere-cipher.png'
+  twitterImage: 'https://www.util.cn/images/tools/vigenere-cipher.png'
 })
 
 // JSON-LD 结构化数据
@@ -276,7 +276,7 @@ useHead({
             '@type': 'WebApplication',
             name: '维吉尼亚密码工具',
             description: '在线维吉尼亚密码加密解密工具，使用多表替换算法',
-            url: 'https://util.cn/tools/vigenere-cipher',
+            url: 'https://www.util.cn/tools/vigenere-cipher',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {
@@ -300,19 +300,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '维吉尼亚密码',
-                item: 'https://util.cn/tools/vigenere-cipher'
+                item: 'https://www.util.cn/tools/vigenere-cipher'
               }
             ]
           },

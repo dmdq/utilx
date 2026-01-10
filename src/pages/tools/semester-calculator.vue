@@ -326,7 +326,7 @@ useHead({
             '@type': 'WebApplication',
             name: '学期计算器',
             description: '在线学期计算器，查询学年、学期起止日期',
-            url: 'https://util.cn/tools/semester-calculator',
+            url: 'https://www.util.cn/tools/semester-calculator',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -342,19 +342,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '学期计算器',
-                item: 'https://util.cn/tools/semester-calculator'
+                item: 'https://www.util.cn/tools/semester-calculator'
               }
             ]
           }

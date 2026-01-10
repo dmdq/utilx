@@ -325,13 +325,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '数据结构构建器 - 可视化构建树和图结构',
   ogDescription: '专业的数据结构可视化工具，支持树、图、数组、链表等常用数据结构。一键生成多语言代码，纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/data-structure-builder.png',
-  ogUrl: 'https://util.cn/tools/data-structure-builder',
+  ogImage: 'https://www.util.cn/images/tools/data-structure-builder.png',
+  ogUrl: 'https://www.util.cn/tools/data-structure-builder',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '数据结构构建器 - 可视化构建树和图结构',
   twitterDescription: '专业的数据结构可视化工具，支持树、图、数组、链表等常用数据结构。一键生成多语言代码，纯前端处理。',
-  twitterImage: 'https://util.cn/images/tools/data-structure-builder.png'
+  twitterImage: 'https://www.util.cn/images/tools/data-structure-builder.png'
 })
 
 // JSON-LD 结构化数据
@@ -346,7 +346,7 @@ useHead({
             '@type': 'WebApplication',
             name: '数据结构构建器',
             description: '免费在线数据结构可视化构建工具',
-            url: 'https://util.cn/tools/data-structure-builder',
+            url: 'https://www.util.cn/tools/data-structure-builder',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'Any',
             offers: {
@@ -370,19 +370,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '数据结构构建器',
-                item: 'https://util.cn/tools/data-structure-builder'
+                item: 'https://www.util.cn/tools/data-structure-builder'
               }
             ]
           },

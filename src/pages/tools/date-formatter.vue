@@ -126,7 +126,7 @@ useHead({
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: '日期格式化工具',
-      url: 'https://util.cn/tools/date-formatter'
+      url: 'https://www.util.cn/tools/date-formatter'
     })
   }]
 })

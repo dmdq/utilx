@@ -464,13 +464,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'Spine动画编辑器 - 专业骨骼动画在线编辑工具',
   ogDescription: '专业的Spine骨骼动画在线编辑器，支持实时渲染、多引擎导出。纯本地处理，数据安全可靠，游戏开发必备工具。',
-  ogImage: 'https://util.cn/images/tools/spine-animation-editor.png',
-  ogUrl: 'https://util.cn/tools/spine-animation-editor',
+  ogImage: 'https://www.util.cn/images/tools/spine-animation-editor.png',
+  ogUrl: 'https://www.util.cn/tools/spine-animation-editor',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Spine动画编辑器 - 骨骼动画在线编辑与预览',
   twitterDescription: '专业Spine骨骼动画编辑器，支持实时渲染和动画控制，游戏开发必备工具。',
-  twitterImage: 'https://util.cn/images/tools/spine-animation-editor.png'
+  twitterImage: 'https://www.util.cn/images/tools/spine-animation-editor.png'
 })
 
 // JSON-LD 结构化数据
@@ -485,7 +485,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'Spine动画编辑器',
             description: '专业的Spine骨骼动画在线编辑器，支持WebGL实时渲染、动画播放控制、皮肤切换等功能',
-            url: 'https://util.cn/tools/spine-animation-editor',
+            url: 'https://www.util.cn/tools/spine-animation-editor',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -511,19 +511,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'Spine动画编辑器',
-                item: 'https://util.cn/tools/spine-animation-editor'
+                item: 'https://www.util.cn/tools/spine-animation-editor'
               }
             ]
           },

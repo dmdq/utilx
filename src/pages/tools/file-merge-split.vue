@@ -503,13 +503,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '文件合并拆分工具 - 免费在线文本文件分割合并',
   ogDescription: '专业的文件合并与拆分工具，支持按行数、大小拆分文本文件，可合并多个文件。纯前端处理，数据安全可靠，适用于日志处理、数据分割等场景。',
-  ogImage: 'https://util.cn/images/tools/file-merge-split.png',
-  ogUrl: 'https://util.cn/tools/file-merge-split',
+  ogImage: 'https://www.util.cn/images/tools/file-merge-split.png',
+  ogUrl: 'https://www.util.cn/tools/file-merge-split',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '文件合并拆分工具 - 免费在线文本文件分割合并',
   twitterDescription: '专业的文件合并与拆分工具，支持按行数、大小拆分文本文件，可合并多个文件。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/file-merge-split.png'
+  twitterImage: 'https://www.util.cn/images/tools/file-merge-split.png'
 })
 
 // JSON-LD 结构化数据
@@ -524,7 +524,7 @@ useHead({
             '@type': 'WebApplication',
             name: '文件合并拆分工具',
             description: '免费在线文件合并与拆分工具，支持按行数、大小拆分文本文件',
-            url: 'https://util.cn/tools/file-merge-split',
+            url: 'https://www.util.cn/tools/file-merge-split',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {
@@ -548,19 +548,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '文件合并拆分',
-                item: 'https://util.cn/tools/file-merge-split'
+                item: 'https://www.util.cn/tools/file-merge-split'
               }
             ]
           },

@@ -196,13 +196,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '句首大写工具 - 每个句子首字母大写',
   ogDescription: '免费在线句首大写工具，将每个句子的首字母转换为大写，支持多种大小写转换模式。',
-  ogImage: 'https://util.cn/images/tools/sentence-case.png',
-  ogUrl: 'https://util.cn/tools/sentence-case',
+  ogImage: 'https://www.util.cn/images/tools/sentence-case.png',
+  ogUrl: 'https://www.util.cn/tools/sentence-case',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '句首大写工具 - 每个句子首字母大写',
   twitterDescription: '免费在线句首大写工具，将每个句子的首字母转换为大写，支持多种大小写转换模式。',
-  twitterImage: 'https://util.cn/images/tools/sentence-case.png'
+  twitterImage: 'https://www.util.cn/images/tools/sentence-case.png'
 })
 
 // JSON-LD 结构化数据
@@ -217,7 +217,7 @@ useHead({
             '@type': 'WebApplication',
             name: '句首大写工具',
             description: '免费在线句首大写工具，将每个句子的首字母转换为大写',
-            url: 'https://util.cn/tools/sentence-case',
+            url: 'https://www.util.cn/tools/sentence-case',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -241,19 +241,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '句首大写',
-                item: 'https://util.cn/tools/sentence-case'
+                item: 'https://www.util.cn/tools/sentence-case'
               }
             ]
           },

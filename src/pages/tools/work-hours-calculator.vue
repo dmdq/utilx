@@ -384,7 +384,7 @@ useHead({
             '@type': 'WebApplication',
             name: '工作时间计算器',
             description: '在线计算工作时长和加班费',
-            url: 'https://util.cn/tools/work-hours-calculator',
+            url: 'https://www.util.cn/tools/work-hours-calculator',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -400,19 +400,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '工作时间计算器',
-                item: 'https://util.cn/tools/work-hours-calculator'
+                item: 'https://www.util.cn/tools/work-hours-calculator'
               }
             ]
           }

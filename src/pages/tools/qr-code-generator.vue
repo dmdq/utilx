@@ -248,13 +248,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '二维码生成器 - 免费在线QR码创建',
   ogDescription: '专业的二维码生成工具，支持URL、文本、颜色和尺寸定制。快速生成高质量二维码。',
-  ogImage: 'https://util.cn/images/tools/qr-code-generator.png',
-  ogUrl: 'https://util.cn/tools/qr-code-generator',
+  ogImage: 'https://www.util.cn/images/tools/qr-code-generator.png',
+  ogUrl: 'https://www.util.cn/tools/qr-code-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '二维码生成器 - 免费在线QR码创建',
   twitterDescription: '专业的二维码生成工具，支持URL、文本、颜色和尺寸定制。',
-  twitterImage: 'https://util.cn/images/tools/qr-code-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/qr-code-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -269,7 +269,7 @@ useHead({
             '@type': 'WebApplication',
             name: '二维码生成器',
             description: '免费在线二维码生成工具，支持多种内容格式和样式定制',
-            url: 'https://util.cn/tools/qr-code-generator',
+            url: 'https://www.util.cn/tools/qr-code-generator',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -294,19 +294,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '二维码生成器',
-                item: 'https://util.cn/tools/qr-code-generator'
+                item: 'https://www.util.cn/tools/qr-code-generator'
               }
             ]
           },

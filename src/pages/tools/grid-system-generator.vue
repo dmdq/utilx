@@ -182,13 +182,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '网格系统生成器 - 免费在线CSS Grid布局工具',
   ogDescription: '专业的网格系统生成工具，支持12/16/24列CSS Grid布局，可视化预览，一键生成代码。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/grid-system-generator.png',
-  ogUrl: 'https://util.cn/tools/grid-system-generator',
+  ogImage: 'https://www.util.cn/images/tools/grid-system-generator.png',
+  ogUrl: 'https://www.util.cn/tools/grid-system-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '网格系统生成器 - 免费在线CSS Grid布局工具',
   twitterDescription: '专业的网格系统生成工具，支持12/16/24列CSS Grid布局，可视化预览，一键生成代码。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/grid-system-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/grid-system-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -203,7 +203,7 @@ useHead({
             '@type': 'WebApplication',
             name: '网格系统生成器',
             description: '免费在线网格系统生成工具，支持CSS Grid布局系统',
-            url: 'https://util.cn/tools/grid-system-generator',
+            url: 'https://www.util.cn/tools/grid-system-generator',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {
@@ -227,13 +227,13 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Util工具箱',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '网格系统生成器',
-                item: 'https://util.cn/tools/grid-system-generator'
+                item: 'https://www.util.cn/tools/grid-system-generator'
               }
             ]
           },

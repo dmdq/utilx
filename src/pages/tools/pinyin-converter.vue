@@ -195,13 +195,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '拼音转换工具 - 汉字转拼音带声调',
   ogDescription: '免费在线拼音转换工具，支持有声调、无声调、首字母等多种格式输出。简单易用，实时转换。',
-  ogImage: 'https://util.cn/images/tools/pinyin-converter.png',
-  ogUrl: 'https://util.cn/tools/pinyin-converter',
+  ogImage: 'https://www.util.cn/images/tools/pinyin-converter.png',
+  ogUrl: 'https://www.util.cn/tools/pinyin-converter',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '拼音转换工具 - 汉字转拼音带声调',
   twitterDescription: '免费在线拼音转换工具，支持有声调、无声调、首字母等多种格式输出。',
-  twitterImage: 'https://util.cn/images/tools/pinyin-converter.png'
+  twitterImage: 'https://www.util.cn/images/tools/pinyin-converter.png'
 })
 
 // JSON-LD 结构化数据
@@ -216,7 +216,7 @@ useHead({
             '@type': 'WebApplication',
             name: '拼音转换工具',
             description: '免费在线拼音转换工具，将汉字转换为拼音',
-            url: 'https://util.cn/tools/pinyin-converter',
+            url: 'https://www.util.cn/tools/pinyin-converter',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -240,19 +240,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '拼音转换',
-                item: 'https://util.cn/tools/pinyin-converter'
+                item: 'https://www.util.cn/tools/pinyin-converter'
               }
             ]
           },

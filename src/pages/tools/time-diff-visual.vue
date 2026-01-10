@@ -391,7 +391,7 @@ useHead({
             '@type': 'WebApplication',
             name: '时间差可视化工具',
             description: '在线时间差可视化工具，直观展示时间跨度',
-            url: 'https://util.cn/tools/time-diff-visual',
+            url: 'https://www.util.cn/tools/time-diff-visual',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -407,19 +407,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '时间差可视化',
-                item: 'https://util.cn/tools/time-diff-visual'
+                item: 'https://www.util.cn/tools/time-diff-visual'
               }
             ]
           }

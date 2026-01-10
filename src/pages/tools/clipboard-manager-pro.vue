@@ -513,8 +513,8 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '增强剪贴板管理器 - 分类搜索格式化剪贴板历史',
   ogDescription: '专业的剪贴板管理器，支持内容分类、智能搜索、格式化预览。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/clipboard-manager-pro.png',
-  ogUrl: 'https://util.cn/tools/clipboard-manager-pro',
+  ogImage: 'https://www.util.cn/images/tools/clipboard-manager-pro.png',
+  ogUrl: 'https://www.util.cn/tools/clipboard-manager-pro',
   ogType: 'website'
 })
 

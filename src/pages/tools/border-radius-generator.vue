@@ -336,13 +336,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'CSS圆角生成器 - border-radius可视化工具',
   ogDescription: '专业的CSS border-radius生成工具，支持拖拽调整、快捷预设和一键复制CSS代码。',
-  ogImage: 'https://util.cn/images/tools/border-radius-generator.png',
-  ogUrl: 'https://util.cn/tools/border-radius-generator',
+  ogImage: 'https://www.util.cn/images/tools/border-radius-generator.png',
+  ogUrl: 'https://www.util.cn/tools/border-radius-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'CSS圆角生成器 - border-radius可视化',
   twitterDescription: '专业的CSS border-radius生成工具，支持拖拽调整、快捷预设和一键复制CSS代码。',
-  twitterImage: 'https://util.cn/images/tools/border-radius-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/border-radius-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -357,7 +357,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'CSS圆角生成器',
             description: '在线CSS border-radius可视化生成工具',
-            url: 'https://util.cn/tools/border-radius-generator',
+            url: 'https://www.util.cn/tools/border-radius-generator',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -381,19 +381,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'CSS圆角生成器',
-                item: 'https://util.cn/tools/border-radius-generator'
+                item: 'https://www.util.cn/tools/border-radius-generator'
               }
             ]
           },

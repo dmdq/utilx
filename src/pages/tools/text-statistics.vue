@@ -402,13 +402,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '文本统计分析工具 - 在线词频统计、字符频率、行数统计',
   ogDescription: '专业的文本统计分析工具，支持词频统计、字符频率分析、行数统计、段落数统计。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/text-statistics.png',
-  ogUrl: 'https://util.cn/tools/text-statistics',
+  ogImage: 'https://www.util.cn/images/tools/text-statistics.png',
+  ogUrl: 'https://www.util.cn/tools/text-statistics',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '文本统计分析工具 - 在线词频统计、字符频率、行数统计',
   twitterDescription: '专业的文本统计分析工具，支持词频统计、字符频率分析、行数统计、段落数统计。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/text-statistics.png'
+  twitterImage: 'https://www.util.cn/images/tools/text-statistics.png'
 })
 
 // JSON-LD 结构化数据
@@ -423,7 +423,7 @@ useHead({
             '@type': 'WebApplication',
             name: '文本统计分析工具',
             description: '在线文本统计分析工具，支持词频统计、字符频率分析、行数统计',
-            url: 'https://util.cn/tools/text-statistics',
+            url: 'https://www.util.cn/tools/text-statistics',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -449,19 +449,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '文本统计分析',
-                item: 'https://util.cn/tools/text-statistics'
+                item: 'https://www.util.cn/tools/text-statistics'
               }
             ]
           }

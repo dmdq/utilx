@@ -283,13 +283,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '图标字体生成器 - 免费在线SVG转字体',
   ogDescription: '专业的图标字体生成工具，将SVG图标转换为Web字体使用，支持CSS代码导出。',
-  ogImage: 'https://util.cn/images/tools/icon-font-generator.png',
-  ogUrl: 'https://util.cn/tools/icon-font-generator',
+  ogImage: 'https://www.util.cn/images/tools/icon-font-generator.png',
+  ogUrl: 'https://www.util.cn/tools/icon-font-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '图标字体生成器 - 免费在线SVG转字体',
   twitterDescription: '专业的图标字体生成工具，将SVG图标转换为Web字体使用。',
-  twitterImage: 'https://util.cn/images/tools/icon-font-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/icon-font-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -304,7 +304,7 @@ useHead({
             '@type': 'WebApplication',
             name: '图标字体生成器',
             description: '免费在线图标字体生成工具，支持SVG转Web字体',
-            url: 'https://util.cn/tools/icon-font-generator',
+            url: 'https://www.util.cn/tools/icon-font-generator',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -328,19 +328,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '图标字体生成器',
-                item: 'https://util.cn/tools/icon-font-generator'
+                item: 'https://www.util.cn/tools/icon-font-generator'
               }
             ]
           },

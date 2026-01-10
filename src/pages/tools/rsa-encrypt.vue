@@ -255,13 +255,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'RSA加密解密工具 - 免费在线RSA加密',
   ogDescription: '专业的RSA加密解密工具，支持密钥对生成、公钥加密、私钥解密。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/rsa-encrypt.png',
-  ogUrl: 'https://util.cn/tools/rsa-encrypt',
+  ogImage: 'https://www.util.cn/images/tools/rsa-encrypt.png',
+  ogUrl: 'https://www.util.cn/tools/rsa-encrypt',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'RSA加密解密工具 - 免费在线RSA加密',
   twitterDescription: '专业的RSA加密解密工具，支持密钥对生成、公钥加密、私钥解密。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/rsa-encrypt.png'
+  twitterImage: 'https://www.util.cn/images/tools/rsa-encrypt.png'
 })
 
 // JSON-LD 结构化数据
@@ -276,7 +276,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'RSA加密解密工具',
             description: '免费在线RSA加密解密工具，支持密钥对生成、公钥加密、私钥解密',
-            url: 'https://util.cn/tools/rsa-encrypt',
+            url: 'https://www.util.cn/tools/rsa-encrypt',
             applicationCategory: 'SecurityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -301,13 +301,13 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Util工具箱',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'RSA加密解密工具',
-                item: 'https://util.cn/tools/rsa-encrypt'
+                item: 'https://www.util.cn/tools/rsa-encrypt'
               }
             ]
           }

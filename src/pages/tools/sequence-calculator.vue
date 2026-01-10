@@ -198,13 +198,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '数列计算器 - 免费在线等差等比数列计算工具',
   ogDescription: '专业的数列计算工具，支持等差数列、等比数列的通项公式和求和计算。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/sequence-calculator.png',
-  ogUrl: 'https://util.cn/tools/sequence-calculator',
+  ogImage: 'https://www.util.cn/images/tools/sequence-calculator.png',
+  ogUrl: 'https://www.util.cn/tools/sequence-calculator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '数列计算器 - 免费在线等差等比数列计算',
   twitterDescription: '专业的数列计算工具，支持等差数列、等比数列的通项公式和求和计算。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/sequence-calculator.png'
+  twitterImage: 'https://www.util.cn/images/tools/sequence-calculator.png'
 })
 
 // JSON-LD 结构化数据
@@ -219,7 +219,7 @@ useHead({
             '@type': 'WebApplication',
             name: '数列计算器',
             description: '免费在线数列计算器，支持等差数列和等比数列计算',
-            url: 'https://util.cn/tools/sequence-calculator',
+            url: 'https://www.util.cn/tools/sequence-calculator',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'Any',
             offers: {
@@ -243,19 +243,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '数列计算器',
-                item: 'https://util.cn/tools/sequence-calculator'
+                item: 'https://www.util.cn/tools/sequence-calculator'
               }
             ]
           },

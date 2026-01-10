@@ -532,13 +532,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'Cookies管理器 - 在线Cookie编辑与会话管理',
   ogDescription: '专业的Cookie管理工具，支持Cookie解析、编辑、导入导出。支持Secure、HttpOnly等属性标志，适用于开发调试和会话管理。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/cookies-manager.png',
-  ogUrl: 'https://util.cn/tools/cookies-manager',
+  ogImage: 'https://www.util.cn/images/tools/cookies-manager.png',
+  ogUrl: 'https://www.util.cn/tools/cookies-manager',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Cookies管理器 - 在线Cookie编辑与会话管理',
   twitterDescription: '专业的Cookie管理工具，支持Cookie解析、编辑、导入导出。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/cookies-manager.png'
+  twitterImage: 'https://www.util.cn/images/tools/cookies-manager.png'
 })
 
 // JSON-LD 结构化数据
@@ -553,7 +553,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'Cookies管理器',
             description: '免费在线Cookie管理工具，支持Cookie解析、编辑、导入导出',
-            url: 'https://util.cn/tools/cookies-manager',
+            url: 'https://www.util.cn/tools/cookies-manager',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -577,19 +577,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'Cookies管理器',
-                item: 'https://util.cn/tools/cookies-manager'
+                item: 'https://www.util.cn/tools/cookies-manager'
               }
             ]
           },

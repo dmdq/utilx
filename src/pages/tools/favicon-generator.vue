@@ -188,13 +188,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'Favicon生成器 - 免费在线网站图标生成工具',
   ogDescription: '专业的Favicon生成工具，上传图片一键生成多尺寸网站图标。支持实时预览，HTML代码自动导出，纯本地处理保护隐私。',
-  ogImage: 'https://util.cn/images/tools/favicon-generator.png',
-  ogUrl: 'https://util.cn/tools/favicon-generator',
+  ogImage: 'https://www.util.cn/images/tools/favicon-generator.png',
+  ogUrl: 'https://www.util.cn/tools/favicon-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Favicon生成器 - 免费在线网站图标生成',
   twitterDescription: '专业的Favicon生成工具，上传图片一键生成多尺寸网站图标。支持实时预览，纯本地处理保护隐私。',
-  twitterImage: 'https://util.cn/images/tools/favicon-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/favicon-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -209,7 +209,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'Favicon生成器',
             description: '免费在线Favicon生成工具，生成各尺寸网站图标',
-            url: 'https://util.cn/tools/favicon-generator',
+            url: 'https://www.util.cn/tools/favicon-generator',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -233,19 +233,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'Favicon生成器',
-                item: 'https://util.cn/tools/favicon-generator'
+                item: 'https://www.util.cn/tools/favicon-generator'
               }
             ]
           },

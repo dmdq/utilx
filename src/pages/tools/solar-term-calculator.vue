@@ -271,7 +271,7 @@ useHead({
             '@type': 'WebApplication',
             name: '二十四节气查询工具',
             description: '在线查询二十四节气日期时间',
-            url: 'https://util.cn/tools/solar-term-calculator',
+            url: 'https://www.util.cn/tools/solar-term-calculator',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -287,19 +287,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '节气查询',
-                item: 'https://util.cn/tools/solar-term-calculator'
+                item: 'https://www.util.cn/tools/solar-term-calculator'
               }
             ]
           }

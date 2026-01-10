@@ -266,13 +266,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'API响应模拟器 - 专业Mock数据生成工具',
   ogDescription: '根据JSON Schema自动生成模拟API响应数据，支持多种数据类型和随机生成。API开发和测试必备工具。',
-  ogImage: 'https://util.cn/images/tools/api-response-mocker.png',
-  ogUrl: 'https://util.cn/tools/api-response-mocker',
+  ogImage: 'https://www.util.cn/images/tools/api-response-mocker.png',
+  ogUrl: 'https://www.util.cn/tools/api-response-mocker',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'API响应模拟器 - JSON Schema数据生成',
   twitterDescription: '专业API响应模拟工具，根据JSON Schema自动生成模拟数据，支持API测试和接口调试。',
-  twitterImage: 'https://util.cn/images/tools/api-response-mocker.png'
+  twitterImage: 'https://www.util.cn/images/tools/api-response-mocker.png'
 })
 
 // JSON-LD 结构化数据
@@ -287,7 +287,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'API响应模拟器',
             description: '专业的API响应模拟工具，根据JSON Schema自动生成模拟API响应数据',
-            url: 'https://util.cn/tools/api-response-mocker',
+            url: 'https://www.util.cn/tools/api-response-mocker',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -313,19 +313,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'API响应模拟器',
-                item: 'https://util.cn/tools/api-response-mocker'
+                item: 'https://www.util.cn/tools/api-response-mocker'
               }
             ]
           },

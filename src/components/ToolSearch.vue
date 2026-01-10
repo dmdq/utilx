@@ -7,7 +7,7 @@
         @input="handleSearch"
         type="text"
         placeholder="搜索工具..."
-        class="w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+        class="w-full pl-10 pr-4 py-3 border rounded-lg  transition-all"
       />
     </div>
 

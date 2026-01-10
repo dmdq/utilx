@@ -167,13 +167,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '渐变文字生成器 - 在线文字渐变效果',
   ogDescription: '创建精美的CSS渐变文字效果，支持自定义颜色和角度。',
-  ogImage: 'https://util.cn/images/tools/gradient-text-generator.png',
-  ogUrl: 'https://util.cn/tools/gradient-text-generator',
+  ogImage: 'https://www.util.cn/images/tools/gradient-text-generator.png',
+  ogUrl: 'https://www.util.cn/tools/gradient-text-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '渐变文字生成器 - 在线文字渐变效果',
   twitterDescription: '创建精美的CSS渐变文字效果，支持自定义颜色和角度。',
-  twitterImage: 'https://util.cn/images/tools/gradient-text-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/gradient-text-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -188,7 +188,7 @@ useHead({
             '@type': 'WebApplication',
             name: '渐变文字生成器',
             description: '在线渐变文字生成工具，创建CSS文字渐变效果',
-            url: 'https://util.cn/tools/gradient-text-generator',
+            url: 'https://www.util.cn/tools/gradient-text-generator',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -211,19 +211,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '渐变文字生成器',
-                item: 'https://util.cn/tools/gradient-text-generator'
+                item: 'https://www.util.cn/tools/gradient-text-generator'
               }
             ]
           },

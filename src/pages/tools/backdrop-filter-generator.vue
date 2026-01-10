@@ -287,13 +287,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'CSS背景滤镜生成器 - backdrop-filter可视化',
   ogDescription: '专业的CSS backdrop-filter生成工具，支持可视化创建毛玻璃效果。',
-  ogImage: 'https://util.cn/images/tools/backdrop-filter-generator.png',
-  ogUrl: 'https://util.cn/tools/backdrop-filter-generator',
+  ogImage: 'https://www.util.cn/images/tools/backdrop-filter-generator.png',
+  ogUrl: 'https://www.util.cn/tools/backdrop-filter-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'CSS背景滤镜生成器 - backdrop-filter可视化',
   twitterDescription: '专业的CSS backdrop-filter生成工具，支持可视化创建毛玻璃效果。',
-  twitterImage: 'https://util.cn/images/tools/backdrop-filter-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/backdrop-filter-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -308,7 +308,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'CSS背景滤镜生成器',
             description: '在线CSS backdrop-filter可视化生成工具',
-            url: 'https://util.cn/tools/backdrop-filter-generator',
+            url: 'https://www.util.cn/tools/backdrop-filter-generator',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -332,19 +332,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'CSS背景滤镜生成器',
-                item: 'https://util.cn/tools/backdrop-filter-generator'
+                item: 'https://www.util.cn/tools/backdrop-filter-generator'
               }
             ]
           }

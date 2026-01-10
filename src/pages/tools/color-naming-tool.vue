@@ -233,13 +233,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '色彩命名工具 - 在线颜色语义化命名',
   ogDescription: '为颜色值生成语义化名称，提升代码可读性。',
-  ogImage: 'https://util.cn/images/tools/color-naming-tool.png',
-  ogUrl: 'https://util.cn/tools/color-naming-tool',
+  ogImage: 'https://www.util.cn/images/tools/color-naming-tool.png',
+  ogUrl: 'https://www.util.cn/tools/color-naming-tool',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '色彩命名工具 - 在线颜色语义化命名',
   twitterDescription: '为颜色值生成语义化名称，提升代码可读性。',
-  twitterImage: 'https://util.cn/images/tools/color-naming-tool.png'
+  twitterImage: 'https://www.util.cn/images/tools/color-naming-tool.png'
 })
 
 // JSON-LD 结构化数据
@@ -254,7 +254,7 @@ useHead({
             '@type': 'WebApplication',
             name: '色彩命名工具',
             description: '在线颜色语义化命名工具',
-            url: 'https://util.cn/tools/color-naming-tool',
+            url: 'https://www.util.cn/tools/color-naming-tool',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -277,19 +277,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '色彩命名工具',
-                item: 'https://util.cn/tools/color-naming-tool'
+                item: 'https://www.util.cn/tools/color-naming-tool'
               }
             ]
           },

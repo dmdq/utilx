@@ -180,13 +180,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '比例计算器 - 免费在线比例计算工具',
   ogDescription: '专业的比例计算工具，支持正比例、反比例、比例缩放计算。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/proportion-calculator.png',
-  ogUrl: 'https://util.cn/tools/proportion-calculator',
+  ogImage: 'https://www.util.cn/images/tools/proportion-calculator.png',
+  ogUrl: 'https://www.util.cn/tools/proportion-calculator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '比例计算器 - 免费在线比例计算',
   twitterDescription: '专业的比例计算工具，支持正比例、反比例、比例缩放计算。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/proportion-calculator.png'
+  twitterImage: 'https://www.util.cn/images/tools/proportion-calculator.png'
 })
 
 // JSON-LD 结构化数据
@@ -201,7 +201,7 @@ useHead({
             '@type': 'WebApplication',
             name: '比例计算器',
             description: '免费在线比例计算器，支持比例计算和缩放',
-            url: 'https://util.cn/tools/proportion-calculator',
+            url: 'https://www.util.cn/tools/proportion-calculator',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {
@@ -226,19 +226,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '比例计算器',
-                item: 'https://util.cn/tools/proportion-calculator'
+                item: 'https://www.util.cn/tools/proportion-calculator'
               }
             ]
           },

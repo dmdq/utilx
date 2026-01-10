@@ -32,7 +32,7 @@
           ref="searchInput"
           v-model="searchQuery"
           type="text"
-          class="block w-full rounded-xl border border-border/60 bg-card/40 backdrop-blur-sm pl-11 pr-24 py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary/50 focus:bg-background/95 transition-all placeholder:text-muted-foreground/60"
+          class="block w-full rounded-xl border border-border/60 bg-card/40 backdrop-blur-sm pl-11 pr-24 py-4 text-base placeholder:text-muted-foreground/60 transition-all duration-300 "
           placeholder="搜索你需要的工具，如 Markdown , JSON , MD5 , 正则 , 图片 ... "
           @input="handleSearch"
           @keydown.enter="handleSearchEnter"
@@ -244,61 +244,27 @@ import {
 import { categories } from '~/data/categories'
 import { tools } from '~/data/tools'
 import { initToolsData, getRecentTools, addRecentTool, clearRecentTools } from '~/composables/useTools'
-
-
-
-import { useSEO } from '~/composables/useSEO'
-
-// 使用SEO composable设置页面标题
-const { setPageTitle } = useSEO()
-setPageTitle('开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT | 有条工具')
-
-// 添加 Open Graph 标签和 JSON Schema
-useHead({
-  meta: [
-    { property: 'og:title', content: '开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT | 有条工具' },
-    { property: 'og:description', content: '为开发者打造的免费工具箱。JSON格式化、Base64编解码、正则表达式测试、MD5加密、时间戳转换、JWT解码、Cron表达式生成等100+工具。纯本地计算，数据不上传，安全高效。' },
-    { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://www.util.cn/' },
-    { property: 'og:image', content: 'https://www.util.cn/logo.png' },
-    { property: 'og:locale', content: 'zh_CN' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: '开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT | 有条工具' },
-    { name: 'twitter:description', content: '为开发者打造的免费工具箱。JSON格式化、Base64编解码、正则表达式测试、MD5加密、时间戳转换、JWT解码、Cron表达式生成等100+工具。纯本地计算，数据不上传，安全高效。' },
-    { name: 'twitter:image', content: 'https://www.util.cn/logo.png' }
-  ],
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT | 有条工具",
-        "url": "https://www.util.cn/",
-        "description": "为开发者打造的免费工具箱。JSON格式化、Base64编解码、正则表达式测试、MD5加密、时间戳转换、JWT解码、Cron表达式生成等100+工具。纯本地计算，数据不上传，安全高效。",
-        "keywords": "开发者工具, 在线工具箱, JSON格式化, Base64编解码, 正则表达式, MD5加密, JWT解码, 时间戳转换, Cron表达式, UUID生成",
-        "publisher": {
-          "@type": "Organization",
-          "name": "有条工具",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.util.cn/logo.png"
-          }
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.util.cn/all/?search={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      })
-    }
-  ]
-})
+import { siteConfig } from '~/data/site'
 
 const router = useRouter()
 
 // 初始化工具数据
 initToolsData()
+
+// 设置页面标题和SEO元数据
+useHead({
+  title: '开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT - 有条工具',
+  meta: [
+    { property: 'og:title', content: '开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT - 有条工具' },
+    { property: 'og:description', content: '为开发者打造的免费工具箱。JSON格式化、Base64编解码、正则表达式测试、MD5加密、时间戳转换、JWT解码、Cron表达式生成等100+工具。纯本地计算，数据不上传，安全高效。' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://www.util.cn/' },
+    { property: 'og:image', content: 'https://www.util.cn/logo.png' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: '开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT - 有条工具' },
+    { name: 'twitter:description', content: '为开发者打造的免费工具箱。JSON格式化、Base64编解码、正则表达式测试、MD5加密、时间戳转换、JWT解码、Cron表达式生成等100+工具。纯本地计算，数据不上传，安全高效。' }
+  ]
+})
 
 // 数据状态
 const searchQuery = ref('')

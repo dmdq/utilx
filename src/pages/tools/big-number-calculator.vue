@@ -191,7 +191,7 @@ useHead({
             '@type': 'WebApplication',
             name: '大数计算器',
             description: '在线大数计算工具，支持超大整数精确计算',
-            url: 'https://util.cn/tools/big-number-calculator',
+            url: 'https://www.util.cn/tools/big-number-calculator',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'Any',
             offers: {
@@ -215,19 +215,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '大数计算器',
-                item: 'https://util.cn/tools/big-number-calculator'
+                item: 'https://www.util.cn/tools/big-number-calculator'
               }
             ]
           },

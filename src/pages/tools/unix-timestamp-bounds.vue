@@ -343,13 +343,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'Unix时间戳边界查询工具 - 时间戳范围查询',
   ogDescription: '专业的Unix时间戳边界查询工具，查询32位、64位时间戳范围，Y2K38问题，特殊日期时间戳对照表。',
-  ogImage: 'https://util.cn/images/tools/unix-timestamp-bounds.png',
-  ogUrl: 'https://util.cn/tools/unix-timestamp-bounds',
+  ogImage: 'https://www.util.cn/images/tools/unix-timestamp-bounds.png',
+  ogUrl: 'https://www.util.cn/tools/unix-timestamp-bounds',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Unix时间戳边界查询工具 - 时间戳范围查询',
   twitterDescription: '专业的Unix时间戳边界查询工具，查询32位、64位时间戳范围，Y2K38问题。',
-  twitterImage: 'https://util.cn/images/tools/unix-timestamp-bounds.png'
+  twitterImage: 'https://www.util.cn/images/tools/unix-timestamp-bounds.png'
 })
 
 // JSON-LD 结构化数据
@@ -364,7 +364,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'Unix时间戳边界查询工具',
             description: '在线Unix时间戳边界查询工具，查询32位、64位时间戳范围，Y2K38问题',
-            url: 'https://util.cn/tools/unix-timestamp-bounds',
+            url: 'https://www.util.cn/tools/unix-timestamp-bounds',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {
@@ -389,13 +389,13 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Util工具箱',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Unix时间戳边界查询工具',
-                item: 'https://util.cn/tools/unix-timestamp-bounds'
+                item: 'https://www.util.cn/tools/unix-timestamp-bounds'
               }
             ]
           }

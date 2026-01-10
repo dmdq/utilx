@@ -245,13 +245,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '文本转表格工具 - CSV/TSV转Markdown表格',
   ogDescription: '将分隔符分隔的文本转换为HTML表格、Markdown表格、CSV或JSON格式。支持自定义分隔符。',
-  ogImage: 'https://util.cn/images/tools/text-to-table.png',
-  ogUrl: 'https://util.cn/tools/text-to-table',
+  ogImage: 'https://www.util.cn/images/tools/text-to-table.png',
+  ogUrl: 'https://www.util.cn/tools/text-to-table',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '文本转表格工具 - CSV/TSV转Markdown表格',
   twitterDescription: '将分隔符分隔的文本转换为HTML表格、Markdown表格、CSV或JSON格式。',
-  twitterImage: 'https://util.cn/images/tools/text-to-table.png'
+  twitterImage: 'https://www.util.cn/images/tools/text-to-table.png'
 })
 
 // JSON-LD 结构化数据
@@ -266,7 +266,7 @@ useHead({
             '@type': 'WebApplication',
             name: '文本转表格工具',
             description: '在线文本转表格工具，将分隔符分隔的文本转换为多种表格格式',
-            url: 'https://util.cn/tools/text-to-table',
+            url: 'https://www.util.cn/tools/text-to-table',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -290,19 +290,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '文本转表格',
-                item: 'https://util.cn/tools/text-to-table'
+                item: 'https://www.util.cn/tools/text-to-table'
               }
             ]
           },

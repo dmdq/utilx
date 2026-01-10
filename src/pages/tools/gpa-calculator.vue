@@ -380,7 +380,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'GPA计算器',
             description: '在线GPA计算器，支持4.0和5.0绩点标准',
-            url: 'https://util.cn/tools/gpa-calculator',
+            url: 'https://www.util.cn/tools/gpa-calculator',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'Any',
             offers: {

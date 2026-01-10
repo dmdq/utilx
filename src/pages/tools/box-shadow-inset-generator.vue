@@ -213,8 +213,8 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '内阴影生成器 - inset box-shadow可视化工具',
   ogDescription: '专业的在线CSS内阴影生成工具，专门创建inset box-shadow效果。',
-  ogImage: 'https://util.cn/images/tools/box-shadow-inset-generator.png',
-  ogUrl: 'https://util.cn/tools/box-shadow-inset-generator',
+  ogImage: 'https://www.util.cn/images/tools/box-shadow-inset-generator.png',
+  ogUrl: 'https://www.util.cn/tools/box-shadow-inset-generator',
   ogType: 'website'
 })
 
@@ -230,7 +230,7 @@ useHead({
             '@type': 'WebApplication',
             name: '内阴影生成器',
             description: '在线CSS内阴影生成工具，创建inset box-shadow效果',
-            url: 'https://util.cn/tools/box-shadow-inset-generator',
+            url: 'https://www.util.cn/tools/box-shadow-inset-generator',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -253,19 +253,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '内阴影生成器',
-                item: 'https://util.cn/tools/box-shadow-inset-generator'
+                item: 'https://www.util.cn/tools/box-shadow-inset-generator'
               }
             ]
           }

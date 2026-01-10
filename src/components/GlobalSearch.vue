@@ -18,7 +18,7 @@
             ref="searchInput"
             v-model="searchQuery"
             type="text"
-            class="flex-1 bg-transparent outline-none text-foreground placeholder:text-muted-foreground"
+            class="flex-1 bg-transparent outline-none  text-foreground placeholder:text-muted-foreground/60 transition-colors duration-200"
             placeholder="搜索工具、文档..."
             @keydown.escape="close"
             @keydown.down="highlightNext"

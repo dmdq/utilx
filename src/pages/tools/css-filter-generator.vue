@@ -298,13 +298,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'CSS滤镜生成器 - filter可视化工具',
   ogDescription: '专业的CSS filter生成工具，支持可视化调节各种滤镜效果。',
-  ogImage: 'https://util.cn/images/tools/css-filter-generator.png',
-  ogUrl: 'https://util.cn/tools/css-filter-generator',
+  ogImage: 'https://www.util.cn/images/tools/css-filter-generator.png',
+  ogUrl: 'https://www.util.cn/tools/css-filter-generator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'CSS滤镜生成器 - filter可视化',
   twitterDescription: '专业的CSS filter生成工具，支持可视化调节各种滤镜效果。',
-  twitterImage: 'https://util.cn/images/tools/css-filter-generator.png'
+  twitterImage: 'https://www.util.cn/images/tools/css-filter-generator.png'
 })
 
 // JSON-LD 结构化数据
@@ -319,7 +319,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'CSS滤镜生成器',
             description: '在线CSS filter可视化生成工具',
-            url: 'https://util.cn/tools/css-filter-generator',
+            url: 'https://www.util.cn/tools/css-filter-generator',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -342,19 +342,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'CSS滤镜生成器',
-                item: 'https://util.cn/tools/css-filter-generator'
+                item: 'https://www.util.cn/tools/css-filter-generator'
               }
             ]
           }

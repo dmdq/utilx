@@ -908,13 +908,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '排序算法可视化工具 - 免费在线排序算法动画演示',
   ogDescription: '专业的排序算法可视化工具，支持冒泡、快速、归并、堆排序等6种经典算法动画演示，实时显示比较和交换次数，帮助理解算法原理。',
-  ogImage: 'https://util.cn/images/tools/sorting-algorithm-visualizer.png',
-  ogUrl: 'https://util.cn/tools/sorting-algorithm-visualizer',
+  ogImage: 'https://www.util.cn/images/tools/sorting-algorithm-visualizer.png',
+  ogUrl: 'https://www.util.cn/tools/sorting-algorithm-visualizer',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '排序算法可视化工具 - 免费在线排序算法动画演示',
   twitterDescription: '专业的排序算法可视化工具，支持6种经典排序算法动画演示，实时统计数据，帮助理解算法原理。',
-  twitterImage: 'https://util.cn/images/tools/sorting-algorithm-visualizer.png'
+  twitterImage: 'https://www.util.cn/images/tools/sorting-algorithm-visualizer.png'
 })
 
 // JSON-LD 结构化数据
@@ -929,7 +929,7 @@ useHead({
             '@type': 'WebApplication',
             name: '排序算法可视化工具',
             description: '免费在线排序算法可视化工具，支持多种排序算法的动画演示',
-            url: 'https://util.cn/tools/sorting-algorithm-visualizer',
+            url: 'https://www.util.cn/tools/sorting-algorithm-visualizer',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'Any',
             offers: {
@@ -957,19 +957,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '排序算法可视化',
-                item: 'https://util.cn/tools/sorting-algorithm-visualizer'
+                item: 'https://www.util.cn/tools/sorting-algorithm-visualizer'
               }
             ]
           },

@@ -223,7 +223,7 @@ useHead({
             '@type': 'WebApplication',
             name: '卡路里计算器',
             description: '在线卡路里计算工具，计算基础代谢率和每日总消耗',
-            url: 'https://util.cn/tools/calories-calculator',
+            url: 'https://www.util.cn/tools/calories-calculator',
             applicationCategory: 'HealthApplication',
             operatingSystem: 'Any',
             offers: {
@@ -247,19 +247,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '卡路里计算器',
-                item: 'https://util.cn/tools/calories-calculator'
+                item: 'https://www.util.cn/tools/calories-calculator'
               }
             ]
           },

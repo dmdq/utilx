@@ -182,13 +182,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'Tailwind色板生成器 - 在线颜色系统工具',
   ogDescription: '基于基准颜色生成Tailwind风格的50-950色阶，一键导出配置。',
-  ogImage: 'https://util.cn/images/tools/tailwind-color-palette.png',
-  ogUrl: 'https://util.cn/tools/tailwind-color-palette',
+  ogImage: 'https://www.util.cn/images/tools/tailwind-color-palette.png',
+  ogUrl: 'https://www.util.cn/tools/tailwind-color-palette',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Tailwind色板生成器 - 在线颜色系统工具',
   twitterDescription: '基于基准颜色生成Tailwind风格的50-950色阶。',
-  twitterImage: 'https://util.cn/images/tools/tailwind-color-palette.png'
+  twitterImage: 'https://www.util.cn/images/tools/tailwind-color-palette.png'
 })
 
 // JSON-LD 结构化数据
@@ -203,7 +203,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'Tailwind色板生成器',
             description: '在线Tailwind风格色板生成工具',
-            url: 'https://util.cn/tools/tailwind-color-palette',
+            url: 'https://www.util.cn/tools/tailwind-color-palette',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -226,19 +226,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'Tailwind色板生成器',
-                item: 'https://util.cn/tools/tailwind-color-palette'
+                item: 'https://www.util.cn/tools/tailwind-color-palette'
               }
             ]
           },

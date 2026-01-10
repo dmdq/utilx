@@ -18,7 +18,7 @@
         <input
           v-model="heroSearch"
           type="text"
-          class="block w-full rounded-xl border border-border bg-muted/50 pl-11 pr-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:bg-background transition-all placeholder:text-muted-foreground/70"
+          class="block w-full rounded-xl border border-border bg-muted/50 pl-11 pr-4 py-4 text-base transition-all placeholder:text-muted-foreground/70"
           placeholder="搜索你需要的工具，如 'JSON', 'MD5', '正则'..."
           @input="handleSearch"
         >

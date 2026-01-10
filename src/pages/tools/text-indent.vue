@@ -273,13 +273,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '文本缩进格式化工具 - 专业代码缩进调整',
   ogDescription: '支持添加/移除缩进、Tab与空格互转、代码格式化。一键美化代码，提升可读性。',
-  ogImage: 'https://util.cn/images/tools/text-indent.png',
-  ogUrl: 'https://util.cn/tools/text-indent',
+  ogImage: 'https://www.util.cn/images/tools/text-indent.png',
+  ogUrl: 'https://www.util.cn/tools/text-indent',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '文本缩进格式化工具 - 专业代码缩进调整',
   twitterDescription: '支持添加/移除缩进、Tab与空格互转、代码格式化。一键美化代码。',
-  twitterImage: 'https://util.cn/images/tools/text-indent.png'
+  twitterImage: 'https://www.util.cn/images/tools/text-indent.png'
 })
 
 // JSON-LD 结构化数据
@@ -294,7 +294,7 @@ useHead({
             '@type': 'WebApplication',
             name: '文本缩进格式化工具',
             description: '在线文本缩进格式化工具，支持添加/移除缩进、Tab与空格互转',
-            url: 'https://util.cn/tools/text-indent',
+            url: 'https://www.util.cn/tools/text-indent',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -318,19 +318,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '文本缩进格式化',
-                item: 'https://util.cn/tools/text-indent'
+                item: 'https://www.util.cn/tools/text-indent'
               }
             ]
           },

@@ -170,7 +170,7 @@ useHead({
         '@type': 'WebApplication',
         name: 'RIPEMD-160哈希计算器',
         description: '在线160位加密哈希计算工具',
-        url: 'https://util.cn/tools/ripemd160-hash',
+        url: 'https://www.util.cn/tools/ripemd160-hash',
         applicationCategory: 'DeveloperApplication',
         operatingSystem: 'Any'
       })

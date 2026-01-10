@@ -316,13 +316,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '重复数据清理器 - 免费在线去重工具',
   ogDescription: '专业的在线去重工具，支持文本和JSON数据去重。纯前端处理，数据安全可靠，支持自定义去重规则。',
-  ogImage: 'https://util.cn/images/tools/duplicate-remover.png',
-  ogUrl: 'https://util.cn/tools/duplicate-remover',
+  ogImage: 'https://www.util.cn/images/tools/duplicate-remover.png',
+  ogUrl: 'https://www.util.cn/tools/duplicate-remover',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '重复数据清理器 - 免费在线去重工具',
   twitterDescription: '专业的在线去重工具，支持文本和JSON数据去重。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/duplicate-remover.png'
+  twitterImage: 'https://www.util.cn/images/tools/duplicate-remover.png'
 })
 
 // JSON-LD 结构化数据
@@ -337,7 +337,7 @@ useHead({
             '@type': 'WebApplication',
             name: '重复数据清理器',
             description: '免费在线重复数据清理工具，支持文本和JSON去重',
-            url: 'https://util.cn/tools/duplicate-remover',
+            url: 'https://www.util.cn/tools/duplicate-remover',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {
@@ -361,19 +361,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '重复数据清理器',
-                item: 'https://util.cn/tools/duplicate-remover'
+                item: 'https://www.util.cn/tools/duplicate-remover'
               }
             ]
           },

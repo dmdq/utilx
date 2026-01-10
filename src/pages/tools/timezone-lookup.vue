@@ -114,7 +114,7 @@ useHead({
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: '时区查询工具',
-      url: 'https://util.cn/tools/timezone-lookup'
+      url: 'https://www.util.cn/tools/timezone-lookup'
     })
   }]
 })

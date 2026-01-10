@@ -208,13 +208,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '文本倒置工具 - 字符/单词/行倒序',
   ogDescription: '免费在线文本倒置工具，支持字符倒序、单词倒序、行倒序等多种倒置方式。',
-  ogImage: 'https://util.cn/images/tools/text-reverse.png',
-  ogUrl: 'https://util.cn/tools/text-reverse',
+  ogImage: 'https://www.util.cn/images/tools/text-reverse.png',
+  ogUrl: 'https://www.util.cn/tools/text-reverse',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '文本倒置工具 - 字符/单词/行倒序',
   twitterDescription: '免费在线文本倒置工具，支持字符倒序、单词倒序、行倒序等多种倒置方式。',
-  twitterImage: 'https://util.cn/images/tools/text-reverse.png'
+  twitterImage: 'https://www.util.cn/images/tools/text-reverse.png'
 })
 
 // JSON-LD 结构化数据
@@ -229,7 +229,7 @@ useHead({
             '@type': 'WebApplication',
             name: '文本倒置工具',
             description: '免费在线文本倒置工具，支持字符倒序、单词倒序、行倒序',
-            url: 'https://util.cn/tools/text-reverse',
+            url: 'https://www.util.cn/tools/text-reverse',
             applicationCategory: 'UtilityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -253,19 +253,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '文本倒置',
-                item: 'https://util.cn/tools/text-reverse'
+                item: 'https://www.util.cn/tools/text-reverse'
               }
             ]
           },

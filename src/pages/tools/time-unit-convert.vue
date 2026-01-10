@@ -152,7 +152,7 @@ useHead({
       '@type': 'WebApplication',
       name: '时间单位转换器',
       description: '在线时间单位转换工具',
-      url: 'https://util.cn/tools/time-unit-convert'
+      url: 'https://www.util.cn/tools/time-unit-convert'
     })
   }]
 })

@@ -224,7 +224,7 @@ useHead({
             '@type': 'WebApplication',
             name: '向量计算器',
             description: '在线向量计算工具，支持2D和3D向量运算',
-            url: 'https://util.cn/tools/vector-calculator',
+            url: 'https://www.util.cn/tools/vector-calculator',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'Any',
             offers: {
@@ -249,19 +249,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '向量计算器',
-                item: 'https://util.cn/tools/vector-calculator'
+                item: 'https://www.util.cn/tools/vector-calculator'
               }
             ]
           },

@@ -212,7 +212,7 @@ useHead({
       '@type': 'WebApplication',
       name: '农历日历转换工具',
       description: '在线农历转换工具，支持公历与农历互转',
-      url: 'https://util.cn/tools/lunar-calendar'
+      url: 'https://www.util.cn/tools/lunar-calendar'
     })
   }]
 })

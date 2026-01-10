@@ -287,8 +287,8 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '黄金比例计算器 - 设计比例工具',
   ogDescription: '专业的在线黄金比例计算工具，计算黄金分割点，生成和谐的字体系列和间距系统。',
-  ogImage: 'https://util.cn/images/tools/golden-ratio-calculator.png',
-  ogUrl: 'https://util.cn/tools/golden-ratio-calculator',
+  ogImage: 'https://www.util.cn/images/tools/golden-ratio-calculator.png',
+  ogUrl: 'https://www.util.cn/tools/golden-ratio-calculator',
   ogType: 'website'
 })
 
@@ -304,7 +304,7 @@ useHead({
             '@type': 'WebApplication',
             name: '黄金比例计算器',
             description: '在线黄金比例计算工具，计算黄金分割点',
-            url: 'https://util.cn/tools/golden-ratio-calculator',
+            url: 'https://www.util.cn/tools/golden-ratio-calculator',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -327,19 +327,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '黄金比例计算器',
-                item: 'https://util.cn/tools/golden-ratio-calculator'
+                item: 'https://www.util.cn/tools/golden-ratio-calculator'
               }
             ]
           }

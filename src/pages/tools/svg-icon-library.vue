@@ -210,13 +210,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: 'SVG图标库 - 免费在线SVG图标预览',
   ogDescription: '专业的SVG图标库，提供常用SVG图标预览、搜索、复制和下载功能。',
-  ogImage: 'https://util.cn/images/tools/svg-icon-library.png',
-  ogUrl: 'https://util.cn/tools/svg-icon-library',
+  ogImage: 'https://www.util.cn/images/tools/svg-icon-library.png',
+  ogUrl: 'https://www.util.cn/tools/svg-icon-library',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: 'SVG图标库 - 免费在线SVG图标预览',
   twitterDescription: '专业的SVG图标库，提供常用SVG图标预览、搜索、复制和下载功能。',
-  twitterImage: 'https://util.cn/images/tools/svg-icon-library.png'
+  twitterImage: 'https://www.util.cn/images/tools/svg-icon-library.png'
 })
 
 // JSON-LD 结构化数据
@@ -231,7 +231,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'SVG图标库',
             description: '免费在线SVG图标库，提供常用图标预览和下载',
-            url: 'https://util.cn/tools/svg-icon-library',
+            url: 'https://www.util.cn/tools/svg-icon-library',
             applicationCategory: 'DesignApplication',
             operatingSystem: 'Any',
             offers: {
@@ -255,19 +255,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'SVG图标库',
-                item: 'https://util.cn/tools/svg-icon-library'
+                item: 'https://www.util.cn/tools/svg-icon-library'
               }
             ]
           },

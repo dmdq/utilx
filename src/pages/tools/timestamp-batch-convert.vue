@@ -132,7 +132,7 @@ useHead({
       '@type': 'WebApplication',
       name: '时间戳批量转换工具',
       description: '在线时间戳批量转换工具',
-      url: 'https://util.cn/tools/timestamp-batch-convert'
+      url: 'https://www.util.cn/tools/timestamp-batch-convert'
     })
   }]
 })

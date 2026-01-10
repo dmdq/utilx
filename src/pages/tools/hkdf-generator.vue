@@ -441,7 +441,7 @@ useHead({
             '@type': 'WebApplication',
             name: 'HKDF密钥派生器',
             description: '基于RFC 5869的在线HMAC密钥派生工具',
-            url: 'https://util.cn/tools/hkdf-generator',
+            url: 'https://www.util.cn/tools/hkdf-generator',
             applicationCategory: 'SecurityApplication',
             operatingSystem: 'Any',
             offers: {
@@ -465,19 +465,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: 'HKDF密钥派生器',
-                item: 'https://util.cn/tools/hkdf-generator'
+                item: 'https://www.util.cn/tools/hkdf-generator'
               }
             ]
           }

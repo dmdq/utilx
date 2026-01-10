@@ -199,13 +199,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '单价计算器 - 免费在线商品单价对比工具',
   ogDescription: '专业的单价计算工具，支持商品单价计算、价格对比、单位换算。纯前端处理，数据安全可靠。',
-  ogImage: 'https://util.cn/images/tools/unit-price-calculator.png',
-  ogUrl: 'https://util.cn/tools/unit-price-calculator',
+  ogImage: 'https://www.util.cn/images/tools/unit-price-calculator.png',
+  ogUrl: 'https://www.util.cn/tools/unit-price-calculator',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '单价计算器 - 免费在线商品单价对比',
   twitterDescription: '专业的单价计算工具，支持商品单价计算、价格对比、单位换算。纯前端处理，数据安全可靠。',
-  twitterImage: 'https://util.cn/images/tools/unit-price-calculator.png'
+  twitterImage: 'https://www.util.cn/images/tools/unit-price-calculator.png'
 })
 
 // JSON-LD 结构化数据
@@ -220,7 +220,7 @@ useHead({
             '@type': 'WebApplication',
             name: '单价计算器',
             description: '免费在线单价计算器，支持商品单价计算和价格对比',
-            url: 'https://util.cn/tools/unit-price-calculator',
+            url: 'https://www.util.cn/tools/unit-price-calculator',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {
@@ -245,19 +245,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '单价计算器',
-                item: 'https://util.cn/tools/unit-price-calculator'
+                item: 'https://www.util.cn/tools/unit-price-calculator'
               }
             ]
           },

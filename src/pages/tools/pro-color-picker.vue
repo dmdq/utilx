@@ -309,13 +309,13 @@ useSeoMeta({
   author: 'Util工具箱',
   ogTitle: '专业取色器 - 在线颜色选择与转换',
   ogDescription: '专业的在线取色工具，支持多种颜色格式转换和历史记录功能。',
-  ogImage: 'https://util.cn/images/tools/pro-color-picker.png',
-  ogUrl: 'https://util.cn/tools/pro-color-picker',
+  ogImage: 'https://www.util.cn/images/tools/pro-color-picker.png',
+  ogUrl: 'https://www.util.cn/tools/pro-color-picker',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: '专业取色器 - 在线颜色选择与转换',
   twitterDescription: '专业的在线取色工具，支持多种颜色格式转换和历史记录功能。',
-  twitterImage: 'https://util.cn/images/tools/pro-color-picker.png'
+  twitterImage: 'https://www.util.cn/images/tools/pro-color-picker.png'
 })
 
 // JSON-LD 结构化数据
@@ -330,7 +330,7 @@ useHead({
             '@type': 'WebApplication',
             name: '专业取色器',
             description: '在线颜色选择与转换工具',
-            url: 'https://util.cn/tools/pro-color-picker',
+            url: 'https://www.util.cn/tools/pro-color-picker',
             applicationCategory: 'DeveloperApplication',
             operatingSystem: 'Any',
             offers: {
@@ -354,19 +354,19 @@ useHead({
                 '@type': 'ListItem',
                 position: 1,
                 name: '首页',
-                item: 'https://util.cn'
+                item: 'https://www.util.cn'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: '工具',
-                item: 'https://util.cn/tools'
+                item: 'https://www.util.cn/tools'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: '专业取色器',
-                item: 'https://util.cn/tools/pro-color-picker'
+                item: 'https://www.util.cn/tools/pro-color-picker'
               }
             ]
           }

@@ -258,7 +258,7 @@ useHead({
         '@type': 'WebApplication',
         name: 'OTP动态口令生成器',
         description: '在线TOTP/HOTP双因素认证工具',
-        url: 'https://util.cn/tools/otp-generator',
+        url: 'https://www.util.cn/tools/otp-generator',
         applicationCategory: 'SecurityApplication',
         operatingSystem: 'Any'
       })

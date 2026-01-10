@@ -139,7 +139,7 @@ ${APP_NAME} v${APP_VERSION} (Universal)
 - 架构: Universal (Intel + Apple Silicon)
 - 构建时间: $(date)
 
-更多信息请访问: https://util.cn
+更多信息请访问: https://www.util.cn
 EOF
 
 # 生成校验和
