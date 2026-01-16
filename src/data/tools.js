@@ -3747,6 +3747,21 @@ export const tools = [
     keywords: ['svg', 'path', 'editor', 'vector', 'graphics', 'bezier']
   },
   {
+    id: 'teleprompter',
+    name: '在线提词器',
+    description: '专业在线提词器，支持滚动速度调节、字体大小自定义、镜像模式、背景色切换。为自媒体创作者提供沉浸式提词体验，录制视频不再忘词。',
+    category: 'design',
+    icon: 'Video',
+    viewCount: 0,
+    hot: true,
+    new: true,
+    local: true,
+    sortOrder: 1095,
+    lastUpdated: '2026-01-15 00:00:00',
+    tags: ["提词器","视频","直播","录制","创作","自媒体"],
+    keywords: ['teleprompter', 'prompter', 'video', 'streaming', 'recording', 'content', 'creation', 'mirror']
+  },
+  {
     id: 'data-format-validator',
     name: '数据格式验证器',
     description: '验证身份证号、手机号、邮箱等格式',

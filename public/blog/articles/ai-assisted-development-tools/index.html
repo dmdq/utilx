@@ -1,0 +1,1120 @@
+<!doctype html><html lang=zh-cn dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>AI 辅助开发工具深度剖析：从代码生成到智能调试 | 技术博客 - 有条工具</title><meta name=keywords content="AI辅助开发,代码生成,智能调试,LLM,开发工具"><meta name=description content="深入探讨AI辅助开发工具的技术原理和最佳实践，包括代码生成、智能调试、重构建议等功能"><meta name=author content="有条工具团队"><link rel=canonical href=/blog/articles/ai-assisted-development-tools/><link crossorigin=anonymous href=/blog/assets/css/stylesheet.7e8505b7cdf8bb22ab2305e53c2700bb06c7e64faeb72cd3468823a9a3bd3d6e.css integrity="sha256-foUFt834uyKrIwXlPCcAuwbH5k+utyzTRogjqaO9PW4=" rel="preload stylesheet" as=style><link rel=icon href=/favicon.ico><link rel=icon type=image/png sizes=16x16 href=/blog/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=/blog/favicon-32x32.png><link rel=apple-touch-icon href=/blog/apple-touch-icon.png><link rel=mask-icon href=/blog/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=/blog/articles/ai-assisted-development-tools/feed.xml title=rss><link rel=alternate hreflang=zh-cn href=/blog/articles/ai-assisted-development-tools/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script src=/js/external-link-config.js></script><script src=/js/external-link-interceptor.js></script><link rel=stylesheet href=/blog/css/custom.css media=screen><script type=application/ld+json>{"@context":"https://schema.org","@type":"WebSite","name":"技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享","url":"https://www.util.cn/blog/","description":"有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。提供JSON格式化、SQL优化、Markdown编辑器等在线工具的详细使用指南，帮助开发者提升工作效率。","publisher":{"@type":"Organization","name":"有条工具","url":"https://www.util.cn","logo":{"@type":"ImageObject","url":"https://www.util.cn/blog/logo/logo-256.png","width":256,"height":256}},"potentialAction":[{"@type":"SearchAction","target":"https://www.util.cn/blog/search?q={search_term_string}","query-input":"required name=search_term_string"}]}</script><meta property="og:type" content="website"><meta property="og:title" content="技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享"><meta property="og:description" content="有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。提供JSON格式化、SQL优化、Markdown编辑器等在线工具的详细使用指南，帮助开发者提升工作效率。"><meta property="og:url" content="https://www.util.cn/blog/"><meta property="og:site_name" content="有条工具技术博客"><meta property="og:image" content="https://www.util.cn/blog/logo/logo-256.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="技术博客 - 有条工具 | 开发者工具使用教程 & 编程技巧分享"><meta name=twitter:description content="有条工具技术博客 - 分享开发者工具使用教程、编程技巧和实战开发经验。"><meta name=twitter:image content="https://www.util.cn/blog/logo/logo-256.png"><meta name=baidu-site-verification content><meta name=category content="技术博客,开发者工具,编程教程"><meta name=coverage content="Worldwide"><meta name=distribution content="Global"><meta name=rating content="General"><script id=LA_COLLECT src=//sdk.51.la/js-sdk-pro.min.js></script><script>LA.init({id:"3OM52V0xJAPv6ozF",ck:"3OM52V0xJAPv6ozF"})</script><script>window.addEventListener("load",function(){setTimeout(function(){typeof la!="undefined"?console.log("51la统计已加载"):(console.warn("51la统计加载失败，使用备用方案"),function(){var e=document.createElement("script");e.src="https://sdk.51.la/js-sdk-pro.min.js?id=3OM52V0xJAPv6ozF&ck=3OM52V0xJAPv6ozF",e.async=!0,document.head.appendChild(e)}())},3e3)})</script><meta property="og:url" content="/blog/articles/ai-assisted-development-tools/"><meta property="og:site_name" content="技术博客 - 有条工具"><meta property="og:title" content="AI 辅助开发工具深度剖析：从代码生成到智能调试"><meta property="og:description" content="深入探讨AI辅助开发工具的技术原理和最佳实践，包括代码生成、智能调试、重构建议等功能"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-01-15T16:00:00+08:00"><meta property="article:modified_time" content="2026-01-15T16:00:00+08:00"><meta property="article:tag" content="AI辅助开发"><meta property="article:tag" content="代码生成"><meta property="article:tag" content="智能调试"><meta property="article:tag" content="LLM"><meta property="article:tag" content="开发工具"><meta name=twitter:card content="summary"><meta name=twitter:title content="AI 辅助开发工具深度剖析：从代码生成到智能调试"><meta name=twitter:description content="深入探讨AI辅助开发工具的技术原理和最佳实践，包括代码生成、智能调试、重构建议等功能"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"所有文章","item":"/blog/posts/"},{"@type":"ListItem","position":2,"name":"AI 辅助开发工具深度剖析：从代码生成到智能调试","item":"/blog/articles/ai-assisted-development-tools/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"AI 辅助开发工具深度剖析：从代码生成到智能调试","name":"AI 辅助开发工具深度剖析：从代码生成到智能调试","description":"深入探讨AI辅助开发工具的技术原理和最佳实践，包括代码生成、智能调试、重构建议等功能","keywords":["AI辅助开发","代码生成","智能调试","LLM","开发工具"],"articleBody":"前言 AI 辅助开发工具已经从简单的代码补全发展为全流程的开发助手。从需求分析到代码生成，从智能调试到重构建议，AI 正在重塑软件开发的方式。本文将深入探讨 AI 辅助开发工具的技术原理和实战应用。\n智能代码补全 1. 上下文感知补全 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 # AI 代码补全引擎 class AICompletionEngine: def __init__(self, model_config, code_indexer): self.llm_client = LLMClient(model_config) self.code_indexer = code_indexer self.context_window = 8192 async def complete( self, file_path: str, cursor_position: Position, project_context: ProjectContext ) -\u003e List[CompletionSuggestion]: # 1. 获取代码上下文 context = await self.get_code_context( file_path, cursor_position ) # 2. 搜索相关代码 similar_code = await self.code_indexer.search_similar( context.prefix, top_k=5 ) # 3. 构建提示词 prompt = self.build_completion_prompt( context, similar_code, project_context ) # 4. 调用 LLM 生成补全 raw_completions = await self.llm_client.complete( prompt, max_tokens=256, n=3, temperature=0.2 ) # 5. 后处理和排序 suggestions = await self.post_process( raw_completions, context ) return suggestions async def get_code_context( self, file_path: str, position: Position ) -\u003e CodeContext: \"\"\"获取代码上下文\"\"\" # 获取当前文件内容 file_content = await self.read_file(file_path) # 计算上下文范围 lines = file_content.split('\\n') cursor_line = position.line - 1 # 前文（函数签名、类定义等） prefix_start = max(0, cursor_line - 50) prefix = '\\n'.join(lines[prefix_start:cursor_line]) # 当前行（光标前的内容） current_line = lines[cursor_line][:position.column] # 后文（可能包含括号、分号等） suffix_start = cursor_line + 1 suffix_end = min(len(lines), cursor_line + 10) suffix = '\\n'.join(lines[suffix_start:suffix_end]) return CodeContext( file_path=file_path, language=self.detect_language(file_path), prefix=prefix, current_line=current_line, suffix=suffix, position=position ) def build_completion_prompt( self, context: CodeContext, similar_code: List[CodeSnippet], project_context: ProjectContext ) -\u003e str: \"\"\"构建补全提示词\"\"\" prompt = f\"\"\"You are a code completion engine for {context.language}. Current file context: {context.prefix} {context.current_line}[CURSOR]{context.suffix}\nSimilar code patterns from the project: {self.format_similar_code(similar_code)} Project context: - Language: {context.language} - Framework: {project_context.framework} - Dependencies: {', '.join(project_context.dependencies[:5])} Generate 3 code completion suggestions. Each suggestion should: 1. Complete the current line/function naturally 2. Follow the project's coding style 3. Use appropriate imports from the project 4. Be syntactically correct Format your response as JSON: ```json {{ \"completions\": [ {{ \"code\": \"completed code here\", \"confidence\": 0.95, \"explanation\": \"brief explanation\" }} ] }} ```\"\"\" return prompt async def post_process( self, raw_completions: str, context: CodeContext ) -\u003e List[CompletionSuggestion]: \"\"\"后处理补全结果\"\"\" try: data = json.loads(raw_completions) suggestions = [] for completion in data.get('completions', []): # 验证语法 if await self.validate_syntax( completion['code'], context.language ): # 计算实际置信度 adjusted_confidence = self.adjust_confidence( completion['confidence'], context ) suggestions.append(CompletionSuggestion( code=completion['code'], confidence=adjusted_confidence, explanation=completion.get('explanation', '') )) # 按置信度排序 return sorted( suggestions, key=lambda x: x.confidence, reverse=True ) except json.JSONDecodeError: return [] 2. 多模态代码生成 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 # 多模态代码生成器 class MultiModalCodeGenerator: def __init__(self, vision_model, code_model): self.vision_model = vision_model self.code_model = code_model async def generate_from_design( self, design_image: Image, requirements: str ) -\u003e GeneratedCode: \"\"\"从设计图生成代码\"\"\" # 1. 分析设计图 design_analysis = await self.analyze_design(design_image) # 2. 提取组件结构 components = self.extract_components(design_analysis) # 3. 为每个组件生成代码 generated_files = [] for component in components: component_code = await self.generate_component( component, requirements ) generated_files.append(component_code) # 4. 生成样式文件 styles = await self.generate_styles(design_analysis) # 5. 组装完整项目 return self.assemble_project(generated_files, styles) async def analyze_design( self, image: Image ) -\u003e DesignAnalysis: \"\"\"分析设计图\"\"\" prompt = \"\"\"Analyze this UI design and provide: 1. Layout structure (grid/flex/absolute) 2. Component hierarchy 3. Color palette 4. Typography 5. Spacing and sizing 6. Interactive elements Respond in JSON format.\"\"\" response = await self.vision_model.analyze( image, prompt ) return DesignAnalysis.from_dict(response) def extract_components( self, analysis: DesignAnalysis ) -\u003e List[ComponentSpec]: \"\"\"提取组件规范\"\"\" components = [] # 遍历组件层次结构 for element in analysis.elements: if element.is_component: component = ComponentSpec( name=self.generate_component_name(element), type=element.type, props=self.extract_props(element), styles=self.extract_styles(element), children=self.extract_children(element) ) components.append(component) return components async def generate_component( self, spec: ComponentSpec, requirements: str ) -\u003e CodeFile: \"\"\"生成组件代码\"\"\" prompt = f\"\"\"Generate a React component with the following specifications: Component Name: {spec.name} Component Type: {spec.type} Props: {self.format_props(spec.props)} Styles: {self.format_styles(spec.styles)} Children: {self.format_children(spec.children)} Requirements: {requirements} Generate: 1. TypeScript interface for props 2. React component implementation 3. JSDoc comments 4. Basic styling (CSS modules or styled-components) Respond with the complete code.\"\"\" response = await self.code_model.generate(prompt) return CodeFile( path=f\"src/components/{spec.name}.tsx\", content=response.code, language='typescript' ) 智能调试助手 1. 错误诊断 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 # 智能错误诊断 class AIErrorDiagnostics: def __init__(self, model_config, knowledge_base): self.llm_client = LLMClient(model_config) self.knowledge_base = knowledge_base async def diagnose_error( self, error: Error, context: ExecutionContext ) -\u003e DiagnosisReport: \"\"\"诊断错误\"\"\" # 1. 收集错误上下文 error_context = await self.collect_error_context( error, context ) # 2. 搜索类似错误 similar_errors = await self.knowledge_base.search_similar( error.message, error.stack_trace, top_k=5 ) # 3. 分析错误原因 root_cause = await self.analyze_root_cause( error_context, similar_errors ) # 4. 生成修复建议 fixes = await self.suggest_fixes( error_context, root_cause ) # 5. 生成测试用例 test_cases = await self.generate_test_cases( error_context, fixes ) return DiagnosisReport( error=error, root_cause=root_cause, fixes=fixes, test_cases=test_cases, similar_errors=similar_errors ) async def analyze_root_cause( self, error_context: ErrorContext, similar_errors: List[SimilarError] ) -\u003e RootCauseAnalysis: \"\"\"分析根本原因\"\"\" prompt = f\"\"\"Analyze the following error and identify its root cause: Error Message: {error_context.error.message} Stack Trace: {error_context.error.stack_trace}\nCode Context: ```python {error_context.code_snippet} Variables at error time: {self.format_variables(error_context.variables)}\nSimilar errors from knowledge base: {self.format_similar_errors(similar_errors)}\nProvide:\nRoot cause analysis Why this error occurred Conditions that led to this error Related code that might be problematic Respond in JSON format.\"\"\"\nresponse = await self.llm_client.analyze(prompt) return RootCauseAnalysis.from_dict(response) async def suggest_fixes( self, error_context: ErrorContext, root_cause: RootCauseAnalysis ) -\u003e List[FixSuggestion]: \"\"\"建议修复方案\"\"\" # 生成多种修复方案 fixes = [] # 1. 快速修复（一行改动） quick_fix = await self.generate_quick_fix( error_context, root_cause ) if quick_fix: fixes.append(quick_fix) # 2. 重构修复 refactor_fix = await self.generate_refactor_fix( error_context, root_cause ) if refactor_fix: fixes.append(refactor_fix) # 3. 防御性编程修复 defensive_fix = await self.generate_defensive_fix( error_context, root_cause ) if defensive_fix: fixes.append(defensive_fix) return fixes async def generate_quick_fix( self, error_context: ErrorContext, root_cause: RootCauseAnalysis ) -\u003e Optional[FixSuggestion]: \"\"\"生成快速修复\"\"\" prompt = f\"\"\"Generate a quick one-line fix for this error: Error: {error_context.error.message}\nProblematic Code:\n1 {error_context.code_snippet} Root Cause: {root_cause.summary}\nGenerate a minimal fix that addresses the immediate issue. The fix should:\nChange as little code as possible Solve the immediate error Not introduce new issues Respond with the fixed code.\"\"\"\nresponse = await self.llm_client.generate(prompt) return FixSuggestion( type='quick_fix', description='Quick one-line fix', code=response.code, confidence=response.confidence, risk_level='low' ) ### 2. 性能分析 ```python # AI 性能分析 class AIPerformanceAnalyzer: def __init__(self, model_config): self.llm_client = LLMClient(model_config) async def analyze_performance( self, profiling_data: ProfilingData, code_context: CodeContext ) -\u003e PerformanceReport: \"\"\"分析性能问题\"\"\" # 1. 识别热点 hotspots = self.identify_hotspots(profiling_data) # 2. 分析每个热点 analyses = [] for hotspot in hotspots: analysis = await self.analyze_hotspot( hotspot, code_context ) analyses.append(analysis) # 3. 生成优化建议 optimizations = await self.suggest_optimizations( analyses, code_context ) # 4. 预估性能提升 estimated_improvements = self.estimate_improvements( optimizations, profiling_data ) return PerformanceReport( hotspots=hotspots, analyses=analyses, optimizations=optimizations, estimated_improvements=estimated_improvements ) def identify_hotspots( self, profiling_data: ProfilingData ) -\u003e List[Hotspot]: \"\"\"识别性能热点\"\"\" hotspots = [] # 按执行时间排序 functions_by_time = sorted( profiling_data.function_calls, key=lambda x: x.total_time, reverse=True ) # 取前10个最耗时的函数 for func in functions_by_time[:10]: hotspots.append(Hotspot( function_name=func.name, file_path=func.file, line_number=func.line, total_time=func.total_time, call_count=func.call_count, avg_time=func.total_time / func.call_count, percentage=(func.total_time / profiling_data.total_time) * 100 )) return hotspots async def analyze_hotspot( self, hotspot: Hotspot, code_context: CodeContext ) -\u003e HotspotAnalysis: \"\"\"分析热点\"\"\" # 获取函数代码 function_code = await code_context.get_function_code( hotspot.function_name, hotspot.file_path ) prompt = f\"\"\"Analyze this performance hotspot: Function: {hotspot.function_name} Location: {hotspot.file_path}:{hotspot.line_number} Total Time: {hotspot.total_time:.2f}s Call Count: {hotspot.call_count} Average Time: {hotspot.avg_time:.4f}s Percentage: {hotspot.percentage:.1f}% Code: ```python {function_code} Identify:\nWhy this function is slow Specific performance bottlenecks Algorithmic complexity issues Inefficient operations Respond in JSON format.\"\"\"\nresponse = await self.llm_client.analyze(prompt) return HotspotAnalysis.from_dict(response) async def suggest_optimizations( self, analyses: List[HotspotAnalysis], code_context: CodeContext ) -\u003e List[OptimizationSuggestion]: \"\"\"建议优化方案\"\"\" optimizations = [] for analysis in analyses: prompt = f\"\"\"Suggest optimizations for this performance issue: Hotspot Analysis: {analysis.to_json()}\nGenerate specific optimization suggestions including:\nCode changes Algorithm improvements Data structure changes Caching strategies For each suggestion provide:\nDescription Code example Expected improvement Implementation difficulty Respond in JSON format.\"\"\"\nresponse = await self.llm_client.generate(prompt) suggestions = OptimizationSuggestion.from_json( response.suggestions ) optimizations.extend(suggestions) # 按预期收益排序 return sorted( optimizations, key=lambda x: x.expected_improvement, reverse=True ) ## 代码审查助手 ### 1. 自动代码审查 ```python # AI 代码审查 class AICodeReviewer: def __init__(self, model_config, style_guide): self.llm_client = LLMClient(model_config) self.style_guide = style_guide async def review_pull_request( self, pr: PullRequest ) -\u003e ReviewReport: \"\"\"审查 Pull Request\"\"\" # 1. 分析变更 changes = await self.analyze_changes(pr) # 2. 逐文件审查 file_reviews = [] for file_change in changes: review = await self.review_file_change( file_change, pr.context ) file_reviews.append(review) # 3. 整体评估 overall_assessment = await self.assess_overall_quality( file_reviews, pr ) # 4. 生成建议 recommendations = await self.generate_recommendations( file_reviews, overall_assessment ) return ReviewReport( file_reviews=file_reviews, overall_assessment=overall_assessment, recommendations=recommendations ) async def review_file_change( self, file_change: FileChange, context: PRContext ) -\u003e FileReview: \"\"\"审查文件变更\"\"\" # 分析代码变更 diff_analysis = self.analyze_diff(file_change.diff) issues = [] suggestions = [] # 检查各项指标 for change in diff_analysis.changes: # 1. 代码风格检查 style_issues = await self.check_style( change, file_change ) issues.extend(style_issues) # 2. 最佳实践检查 practice_issues = await self.check_best_practices( change, context ) issues.extend(practice_issues) # 3. 安全检查 security_issues = await self.check_security( change, file_change ) issues.extend(security_issues) # 4. 性能检查 performance_issues = await self.check_performance( change, file_change ) issues.extend(performance_issues) # 5. 生成改进建议 change_suggestions = await self.suggest_improvements( change, issues ) suggestions.extend(change_suggestions) return FileReview( file_path=file_change.path, issues=issues, suggestions=suggestions, overall_score=self.calculate_score(issues) ) async def check_security( self, change: CodeChange, file_change: FileChange ) -\u003e List[SecurityIssue]: \"\"\"检查安全问题\"\"\" prompt = f\"\"\"Review this code change for security issues: File: {file_change.path} Change: ```diff {change.diff} New Code:\n1 {change.new_code} Check for:\nSQL injection vulnerabilities XSS vulnerabilities CSRF vulnerabilities Authentication/authorization issues Sensitive data exposure Insecure dependencies Input validation issues Respond in JSON format with:\nseverity (critical/high/medium/low)\ndescription\nrecommendation\ncwe_id (if applicable)\"\"\"\nresponse = await self.llm_client.analyze(prompt) return [ SecurityIssue.from_dict(issue) for issue in response.issues ] ### 2. 重构建议 ```python # 重构建议引擎 class RefactoringSuggestionEngine: def __init__(self, model_config): self.llm_client = LLMClient(model_config) async def suggest_refactorings( self, code: str, context: CodeContext ) -\u003e List[RefactoringSuggestion]: \"\"\"建议重构\"\"\" # 1. 识别代码异味 code_smells = await self.detect_code_smells( code, context ) # 2. 为每个异味生成重构建议 suggestions = [] for smell in code_smells: suggestion = await self.generate_refactoring( smell, code, context ) if suggestion: suggestions.append(suggestion) # 3. 按优先级排序 return sorted( suggestions, key=lambda x: x.priority, reverse=True ) async def detect_code_smells( self, code: str, context: CodeContext ) -\u003e List[CodeSmell]: \"\"\"检测代码异味\"\"\" prompt = f\"\"\"Analyze this code for code smells and design issues: ```python {code} Detect:\nLong methods Large classes Duplicated code Complex conditionals Feature envy Inappropriate intimacy Message chains Middle man Shotgun surgery Divergent change For each smell identified:\nType Location Severity Why it’s a problem Respond in JSON format.\"\"\"\nresponse = await self.llm_client.analyze(prompt) return [ CodeSmell.from_dict(smell) for smell in response.smells ] async def generate_refactoring( self, smell: CodeSmell, code: str, context: CodeContext ) -\u003e Optional[RefactoringSuggestion]: \"\"\"生成重构建议\"\"\" prompt = f\"\"\"Generate a refactoring suggestion for this code smell: Smell Type: {smell.type} Severity: {smell.severity} Location: {smell.location}\nOriginal Code:\n1 {self.extract_code_range(code, smell.location)} Explain the problem and provide:\nRefactoring approach Refactored code Benefits Risks Testing strategy Respond in JSON format.\"\"\"\nresponse = await self.llm_client.generate(prompt) return RefactoringSuggestion( smell_type=smell.type, approach=response.approach, refactored_code=response.code, benefits=response.benefits, risks=response.risks, testing_strategy=response.testing_strategy, priority=self.calculate_priority(smell, response) ) ## 测试生成 ### 1. 单元测试生成 ```python # 测试生成器 class AITestGenerator: def __init__(self, model_config): self.llm_client = LLMClient(model_config) async def generate_tests( self, code: str, context: CodeContext ) -\u003e TestSuite: \"\"\"生成测试\"\"\" # 1. 分析代码 code_analysis = await self.analyze_code(code, context) # 2. 为每个函数生成测试 test_cases = [] for function in code_analysis.functions: # 生成正常路径测试 happy_path = await self.generate_happy_path_test( function, code ) test_cases.extend(happy_path) # 生成边界条件测试 boundary_tests = await self.generate_boundary_tests( function, code ) test_cases.extend(boundary_tests) # 生成异常情况测试 error_tests = await self.generate_error_tests( function, code ) test_cases.extend(error_tests) # 3. 生成测试套件 return TestSuite( name=f\"{context.file_name}_test\", framework='pytest', test_cases=test_cases ) async def generate_happy_path_test( self, function: FunctionAnalysis, code: str ) -\u003e List[TestCase]: \"\"\"生成正常路径测试\"\"\" prompt = f\"\"\"Generate happy path tests for this function: Function: {function.name} Signature: {function.signature} Purpose: {function.purpose} Code: ```python {self.extract_function(code, function.name)} Generate test cases that:\nCover typical usage scenarios Test expected behavior Use realistic inputs Verify outputs correctly Respond with pytest-compatible test code.\"\"\"\nresponse = await self.llm_client.generate(prompt) return self.parse_test_cases(response.code) async def generate_boundary_tests( self, function: FunctionAnalysis, code: str ) -\u003e List[TestCase]: \"\"\"生成边界测试\"\"\" # 识别边界条件 boundaries = self.identify_boundaries(function) test_cases = [] for boundary in boundaries: prompt = f\"\"\"Generate a boundary test for: Function: {function.name} Boundary Condition: {boundary.description} Boundary Value: {boundary.value}\nGenerate test that:\nTests the boundary value Tests just above/below the boundary Verifies correct handling Respond with pytest-compatible test code.\"\"\"\nresponse = await self.llm_client.generate(prompt) test_cases.extend( self.parse_test_cases(response.code) ) return test_cases ## 总结 AI 辅助开发工具的核心能力： 1. **智能补全**：上下文感知的代码建议 2. **多模态生成**：从设计图到代码 3. **智能调试**：自动诊断和修复建议 4. **性能分析**：识别热点和优化建议 5. **代码审查**：自动化代码质量检查 6. **测试生成**：自动生成测试用例 AI 正在成为开发者的智能副驾驶，大幅提升开发效率和代码质量。 --- **相关工具：** - [正则表达式测试](https://www.util.cn/tools/regex-tester/) - [JSON 格式化](https://www.util.cn/tools/json-formatter/) ","wordCount":"2083","inLanguage":"zh-cn","datePublished":"2026-01-15T16:00:00+08:00","dateModified":"2026-01-15T16:00:00+08:00","author":{"@type":"Person","name":"有条工具团队"},"mainEntityOfPage":{"@type":"WebPage","@id":"/blog/articles/ai-assisted-development-tools/"},"publisher":{"@type":"Organization","name":"技术博客 - 有条工具","logo":{"@type":"ImageObject","url":"/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=/blog/ accesskey=h title="技术博客 - 有条工具 (Alt + H)">技术博客 - 有条工具</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=/blog/posts/ title="所有文章列表 - 有条工具技术博客：查看所有技术文章和教程内容"><span>文章</span></a></li><li><a href=https://www.util.cn title="有条工具 - 开发者的常用工具集合：无广告 · 本地计算 · 即开即用的在线工具平台，提供JSON格式化、SQL格式化、Markdown编辑器等实用工具"><span>有条工具</span>&nbsp;
+<svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a></li><li><a href=/blog/categories/ title="文章分类 - 有条工具技术博客：按技术领域分类的优质文章，包括前端开发、工具使用、编程技巧等"><span>分类</span></a></li><li><a href=/blog/tags/ title="标签云 - 有条工具技术博客：通过标签快速找到感兴趣的技术文章和教程内容"><span>标签</span></a></li><li><a href=/blog/archives/ title="文章归档 - 有条工具技术博客：按时间查看历史文章"><span>归档</span></a></li><li><a href=/blog/search/ title="搜索文章 - 有条工具技术博客：通过关键词搜索找到感兴趣的技术文章和教程内容，支持标题、内容、分类和标签搜索"><span>搜索</span></a></li></ul></nav></header><main class=main><article class=post-single><div class=post-content-wrapper><main class=post-content-main><header class=post-header-main><h1 class="post-title entry-hint-parent">AI 辅助开发工具深度剖析：从代码生成到智能调试</h1><div class=post-meta><div class=post-meta-content><div class=post-categories-inline><a href=/blog/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/ class=category-link>开发工具</a></div><span class=post-date>2026-01-15</span><span class=post-author>有条工具团队</span></div><style>.post-meta-content{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;font-family:sf mono,monaco,courier new,monospace;font-size:.875rem;color:#9ca3af !important}.post-categories-inline{display:inline-flex;align-items:center;gap:.5rem}.category-link{display:inline-flex;align-items:center;gap:.25rem;padding:.25rem .75rem;background:rgba(255,255,255,.1);color:#e5e7eb !important;text-decoration:none;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;border:1px solid rgba(255,255,255,.2);border-radius:0;transition:all .3s ease;white-space:nowrap}.category-link:hover{background:rgba(255,255,255,.2);color:#fff !important;border-color:rgba(255,255,255,.3);transform:translateY(-1px)}.category-link::before{content:'📁';font-size:.7rem;opacity:.8}.post-date,.post-reading-time,.post-word-count,.post-author{color:#9ca3af !important}[data-theme=dark] .post-meta-content{color:#9ca3af !important}[data-theme=dark] .category-link{background:rgba(255,255,255,.1);color:#e5e7eb !important;border-color:rgba(255,255,255,.2)}[data-theme=dark] .category-link:hover{background:rgba(255,255,255,.2);color:#fff !important;border-color:rgba(255,255,255,.3)}[data-theme=dark] .post-date,[data-theme=dark] .post-reading-time,[data-theme=dark] .post-word-count,[data-theme=dark] .post-author{color:#9ca3af !important}[data-theme=light] .post-meta-content{color:#6c757d !important}[data-theme=light] .category-link{background:rgba(0,0,0,5%);color:#495057 !important;border-color:rgba(0,0,0,.15)}[data-theme=light] .category-link:hover{background:rgba(0,102,204,.1);color:#212529 !important;border-color:rgba(0,102,204,.3)}[data-theme=light] .post-date,[data-theme=light] .post-reading-time,[data-theme=light] .post-word-count,[data-theme=light] .post-author{color:#6c757d !important}@media(max-width:768px){.post-meta-content{gap:.5rem;font-size:.8rem}.category-link{padding:.2rem .6rem;font-size:.7rem}}</style></div></header><div class=post-content><h2 id=前言>前言<a hidden class=anchor aria-hidden=true href=#前言>#</a></h2><p>AI 辅助开发工具已经从简单的代码补全发展为全流程的开发助手。从需求分析到代码生成，从智能调试到重构建议，AI 正在重塑软件开发的方式。本文将深入探讨 AI 辅助开发工具的技术原理和实战应用。</p><h2 id=智能代码补全>智能代码补全<a hidden class=anchor aria-hidden=true href=#智能代码补全>#</a></h2><h3 id=1-上下文感知补全>1. 上下文感知补全<a hidden class=anchor aria-hidden=true href=#1-上下文感知补全>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">67
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">68
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">69
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">70
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">71
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">72
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">73
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">74
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">75
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">76
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">77
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">78
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">79
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">80
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">81
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">82
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">83
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">84
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">85
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">86
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">87
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">88
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">89
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">90
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">91
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">92
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#8b949e;font-style:italic># AI 代码补全引擎</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>AICompletionEngine</span>:
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>__init__</span>(self, model_config, code_indexer):
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>llm_client <span style=color:#ff7b72;font-weight:700>=</span> LLMClient(model_config)
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>code_indexer <span style=color:#ff7b72;font-weight:700>=</span> code_indexer
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>context_window <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>8192</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>async</span> <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>complete</span>(
+</span></span><span style=display:flex><span>        self,
+</span></span><span style=display:flex><span>        file_path: str,
+</span></span><span style=display:flex><span>        cursor_position: Position,
+</span></span><span style=display:flex><span>        project_context: ProjectContext
+</span></span><span style=display:flex><span>    ) <span style=color:#ff7b72;font-weight:700>-&gt;</span> List[CompletionSuggestion]:
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 1. 获取代码上下文</span>
+</span></span><span style=display:flex><span>        context <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>get_code_context(
+</span></span><span style=display:flex><span>            file_path,
+</span></span><span style=display:flex><span>            cursor_position
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 2. 搜索相关代码</span>
+</span></span><span style=display:flex><span>        similar_code <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>code_indexer<span style=color:#ff7b72;font-weight:700>.</span>search_similar(
+</span></span><span style=display:flex><span>            context<span style=color:#ff7b72;font-weight:700>.</span>prefix,
+</span></span><span style=display:flex><span>            top_k<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>5</span>
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 3. 构建提示词</span>
+</span></span><span style=display:flex><span>        prompt <span style=color:#ff7b72;font-weight:700>=</span> self<span style=color:#ff7b72;font-weight:700>.</span>build_completion_prompt(
+</span></span><span style=display:flex><span>            context,
+</span></span><span style=display:flex><span>            similar_code,
+</span></span><span style=display:flex><span>            project_context
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 4. 调用 LLM 生成补全</span>
+</span></span><span style=display:flex><span>        raw_completions <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>llm_client<span style=color:#ff7b72;font-weight:700>.</span>complete(
+</span></span><span style=display:flex><span>            prompt,
+</span></span><span style=display:flex><span>            max_tokens<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>256</span>,
+</span></span><span style=display:flex><span>            n<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>3</span>,
+</span></span><span style=display:flex><span>            temperature<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>0.2</span>
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 5. 后处理和排序</span>
+</span></span><span style=display:flex><span>        suggestions <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>post_process(
+</span></span><span style=display:flex><span>            raw_completions,
+</span></span><span style=display:flex><span>            context
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> suggestions
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>async</span> <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>get_code_context</span>(
+</span></span><span style=display:flex><span>        self,
+</span></span><span style=display:flex><span>        file_path: str,
+</span></span><span style=display:flex><span>        position: Position
+</span></span><span style=display:flex><span>    ) <span style=color:#ff7b72;font-weight:700>-&gt;</span> CodeContext:
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;获取代码上下文&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 获取当前文件内容</span>
+</span></span><span style=display:flex><span>        file_content <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>read_file(file_path)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 计算上下文范围</span>
+</span></span><span style=display:flex><span>        lines <span style=color:#ff7b72;font-weight:700>=</span> file_content<span style=color:#ff7b72;font-weight:700>.</span>split(<span style=color:#a5d6ff>&#39;</span><span style=color:#79c0ff>\n</span><span style=color:#a5d6ff>&#39;</span>)
+</span></span><span style=display:flex><span>        cursor_line <span style=color:#ff7b72;font-weight:700>=</span> position<span style=color:#ff7b72;font-weight:700>.</span>line <span style=color:#ff7b72;font-weight:700>-</span> <span style=color:#a5d6ff>1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 前文（函数签名、类定义等）</span>
+</span></span><span style=display:flex><span>        prefix_start <span style=color:#ff7b72;font-weight:700>=</span> max(<span style=color:#a5d6ff>0</span>, cursor_line <span style=color:#ff7b72;font-weight:700>-</span> <span style=color:#a5d6ff>50</span>)
+</span></span><span style=display:flex><span>        prefix <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>&#39;</span><span style=color:#79c0ff>\n</span><span style=color:#a5d6ff>&#39;</span><span style=color:#ff7b72;font-weight:700>.</span>join(lines[prefix_start:cursor_line])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 当前行（光标前的内容）</span>
+</span></span><span style=display:flex><span>        current_line <span style=color:#ff7b72;font-weight:700>=</span> lines[cursor_line][:position<span style=color:#ff7b72;font-weight:700>.</span>column]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 后文（可能包含括号、分号等）</span>
+</span></span><span style=display:flex><span>        suffix_start <span style=color:#ff7b72;font-weight:700>=</span> cursor_line <span style=color:#ff7b72;font-weight:700>+</span> <span style=color:#a5d6ff>1</span>
+</span></span><span style=display:flex><span>        suffix_end <span style=color:#ff7b72;font-weight:700>=</span> min(len(lines), cursor_line <span style=color:#ff7b72;font-weight:700>+</span> <span style=color:#a5d6ff>10</span>)
+</span></span><span style=display:flex><span>        suffix <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>&#39;</span><span style=color:#79c0ff>\n</span><span style=color:#a5d6ff>&#39;</span><span style=color:#ff7b72;font-weight:700>.</span>join(lines[suffix_start:suffix_end])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> CodeContext(
+</span></span><span style=display:flex><span>            file_path<span style=color:#ff7b72;font-weight:700>=</span>file_path,
+</span></span><span style=display:flex><span>            language<span style=color:#ff7b72;font-weight:700>=</span>self<span style=color:#ff7b72;font-weight:700>.</span>detect_language(file_path),
+</span></span><span style=display:flex><span>            prefix<span style=color:#ff7b72;font-weight:700>=</span>prefix,
+</span></span><span style=display:flex><span>            current_line<span style=color:#ff7b72;font-weight:700>=</span>current_line,
+</span></span><span style=display:flex><span>            suffix<span style=color:#ff7b72;font-weight:700>=</span>suffix,
+</span></span><span style=display:flex><span>            position<span style=color:#ff7b72;font-weight:700>=</span>position
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>build_completion_prompt</span>(
+</span></span><span style=display:flex><span>        self,
+</span></span><span style=display:flex><span>        context: CodeContext,
+</span></span><span style=display:flex><span>        similar_code: List[CodeSnippet],
+</span></span><span style=display:flex><span>        project_context: ProjectContext
+</span></span><span style=display:flex><span>    ) <span style=color:#ff7b72;font-weight:700>-&gt;</span> str:
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;构建补全提示词&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        prompt <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#79c0ff>f</span><span style=color:#a5d6ff>&#34;&#34;&#34;You are a code completion engine for </span><span style=color:#a5d6ff>{</span>context<span style=color:#ff7b72;font-weight:700>.</span>language<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>.
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Current file context:
+</span></span></span></code></pre></td></tr></table></div></div><p>{context.prefix}
+{context.current_line}[CURSOR]{context.suffix}</p><pre tabindex=0><code>
+Similar code patterns from the project:
+{self.format_similar_code(similar_code)}
+
+Project context:
+- Language: {context.language}
+- Framework: {project_context.framework}
+- Dependencies: {&#39;, &#39;.join(project_context.dependencies[:5])}
+
+Generate 3 code completion suggestions. Each suggestion should:
+1. Complete the current line/function naturally
+2. Follow the project&#39;s coding style
+3. Use appropriate imports from the project
+4. Be syntactically correct
+
+Format your response as JSON:
+```json
+{{
+  &#34;completions&#34;: [
+    {{
+      &#34;code&#34;: &#34;completed code here&#34;,
+      &#34;confidence&#34;: 0.95,
+      &#34;explanation&#34;: &#34;brief explanation&#34;
+    }}
+  ]
+}}
+```&#34;&#34;&#34;
+
+        return prompt
+
+    async def post_process(
+        self,
+        raw_completions: str,
+        context: CodeContext
+    ) -&gt; List[CompletionSuggestion]:
+        &#34;&#34;&#34;后处理补全结果&#34;&#34;&#34;
+        try:
+            data = json.loads(raw_completions)
+            suggestions = []
+
+            for completion in data.get(&#39;completions&#39;, []):
+                # 验证语法
+                if await self.validate_syntax(
+                    completion[&#39;code&#39;],
+                    context.language
+                ):
+                    # 计算实际置信度
+                    adjusted_confidence = self.adjust_confidence(
+                        completion[&#39;confidence&#39;],
+                        context
+                    )
+
+                    suggestions.append(CompletionSuggestion(
+                        code=completion[&#39;code&#39;],
+                        confidence=adjusted_confidence,
+                        explanation=completion.get(&#39;explanation&#39;, &#39;&#39;)
+                    ))
+
+            # 按置信度排序
+            return sorted(
+                suggestions,
+                key=lambda x: x.confidence,
+                reverse=True
+            )
+
+        except json.JSONDecodeError:
+            return []
+</code></pre><h3 id=2-多模态代码生成>2. 多模态代码生成<a hidden class=anchor aria-hidden=true href=#2-多模态代码生成>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">  9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 62
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 63
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 64
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 65
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 66
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 67
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 68
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 69
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 70
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 71
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 72
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 73
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 74
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 75
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 76
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 77
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 78
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 79
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 80
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 81
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 82
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 83
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 84
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 85
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 86
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 87
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 88
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 89
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 90
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 91
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 92
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 93
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 94
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 95
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 96
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 97
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 98
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 99
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">100
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">101
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">102
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">103
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">104
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">105
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">106
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">107
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">108
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">109
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">110
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">111
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">112
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">113
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">114
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">115
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 多模态代码生成器</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>MultiModalCodeGenerator</span>:
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>__init__</span>(self, vision_model, code_model):
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>vision_model <span style=color:#ff7b72;font-weight:700>=</span> vision_model
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>code_model <span style=color:#ff7b72;font-weight:700>=</span> code_model
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>async</span> <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>generate_from_design</span>(
+</span></span><span style=display:flex><span>        self,
+</span></span><span style=display:flex><span>        design_image: Image,
+</span></span><span style=display:flex><span>        requirements: str
+</span></span><span style=display:flex><span>    ) <span style=color:#ff7b72;font-weight:700>-&gt;</span> GeneratedCode:
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;从设计图生成代码&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 1. 分析设计图</span>
+</span></span><span style=display:flex><span>        design_analysis <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>analyze_design(design_image)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 2. 提取组件结构</span>
+</span></span><span style=display:flex><span>        components <span style=color:#ff7b72;font-weight:700>=</span> self<span style=color:#ff7b72;font-weight:700>.</span>extract_components(design_analysis)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 3. 为每个组件生成代码</span>
+</span></span><span style=display:flex><span>        generated_files <span style=color:#ff7b72;font-weight:700>=</span> []
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>for</span> component <span style=color:#ff7b72;font-weight:700>in</span> components:
+</span></span><span style=display:flex><span>            component_code <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>generate_component(
+</span></span><span style=display:flex><span>                component,
+</span></span><span style=display:flex><span>                requirements
+</span></span><span style=display:flex><span>            )
+</span></span><span style=display:flex><span>            generated_files<span style=color:#ff7b72;font-weight:700>.</span>append(component_code)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 4. 生成样式文件</span>
+</span></span><span style=display:flex><span>        styles <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>generate_styles(design_analysis)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 5. 组装完整项目</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> self<span style=color:#ff7b72;font-weight:700>.</span>assemble_project(generated_files, styles)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>async</span> <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>analyze_design</span>(
+</span></span><span style=display:flex><span>        self,
+</span></span><span style=display:flex><span>        image: Image
+</span></span><span style=display:flex><span>    ) <span style=color:#ff7b72;font-weight:700>-&gt;</span> DesignAnalysis:
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;分析设计图&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        prompt <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>&#34;&#34;&#34;Analyze this UI design and provide:
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>1. Layout structure (grid/flex/absolute)
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>2. Component hierarchy
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>3. Color palette
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>4. Typography
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>5. Spacing and sizing
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>6. Interactive elements
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Respond in JSON format.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        response <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>vision_model<span style=color:#ff7b72;font-weight:700>.</span>analyze(
+</span></span><span style=display:flex><span>            image,
+</span></span><span style=display:flex><span>            prompt
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> DesignAnalysis<span style=color:#ff7b72;font-weight:700>.</span>from_dict(response)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>extract_components</span>(
+</span></span><span style=display:flex><span>        self,
+</span></span><span style=display:flex><span>        analysis: DesignAnalysis
+</span></span><span style=display:flex><span>    ) <span style=color:#ff7b72;font-weight:700>-&gt;</span> List[ComponentSpec]:
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;提取组件规范&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        components <span style=color:#ff7b72;font-weight:700>=</span> []
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 遍历组件层次结构</span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>for</span> element <span style=color:#ff7b72;font-weight:700>in</span> analysis<span style=color:#ff7b72;font-weight:700>.</span>elements:
+</span></span><span style=display:flex><span>            <span style=color:#ff7b72>if</span> element<span style=color:#ff7b72;font-weight:700>.</span>is_component:
+</span></span><span style=display:flex><span>                component <span style=color:#ff7b72;font-weight:700>=</span> ComponentSpec(
+</span></span><span style=display:flex><span>                    name<span style=color:#ff7b72;font-weight:700>=</span>self<span style=color:#ff7b72;font-weight:700>.</span>generate_component_name(element),
+</span></span><span style=display:flex><span>                    type<span style=color:#ff7b72;font-weight:700>=</span>element<span style=color:#ff7b72;font-weight:700>.</span>type,
+</span></span><span style=display:flex><span>                    props<span style=color:#ff7b72;font-weight:700>=</span>self<span style=color:#ff7b72;font-weight:700>.</span>extract_props(element),
+</span></span><span style=display:flex><span>                    styles<span style=color:#ff7b72;font-weight:700>=</span>self<span style=color:#ff7b72;font-weight:700>.</span>extract_styles(element),
+</span></span><span style=display:flex><span>                    children<span style=color:#ff7b72;font-weight:700>=</span>self<span style=color:#ff7b72;font-weight:700>.</span>extract_children(element)
+</span></span><span style=display:flex><span>                )
+</span></span><span style=display:flex><span>                components<span style=color:#ff7b72;font-weight:700>.</span>append(component)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> components
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>async</span> <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>generate_component</span>(
+</span></span><span style=display:flex><span>        self,
+</span></span><span style=display:flex><span>        spec: ComponentSpec,
+</span></span><span style=display:flex><span>        requirements: str
+</span></span><span style=display:flex><span>    ) <span style=color:#ff7b72;font-weight:700>-&gt;</span> CodeFile:
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;生成组件代码&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        prompt <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#79c0ff>f</span><span style=color:#a5d6ff>&#34;&#34;&#34;Generate a React component with the following specifications:
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Component Name: </span><span style=color:#a5d6ff>{</span>spec<span style=color:#ff7b72;font-weight:700>.</span>name<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Component Type: </span><span style=color:#a5d6ff>{</span>spec<span style=color:#ff7b72;font-weight:700>.</span>type<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Props:
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff></span><span style=color:#a5d6ff>{</span>self<span style=color:#ff7b72;font-weight:700>.</span>format_props(spec<span style=color:#ff7b72;font-weight:700>.</span>props)<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Styles:
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff></span><span style=color:#a5d6ff>{</span>self<span style=color:#ff7b72;font-weight:700>.</span>format_styles(spec<span style=color:#ff7b72;font-weight:700>.</span>styles)<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Children:
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff></span><span style=color:#a5d6ff>{</span>self<span style=color:#ff7b72;font-weight:700>.</span>format_children(spec<span style=color:#ff7b72;font-weight:700>.</span>children)<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Requirements:
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff></span><span style=color:#a5d6ff>{</span>requirements<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Generate:
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>1. TypeScript interface for props
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>2. React component implementation
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>3. JSDoc comments
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>4. Basic styling (CSS modules or styled-components)
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Respond with the complete code.&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        response <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>code_model<span style=color:#ff7b72;font-weight:700>.</span>generate(prompt)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> CodeFile(
+</span></span><span style=display:flex><span>            path<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#79c0ff>f</span><span style=color:#a5d6ff>&#34;src/components/</span><span style=color:#a5d6ff>{</span>spec<span style=color:#ff7b72;font-weight:700>.</span>name<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>.tsx&#34;</span>,
+</span></span><span style=display:flex><span>            content<span style=color:#ff7b72;font-weight:700>=</span>response<span style=color:#ff7b72;font-weight:700>.</span>code,
+</span></span><span style=display:flex><span>            language<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#39;typescript&#39;</span>
+</span></span><span style=display:flex><span>        )
+</span></span></code></pre></td></tr></table></div></div><h2 id=智能调试助手>智能调试助手<a hidden class=anchor aria-hidden=true href=#智能调试助手>#</a></h2><h3 id=1-错误诊断>1. 错误诊断<a hidden class=anchor aria-hidden=true href=#1-错误诊断>#</a></h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">44
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">45
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">46
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">47
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">48
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">49
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">50
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">51
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">52
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">53
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">54
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">55
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">56
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">57
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">58
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">59
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">60
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">61
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">62
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 智能错误诊断</span>
+</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>AIErrorDiagnostics</span>:
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>__init__</span>(self, model_config, knowledge_base):
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>llm_client <span style=color:#ff7b72;font-weight:700>=</span> LLMClient(model_config)
+</span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>knowledge_base <span style=color:#ff7b72;font-weight:700>=</span> knowledge_base
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>async</span> <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>diagnose_error</span>(
+</span></span><span style=display:flex><span>        self,
+</span></span><span style=display:flex><span>        error: Error,
+</span></span><span style=display:flex><span>        context: ExecutionContext
+</span></span><span style=display:flex><span>    ) <span style=color:#ff7b72;font-weight:700>-&gt;</span> DiagnosisReport:
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;诊断错误&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 1. 收集错误上下文</span>
+</span></span><span style=display:flex><span>        error_context <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>collect_error_context(
+</span></span><span style=display:flex><span>            error,
+</span></span><span style=display:flex><span>            context
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 2. 搜索类似错误</span>
+</span></span><span style=display:flex><span>        similar_errors <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>knowledge_base<span style=color:#ff7b72;font-weight:700>.</span>search_similar(
+</span></span><span style=display:flex><span>            error<span style=color:#ff7b72;font-weight:700>.</span>message,
+</span></span><span style=display:flex><span>            error<span style=color:#ff7b72;font-weight:700>.</span>stack_trace,
+</span></span><span style=display:flex><span>            top_k<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>5</span>
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 3. 分析错误原因</span>
+</span></span><span style=display:flex><span>        root_cause <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>analyze_root_cause(
+</span></span><span style=display:flex><span>            error_context,
+</span></span><span style=display:flex><span>            similar_errors
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 4. 生成修复建议</span>
+</span></span><span style=display:flex><span>        fixes <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>suggest_fixes(
+</span></span><span style=display:flex><span>            error_context,
+</span></span><span style=display:flex><span>            root_cause
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 5. 生成测试用例</span>
+</span></span><span style=display:flex><span>        test_cases <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> self<span style=color:#ff7b72;font-weight:700>.</span>generate_test_cases(
+</span></span><span style=display:flex><span>            error_context,
+</span></span><span style=display:flex><span>            fixes
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> DiagnosisReport(
+</span></span><span style=display:flex><span>            error<span style=color:#ff7b72;font-weight:700>=</span>error,
+</span></span><span style=display:flex><span>            root_cause<span style=color:#ff7b72;font-weight:700>=</span>root_cause,
+</span></span><span style=display:flex><span>            fixes<span style=color:#ff7b72;font-weight:700>=</span>fixes,
+</span></span><span style=display:flex><span>            test_cases<span style=color:#ff7b72;font-weight:700>=</span>test_cases,
+</span></span><span style=display:flex><span>            similar_errors<span style=color:#ff7b72;font-weight:700>=</span>similar_errors
+</span></span><span style=display:flex><span>        )
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>async</span> <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>analyze_root_cause</span>(
+</span></span><span style=display:flex><span>        self,
+</span></span><span style=display:flex><span>        error_context: ErrorContext,
+</span></span><span style=display:flex><span>        similar_errors: List[SimilarError]
+</span></span><span style=display:flex><span>    ) <span style=color:#ff7b72;font-weight:700>-&gt;</span> RootCauseAnalysis:
+</span></span><span style=display:flex><span>        <span style=color:#a5d6ff>&#34;&#34;&#34;分析根本原因&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>        prompt <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#79c0ff>f</span><span style=color:#a5d6ff>&#34;&#34;&#34;Analyze the following error and identify its root cause:
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Error Message: </span><span style=color:#a5d6ff>{</span>error_context<span style=color:#ff7b72;font-weight:700>.</span>error<span style=color:#ff7b72;font-weight:700>.</span>message<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>
+</span></span></span><span style=display:flex><span><span style=color:#a5d6ff>Stack Trace:
+</span></span></span></code></pre></td></tr></table></div></div><p>{error_context.error.stack_trace}</p><pre tabindex=0><code>
+Code Context:
+```python
+{error_context.code_snippet}
+</code></pre><p>Variables at error time:
+{self.format_variables(error_context.variables)}</p><p>Similar errors from knowledge base:
+{self.format_similar_errors(similar_errors)}</p><p>Provide:</p><ol><li>Root cause analysis</li><li>Why this error occurred</li><li>Conditions that led to this error</li><li>Related code that might be problematic</li></ol><p>Respond in JSON format."""</p><pre><code>    response = await self.llm_client.analyze(prompt)
+
+    return RootCauseAnalysis.from_dict(response)
+
+async def suggest_fixes(
+    self,
+    error_context: ErrorContext,
+    root_cause: RootCauseAnalysis
+) -&gt; List[FixSuggestion]:
+    &quot;&quot;&quot;建议修复方案&quot;&quot;&quot;
+    # 生成多种修复方案
+    fixes = []
+
+    # 1. 快速修复（一行改动）
+    quick_fix = await self.generate_quick_fix(
+        error_context,
+        root_cause
+    )
+    if quick_fix:
+        fixes.append(quick_fix)
+
+    # 2. 重构修复
+    refactor_fix = await self.generate_refactor_fix(
+        error_context,
+        root_cause
+    )
+    if refactor_fix:
+        fixes.append(refactor_fix)
+
+    # 3. 防御性编程修复
+    defensive_fix = await self.generate_defensive_fix(
+        error_context,
+        root_cause
+    )
+    if defensive_fix:
+        fixes.append(defensive_fix)
+
+    return fixes
+
+async def generate_quick_fix(
+    self,
+    error_context: ErrorContext,
+    root_cause: RootCauseAnalysis
+) -&gt; Optional[FixSuggestion]:
+    &quot;&quot;&quot;生成快速修复&quot;&quot;&quot;
+    prompt = f&quot;&quot;&quot;Generate a quick one-line fix for this error:
+</code></pre><p>Error: {error_context.error.message}</p><p>Problematic Code:</p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span>{error_context<span style=color:#ff7b72;font-weight:700>.</span>code_snippet}
+</span></span></code></pre></td></tr></table></div></div><p>Root Cause: {root_cause.summary}</p><p>Generate a minimal fix that addresses the immediate issue.
+The fix should:</p><ol><li>Change as little code as possible</li><li>Solve the immediate error</li><li>Not introduce new issues</li></ol><p>Respond with the fixed code."""</p><pre><code>    response = await self.llm_client.generate(prompt)
+
+    return FixSuggestion(
+        type='quick_fix',
+        description='Quick one-line fix',
+        code=response.code,
+        confidence=response.confidence,
+        risk_level='low'
+    )
+</code></pre><pre tabindex=0><code>
+### 2. 性能分析
+
+```python
+# AI 性能分析
+class AIPerformanceAnalyzer:
+    def __init__(self, model_config):
+        self.llm_client = LLMClient(model_config)
+
+    async def analyze_performance(
+        self,
+        profiling_data: ProfilingData,
+        code_context: CodeContext
+    ) -&gt; PerformanceReport:
+        &#34;&#34;&#34;分析性能问题&#34;&#34;&#34;
+        # 1. 识别热点
+        hotspots = self.identify_hotspots(profiling_data)
+
+        # 2. 分析每个热点
+        analyses = []
+        for hotspot in hotspots:
+            analysis = await self.analyze_hotspot(
+                hotspot,
+                code_context
+            )
+            analyses.append(analysis)
+
+        # 3. 生成优化建议
+        optimizations = await self.suggest_optimizations(
+            analyses,
+            code_context
+        )
+
+        # 4. 预估性能提升
+        estimated_improvements = self.estimate_improvements(
+            optimizations,
+            profiling_data
+        )
+
+        return PerformanceReport(
+            hotspots=hotspots,
+            analyses=analyses,
+            optimizations=optimizations,
+            estimated_improvements=estimated_improvements
+        )
+
+    def identify_hotspots(
+        self,
+        profiling_data: ProfilingData
+    ) -&gt; List[Hotspot]:
+        &#34;&#34;&#34;识别性能热点&#34;&#34;&#34;
+        hotspots = []
+
+        # 按执行时间排序
+        functions_by_time = sorted(
+            profiling_data.function_calls,
+            key=lambda x: x.total_time,
+            reverse=True
+        )
+
+        # 取前10个最耗时的函数
+        for func in functions_by_time[:10]:
+            hotspots.append(Hotspot(
+                function_name=func.name,
+                file_path=func.file,
+                line_number=func.line,
+                total_time=func.total_time,
+                call_count=func.call_count,
+                avg_time=func.total_time / func.call_count,
+                percentage=(func.total_time / profiling_data.total_time) * 100
+            ))
+
+        return hotspots
+
+    async def analyze_hotspot(
+        self,
+        hotspot: Hotspot,
+        code_context: CodeContext
+    ) -&gt; HotspotAnalysis:
+        &#34;&#34;&#34;分析热点&#34;&#34;&#34;
+        # 获取函数代码
+        function_code = await code_context.get_function_code(
+            hotspot.function_name,
+            hotspot.file_path
+        )
+
+        prompt = f&#34;&#34;&#34;Analyze this performance hotspot:
+
+Function: {hotspot.function_name}
+Location: {hotspot.file_path}:{hotspot.line_number}
+Total Time: {hotspot.total_time:.2f}s
+Call Count: {hotspot.call_count}
+Average Time: {hotspot.avg_time:.4f}s
+Percentage: {hotspot.percentage:.1f}%
+
+Code:
+```python
+{function_code}
+</code></pre><p>Identify:</p><ol><li>Why this function is slow</li><li>Specific performance bottlenecks</li><li>Algorithmic complexity issues</li><li>Inefficient operations</li></ol><p>Respond in JSON format."""</p><pre><code>    response = await self.llm_client.analyze(prompt)
+
+    return HotspotAnalysis.from_dict(response)
+
+async def suggest_optimizations(
+    self,
+    analyses: List[HotspotAnalysis],
+    code_context: CodeContext
+) -&gt; List[OptimizationSuggestion]:
+    &quot;&quot;&quot;建议优化方案&quot;&quot;&quot;
+    optimizations = []
+
+    for analysis in analyses:
+        prompt = f&quot;&quot;&quot;Suggest optimizations for this performance issue:
+</code></pre><p>Hotspot Analysis:
+{analysis.to_json()}</p><p>Generate specific optimization suggestions including:</p><ol><li>Code changes</li><li>Algorithm improvements</li><li>Data structure changes</li><li>Caching strategies</li></ol><p>For each suggestion provide:</p><ul><li>Description</li><li>Code example</li><li>Expected improvement</li><li>Implementation difficulty</li></ul><p>Respond in JSON format."""</p><pre><code>        response = await self.llm_client.generate(prompt)
+
+        suggestions = OptimizationSuggestion.from_json(
+            response.suggestions
+        )
+        optimizations.extend(suggestions)
+
+    # 按预期收益排序
+    return sorted(
+        optimizations,
+        key=lambda x: x.expected_improvement,
+        reverse=True
+    )
+</code></pre><pre tabindex=0><code>
+## 代码审查助手
+
+### 1. 自动代码审查
+
+```python
+# AI 代码审查
+class AICodeReviewer:
+    def __init__(self, model_config, style_guide):
+        self.llm_client = LLMClient(model_config)
+        self.style_guide = style_guide
+
+    async def review_pull_request(
+        self,
+        pr: PullRequest
+    ) -&gt; ReviewReport:
+        &#34;&#34;&#34;审查 Pull Request&#34;&#34;&#34;
+        # 1. 分析变更
+        changes = await self.analyze_changes(pr)
+
+        # 2. 逐文件审查
+        file_reviews = []
+        for file_change in changes:
+            review = await self.review_file_change(
+                file_change,
+                pr.context
+            )
+            file_reviews.append(review)
+
+        # 3. 整体评估
+        overall_assessment = await self.assess_overall_quality(
+            file_reviews,
+            pr
+        )
+
+        # 4. 生成建议
+        recommendations = await self.generate_recommendations(
+            file_reviews,
+            overall_assessment
+        )
+
+        return ReviewReport(
+            file_reviews=file_reviews,
+            overall_assessment=overall_assessment,
+            recommendations=recommendations
+        )
+
+    async def review_file_change(
+        self,
+        file_change: FileChange,
+        context: PRContext
+    ) -&gt; FileReview:
+        &#34;&#34;&#34;审查文件变更&#34;&#34;&#34;
+        # 分析代码变更
+        diff_analysis = self.analyze_diff(file_change.diff)
+
+        issues = []
+        suggestions = []
+
+        # 检查各项指标
+        for change in diff_analysis.changes:
+            # 1. 代码风格检查
+            style_issues = await self.check_style(
+                change,
+                file_change
+            )
+            issues.extend(style_issues)
+
+            # 2. 最佳实践检查
+            practice_issues = await self.check_best_practices(
+                change,
+                context
+            )
+            issues.extend(practice_issues)
+
+            # 3. 安全检查
+            security_issues = await self.check_security(
+                change,
+                file_change
+            )
+            issues.extend(security_issues)
+
+            # 4. 性能检查
+            performance_issues = await self.check_performance(
+                change,
+                file_change
+            )
+            issues.extend(performance_issues)
+
+            # 5. 生成改进建议
+            change_suggestions = await self.suggest_improvements(
+                change,
+                issues
+            )
+            suggestions.extend(change_suggestions)
+
+        return FileReview(
+            file_path=file_change.path,
+            issues=issues,
+            suggestions=suggestions,
+            overall_score=self.calculate_score(issues)
+        )
+
+    async def check_security(
+        self,
+        change: CodeChange,
+        file_change: FileChange
+    ) -&gt; List[SecurityIssue]:
+        &#34;&#34;&#34;检查安全问题&#34;&#34;&#34;
+        prompt = f&#34;&#34;&#34;Review this code change for security issues:
+
+File: {file_change.path}
+Change:
+```diff
+{change.diff}
+</code></pre><p>New Code:</p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span>{change<span style=color:#ff7b72;font-weight:700>.</span>new_code}
+</span></span></code></pre></td></tr></table></div></div><p>Check for:</p><ol><li>SQL injection vulnerabilities</li><li>XSS vulnerabilities</li><li>CSRF vulnerabilities</li><li>Authentication/authorization issues</li><li>Sensitive data exposure</li><li>Insecure dependencies</li><li>Input validation issues</li></ol><p>Respond in JSON format with:</p><ul><li><p>severity (critical/high/medium/low)</p></li><li><p>description</p></li><li><p>recommendation</p></li><li><p>cwe_id (if applicable)"""</p><pre><code>  response = await self.llm_client.analyze(prompt)
+
+  return [
+      SecurityIssue.from_dict(issue)
+      for issue in response.issues
+  ]
+</code></pre></li></ul><pre tabindex=0><code>
+### 2. 重构建议
+
+```python
+# 重构建议引擎
+class RefactoringSuggestionEngine:
+    def __init__(self, model_config):
+        self.llm_client = LLMClient(model_config)
+
+    async def suggest_refactorings(
+        self,
+        code: str,
+        context: CodeContext
+    ) -&gt; List[RefactoringSuggestion]:
+        &#34;&#34;&#34;建议重构&#34;&#34;&#34;
+        # 1. 识别代码异味
+        code_smells = await self.detect_code_smells(
+            code,
+            context
+        )
+
+        # 2. 为每个异味生成重构建议
+        suggestions = []
+        for smell in code_smells:
+            suggestion = await self.generate_refactoring(
+                smell,
+                code,
+                context
+            )
+            if suggestion:
+                suggestions.append(suggestion)
+
+        # 3. 按优先级排序
+        return sorted(
+            suggestions,
+            key=lambda x: x.priority,
+            reverse=True
+        )
+
+    async def detect_code_smells(
+        self,
+        code: str,
+        context: CodeContext
+    ) -&gt; List[CodeSmell]:
+        &#34;&#34;&#34;检测代码异味&#34;&#34;&#34;
+        prompt = f&#34;&#34;&#34;Analyze this code for code smells and design issues:
+
+```python
+{code}
+</code></pre><p>Detect:</p><ol><li>Long methods</li><li>Large classes</li><li>Duplicated code</li><li>Complex conditionals</li><li>Feature envy</li><li>Inappropriate intimacy</li><li>Message chains</li><li>Middle man</li><li>Shotgun surgery</li><li>Divergent change</li></ol><p>For each smell identified:</p><ul><li>Type</li><li>Location</li><li>Severity</li><li>Why it&rsquo;s a problem</li></ul><p>Respond in JSON format."""</p><pre><code>    response = await self.llm_client.analyze(prompt)
+
+    return [
+        CodeSmell.from_dict(smell)
+        for smell in response.smells
+    ]
+
+async def generate_refactoring(
+    self,
+    smell: CodeSmell,
+    code: str,
+    context: CodeContext
+) -&gt; Optional[RefactoringSuggestion]:
+    &quot;&quot;&quot;生成重构建议&quot;&quot;&quot;
+    prompt = f&quot;&quot;&quot;Generate a refactoring suggestion for this code smell:
+</code></pre><p>Smell Type: {smell.type}
+Severity: {smell.severity}
+Location: {smell.location}</p><p>Original Code:</p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span>{self<span style=color:#ff7b72;font-weight:700>.</span>extract_code_range(code, smell<span style=color:#ff7b72;font-weight:700>.</span>location)}
+</span></span></code></pre></td></tr></table></div></div><p>Explain the problem and provide:</p><ol><li>Refactoring approach</li><li>Refactored code</li><li>Benefits</li><li>Risks</li><li>Testing strategy</li></ol><p>Respond in JSON format."""</p><pre><code>    response = await self.llm_client.generate(prompt)
+
+    return RefactoringSuggestion(
+        smell_type=smell.type,
+        approach=response.approach,
+        refactored_code=response.code,
+        benefits=response.benefits,
+        risks=response.risks,
+        testing_strategy=response.testing_strategy,
+        priority=self.calculate_priority(smell, response)
+    )
+</code></pre><pre tabindex=0><code>
+## 测试生成
+
+### 1. 单元测试生成
+
+```python
+# 测试生成器
+class AITestGenerator:
+    def __init__(self, model_config):
+        self.llm_client = LLMClient(model_config)
+
+    async def generate_tests(
+        self,
+        code: str,
+        context: CodeContext
+    ) -&gt; TestSuite:
+        &#34;&#34;&#34;生成测试&#34;&#34;&#34;
+        # 1. 分析代码
+        code_analysis = await self.analyze_code(code, context)
+
+        # 2. 为每个函数生成测试
+        test_cases = []
+
+        for function in code_analysis.functions:
+            # 生成正常路径测试
+            happy_path = await self.generate_happy_path_test(
+                function,
+                code
+            )
+            test_cases.extend(happy_path)
+
+            # 生成边界条件测试
+            boundary_tests = await self.generate_boundary_tests(
+                function,
+                code
+            )
+            test_cases.extend(boundary_tests)
+
+            # 生成异常情况测试
+            error_tests = await self.generate_error_tests(
+                function,
+                code
+            )
+            test_cases.extend(error_tests)
+
+        # 3. 生成测试套件
+        return TestSuite(
+            name=f&#34;{context.file_name}_test&#34;,
+            framework=&#39;pytest&#39;,
+            test_cases=test_cases
+        )
+
+    async def generate_happy_path_test(
+        self,
+        function: FunctionAnalysis,
+        code: str
+    ) -&gt; List[TestCase]:
+        &#34;&#34;&#34;生成正常路径测试&#34;&#34;&#34;
+        prompt = f&#34;&#34;&#34;Generate happy path tests for this function:
+
+Function: {function.name}
+Signature: {function.signature}
+Purpose: {function.purpose}
+
+Code:
+```python
+{self.extract_function(code, function.name)}
+</code></pre><p>Generate test cases that:</p><ol><li>Cover typical usage scenarios</li><li>Test expected behavior</li><li>Use realistic inputs</li><li>Verify outputs correctly</li></ol><p>Respond with pytest-compatible test code."""</p><pre><code>    response = await self.llm_client.generate(prompt)
+
+    return self.parse_test_cases(response.code)
+
+async def generate_boundary_tests(
+    self,
+    function: FunctionAnalysis,
+    code: str
+) -&gt; List[TestCase]:
+    &quot;&quot;&quot;生成边界测试&quot;&quot;&quot;
+    # 识别边界条件
+    boundaries = self.identify_boundaries(function)
+
+    test_cases = []
+
+    for boundary in boundaries:
+        prompt = f&quot;&quot;&quot;Generate a boundary test for:
+</code></pre><p>Function: {function.name}
+Boundary Condition: {boundary.description}
+Boundary Value: {boundary.value}</p><p>Generate test that:</p><ol><li>Tests the boundary value</li><li>Tests just above/below the boundary</li><li>Verifies correct handling</li></ol><p>Respond with pytest-compatible test code."""</p><pre><code>        response = await self.llm_client.generate(prompt)
+
+        test_cases.extend(
+            self.parse_test_cases(response.code)
+        )
+
+    return test_cases
+</code></pre><pre tabindex=0><code>
+## 总结
+
+AI 辅助开发工具的核心能力：
+
+1. **智能补全**：上下文感知的代码建议
+2. **多模态生成**：从设计图到代码
+3. **智能调试**：自动诊断和修复建议
+4. **性能分析**：识别热点和优化建议
+5. **代码审查**：自动化代码质量检查
+6. **测试生成**：自动生成测试用例
+
+AI 正在成为开发者的智能副驾驶，大幅提升开发效率和代码质量。
+
+---
+
+**相关工具：**
+- [正则表达式测试](https://www.util.cn/tools/regex-tester/)
+- [JSON 格式化](https://www.util.cn/tools/json-formatter/)
+</code></pre></div><footer class=post-footer-modern><div class=post-tags-modern><span class=tags-label>🏷️ 标签</span><div class=tags-list><a href=/blog/tags/ai%E8%BE%85%E5%8A%A9%E5%BC%80%E5%8F%91/ class=tag-pill>AI辅助开发
+</a><a href=/blog/tags/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/ class=tag-pill>代码生成
+</a><a href=/blog/tags/%E6%99%BA%E8%83%BD%E8%B0%83%E8%AF%95/ class=tag-pill>智能调试
+</a><a href=/blog/tags/llm/ class=tag-pill>LLM
+</a><a href=/blog/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/ class=tag-pill>开发工具</a></div></div><style>.post-footer-modern{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border,#333333)}.post-tags-modern{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}.tags-label{font-size:.875rem;font-weight:600;color:var(--secondary,#999999) !important;white-space:nowrap}.tags-list{display:flex;flex-wrap:wrap;gap:.5rem;flex:1}.tag-pill{display:inline-block;padding:.25rem .75rem;background:rgba(255,255,255,5%);border:1px solid var(--border,#333333);border-radius:0;color:var(--secondary,#cccccc) !important;text-decoration:none;font-size:.8rem;font-weight:500;transition:all .2s ease}.tag-pill:hover{background:var(--primary,#ffffff);color:var(--background,#000000) !important;border-color:var(--primary,#ffffff);transform:translateY(-1px)}.post-nav-modern{margin-top:2rem}.nav-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.nav-card{display:flex;align-items:center;gap:1rem;padding:1.25rem;background:rgba(255,255,255,2%);border:1px solid var(--border,#333333);border-radius:12px;text-decoration:none;transition:all .2s ease;min-height:80px}.nav-card:hover{background:rgba(255,255,255,5%);border-color:var(--primary,#ffffff);transform:translateY(-2px)}.nav-card.nav-prev{justify-content:flex-start}.nav-card.nav-next{justify-content:flex-end;text-align:right}.nav-card.nav-next .nav-content{text-align:right}.nav-empty{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,1%);border:1px dashed var(--border,#333333);color:var(--secondary,#666666)}.nav-arrow{font-size:1.5rem;color:var(--primary,#ffffff);font-weight:300}.nav-content{flex:1}.nav-title{font-size:.95rem;font-weight:600;color:var(--primary,#ffffff) !important;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}[data-theme=light] .post-footer-modern{border-color:var(--border-light,#dee2e6)}[data-theme=light] .tags-label{color:var(--secondary-light,#6c757d) !important}[data-theme=light] .tag-pill{background:rgba(0,0,0,5%);border-color:var(--border-light,#dee2e6);color:var(--secondary-light,#495057) !important}[data-theme=light] .tag-pill:hover{background:var(--primary-light,#0066cc);color:var(--background-light,#ffffff) !important;border-color:var(--primary-light,#0066cc)}[data-theme=light] .nav-card{background:rgba(0,0,0,2%);border-color:var(--border-light,#dee2e6)}[data-theme=light] .nav-card:hover{background:rgba(0,102,204,5%);border-color:var(--primary-light,#0066cc)}[data-theme=light] .nav-empty{background:rgba(0,0,0,1%);border-color:var(--border-light,#dee2e6);color:var(--secondary-light,#6c757d)}[data-theme=light] .nav-arrow{color:var(--primary-light,#0066cc)}[data-theme=light] .nav-title{color:var(--primary-light,#212529) !important}@media(max-width:768px){.nav-grid{grid-template-columns:1fr;gap:.75rem}.nav-card{padding:1rem;min-height:70px}.nav-card.nav-next{text-align:left}.nav-card.nav-next .nav-content{text-align:left}.nav-title{font-size:.875rem}.post-tags-modern{flex-direction:column;gap:.75rem}}@media(max-width:480px){.nav-arrow{font-size:1.25rem}.nav-card{padding:.875rem}.nav-title{font-size:.8rem;-webkit-line-clamp:1}}</style><nav class=post-nav-modern><div class=nav-grid><a href=/blog/articles/real-time-data-architecture/ class="nav-card nav-prev"><div class=nav-arrow>←</div><div class=nav-content><div class=nav-title>实时数据架构：从流处理到智能决策</div></div></a><a href=/blog/articles/cloud-native-security/ class="nav-card nav-next"><div class=nav-content><div class=nav-title>云原生安全实践：构建零信任架构</div></div><div class=nav-arrow>→</div></a></div></nav></footer></main><aside class=post-sidebar><div class=sidebar-toc id=sidebar-toc><div class=toc-header><div class=toc-title>目录</div><button class=toc-toggle id=toc-toggle aria-label="Toggle TOC">
+<svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div><div class=toc-content id=toc-content><ul class=toc-list><li class="toc-item toc-h2"><a href=#h2-0 class=toc-item-link><span class=toc-item-text>前言</span></a></li><li class="toc-item toc-h2"><a href=#h2-1 class=toc-item-link><span class=toc-item-text>智能代码补全</span></a></li><li class="toc-item toc-h2"><a href=#h2-2 class=toc-item-link><span class=toc-item-text>智能调试助手</span></a></li></ul></div></div><script>document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("sidebar-toc"),t=document.getElementById("toc-toggle"),o=document.getElementById("toc-content"),i=t?.querySelector(".toc-toggle-icon");if(!e)return;let n=!1;t&&t.addEventListener("click",function(){n=!n,n?(o.style.display="none",e.style.width="auto",i.innerHTML='<path d="M9 18l6-6-6-6"/>'):(o.style.display="block",e.style.width="200px",i.innerHTML='<path d="M18 6L6 18M6 6l12 12"/>')});const s=document.querySelector(".post-content");if(s){const e=s.querySelectorAll("h1");e.forEach((e,t)=>{e.id=`h1-${t}`});const t=s.querySelectorAll("h2");t.forEach((e,t)=>{e.id=`h2-${t}`})}const a=document.querySelectorAll(".toc-item-link");a.forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();const n=this.getAttribute("href").substring(1),t=document.getElementById(n);if(t){const e=document.querySelector(".post-header-main")?.offsetHeight||0,n=t.offsetTop-e-20;window.scrollTo({top:n,behavior:"smooth"})}})})})</script><style>.sidebar-toc{position:sticky;top:2rem;width:200px;background:#fff;border:1px solid #e5e7eb;border-radius:4px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.1);z-index:100}.sidebar-toc.hidden{display:none}.toc-header{padding:12px 16px;border-bottom:1px solid #e5e7eb;background:#fafbfc;display:flex;align-items:center;justify-content:space-between}.toc-title{margin:0;font-size:13px;font-weight:500;color:#374151 !important;font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;text-transform:uppercase;letter-spacing:1px}.toc-toggle{background:0 0;border:none;cursor:pointer;padding:4px;border-radius:4px;display:flex;align-items:center;justify-content:center;transition:all .2s ease;color:#6b7280}.toc-toggle:hover{background:#e5e7eb;color:#374151}.toc-toggle-icon{transition:transform .2s ease}.toc-content{padding:12px 0}.toc-list{list-style:none;margin:0;padding:0}.toc-item{margin-bottom:4px;display:block !important;visibility:visible !important}.toc-h1,.toc-h2{display:block !important}.toc-h2{margin-left:0}.toc-item-link{display:flex;align-items:center;gap:8px;padding:8px 12px;color:#374151 !important;text-decoration:none;font-size:13px;line-height:1.4;border-radius:3px;transition:all .2s ease;font-weight:400}.toc-item-link:hover{background:#f8fafc;color:#1f2937 !important}.toc-item-link.active{background:#e0f2fe;color:#01579b !important;font-weight:500}.toc-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}.dot-red{background:#ef4444}.dot-blue{background:#2196f3}.toc-item-text{color:#1f2937 !important;font-weight:400;flex:1;display:inline !important;visibility:visible !important;opacity:1 !important;font-size:13px !important;line-height:1.4 !important}.toc-item-link .toc-item-text{color:#1f2937 !important;display:inline !important;visibility:visible !important;opacity:1 !important}.toc-item.active .dot-red{background:#d32f2f}.toc-item.active .dot-blue{background:#1976d2}[data-theme=dark] .sidebar-toc{background:#1f2937;border-color:#374151;box-shadow:0 1px 3px rgba(0,0,0,.3)}[data-theme=dark] .toc-header{background:#111827;border-color:#374151}[data-theme=dark] .toc-title{color:#f3f4f6 !important}[data-theme=dark] .toc-toggle{color:#9ca3af}[data-theme=dark] .toc-toggle:hover{background:#374151;color:#f3f4f6}[data-theme=dark] .toc-item-link{color:#e5e7eb !important}[data-theme=dark] .toc-item-link:hover{background:#374151;color:#f9fafb !important}[data-theme=dark] .toc-item-link.active{background:#0d47a1;color:#fff !important}[data-theme=dark] .toc-item-text{color:#f9fafb !important;display:inline !important;visibility:visible !important;opacity:1 !important}[data-theme=dark] .toc-item-link .toc-item-text{color:#f9fafb !important;display:inline !important;visibility:visible !important;opacity:1 !important}@media(max-width:1024px){.sidebar-toc{display:none}.post-content-wrapper{grid-template-columns:1fr !important;padding:0 1rem !important}}</style><style>.post-content-wrapper{display:grid;grid-template-columns:1fr 200px;gap:2rem;padding:0 2rem;max-width:100%}.post-content-main{min-width:0}.post-sidebar{position:sticky;top:2rem;height:fit-content;min-width:0}.post-header-main{margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--border,#333333)}.post-header-main .post-title{color:var(--primary,#ffffff) !important;font-size:2.5rem;font-weight:700;line-height:1.2;margin-bottom:1rem}.post-header-main .post-description{color:var(--secondary,#cccccc) !important;font-size:1.1rem;line-height:1.6;margin-bottom:1rem}.post-header-main .post-meta{margin-bottom:0}@media(max-width:1024px){.post-content-wrapper{grid-template-columns:1fr !important;gap:1rem;padding:0 1rem !important}.post-sidebar{display:none}}@media(max-width:768px){.post-header-main .post-title{font-size:2rem}.post-header-main .post-description{font-size:1rem}}</style></aside></div></article></main><footer class=footer><span>© 2024-2025 有条工具技术博客</span> ·</footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
