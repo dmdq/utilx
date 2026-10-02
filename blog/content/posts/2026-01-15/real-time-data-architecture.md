@@ -1065,5 +1065,5 @@ class SlackNotifier(AlertNotifier):
 ---
 
 **相关工具：**
-- [JSON 解析工具](https://www.util.cn/tools/json-parser/)
-- [时间戳转换](https://www.util.cn/tools/timestamp/)
+- [JSON 解析工具](https://www.util.cn/tools/json-formatter/)
+- [时间戳转换](https://www.util.cn/tools/timestamp-convert/)

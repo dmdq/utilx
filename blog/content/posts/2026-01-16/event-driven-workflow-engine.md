@@ -1063,4 +1063,4 @@ class WorkflowMonitor {
 
 **相关工具：**
 - [UUID 生成器](https://www.util.cn/tools/uuid-generator/)
-- [Base64 编码解码](https://www.util.cn/tools/base64/)
+- [Base64 编码解码](https://www.util.cn/tools/base64-encode/)

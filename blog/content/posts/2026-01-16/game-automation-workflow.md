@@ -1199,5 +1199,5 @@ class ExperimentManager {
 ---
 
 **相关工具：**
-- [Cron 表达式生成](https://www.util.cn/tools/cron/)
+- [Cron 表达式生成](https://www.util.cn/tools/cron-expression-debugger/)
 - [UUID 生成器](https://www.util.cn/tools/uuid-generator/)

@@ -1186,4 +1186,4 @@ class SocialMediaABTest:
 > **实用工具**
 > - [Markdown编辑器](https://www.util.cn/tools/markdown-editor/) - 内容创作
 > - [颜色选择器](https://www.util.cn/tools/color-picker/) - 视觉设计
-> - [二维码生成](https://www.util.cn/tools/qrcode-generate/) - 社交分享
+> - [二维码生成](https://www.util.cn/tools/qr-code-generator/) - 社交分享

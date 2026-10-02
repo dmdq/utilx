@@ -779,5 +779,5 @@ async function loadScene(sceneName: string) {
 ---
 
 **相关工具：**
-- [图片压缩工具](https://www.util.cn/tools/image-compressor/)
+- [图片压缩工具](https://www.util.cn/tools/image-compress/)
 - [JSON 格式化](https://www.util.cn/tools/json-formatter/)

@@ -801,5 +801,5 @@ class HotUpdateManager {
 ---
 
 **相关工具：**
-- [图片压缩工具](https://www.util.cn/tools/image-compressor/)
-- [Base64 编码解码](https://www.util.cn/tools/base64/)
+- [图片压缩工具](https://www.util.cn/tools/image-compress/)
+- [Base64 编码解码](https://www.util.cn/tools/base64-encode/)

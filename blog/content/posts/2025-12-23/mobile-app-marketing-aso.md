@@ -1025,5 +1025,5 @@ class InAppPurchaseOptimizer:
 
 > **实用工具**
 > - [UUID生成器](https://www.util.cn/tools/uuid-generator/) - 生成设备标识
-> - [二维码生成](https://www.util.cn/tools/qrcode-generate/) - 应用下载推广
+> - [二维码生成](https://www.util.cn/tools/qr-code-generator/) - 应用下载推广
 > - [颜色选择器](https://www.util.cn/tools/color-picker/) - 应用设计

@@ -4695,6 +4695,21 @@ export const tools = [
     keywords: ['browser detect', '浏览器版本', 'user agent', '浏览器识别']
   },
   {
+    id: 'ip-lookup',
+    name: 'IP地址查询',
+    description: '查询IP地址的地理位置、运营商、ASN等信息，支持IPv4和IPv6',
+    category: 'dev',
+    icon: 'Globe',
+    viewCount: 2000,
+    hot: true,
+    new: true,
+    local: true,
+    sortOrder: 1640,
+    lastUpdated: '2026-01-16 00:00:00',
+    tags: ['IP查询', 'IP地址', '地理位置', '运营商', 'ASN', 'IPv4', 'IPv6'],
+    keywords: ['ip lookup', 'ip address', 'geolocation', 'isp', 'asn', 'ipv4', 'ipv6', 'ip查询']
+  },
+  {
     id: 'svg-code-editor',
     name: 'SVG代码编辑器',
     description: '实时编辑和预览SVG代码，支持导出多种图片格式',

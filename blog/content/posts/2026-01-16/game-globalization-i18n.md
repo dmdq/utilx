@@ -874,5 +874,5 @@ class ComplianceEngine {
 ---
 
 **相关工具：**
-- [Base64 编码解码](https://www.util.cn/tools/base64/)
-- [MD5 加密](https://www.util.cn/tools/md5/)
+- [Base64 编码解码](https://www.util.cn/tools/base64-encode/)
+- [MD5 加密](https://www.util.cn/tools/md5-generator/)

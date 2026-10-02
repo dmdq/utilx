@@ -250,4 +250,4 @@ class DeveloperFeedbackSystem:
 
 > **相关工具推荐**
 > - [JSON格式化](https://www.util.cn/tools/json-formatter/) - JSON处理
-> - [Markdown编辑器](https://www.util.cn/tools/markdown/) - 文档编写
+> - [Markdown编辑器](https://www.util.cn/tools/markdown-editor/) - 文档编写

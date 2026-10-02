@@ -1026,4 +1026,4 @@ Edge AI在2025年实现了从概念到商用的跨越。2026年，随着硬件�
 
 > **相关工具推荐**
 > - [Base64编码工具](https://www.util.cn/tools/base64-encode/) - 编码转换
-> - [图片处理工具](https://www.util.cn/tools/image/) - 图像处理
+> - [图片处理工具](https://www.util.cn/tools/image-compress/) - 图像处理

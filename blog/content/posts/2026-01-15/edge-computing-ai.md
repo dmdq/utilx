@@ -796,5 +796,4 @@ class ModelSyncManager {
 ---
 
 **相关工具：**
-- [JSON 压缩工具](https://www.util.cn/tools/json-compressor/)
-- [时间戳转换](https://www.util.cn/tools/timestamp/)
+- [时间戳转换](https://www.util.cn/tools/timestamp-convert/)

@@ -798,5 +798,5 @@ Rust 让系统编程既安全又高效，是构建下一代基础设施的理想
 ---
 
 **相关工具：**
-- [JSON 解析工具](https://www.util.cn/tools/json-parser/)
-- [HEX 转换工具](https://www.util.cn/tools/hex-converter/)
+- [JSON 解析工具](https://www.util.cn/tools/json-formatter/)
+- [HEX 转换工具](https://www.util.cn/tools/hex-convert/)

@@ -822,4 +822,4 @@ class TechnicalDebtAnalyzer {
 > **相关工具推荐**
 > - [JSON格式化工具](https://www.util.cn/tools/json-formatter/) - JSON数据处理
 > - [正则表达式测试](https://www.util.cn/tools/regex-tester/) - 正则测试
-> - [时间戳转换](https://www.util.cn/tools/timestamp/) - 时间处理
+> - [时间戳转换](https://www.util.cn/tools/timestamp-convert/) - 时间处理

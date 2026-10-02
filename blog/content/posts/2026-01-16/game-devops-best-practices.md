@@ -1012,5 +1012,5 @@ class DisasterDrillService {
 ---
 
 **相关工具：**
-- [Cron 表达式生成](https://www.util.cn/tools/cron/)
+- [Cron 表达式生成](https://www.util.cn/tools/cron-expression-debugger/)
 - [密码生成器](https://www.util.cn/tools/password-generator/)

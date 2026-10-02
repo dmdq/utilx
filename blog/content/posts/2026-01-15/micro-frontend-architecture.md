@@ -1056,5 +1056,5 @@ export const microAppMonitoring = new MicroAppMonitoring();
 ---
 
 **相关工具：**
-- [URL 编码解码](https://www.util.cn/tools/url-encoder/)
+- [URL 编码解码](https://www.util.cn/tools/url-encode/)
 - [HTML 格式化工具](https://www.util.cn/tools/html-formatter/)

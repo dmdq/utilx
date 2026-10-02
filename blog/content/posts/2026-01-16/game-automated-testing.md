@@ -1094,4 +1094,4 @@ module.exports = GameTestReporter;
 
 **相关工具：**
 - [JSON 格式化](https://www.util.cn/tools/json-formatter/)
-- [HEX 转换](https://www.util.cn/tools/hex-converter/)
+- [HEX 转换](https://www.util.cn/tools/hex-convert/)

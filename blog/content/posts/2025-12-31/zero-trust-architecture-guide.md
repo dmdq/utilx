@@ -385,5 +385,5 @@ class ZeroTrustMonitor:
 4. 技术与流程并重
 
 > **相关工具推荐**
-> - [UUID生成器](https://www.util.cn/tools/uuid/) - 唯一标识
-> - [Hash计算工具](https://www.util.cn/tools/hash/) - 数据校验
+> - [UUID生成器](https://www.util.cn/tools/uuid-generator/) - 唯一标识
+> - [Hash计算工具](https://www.util.cn/tools/sha-generator/) - 数据校验

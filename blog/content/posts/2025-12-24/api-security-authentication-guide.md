@@ -928,6 +928,6 @@ API安全是一个多层次的主题：
 API安全需要持续关注和改进，随着威胁环境的变化不断调整防护策略。
 
 > **相关工具推荐**
-> - [JWT解析工具](https://www.util.cn/tools/jwt-decoder/) - JWT调试和验证
+> - [JWT解析工具](https://www.util.cn/tools/jwt-decode/) - JWT调试和验证
 > - [JSON格式化工具](https://www.util.cn/tools/json-formatter/) - JSON数据处理
 > - [Base64编码工具](https://www.util.cn/tools/base64-encode/) - 编码转换

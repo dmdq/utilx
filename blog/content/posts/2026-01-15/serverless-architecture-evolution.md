@@ -814,4 +814,4 @@ Serverless 架构已从简单的函数托管发展为完整的分布式系统解
 
 **相关工具：**
 - [JSON 格式化工具](https://www.util.cn/tools/json-formatter/)
-- [Base64 编码解码](https://www.util.cn/tools/base64/)
+- [Base64 编码解码](https://www.util.cn/tools/base64-encode/)

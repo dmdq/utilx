@@ -571,4 +571,4 @@ Nuxt 4带来了全面的改进：
 > **相关工具推荐**
 > - [JSON格式化工具](https://www.util.cn/tools/json-formatter/) - JSON数据处理
 > - [Base64编码工具](https://www.util.cn/tools/base64-encode/) - 编码转换
-> - [JWT解析工具](https://www.util.cn/tools/jwt-decoder/) - Token解析
+> - [JWT解析工具](https://www.util.cn/tools/jwt-decode/) - Token解析

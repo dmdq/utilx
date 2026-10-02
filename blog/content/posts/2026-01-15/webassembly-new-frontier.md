@@ -751,5 +751,5 @@ WASM 已成为 Web 高性能计算的标准选择，特别适合：
 ---
 
 **相关工具：**
-- [HEX 转换工具](https://www.util.cn/tools/hex-converter/)
-- [Base64 编码解码](https://www.util.cn/tools/base64/)
+- [HEX 转换工具](https://www.util.cn/tools/hex-convert/)
+- [Base64 编码解码](https://www.util.cn/tools/base64-encode/)
