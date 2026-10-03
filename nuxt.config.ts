@@ -260,6 +260,9 @@ export default defineNuxtConfig({
       ],
       // 降低并发换峰值内存：463 页全量预渲染时单页 SSR 内存开销大
       concurrency: 2,
+      // Hugo 博客产物由 build:blog 生成、经 public/ 拷贝进输出目录；
+      // 预渲染爬虫跟踪页脚的 /blog/ 链接会用 Nuxt 错误页覆盖 Hugo 的 index.html，必须排除
+      ignore: [/^\/blog\//],
       failOnError: false,
       interval: 0
     },
