@@ -118,7 +118,7 @@
           <div class="bg-card/30 backdrop-blur-sm border-0 rounded-xl p-4 hover:bg-card/60 hover:shadow-sm hover:shadow-primary/5 transition-all duration-200 cursor-pointer group h-full">
             <div class="flex flex-col items-center text-center h-full">
               <component
-                :is="getIconComponent(tool.icon)"
+                :is="getIconComponent(tool.icon, tool.category)"
                 class="w-8 h-8 mb-2 transition-transform group-hover:scale-110"
                 :style="{ color: getCategoryColor(tool.category).icon }"
               />
@@ -127,7 +127,7 @@
           </div>
         </NuxtLink>
       </div>
-      
+
       <!-- 新用户显示推荐工具 -->
       <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         <NuxtLink
@@ -140,7 +140,7 @@
           <div class="bg-card/30 backdrop-blur-sm border-0 rounded-xl p-4 hover:bg-card/60 hover:shadow-sm hover:shadow-primary/5 transition-all duration-200 cursor-pointer group h-full">
             <div class="flex flex-col items-center text-center h-full">
               <component
-                :is="getIconComponent(tool.icon)"
+                :is="getIconComponent(tool.icon, tool.category)"
                 class="w-8 h-8 mb-2 transition-transform group-hover:scale-110"
                 :style="{ color: getCategoryColor(tool.category).icon }"
               />
@@ -161,7 +161,7 @@
       >
         <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
           <component
-            :is="getIconComponent(category.icon)"
+            :is="getIconComponent(category.icon, category.id)"
             class="w-6 h-6"
             :style="{ color: getCategoryColor(category.id).icon }"
           />
@@ -179,7 +179,7 @@
             <div class="bg-card/40 backdrop-blur-sm border-0 rounded-xl p-5 hover:bg-card/70 hover:shadow-lg hover:shadow-primary/8 transition-all duration-200 cursor-pointer group h-full">
               <div class="flex justify-between items-start mb-3">
                 <component
-                  :is="getIconComponent(tool.icon)"
+                  :is="getIconComponent(tool.icon, tool.category)"
                   class="w-8 h-8 group-hover:scale-110 transition-transform"
                   :style="{ color: getCategoryColor(tool.category).icon }"
                 />
@@ -245,6 +245,7 @@ import { categories } from '~/data/categories'
 import { tools } from '~/data/tools'
 import { initToolsData, getRecentTools, addRecentTool, clearRecentTools } from '~/composables/useTools'
 import { siteConfig } from '~/data/site'
+import { resolveToolIcon } from '~/utils/toolIcons'
 
 const router = useRouter()
 
@@ -269,29 +270,6 @@ useHead({
 // 数据状态
 const searchQuery = ref('')
 const clipboardSuggestion = ref(null)
-
-// 图标映射
-const iconMap = {
-  FileText: FileText,
-  FileJson: FileJson,
-  Lock: Lock,
-  Shield: Shield,
-  Clock: Clock,
-  Type: Type,
-  Wifi: Wifi,
-  Image: Image,
-  Code: Code,
-  Database: Database,
-  Link: Link,
-  Hash: Hash,
-  Timer: Timer,
-  Regex: Regex,
-  FileDiff: FileDiff,
-  Globe: Globe,
-  FolderOpen: FolderOpen,
-  GitBranch: GitBranch,
-  Layout: Layout
-}
 
 // 热门标签
 const popularTags = ref([
@@ -370,9 +348,8 @@ const dismissClipboardSuggestion = () => {
 }
 
 // 获取图标组件
-const getIconComponent = (iconName) => {
-  const defaultIcon = iconMap['FileText'] || iconMap['FileJson']
-  return iconMap[iconName] || defaultIcon
+const getIconComponent = (iconName, categoryId) => {
+  return resolveToolIcon(iconName, categoryId)
 }
 
 // 导入通用颜色配置

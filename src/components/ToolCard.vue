@@ -1,11 +1,11 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import {
-  FileJson, Clock, Lock, Regex, Database, Image as ImageIcon,
   Star, ArrowRight, GripVertical
 } from 'lucide-vue-next'
 import { isFavorite, toggleFavorite as toggleFavoriteTool } from '~/composables/useTools'
 import { getCategoryColor } from '~/utils/categoryColors'
+import { resolveToolIcon } from '~/utils/toolIcons'
 
 const props = defineProps({
   tool: {
@@ -46,47 +46,40 @@ const emit = defineEmits(['select'])
 
 const isFavoriteRef = ref(false)
 
-const iconMap = {
-  'file-json': FileJson,
-  'clock': Clock,
-  'lock': Lock,
-  'regex': Regex,
-  'database': Database,
-  'image': ImageIcon
-}
-
 const iconComponent = computed(() => {
-  return iconMap[props.icon] || FileJson
+  return resolveToolIcon(props.icon, props.category)
 })
 
+// 分类徽章的配色与短标签：键与 categories.js 的 id 一一对应
+const categoryBadgeMap = {
+  'dev': { class: 'bg-red-500/10 text-red-500', label: '开发' },
+  'design': { class: 'bg-indigo-500/10 text-indigo-500', label: '设计' },
+  'encode': { class: 'bg-blue-500/10 text-blue-500', label: '编码' },
+  'crypto': { class: 'bg-green-500/10 text-green-500', label: '加密' },
+  'security': { class: 'bg-emerald-500/10 text-emerald-500', label: '安全' },
+  'time': { class: 'bg-purple-500/10 text-purple-500', label: '时间' },
+  'text': { class: 'bg-pink-500/10 text-pink-500', label: '文本' },
+  'network': { class: 'bg-cyan-500/10 text-cyan-500', label: '网络' },
+  'image': { class: 'bg-yellow-500/10 text-yellow-500', label: '图像' },
+  'calculate': { class: 'bg-sky-500/10 text-sky-500', label: '计算' },
+  'format': { class: 'bg-orange-500/10 text-orange-500', label: '格式' },
+  'random': { class: 'bg-fuchsia-500/10 text-fuchsia-500', label: '随机' },
+  'health': { class: 'bg-rose-500/10 text-rose-500', label: '健康' },
+  'finance': { class: 'bg-lime-500/10 text-lime-500', label: '金融' },
+  'others': { class: 'bg-slate-500/10 text-slate-500', label: '其他' },
+  'file': { class: 'bg-teal-500/10 text-teal-500', label: '文件' }
+}
+
 const getCategoryColorClass = (category) => {
-  const colorMap = {
-    'dev': 'bg-orange-500/10 text-orange-500',
-    'ops': 'bg-blue-500/10 text-blue-500',
-    'crypto': 'bg-green-500/10 text-green-500',
-    'image': 'bg-cyan-500/10 text-cyan-500'
-  }
-  return colorMap[category] || 'bg-purple-500/10 text-purple-500'
+  return categoryBadgeMap[category]?.class || 'bg-purple-500/10 text-purple-500'
 }
 
 const getCategoryBadgeClass = (category) => {
-  const colorMap = {
-    'dev': 'bg-orange-500/10 text-orange-500',
-    'ops': 'bg-blue-500/10 text-blue-500',
-    'crypto': 'bg-green-500/10 text-green-500',
-    'image': 'bg-cyan-500/10 text-cyan-500'
-  }
-  return colorMap[category] || 'bg-purple-500/10 text-purple-500'
+  return categoryBadgeMap[category]?.class || 'bg-purple-500/10 text-purple-500'
 }
 
 const getCategoryLabel = (category) => {
-  const labelMap = {
-    'dev': 'Dev',
-    'ops': 'Time',
-    'crypto': 'Sec',
-    'image': 'Img'
-  }
-  return labelMap[category] || 'DB'
+  return categoryBadgeMap[category]?.label || '工具'
 }
 
 const toggleFavorite = () => {
@@ -147,17 +140,17 @@ onMounted(() => {
       >
         <component :is="iconComponent" class="w-6 h-6" :style="{ color: getCategoryColor(category).icon }" />
       </div>
-      <div>
+      <div class="flex items-center gap-1.5 min-w-0">
         <NuxtLink
           :to="getToolUrl(tool)"
-          class="font-semibold text-foreground group-hover:text-primary transition-colors hover:underline"
+          class="font-semibold text-foreground group-hover:text-primary transition-colors hover:underline truncate"
           :title="title"
           @click.stop
         >
           {{ title }}
         </NuxtLink>
-        <span 
-          class="text-[10px] px-1.5 py-0.5 rounded"
+        <span
+          class="text-[10px] px-1.5 py-0.5 rounded whitespace-nowrap flex-shrink-0"
           :class="getCategoryBadgeClass(category)"
         >
           {{ getCategoryLabel(category) }}
