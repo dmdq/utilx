@@ -377,7 +377,10 @@
               <div>Content-Type: {{ responseConfig.contentType }}</div>
               <div>Content-Length: {{ getResponseSize() }}</div>
               <div>X-Simulator: api-response-simulator</div>
-              <div v-for="header in responseConfig.headers" :key="header.key" v-if="header.key">
+              <div
+                v-for="header in responseConfig.headers.filter(h => h.key)"
+                :key="header.key"
+              >
                 {{ header.key }}: {{ header.value }}
               </div>
             </div>
@@ -436,12 +439,26 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import { useSEO } from '~/composables/useSEO'
+import { ref, computed, onMounted } from 'vue'
+import { useSeoMeta } from '#app'
+import { tools } from '~/data/tools'
+import { addRecentTool } from '~/composables/useTools'
 
 // 设置SEO
-const { setPageTitle } = useSEO()
-setPageTitle('API响应模拟器 - 在线API响应数据生成工具')
+useSeoMeta({
+  title: 'HTTP响应模拟器 - 在线API响应模拟测试工具',
+  description: '模拟HTTP API响应，支持自定义状态码、响应头、延迟时间和JSON/XML数据模板，用于前端联调与接口测试',
+  keywords: 'api响应模拟, http mock, 接口模拟, 状态码模拟, 响应头模拟, api测试, 前端联调',
+  author: 'Util工具箱',
+  ogTitle: 'HTTP响应模拟器 - 有条工具',
+  ogDescription: '模拟HTTP API响应，支持自定义状态码、响应头、延迟和数据模板，纯本地运行',
+  ogType: 'website'
+})
+
+const tool = tools.find(t => t.id === 'api-response-simulator')
+onMounted(() => {
+  if (tool) addRecentTool(tool.id)
+})
 
 // 数据
 const responseConfig = ref({

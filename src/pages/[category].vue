@@ -32,7 +32,8 @@ const categoryMap = {
   'others': () => import('~/pages/category/others/index.vue'),
   'security': () => import('~/pages/category/security/index.vue'),
   'text': () => import('~/pages/category/text/index.vue'),
-  'time': () => import('~/pages/category/time/index.vue')
+  'time': () => import('~/pages/category/time/index.vue'),
+  'file': () => import('~/pages/category/file/index.vue')
 }
 
 // 获取对应的分类组件

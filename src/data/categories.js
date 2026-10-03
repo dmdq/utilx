@@ -1,5 +1,5 @@
 export const categories = [
-    {
+  {
     id: 'random',
     name: '随机决策',
     icon: 'Shuffle',
@@ -29,7 +29,7 @@ export const categories = [
     icon: 'Lock',
     description: 'Base64、URL、HTML等编码解码工具',
     color: 'blue',
-    sort: 0
+    sort: 4
   },
   {
     id: 'crypto',
@@ -37,7 +37,7 @@ export const categories = [
     icon: 'Key',
     description: 'MD5、SHA、AES等加密解密工具',
     color: 'green',
-    sort: 0
+    sort: 5
   },
   {
     id: 'time',
@@ -45,7 +45,7 @@ export const categories = [
     icon: 'Clock',
     description: '时间戳、时区、日期计算工具',
     color: 'purple',
-    sort: 0
+    sort: 6
   },
   {
     id: 'text',
@@ -53,7 +53,7 @@ export const categories = [
     icon: 'Type',
     description: '正则表达式、文本对比、大小写转换工具',
     color: 'pink',
-    sort: 0
+    sort: 7
   },
   {
     id: 'network',
@@ -61,7 +61,7 @@ export const categories = [
     icon: 'Wifi',
     description: 'IP查询、DNS查询、HTTP客户端等工具',
     color: 'cyan',
-    sort: 0
+    sort: 8
   },
   {
     id: 'image',
@@ -69,7 +69,7 @@ export const categories = [
     icon: 'Image',
     description: '图片压缩、格式转换、水印等工具',
     color: 'yellow',
-    sort: 0
+    sort: 9
   },
   {
     id: 'dev',
@@ -77,7 +77,7 @@ export const categories = [
     icon: 'Code',
     description: 'Mock数据、API文档、代码生成等工具',
     color: 'red',
-    sort: 0
+    sort: 10
   },
   {
     id: 'design',
@@ -85,15 +85,15 @@ export const categories = [
     icon: 'LayoutGrid',
     description: 'CSS布局、颜色、SVG编辑等设计工具',
     color: 'indigo',
-    sort: 0
+    sort: 11
   },
-    {
+  {
     id: 'security',
     name: '安全工具',
     icon: 'Shield',
     description: '数据脱敏、隐私保护、安全检测工具',
     color: 'emerald',
-    sort: 0
+    sort: 12
   },
   {
     id: 'others',
@@ -101,7 +101,7 @@ export const categories = [
     icon: 'Package',
     description: '数据采样、数据结构可视化、剪贴板管理等工具',
     color: 'slate',
-    sort: 0
+    sort: 13
   },
   {
     id: 'health',
@@ -109,7 +109,7 @@ export const categories = [
     icon: 'Activity',
     description: 'BMI计算、健康指标、运动健身工具',
     color: 'rose',
-    sort: 0
+    sort: 14
   },
   {
     id: 'finance',
@@ -117,6 +117,14 @@ export const categories = [
     icon: 'TrendingUp',
     description: '贷款计算、投资收益、汇率换算等金融工具',
     color: 'green',
-    sort: 0
+    sort: 15
   },
-  ]
+  {
+    id: 'file',
+    name: '文件工具',
+    icon: 'FolderOpen',
+    description: '文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具',
+    color: 'teal',
+    sort: 16
+  }
+]

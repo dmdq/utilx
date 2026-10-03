@@ -5,7 +5,8 @@
   "author": "util.cn",
   "private": true,
   "scripts": {
-    "dev": "nuxt dev --host",
+    "dev": "CHOKIDAR_USEPOLLING=true CHOKIDAR_INTERVAL=1500 nuxt dev --host",
+    "dev:plain": "nuxt dev --host",
     "dev:fast": "./scripts/dev-fast.sh",
     "dev:ultra": "./scripts/dev-ultra-fast.sh",
     "dev:v4": "nuxt dev --host --config nuxt.config.v4.ts",
@@ -48,10 +49,13 @@
     "jszip": "^3.10.1",
     "lucide-vue-next": "^0.556.0",
     "marked": "^17.0.1",
+    "node-forge": "^1.4.0",
     "nuxt": "4.2.2",
+    "pdf-lib": "^1.17.1",
     "qrcode": "^1.5.4",
     "sortablejs": "^1.15.6",
-    "vue": "3.5.12"
+    "vue": "3.5.12",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.0",
