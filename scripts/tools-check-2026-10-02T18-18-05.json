@@ -1,0 +1,5535 @@
+[
+  {
+    "name": "1rm-calculator",
+    "url": "http://127.0.0.1:3105/tools/1rm-calculator/",
+    "status": 200,
+    "responseTime": 9,
+    "seo": {
+      "title": "1RM最大力量计算器 - 有条工具",
+      "description": "免费在线1RM计算器，根据训练重量和重复次数估算单次最大重量，支持多种公式，科学制定训练计划。",
+      "keywords": "健身计算器"
+    }
+  },
+  {
+    "name": "aes-decrypt",
+    "url": "http://127.0.0.1:3105/tools/aes-decrypt/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "AES解密 - 在线AES数据解密工具",
+      "description": "免费在线AES解密工具，支持AES-128/192/256，多种工作模式，快速解密AES加密的数据。",
+      "keywords": "AES-128"
+    }
+  },
+  {
+    "name": "aes-encrypt",
+    "url": "http://127.0.0.1:3105/tools/aes-encrypt/",
+    "status": 200,
+    "responseTime": 1,
+    "seo": {
+      "title": "AES加密解密 - 在线AES加密工具",
+      "description": "免费在线AES加密解密工具，支持AES-128/192/256，多种工作模式和填充方式。",
+      "keywords": "AES-128"
+    }
+  },
+  {
+    "name": "aes-encryptor",
+    "url": "http://127.0.0.1:3105/tools/aes-encryptor/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "AES加密&#x2F;解密工具 - 有条工具",
+      "description": "免费在线AES加密解密工具，支持AES-256-GCM和AES-CBC模式，完全在浏览器本地处理，数据安全不上传服务器。",
+      "keywords": "数据安全"
+    }
+  },
+  {
+    "name": "age-calculator",
+    "url": "http://127.0.0.1:3105/tools/age-calculator/",
+    "status": 200,
+    "responseTime": 1,
+    "seo": {
+      "title": "年龄计算器 - 精确计算年龄和生日信息",
+      "description": "免费在线年龄计算工具，精确计算年、月、日、小时等详细信息，包含星座查询、生日倒计时等功能。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "algorithm-complexity-calculator",
+    "url": "http://127.0.0.1:3105/tools/algorithm-complexity-calculator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "算法复杂度计算器 - 算法性能分析工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "api-contract-tester",
+    "url": "http://127.0.0.1:3105/tools/api-contract-tester/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "API契约测试器 - HTTP请求和契约验证工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "api-doc",
+    "url": "http://127.0.0.1:3105/tools/api-doc/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "API 文档生成器 - 在线 API 文档生成工具",
+      "description": "免费的在线 API 文档生成工具，根据 API 描述自动生成格式化的文档，支持 Markdown、HTML、PDF 等多种输出格式。",
+      "keywords": "文档工具"
+    }
+  },
+  {
+    "name": "api-key-manager",
+    "url": "http://127.0.0.1:3105/tools/api-key-manager/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "API密钥管理器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "api-response-mocker",
+    "url": "http://127.0.0.1:3105/tools/api-response-mocker/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "API响应模拟器 - JSON Schema数据生成工具 | Util工具箱",
+      "description": "专业的API响应模拟工具，根据JSON Schema自动生成模拟API响应数据，支持多种数据类型和随机生成。完美用于API测试、前端开发和接口调试。",
+      "keywords": "API模拟器,JSON Schema,模拟数据,API测试,Mock数据,接口调试,前端开发,数据生成,RESTful API"
+    }
+  },
+  {
+    "name": "api-response-simulator",
+    "url": "http://127.0.0.1:3105/tools/api-response-simulator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "HTTP响应模拟器 - 在线API响应模拟测试工具",
+      "description": "模拟HTTP API响应，支持自定义状态码、响应头、延迟时间和JSON/XML数据模板，用于前端联调与接口测试",
+      "keywords": "api响应模拟, http mock, 接口模拟, 状态码模拟, 响应头模拟, api测试, 前端联调"
+    }
+  },
+  {
+    "name": "argon2-hash",
+    "url": "http://127.0.0.1:3105/tools/argon2-hash/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Argon2哈希生成器 - 在线Argon2密码哈希工具",
+      "description": "免费在线Argon2哈希生成工具，支持Argon2d/2i/2id，可配置时间/内存/并行度，是2015年密码哈希竞赛冠军算法。",
+      "keywords": "加密"
+    }
+  },
+  {
+    "name": "argon2-hasher",
+    "url": "http://127.0.0.1:3105/tools/argon2-hasher/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Argon2哈希生成器 - 有条工具",
+      "description": "免费在线Argon2哈希生成器，支持Argon2id/Argon2i/Argon2d模式，自定义内存、迭代次数和并行度，生成安全的密码哈希值。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "ascii-art-generator",
+    "url": "http://127.0.0.1:3105/tools/ascii-art-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "ASCII艺术生成器 - 在线字符画转换工具 | 图片转ASCII",
+      "description": "免费在线ASCII艺术生成工具，支持图片转ASCII字符画、文本转ASCII艺术样式，可调整字符密度和大小，适用于创意设计和装饰文本。",
+      "keywords": "ASCII艺术,字符画,图片转ASCII,文本艺术,ASCII生成器,在线字符画"
+    }
+  },
+  {
+    "name": "ascii-convert",
+    "url": "http://127.0.0.1:3105/tools/ascii-convert/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "ASCII编码转换工具 - 有条工具",
+      "description": "免费在线ASCII编码转换工具，文本与ASCII码互转，显示完整ASCII字符表，支持十进制、十六进制、二进制格式。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "ascii-table",
+    "url": "http://127.0.0.1:3105/tools/ascii-table/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "ASCII码表 - 在线ASCII字符集查询工具",
+      "description": "完整的ASCII码表查询工具，支持十进制、十六进制、八进制和二进制表示，包含控制字符和可打印字符。",
+      "keywords": "ascii table"
+    }
+  },
+  {
+    "name": "aspect-ratio-calculator",
+    "url": "http://127.0.0.1:3105/tools/aspect-ratio-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "宽高比计算器 - 在线计算和锁定元素宽高比工具 | Util工具箱",
+      "description": "免费在线宽高比计算工具，支持常用比例预设、实时预览、CSS代码生成。帮助设计师和开发者快速计算和锁定元素宽高比，支持响应式布局设计。",
+      "keywords": "宽高比计算器,aspect-ratio,宽高比,比例计算,CSS aspect-ratio,响应式设计,16:9,4:3,尺寸计算"
+    }
+  },
+  {
+    "name": "avatar-generator",
+    "url": "http://127.0.0.1:3105/tools/avatar-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "头像生成器 - 有条工具",
+      "description": "免费在线头像生成器，支持首字母头像、几何图案、渐变色等多种风格。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "backdrop-filter-generator",
+    "url": "http://127.0.0.1:3105/tools/backdrop-filter-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "CSS背景滤镜生成器 - backdrop-filter可视化工具 | Util工具箱",
+      "description": "在线CSS backdrop-filter生成工具，可视化创建毛玻璃、模糊等背景滤镜效果。支持实时预览和一键复制CSS代码。",
+      "keywords": "backdrop-filter,毛玻璃,CSS滤镜,背景模糊,frosted glass,glassmorphism"
+    }
+  },
+  {
+    "name": "background-pattern-generator",
+    "url": "http://127.0.0.1:3105/tools/background-pattern-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "背景图案生成器 - CSS pattern图案制作工具 | Util工具箱",
+      "description": "免费在线CSS背景图案生成工具，创建网格、点阵、斜线、棋盘等背景图案。自定义颜色和尺寸，实时预览效果，一键复制CSS代码。",
+      "keywords": "background pattern,背景图案,CSS图案,网格,点阵,斜线,在线图案生成器"
+    }
+  },
+  {
+    "name": "base-encoding",
+    "url": "http://127.0.0.1:3105/tools/base-encoding/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "多编码转换工具 - 在线Base32&#x2F;Base58&#x2F;Base62编码转换 | Util工具箱",
+      "description": "在线多编码转换工具，支持Base32、Base58、Base62与Hex、Base64、UTF-8等多种编码格式互转。适用于比特币地址、URL短链、OTP密钥等场景，纯前端处理。",
+      "keywords": "Base32编码,Base58编码,Base62编码,编码转换,比特币编码,URL短链,在线编码工具,Base58解码"
+    }
+  },
+  {
+    "name": "base32-encode",
+    "url": "http://127.0.0.1:3105/tools/base32-encode/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "Base32编码工具 - 有条工具",
+      "description": "免费在线Base32编码工具，RFC 4648标准，支持文本与Base32格式互转。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "base58-encode",
+    "url": "http://127.0.0.1:3105/tools/base58-encode/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Base58编码工具 - 有条工具",
+      "description": "免费在线Base58编码工具，比特币地址编码标准，支持文本与Base58格式互转。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "base62-encode",
+    "url": "http://127.0.0.1:3105/tools/base62-encode/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Base62编码工具 - 有条工具",
+      "description": "免费在线Base62编码工具，用于短链接服务和URL压缩，支持文本与Base62格式互转。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "base64-decode",
+    "url": "http://127.0.0.1:3105/tools/base64-decode/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "Base64解码器 - 在线Base64解码工具",
+      "description": "免费在线Base64解码工具，支持文本和图片解码，自动识别图片格式，提供多种解码选项。",
+      "keywords": "文本解码"
+    }
+  },
+  {
+    "name": "base64-encode",
+    "url": "http://127.0.0.1:3105/tools/base64-encode/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Base64编码器 - 在线Base64编码工具",
+      "description": "免费在线Base64编码工具，支持文本和图片编码，可拖拽上传文件，提供多种编码选项。",
+      "keywords": "文件编码"
+    }
+  },
+  {
+    "name": "base64-file-converter",
+    "url": "http://127.0.0.1:3105/tools/base64-file-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "文件Base64转换器 - 图片转Base64 Data URI",
+      "description": "在线文件转Base64工具，支持图片、字体、PDF等文件转换为Base64编码，生成CSS Data URI格式。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "base64-image",
+    "url": "http://127.0.0.1:3105/tools/base64-image/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Base64图片 - 在线图片与Base64互转工具",
+      "description": "免费在线图片转Base64和Base64转图片工具，支持批量处理，直接预览和下载。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "base85-encoder",
+    "url": "http://127.0.0.1:3105/tools/base85-encoder/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Base85编码转换 - Ascii85编码解码在线工具",
+      "description": "Base85（Ascii85）在线编码解码工具，Adobe变体支持<~ ~>包裹符与z缩写，UTF-8中文无损往返，含膨胀率统计与Base85/Base64对比说明",
+      "keywords": "base85, ascii85, base85编码, ascii85解码, base85 base64, pdf编码, 编码转换"
+    }
+  },
+  {
+    "name": "bash-escape",
+    "url": "http://127.0.0.1:3105/tools/bash-escape/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Bash命令转义工具 - 有条工具",
+      "description": "免费在线Bash命令转义工具，Shell命令转义与反转义，防止命令注入攻击。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "batch-process",
+    "url": "http://127.0.0.1:3105/tools/batch-process/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "批量图片处理工具 - 有条工具",
+      "description": "免费在线批量图片处理工具，支持批量调整尺寸、转换格式、压缩质量。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "bcrypt-generate",
+    "url": "http://127.0.0.1:3105/tools/bcrypt-generate/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Bcrypt密码哈希生成器 - 在线Bcrypt加密工具",
+      "description": "免费在线Bcrypt密码哈希生成和验证工具，支持自定义salt rounds，安全的密码存储方案。",
+      "keywords": "bcrypt generator"
+    }
+  },
+  {
+    "name": "bcrypt-generator",
+    "url": "http://127.0.0.1:3105/tools/bcrypt-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "BCrypt哈希生成器 - 有条工具",
+      "description": "免费在线BCrypt哈希生成器，支持自定义成本因子，生成安全的密码哈希值，支持密码验证和性能测试。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "bcrypt-verify",
+    "url": "http://127.0.0.1:3105/tools/bcrypt-verify/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Bcrypt密码验证器 - 在线Bcrypt哈希验证工具",
+      "description": "免费在线Bcrypt密码验证工具，验证密码是否与Bcrypt哈希匹配，支持批量验证和密码强度检查。",
+      "keywords": "bcrypt check"
+    }
+  },
+  {
+    "name": "bezier-curve-editor",
+    "url": "http://127.0.0.1:3105/tools/bezier-curve-editor/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "贝塞尔曲线编辑器 - 在线可视化CSS动画缓动函数工具",
+      "description": "免费贝塞尔曲线编辑器，可视化调试CSS缓动函数和动画效果。支持拖拽控制点调整曲线，实时预览动画，导出CSS和JavaScript代码。专业的动画缓动函数设计工具。",
+      "keywords": "CSS transition效果"
+    }
+  },
+  {
+    "name": "big-number-calculator",
+    "url": "http://127.0.0.1:3105/tools/big-number-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "大数计算器 - 超大整数精确计算 | Util工具箱",
+      "description": "在线大数计算器，支持超大整数的加减乘除精确计算、阶乘计算、幂运算。适用于数学计算、密码学等领域，突破JavaScript数字精度限制。",
+      "keywords": "大数计算,大整数,阶乘计算,精确计算,BigInt,超大数"
+    }
+  },
+  {
+    "name": "bill-split-calculator",
+    "url": "http://127.0.0.1:3105/tools/bill-split-calculator/",
+    "status": 200,
+    "responseTime": 1,
+    "seo": {
+      "title": "AA分账计算器 - 多人聚会拼账与最小转账方案",
+      "description": "在线AA分账工具，记录多人消费的付款人与参与人，自动计算每人已付应摊与净差额，用贪心算法生成最少笔数的转账方案（A→B ¥xx），支持示例数据与本地暂存",
+      "keywords": "aa分账, 分账计算器, 聚会记账, 团费分摊, 最小转账, 多人拼单结算, 差旅分账"
+    }
+  },
+  {
+    "name": "binary-convert",
+    "url": "http://127.0.0.1:3105/tools/binary-convert/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "二进制转换器 - 在线文本与二进制互转工具",
+      "description": "免费在线二进制转换工具，支持文本与二进制相互转换，支持多种编码格式和分组显示。",
+      "keywords": "编码转换"
+    }
+  },
+  {
+    "name": "binary-viewer",
+    "url": "http://127.0.0.1:3105/tools/binary-viewer/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "二进制查看器 - 有条工具",
+      "description": "免费在线二进制查看器，以十六进制和ASCII格式查看文件内容。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "bit-calculator",
+    "url": "http://127.0.0.1:3105/tools/bit-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "位运算计算器 - 有条工具",
+      "description": "免费在线位运算计算器，支持AND、OR、XOR、NOT、左移、右移等位运算操作，实时显示二进制和十六进制结果。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "blake2-hash",
+    "url": "http://127.0.0.1:3105/tools/blake2-hash/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "BLAKE2哈希计算器 - 在线BLAKE2b&#x2F;BLAKE2s哈希工具 | Util工具箱",
+      "description": "在线BLAKE2哈希计算工具，支持BLAKE2b和BLAKE2s算法。比SHA-256更快更安全的高性能哈希函数，支持可变输出长度、密钥模式和盐值，纯前端处理。",
+      "keywords": "BLAKE2,BLAKE2b,BLAKE2s,哈希计算,高性能哈希,抗碰撞,在线哈希,加密哈希"
+    }
+  },
+  {
+    "name": "blend-mode-tool",
+    "url": "http://127.0.0.1:3105/tools/blend-mode-tool/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "混合模式工具 - CSS mix-blend-mode可视化预览 | Util工具箱",
+      "description": "免费在线CSS mix-blend-mode可视化工具，实时预览所有16种混合模式效果。支持正片叠底、滤色、叠加等模式，一键复制CSS代码。",
+      "keywords": "mix-blend-mode,混合模式,CSS混合,blend mode,正片叠底,滤色,叠加,在线混合模式工具"
+    }
+  },
+  {
+    "name": "blob-shape-generator",
+    "url": "http://127.0.0.1:3105/tools/blob-shape-generator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "Blob形状生成器 - 在线CSS有机形状&#x2F;Blob圆角生成工具",
+      "description": "在线Blob形状生成器，随机生成有机Blob形状，导出CSS border-radius八值语法与SVG path代码，支持平滑度调节、渐变填充，纯本地计算",
+      "keywords": "blob生成器, blob shape, border-radius生成器, 有机形状, css形状, 不规则圆角, svg blob"
+    }
+  },
+  {
+    "name": "blood-pressure-tracker",
+    "url": "http://127.0.0.1:3105/tools/blood-pressure-tracker/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "血压健康评估 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "bmi-calculator",
+    "url": "http://127.0.0.1:3105/tools/bmi-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "BMI计算器 - 身体质量指数在线计算工具",
+      "description": "免费在线BMI计算器，支持公制和英制单位，提供健康体重范围、风险评估和专业健康建议。",
+      "keywords": "肥胖指数"
+    }
+  },
+  {
+    "name": "bmr-calculator",
+    "url": "http://127.0.0.1:3105/tools/bmr-calculator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "基础代谢率计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "body-fat-calculator",
+    "url": "http://127.0.0.1:3105/tools/body-fat-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "体脂率计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "body-measurement-tracker",
+    "url": "http://127.0.0.1:3105/tools/body-measurement-tracker/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "身体围度追踪器 - 有条工具",
+      "description": "免费在线身体围度追踪器，记录胸围、腰围、臀围等身体数据，可视化健身塑形效果，支持数据导出。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "bokeh-generator",
+    "url": "http://127.0.0.1:3105/tools/bokeh-generator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "散景虚化效果工具 - 有条工具",
+      "description": "免费在线散景虚化效果工具，为图片添加美丽的散景光斑和景深效果。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "bom-handling",
+    "url": "http://127.0.0.1:3105/tools/bom-handling/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "BOM处理工具 - 有条工具",
+      "description": "免费在线BOM处理工具，支持检测、添加和移除UTF-8/UTF-16/UTF-32文件的字节顺序标记。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "bone-density-risk",
+    "url": "http://127.0.0.1:3105/tools/bone-density-risk/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "骨密度风险评估 - 有条工具",
+      "description": "免费在线骨密度风险评估工具，评估骨质疏松风险，了解骨骼健康状况，提供科学的预防建议。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "border-generator",
+    "url": "http://127.0.0.1:3105/tools/border-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "CSS边框生成器 - 在线生成CSS边框样式和圆角效果",
+      "description": "免费CSS边框生成器，可视化生成CSS边框样式，支持圆角、虚线、实线、双线、图片边框等效果。可自定义边框宽度、颜色、圆角半径，实时预览。专业的CSS边框设计工具。",
+      "keywords": "边框效果预览"
+    }
+  },
+  {
+    "name": "border-radius-generator",
+    "url": "http://127.0.0.1:3105/tools/border-radius-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "CSS圆角生成器 - border-radius可视化工具 | Util工具箱",
+      "description": "在线CSS border-radius生成工具，可视化生成复杂的圆角效果，支持分别设置8个角的圆角，提供拖拽调整、快捷预设和一键复制功能。",
+      "keywords": "border-radius,圆角,CSS圆角,border,圆角生成器,CSS可视化,前端工具,网页设计"
+    }
+  },
+  {
+    "name": "box-shadow-inset-generator",
+    "url": "http://127.0.0.1:3105/tools/box-shadow-inset-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "内阴影生成器 - inset box-shadow可视化工具 | Util工具箱",
+      "description": "免费在线CSS内阴影生成工具，专门创建inset box-shadow效果。实时预览、一键复制CSS代码。适用于卡片凹陷效果、按钮按压效果等设计场景。",
+      "keywords": "inset shadow,内阴影,box-shadow,CSS阴影,凹陷效果,CSS生成器,在线设计工具"
+    }
+  },
+  {
+    "name": "browser-detect",
+    "url": "http://127.0.0.1:3105/tools/browser-detect/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "浏览器版本检测工具 - 有条工具",
+      "description": "免费在线浏览器版本检测工具，全面检测浏览器类型、版本、引擎、功能支持和系统信息。",
+      "keywords": "UA检测"
+    }
+  },
+  {
+    "name": "bulk-request",
+    "url": "http://127.0.0.1:3105/tools/bulk-request/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "批量请求工具 - 在线批量HTTP请求测试 | 并发API测试",
+      "description": "免费在线批量HTTP请求工具，支持并发请求、自定义Headers、延迟控制，可批量测试API接口，支持GET/POST等方法，适用于开发和测试场景。",
+      "keywords": "批量请求,HTTP请求,API测试,并发测试,批量测试,接口测试,在线请求"
+    }
+  },
+  {
+    "name": "business-finance-analyzer",
+    "url": "http://127.0.0.1:3105/tools/business-finance-analyzer/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "企业财务分析器 - 财务健康度评估与财务指标分析 | Util工具箱",
+      "description": "专业的企业财务分析工具，分析流动比率、负债率、利润率等关键财务指标，提供财务健康度评估和经营建议。帮助企业管理者快速了解财务状况，制定改进策略。",
+      "keywords": "企业财务分析,财务健康度,财务指标分析,流动比率,资产负债率,利润率分析,财务风险评估,经营分析"
+    }
+  },
+  {
+    "name": "button-generator",
+    "url": "http://127.0.0.1:3105/tools/button-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "网页按钮生成器 - 在线CSS按钮样式与Hover效果生成工具",
+      "description": "在线网页按钮生成器，可视化调节文字、字号、圆角、渐变填充、边框、阴影与hover效果，实时预览并导出含.btn与.btn:hover的完整CSS代码，提供多种预设风格",
+      "keywords": "按钮生成器, css按钮, button generator, 渐变按钮, 按钮样式, hover效果, css代码生成"
+    }
+  },
+  {
+    "name": "caesar-cipher",
+    "url": "http://127.0.0.1:3105/tools/caesar-cipher/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "凯撒密码工具 - 在线加密解密 | Util工具箱",
+      "description": "在线凯撒密码工具，支持自定义偏移量的凯撒密码加密和解密。经典替换加密技术，适用于密码学学习和娱乐，纯前端处理，数据安全。",
+      "keywords": "凯撒密码,caesar cipher,加密,解密,密码学,古典密码,在线加密工具"
+    }
+  },
+  {
+    "name": "caliper-calculator",
+    "url": "http://127.0.0.1:3105/tools/caliper-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "皮脂厚度计算器 - 有条工具",
+      "description": "免费在线皮脂厚度计算器，使用Jackson-Pollock公式，支持3点和7点测量法准确计算体脂率。",
+      "keywords": "在线计算器"
+    }
+  },
+  {
+    "name": "calorie-counter",
+    "url": "http://127.0.0.1:3105/tools/calorie-counter/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "卡路里计数器 - 有条工具",
+      "description": "免费在线卡路里计数器，记录每日食物热量摄入，计算热量缺口，支持常见食物热量查询，科学管理体重。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "calories-calculator",
+    "url": "http://127.0.0.1:3105/tools/calories-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "卡路里计算器 - 每日热量需求计算 | Util工具箱",
+      "description": "在线卡路里计算器，计算基础代谢率BMR、每日总消耗TDEE、减重增重热量需求。支持Mifflin-St Jeor公式，帮助您制定科学的饮食计划。",
+      "keywords": "卡路里计算,BMR计算,基础代谢,每日消耗,TDEE,减重热量,增重热量"
+    }
+  },
+  {
+    "name": "camel-case-converter",
+    "url": "http://127.0.0.1:3105/tools/camel-case-converter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "命名格式转换 - camelCase、snake_case、kebab-case在线转换",
+      "description": "免费在线命名格式转换工具，支持camelCase、PascalCase、snake_case、kebab-case等多种编程命名格式互转。",
+      "keywords": "编程命名"
+    }
+  },
+  {
+    "name": "cardio-fitness-age",
+    "url": "http://127.0.0.1:3105/tools/cardio-fitness-age/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "心血管fitness年龄评估 - 有条工具",
+      "description": "免费在线心血管年龄评估工具，基于VO2max计算心脏生理年龄，了解心血管健康状况，获得科学改善建议。",
+      "keywords": "健康评估"
+    }
+  },
+  {
+    "name": "case-converter",
+    "url": "http://127.0.0.1:3105/tools/case-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "大小写转换工具 - 在线文本大小写格式转换",
+      "description": "免费在线文本大小写转换工具，支持大写、小写、首字母大写、驼峰式、蛇形、短横线式等多种格式转换。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "certificate-validator",
+    "url": "http://127.0.0.1:3105/tools/certificate-validator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "SSL&#x2F;TLS证书验证器 - 有条工具",
+      "description": "免费在线SSL/TLS证书验证器，检查证书有效期、证书链、协议版本和加密套件配置。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "chacha20-poly1305",
+    "url": "http://127.0.0.1:3105/tools/chacha20-poly1305/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "ChaCha20-Poly1305加密工具 - 在线AEAD对称加密",
+      "description": "免费在线ChaCha20-Poly1305加密工具，支持AEAD认证加密，数据完整性和机密性保护，TLS 1.3标准算法。",
+      "keywords": "认证加密"
+    }
+  },
+  {
+    "name": "changelog-generator",
+    "url": "http://127.0.0.1:3105/tools/changelog-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Changelog生成器 - git log转Keep a Changelog格式Markdown",
+      "description": "在线Changelog生成工具，粘贴git log提交记录自动剥离hash并按Added/Changed/Fixed等类型分组，生成Keep a Changelog风格Markdown，支持commit链接、复制与下载",
+      "keywords": "changelog生成, git log格式化, keep a changelog, 发布说明生成, 更新日志, commit转changelog"
+    }
+  },
+  {
+    "name": "charset-convert",
+    "url": "http://127.0.0.1:3105/tools/charset-convert/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "字符集编码转换器 - 在线文本编码转换工具",
+      "description": "免费的在线字符集编码转换工具，支持 UTF-8、GBK、GB2312、Big5 等多种编码格式之间的转换。",
+      "keywords": "编码格式"
+    }
+  },
+  {
+    "name": "chart-generator",
+    "url": "http://127.0.0.1:3105/tools/chart-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "在线图表生成器 - 免费数据可视化工具 | 柱状图折线图饼图雷达图",
+      "description": "免费在线图表生成器，支持柱状图、折线图、饼图、雷达图等多种图表类型。导入CSV/JSON数据，一键生成精美图表，支持导出SVG/PNG格式，适用于数据分析、报告展示等场景。",
+      "keywords": "图表生成器,数据可视化,柱状图,折线图,饼图,雷达图,在线图表,免费图表工具,数据图表,统计分析"
+    }
+  },
+  {
+    "name": "chinese-number-converter",
+    "url": "http://127.0.0.1:3105/tools/chinese-number-converter/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "中文数字转换器 - 数字转中文大写&#x2F;人民币大写金额",
+      "description": "在线中文数字转换工具，阿拉伯数字转普通中文（一二三）与财务大写（壹贰叁），数字转人民币大写金额（X元X角X分整），中文数字解析回阿拉伯数字，正确处理万/亿分节与零的读法",
+      "keywords": "中文数字转换, 数字转大写, 人民币大写, 数字转中文, 壹贰叁大写, 金额大写转换, 中文数字解析"
+    }
+  },
+  {
+    "name": "circadian-rhythm-test",
+    "url": "http://127.0.0.1:3105/tools/circadian-rhythm-test/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "昼夜节律测试 - 有条工具",
+      "description": "免费在线昼夜节律测试，评估您是晨型人还是夜型人，了解最佳作息时间，优化生活质量和工作效率。",
+      "keywords": "MEQ量表"
+    }
+  },
+  {
+    "name": "clip-path-generator",
+    "url": "http://127.0.0.1:3105/tools/clip-path-generator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "CSS裁剪路径生成器 - clip-path可视化工具 | Util工具箱",
+      "description": "在线CSS clip-path生成工具，可视化创建多边形、圆形、椭圆等裁剪路径效果。支持自定义顶点和一键复制CSS代码。",
+      "keywords": "clip-path,CSS裁剪,多边形,圆形裁剪,CSS形状,path,裁剪路径"
+    }
+  },
+  {
+    "name": "clipboard-manager-pro",
+    "url": "http://127.0.0.1:3105/tools/clipboard-manager-pro/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "增强剪贴板管理器 - 分类搜索格式化剪贴板历史 | Util工具箱",
+      "description": "免费在线剪贴板管理器，支持内容分类、智能搜索、格式化预览。纯本地计算，数据安全隐私。自动捕获剪贴板，提高工作效率。",
+      "keywords": "剪贴板管理器,剪贴板历史,剪贴板工具,剪贴板增强,在线剪贴板,剪贴板记录,剪贴板备份"
+    }
+  },
+  {
+    "name": "code-format",
+    "url": "http://127.0.0.1:3105/tools/code-format/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "代码格式化工具 - 在线多语言代码美化工具",
+      "description": "免费在线代码格式化工具，支持JavaScript、Python、Java、JSON等20+种编程语言的代码美化和压缩功能。",
+      "keywords": "JSON"
+    }
+  },
+  {
+    "name": "code-snippet-converter",
+    "url": "http://127.0.0.1:3105/tools/code-snippet-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "代码片段转换器 - 多语言代码转换工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "code-snippet-manager",
+    "url": "http://127.0.0.1:3105/tools/code-snippet-manager/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "代码片段管理器 - 代码片段保存与管理",
+      "description": "在线代码片段管理工具，保存常用代码片段，支持多语言分类和搜索功能。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "color-blindness-simulator",
+    "url": "http://127.0.0.1:3105/tools/color-blindness-simulator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "色盲模拟器 - 在线色盲视觉效果模拟工具 | Util工具箱",
+      "description": "免费在线色盲模拟工具，模拟红色盲、绿色盲、蓝色盲等色觉缺陷的视觉效果。帮助设计师确保作品对所有用户都具有良好的可访问性。",
+      "keywords": "色盲模拟器,色盲,color blindness,无障碍设计,可访问性,红色盲,绿色盲,蓝色盲,视觉模拟"
+    }
+  },
+  {
+    "name": "color-contrast-checker",
+    "url": "http://127.0.0.1:3105/tools/color-contrast-checker/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "颜色对比度检查 - WCAG标准无障碍设计工具",
+      "description": "免费在线颜色对比度检查工具，支持WCAG 2.1标准，检查前景色和背景色的对比度是否符合无障碍设计要求。纯本地计算，数据安全。",
+      "keywords": "颜色对比度, WCAG, 无障碍设计, 色彩搭配, 可访问性, 对比度检查"
+    }
+  },
+  {
+    "name": "color-convert",
+    "url": "http://127.0.0.1:3105/tools/color-convert/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "颜色编码转换工具 - 有条工具",
+      "description": "免费在线颜色编码转换工具，支持HEX、RGB、HSL、HSV颜色格式之间的相互转换。",
+      "keywords": "色彩"
+    }
+  },
+  {
+    "name": "color-naming-tool",
+    "url": "http://127.0.0.1:3105/tools/color-naming-tool/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "色彩命名工具 - 在线颜色语义化命名 | Util工具箱",
+      "description": "免费在线色彩命名工具，为颜色值生成语义化名称。基于HSL色相分析，提供专业颜色变量命名建议，提升代码可读性。",
+      "keywords": "色彩命名,颜色命名,语义化命名,CSS变量,颜色规范,设计系统"
+    }
+  },
+  {
+    "name": "color-palette",
+    "url": "http://127.0.0.1:3105/tools/color-palette/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图片配色方案提取工具 - 有条工具",
+      "description": "免费在线配色方案提取工具，从图片中提取和谐的颜色组合，支持多种配色类型。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "color-palette-generator",
+    "url": "http://127.0.0.1:3105/tools/color-palette-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "调色板生成器 - 在线配色方案生成工具 | Util工具箱",
+      "description": "免费在线调色板生成器，支持单色、类比、互补、三角色等多种配色规则。一键生成和谐配色方案，导出CSS变量，提升设计效率。",
+      "keywords": "调色板生成器,配色方案,颜色搭配,色彩设计,在线配色工具,色彩理论,UI配色,网页配色"
+    }
+  },
+  {
+    "name": "color-picker",
+    "url": "http://127.0.0.1:3105/tools/color-picker/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "颜色选择器 - 在线取色器和颜色转换工具",
+      "description": "免费在线颜色选择器，支持RGB、HSL、HEX、CMYK等格式转换，渐变生成器，对比度检查。",
+      "keywords": "渐变生成器"
+    }
+  },
+  {
+    "name": "commit-message-generator",
+    "url": "http://127.0.0.1:3105/tools/commit-message-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Conventional Commits生成器 - 规范Git提交信息在线生成",
+      "description": "在线约定式提交生成器，表单填写type/scope/breaking change/subject/body/footer，实时预览规范Git提交信息并复制，附各类型版本号影响速查，历史记录本地保存",
+      "keywords": "conventional commits, 提交信息生成, git commit 规范, 提交规范, commit message, 语义化提交"
+    }
+  },
+  {
+    "name": "complex-number-calculator",
+    "url": "http://127.0.0.1:3105/tools/complex-number-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "复数计算器 - 复数运算工具 | Util工具箱",
+      "description": "在线复数计算器，支持复数加减乘除运算、模幅角计算、极坐标转换、共轭复数计算。适用于数学学习、工程计算等场景。",
+      "keywords": "复数计算,复数运算,复数加减乘除,模计算,幅角计算,共轭复数,极坐标,复数计算器"
+    }
+  },
+  {
+    "name": "cookie-editor",
+    "url": "http://127.0.0.1:3105/tools/cookie-editor/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Cookie编辑器 - 在线Cookie解析与生成",
+      "description": "在线Cookie编辑工具，解析、编辑和生成Cookie字符串，支持各种Cookie属性配置。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "cookies-manager",
+    "url": "http://127.0.0.1:3105/tools/cookies-manager/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Cookies管理器 - 在线Cookie编辑与会话管理工具 | Util工具箱",
+      "description": "免费在线Cookie管理工具，支持Cookie解析、编辑、导入导出，可查看和修改浏览器Cookie信息，支持Secure、HttpOnly等属性标志，适用于开发调试和会话管理。纯本地处理，数据安全可靠。",
+      "keywords": "Cookie管理,Cookie编辑,会话管理,浏览器Cookie,Cookie解析,Session管理,在线Cookie工具,Cookie查看器"
+    }
+  },
+  {
+    "name": "cors-configurator",
+    "url": "http://127.0.0.1:3105/tools/cors-configurator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "CORS配置生成器 - 有条工具",
+      "description": "免费在线CORS配置生成器，支持Nginx、Apache、Node.js、Express等多种服务器环境，可视化配置CORS策略。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "cors-tester",
+    "url": "http://127.0.0.1:3105/tools/cors-tester/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "CORS测试工具 - 有条工具",
+      "description": "免费在线CORS测试工具，检测跨域请求配置，显示CORS响应头，诊断CORS错误，生成多种后端的CORS配置代码。",
+      "keywords": "网络工具"
+    }
+  },
+  {
+    "name": "countdown-timer",
+    "url": "http://127.0.0.1:3105/tools/countdown-timer/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "倒计时器 - 在线倒计时工具",
+      "description": "免费在线倒计时工具，支持自定义时间、番茄工作法、循环倒计时等功能，精确到秒的实时倒计时。",
+      "keywords": "时间管理"
+    }
+  },
+  {
+    "name": "crc-calculator",
+    "url": "http://127.0.0.1:3105/tools/crc-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "CRC校验计算器 - CRC-8&#x2F;CRC-16&#x2F;CRC-32在线计算",
+      "description": "免费在线CRC校验值计算工具，支持CRC-8/CRC-16/CRC-32等多种算法，支持文本和十六进制输入，自定义CRC参数。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "crc-check",
+    "url": "http://127.0.0.1:3105/tools/crc-check/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "CRC校验工具 - 有条工具",
+      "description": "免费在线CRC校验工具，支持CRC-8/16/32多种标准计算，用于数据传输错误检测。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "credit-card-payment-calculator",
+    "url": "http://127.0.0.1:3105/tools/credit-card-payment-calculator/",
+    "status": 200,
+    "responseTime": 6,
+    "seo": {
+      "title": "信用卡还款计算器 - 在线计算最低还款、分期还款和利息",
+      "description": "免费信用卡还款计算器，支持最低还款计算、分期还款计划、利息成本分析，帮助您选择最优还款策略，避免高额利息支出。专业的信用卡管理工具，支持多种还款方式对比和日利息计算。",
+      "keywords": "账单分期"
+    }
+  },
+  {
+    "name": "cron-expression-debugger",
+    "url": "http://127.0.0.1:3105/tools/cron-expression-debugger/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Cron表达式调试器 - 在线Cron解析与执行时间计算",
+      "description": "在线Cron表达式调试工具，解析Cron表达式，显示未来执行时间，支持标准5位Cron格式。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "cron-generator",
+    "url": "http://127.0.0.1:3105/tools/cron-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Cron 生成器 - 在线 Cron 表达式生成工具",
+      "description": "免费的在线 Cron 表达式生成工具，可视化配置生成定时任务表达式，支持多种定时任务场景。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "cron-parser",
+    "url": "http://127.0.0.1:3105/tools/cron-parser/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Cron 解析器 - 在线 Cron 表达式解析工具",
+      "description": "免费的在线 Cron 表达式解析工具，支持解析定时任务表达式，显示执行时间说明和最近运行时间。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "crontab-generator",
+    "url": "http://127.0.0.1:3105/tools/crontab-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Crontab 生成器 - 在线定时任务生成工具",
+      "description": "免费的在线 Crontab 定时任务生成器，可视化配置生成定时任务表达式，支持多种执行频率和高级配置。",
+      "keywords": "自动化"
+    }
+  },
+  {
+    "name": "crowdfunding-roi-calculator",
+    "url": "http://127.0.0.1:3105/tools/crowdfunding-roi-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "众筹回报计算器 - 在线计算众筹投资收益和风险评估",
+      "description": "免费众筹回报计算器，支持计算众筹投资回报率、风险评估、收益预测，帮助您分析众筹项目的投资价值。专业的股权众筹投资分析工具，支持风险调整收益计算和投资组合分析。",
+      "keywords": "天使投资"
+    }
+  },
+  {
+    "name": "crypto-prng",
+    "url": "http://127.0.0.1:3105/tools/crypto-prng/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "加密伪随机数生成器 - 有条工具",
+      "description": "免费在线加密伪随机数生成器，使用Web Crypto API生成密码学安全的随机数，支持多种格式，适用于密钥生成、令牌创建。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "csp-builder",
+    "url": "http://127.0.0.1:3105/tools/csp-builder/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "CSP策略生成器 - 有条工具",
+      "description": "免费在线CSP策略生成器，可视化配置Content-Security-Policy，生成HTTP头和meta标签，防止XSS攻击和数据注入。",
+      "keywords": "content-security-policy"
+    }
+  },
+  {
+    "name": "css-animation-generator",
+    "url": "http://127.0.0.1:3105/tools/css-animation-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "CSS动画生成器 - 在线可视化编辑CSS关键帧动画",
+      "description": "免费CSS动画生成器，可视化编辑CSS关键帧动画，实时预览和代码生成。支持位移、缩放、旋转、透明度等动画属性，提供预设动画模板。专业的CSS动画设计工具。",
+      "keywords": "动画预设模板"
+    }
+  },
+  {
+    "name": "css-counter-generator",
+    "url": "http://127.0.0.1:3105/tools/css-counter-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "CSS计数器生成器 - 在线自动编号样式工具 | Util工具箱",
+      "description": "免费在线CSS计数器生成工具，创建自定义自动编号样式。支持多种编号格式、前缀后缀设置，实时预览效果，一键复制CSS代码。",
+      "keywords": "CSS计数器,counter生成器,自动编号,列表编号,CSS counter,在线计数器工具"
+    }
+  },
+  {
+    "name": "css-escape",
+    "url": "http://127.0.0.1:3105/tools/css-escape/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "CSS转义工具 - 有条工具",
+      "description": "免费在线CSS转义工具，处理CSS选择器和字符串中的特殊字符，支持中文等多语言字符转义。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "css-filter-generator",
+    "url": "http://127.0.0.1:3105/tools/css-filter-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "CSS滤镜生成器 - filter可视化工具 | Util工具箱",
+      "description": "在线CSS filter生成工具，可视化调节模糊、亮度、对比度、饱和度等滤镜效果。支持实时预览和一键复制CSS代码。",
+      "keywords": "css filter,CSS滤镜,模糊效果,亮度调节,对比度,saturate,grayscale,sepia"
+    }
+  },
+  {
+    "name": "css-formatter",
+    "url": "http://127.0.0.1:3105/tools/css-formatter/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "CSS格式化工具 - 在线CSS美化与压缩工具 | 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "css-layout-generator",
+    "url": "http://127.0.0.1:3105/tools/css-layout-generator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "CSS布局生成器 - 在线生成Flexbox和Grid布局代码 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "csv-converter",
+    "url": "http://127.0.0.1:3105/tools/csv-converter/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "CSV格式转换器 - CSV转JSON&#x2F;Markdown&#x2F;HTML&#x2F;YAML工具",
+      "description": "在线CSV转换工具，支持CSV转JSON、CSV转Markdown表格、CSV转HTML、CSV转YAML，自动识别分隔符与表头，纯本地处理不上传数据",
+      "keywords": "csv转json, csv转换, csv转markdown, csv转yaml, csv转html, tsv转换, 表格转换"
+    }
+  },
+  {
+    "name": "csv-formatter",
+    "url": "http://127.0.0.1:3105/tools/csv-formatter/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "CSV格式化工具 - 在线CSV美化与表格预览工具 | 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "csv-to-sql",
+    "url": "http://127.0.0.1:3105/tools/csv-to-sql/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "CSV转SQL工具 - CSV生成INSERT&#x2F;CREATE TABLE语句",
+      "description": "在线CSV转SQL工具，支持MySQL、PostgreSQL、SQLite三种方言，自动推断列类型生成CREATE TABLE与批量INSERT语句，单引号严格转义、事务包裹、空值NULL，纯本地处理",
+      "keywords": "csv转sql, csv生成insert, csv导入数据库, csv to sql, 建表语句, 批量插入"
+    }
+  },
+  {
+    "name": "curl-to-code",
+    "url": "http://127.0.0.1:3105/tools/curl-to-code/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "cURL转代码 - 在线cURL命令转多种编程语言工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "currency-converter",
+    "url": "http://127.0.0.1:3105/tools/currency-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "汇率转换器 - 150+国家货币实时汇率换算工具 | Util工具箱",
+      "description": "专业汇率转换工具，支持150+国家货币实时汇率转换、历史汇率查询和汇率走势分析。适用于出境旅游、国际贸易、跨境投资等场景，提供精准汇率计算。",
+      "keywords": "汇率转换器,货币换算,实时汇率,外汇汇率,汇率查询,美元汇率,人民币汇率,欧元汇率,货币转换"
+    }
+  },
+  {
+    "name": "data-format-validator",
+    "url": "http://127.0.0.1:3105/tools/data-format-validator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "数据格式验证器 - 身份证手机号邮箱验证",
+      "description": "免费在线数据格式验证工具，支持验证身份证号、手机号、邮箱地址、银行卡号等多种数据格式，支持多国标准。纯本地计算，数据安全。",
+      "keywords": "数据验证, 身份证验证, 手机号验证, 邮箱验证, 银行卡验证, 格式检查"
+    }
+  },
+  {
+    "name": "data-masking-tool",
+    "url": "http://127.0.0.1:3105/tools/data-masking-tool/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "数据脱敏工具 - 在线敏感数据脱敏处理 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "data-sampling-tool",
+    "url": "http://127.0.0.1:3105/tools/data-sampling-tool/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "数据采样工具 - 在线数据采样、分桶与分组 | Util工具箱",
+      "description": "免费在线数据采样工具，支持随机采样、系统采样、分层采样、聚类采样等多种方法。提供数据分桶、分组功能，纯本地计算，数据安全隐私。",
+      "keywords": "数据采样,随机采样,系统采样,分层采样,聚类采样,数据分桶,数据分组,在线采样工具"
+    }
+  },
+  {
+    "name": "data-structure-builder",
+    "url": "http://127.0.0.1:3105/tools/data-structure-builder/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "数据结构构建器 - 可视化构建树和图结构 | Util工具箱",
+      "description": "免费在线数据结构构建器，支持可视化构建树、图、数组、链表、栈、队列等常用数据结构。一键生成JavaScript、Python、Java、C++代码，纯本地计算，数据安全隐私。",
+      "keywords": "数据结构可视化,树结构,图结构,链表,栈,队列,数据结构生成器,算法可视化,数据结构教程"
+    }
+  },
+  {
+    "name": "date-calculator",
+    "url": "http://127.0.0.1:3105/tools/date-calculator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "日期计算器 - 在线日期加减计算工具",
+      "description": "免费的在线日期计算工具，支持日期加减运算、日期范围计算、工作日计算等功能。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "date-diff",
+    "url": "http://127.0.0.1:3105/tools/date-diff/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "日期差计算器 - 在线计算两个日期的时间差",
+      "description": "精确计算两个日期之间的时间差，支持年、月、日、小时、分钟、秒等多种单位显示，包含工作日计算功能。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "date-formatter",
+    "url": "http://127.0.0.1:3105/tools/date-formatter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "日期格式化工具 - 在线ISO 8601&#x2F;RFC 2822日期格式转换 | Util工具箱",
+      "description": "在线日期格式化工具，支持ISO 8601、RFC 2822等标准日期格式转换。提供多种日期格式输出，包括中文日期、时间戳。",
+      "keywords": "日期格式化,ISO 8601,RFC 2822,日期转换,时间格式,Unix时间戳,在线日期格式化"
+    }
+  },
+  {
+    "name": "datetime-calculator",
+    "url": "http://127.0.0.1:3105/tools/datetime-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "日期时间计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "depreciation-calculator",
+    "url": "http://127.0.0.1:3105/tools/depreciation-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "折旧计算器 - 资产折旧计算工具 | Util工具箱",
+      "description": "在线折旧计算器，支持直线法、双倍余额递减法、年数总和法三种折旧方法。生成固定资产折旧表，适用于会计、财务管理等领域。",
+      "keywords": "折旧计算,直线法,双倍余额递减法,年数总和法,固定资产折旧,折旧表"
+    }
+  },
+  {
+    "name": "design-specs-checker",
+    "url": "http://127.0.0.1:3105/tools/design-specs-checker/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "设计规范检查器 - 在线检查UI设计系统规范一致性",
+      "description": "免费设计规范检查器，检查间距、字号、颜色、圆角等设计元素是否符合设计规范，确保UI系统一致性。支持多种设计标准检查和导出配置，专业的前端设计和开发工具。",
+      "keywords": "网页设计规范"
+    }
+  },
+  {
+    "name": "dev-code-formatter",
+    "url": "http://127.0.0.1:3105/tools/dev-code-formatter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "代码格式化工具（开发版）- 开发者专用代码美化",
+      "description": "专为开发者设计的代码格式化工具，支持JavaScript、TypeScript、Python、Java等10+种语言，实时预览和语法高亮。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "dev-sql-formatter",
+    "url": "http://127.0.0.1:3105/tools/dev-sql-formatter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "SQL格式化工具（开发版）- SQL美化与格式化",
+      "description": "专为开发者设计的SQL格式化工具，支持MySQL、PostgreSQL、Oracle等数据库，关键字大写美化。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "diffie-hellman",
+    "url": "http://127.0.0.1:3105/tools/diffie-hellman/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "Diffie-Hellman密钥交换工具 - 在线ECDH&#x2F;X25519密钥协商",
+      "description": "免费在线Diffie-Hellman/ECDH密钥交换工具，支持P-256/P-384/P-521和X25519曲线，演示Alice和Bob的密钥协商过程。",
+      "keywords": "共享密钥"
+    }
+  },
+  {
+    "name": "directory-tree",
+    "url": "http://127.0.0.1:3105/tools/directory-tree/",
+    "status": 200,
+    "responseTime": 1,
+    "seo": {
+      "title": "目录树生成器 - 文件夹结构转Markdown&#x2F;ASCII树",
+      "description": "在线目录树生成工具，选择本地文件夹生成ASCII树形结构与Markdown代码块，支持排除node_modules等目录与深度限制，纯本地读取不上传",
+      "keywords": "目录树生成, tree命令, 文件夹结构, markdown目录树, 项目结构文档, ascii tree"
+    }
+  },
+  {
+    "name": "discount-calculator",
+    "url": "http://127.0.0.1:3105/tools/discount-calculator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "折扣计算器 - 在线打折价格计算 | Util工具箱",
+      "description": "免费在线折扣计算器，快速计算打折后价格、节省金额和折扣率。支持折扣率和折数输入，适用于购物优惠、促销活动计算。",
+      "keywords": "折扣计算,打折计算,价格计算,优惠计算,折扣率,折数转换"
+    }
+  },
+  {
+    "name": "dns-cache-flusher",
+    "url": "http://127.0.0.1:3105/tools/dns-cache-flusher/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "DNS缓存刷新工具 - 有条工具",
+      "description": "免费在线DNS缓存刷新工具，自动检测操作系统并提供Windows、Mac、Linux的DNS缓存清除命令。支持DNS缓存验证和TTL查询。",
+      "keywords": "网络工具"
+    }
+  },
+  {
+    "name": "dns-lookup",
+    "url": "http://127.0.0.1:3105/tools/dns-lookup/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "DNS查询 - 在线DNS记录查询工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "dns-sec-verifier",
+    "url": "http://127.0.0.1:3105/tools/dns-sec-verifier/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "DNSSEC验证工具 - 有条工具",
+      "description": "免费在线DNSSEC验证工具，检查域名的DNSSEC状态、签名链完整性和安全等级。",
+      "keywords": "dns检测"
+    }
+  },
+  {
+    "name": "docker-command",
+    "url": "http://127.0.0.1:3105/tools/docker-command/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "Docker 命令生成器 - 可视化 Docker 命令生成工具",
+      "description": "免费的在线 Docker 命令生成器，可视化配置生成 Docker 命令，支持容器运行、镜像构建、网络管理和 Docker Compose 编排。",
+      "keywords": "虚拟化"
+    }
+  },
+  {
+    "name": "docker-compose-editor",
+    "url": "http://127.0.0.1:3105/tools/docker-compose-editor/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "Docker Compose 编辑器 - Yaml编辑和容器编排工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "dockerfile-generator",
+    "url": "http://127.0.0.1:3105/tools/dockerfile-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Dockerfile生成器 - 在线Docker配置生成",
+      "description": "在线Dockerfile生成工具，可视化配置Docker镜像，支持Node.js、Python、Java等多种语言。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "duplicate-remover",
+    "url": "http://127.0.0.1:3105/tools/duplicate-remover/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "重复数据清理器 - 在线文本与JSON去重工具 | Util工具箱",
+      "description": "免费在线重复数据清理工具，支持文本行去重、JSON数组对象去重，可自定义去重规则，适用于数据清洗、列表整理、CSV去重等场景。纯本地计算，数据安全隐私。",
+      "keywords": "去重,重复数据,数据清洗,文本去重,CSV去重,列表去重,数组去重,在线去重工具,JSON去重"
+    }
+  },
+  {
+    "name": "ecdsa-tools",
+    "url": "http://127.0.0.1:3105/tools/ecdsa-tools/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "ECDSA椭圆曲线签名工具 - 在线ECDSA签名验签密钥生成",
+      "description": "免费在线ECDSA椭圆曲线数字签名工具，支持P-256/P-384/P-521和secp256k1曲线，SHA-1/256/384/512哈希，ECDSA密钥对生成和签名验证。",
+      "keywords": "ECDSA密钥生成"
+    }
+  },
+  {
+    "name": "ed25519-tools",
+    "url": "http://127.0.0.1:3105/tools/ed25519-tools/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Ed25519签名工具 - 在线Ed25519签名验签密钥生成",
+      "description": "免费在线Ed25519签名工具，基于Curve25519的现代签名算法，支持Ed25519密钥对生成、签名和验证，用于SSH、加密通讯等。",
+      "keywords": "现代密码学"
+    }
+  },
+  {
+    "name": "education-savings-calculator",
+    "url": "http://127.0.0.1:3105/tools/education-savings-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "教育储蓄计算器 - 在线计算子女教育储蓄和规划",
+      "description": "免费教育储蓄计算器，支持计算子女教育储蓄目标、月储蓄建议、教育通胀率考虑，提供投资组合建议，帮助您制定教育储蓄计划。",
+      "keywords": "教育投资"
+    }
+  },
+  {
+    "name": "em-breakpoint-generator",
+    "url": "http://127.0.0.1:3105/tools/em-breakpoint-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "EM断点生成器 - px转em响应式断点生成工具 | Util工具箱",
+      "description": "免费在线EM断点生成工具，支持像素值转em单位、媒体查询代码自动生成。帮助开发者创建更精准的响应式布局，支持移动优先策略。",
+      "keywords": "em断点生成器,px转em,响应式断点,媒体查询,breakpoint,响应式设计,CSS媒体查询"
+    }
+  },
+  {
+    "name": "emoji-picker",
+    "url": "http://127.0.0.1:3105/tools/emoji-picker/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Emoji速查复制器 - 在线Emoji表情大全一键复制",
+      "description": "在线Emoji表情大全，收录290+常用emoji，按笑脸/手势/动物/食物/活动/物品/符号/旗帜分类，支持中文关键词搜索，点击一键复制，最近使用本地保存",
+      "keywords": "emoji大全, emoji复制, 表情符号, emoji搜索, emoji含义, 特殊符号, 一键复制emoji"
+    }
+  },
+  {
+    "name": "encoding-converter",
+    "url": "http://127.0.0.1:3105/tools/encoding-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "编码转换器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "env-json-converter",
+    "url": "http://127.0.0.1:3105/tools/env-json-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": ".env与JSON转换器 - 环境变量与JSON互转工具",
+      "description": "在线.env与JSON双向转换工具，支持export前缀、引号、行内注释、\\n转义解析，校验重复键与缺失等号，JSON转.env支持UPPER_SNAKE_CASE键名转换，纯本地处理",
+      "keywords": "env转json, json转env, 环境变量转换, dotenv, env格式化, env编辑器"
+    }
+  },
+  {
+    "name": "env-variable-manager",
+    "url": "http://127.0.0.1:3105/tools/env-variable-manager/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "环境变量管理器 - 多环境配置管理工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "equation-solver",
+    "url": "http://127.0.0.1:3105/tools/equation-solver/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "方程求解器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "excel-viewer",
+    "url": "http://127.0.0.1:3105/tools/excel-viewer/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "Excel表格查看转换器 - 在线Excel&#x2F;CSV查看与转JSON&#x2F;CSV&#x2F;Markdown工具",
+      "description": "在线Excel查看器，无需安装Office即可本地解析xlsx/xls/csv文件，多Sheet预览，一键导出JSON、CSV、Markdown，纯本地处理不上传数据",
+      "keywords": "excel查看器, xlsx在线查看, excel转json, excel转csv, excel转markdown, csv查看器, 在线excel预览"
+    }
+  },
+  {
+    "name": "exercise-calorie-calculator",
+    "url": "http://127.0.0.1:3105/tools/exercise-calorie-calculator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "运动消耗计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "exif-cleaner",
+    "url": "http://127.0.0.1:3105/tools/exif-cleaner/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "EXIF清除器 - 照片元数据清除与图片脱敏工具",
+      "description": "在浏览器本地清除照片EXIF元数据，包括GPS定位、拍摄设备、拍摄时间等隐私信息，支持PNG/JPEG/WebP输出，图片不上传服务器",
+      "keywords": "exif清除, 照片脱敏, 图片去元数据, gps清除, 照片隐私保护, exif查看"
+    }
+  },
+  {
+    "name": "exif-viewer",
+    "url": "http://127.0.0.1:3105/tools/exif-viewer/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "EXIF查看器 - 在线查看图片EXIF信息工具",
+      "description": "免费在线EXIF查看工具，查看图片的拍摄参数、GPS位置、相机信息等元数据。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "expense-tracker",
+    "url": "http://127.0.0.1:3105/tools/expense-tracker/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "记账流水本 - 本地收支记录与分类占比统计",
+      "description": "在线记账工具，记录每日收入支出流水，自动汇总本月支出收入结余，条形图展示分类占比，支持按月筛选与 JSON 导出导入，数据保存在本机不上传",
+      "keywords": "记账工具, 收支记录, 记账本, 支出统计, 分类占比, 月度账单, 本地记账, 流水账"
+    }
+  },
+  {
+    "name": "favicon-generator",
+    "url": "http://127.0.0.1:3105/tools/favicon-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Favicon生成器 - 在线网站图标生成工具 | Util工具箱",
+      "description": "免费在线Favicon生成工具，上传图片一键生成各尺寸网站图标。支持16x16、32x32、180x180等常用尺寸，实时预览，HTML代码自动生成。纯本地处理，保护隐私。",
+      "keywords": "favicon生成器,网站图标,favicon generator,图标生成,apple touch icon,网站logo生成,在线图标工具"
+    }
+  },
+  {
+    "name": "ffmi-calculator",
+    "url": "http://127.0.0.1:3105/tools/ffmi-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "瘦体重指数计算器 - 有条工具",
+      "description": "免费在线瘦体重指数计算器，计算FFMI评估肌肉发达程度，排除脂肪干扰，更准确反映身材水平。",
+      "keywords": "fat-free mass index"
+    }
+  },
+  {
+    "name": "file-encoding-converter",
+    "url": "http://127.0.0.1:3105/tools/file-encoding-converter/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "文件编码批量转换器 - 检测GBK&#x2F;UTF-8编码并批量转UTF-8",
+      "description": "在线文件编码检测与批量转换工具，自动识别UTF-8/GBK/GB2312/Big5/Shift_JIS/UTF-16编码，一键批量转换为UTF-8下载，纯本地处理不上传",
+      "keywords": "编码检测, 文件编码转换, gbk转utf-8, 批量转utf8, gb2312转utf8, big5, shift_jis, 编码识别"
+    }
+  },
+  {
+    "name": "file-encryptor",
+    "url": "http://127.0.0.1:3105/tools/file-encryptor/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "文件加密解密器 - 本地AES-256文件加密工具",
+      "description": "在浏览器本地对任意文件进行AES-256-GCM加密解密，支持密码强度检测，文件不上传服务器，保护数据隐私",
+      "keywords": "文件加密, 文件解密, AES加密, 本地加密, 文件保护, 加密工具, 免费加密"
+    }
+  },
+  {
+    "name": "file-merge-split",
+    "url": "http://127.0.0.1:3105/tools/file-merge-split/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "文件合并拆分工具 - 在线文本文件分割合并 | Util工具箱",
+      "description": "免费在线文件合并与拆分工具，支持按行数、大小拆分文本文件，可合并多个文件，适用于日志处理、数据分割、CSV处理等场景。纯本地计算，数据安全隐私。",
+      "keywords": "文件合并,文件拆分,文本文件,日志拆分,数据分割,CSV拆分,大文件处理,文件分割,文本处理"
+    }
+  },
+  {
+    "name": "financial-ratios-calculator",
+    "url": "http://127.0.0.1:3105/tools/financial-ratios-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "财务比率计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "flexibility-assessment",
+    "url": "http://127.0.0.1:3105/tools/flexibility-assessment/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "柔韧性评估测试 - 有条工具",
+      "description": "免费在线柔韧性评估测试，包括坐位体前屈、肩部、髋关节等部位测试，提供科学的拉伸改善建议。",
+      "keywords": "在线测试"
+    }
+  },
+  {
+    "name": "flowchart-builder",
+    "url": "http://127.0.0.1:3105/tools/flowchart-builder/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "流程图绘制工具 - 免费在线流程图设计器 | 业务流程设计",
+      "description": "免费在线流程图绘制工具，支持拖拽创建节点、连接线和分支结构，可导出为PNG图片，适用于业务流程设计、系统架构图、工作流程图等场景。",
+      "keywords": "流程图,流程图绘制,在线流程图,流程设计,业务流程,系统架构图,工作流程,免费流程图工具"
+    }
+  },
+  {
+    "name": "font-pairing",
+    "url": "http://127.0.0.1:3105/tools/font-pairing/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "字体配对工具 - 在线Web字体组合预览和推荐",
+      "description": "免费字体配对工具，提供Web字体组合预览和专业推荐。支持衬线字体、无衬线字体、等宽字体配对，实时预览效果，可读性分析。专业的字体设计和排版工具。",
+      "keywords": "英文字体搭配"
+    }
+  },
+  {
+    "name": "food-calculator",
+    "url": "http://127.0.0.1:3105/tools/food-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "食物份量换算器 - 有条工具",
+      "description": "免费在线食物份量换算器，快速换算食物重量体积、厨房计量单位、烘焙比例，支持常见食物密度查询。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "forex-arbitrage-calculator",
+    "url": "http://127.0.0.1:3105/tools/forex-arbitrage-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "外汇套利计算器 - 在线计算外汇套利收益和机会",
+      "description": "免费外汇套利计算器，支持计算外汇套利机会、收益预测、汇率差分析，帮助您评估外汇套利投资价值。",
+      "keywords": "外汇投资分析"
+    }
+  },
+  {
+    "name": "form-data-converter",
+    "url": "http://127.0.0.1:3105/tools/form-data-converter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "FormData转换工具 - 有条工具",
+      "description": "免费在线FormData转换工具，支持JSON与FormData格式相互转换，用于表单数据处理。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "fps-test",
+    "url": "http://127.0.0.1:3105/tools/fps-test/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "FPS在线测试工具 - 有条工具",
+      "description": "免费在线FPS测试工具，实时测试浏览器帧率，评估动画性能和渲染能力，支持多种负载等级。",
+      "keywords": "performance test"
+    }
+  },
+  {
+    "name": "fraction-calculator",
+    "url": "http://127.0.0.1:3105/tools/fraction-calculator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "分数计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "fuel-calculator",
+    "url": "http://127.0.0.1:3105/tools/fuel-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "油耗计算器 - 汽车油耗成本计算 | Util工具箱",
+      "description": "在线油耗计算器，计算百公里油耗、油费和行程成本。支持不同油价计算，适用于车主计算燃油消耗，帮助您了解车辆实际油耗和开支。",
+      "keywords": "油耗计算,百公里油耗,油费计算,汽车油耗,燃油成本,油耗换算"
+    }
+  },
+  {
+    "name": "full-half-converter",
+    "url": "http://127.0.0.1:3105/tools/full-half-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "全角半角转换工具 - 全角与半角字符互转 | Util工具箱",
+      "description": "免费在线全角半角转换工具，支持字母、数字、标点符号的全角与半角互转。纯本地计算，数据安全隐私。",
+      "keywords": "全角半角转换,全角转半角,半角转全角,字符转换,中英文处理,标点符号转换"
+    }
+  },
+  {
+    "name": "fund-sip-calculator",
+    "url": "http://127.0.0.1:3105/tools/fund-sip-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "基金定投计算器 - 在线计算定投收益和投资回报",
+      "description": "免费基金定投计算器，支持计算定投收益、收益率、定投频率分析，提供投资建议和策略推荐，帮助您制定最佳定投计划。专业的基金投资规划工具，支持多种定投策略和通胀调整计算。",
+      "keywords": "通胀调整"
+    }
+  },
+  {
+    "name": "geometry-calculator",
+    "url": "http://127.0.0.1:3105/tools/geometry-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "几何图形计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "gif-maker",
+    "url": "http://127.0.0.1:3105/tools/gif-maker/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "GIF制作工具 - 有条工具",
+      "description": "免费在线GIF制作工具，将多张图片制作成GIF动图，支持调整帧率、尺寸和质量。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "git-command",
+    "url": "http://127.0.0.1:3105/tools/git-command/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Git 命令生成器 - 可视化 Git 命令生成工具",
+      "description": "免费的在线 Git 命令生成器，可视化配置生成 Git 命令，支持初始化、克隆、提交、分支、推送、拉取、合并等常用 Git 操作。",
+      "keywords": "gitlab"
+    }
+  },
+  {
+    "name": "gitignore-generator",
+    "url": "http://127.0.0.1:3105/tools/gitignore-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": ".gitignore生成器 - 在线Git忽略文件生成",
+      "description": "在线.gitignore文件生成工具，支持多种编程语言、操作系统和IDE的Git忽略规则。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "glassmorphism-generator",
+    "url": "http://127.0.0.1:3105/tools/glassmorphism-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "玻璃拟态生成器 - 在线Glassmorphism毛玻璃CSS效果生成工具",
+      "description": "在线玻璃拟态生成器，可视化调节backdrop-filter模糊度、饱和度、透明度、圆角、边框与内高光，实时预览毛玻璃卡片效果并复制CSS代码，含-webkit-前缀兼容Safari",
+      "keywords": "玻璃拟态, glassmorphism, 毛玻璃效果, backdrop-filter, blur生成器, 磨砂玻璃, css效果"
+    }
+  },
+  {
+    "name": "gmsm-tools",
+    "url": "http://127.0.0.1:3105/tools/gmsm-tools/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "国密算法工具箱 - SM2&#x2F;SM3&#x2F;SM4在线工具",
+      "description": "免费在线国密算法工具集，支持SM2非对称加密、SM3哈希、SM4对称加密等中国商用密码算法。",
+      "keywords": "GM/T"
+    }
+  },
+  {
+    "name": "godaddy-dns",
+    "url": "http://127.0.0.1:3105/tools/godaddy-dns/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "GoDaddy DNS管理工具 - 在线管理域名DNS解析记录",
+      "description": "免费在线GoDaddy域名DNS管理工具，支持添加、修改、删除A、AAAA、CNAME、MX、TXT、NS、SRV等DNS解析记录。直接通过GoDaddy API操作，无需登录控制面板。",
+      "keywords": "GoDaddy,DNS管理,域名解析,DNS记录,A记录,CNAME,MX记录,在线工具,免费"
+    }
+  },
+  {
+    "name": "golden-ratio-calculator",
+    "url": "http://127.0.0.1:3105/tools/golden-ratio-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "黄金比例计算器 - 设计比例工具 | Util工具箱",
+      "description": "免费在线黄金比例计算工具，计算黄金分割点、生成和谐的字体系列和间距系统。可视化预览、一键复制CSS代码，适用于版式设计和字体层级规划。",
+      "keywords": "黄金比例,golden ratio,phi,分割,设计比例,排版,字体层级"
+    }
+  },
+  {
+    "name": "gpa-calculator",
+    "url": "http://127.0.0.1:3105/tools/gpa-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "GPA计算器 - 成绩绩点计算工具 | Util工具箱",
+      "description": "在线GPA计算器，支持4.0和5.0绩点标准，计算加权平均GPA、目标GPA规划和成绩分布分析。适用于大学生学业成绩管理。",
+      "keywords": "GPA计算,绩点计算,加权平均,成绩计算,目标GPA,大学成绩,学分绩点"
+    }
+  },
+  {
+    "name": "gpu-detector",
+    "url": "http://127.0.0.1:3105/tools/gpu-detector/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "GPU检测工具 - 查看电脑能跑哪些本地大模型和量化版本",
+      "description": "在线检测显卡型号、显存与WebGPU支持，推荐你的电脑能流畅运行的本地大模型（Qwen/Llama/DeepSeek等）及GGUF量化版本选择（Q3/Q4/Q6/Q8），纯本地检测不上传",
+      "keywords": "gpu检测, 显卡检测, 显存查询, 本地大模型, 本地部署llm, gguf量化, q4_k_m, ollama模型推荐, 能跑什么模型"
+    }
+  },
+  {
+    "name": "gradient-generator",
+    "url": "http://127.0.0.1:3105/tools/gradient-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "CSS渐变生成器 - 在线生成线性、径向、锥形渐变背景",
+      "description": "免费CSS渐变生成器，可视化生成CSS渐变背景，支持线性渐变、径向渐变、锥形渐变。可自定义渐变角度、颜色色标、位置参数，实时预览效果。专业的CSS渐变设计工具。",
+      "keywords": "前端渐变工具"
+    }
+  },
+  {
+    "name": "gradient-text-generator",
+    "url": "http://127.0.0.1:3105/tools/gradient-text-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "渐变文字生成器 - 在线文字渐变效果工具 | Util工具箱",
+      "description": "免费在线渐变文字生成器，创建CSS background-clip文字渐变效果。支持自定义颜色、角度，一键复制代码，兼容所有现代浏览器。",
+      "keywords": "渐变文字,文字渐变,background-clip,CSS文字,gradient text,文字特效,网页设计"
+    }
+  },
+  {
+    "name": "graphql-formatter",
+    "url": "http://127.0.0.1:3105/tools/graphql-formatter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "GraphQL格式化器 - GraphQL查询美化与压缩工具",
+      "description": "GraphQL在线格式化与压缩工具，支持query/mutation/fragment，字符串与块字符串感知、注释保留、参数自动换行对齐、括号不匹配报错定位，纯本地处理",
+      "keywords": "graphql格式化, graphql美化, graphql压缩, graphql formatter, graphql查询, 格式化工具"
+    }
+  },
+  {
+    "name": "graphql-query-builder",
+    "url": "http://127.0.0.1:3105/tools/graphql-query-builder/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "GraphQL查询构建器 - 可视化GraphQL生成",
+      "description": "在线GraphQL查询构建工具，可视化生成GraphQL查询和变更，支持参数、字段选择和片段。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "grid-system-generator",
+    "url": "http://127.0.0.1:3105/tools/grid-system-generator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "网格系统生成器 - CSS Grid布局系统生成工具 | Util工具箱",
+      "description": "免费在线网格系统生成工具，支持12/16/24列CSS Grid布局系统。可视化预览、自定义间距和边距，一键生成CSS代码。纯本地计算，数据隐私绝对安全。",
+      "keywords": "网格系统,CSS Grid,网格布局,响应式布局,12列网格,16列网格,24列网格,网格生成器"
+    }
+  },
+  {
+    "name": "habit-tracker-health",
+    "url": "http://127.0.0.1:3105/tools/habit-tracker-health/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "健康习惯追踪器 - 有条工具",
+      "description": "免费在线健康习惯追踪器，追踪日常健康习惯，建立良好的生活方式，支持连续打卡和成就系统。",
+      "keywords": "21天习惯"
+    }
+  },
+  {
+    "name": "hash-calculator",
+    "url": "http://127.0.0.1:3105/tools/hash-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "哈希计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "headers-viewer",
+    "url": "http://127.0.0.1:3105/tools/headers-viewer/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Headers查看器 - 在线HTTP请求头查看工具 | API调试 | Util工具箱",
+      "description": "免费在线HTTP请求头查看器，实时监控和分析HTTP Headers信息，支持Headers解析、格式化显示、分类查看，适用于API调试、网络开发和性能优化。纯本地计算，数据隐私安全。",
+      "keywords": "HTTP Headers,请求头,Headers查看,API调试,网络调试,HTTP协议,请求分析,响应头,在线Headers工具"
+    }
+  },
+  {
+    "name": "health-age-calculator",
+    "url": "http://127.0.0.1:3105/tools/health-age-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "健康年龄评估 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "heart-rate-calculator",
+    "url": "http://127.0.0.1:3105/tools/heart-rate-calculator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "心率计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "hex-convert",
+    "url": "http://127.0.0.1:3105/tools/hex-convert/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "十六进制转换器 - 在线文本与十六进制互转工具",
+      "description": "免费在线十六进制转换工具，支持文本与十六进制相互转换，支持多种编码格式和分隔符。",
+      "keywords": "编码转换"
+    }
+  },
+  {
+    "name": "hkdf-generator",
+    "url": "http://127.0.0.1:3105/tools/hkdf-generator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "HKDF密钥派生器 - 在线HMAC密钥派生函数工具",
+      "description": "在线HKDF密钥派生工具，基于RFC 5869标准的HMAC密钥派生函数。支持SHA-1/256/384/512，Extract和Expand两阶段派生，适用于TLS 1.3、密钥材料派生等场景。",
+      "keywords": "HKDF,密钥派生,HMAC,RFC 5869,TLS 1.3,Extract,Expand,在线工具,密钥派生函数"
+    }
+  },
+  {
+    "name": "hmac-generator",
+    "url": "http://127.0.0.1:3105/tools/hmac-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "HMAC生成器 - 在线HMAC哈希计算工具",
+      "description": "免费在线HMAC生成器，支持SHA-1/SHA-256/SHA-512等多种算法，用于消息认证和完整性验证。",
+      "keywords": "完整性验证"
+    }
+  },
+  {
+    "name": "holiday-calculator",
+    "url": "http://127.0.0.1:3105/tools/holiday-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "中国法定节假日查询工具 - 节假日安排及调休信息",
+      "description": "在线中国法定节假日查询工具，查询全年节假日安排、调休信息、放假天数统计。包含春节、国庆、清明等主要节日说明。",
+      "keywords": "法定节假日,放假安排,调休查询,春节放假,国庆放假,节假日查询"
+    }
+  },
+  {
+    "name": "hosts-generator",
+    "url": "http://127.0.0.1:3105/tools/hosts-generator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "hosts片段生成器 - 本地域名映射与广告屏蔽hosts生成",
+      "description": "在线生成hosts文件片段，支持本地开发域名映射与批量广告域名屏蔽，自动去重校验域名格式，附各系统hosts文件路径与DNS刷新命令",
+      "keywords": "hosts文件, hosts生成, 域名映射, 本地解析, 广告屏蔽hosts, hosts修改, dns优先级"
+    }
+  },
+  {
+    "name": "html-decode",
+    "url": "http://127.0.0.1:3105/tools/html-decode/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "HTML解码器 - 在线HTML实体解码工具",
+      "description": "免费在线HTML解码工具，支持命名实体和数字实体解码，提供详细的解码信息和统计。",
+      "keywords": "html5"
+    }
+  },
+  {
+    "name": "html-encode",
+    "url": "http://127.0.0.1:3105/tools/html-encode/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "HTML编码器 - 在线HTML实体编码工具",
+      "description": "免费在线HTML编码工具，支持命名实体和数字实体编码，可自定义编码选项，防止XSS攻击。",
+      "keywords": "实体编码"
+    }
+  },
+  {
+    "name": "html-entities-encoder",
+    "url": "http://127.0.0.1:3105/tools/html-entities-encoder/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "HTML实体编码器 - 特殊字符编码解码",
+      "description": "在线HTML实体编码工具，编码/解码HTML特殊字符，防止XSS攻击，支持命名实体和数字实体。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "html-formatter",
+    "url": "http://127.0.0.1:3105/tools/html-formatter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "HTML格式化工具 - 在线HTML美化压缩工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "html-slug-generator",
+    "url": "http://127.0.0.1:3105/tools/html-slug-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "URL Slug生成器 - 标题转URL友好格式",
+      "description": "在线URL Slug生成工具，将文章标题转换为URL友好的格式，支持多语言和自定义规则。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "html-to-markdown",
+    "url": "http://127.0.0.1:3105/tools/html-to-markdown/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "HTML转Markdown - 在线HTML Markdown格式转换工具",
+      "description": "免费在线 HTML to Markdown 转换工具，支持将 HTML 内容快速转换为 Markdown 格式，保留格式和链接。纯本地计算，数据安全。",
+      "keywords": "HTML转Markdown, HTML to Markdown, HTML Markdown转换, 网页转Markdown, 在线工具"
+    }
+  },
+  {
+    "name": "html-to-text",
+    "url": "http://127.0.0.1:3105/tools/html-to-text/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "HTML转纯文本工具 - 去除HTML标签提取文本 | Util工具箱",
+      "description": "免费在线HTML转纯文本工具，去除HTML标签提取纯文本内容。支持保留链接、图片、标题、列表等格式，一键转换为可读文本。",
+      "keywords": "html转纯文本,html转text,去除html标签,html文本提取,html清理,html解析,网页内容提取"
+    }
+  },
+  {
+    "name": "http-client",
+    "url": "http://127.0.0.1:3105/tools/http-client/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "HTTP客户端 - 在线API测试工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "http-header-analyzer",
+    "url": "http://127.0.0.1:3105/tools/http-header-analyzer/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "HTTP头分析器 - 有条工具",
+      "description": "免费在线HTTP头分析器，检查安全配置、CORS设置、缓存策略，提供安全建议。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "http-status-codes",
+    "url": "http://127.0.0.1:3105/tools/http-status-codes/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "HTTP状态码速查表 - HTTP响应码大全与排查建议",
+      "description": "HTTP状态码大全在线查询，收录1xx~5xx五大分组60+常用状态码，包含含义说明、触发场景与常见原因排查建议，支持按号码或关键词搜索",
+      "keywords": "http状态码, http响应码, 404, 502, 301, 302, 429, 状态码查询, http code"
+    }
+  },
+  {
+    "name": "hydration-tracker",
+    "url": "http://127.0.0.1:3105/tools/hydration-tracker/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "饮水习惯追踪器 - 有条工具",
+      "description": "免费在线饮水习惯追踪器，追踪每日饮水量，保持身体水分平衡，支持多种饮品记录和健康提醒。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "icon-font-generator",
+    "url": "http://127.0.0.1:3105/tools/icon-font-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图标字体生成器 - SVG转Web字体工具 | Util工具箱",
+      "description": "免费在线图标字体生成工具，将SVG图标转换为Web字体使用，支持图标优化、字体生成、CSS代码导出。帮助开发者创建自定义图标字体库。",
+      "keywords": "图标字体生成器,SVG转字体,icon font,webfont,字体图标,图标库,SVG转换,图标优化"
+    }
+  },
+  {
+    "name": "icon-generator",
+    "url": "http://127.0.0.1:3105/tools/icon-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "图标生成器 - 在线生成 favicon 和应用图标",
+      "description": "免费在线图标生成工具，支持 favicon、iOS、Android、Windows 等多种平台图标格式，批量生成不同尺寸。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "ics-generator",
+    "url": "http://127.0.0.1:3105/tools/ics-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "ICS日历文件生成器 - 生成日历邀请.ics文件",
+      "description": "在线生成ICS日历文件，支持全天事件、重复规则、提前提醒，兼容Google日历/Outlook/Apple日历，适合会议邀请与课程表分发",
+      "keywords": "ics生成, 日历邀请, ics文件, calendar invite, 会议邀请, 课程表ics, rfc5545"
+    }
+  },
+  {
+    "name": "id-card-validator",
+    "url": "http://127.0.0.1:3105/tools/id-card-validator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "身份证号校验解析器 - 身份证校验位验证与信息解析",
+      "description": "在线身份证号校验工具，按国标算法验证18位身份证校验位，解析省市、出生日期、属相生肖、性别与年龄，15位自动转18位，支持批量校验与脱敏显示，纯本地处理不上传",
+      "keywords": "身份证校验, 身份证号解析, 身份证校验位计算, 15位转18位, 身份证归属地查询, 属相推算, 身份证批量校验"
+    }
+  },
+  {
+    "name": "ideal-weight-calculator",
+    "url": "http://127.0.0.1:3105/tools/ideal-weight-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "理想体重计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "image-background",
+    "url": "http://127.0.0.1:3105/tools/image-background/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图片背景处理工具 - 有条工具",
+      "description": "免费在线图片背景处理工具，支持更换背景颜色、背景模糊效果、移除纯色背景生成透明图片。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-bg-replace",
+    "url": "http://127.0.0.1:3105/tools/image-bg-replace/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图片背景纯色替换 - 在线证件照换底色工具",
+      "description": "在线图片背景颜色替换工具，点选取色或手动输入颜色，容差可调，支持全局替换与连续区域填充两种模式，边缘柔化降低锯齿，证件照换底色神器，Canvas像素级本地处理不上传",
+      "keywords": "证件照换底色, 图片背景替换, 换背景颜色, 照片底色替换, 抠图换底, 背景颜色修改"
+    }
+  },
+  {
+    "name": "image-border",
+    "url": "http://127.0.0.1:3105/tools/image-border/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图片边框圆角工具 - 有条工具",
+      "description": "免费在线图片边框圆角工具，支持添加各种边框样式、圆角裁剪、阴影效果和背景填充。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-collage",
+    "url": "http://127.0.0.1:3105/tools/image-collage/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "拼图制作器 - 有条工具",
+      "description": "免费在线拼图制作器，支持多张图片网格拼接、自定义布局和背景，生成美观的拼图。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-compare",
+    "url": "http://127.0.0.1:3105/tools/image-compare/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "图片对比工具 - 有条工具",
+      "description": "免费在线图片对比工具，支持并排对比、滑动对比、切换对比，并可检测图片差异。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-compress",
+    "url": "http://127.0.0.1:3105/tools/image-compress/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图片压缩 - 在线图片压缩工具",
+      "description": "免费在线图片压缩工具，支持JPG、PNG、WebP格式，可自定义压缩质量，保持画质的同时减小文件大小。",
+      "keywords": "图片大小"
+    }
+  },
+  {
+    "name": "image-convert",
+    "url": "http://127.0.0.1:3105/tools/image-convert/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "图片格式转换 - 在线图片格式转换工具",
+      "description": "免费在线图片格式转换工具，支持JPG、PNG、WebP、GIF等格式互转，批量处理，保持高质量。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-crop",
+    "url": "http://127.0.0.1:3105/tools/image-crop/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "图片裁剪工具 - 在线智能裁剪图片 | 有条工具",
+      "description": "免费在线图片裁剪工具，支持自由裁剪、固定比例裁剪、圆形裁剪等多种模式，提供精确的尺寸控制和批量处理功能。纯本地计算，数据隐私绝对安全。",
+      "keywords": "图片裁剪,在线裁剪,图片编辑,自由裁剪,固定比例,圆形裁剪,批量裁剪,图片处理"
+    }
+  },
+  {
+    "name": "image-duotone",
+    "url": "http://127.0.0.1:3105/tools/image-duotone/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "双色调效果工具 - 有条工具",
+      "description": "免费在线双色调效果工具，为图片添加艺术化的双色效果，支持多种预设和自定义颜色。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-filter",
+    "url": "http://127.0.0.1:3105/tools/image-filter/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "图片滤镜工具 - 有条工具",
+      "description": "免费在线图片滤镜工具，支持亮度、对比度、饱和度、色相调整，以及灰度、模糊、反色等滤镜效果。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-frame",
+    "url": "http://127.0.0.1:3105/tools/image-frame/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "相框效果工具 - 有条工具",
+      "description": "免费在线相框效果工具，为图片添加各种相框、边框、纹理和装饰效果。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-info",
+    "url": "http://127.0.0.1:3105/tools/image-info/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图片信息查看工具 - 有条工具",
+      "description": "免费在线图片信息查看工具，查看图片尺寸、格式、EXIF数据、颜色信息等详细属性。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-meme",
+    "url": "http://127.0.0.1:3105/tools/image-meme/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "表情包制作器 - 有条工具",
+      "description": "免费在线表情包制作工具，快速制作梗图表情包，支持顶部底部文字、预设模板、自定义字体颜色。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-merge",
+    "url": "http://127.0.0.1:3105/tools/image-merge/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图片合并工具 - 在线合并多张图片",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "image-ocr",
+    "url": "http://127.0.0.1:3105/tools/image-ocr/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "OCR图片文字识别 - 有条工具",
+      "description": "免费在线OCR图片文字识别工具，支持多语言识别，从图片中提取文字内容。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-overlay",
+    "url": "http://127.0.0.1:3105/tools/image-overlay/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图片叠加工具 - 有条工具",
+      "description": "免费在线图片叠加工具，支持多种混合模式、渐变蒙版、透明度调整，创建专业图片叠加效果。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-resize",
+    "url": "http://127.0.0.1:3105/tools/image-resize/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图片尺寸调整 - 在线调整图片尺寸工具",
+      "description": "免费在线图片尺寸调整工具，支持像素和百分比调整、批量处理、多种裁剪模式。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-rotate",
+    "url": "http://127.0.0.1:3105/tools/image-rotate/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "图片旋转翻转工具 - 有条工具",
+      "description": "免费在线图片旋转翻转工具，支持自定义角度旋转、水平翻转、垂直翻转，保持原始图片质量。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-split",
+    "url": "http://127.0.0.1:3105/tools/image-split/",
+    "status": 200,
+    "responseTime": 1,
+    "seo": {
+      "title": "图片分割工具 - 有条工具",
+      "description": "免费在线图片分割工具，支持九宫格分割、自定义行列分割，批量下载切片图片。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-text",
+    "url": "http://127.0.0.1:3105/tools/image-text/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "图片添加文字工具 - 有条工具",
+      "description": "免费在线图片文字添加工具，支持在图片上添加标题、说明文字，自定义字体、颜色、大小和样式。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-to-pdf",
+    "url": "http://127.0.0.1:3105/tools/image-to-pdf/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图片转PDF - 在线图片转PDF工具",
+      "description": "免费在线图片转PDF工具，支持JPG、PNG、GIF等格式，批量转换为PDF文档，支持拖拽排序和页面设置。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "image-watermark",
+    "url": "http://127.0.0.1:3105/tools/image-watermark/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "图片水印 - 在线添加文字&#x2F;图片水印工具",
+      "description": "免费在线图片水印工具，支持文字和图片水印，批量处理，自定义位置和样式。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "insurance-premium-calculator",
+    "url": "http://127.0.0.1:3105/tools/insurance-premium-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "保险费计算器 - 在线计算寿险、健康险、车险保费",
+      "description": "免费保险费计算器，支持计算寿险、健康险、车险、财产险等保险费用，提供产品对比和保费优化建议，帮助您选择合适的保险产品。专业的保险规划工具，支持多种保险类型计算和保障方案分析。",
+      "keywords": "保障方案"
+    }
+  },
+  {
+    "name": "investment-calculator",
+    "url": "http://127.0.0.1:3105/tools/investment-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "理财收益计算器 - 专业投资收益计算工具 | Util工具箱",
+      "description": "专业的理财收益计算工具，支持定期存款、基金、债券、理财等多种投资方式，提供收益计算、风险评估和投资组合优化建议。实时计算ROI、复利、定投收益。",
+      "keywords": "理财计算器,收益计算,投资收益,ROI计算,复利计算,定投计算,基金收益,债券收益,定期存款"
+    }
+  },
+  {
+    "name": "ip-address-convert",
+    "url": "http://127.0.0.1:3105/tools/ip-address-convert/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "IP地址转换工具 - 有条工具",
+      "description": "免费在线IP地址转换工具，支持IPv4地址与十进制、十六进制、二进制之间的互转。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "ip-info",
+    "url": "http://127.0.0.1:3105/tools/ip-info/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "IP信息查询 - 在线IP地址定位与分析工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "ip-lookup",
+    "url": "http://127.0.0.1:3105/tools/ip-lookup/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "IP地址查询工具 - 在线IP地理位置查询",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "ip-subnet-calculator",
+    "url": "http://127.0.0.1:3105/tools/ip-subnet-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "IP子网计算器 - CIDR网段划分与掩码计算",
+      "description": "在线IP子网计算器，输入CIDR即时计算网络地址、广播地址、可用主机范围、子网掩码与通配符，支持子网划分预览，纯本地计算",
+      "keywords": "子网计算器, cidr计算, 子网掩码, 网段计算, ip地址计算, 网络规划, 划分子网"
+    }
+  },
+  {
+    "name": "ipv6-address-converter",
+    "url": "http://127.0.0.1:3105/tools/ipv6-address-converter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "IPv6地址转换器 - 有条工具",
+      "description": "免费在线IPv6地址转换工具，支持IPv6地址格式转换（压缩/展开）、前缀计算、地址验证和IPv4映射转换。适用于网络配置、防火墙规则和地址规划。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "ipv6-converter",
+    "url": "http://127.0.0.1:3105/tools/ipv6-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "IPv6地址转换工具 - IPv6压缩展开与v4映射识别",
+      "description": "在线IPv6地址转换工具，支持IPv6完整展开、RFC5952压缩规范、IPv4映射地址识别、ip6.arpa反向解析域名生成，纯本地解析",
+      "keywords": "ipv6转换, ipv6压缩, ipv6展开, ipv6格式化, ipv4映射, ip6.arpa, 反向解析"
+    }
+  },
+  {
+    "name": "ipv6-scope-calculator",
+    "url": "http://127.0.0.1:3105/tools/ipv6-scope-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "IPv6地址范围计算器 - 有条工具",
+      "description": "免费在线IPv6地址范围计算器，支持IPv6前缀计算、子网划分、SLAAC地址生成和EUI-64转换。",
+      "keywords": "网络规划"
+    }
+  },
+  {
+    "name": "js-string-escape",
+    "url": "http://127.0.0.1:3105/tools/js-string-escape/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "JavaScript字符串转义工具 - 有条工具",
+      "description": "免费在线JavaScript字符串转义工具，支持单引号、双引号、模板字符串格式，智能转义特殊字符、换行符和Unicode字符。",
+      "keywords": "unicode escape"
+    }
+  },
+  {
+    "name": "json-diff-compare",
+    "url": "http://127.0.0.1:3105/tools/json-diff-compare/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "JSON对比工具 - 在线JSON差异对比",
+      "description": "在线对比两个JSON的差异，高亮显示新增、删除、修改的内容，支持深度嵌套对比。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "json-formatter",
+    "url": "http://127.0.0.1:3105/tools/json-formatter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JSON格式化工具 - 在线JSON解析、验证与美化 | Util工具箱",
+      "description": "免费在线JSON格式化工具，支持JSON美化、压缩、语法错误检测与树形视图展示。纯本地计算，数据安全隐私。一键格式化JSON，提升开发效率。",
+      "keywords": "JSON格式化,JSON解析,JSON验证,JSON美化,在线JSON工具,JSON压缩,JSON格式化器,JSON查看器"
+    }
+  },
+  {
+    "name": "json-merger",
+    "url": "http://127.0.0.1:3105/tools/json-merger/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JSON合并工具 - 在线JSON深浅合并&#x2F;取交集",
+      "description": "在线JSON合并工具，支持浅合并、深合并（数组替换/拼接/去重拼接）与仅取交集键，冲突键对比预览，支持后者覆盖前者或前者优先，纯本地计算",
+      "keywords": "json合并, json深合并, json取交集, json对比, json工具, 合并json对象"
+    }
+  },
+  {
+    "name": "json-path",
+    "url": "http://127.0.0.1:3105/tools/json-path/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JSONPath查询工具 - 在线JSON路径表达式查询",
+      "description": "免费在线JSONPath查询工具，支持使用JSONPath表达式查询和提取JSON数据，提供语法说明和示例。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "json-path-tester",
+    "url": "http://127.0.0.1:3105/tools/json-path-tester/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JSONPath测试器 - 在线JSONPath表达式测试",
+      "description": "在线JSONPath测试工具，测试JSONPath表达式提取JSON数据，支持过滤和深度扫描。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "json-php-converter",
+    "url": "http://127.0.0.1:3105/tools/json-php-converter/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "JSON与PHP数组转换 - JSON PHP Array互转工具",
+      "description": "免费在线 JSON 与 PHP Array 转换工具，支持JSON数据与PHP数组语法互相转换，可生成标准PHP数组格式。纯本地计算，数据安全。",
+      "keywords": "JSON转PHP, PHP转JSON, JSON PHP转换, PHP数组, 在线工具"
+    }
+  },
+  {
+    "name": "json-schema",
+    "url": "http://127.0.0.1:3105/tools/json-schema/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JSON Schema 生成器 - 在线 JSON Schema 生成工具",
+      "description": "免费的在线 JSON Schema 生成器，根据 JSON 数据自动生成 JSON Schema，支持数据验证和类型定义。",
+      "keywords": "数据结构"
+    }
+  },
+  {
+    "name": "json-to-csv",
+    "url": "http://127.0.0.1:3105/tools/json-to-csv/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "JSON转CSV - 在线JSON转CSV格式转换工具",
+      "description": "免费在线 JSON to CSV 转换工具，支持将 JSON 数组或对象转换为 CSV 格式，自定义分隔符，支持嵌套数据处理。纯本地计算，数据安全。",
+      "keywords": "JSON转CSV, JSON to CSV, JSON CSV转换, 数据格式转换, 表格数据, 在线工具"
+    }
+  },
+  {
+    "name": "json-to-model",
+    "url": "http://127.0.0.1:3105/tools/json-to-model/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "JSON 转 Model 类 - 在线代码生成工具",
+      "description": "免费的在线 JSON 转 Model 类工具，支持将 JSON 数据自动转换为 TypeScript、Java、Python、C#、Go、Kotlin 等多种编程语言的模型类。",
+      "keywords": "数据结构"
+    }
+  },
+  {
+    "name": "json-to-protobuf",
+    "url": "http://127.0.0.1:3105/tools/json-to-protobuf/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JSON转Protobuf - JSON数据转Protobuf定义文件 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "json-to-typescript",
+    "url": "http://127.0.0.1:3105/tools/json-to-typescript/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JSON转TypeScript接口 - 自动生成TS类型定义",
+      "description": "免费在线 JSON to TypeScript 转换工具，根据JSON数据自动生成TypeScript接口、类型定义，支持嵌套对象、数组等复杂结构。纯本地计算，数据安全。",
+      "keywords": "JSON转TypeScript, JSON to TypeScript, TypeScript接口生成, 类型定义生成, 在线工具"
+    }
+  },
+  {
+    "name": "json-to-xml",
+    "url": "http://127.0.0.1:3105/tools/json-to-xml/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "JSON转XML - 在线JSON转XML格式转换工具",
+      "description": "免费在线 JSON to XML 转换工具，支持将 JSON 数据快速转换为 XML 格式，保留数据结构，支持自定义根元素。纯本地计算，数据安全。",
+      "keywords": "JSON转XML, JSON to XML, JSON XML转换, 数据格式转换, 在线工具"
+    }
+  },
+  {
+    "name": "json-to-yaml",
+    "url": "http://127.0.0.1:3105/tools/json-to-yaml/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JSON转YAML - 在线JSON转YAML格式转换工具",
+      "description": "免费在线 JSON to YAML 转换工具，支持将 JSON 数据快速转换为 YAML 格式，保留数据结构，支持嵌套对象和数组。纯本地计算，数据安全。",
+      "keywords": "JSON转YAML, JSON to YAML, JSON YAML转换, 数据格式转换, 配置文件转换, 在线工具"
+    }
+  },
+  {
+    "name": "json-url-encode",
+    "url": "http://127.0.0.1:3105/tools/json-url-encode/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "JSON URL编码工具 - 有条工具",
+      "description": "免费在线JSON URL编码工具，支持将JSON对象转换为URL编码格式，适用于API请求参数传递，支持表单编码和括号表示法。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "json-xml-validator",
+    "url": "http://127.0.0.1:3105/tools/json-xml-validator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "JSON&#x2F;XML验证器 - 在线格式验证与错误定位",
+      "description": "在线验证JSON/XML格式，精确定位错误位置，显示详细错误信息和修复建议。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "jsonl-converter",
+    "url": "http://127.0.0.1:3105/tools/jsonl-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JSONL&#x2F;NDJSON转换器 - JSONL转JSON&#x2F;CSV工具",
+      "description": "在线JSONL转换工具，支持JSONL转JSON数组、JSONL转CSV、JSON数组转JSONL，逐行校验并标注错误行号，纯本地处理不上传数据",
+      "keywords": "jsonl转json, jsonl转csv, ndjson转换, json转jsonl, jsonl格式化, json lines"
+    }
+  },
+  {
+    "name": "jvm-args-config",
+    "url": "http://127.0.0.1:3105/tools/jvm-args-config/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JVM 启动参数配置工具 - Java 虚拟机参数可视化配置 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "jwt-debugger",
+    "url": "http://127.0.0.1:3105/tools/jwt-debugger/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JWT调试器 - 在线JWT Token解码与验证",
+      "description": "在线JWT调试工具，解码JWT Token查看Header和Payload，验证签名，检查过期时间。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "jwt-decode",
+    "url": "http://127.0.0.1:3105/tools/jwt-decode/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "JWT解码器 - 在线JWT Token解析工具",
+      "description": "免费在线JWT解码工具，快速解析JWT Token的Header和Payload，验证过期时间。",
+      "keywords": "认证"
+    }
+  },
+  {
+    "name": "jwt-parser",
+    "url": "http://127.0.0.1:3105/tools/jwt-parser/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "JWT令牌解析器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "jwt-verify",
+    "url": "http://127.0.0.1:3105/tools/jwt-verify/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "JWT验证器 - 在线JWT Token验证工具",
+      "description": "免费在线JWT验证工具，验证JSON Web Token的签名有效性和时效性，支持多种算法和自定义验证规则。",
+      "keywords": "JWT Verify"
+    }
+  },
+  {
+    "name": "kanban-board",
+    "url": "http://127.0.0.1:3105/tools/kanban-board/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "待办事项看板 - 在线看板管理工具 | 项目管理任务跟踪",
+      "description": "免费在线看板管理工具，支持Todo/Doing/Done三栏管理，拖拽操作，本地存储，适用于项目管理和任务跟踪。",
+      "keywords": "看板,任务管理,项目管理,敏捷开发,Todo看板,任务跟踪,在线看板,Kanban,看板工具"
+    }
+  },
+  {
+    "name": "kubernetes-yaml-generator",
+    "url": "http://127.0.0.1:3105/tools/kubernetes-yaml-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Kubernetes YAML生成器 - K8s配置生成",
+      "description": "在线Kubernetes YAML生成工具，可视化配置Deployment、Service、ConfigMap、Ingress等资源。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "leap-year-checker",
+    "url": "http://127.0.0.1:3105/tools/leap-year-checker/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "闰年检查器 - 快速查询年份是否为闰年 | Util工具箱",
+      "description": "在线闰年检查工具，快速查询任意年份是否为闰年。支持单个查询和批量查询，显示闰年规则说明和典型示例。提供详细的判断依据和闰年计算规则。",
+      "keywords": "闰年查询,闰年检查,平年闰年,二月天数,闰年规则,在线闰年检查器"
+    }
+  },
+  {
+    "name": "letter-spacing-tool",
+    "url": "http://127.0.0.1:3105/tools/letter-spacing-tool/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "字间距工具 - letter-spacing可视化 | Util工具箱",
+      "description": "免费在线字间距调整工具，实时预览letter-spacing效果、快捷预设、一键复制CSS代码。适用于网页排版和字体设计，纯本地计算。",
+      "keywords": "letter-spacing,字间距,字距,CSS字体,字体间距,排版工具,在线设计工具"
+    }
+  },
+  {
+    "name": "license-generator",
+    "url": "http://127.0.0.1:3105/tools/license-generator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "开源协议生成器 - LICENSE文件生成与协议选择指南",
+      "description": "在线开源协议生成器，支持MIT/BSD/Apache/GPL等主流协议选择，生成LICENSE文件全文与README徽章，附协议对比表帮助选型",
+      "keywords": "开源协议, license生成, mit协议, apache协议, gpl协议, 开源协议选择, license文件"
+    }
+  },
+  {
+    "name": "line-height-calculator",
+    "url": "http://127.0.0.1:3105/tools/line-height-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "行高计算器 - 垂直节奏工具 | Util工具箱",
+      "description": "免费在线行高计算工具，根据字号自动计算合适的行高，保持垂直节奏一致。支持网格对齐、多种比例预设、常用字号对照表。",
+      "keywords": "行高,line-height,垂直节奏,排版,字体,CSS工具,在线设计工具"
+    }
+  },
+  {
+    "name": "line-operations",
+    "url": "http://127.0.0.1:3105/tools/line-operations/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "行操作工具 - 在线文本行排序去重过滤",
+      "description": "免费在线文本行操作工具，支持行排序、去重、过滤、添加行号等功能，批量处理文本行。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "linux-command",
+    "url": "http://127.0.0.1:3105/tools/linux-command/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "Linux 命令生成器 - 可视化 Linux 命令生成工具",
+      "description": "免费的在线 Linux 命令生成器，可视化配置生成 Linux 命令，支持文件操作、系统管理、网络配置等常用命令。",
+      "keywords": "centos"
+    }
+  },
+  {
+    "name": "loan-calculator",
+    "url": "http://127.0.0.1:3105/tools/loan-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "贷款计算器 - 房贷车贷月供利息计算工具",
+      "description": "免费在线贷款计算器，支持等额本息和等额本金两种还款方式，计算月供、总利息和生成详细还款计划表。",
+      "keywords": "等额本金"
+    }
+  },
+  {
+    "name": "loc-counter",
+    "url": "http://127.0.0.1:3105/tools/loc-counter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "代码行数统计器 - 在线LOC统计&#x2F;代码行&#x2F;注释行&#x2F;空行分析",
+      "description": "在线代码行数统计工具，支持多文件或粘贴代码，按语言感知注释规则统计总行数、代码行、注释行、空行、注释率与平均行长，支持20余种语言，纯本地统计不上传",
+      "keywords": "代码行数统计, loc统计, 代码行数, 注释率, cloc, 代码统计工具, 行数分析"
+    }
+  },
+  {
+    "name": "logo-maker",
+    "url": "http://127.0.0.1:3105/tools/logo-maker/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Logo制作器 - 在线免费设计品牌Logo和商标",
+      "description": "免费Logo制作器，在线设计专业品牌Logo和商标。支持文字Logo、图形Logo、图标组合，可自定义颜色、字体、形状，实时预览效果，导出SVG和PNG格式。简单易用的Logo设计工具。",
+      "keywords": "免费Logo制作"
+    }
+  },
+  {
+    "name": "lora-vram-calculator",
+    "url": "http://127.0.0.1:3105/tools/lora-vram-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "LoRA微调显存计算器 - 全参&#x2F;LoRA&#x2F;QLoRA训练显存估算",
+      "description": "在线估算大模型微调所需显存，支持全参微调、LoRA、QLoRA三种方式，按批大小与序列长度计算显存账单，推荐合适的训练显卡配置",
+      "keywords": "lora显存, qlora显存, 微调显存计算, 训练显存估算, 全参微调, 大模型微调, fine-tune vram"
+    }
+  },
+  {
+    "name": "lorem-ipsum",
+    "url": "http://127.0.0.1:3105/tools/lorem-ipsum/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Lorem Ipsum 生成器 - 快速生成占位文本",
+      "description": "一个简单的Lorem Ipsum文本生成器，可自定义段落数和单词数，并支持HTML和Markdown格式输出。",
+      "keywords": "html"
+    }
+  },
+  {
+    "name": "lrc-check",
+    "url": "http://127.0.0.1:3105/tools/lrc-check/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "LRC校验工具 - 有条工具",
+      "description": "免费在线LRC校验工具，计算纵向冗余校验码，用于串口通信和Modbus协议的数据错误检测。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "lunar-calendar",
+    "url": "http://127.0.0.1:3105/tools/lunar-calendar/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "农历日历转换工具 - 公历与农历互转 | Util工具箱",
+      "description": "在线农历日历转换工具，支持公历与农历互转，显示天干地支、生肖、节气等中国传统历法信息。",
+      "keywords": "农历转换,公历农历,天干地支,生肖查询,二十四节气,传统节日,在线农历"
+    }
+  },
+  {
+    "name": "mac-address-convert",
+    "url": "http://127.0.0.1:3105/tools/mac-address-convert/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "MAC地址转换工具 - 有条工具",
+      "description": "免费在线MAC地址转换工具，支持冒号、横杠、点分隔等多种格式互转。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "mac-vendor-lookup",
+    "url": "http://127.0.0.1:3105/tools/mac-vendor-lookup/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "MAC地址厂商查询 - OUI前缀查设备厂商工具",
+      "description": "MAC地址厂商在线查询工具，通过OUI前缀识别设备品牌（Apple/华为/小米/思科/乐鑫等150+厂商），支持冒号横杠点分隔等格式自动兼容、批量查询与随机MAC判断，纯本地查询",
+      "keywords": "mac地址查询, mac厂商查询, oui查询, 设备厂商识别, mac地址库, 随机mac"
+    }
+  },
+  {
+    "name": "macro-tracker",
+    "url": "http://127.0.0.1:3105/tools/macro-tracker/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "宏量营养素追踪器 - 有条工具",
+      "description": "免费在线宏量营养素追踪器，记录每日蛋白质、碳水化合物、脂肪摄入，科学配比营养，支持增肌减脂目标。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "markdown-editor",
+    "url": "http://127.0.0.1:3105/tools/markdown-editor/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "Markdown编辑器 - 在线Markdown实时预览编辑器",
+      "description": "免费在线Markdown编辑器，支持实时预览、语法高亮、快捷工具栏和自动保存功能。专注于内容创作，无需担心格式问题。",
+      "keywords": "实时预览"
+    }
+  },
+  {
+    "name": "markdown-exporter",
+    "url": "http://127.0.0.1:3105/tools/markdown-exporter/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "Markdown导出器 - Markdown转HTML导出工具",
+      "description": "在线Markdown导出工具，实时预览并导出独立HTML文件（浅色/深色内联样式）、纯HTML片段、带行号HTML，转换在浏览器本地完成",
+      "keywords": "markdown转html, markdown导出, markdown预览, markdown在线编辑, html片段, 带行号html"
+    }
+  },
+  {
+    "name": "markdown-table-generator",
+    "url": "http://127.0.0.1:3105/tools/markdown-table-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Markdown表格生成器 - 在线Markdown表格创建",
+      "description": "在线Markdown表格生成工具，可视化创建Markdown表格，支持对齐方式设置。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "markdown-to-html",
+    "url": "http://127.0.0.1:3105/tools/markdown-to-html/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Markdown转HTML - 在线Markdown HTML转换工具",
+      "description": "免费在线 Markdown to HTML 转换工具，支持将 Markdown 文本转换为 HTML 格式，支持扩展语法。纯本地计算，数据安全。",
+      "keywords": "Markdown转HTML, Markdown to HTML, Markdown HTML转换, MD转HTML, 在线工具"
+    }
+  },
+  {
+    "name": "mask-image-generator",
+    "url": "http://127.0.0.1:3105/tools/mask-image-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "CSS遮罩生成器 - mask-image可视化工具 | Util工具箱",
+      "description": "免费在线CSS mask-image生成工具，创建渐变遮罩、图片遮罩效果。支持线性、径向、锥形渐变，实时预览遮罩效果，一键复制CSS代码。",
+      "keywords": "mask-image,CSS遮罩,渐变遮罩,mask generator,在线遮罩工具,透明度渐变"
+    }
+  },
+  {
+    "name": "material-design-colors",
+    "url": "http://127.0.0.1:3105/tools/material-design-colors/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Material Design色板 - MD3官方颜色参考 | Util工具箱",
+      "description": "免费Material Design 3色板参考工具，包含Primary、Secondary、Tertiary核心色系。一键复制颜色代码，符合Google官方规范。",
+      "keywords": "Material Design色板,MD3颜色,Material Color,Android颜色,Material You,Google设计规范"
+    }
+  },
+  {
+    "name": "matrix-calculator",
+    "url": "http://127.0.0.1:3105/tools/matrix-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "矩阵计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "md5-generator",
+    "url": "http://127.0.0.1:3105/tools/md5-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "MD5哈希生成器 - 在线MD5加密工具",
+      "description": "免费在线MD5哈希生成器，支持文本和文件的MD5计算，用于数据完整性验证和密码加密。",
+      "keywords": "密码加密"
+    }
+  },
+  {
+    "name": "meal-planner",
+    "url": "http://127.0.0.1:3105/tools/meal-planner/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "一周食谱规划 - 有条工具",
+      "description": "免费在线一周食谱规划工具，智能生成健康的一周食谱，支持增肌、减脂、均衡饮食等多种目标，自动生成购物清单。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "meeting-minutes",
+    "url": "http://127.0.0.1:3105/tools/meeting-minutes/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "会议纪要生成器 - 在线会议记录工具 | 任务分配追踪",
+      "description": "免费在线会议纪要生成工具，支持参会人员管理、议题讨论记录、任务分配追踪，可导出为文本格式。适用于团队协作会议、项目会议等场景，纯本地计算，数据隐私绝对安全。",
+      "keywords": "会议纪要,会议记录,会议模板,任务分配,团队协作,会议管理,在线会议,会议文档"
+    }
+  },
+  {
+    "name": "mime-encode",
+    "url": "http://127.0.0.1:3105/tools/mime-encode/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "MIME Base64编码工具 - 有条工具",
+      "description": "免费在线MIME Base64编码工具，用于电子邮件附件传输，支持标准MIME格式。",
+      "keywords": "smime"
+    }
+  },
+  {
+    "name": "mime-type-lookup",
+    "url": "http://127.0.0.1:3105/tools/mime-type-lookup/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "MIME类型查询器 - 文件扩展名MIME类型对照",
+      "description": "在线MIME类型查询工具，查询文件扩展名对应的MIME类型，支持反向查询和类别筛选。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "mime-types",
+    "url": "http://127.0.0.1:3105/tools/mime-types/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "MIME类型查询工具 - 在线文件类型识别与查询",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "mind-map",
+    "url": "http://127.0.0.1:3105/tools/mind-map/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "思维导图工具 - 在线脑图编辑器 | 知识整理头脑风暴",
+      "description": "免费在线思维导图工具，支持节点创建、编辑、折叠展开，可导出为PNG/SVG图片，适用于知识整理、头脑风暴、项目规划和学习笔记。",
+      "keywords": "思维导图,脑图,在线导图,知识管理,头脑风暴,项目规划,学习笔记,思维整理"
+    }
+  },
+  {
+    "name": "mock-data",
+    "url": "http://127.0.0.1:3105/tools/mock-data/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Mock数据生成器 - 在线模拟数据生成工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "mojibake-fixer",
+    "url": "http://127.0.0.1:3105/tools/mojibake-fixer/",
+    "status": 200,
+    "responseTime": 6,
+    "seo": {
+      "title": "文本乱码修复器 - 在线修复UTF-8&#x2F;GBK乱码文本",
+      "description": "在线乱码修复工具，自动尝试Latin1/CP1252/GBK误读还原与UTF-8双重编码等多条修复链路，修复浣犲ソ、ä½ å¥½、â€&quot;类乱码，纯本地计算不上传",
+      "keywords": "乱码修复, 乱码转换, utf-8乱码, gbk乱码, 乱码还原, 文本乱码, 浣犲ソ, 在线转码"
+    }
+  },
+  {
+    "name": "morse-code",
+    "url": "http://127.0.0.1:3105/tools/morse-code/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "摩尔斯电码转换器 - 在线摩尔斯电码编码解码工具",
+      "description": "免费在线摩尔斯电码转换工具，支持文本与摩尔斯电码相互转换，内置音频播放功能。",
+      "keywords": "音频播放"
+    }
+  },
+  {
+    "name": "network-speed-test",
+    "url": "http://127.0.0.1:3105/tools/network-speed-test/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "网络速度测试 - 有条工具",
+      "description": "免费在线网络速度测试工具，支持下载速度、上传速度、延迟和抖动测试。实时显示网速，提供网络质量评估和使用建议。",
+      "keywords": "在线测速"
+    }
+  },
+  {
+    "name": "nginx-config-generator",
+    "url": "http://127.0.0.1:3105/tools/nginx-config-generator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "Nginx配置生成器 - 专业Web服务器配置文件生成工具 | Util工具箱",
+      "description": "专业的Nginx配置生成工具，根据需求快速生成Nginx配置文件，支持反向代理、负载均衡、SSL证书、虚拟主机等配置。可视化操作，一键生成标准配置。",
+      "keywords": "Nginx配置生成器,Nginx配置,Web服务器,反向代理,负载均衡,SSL配置,虚拟主机,配置文件,服务器配置,Nginx教程"
+    }
+  },
+  {
+    "name": "nickname-generator",
+    "url": "http://127.0.0.1:3105/tools/nickname-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "随机昵称生成器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "number-base-calculator",
+    "url": "http://127.0.0.1:3105/tools/number-base-calculator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "进制转换计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "nutrition-calculator",
+    "url": "http://127.0.0.1:3105/tools/nutrition-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "营养需求计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "open-graph-validator",
+    "url": "http://127.0.0.1:3105/tools/open-graph-validator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Open Graph验证器 - 有条工具",
+      "description": "免费在线Open Graph验证工具，检测URL的OG标签完整性，模拟社交媒体预览效果，提供优化建议。",
+      "keywords": "社交预览"
+    }
+  },
+  {
+    "name": "openapi-spec-generator",
+    "url": "http://127.0.0.1:3105/tools/openapi-spec-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "OpenAPI规范生成器 - 在线Swagger文档生成",
+      "description": "在线OpenAPI 3.0规范生成工具，可视化创建API文档，支持JSON和YAML格式导出。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "otp-authenticator",
+    "url": "http://127.0.0.1:3105/tools/otp-authenticator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "OTP认证器 - 有条工具",
+      "description": "免费在线OTP认证器，生成和验证TOTP/HOTP一次性密码，支持Google Authenticator，生成QR码。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "otp-generator",
+    "url": "http://127.0.0.1:3105/tools/otp-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "OTP动态口令生成器 - 在线TOTP&#x2F;HOTP双因素认证 | Util工具箱",
+      "description": "在线OTP动态口令生成器，支持TOTP和HOTP算法。兼容Google Authenticator、Authy、Microsoft Authenticator等验证器应用，纯本地计算。",
+      "keywords": "OTP,TOTP,HOTP,动态口令,双因素认证,2FA,Google Authenticator,验证器,在线OTP生成"
+    }
+  },
+  {
+    "name": "ovulation-calculator",
+    "url": "http://127.0.0.1:3105/tools/ovulation-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "排卵期计算器 - 排卵期预测与受孕窗口计算工具 | Util工具箱",
+      "description": "免费在线排卵期计算器，预测排卵日、排卵期、易受孕期和安全期。帮助备孕和避孕规划。纯本地计算，数据安全隐私。",
+      "keywords": "排卵期计算,排卵日,易受孕期,安全期,备孕,月经周期,在线计算器"
+    }
+  },
+  {
+    "name": "package-json-tools",
+    "url": "http://127.0.0.1:3105/tools/package-json-tools/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "package.json工具 - 格式化验证分析生成",
+      "description": "在线package.json工具，支持JSON格式化、依赖分析、脚本验证和模板生成。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "password-generator",
+    "url": "http://127.0.0.1:3105/tools/password-generator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "密码生成器 - 在线安全随机密码生成工具",
+      "description": "免费在线密码生成器，支持自定义长度、字符类型，生成安全随机的密码，提供密码强度分析。",
+      "keywords": "在线生成器"
+    }
+  },
+  {
+    "name": "password-strength-checker",
+    "url": "http://127.0.0.1:3105/tools/password-strength-checker/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "密码强度检测器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "pattern-generator",
+    "url": "http://127.0.0.1:3105/tools/pattern-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "图案生成器 - 在线生成CSS背景图案和纹理",
+      "description": "免费图案生成器，支持生成圆点、线条、网格、六边形、三角形等CSS背景图案。可自定义颜色、尺寸、间距，实时预览效果，导出CSS代码。专业的网页背景设计工具。",
+      "keywords": "重复图案设计"
+    }
+  },
+  {
+    "name": "pbkdf2-generator",
+    "url": "http://127.0.0.1:3105/tools/pbkdf2-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "PBKDF2密钥派生器 - 在线PBKDF2哈希生成工具",
+      "description": "免费在线PBKDF2密钥派生函数工具，支持SHA-1/256/512，可自定义迭代次数和盐值，用于安全密码存储和密钥派生。",
+      "keywords": "PKCS5"
+    }
+  },
+  {
+    "name": "pdf-merge-split",
+    "url": "http://127.0.0.1:3105/tools/pdf-merge-split/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "PDF合并拆分器 - 本地PDF合并与页面提取工具",
+      "description": "在浏览器本地合并多个PDF文件、按页码范围提取页面或按页数拆分PDF，支持批量打包下载，文件不上传服务器，保护文档隐私",
+      "keywords": "pdf合并, pdf拆分, pdf分割, pdf页面提取, pdf合并在线, 本地pdf处理"
+    }
+  },
+  {
+    "name": "pediatric-growth",
+    "url": "http://127.0.0.1:3105/tools/pediatric-growth/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "儿童生长发育曲线 - 有条工具",
+      "description": "免费在线儿童生长发育曲线工具，追踪儿童身高体重发育，对比WHO标准生长曲线，评估营养状况。",
+      "keywords": "生长监测"
+    }
+  },
+  {
+    "name": "pem-parser",
+    "url": "http://127.0.0.1:3105/tools/pem-parser/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "PEM证书解析器 - 在线X.509证书查看工具",
+      "description": "在线PEM证书解析工具，解析X.509证书主体、签发者、有效期、序列号、SHA-1/SHA-256指纹、SAN域名与密钥算法，识别私钥/公钥/CSR/CRL类型，纯本地解析",
+      "keywords": "pem解析, 证书解析, x509查看器, 证书有效期查询, 证书指纹, san域名, 在线证书工具"
+    }
+  },
+  {
+    "name": "pension-calculator",
+    "url": "http://127.0.0.1:3105/tools/pension-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "个人养老金计算器 - 个税抵扣与退休收益分析",
+      "description": "免费个人养老金计算器，计算个税抵扣优惠和退休收益预测，支持多方案对比分析。帮助您充分利用税收优惠，合理规划退休生活，享受复利增长。",
+      "keywords": "税收递延"
+    }
+  },
+  {
+    "name": "percentage-calculator",
+    "url": "http://127.0.0.1:3105/tools/percentage-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "百分比计算器 - 占比增幅折扣在线计算工具",
+      "description": "免费在线百分比计算工具，支持基础百分比计算、占比分析、增幅减幅计算、小费折扣税收等实用功能。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "performance-benchmark",
+    "url": "http://127.0.0.1:3105/tools/performance-benchmark/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "性能基准测试 - JavaScript代码性能测试工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "pii-detector",
+    "url": "http://127.0.0.1:3105/tools/pii-detector/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "PII信息检测器 - 有条工具",
+      "description": "免费在线PII信息检测器，扫描身份证号、手机号、邮箱、银行卡号等个人身份信息，支持自动脱敏显示。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "pinyin-converter",
+    "url": "http://127.0.0.1:3105/tools/pinyin-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "拼音转换工具 - 汉字转拼音带声调 | Util工具箱",
+      "description": "免费在线拼音转换工具，将汉字转换为拼音，支持有声调、无声调、首字母等多种格式输出。简单易用，实时转换。",
+      "keywords": "拼音转换,汉字转拼音,带声调拼音,拼音首字母,中文拼音,拼音标注,在线拼音"
+    }
+  },
+  {
+    "name": "pivot-table",
+    "url": "http://127.0.0.1:3105/tools/pivot-table/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "数据透视分析工具 - 在线透视表生成器与数据汇总统计 | Util工具箱",
+      "description": "免费在线数据透视分析工具，支持CSV/JSON数据导入，创建数据透视表、分类汇总统计、多维度数据分析，可导出Excel/CSV格式，适用于数据分析和报表制作。纯本地计算，数据隐私绝对安全。",
+      "keywords": "数据透视,透视表,数据分析,数据汇总,统计工具,数据统计,在线分析,Excel透视表,数据透视分析器,在线透视表"
+    }
+  },
+  {
+    "name": "pixelate",
+    "url": "http://127.0.0.1:3105/tools/pixelate/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "像素化工具 - 有条工具",
+      "description": "免费在线像素化工具，支持块状像素、点状马赛克、十字像素等多种效果，可调整颜色和色调。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "placeholder-image-generator",
+    "url": "http://127.0.0.1:3105/tools/placeholder-image-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "占位图生成器 - 在线占位图片制作工具 | Util工具箱",
+      "description": "免费在线占位图生成工具，自定义尺寸、颜色和文字，一键生成占位图片。支持实时预览和HTML代码导出，适用于网站原型设计和开发测试。",
+      "keywords": "占位图生成器,placeholder image,占位图片,图片占位,原型设计占位图,在线占位图工具"
+    }
+  },
+  {
+    "name": "placeholder-text-generator",
+    "url": "http://127.0.0.1:3105/tools/placeholder-text-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "占位文案生成器 - 中文假文&#x2F;占位文本生成工具",
+      "description": "在线中文占位文案生成器，按通用/科技/电商/餐饮/教育/医疗行业模板生成通顺可读的短标题、长标题与段落文案，数量可控、一键复制，适合设计稿与原型占位，纯本地生成",
+      "keywords": "占位文案, 中文假文, 占位文本生成, 设计稿文案, 原型填充文案, placeholder text, mock文案"
+    }
+  },
+  {
+    "name": "pomodoro-timer",
+    "url": "http://127.0.0.1:3105/tools/pomodoro-timer/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "番茄钟与白噪音 - 在线专注计时器",
+      "description": "在线番茄钟专注计时器，25分钟工作法可自定义时长，内置白噪音/粉噪音/棕噪音实时合成，专注统计保存在本地",
+      "keywords": "番茄钟, 在线番茄钟, 专注计时器, 白噪音, pomodoro, 工作法, 计时器"
+    }
+  },
+  {
+    "name": "port-checker",
+    "url": "http://127.0.0.1:3105/tools/port-checker/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "端口扫描器 - 在线端口状态检测工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "port-lookup",
+    "url": "http://127.0.0.1:3105/tools/port-lookup/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "常用端口速查表 - 端口号大全与安全备注",
+      "description": "常用端口大全在线查询，收录80个常用端口号及对应服务说明，含TCP/UDP协议标注、用途解释与公网暴露安全风险备注，支持端口号搜索与反向定位",
+      "keywords": "端口号, 端口大全, 常用端口, 3306, 6379, 8080, 443端口, 端口查询, tcp端口"
+    }
+  },
+  {
+    "name": "postman-collection-converter",
+    "url": "http://127.0.0.1:3105/tools/postman-collection-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Postman集合转换器 - Postman导出cURL&#x2F;OpenAPI",
+      "description": "在线Postman Collection转换工具，支持转换为cURL命令、HAR格式、OpenAPI规范和Markdown文档。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "posture-assessment",
+    "url": "http://127.0.0.1:3105/tools/posture-assessment/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "体态评估 - 有条工具",
+      "description": "免费在线体态评估工具，自测圆肩驼背、骨盆前倾、科技脖等不良体态问题，获得科学矫正练习建议。",
+      "keywords": "姿势检测"
+    }
+  },
+  {
+    "name": "pregnancy-due-date",
+    "url": "http://127.0.0.1:3105/tools/pregnancy-due-date/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "预产期计算器 - 有条工具",
+      "description": "免费在线预产期计算器，计算预产期和重要孕期时间节点，追踪胎儿发育进程，提供孕期注意事项。",
+      "keywords": "due date calculator"
+    }
+  },
+  {
+    "name": "prepayment-calculator",
+    "url": "http://127.0.0.1:3105/tools/prepayment-calculator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "提前还款计算器 - 房贷提前还款式节省利息对比",
+      "description": "在线计算房贷提前还款，对比缩短年限与减少月供两种方式的节省利息，支持等额本息与等额本金，精确到每月还款计划",
+      "keywords": "提前还款计算器, 房贷提前还款, 缩短年限, 减少月供, 等额本息, 等额本金, 提前还贷划算吗"
+    }
+  },
+  {
+    "name": "private-ip-checker",
+    "url": "http://127.0.0.1:3105/tools/private-ip-checker/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "私有IP检测器 - 判断IP是公网还是内网地址",
+      "description": "在线IP地址类型检测，判断IPv4/IPv6属于私有地址、公网、CGNAT、链路本地、回环还是保留段，附RFC标准与NAT说明，纯本地判定",
+      "keywords": "私有ip, 公网ip, ip类型检测, 内网地址, rfc1918, cgnat, nat, ip归属判断"
+    }
+  },
+  {
+    "name": "pro-color-picker",
+    "url": "http://127.0.0.1:3105/tools/pro-color-picker/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "专业取色器 - 在线颜色选择与转换工具 | Util工具箱",
+      "description": "在线专业取色工具，支持屏幕取色、HEX/RGB/HSL/HSV格式转换，提供颜色历史记录功能。",
+      "keywords": "取色器,颜色选择,HEX转换,RGB转换,HSL转换,HSV转换,色彩工具"
+    }
+  },
+  {
+    "name": "probability-calculator",
+    "url": "http://127.0.0.1:3105/tools/probability-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "概率计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "prompt-library",
+    "url": "http://127.0.0.1:3105/tools/prompt-library/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "Prompt提示词库 - AI提示词模板分类管理与变量填充",
+      "description": "在线提示词模板库，内置写作/编程/翻译/学习/办公五类高频AI提示词，支持变量占位填充与自定义提示词管理，数据保存本机",
+      "keywords": "提示词库, prompt模板, ai提示词, chatgpt提示词, 提示词管理, 提示词工程"
+    }
+  },
+  {
+    "name": "properties-ini-formatter",
+    "url": "http://127.0.0.1:3105/tools/properties-ini-formatter/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "Properties&#x2F;INI格式化器 - 配置文件美化与校验工具",
+      "description": "Properties与INI配置文件在线格式化工具，支持等号对齐、节内键排序、键缩进、注释保留、分节统计与语法错误行号标注，自动识别properties/ini风格",
+      "keywords": "properties格式化, ini格式化, 配置文件格式化, properties排序, ini编辑, application.properties"
+    }
+  },
+  {
+    "name": "proportion-calculator",
+    "url": "http://127.0.0.1:3105/tools/proportion-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "比例计算器 - 正反比例计算与比例缩放工具 | Util工具箱",
+      "description": "免费在线比例计算器，计算正比例、反比例、比例缩放、配方调整。解决a:b=c:d比例问题。纯本地计算，数据安全隐私。",
+      "keywords": "比例计算,正比例,反比例,比例缩放,配方计算,比例求解,在线计算器"
+    }
+  },
+  {
+    "name": "provident-fund-loan",
+    "url": "http://127.0.0.1:3105/tools/provident-fund-loan/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "公积金贷款计算器 - 额度试算&#x2F;月供对比&#x2F;组合贷分配",
+      "description": "在线公积金贷款计算器，按账户余额倍数与还款能力试算可贷额度（三项取最低），对比公积金与商贷等额本息月供及总利息，组合贷自动分配公积金与商贷并计算节省额，纯本地计算",
+      "keywords": "公积金贷款计算器, 公积金额度试算, 公积金月供, 组合贷计算, 商贷对比, 公积金贷款利率, 贷款额度测算"
+    }
+  },
+  {
+    "name": "punycode-convert",
+    "url": "http://127.0.0.1:3105/tools/punycode-convert/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Punycode编码转换工具 - 有条工具",
+      "description": "免费在线Punycode编码转换工具，支持国际化域名(IDN)与Punycode互转，支持中文、日文等多语言域名转换。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "qr-code-generator",
+    "url": "http://127.0.0.1:3105/tools/qr-code-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "二维码生成器 - 在线QR码创建工具 | Util工具箱",
+      "description": "免费在线二维码生成工具，快速生成自定义样式的二维码，支持URL、文本、颜色和尺寸定制。帮助您创建专业的二维码用于营销、分享和标识。",
+      "keywords": "二维码生成器,QR码,qrcode,二维码制作,在线二维码,QR Code,二维码生成,二维码设计"
+    }
+  },
+  {
+    "name": "qrcode-generate",
+    "url": "http://127.0.0.1:3105/tools/qrcode-generate/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "二维码生成器 - 有条工具",
+      "description": "免费在线二维码生成器，支持文本、网址、WiFi、邮件等多种格式，可自定义大小和颜色，一键下载PNG格式。",
+      "keywords": "二维码下载"
+    }
+  },
+  {
+    "name": "qrcode-scan",
+    "url": "http://127.0.0.1:3105/tools/qrcode-scan/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "有条工具 - 开发者的常用的工具集合",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "quarter-calculator",
+    "url": "http://127.0.0.1:3105/tools/quarter-calculator/",
+    "status": 200,
+    "responseTime": 1,
+    "seo": {
+      "title": "季度计算器 - 查询日期所在季度及起止日期 | Util工具箱",
+      "description": "在线季度计算器，查询日期所在季度，计算季度起止日期。支持年度季度总览、季度进度计算。",
+      "keywords": "季度计算器,季度查询,季度起止日期,财务季度,Q1Q2Q3Q4,在线季度工具"
+    }
+  },
+  {
+    "name": "query-string-parser",
+    "url": "http://127.0.0.1:3105/tools/query-string-parser/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "Query String解析工具 - 有条工具",
+      "description": "免费在线Query String解析工具，解析URL查询字符串为JSON对象，支持数组、嵌套对象格式。",
+      "keywords": "url params"
+    }
+  },
+  {
+    "name": "quick-notes",
+    "url": "http://127.0.0.1:3105/tools/quick-notes/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "快速笔记工具 - 在线Markdown笔记 | 自动保存本地存储",
+      "description": "免费在线快速笔记工具，支持Markdown编辑、本地存储、自动保存",
+      "keywords": "在线笔记,Markdown笔记,快速记录,在线编辑器,本地笔记,笔记工具"
+    }
+  },
+  {
+    "name": "quoted-printable",
+    "url": "http://127.0.0.1:3105/tools/quoted-printable/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Quoted-Printable编码工具 - 有条工具",
+      "description": "免费在线Quoted-Printable编码工具，用于电子邮件内容传输的QP编码与解码。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "random-cards",
+    "url": "http://127.0.0.1:3105/tools/random-cards/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "随机扑克牌 - 在线抽牌工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-choice",
+    "url": "http://127.0.0.1:3105/tools/random-choice/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "随机选择器 - 在线随机选择工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-coin",
+    "url": "http://127.0.0.1:3105/tools/random-coin/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "随机硬币 - 在线抛硬币工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-color",
+    "url": "http://127.0.0.1:3105/tools/random-color/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "随机颜色生成 - 在线配色工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-date",
+    "url": "http://127.0.0.1:3105/tools/random-date/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "随机日期生成 - 在线日期工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-dice",
+    "url": "http://127.0.0.1:3105/tools/random-dice/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "随机骰子 - 在线投掷虚拟骰子工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-food",
+    "url": "http://127.0.0.1:3105/tools/random-food/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "随机吃什么 - 美食推荐工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-name-picker",
+    "url": "http://127.0.0.1:3105/tools/random-name-picker/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "随机点名器 - 在线姓名抽取工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-number-generator",
+    "url": "http://127.0.0.1:3105/tools/random-number-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "随机数字生成器 - 在线随机数工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-password-game",
+    "url": "http://127.0.0.1:3105/tools/random-password-game/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "随机密码生成游戏 - 游戏化密码工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-quote",
+    "url": "http://127.0.0.1:3105/tools/random-quote/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "随机名言句子 - 在线语录生成 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-team",
+    "url": "http://127.0.0.1:3105/tools/random-team/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "随机分队工具 - 在线队伍分组 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "random-wheel",
+    "url": "http://127.0.0.1:3105/tools/random-wheel/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "随机大转盘 - 自定义抽奖转盘工具 | Util工具箱",
+      "description": "专业的随机大转盘抽奖工具，支持自定义奖项内容、颜色和权重。完美适用于活动抽奖、决策制定、游戏娱乐等场景。纯本地处理，数据安全可靠。",
+      "keywords": "随机大转盘,抽奖工具,转盘抽奖,决策工具,活动抽奖,游戏转盘,自定义奖项,概率控制"
+    }
+  },
+  {
+    "name": "redos-detector",
+    "url": "http://127.0.0.1:3105/tools/redos-detector/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "ReDoS风险检测器 - 正则表达式灾难性回溯在线检测",
+      "description": "在线ReDoS检测工具，静态分析正则表达式的灾难性回溯风险：嵌套量词、重叠分支、大边界重复、相邻可变片段，给出风险等级与修复建议，纯本地分析不执行正则",
+      "keywords": "redos, 正则检测, 灾难性回溯, 嵌套量词, 正则性能, 正则风险, catastrophic backtracking"
+    }
+  },
+  {
+    "name": "regex-cheatsheet",
+    "url": "http://127.0.0.1:3105/tools/regex-cheatsheet/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "正则表达式速查表 - 正则表达式语法参考和测试工具",
+      "description": "免费的在线正则表达式速查表，包含常用正则模式、语法参考和实时测试功能。",
+      "keywords": "在线测试"
+    }
+  },
+  {
+    "name": "regex-debugger",
+    "url": "http://127.0.0.1:3105/tools/regex-debugger/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "正则表达式调试器 - 在线正则表达式测试工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "regex-escape",
+    "url": "http://127.0.0.1:3105/tools/regex-escape/",
+    "status": 200,
+    "responseTime": 1,
+    "seo": {
+      "title": "正则表达式转义工具 - 有条工具",
+      "description": "免费在线正则表达式转义工具，自动转义正则特殊字符，构建安全的正则模式匹配。",
+      "keywords": "正则"
+    }
+  },
+  {
+    "name": "regex-generator",
+    "url": "http://127.0.0.1:3105/tools/regex-generator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "正则生成器 - 可视化正则表达式生成工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "regex-tester",
+    "url": "http://127.0.0.1:3105/tools/regex-tester/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "正则表达式测试工具 - 在线Regex匹配验证调试 | 有条工具",
+      "description": "免费的正则表达式在线测试工具，支持实时匹配、语法高亮、常用正则表达式库、测试用例和详细解释。纯本地计算，数据安全，无需注册，助您快速调试和验证正则表达式。",
+      "keywords": "正则表达式,regex,正则测试,在线调试,匹配验证,语法高亮,正则库,前端工具,免费工具"
+    }
+  },
+  {
+    "name": "rental-yield-calculator",
+    "url": "http://127.0.0.1:3105/tools/rental-yield-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "房租收益计算器 - 在线计算房产租金收益率和投资回报",
+      "description": "免费房租收益计算器，支持计算房产租金收益率、投资回报、贷款分析、运营成本，帮助您评估房产投资价值。专业的房产投资分析工具，支持毛收益率、净收益率、杠杆收益率等多项指标计算。",
+      "keywords": "房产估值"
+    }
+  },
+  {
+    "name": "request-analysis",
+    "url": "http://127.0.0.1:3105/tools/request-analysis/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "HTTP请求分析器 - 在线HTTP请求解析工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "respiratory-rate-check",
+    "url": "http://127.0.0.1:3105/tools/respiratory-rate-check/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "呼吸频率检测 - 有条工具",
+      "description": "免费在线呼吸频率检测工具，测量每分钟呼吸次数，评估呼吸健康状况，支持计时测量和手动输入。",
+      "keywords": "在线检测"
+    }
+  },
+  {
+    "name": "retirement-planner",
+    "url": "http://127.0.0.1:3105/tools/retirement-planner/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "退休储蓄规划器 - 专业退休养老计划制定工具 | Util工具箱",
+      "description": "专业的退休储蓄规划工具，计算退休目标储蓄金额和月储蓄建议，考虑通胀率和多种收入来源，帮助制定合理的退休规划。支持多种投资策略和风险评估。",
+      "keywords": "退休规划,退休计算器,养老金计算,退休储蓄,养老规划,退休金,退休年龄,退休生活"
+    }
+  },
+  {
+    "name": "ripemd160-hash",
+    "url": "http://127.0.0.1:3105/tools/ripemd160-hash/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "RIPEMD-160哈希计算器 - 在线160位加密哈希 | Util工具箱",
+      "description": "在线RIPEMD-160哈希计算工具，160位加密哈希函数。主要用于比特币地址生成、OpenPGP指纹计算等场景，纯前端处理。",
+      "keywords": "RIPEMD-160,RIPEMD,哈希计算,比特币地址,OpenPGP,加密哈希,在线哈希工具"
+    }
+  },
+  {
+    "name": "rmb-capital-converter",
+    "url": "http://127.0.0.1:3105/tools/rmb-capital-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "人民币大写转换 - 数字金额转大写工具",
+      "description": "免费在线人民币大写转换工具，支持数字转大写金额，符合财务票据规范，批量转换功能。",
+      "keywords": "财务工具"
+    }
+  },
+  {
+    "name": "roi-calculator",
+    "url": "http://127.0.0.1:3105/tools/roi-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "投资回报计算器 - ROI、复利、定投收益计算工具 | Util工具箱",
+      "description": "专业的投资回报计算工具，支持ROI计算、复利增长、定投收益分析。实时计算年化收益率、净收益、回收期等关键指标，帮助您制定科学的投资理财策略。",
+      "keywords": "投资回报计算器,ROI计算,复利计算,定投计算,投资收益,年化收益率,理财工具,投资分析"
+    }
+  },
+  {
+    "name": "roman-numeral-converter",
+    "url": "http://127.0.0.1:3105/tools/roman-numeral-converter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "罗马数字转换 - 罗马数字与阿拉伯数字互转工具",
+      "description": "免费在线罗马数字转换工具，支持罗马数字和阿拉伯数字互转，验证罗马数字有效性，支持大数字转换。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "rot13",
+    "url": "http://127.0.0.1:3105/tools/rot13/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "ROT13加密工具 - 有条工具",
+      "description": "免费在线ROT13加密工具，简单的字母替换加密，常用于隐藏剧透和敏感信息。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "route-tracer",
+    "url": "http://127.0.0.1:3105/tools/route-tracer/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "路由追踪工具 - 有条工具",
+      "description": "免费在线路由追踪工具，可视化追踪网络路由路径，显示跳数和延迟分析。",
+      "keywords": "网络路径"
+    }
+  },
+  {
+    "name": "rsa-decrypt",
+    "url": "http://127.0.0.1:3105/tools/rsa-decrypt/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "RSA解密 - 在线RSA私钥解密工具",
+      "description": "免费在线RSA解密工具，使用私钥解密RSA加密的数据，支持多种加密方案，安全恢复原始信息。",
+      "keywords": "数据解密"
+    }
+  },
+  {
+    "name": "rsa-encrypt",
+    "url": "http://127.0.0.1:3105/tools/rsa-encrypt/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "RSA加密解密工具 - 在线RSA非对称加密 | Util工具箱",
+      "description": "免费在线RSA加密解密工具。支持RSA公钥加密、私钥解密、密钥对生成。基于OpenPGP/Card加密标准，纯前端处理，数据隐私绝对安全。",
+      "keywords": "RSA加密,RSA解密,非对称加密,公钥加密,私钥解密,RSA密钥对,在线RSA,密码学"
+    }
+  },
+  {
+    "name": "rsa-generate",
+    "url": "http://127.0.0.1:3105/tools/rsa-generate/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "RSA密钥生成器 - 在线RSA公钥私钥生成工具",
+      "description": "免费在线RSA密钥对生成器，支持1024/2048/3072/4096位密钥，PEM格式，公钥私钥生成和下载。",
+      "keywords": "PEM"
+    }
+  },
+  {
+    "name": "rsa-key-pair",
+    "url": "http://127.0.0.1:3105/tools/rsa-key-pair/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "RSA密钥对生成器 - 有条工具",
+      "description": "免费在线RSA密钥对生成器，支持2048/3072/4096位密钥长度，导出PEM格式，完全在浏览器本地生成。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "rsa-sign-verify",
+    "url": "http://127.0.0.1:3105/tools/rsa-sign-verify/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "RSA签名验签工具 - 在线RSA数字签名生成验证",
+      "description": "免费在线RSA数字签名工具，支持PKCS#1 v1.5和PSS填充模式，SHA-1/256/384/512哈希算法，RSA密钥生成和签名验证。",
+      "keywords": "RSA密钥生成"
+    }
+  },
+  {
+    "name": "running-pace-calculator",
+    "url": "http://127.0.0.1:3105/tools/running-pace-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "跑步配速计算器 - 有条工具",
+      "description": "免费在线跑步配速计算器，计算跑步配速、预计完成时间，支持5K/10K/半马/全马，科学规划跑步训练。",
+      "keywords": "跑步计算器"
+    }
+  },
+  {
+    "name": "sales-tax-calculator",
+    "url": "http://127.0.0.1:3105/tools/sales-tax-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "销售税计算器 - 增值税计算与价税分离工具 | Util工具箱",
+      "description": "免费在线销售税计算器，支持含税价与不含税价互转、增值税计算。适用于电商、零售、财务管理。纯本地计算，数据安全隐私。",
+      "keywords": "销售税计算,增值税计算,含税价,不含税价,税率换算,价税分离,在线计算器"
+    }
+  },
+  {
+    "name": "scientific-calculator",
+    "url": "http://127.0.0.1:3105/tools/scientific-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "科学计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "screen-test",
+    "url": "http://127.0.0.1:3105/tools/screen-test/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "屏幕检测工具 - 有条工具",
+      "description": "免费在线屏幕检测工具，检测屏幕分辨率、像素密度、色深等显示参数，提供纯色、渐变、网格、坏点测试。",
+      "keywords": "色深测试"
+    }
+  },
+  {
+    "name": "screen-time-tracker",
+    "url": "http://127.0.0.1:3105/tools/screen-time-tracker/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "屏幕时间追踪器 - 有条工具",
+      "description": "免费在线屏幕时间追踪器，记录每日屏幕使用时间，分析数字设备使用习惯，建立健康的屏幕时间管理。",
+      "keywords": "在线追踪"
+    }
+  },
+  {
+    "name": "screenshot-tool",
+    "url": "http://127.0.0.1:3105/tools/screenshot-tool/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "网页截图工具 - 在线捕获网页截图",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "scrypt-generator",
+    "url": "http://127.0.0.1:3105/tools/scrypt-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Scrypt哈希生成器 - 在线Scrypt密码哈希工具",
+      "description": "免费在线Scrypt哈希生成工具，内存密集型密码哈希算法，可配置CPU/内存成本，用于安全密码存储和密钥派生。",
+      "keywords": "密钥派生"
+    }
+  },
+  {
+    "name": "secret-scanner",
+    "url": "http://127.0.0.1:3105/tools/secret-scanner/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "敏感信息扫描器 - 有条工具",
+      "description": "免费在线敏感信息扫描器，检测代码中的API密钥、密码、JWT令牌等敏感信息，防止密钥泄露造成的安全风险。",
+      "keywords": "安全工具"
+    }
+  },
+  {
+    "name": "security-headers-check",
+    "url": "http://127.0.0.1:3105/tools/security-headers-check/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "安全头检查器 - 有条工具",
+      "description": "免费在线安全头检查器，检查网站CSP、HSTS、X-Frame-Options等安全HTTP头配置，获取安全评分和修复建议。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "semester-calculator",
+    "url": "http://127.0.0.1:3105/tools/semester-calculator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "学期计算器 - 学年起止日期与学期安排查询",
+      "description": "在线学期计算器，查询学年、学期起止日期，适用于教学安排、选课规划。支持大学、中学、小学不同学制。",
+      "keywords": "学期计算,学年安排,校历查询,开学时间,放假时间,在线学期计算器"
+    }
+  },
+  {
+    "name": "semver-parser",
+    "url": "http://127.0.0.1:3105/tools/semver-parser/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "SemVer版本解析比较器 - 语义化版本号解析&#x2F;比较&#x2F;排序工具",
+      "description": "在线语义化版本号工具：按semver.org规范解析major/minor/patch/prerelease/build，支持版本比较、批量排序、^与~范围匹配判断，纯本地计算",
+      "keywords": "semver解析, 语义化版本, 版本比较, 版本排序, semver range, 依赖版本范围, 版本号规范"
+    }
+  },
+  {
+    "name": "sentence-case",
+    "url": "http://127.0.0.1:3105/tools/sentence-case/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "句首大写工具 - 每个句子首字母大写 | Util工具箱",
+      "description": "免费在线句首大写工具，将每个句子的首字母转换为大写，支持多种句子分隔符和大小写转换模式。",
+      "keywords": "句首大写,句子大写,首字母大写,英文格式化,文本编辑,大小写转换,标题格式"
+    }
+  },
+  {
+    "name": "sequence-calculator",
+    "url": "http://127.0.0.1:3105/tools/sequence-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "数列计算器 - 等差等比数列求和与通项公式计算 | Util工具箱",
+      "description": "免费在线数列计算器，支持等差数列、等比数列的通项公式计算、求和计算以及数列生成。纯本地计算，数据安全隐私。数学学习必备工具。",
+      "keywords": "数列计算,等差数列,等比数列,数列求和,通项公式,数列生成,数学计算,在线计算器"
+    }
+  },
+  {
+    "name": "sha-generator",
+    "url": "http://127.0.0.1:3105/tools/sha-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "SHA哈希生成器 - 在线SHA-1&#x2F;SHA-256&#x2F;SHA-512加密工具",
+      "description": "免费在线SHA哈希生成器，支持SHA-1、SHA-256、SHA-384、SHA-512算法，用于数据完整性验证和数字签名。",
+      "keywords": "数据完整性"
+    }
+  },
+  {
+    "name": "shadow-generator",
+    "url": "http://127.0.0.1:3105/tools/shadow-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "CSS阴影生成器 - 在线生成box-shadow和text-shadow效果",
+      "description": "免费CSS阴影生成器，可视化生成CSS阴影效果，支持box-shadow和text-shadow。可自定义水平偏移、垂直偏移、模糊半径、扩展半径、阴影颜色，实时预览。专业的CSS阴影设计工具。",
+      "keywords": "多层阴影效果"
+    }
+  },
+  {
+    "name": "sitting-time-calculator",
+    "url": "http://127.0.0.1:3105/tools/sitting-time-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "久坐时间计算器 - 有条工具",
+      "description": "免费在线久坐时间计算器，计算每日久坐时间，评估久坐健康风险，获得科学的活动建议。",
+      "keywords": "活动建议"
+    }
+  },
+  {
+    "name": "skeleton-generator",
+    "url": "http://127.0.0.1:3105/tools/skeleton-generator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "骨架屏生成器 - 在线Skeleton Loading占位图CSS代码生成工具",
+      "description": "在线骨架屏生成器，可视化拼装行、头像、矩形、网格骨架元素，支持脉冲与扫光加载动画，导出纯CSS的HTML与CSS代码，零依赖可直接使用",
+      "keywords": "骨架屏, skeleton screen, loading占位, 骨架屏生成器, shimmer动画, css加载动画, 占位图"
+    }
+  },
+  {
+    "name": "sleep-cycle-calculator",
+    "url": "http://127.0.0.1:3105/tools/sleep-cycle-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "睡眠周期计算器 - 有条工具",
+      "description": "免费在线睡眠周期计算器，基于90分钟睡眠周期计算最佳起床和就寝时间，提高睡眠质量，科学安排作息。",
+      "keywords": "作息安排"
+    }
+  },
+  {
+    "name": "sleep-quality-calculator",
+    "url": "http://127.0.0.1:3105/tools/sleep-quality-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "睡眠质量计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "solar-term-calculator",
+    "url": "http://127.0.0.1:3105/tools/solar-term-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "二十四节气查询工具 - 中国传统节气日期查询",
+      "description": "在线二十四节气查询工具，查询任意年份的节气日期时间，显示当前节气和下一个节气。包含节气详解和节气歌。",
+      "keywords": "二十四节气,节气查询,春分秋分,夏至冬至,中国传统节日,节气日期"
+    }
+  },
+  {
+    "name": "sorting-algorithm-visualizer",
+    "url": "http://127.0.0.1:3105/tools/sorting-algorithm-visualizer/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "排序算法可视化工具 - 冒泡、快速、归并排序动画演示 | Util工具箱",
+      "description": "免费在线排序算法可视化工具，支持冒泡排序、快速排序、归并排序、堆排序等算法的动画演示，帮助理解排序算法原理。可视化展示排序过程，实时显示比较和交换次数。",
+      "keywords": "排序算法可视化,算法演示,冒泡排序,快速排序,归并排序,堆排序,选择排序,插入排序,在线算法学习"
+    }
+  },
+  {
+    "name": "spacing-calculator",
+    "url": "http://127.0.0.1:3105/tools/spacing-calculator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "间距计算器 - 设计间距系统生成工具 | Util工具箱",
+      "description": "免费在线间距计算器，基于基准单位生成统一的设计间距系统。支持线性、斐波那契、2的幂次等比例，一键导出CSS变量和Tailwind配置。",
+      "keywords": "间距计算器,间距系统,设计系统,spacing,UI间距,CSS变量,Tailwind配置"
+    }
+  },
+  {
+    "name": "speed-calculator",
+    "url": "http://127.0.0.1:3105/tools/speed-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "速度计算器 - 时间距离速度换算工具 | Util工具箱",
+      "description": "在线速度计算器，支持速度/时间/距离互转计算。提供多种单位换算（km/h、m/s、mph、节），适用于跑步、驾车、航行等速度计算场景。",
+      "keywords": "速度计算,时间计算,距离计算,速度换算,平均速度,单位换算,速度计算器"
+    }
+  },
+  {
+    "name": "spine-animation-editor",
+    "url": "http://127.0.0.1:3105/tools/spine-animation-editor/",
+    "status": 200,
+    "responseTime": 6,
+    "seo": {
+      "title": "Spine动画编辑器 - 专业骨骼动画在线编辑与预览工具 | Util工具箱",
+      "description": "专业的Spine骨骼动画在线编辑器，支持WebGL实时渲染、动画播放控制、皮肤切换等功能。支持.spine、.json、.skel格式，兼容Spine 3.8-4.2版本。纯本地计算，动画数据绝对安全。",
+      "keywords": "Spine动画编辑器,骨骼动画,2D动画,游戏动画,动画编辑器,WebGL动画,Spine运行时,动画预览,动画调试,游戏开发"
+    }
+  },
+  {
+    "name": "sql-escape",
+    "url": "http://127.0.0.1:3105/tools/sql-escape/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "SQL转义工具 - 有条工具",
+      "description": "免费在线SQL转义工具，支持MySQL、PostgreSQL、SQLite等数据库类型，防止SQL注入攻击，保护数据库安全。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "sql-formatter",
+    "url": "http://127.0.0.1:3105/tools/sql-formatter/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "SQL格式化工具 - 在线SQL美化与格式化工具 | 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "sql-injection-scanner",
+    "url": "http://127.0.0.1:3105/tools/sql-injection-scanner/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "SQL注入检测器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "sql-query-optimizer",
+    "url": "http://127.0.0.1:3105/tools/sql-query-optimizer/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "SQL查询优化器 - SQL性能分析和优化建议 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "sql-to-model",
+    "url": "http://127.0.0.1:3105/tools/sql-to-model/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "SQL 转 Model 类 - 在线代码生成工具",
+      "description": "免费的在线 SQL 转 Model 类工具，支持将 CREATE TABLE 语句转换为 Java、Python、C#、TypeScript、PHP、Go 等多种编程语言的实体类。",
+      "keywords": "orm"
+    }
+  },
+  {
+    "name": "ssh-key-generator",
+    "url": "http://127.0.0.1:3105/tools/ssh-key-generator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "SSH密钥生成器 - 在线RSA&#x2F;Ed25519密钥对生成 | Util工具箱",
+      "description": "在线SSH密钥生成器，支持RSA 2048/3072/4096位和Ed25519算法。生成SSH密钥对用于服务器登录、Git操作，支持OpenSSH和PEM格式，纯前端处理。",
+      "keywords": "SSH密钥生成,RSA密钥,Ed25519密钥,SSH密钥对,服务器登录,Git密钥,OpenSSH,在线密钥生成"
+    }
+  },
+  {
+    "name": "ssl-checker",
+    "url": "http://127.0.0.1:3105/tools/ssl-checker/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "SSL证书检查工具 - 在线SSL&#x2F;TLS证书查询与验证",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "ssl-tls-checker",
+    "url": "http://127.0.0.1:3105/tools/ssl-tls-checker/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "SSL&#x2F;TLS配置检查器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "statistics-calculator",
+    "url": "http://127.0.0.1:3105/tools/statistics-calculator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "统计学计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "stock-profit-calculator",
+    "url": "http://127.0.0.1:3105/tools/stock-profit-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "股票收益计算器 - 在线计算股票买卖收益和税费",
+      "description": "免费股票收益计算器，支持计算股票买卖收益、税费成本、佣金、印花税等，提供持仓分析和交易历史记录，帮助您准确计算投资收益。专业的A股交易收益计算工具，支持多种费用计算和税务优化。",
+      "keywords": "股票持仓分析"
+    }
+  },
+  {
+    "name": "stopwatch",
+    "url": "http://127.0.0.1:3105/tools/stopwatch/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "秒表计时器 - 在线精确计时工具",
+      "description": "免费在线秒表工具，支持精确到百分之一秒的计时、计次记录、统计分析等功能。",
+      "keywords": "学习计时"
+    }
+  },
+  {
+    "name": "stress-level-test",
+    "url": "http://127.0.0.1:3105/tools/stress-level-test/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "压力水平测试 - 有条工具",
+      "description": "免费在线压力水平测试，基于PSS量表评估感知压力，识别压力来源，获得科学减压建议。",
+      "keywords": "在线测试"
+    }
+  },
+  {
+    "name": "subnet-calculator",
+    "url": "http://127.0.0.1:3105/tools/subnet-calculator/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "子网计算器 - IP子网划分工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "subscription-manager",
+    "url": "http://127.0.0.1:3105/tools/subscription-manager/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "订阅费用管理器 - 管理订阅服务与续费提醒",
+      "description": "本地订阅管理工具，记录视频/软件/AI等订阅服务的价格周期与扣费日，自动换算月度年化支出，临近扣费高亮提醒，数据保存在本机不上传",
+      "keywords": "订阅管理, 订阅提醒, 订阅费用, 续费管理, 订阅记账, 订阅开支"
+    }
+  },
+  {
+    "name": "subtitle-toolbox",
+    "url": "http://127.0.0.1:3105/tools/subtitle-toolbox/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "字幕工具箱 - SRT&#x2F;VTT互转与时间轴调整工具",
+      "description": "在线字幕转换工具，支持SRT与VTT互转、时间轴整体平移、按倍率缩放时间轴、去重复行，本地处理字幕文件不上传",
+      "keywords": "srt转vtt, vtt转srt, 字幕转换, 字幕时间轴调整, 字幕平移, 字幕格式转换, webvtt"
+    }
+  },
+  {
+    "name": "sunrise-sunset",
+    "url": "http://127.0.0.1:3105/tools/sunrise-sunset/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "日出日落时间计算器 - 每日日出日落时刻查询",
+      "description": "在线日出日落时间计算器，输入经纬度或选择城市，基于NOAA太阳算法计算日出、日落、太阳正午、白昼时长与民用晨昏蒙影，支持极昼极夜提示，纯本地计算",
+      "keywords": "日出时间, 日落时间, 日出日落查询, 太阳正午, 晨昏蒙影, 白昼时长, 昼长, 黄金时刻"
+    }
+  },
+  {
+    "name": "svg-code-editor",
+    "url": "http://127.0.0.1:3105/tools/svg-code-editor/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "SVG代码编辑器 - 实时SVG编辑和导出工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "svg-icon-library",
+    "url": "http://127.0.0.1:3105/tools/svg-icon-library/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "SVG图标库 - 常用SVG图标在线预览工具 | Util工具箱",
+      "description": "免费在线SVG图标库，提供常用SVG图标预览、搜索、复制和下载。支持导出SVG代码，帮助开发者快速获取所需图标资源。",
+      "keywords": "SVG图标库,SVG icon,图标库,SVG预览,图标下载,SVG代码,图标资源,免费图标"
+    }
+  },
+  {
+    "name": "svg-optimizer",
+    "url": "http://127.0.0.1:3105/tools/svg-optimizer/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "SVG优化压缩器 - 在线SVG压缩与代码清理工具",
+      "description": "在线SVG压缩优化工具，去除注释、inkscape/sodipodi编辑器元数据、空group，按精度压缩坐标数字，实时预览渲染，保守策略不动路径形状，纯本地处理",
+      "keywords": "svg压缩, svg优化, svg瘦身, svg minify, inkscape清理, svg元数据清理, svg代码精简"
+    }
+  },
+  {
+    "name": "svg-path-editor",
+    "url": "http://127.0.0.1:3105/tools/svg-path-editor/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "SVG路径编辑器 - 在线编辑SVG路径数据 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "svg-wave-divider",
+    "url": "http://127.0.0.1:3105/tools/svg-wave-divider/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "SVG波浪分割线生成器 - 在线波浪SVG代码生成工具",
+      "description": "在线SVG波浪分割线生成器，可调波峰数量、波幅、多层透明度、颜色与方向，实时预览并导出格式化SVG代码，用于页面区块背景分割，纯本地计算",
+      "keywords": "波浪分割线, svg wave, 波浪svg, svg生成器, 页面分割线, 波浪背景, section过渡"
+    }
+  },
+  {
+    "name": "swagger-viewer",
+    "url": "http://127.0.0.1:3105/tools/swagger-viewer/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "Swagger 查看器 - 在线 API 文档查看测试工具",
+      "description": "免费的在线 Swagger/OpenAPI 文档查看和测试工具，支持 API 接口调试、参数配置和响应查看。",
+      "keywords": "rest api"
+    }
+  },
+  {
+    "name": "system-info",
+    "url": "http://127.0.0.1:3105/tools/system-info/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "电脑系统检测工具 - 有条工具",
+      "description": "免费在线电脑系统检测工具，全面检测操作系统、硬件配置、浏览器环境、WebGL图形设备等信息。",
+      "keywords": "system info"
+    }
+  },
+  {
+    "name": "tailwind-color-palette",
+    "url": "http://127.0.0.1:3105/tools/tailwind-color-palette/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Tailwind色板生成器 - 在线Tailwind颜色系统工具 | Util工具箱",
+      "description": "免费在线Tailwind色板生成器，基于基准颜色生成50-950完整色阶。支持导出Tailwind配置和CSS变量，快速构建设计系统。",
+      "keywords": "Tailwind色板,Tailwind颜色,颜色系统,色阶生成,CSS变量,Tailwind配置"
+    }
+  },
+  {
+    "name": "tax-calculator",
+    "url": "http://127.0.0.1:3105/tools/tax-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "税务计算器 - 个人所得税、增值税、企业所得税计算工具 | Util工具箱",
+      "description": "2025年最新税务计算器，支持个人所得税、增值税、企业所得税在线计算。包含专项扣除、社保公积金、税率和速算扣除数等专业功能，准确快速计算各类税费。",
+      "keywords": "税务计算器,个人所得税计算,增值税计算,企业所得税,个税计算器,税费计算,2025税率,专项扣除,社保公积金"
+    }
+  },
+  {
+    "name": "teleprompter",
+    "url": "http://127.0.0.1:3105/tools/teleprompter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "在线提词器 - 自媒体视频录制提词工具 | Util.cn",
+      "description": "专业在线提词器，支持滚动速度调节、字体大小自定义、镜像模式、背景色切换。为自媒体创作者、直播主提供沉浸式提词体验，录制视频不再忘词。完全免费，无需下载。",
+      "keywords": "提词器,在线提词器,视频提词器,直播提词器,免费提词器,提词器app,录制提词,演讲提词,自媒体提词"
+    }
+  },
+  {
+    "name": "test-data-generator",
+    "url": "http://127.0.0.1:3105/tools/test-data-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "测试数据生成器 - 多格式测试数据生成工具 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "text-cleaner",
+    "url": "http://127.0.0.1:3105/tools/text-cleaner/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "文本清洗工具 - 在线去除特殊字符、空白字符、控制字符 | Util工具箱",
+      "description": "免费在线文本清洗工具，支持去除特殊字符、多余空白、不可见字符、控制字符，适用于日志处理、数据清洗、文本格式化。纯本地计算，数据安全隐私。",
+      "keywords": "文本清洗,去除特殊字符,去除空白字符,数据清洗,日志处理,文本格式化,去除控制字符"
+    }
+  },
+  {
+    "name": "text-counter",
+    "url": "http://127.0.0.1:3105/tools/text-counter/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "字数统计工具 - 在线文本字数字符统计",
+      "description": "免费在线字数统计工具，实时统计文本字符数、单词数、段落数、句子数等详细信息，支持中英文统计。",
+      "keywords": "文本分析"
+    }
+  },
+  {
+    "name": "text-diff",
+    "url": "http://127.0.0.1:3105/tools/text-diff/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "文本对比工具 - 在线文本差异比较器 | 有条工具",
+      "description": "免费的在线文本差异对比工具，支持行级、单词级、字符级三种对比模式，实时高亮显示差异，提供导出功能。纯本地计算，数据安全，支持各种文本文件格式对比。",
+      "keywords": "文本对比,文本差异,diff工具,文本比较,差异高亮,文件对比,代码对比,文档对比,在线工具,免费工具"
+    }
+  },
+  {
+    "name": "text-diff-3way",
+    "url": "http://127.0.0.1:3105/tools/text-diff-3way/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "文本三方对比 - 行级差异对比与冲突检测",
+      "description": "在线文本对比工具，原文加两个修改版本行级LCS差异对比，高亮增删行并提示双方都改动的冲突行，纯本地计算不上传",
+      "keywords": "文本对比, diff工具, 在线diff, 文件比较, 文本差异, 三方对比, 冲突检测"
+    }
+  },
+  {
+    "name": "text-escape",
+    "url": "http://127.0.0.1:3105/tools/text-escape/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "文本转义工具 - HTML&#x2F;XML&#x2F;JSON&#x2F;SQL特殊字符转义 | Util工具箱",
+      "description": "免费在线文本转义工具，支持HTML、XML、JSON、SQL特殊字符转义和反转义，防止注入攻击。纯本地计算，数据安全隐私。",
+      "keywords": "文本转义,HTML转义,XML转义,JSON转义,SQL转义,URL转义,特殊字符,防止注入"
+    }
+  },
+  {
+    "name": "text-extractor",
+    "url": "http://127.0.0.1:3105/tools/text-extractor/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "文本提取器 - 提取邮箱&#x2F;URL&#x2F;手机号&#x2F;IP&#x2F;身份证号",
+      "description": "在线文本提取工具，从大段文本中按类型提取邮箱、URL链接、手机号、IPv4、身份证号、十六进制颜色、金额、QQ号，支持自定义正则、去重分组、高亮预览与导出，纯本地处理",
+      "keywords": "文本提取, 提取邮箱, 提取手机号, 提取url, 提取ip, 正则提取, 文本抓取, 信息抽取工具"
+    }
+  },
+  {
+    "name": "text-indent",
+    "url": "http://127.0.0.1:3105/tools/text-indent/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "文本缩进格式化工具 - 在线代码缩进调整与格式化 | Util工具箱",
+      "description": "免费在线文本缩进格式化工具，支持添加/移除缩进、Tab与空格互转、代码格式化。一键美化代码，提升可读性。纯本地处理，数据安全可靠。",
+      "keywords": "文本缩进格式化,代码缩进,Tab转空格,空格转Tab,缩进调整,代码格式化,在线缩进工具"
+    }
+  },
+  {
+    "name": "text-replace",
+    "url": "http://127.0.0.1:3105/tools/text-replace/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "文本替换工具 - 在线批量查找替换文本",
+      "description": "免费在线文本替换工具，支持普通文本和正则表达式的批量查找替换，提供预设规则和常用正则表达式。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "text-reverse",
+    "url": "http://127.0.0.1:3105/tools/text-reverse/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "文本倒置工具 - 字符&#x2F;单词&#x2F;行倒序 | Util工具箱",
+      "description": "免费在线文本倒置工具，支持字符倒序、单词倒序、行倒序等多种倒置方式。简单易用，实时转换。",
+      "keywords": "文本倒置,字符串反转,字符倒序,单词倒序,行倒序,文本处理,数据转换"
+    }
+  },
+  {
+    "name": "text-shadow-generator",
+    "url": "http://127.0.0.1:3105/tools/text-shadow-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "文字阴影生成器 - text-shadow可视化工具 | Util工具箱",
+      "description": "免费在线text-shadow生成工具，支持多层文字阴影效果、实时预览、一键复制CSS代码。适用于网页设计和UI开发，纯本地计算，数据安全隐私。",
+      "keywords": "text-shadow,文字阴影,CSS文字,文字效果,文字特效,CSS生成器,在线设计工具"
+    }
+  },
+  {
+    "name": "text-similarity",
+    "url": "http://127.0.0.1:3105/tools/text-similarity/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "文本相似度计算工具 - 编辑距离算法对比 | Util工具箱",
+      "description": "免费在线文本相似度计算工具，基于编辑距离(Levenshtein距离)算法计算两段文本的相似度。支持内容去重、查重检测、版本对比等场景。",
+      "keywords": "文本相似度,编辑距离,Levenshtein,文本对比,模糊匹配,查重,内容去重,版本对比"
+    }
+  },
+  {
+    "name": "text-split-merge",
+    "url": "http://127.0.0.1:3105/tools/text-split-merge/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "文本分割合并工具 - 按行&#x2F;字符&#x2F;分隔符分割合并文本 | Util工具箱",
+      "description": "免费在线文本分割合并工具，支持按行、字符、自定义分隔符分割或合并文本，适用于批量处理、数据整理、日志分析。纯本地计算，数据安全隐私。",
+      "keywords": "文本分割,文本合并,按行分割,批量处理,数据整理,字符串分割,文本处理"
+    }
+  },
+  {
+    "name": "text-statistics",
+    "url": "http://127.0.0.1:3105/tools/text-statistics/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "文本统计分析工具 - 在线词频统计、字符频率、行数统计 | Util工具箱",
+      "description": "免费在线文本统计分析工具，支持词频统计、字符频率分析、行数统计、段落数统计、平均长度计算。纯本地计算，数据安全隐私。",
+      "keywords": "文本统计,词频统计,字符频率,行数统计,段落统计,内容分析,SEO分析,文本分析"
+    }
+  },
+  {
+    "name": "text-to-table",
+    "url": "http://127.0.0.1:3105/tools/text-to-table/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "文本转表格工具 - CSV&#x2F;TSV转表格Markdown | Util工具箱",
+      "description": "免费在线文本转表格工具，将逗号、制表符等分隔的文本转换为HTML表格或Markdown表格格式。支持自定义分隔符和多种输出格式。",
+      "keywords": "文本转表格,csv转表格,tsv转表格,markdown表格,表格生成器,excel转表格,文本数据转换"
+    }
+  },
+  {
+    "name": "text-whitespace",
+    "url": "http://127.0.0.1:3105/tools/text-whitespace/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "空格格式化工具 - 统一空格Tab、去除多余空白 | Util工具箱",
+      "description": "免费在线空格格式化工具，统一Tab和空格、去除多余空白、去除行尾空格、删除空行，适用于代码格式化。",
+      "keywords": "空格格式化,Tab转空格,去除空白,代码格式化,缩进整理,去除行尾空格,文本清理"
+    }
+  },
+  {
+    "name": "time-diff-visual",
+    "url": "http://127.0.0.1:3105/tools/time-diff-visual/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "时间差可视化工具 - 直观展示时间跨度",
+      "description": "在线时间差可视化工具，直观展示两个时间点之间的差值。支持多种时间单位显示、人类可读格式输出和进度条可视化。",
+      "keywords": "时间差,时间计算,日期差,时间跨度,可视化时间,在线时间差计算器"
+    }
+  },
+  {
+    "name": "time-tracker",
+    "url": "http://127.0.0.1:3105/tools/time-tracker/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "时间跟踪器 - 在线计时工具与番茄钟工时统计 | Util工具箱",
+      "description": "免费在线时间跟踪工具，支持任务计时、工时统计、番茄钟工作法，可记录和导出时间日志。纯本地计算，帮助提升时间管理和生产力，数据隐私绝对安全。",
+      "keywords": "时间跟踪,计时器,番茄钟,工时统计,时间管理,生产力,任务计时,在线计时"
+    }
+  },
+  {
+    "name": "time-unit-convert",
+    "url": "http://127.0.0.1:3105/tools/time-unit-convert/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "时间单位转换器 - 秒分时天周月年相互转换 | Util工具箱",
+      "description": "在线时间单位转换工具，支持毫秒、秒、分钟、小时、天、周、月、年之间的相互转换。提供完整的换算表和常用参考。",
+      "keywords": "时间单位转换,秒分转换,小时换算,天换算,时间计算,在线时间转换器"
+    }
+  },
+  {
+    "name": "timestamp-batch-convert",
+    "url": "http://127.0.0.1:3105/tools/timestamp-batch-convert/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "时间戳批量转换工具 - 多个Unix时间戳同时转换 | Util工具箱",
+      "description": "在线时间戳批量转换工具，支持同时处理多个Unix时间戳。自动识别秒/毫秒格式，转换为可读日期时间。",
+      "keywords": "时间戳批量转换,Unix时间戳,批量转换,日志时间戳,时间戳格式化,在线批量工具"
+    }
+  },
+  {
+    "name": "timestamp-convert",
+    "url": "http://127.0.0.1:3105/tools/timestamp-convert/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "时间戳转换器 - 在线Unix时间戳转换工具",
+      "description": "免费在线时间戳转换工具，支持Unix时间戳与日期时间相互转换，提供批量转换和常用时间戳参考。",
+      "keywords": "gmt"
+    }
+  },
+  {
+    "name": "timezone-convert",
+    "url": "http://127.0.0.1:3105/tools/timezone-convert/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "时区转换器 - 在线全球时区时间转换工具",
+      "description": "免费的在线时区转换工具，支持在全球不同时区之间转换时间，自动处理夏令时，包含会议规划器功能。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "timezone-lookup",
+    "url": "http://127.0.0.1:3105/tools/timezone-lookup/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "时区查询工具 - 全球城市时区信息查询 | Util工具箱",
+      "description": "在线时区查询工具，查询全球主要城市时区信息、UTC偏移量、夏令时状态。",
+      "keywords": "时区查询,UTC偏移,世界时钟,夏令时,全球时区,时区转换,城市时区"
+    }
+  },
+  {
+    "name": "tip-calculator",
+    "url": "http://127.0.0.1:3105/tools/tip-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "小费计算器 - 餐厅分账计算工具 | Util工具箱",
+      "description": "免费在线小费计算器，快速计算餐厅小费和分账金额。支持自定义小费比例、税率计算、多人分账功能，适用于餐厅结账、聚会AA制等场景。",
+      "keywords": "小费计算,分账计算,餐厅小费,AA制,小费比例,账单分摊"
+    }
+  },
+  {
+    "name": "todo-list-generator",
+    "url": "http://127.0.0.1:3105/tools/todo-list-generator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "任务清单生成器 - 在线任务清单工具 | 优先级管理进度追踪",
+      "description": "免费在线任务清单生成器，支持优先级标记、分类管理、进度追踪，可导出分享，适用于个人和团队任务规划。",
+      "keywords": "任务清单,待办事项,任务管理,优先级,任务规划,效率工具,清单生成,任务跟踪"
+    }
+  },
+  {
+    "name": "toggle-generator",
+    "url": "http://127.0.0.1:3105/tools/toggle-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "开关组件生成器 - 在线CSS Toggle Switch开关样式生成工具",
+      "description": "在线开关组件生成器，可视化调节尺寸、轨道色、圆点色、圆角、边框阴影与动画时长，预览可点击开关，导出checkbox+label纯CSS实现，无JS含focus无障碍样式",
+      "keywords": "开关组件, toggle switch, css开关, checkbox开关, 纯css开关, switch生成器, 表单组件"
+    }
+  },
+  {
+    "name": "token-cost-calculator",
+    "url": "http://127.0.0.1:3105/tools/token-cost-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "Token计数与API成本计算器 - 大模型API价格对比",
+      "description": "在线估算文本Token数量，对比GPT/Claude/DeepSeek/Qwen等大模型API价格，计算单次与月度调用成本，并与本地显卡推理电费成本对比",
+      "keywords": "token计算, token计数, api成本计算, 大模型价格, gpt4价格, claude价格, deepseek价格, llm成本"
+    }
+  },
+  {
+    "name": "token-generator",
+    "url": "http://127.0.0.1:3105/tools/token-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "安全令牌生成器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "toml-formatter",
+    "url": "http://127.0.0.1:3105/tools/toml-formatter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "TOML格式化工具 - 在线TOML美化工具 | 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "toml-to-json",
+    "url": "http://127.0.0.1:3105/tools/toml-to-json/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "TOML与JSON互转 - 在线TOML JSON格式转换工具",
+      "description": "免费在线 TOML to JSON / JSON to TOML 转换工具，支持 TOML 和 JSON 格式互相转换，完美保留配置文件结构。纯本地计算，数据安全。",
+      "keywords": "TOML转JSON, JSON转TOML, TOML JSON转换, 配置文件转换, 数据格式转换, 在线工具"
+    }
+  },
+  {
+    "name": "traditional-simplified",
+    "url": "http://127.0.0.1:3105/tools/traditional-simplified/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "繁简体转换工具 - 繁体字与简体字互转 | Util工具箱",
+      "description": "免费在线繁简体转换工具，支持繁体字与简体字相互转换，支持常见词汇转换。简单易用，实时转换。",
+      "keywords": "繁简体转换,繁体转简体,简体转繁体,中文转换,汉字转换,繁体字,简体字"
+    }
+  },
+  {
+    "name": "transform-generator",
+    "url": "http://127.0.0.1:3105/tools/transform-generator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "CSS变换生成器 - transform可视化工具 | Util工具箱",
+      "description": "在线CSS transform生成工具，可视化调节旋转、缩放、倾斜、平移等变换效果。支持实时预览和一键复制CSS代码。",
+      "keywords": "css transform,旋转,缩放,倾斜,translate,rotate,scale,skew,变换可视化"
+    }
+  },
+  {
+    "name": "txt-record-editor",
+    "url": "http://127.0.0.1:3105/tools/txt-record-editor/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "TXT记录编辑器 - 有条工具",
+      "description": "免费在线DNS TXT记录编辑器，支持SPF记录生成、DKIM记录生成和TXT记录验证。",
+      "keywords": "域名验证"
+    }
+  },
+  {
+    "name": "typing-test",
+    "url": "http://127.0.0.1:3105/tools/typing-test/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "打字速度测试 - 在线打字练习与WPM测试工具",
+      "description": "在线打字速度测试，支持中文段落按字每分钟计速、英文按WPM计速，逐字高亮正误反馈，兼容中文输入法组词输入，实时统计准确率与进度，历史最佳保存在本地",
+      "keywords": "打字测试, 打字速度测试, 打字练习, wpm测试, 中文打字, 拼音打字, 在线打字"
+    }
+  },
+  {
+    "name": "typography-scale",
+    "url": "http://127.0.0.1:3105/tools/typography-scale/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "字体比例系统 - 和谐的字体层级 | Util工具箱",
+      "description": "免费在线字体比例系统生成工具，基于音乐音阶生成和谐的字体大小层级。支持多种经典比例（大三度、黄金比例等），一键生成CSS变量。",
+      "keywords": "字体比例,typography scale,字体层级,排版,字体大小,CSS变量,设计工具"
+    }
+  },
+  {
+    "name": "unicode-convert",
+    "url": "http://127.0.0.1:3105/tools/unicode-convert/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "Unicode转换器 - 在线Unicode编码转换工具",
+      "description": "免费在线Unicode转换工具，支持文本、Unicode码点、转义序列之间的相互转换，支持多种编程语言格式。",
+      "keywords": "编码转换"
+    }
+  },
+  {
+    "name": "unit-converter",
+    "url": "http://127.0.0.1:3105/tools/unit-converter/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "单位换算器 - 长度重量温度面积体积在线转换",
+      "description": "免费在线单位换算工具，支持长度、重量、温度、面积、体积等多种单位类型的相互转换，实时计算，批量处理。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "unit-price-calculator",
+    "url": "http://127.0.0.1:3105/tools/unit-price-calculator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "单价计算器 - 商品单价对比与价格换算工具 | Util工具箱",
+      "description": "免费在线单价计算器，计算商品单价、对比不同包装的价格、按重量体积换算单价。购物比价必备工具。纯本地计算，数据安全隐私。",
+      "keywords": "单价计算,单价对比,价格对比,单位换算,购物比价,性价比,在线计算器"
+    }
+  },
+  {
+    "name": "unix-timestamp-bounds",
+    "url": "http://127.0.0.1:3105/tools/unix-timestamp-bounds/",
+    "status": 200,
+    "responseTime": 1,
+    "seo": {
+      "title": "Unix时间戳边界查询工具 - 时间戳最大最小值 | Util工具箱",
+      "description": "在线Unix时间戳边界查询工具，查询32位、64位时间戳范围，Y2K38问题，特殊日期时间戳对照表。支持时间戳与日期互转，纯本地计算，数据隐私绝对安全。",
+      "keywords": "Unix时间戳边界,Y2K38,时间戳最大值,时间戳范围,Unix时间戳溢出,时间戳转换,时间戳计算"
+    }
+  },
+  {
+    "name": "url-canonicalizer",
+    "url": "http://127.0.0.1:3105/tools/url-canonicalizer/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "URL标准化工具 - 有条工具",
+      "description": "免费在线URL标准化工具，支持移除UTM跟踪参数、移除其他跟踪参数、统一协议、移除WWW、处理尾部斜杠，生成规范URL，提升SEO效果。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "url-decode",
+    "url": "http://127.0.0.1:3105/tools/url-decode/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "URL解码器 - 在线URL百分比解码工具",
+      "description": "免费在线URL解码工具，支持批量解码，显示原始文本对比，提供实时解码预览。",
+      "keywords": "批量解码"
+    }
+  },
+  {
+    "name": "url-encode",
+    "url": "http://127.0.0.1:3105/tools/url-encode/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "URL编码器 - 在线URL百分比编码工具",
+      "description": "免费在线URL编码工具，支持完整编码和部分编码模式，确保URL安全传输，提供实时编码预览。",
+      "keywords": "url safe"
+    }
+  },
+  {
+    "name": "url-params-builder",
+    "url": "http://127.0.0.1:3105/tools/url-params-builder/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "URL参数构建器 - 在线查询参数生成器",
+      "description": "在线URL参数构建工具，可视化添加查询参数，支持URL编码，生成完整URL链接。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "user-agent-generator",
+    "url": "http://127.0.0.1:3105/tools/user-agent-generator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "User-Agent生成器 - 在线UA字符串生成",
+      "description": "在线User-Agent生成工具，生成各浏览器、操作系统和设备的User-Agent字符串。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "user-agent-parser",
+    "url": "http://127.0.0.1:3105/tools/user-agent-parser/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "User-Agent解析工具 - 在线浏览器识别与设备检测",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "utf-8-convert",
+    "url": "http://127.0.0.1:3105/tools/utf-8-convert/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "UTF-8编码转换工具 - 有条工具",
+      "description": "免费在线UTF-8编码转换工具，支持UTF-8、UTF-16、UTF-32之间的编码转换，实时显示字节数组和编码详情，支持中文、Emoji等多语言字符。",
+      "keywords": "中文编码"
+    }
+  },
+  {
+    "name": "uuencode",
+    "url": "http://127.0.0.1:3105/tools/uuencode/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "UUEncode编码工具 - 有条工具",
+      "description": "免费在线UUEncode编码工具，Unix-to-Unix编码与解码，用于二进制文件传输。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "uuid-generator",
+    "url": "http://127.0.0.1:3105/tools/uuid-generator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "UUID生成器 - 在线UUID&#x2F;GUID生成工具",
+      "description": "免费在线UUID生成器，支持UUID v1/v4/v5版本，批量生成，自定义格式，生成唯一标识符。",
+      "keywords": "随机ID"
+    }
+  },
+  {
+    "name": "vector-calculator",
+    "url": "http://127.0.0.1:3105/tools/vector-calculator/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "向量计算器 - 向量运算点积叉积角度计算 | Util工具箱",
+      "description": "在线向量计算器，支持2D和3D向量运算。计算向量加减、点积、叉积、夹角、投影等。适用于数学、物理、工程等领域，实时计算结果。",
+      "keywords": "向量计算,向量运算,点积,叉积,向量夹角,2D向量,3D向量,向量投影"
+    }
+  },
+  {
+    "name": "vigenere-cipher",
+    "url": "http://127.0.0.1:3105/tools/vigenere-cipher/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "维吉尼亚密码工具 - 多表替换加密解密 | Util工具箱",
+      "description": "免费在线维吉尼亚密码工具，使用密钥进行多表替换加密和解密。安全性高于凯撒密码，支持字母大小写自动转换，一键加密解密。",
+      "keywords": "维吉尼亚密码,vigenere cipher,多表密码,多表替换,古典密码,加密解密,密码学,凯撒密码"
+    }
+  },
+  {
+    "name": "vo2max-calculator",
+    "url": "http://127.0.0.1:3105/tools/vo2max-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "最大摄氧量计算器 - 有条工具",
+      "description": "免费在线最大摄氧量计算器，计算VO2max评估心肺功能和有氧能力，支持静息心率法、Rockport测试、Cooper测试等多种方法。",
+      "keywords": "在线计算器"
+    }
+  },
+  {
+    "name": "waist-to-height-calculator",
+    "url": "http://127.0.0.1:3105/tools/waist-to-height-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "腰高比计算器 - 有条工具",
+      "description": "免费在线腰高比计算器，更准确的肥胖评估指标，预测代谢综合征和心血管疾病风险，标准为WHtR<0.5。",
+      "keywords": "在线计算器"
+    }
+  },
+  {
+    "name": "waist-to-hip-calculator",
+    "url": "http://127.0.0.1:3105/tools/waist-to-hip-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "腰臀比计算器 - 有条工具",
+      "description": "免费在线腰臀比计算器，评估中心性肥胖风险，预防心血管疾病和糖尿病，提供健康改善建议。",
+      "keywords": "在线计算器"
+    }
+  },
+  {
+    "name": "water-intake-calculator",
+    "url": "http://127.0.0.1:3105/tools/water-intake-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "水分摄入计算器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "web-component-analyzer",
+    "url": "http://127.0.0.1:3105/tools/web-component-analyzer/",
+    "status": 200,
+    "responseTime": 5,
+    "seo": {
+      "title": "Web组件分析器 - HTML元素可访问属性和事件分析工具 | Util工具箱",
+      "description": "专业的Web组件分析工具，分析HTML元素的可访问属性和事件。支持React、Vue、Angular等框架组件分析，帮助优化代码质量和用户体验。",
+      "keywords": "Web组件分析器,组件分析,HTML分析,可访问性检查,ARIA属性,事件分析,React组件,Vue组件,Angular组件,代码质量"
+    }
+  },
+  {
+    "name": "webrtc-diagnostics",
+    "url": "http://127.0.0.1:3105/tools/webrtc-diagnostics/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "WebRTC诊断工具 - 有条工具",
+      "description": "免费在线WebRTC诊断工具，测试WebRTC连接、STUN/TURN服务器、ICE候选和媒体质量，诊断WebRTC通信问题。",
+      "keywords": "网络诊断"
+    }
+  },
+  {
+    "name": "websocket-test",
+    "url": "http://127.0.0.1:3105/tools/websocket-test/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "WebSocket测试工具 - 在线WebSocket连接调试工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "week-calculator",
+    "url": "http://127.0.0.1:3105/tools/week-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "周数计算器 - 在线计算日期所在周数和ISO周数",
+      "description": "免费在线周数计算工具，支持查询日期所在的周数、计算年度总周数、周数转日期等功能。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "weight-goal-planner",
+    "url": "http://127.0.0.1:3105/tools/weight-goal-planner/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "体重目标规划器 - 有条工具",
+      "description": "免费在线体重目标规划器，科学规划减重或增重目标，计算时间线和热量需求，制定可行的体重管理计划。",
+      "keywords": "健康体重"
+    }
+  },
+  {
+    "name": "whois-lookup",
+    "url": "http://127.0.0.1:3105/tools/whois-lookup/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "WHOIS查询 - 在线域名WHOIS信息查询工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "word-cloud",
+    "url": "http://127.0.0.1:3105/tools/word-cloud/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "词云生成器 - 在线文本词云分析工具 | 词频统计可视化",
+      "description": "免费在线词云生成工具，支持文本分析生成词云图，可自定义颜色、字体、布局样式，可导出为图片，适用于数据可视化和文本分析。",
+      "keywords": "词云,词云生成,文本分析,词频统计,数据可视化,在线词云"
+    }
+  },
+  {
+    "name": "work-hours-calculator",
+    "url": "http://127.0.0.1:3105/tools/work-hours-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "工作时间计算器 - 计算工作时长和加班费",
+      "description": "在线工作时间计算器，计算每日、每周、每月、每年工作时长，支持加班费计算和多种工作制。",
+      "keywords": "工作时间计算,加班费计算,工作时长,弹性工作制,排班管理,在线工作计算器"
+    }
+  },
+  {
+    "name": "workday-calculator",
+    "url": "http://127.0.0.1:3105/tools/workday-calculator/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "工作日计算器 - 在线计算工作日天数",
+      "description": "免费在线工作日计算工具，支持自定义节假日、计算工作日天数、排除周末等功能。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "workout-planner",
+    "url": "http://127.0.0.1:3105/tools/workout-planner/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "运动计划生成器 - 有条工具",
+      "description": "免费在线运动计划生成器，根据健身目标科学制定减脂、增肌、耐力、力量训练计划，支持自定义训练频率和时长。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "xml-escape",
+    "url": "http://127.0.0.1:3105/tools/xml-escape/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "XML转义工具 - 有条工具",
+      "description": "免费在线XML转义工具，XML特殊字符转义与反转义，防止XML解析错误。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "xml-formatter",
+    "url": "http://127.0.0.1:3105/tools/xml-formatter/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "XML格式化 - 在线XML美化与格式化工具 | 有条工具",
+      "description": "免费的在线XML格式化工具，支持一键美化、压缩、语法错误检测及格式转换。纯本地计算，数据隐私绝对安全。支持2空格、4空格、Tab缩进，自动修复常见错误。",
+      "keywords": "XML格式化,XML美化,XML压缩,XML验证,在线XML工具,XML编辑器,XML语法检查,XML格式转换"
+    }
+  },
+  {
+    "name": "xml-json-converter",
+    "url": "http://127.0.0.1:3105/tools/xml-json-converter/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "XML与JSON互转工具 - 在线格式转换",
+      "description": "在线XML与JSON互转工具，支持XML转JSON和JSON转XML，处理属性和命名空间。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "xml-to-json",
+    "url": "http://127.0.0.1:3105/tools/xml-to-json/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "XML转JSON - 在线XML转JSON格式转换工具",
+      "description": "免费在线 XML to JSON 转换工具，支持将 XML 数据快速转换为 JSON 格式，保留数据结构，支持属性转换和数组检测。纯本地计算，数据安全。",
+      "keywords": "XML转JSON, XML to JSON, XML JSON转换, 数据格式转换, 在线工具"
+    }
+  },
+  {
+    "name": "xml-to-model",
+    "url": "http://127.0.0.1:3105/tools/xml-to-model/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "XML 转 Model 类 - 在线代码生成工具",
+      "description": "免费的在线 XML 转 Model 类工具，支持将 XML 数据自动转换为 Java、C#、Python、TypeScript、Kotlin、Go 等多种编程语言的实体类。",
+      "keywords": "xmlserializer"
+    }
+  },
+  {
+    "name": "xpath-tester",
+    "url": "http://127.0.0.1:3105/tools/xpath-tester/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "XPath测试器 - 在线XML路径表达式查询",
+      "description": "免费在线XPath测试工具，支持使用XPath表达式查询和提取XML数据，提供语法说明和示例。",
+      "keywords": "在线工具"
+    }
+  },
+  {
+    "name": "xss-detector",
+    "url": "http://127.0.0.1:3105/tools/xss-detector/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "XSS攻击检测器 - 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "yaml-formatter",
+    "url": "http://127.0.0.1:3105/tools/yaml-formatter/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "YAML转换器 - YAML与JSON互转工具 | 有条工具",
+      "description": "无广告 · 本地计算 · 即开即用的在线工具平台",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "yaml-validator-formatter",
+    "url": "http://127.0.0.1:3105/tools/yaml-validator-formatter/",
+    "status": 200,
+    "responseTime": 3,
+    "seo": {
+      "title": "YAML验证格式化工具 - 在线YAML校验美化",
+      "description": "在线YAML验证和格式化工具，检查YAML语法错误，美化YAML结构，支持YAML 1.2规范。",
+      "keywords": "在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试"
+    }
+  },
+  {
+    "name": "year-end-bonus-calculator",
+    "url": "http://127.0.0.1:3105/tools/year-end-bonus-calculator/",
+    "status": 200,
+    "responseTime": 4,
+    "seo": {
+      "title": "年终奖计算器 - 个税计算与发放优化方案 | Util工具箱",
+      "description": "专业年终奖个税计算工具，支持单独计税和综合计税两种模式，提供最优发放策略和合法节税方案。智能避税率陷阱，帮您最大化年终奖收入。",
+      "keywords": "年终奖计算器,年终奖个税,个税计算,税率陷阱,节税优化,年终奖发放方案,个税筹划,合法避税"
+    }
+  },
+  {
+    "name": "zero-width-encoder",
+    "url": "http://127.0.0.1:3105/tools/zero-width-encoder/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "零宽字符编码器 - 文本隐写与隐形水印工具",
+      "description": "零宽字符编码器在线工具，把隐藏消息嵌入文本实现隐形水印与信息溯源，支持编码、解码、检测与一键清理，UTF-8中文无损还原，纯本地处理",
+      "keywords": "零宽字符, 零宽空格, 文本隐写, 隐形水印, 零宽字符解码, 文本水印, u200b"
+    }
+  },
+  {
+    "name": "zip-viewer",
+    "url": "http://127.0.0.1:3105/tools/zip-viewer/",
+    "status": 200,
+    "responseTime": 2,
+    "seo": {
+      "title": "ZIP压缩包查看器 - 在线解压预览ZIP文件内容",
+      "description": "在线ZIP查看器，浏览器本地列出压缩包内全部文件条目与压缩率，文本文件在线预览，支持单个文件解压下载，不上传数据",
+      "keywords": "zip查看器, 在线解压, zip在线预览, zip文件查看, 解压下载, 压缩包预览"
+    }
+  }
+]

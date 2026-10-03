@@ -26,6 +26,8 @@ export default defineNuxtConfig({
         injectRegister: 'auto',
         workbox: {
           globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+          // 标签聚合页等大页面超过默认 2MiB 上限会导致 generate 失败
+          maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
           navigateFallback: '/',
           skipWaiting: true,
           clientsClaim: true,
@@ -112,15 +114,12 @@ export default defineNuxtConfig({
     // 开发环境优化
     server: isDev ? {
       fs: {
-        strict: false,
-        // 限制文件监听数量
-        maxRooms: 100
+        strict: false
       },
       watch: {
-        // 开发环境使用更高效的监听
-        usePolling: false,
-        depth: 0,
-        // 排除更多文件以减少监听负担（解决 EMFILE 错误）
+        // 轮询模式规避 macOS fs-events 的 EMFILE 崩溃（实测轮询下无 EMFILE，CPU 开销可接受）
+        usePolling: true,
+        interval: 1500,
         ignored: [
           '**/node_modules/**',
           '**/.git/**',
@@ -138,37 +137,29 @@ export default defineNuxtConfig({
           '**/src-tauri/**',
           '**/*.bak',
           '!**/src-tauri/tauri.conf.json',
-          // 排除 blog 目录（避免监听大量博客文件）
+          // 排除 blog 目录（Hugo 独立构建，无需 HMR）
           '**/blog/**',
           '**/blog/content/**',
           '**/blog/public/**',
           '**/blog/layouts/**',
           '**/blog/themes/**',
-          // 排除构建产物
+          // 排除构建产物与媒体/字体/测试文件
           '**/*.min.js',
           '**/*.min.css',
-          // 排除图片和媒体文件
           '**/*.{png,jpg,jpeg,gif,svg,ico,webp,mp4,mp3,wav,ogg}',
-          // 排除字体文件
           '**/*.{woff,woff2,ttf,eot}',
-          // 排除测试文件
           '**/__tests__/**',
           '**/*.test.{js,ts,vue}',
           '**/*.spec.{js,ts,vue}',
-          // 排除数据文件（避免监听大型JSON文件）
           '**/data/**/*.json',
-          '**/public/**',
-          // 排除所有工具页面（440个文件）
-          '**/src/pages/tools/**'
+          '**/public/**'
         ]
       },
       // 减少开发服务器的资源使用
       hmr: {
         overlay: false,
-        // 降低热更新频率
         timeout: 5000
       },
-      // 优化中间件
       middlewareMode: false
     } : {
       fs: {
@@ -176,14 +167,7 @@ export default defineNuxtConfig({
       }
     },
     build: {
-      // 优化构建性能
-      minify: 'terser',
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true
-        }
-      },
+      // 使用 Vite 默认的 esbuild 压缩（此前 terser 是构建 OOM 与耗时的最大单一来源）
       rollupOptions: {
         onwarn: (warning, warn) => {
           if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return
@@ -274,10 +258,10 @@ export default defineNuxtConfig({
         '/tags',
         '/sitemap'
       ],
-      // 优化预渲染配置
-      concurrency: 5, // 提高并发数加快预渲染
-      failOnError: false, // 遇到错误不中断构建
-      interval: 0 // 移除间隔，加快渲染速度
+      // 降低并发换峰值内存：463 页全量预渲染时单页 SSR 内存开销大
+      concurrency: 2,
+      failOnError: false,
+      interval: 0
     },
     // 静态资源处理
     publicAssets: [
@@ -320,7 +304,8 @@ export default defineNuxtConfig({
   },
   // 添加实验性配置以支持静态文件
   experimental: {
-    payloadExtraction: false
+    // payload 抽取为独立 _payload.json：HTML 显著变小，预渲染内存下降（此前内联导致 /tags 达 2.12MB）
+    payloadExtraction: true
   },
   app: {
     head: {

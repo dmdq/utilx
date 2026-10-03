@@ -7,6 +7,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { pathToFileURL } = require('url');
 
 // 配置
 const config = {
@@ -45,6 +46,12 @@ const config = {
     '/category/security': 0.8,
     '/category/text': 0.8,
     '/category/time': 0.8,
+    '/category/file': 0.8,
+    '/file': 0.8,
+    '/wiki': 0.8,
+    '/collections': 0.8,
+    '/tag': 0.6,
+    '/blog': 0.6,
     // 工具页面默认优先级
     '/tools': 0.7,
   },
@@ -81,6 +88,12 @@ const config = {
     '/category/security': 'weekly',
     '/category/text': 'weekly',
     '/category/time': 'weekly',
+    '/category/file': 'weekly',
+    '/file': 'weekly',
+    '/wiki': 'weekly',
+    '/collections': 'weekly',
+    '/tag': 'weekly',
+    '/blog': 'monthly',
     // 工具页面
     '/tools': 'monthly',
   }
@@ -182,9 +195,75 @@ function getChangeFreq(path) {
   // 默认更新频率
   if (path.startsWith('/tools/')) {
     return 'monthly'; // 工具页面更新较少
+  } else if (path.startsWith('/blog/')) {
+    return 'monthly'; // 博客文章
   } else {
     return 'weekly'; // 其他页面
   }
+}
+
+/**
+ * 枚举动态路由与站外构建内容（标签详情页 / 词条 / 场景专题 / Hugo 博客文章）
+ * 对应数据文件缺失时跳过对应分组，不阻断生成
+ */
+async function collectDynamicPaths() {
+  const extra = [];
+  const dataUrl = (p) => pathToFileURL(path.join(__dirname, '..', p)).href;
+
+  // 标签详情页 /tag/<id>/
+  try {
+    const { tagDefinitions } = await import(dataUrl('src/data/tags.js'));
+    for (const t of tagDefinitions || []) {
+      if (t && t.id) extra.push(`tag/${encodeURIComponent(t.id)}`);
+    }
+  } catch (e) {
+    console.warn(`⚠️ 跳过标签页: ${e.message}`);
+  }
+
+  // 词条库 /wiki/<slug>/
+  try {
+    const { wikiTerms } = await import(dataUrl('src/data/wiki-terms.js'));
+    for (const w of wikiTerms || []) {
+      if (w && w.slug) extra.push(`wiki/${w.slug}`);
+    }
+  } catch (e) {
+    console.warn(`⚠️ 跳过词条库: ${e.message}`);
+  }
+
+  // 场景专题 /collections/<slug>/
+  try {
+    const { collections } = await import(dataUrl('src/data/collections.js'));
+    for (const c of collections || []) {
+      if (c && c.slug) extra.push(`collections/${c.slug}`);
+    }
+  } catch (e) {
+    console.warn(`⚠️ 跳过场景专题: ${e.message}`);
+  }
+
+  // Hugo 博客文章 /blog/articles/<slug>/
+  try {
+    const postsDir = path.join(__dirname, '..', 'blog/content/posts');
+    const walkPosts = (dir) => {
+      let slugs = [];
+      for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
+        const full = path.join(dir, item.name);
+        if (item.isDirectory()) slugs.push(...walkPosts(full));
+        else if (item.name.endsWith('.md') && item.name !== '_index.md') slugs.push(full);
+      }
+      return slugs;
+    };
+    for (const file of walkPosts(postsDir)) {
+      const head = fs.readFileSync(file, 'utf8').slice(0, 800);
+      if (/^draft:\s*true/m.test(head)) continue;
+      const slugMatch = head.match(/^slug:\s*["']?([^"'\n]+)["']?/m);
+      const slug = slugMatch ? slugMatch[1].trim() : path.basename(file, '.md');
+      if (slug) extra.push(`blog/articles/${slug}`);
+    }
+  } catch (e) {
+    console.warn(`⚠️ 跳过博客文章: ${e.message}`);
+  }
+
+  return extra;
 }
 
 /**
@@ -206,14 +285,16 @@ function generateUrlNode(path) {
 /**
  * 生成完整的 sitemap.xml
  */
-function generateSitemap() {
+async function generateSitemap() {
   console.log('开始生成 sitemap.xml...');
 
-  // 扫描所有页面
+  // 扫描静态页面 + 枚举动态路由
   const pages = scanPages(config.pagesDir);
+  const dynamicPaths = await collectDynamicPaths();
+  const allPaths = [...new Set([...pages, ...dynamicPaths])];
 
   // 按路径排序
-  pages.sort();
+  allPaths.sort();
 
   // 生成 XML 内容
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -225,7 +306,7 @@ function generateSitemap() {
 `;
 
   // 添加所有 URL 节点
-  for (const page of pages) {
+  for (const page of allPaths) {
     xml += generateUrlNode(page) + '\n\n';
   }
 
@@ -236,7 +317,7 @@ function generateSitemap() {
 
   console.log(`✅ sitemap.xml 生成成功！`);
   console.log(`📍 路径: ${config.outputPath}`);
-  console.log(`📄 总页面数: ${pages.length}`);
+  console.log(`📄 总页面数: ${allPaths.length}（静态 ${pages.length} + 动态 ${dynamicPaths.length}）`);
   console.log(`🗓️ 更新日期: ${config.currentDate}`);
 
   // 输出页面分类统计
@@ -244,16 +325,29 @@ function generateSitemap() {
     root: 0,
     category: 0,
     tools: 0,
+    tag: 0,
+    wiki: 0,
+    collections: 0,
+    blog: 0,
     other: 0
   };
 
-  pages.forEach(page => {
-    if (page === '/') {
+  allPaths.forEach(page => {
+    const p = page.startsWith('/') ? page : '/' + page;
+    if (p === '/') {
       stats.root++;
-    } else if (page.startsWith('/category/')) {
+    } else if (p.startsWith('/category/')) {
       stats.category++;
-    } else if (page.startsWith('/tools/')) {
+    } else if (p.startsWith('/tools/')) {
       stats.tools++;
+    } else if (p.startsWith('/tag/')) {
+      stats.tag++;
+    } else if (p.startsWith('/wiki/')) {
+      stats.wiki++;
+    } else if (p.startsWith('/collections/')) {
+      stats.collections++;
+    } else if (p.startsWith('/blog/')) {
+      stats.blog++;
     } else {
       stats.other++;
     }
@@ -263,12 +357,19 @@ function generateSitemap() {
   console.log(`   - 首页: ${stats.root}`);
   console.log(`   - 分类页面: ${stats.category}`);
   console.log(`   - 工具页面: ${stats.tools}`);
+  console.log(`   - 标签详情页: ${stats.tag}`);
+  console.log(`   - 词条页面: ${stats.wiki}`);
+  console.log(`   - 场景专题: ${stats.collections}`);
+  console.log(`   - 博客文章: ${stats.blog}`);
   console.log(`   - 其他页面: ${stats.other}`);
 }
 
 // 执行生成
 if (require.main === module) {
-  generateSitemap();
+  generateSitemap().catch(err => {
+    console.error('❌ 生成失败:', err);
+    process.exit(1);
+  });
 }
 
 module.exports = { generateSitemap };

@@ -4,10 +4,22 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const http = require('http');
-const { JSDOM } = require('jsdom');
 
-// 工具目录
-const toolsDir = path.join(__dirname, 'src/pages/tools');
+// jsdom 为可选依赖，缺失时回退到正则解析
+let JSDOM = null;
+try {
+  JSDOM = require('jsdom').JSDOM;
+} catch (e) {
+  JSDOM = null;
+}
+
+// 工具目录（脚本位于 scripts/ 下，项目根为其上一级）
+const toolsDir = path.join(__dirname, '..', 'src/pages/tools');
+
+// 检查参数
+const args = process.argv.slice(2);
+const limitArg = args.find(a => a.startsWith('--limit='));
+const checkLimit = limitArg ? parseInt(limitArg.split('=')[1], 10) : 0;
 
 // 获取所有工具文件
 function getToolFiles(dir) {
@@ -39,14 +51,21 @@ function getToolFiles(dir) {
   return files.sort();
 }
 
-// 检查URL状态
-function checkUrl(url) {
+// 检查URL状态（自动跟随最多3次重定向）
+function checkUrl(url, redirectCount = 0) {
   return new Promise((resolve) => {
     const startTime = Date.now();
 
     const protocol = url.startsWith('https:') ? https : http;
 
     const req = protocol.get(url, (res) => {
+      // 跟随 3xx 重定向
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location && redirectCount < 3) {
+        res.resume();
+        const nextUrl = new URL(res.headers.location, url).toString();
+        return checkUrl(nextUrl, redirectCount + 1).then(resolve);
+      }
+
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
@@ -82,22 +101,37 @@ function checkUrl(url) {
 // 解析HTML获取SEO信息
 function parseSEO(html) {
   try {
-    const dom = new JSDOM(html);
-    const document = dom.window.document;
+    if (JSDOM) {
+      const dom = new JSDOM(html);
+      const document = dom.window.document;
 
-    // 获取标题
-    const title = document.querySelector('title')?.textContent || '';
+      // 获取标题
+      const title = document.querySelector('title')?.textContent || '';
 
-    // 获取描述
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
+      // 获取描述
+      const description = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
 
-    // 获取其他SEO meta标签
-    const keywords = document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '';
+      // 获取其他SEO meta标签
+      const keywords = document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '';
 
+      return {
+        title,
+        description,
+        keywords
+      };
+    }
+
+    // 无 jsdom 时的正则降级解析
+    const title = (html.match(/<title[^>]*>([^<]*)<\/title>/i) || [])[1] || '';
+    const metaContent = (name) => {
+      const m = html.match(new RegExp(`<meta[^>]+name=["']${name}["'][^>]+content=["']([^"']*)["']`, 'i'))
+        || html.match(new RegExp(`<meta[^>]+content=["']([^"']*)["'][^>]+name=["']${name}["']`, 'i'));
+      return m ? m[1] : '';
+    };
     return {
       title,
-      description,
-      keywords
+      description: metaContent('description'),
+      keywords: metaContent('keywords')
     };
   } catch (error) {
     return {
@@ -189,13 +223,17 @@ async function main() {
   console.log(`📁 找到 ${tools.length} 个工具\n`);
 
   const results = [];
-  const baseUrl = 'https://util.iskytrip.com/tools/';
+  // 默认检查本地开发服务器，可通过环境变量指定线上地址
+  const baseUrl = process.env.TOOLS_BASE_URL || 'http://localhost:3000/tools/';
+  const isLocal = baseUrl.includes('localhost') || baseUrl.includes('127.0.0.1');
 
-  for (let i = 0; i < tools.length; i++) {
-    const tool = tools[i];
-    const url = baseUrl + tool;
+  const toolList = checkLimit > 0 ? tools.slice(0, checkLimit) : tools;
 
-    console.log(`⏳ 检查中 (${i + 1}/${tools.length}): ${tool}`);
+  for (let i = 0; i < toolList.length; i++) {
+    const tool = toolList[i];
+    const url = baseUrl + tool + '/';
+
+    console.log(`⏳ 检查中 (${i + 1}/${toolList.length}): ${tool}`);
 
     try {
       // 检查URL
@@ -238,8 +276,8 @@ async function main() {
       console.log(`❌ ${tool}: 检查失败 - ${error.message}`);
     }
 
-    // 添加延迟避免请求过快
-    await new Promise(resolve => setTimeout(resolve, 500));
+    // 添加延迟避免请求过快（本地服务无需长延迟）
+    await new Promise(resolve => setTimeout(resolve, isLocal ? 50 : 500));
   }
 
   console.log('\n📊 生成报告...\n');
@@ -265,26 +303,24 @@ async function main() {
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
 
   // 保存表格
-  fs.writeFileSync(`tools-check-${timestamp}.txt`, table);
-  console.log(`\n💾 表格已保存到: tools-check-${timestamp}.txt`);
+  fs.writeFileSync(path.join(__dirname, `tools-check-${timestamp}.txt`), table);
+  console.log(`\n💾 表格已保存到: scripts/tools-check-${timestamp}.txt`);
 
   // 保存CSV
   const csv = generateCSV(results);
-  fs.writeFileSync(`tools-check-${timestamp}.csv`, csv);
-  console.log(`💾 CSV已保存到: tools-check-${timestamp}.csv`);
+  fs.writeFileSync(path.join(__dirname, `tools-check-${timestamp}.csv`), csv);
+  console.log(`💾 CSV已保存到: scripts/tools-check-${timestamp}.csv`);
 
   // 保存JSON
-  fs.writeFileSync(`tools-check-${timestamp}.json`, JSON.stringify(results, null, 2));
-  console.log(`💾 JSON已保存到: tools-check-${timestamp}.json`);
+  fs.writeFileSync(path.join(__dirname, `tools-check-${timestamp}.json`), JSON.stringify(results, null, 2));
+  console.log(`💾 JSON已保存到: scripts/tools-check-${timestamp}.json`);
 
   console.log('\n✨ 检查完成！');
 }
 
-// 安装依赖提示
-if (!fs.existsSync('node_modules/jsdom')) {
-  console.log('❌ 需要安装 jsdom 依赖');
-  console.log('请运行: npm install jsdom');
-  process.exit(1);
+// 提示可选依赖
+if (!JSDOM) {
+  console.log('ℹ️ 未安装 jsdom，SEO 解析将使用正则降级（可运行 npm install jsdom 获得更完整的解析）');
 }
 
 // 运行检查
