@@ -80,9 +80,23 @@ const allTags = Array.from(tagMap.values())
 
 // 响应式数据
 const isLoading = ref(false)
+const searchQuery = ref('')
+// 全量标签卡片的 SSR 体积会超过 2MB（拖慢抓取与首屏），默认只渲染前 48 个
+const visibleCount = ref(48)
 
-// 按序号排序的标签
 const tagsByPopularity = computed(() => allTags)
+
+const filteredTags = computed(() => {
+  const q = searchQuery.value.trim().toLowerCase()
+  if (!q) return tagsByPopularity.value
+  return tagsByPopularity.value.filter(t =>
+    t.name.toLowerCase().includes(q) || (t.description || '').toLowerCase().includes(q)
+  )
+})
+
+const visibleTags = computed(() => filteredTags.value.slice(0, visibleCount.value))
+
+const showAllTags = () => { visibleCount.value = filteredTags.value.length }
 
 // 获取标签名称
 const getCategoryName = (category) => {
@@ -138,7 +152,13 @@ const getIconComponent = (iconName) => {
     <!-- 页面标题 -->
     <div class="mb-8">
       <h1 class="text-3xl font-bold text-foreground mb-2">标签导航</h1>
-      <p class="text-muted-foreground">通过标签快速找到合适的工具</p>
+      <p class="text-muted-foreground mb-5">通过标签快速找到合适的工具</p>
+      <input
+        v-model="searchQuery"
+        type="text"
+        placeholder="搜索标签，如：转换、加密、图片..."
+        class="w-full max-w-md px-4 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+      />
     </div>
 
     <!-- 加载状态 -->
@@ -153,7 +173,7 @@ const getIconComponent = (iconName) => {
     <div v-else>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         <NuxtLink
-          v-for="tag in tagsByPopularity"
+          v-for="tag in visibleTags"
           :key="tag.name"
           :to="`/tag/${tag.name}/`"
           class="bg-card/40 backdrop-blur-sm border-0 rounded-xl p-5 hover:bg-card/70 hover:shadow-sm hover:shadow-primary/5 transition-all duration-200 cursor-pointer group"
@@ -199,6 +219,19 @@ const getIconComponent = (iconName) => {
             </span>
           </div>
         </NuxtLink>
+      </div>
+
+      <!-- 展开更多 -->
+      <div v-if="visibleTags.length < filteredTags.length" class="mt-8 text-center">
+        <button
+          @click="showAllTags"
+          class="bg-muted hover:bg-muted/80 text-muted-foreground px-6 py-2.5 rounded-lg text-sm transition-all"
+        >
+          显示全部 {{ filteredTags.length }} 个标签（当前显示 {{ visibleTags.length }} 个）
+        </button>
+      </div>
+      <div v-else-if="filteredTags.length === 0" class="py-14 text-center">
+        <p class="text-sm text-muted-foreground">没有匹配「{{ searchQuery }}」的标签</p>
       </div>
     </div>
   </div>
