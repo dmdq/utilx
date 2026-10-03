@@ -15,6 +15,7 @@
     "optimize": "./scripts/optimize-cache.sh",
     "upgrade:nuxt": "./scripts/upgrade-nuxt.sh",
     "build": "npm run build:blog && npm run build:nuxt",
+    "build:static": "npm run build:blog && npm run generate",
     "build:nuxt": "NODE_OPTIONS='--max-old-space-size=8192 --max-semi-space-size=1024' nuxt build",
     "build:app": "./scripts/build.sh",
     "build:optimized": "./scripts/build-optimized.sh",
