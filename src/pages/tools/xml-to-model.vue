@@ -1126,6 +1126,8 @@ const formatXml = () => {
 
 // 解析 XML
 const parseXml = () => {
+  // DOMParser 仅存在于浏览器；SSR/预渲染阶段 watch immediate 会触发本函数，直接跳过
+  if (import.meta.server) return
   try {
     const parser = new DOMParser()
     parsedXml.constue = parser.parseFromString(xmlInput.constue, 'text/xml')
