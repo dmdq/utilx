@@ -31,6 +31,7 @@
     "tauri:dev": "./scripts/dev.sh npm run tauri dev --no-build-frontend",
     "tauri:static": "npm run tauri dev",
     "tauri:build": "tauri build",
+    "package:static": "./package-static.sh",
     "package:macos": "./scripts/package-macos.sh",
     "package:macos-universal": "./scripts/package-macos-universal.sh",
     "package:macos-simple": "./scripts/package-macos-simple.sh"

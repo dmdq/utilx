@@ -158,3 +158,5 @@ stats.html
 # Don't ignore the entire public/blog directory, we need its contents
 # public/blog
 # blog/public
+# 一键打包脚本生成的静态部署 zip
+utilx-static-*.zip
