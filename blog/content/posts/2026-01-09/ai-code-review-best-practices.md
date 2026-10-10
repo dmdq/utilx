@@ -1,5 +1,6 @@
 ---
 title: "AI代码审查实战：如何用Claude和GPT-4提升代码质量和团队效率"
+slug: "ai-code-review-best-practices"
 summary: "深入探讨AI辅助代码审查的最佳实践，包括工具配置、审查流程、质量标准和团队协作，帮助开发者建立高效的AI代码审查体系。"
 date: 2026-01-09T13:00:00+08:00
 draft: false

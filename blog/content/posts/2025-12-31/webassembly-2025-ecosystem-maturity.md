@@ -1,5 +1,6 @@
 ---
 title: "WebAssembly 2025：从边缘技术到主流平台的跨越"
+slug: "webassembly-2025-ecosystem-maturity"
 description: "深入分析WebAssembly在2025年的技术突破，包括GC提案落地、组件模型成熟、浏览器外应用生态，以及2026年发展预测。"
 author: "有条工具团队"
 date: 2025-12-31T10:00:00+08:00

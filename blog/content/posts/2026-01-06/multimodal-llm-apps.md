@@ -1,5 +1,6 @@
 ---
 title: "多模态大模型应用开发：从GPT-4V到LLaVA的实战指南"
+slug: "multimodal-llm-apps"
 date: 2026-01-06T16:00:00+08:00
 draft: false
 author: "技术团队"

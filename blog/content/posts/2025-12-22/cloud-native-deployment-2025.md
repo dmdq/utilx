@@ -1,5 +1,6 @@
 ---
 title: "2025年云原生部署完全指南：从容器化到Serverless的现代化部署策略"
+slug: "cloud-native-deployment-2025"
 summary: "深入探讨2025年云原生部署的最新技术和最佳实践，包括Kubernetes、Serverless、微服务架构、DevOps流水线、可观测性和自动化运维，帮助企业构建高效、可扩展的云原生应用。"
 date: 2025-12-22T18:00:00+08:00
 draft: false

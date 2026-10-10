@@ -1,5 +1,6 @@
 ---
 title: "构建实时协作系统：从OT到CRDT的深度解析"
+slug: "realtime-collaboration-architecture"
 description: "深入探讨实时协作系统的核心技术，包括冲突解决算法(CRDT/OT)、实时同步架构、离线优先设计等。"
 author: "有条工具团队"
 date: 2025-12-31T15:00:00+08:00

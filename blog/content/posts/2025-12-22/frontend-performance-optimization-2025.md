@@ -1,5 +1,6 @@
 ---
 title: "2025年前端性能优化终极指南：从Core Web Vitals到用户体验优化"
+slug: "frontend-performance-optimization-2025"
 summary: "深入探讨2025年前端性能优化的最新技术和最佳实践，包括Core Web Vitals优化、代码分割、懒加载、缓存策略和现代Web性能工具的使用。"
 date: 2025-12-22T15:00:00+08:00
 draft: false

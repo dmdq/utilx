@@ -1,5 +1,6 @@
 ---
 title: "大规模微服务系统的服务治理实战：从服务发现到流量控制的完整体系"
+slug: "service-governance-microservices"
 date: 2026-01-05
 draft: false
 description: "深入探讨微服务治理的核心组件：服务发现、负载均衡、熔断降级、限流、灰度发布，以及如何在生产环境中落地 Istio Service Mesh"

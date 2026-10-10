@@ -1,5 +1,6 @@
 ---
 title: "WebAssembly在前端工程中的实践：突破JavaScript性能瓶颈"
+slug: "webassembly-practice"
 date: 2026-01-04T10:00:00+08:00
 draft: false
 author: "技术团队"

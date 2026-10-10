@@ -1,5 +1,6 @@
 ---
 title: "AI Agent智能体架构设计：从理论到实践"
+slug: "ai-agent-architecture"
 date: 2026-01-06T09:00:00+08:00
 draft: false
 author: "技术团队"

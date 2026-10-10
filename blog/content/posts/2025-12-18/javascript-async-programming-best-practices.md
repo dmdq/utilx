@@ -1,6 +1,6 @@
 ---
 title: "JavaScript异步编程最佳实践：从回调到Async/Await的完整指南"
-slug: "javascript-async-programming-best-practices"
+slug: "javascript-async-programming-best-practices-20251218"
 date: 2025-12-18T19:00:00+08:00
 lastmod: 2025-12-18T19:00:00+08:00
 summary: "深入探讨JavaScript异步编程的最佳实践，涵盖回调函数、Promise、Async/Await、错误处理、并发控制等关键概念，帮助开发者编写更优雅的异步代码。"

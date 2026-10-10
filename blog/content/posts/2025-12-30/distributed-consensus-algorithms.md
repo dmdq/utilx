@@ -1,5 +1,6 @@
 ---
 title: "分布式系统一致性算法深度解析：从Paxos到Raft"
+slug: "distributed-consensus-algorithms"
 summary: "深入探讨分布式系统中的核心一致性算法，包括Paxos、Raft、EPaxOS等，理解其工作原理、应用场景和实现细节。"
 date: 2025-12-30T10:00:00+08:00
 draft: false

@@ -1,5 +1,6 @@
 ---
 title: "数据库优化与分布式存储：构建高性能数据架构"
+slug: "database-optimization-distributed-storage"
 description: "深入探讨数据库优化技巧和分布式存储架构，涵盖索引优化、查询优化、分库分表、分布式数据库、缓存策略等核心主题。"
 author: "有条工具团队"
 date: 2025-12-30T15:00:00+08:00

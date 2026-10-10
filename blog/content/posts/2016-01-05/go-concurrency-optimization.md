@@ -1,5 +1,6 @@
 ---
 title: "Go语言高并发服务性能优化实战：从理论到落地的完整指南"
+slug: "go-concurrency-optimization"
 date: 2026-01-05
 draft: false
 description: "深入剖析Go语言并发模型，详细介绍goroutine、channel、sync包的使用技巧，以及内存优化、GC调优、性能分析工具的实战应用"

@@ -1,5 +1,6 @@
 ---
 title: "WebAssembly性能优化实践：突破Web应用性能瓶颈"
+slug: "webassembly-performance-optimization"
 summary: "深入探讨WebAssembly的性能优化技巧，从内存管理到SIMD优化，帮助开发者构建高性能的Web应用。"
 date: 2025-12-30T09:00:00+08:00
 draft: false

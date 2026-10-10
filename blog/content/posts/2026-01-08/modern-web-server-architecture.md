@@ -1,5 +1,6 @@
 ---
 title: "现代Web服务器架构：从单体到微服务的演进之路"
+slug: "modern-web-server-architecture"
 date: 2026-01-08T17:00:00+08:00
 draft: false
 author: "技术团队"

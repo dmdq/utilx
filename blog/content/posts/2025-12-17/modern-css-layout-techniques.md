@@ -1,6 +1,6 @@
 ---
 title: "现代CSS布局技巧：Flexbox、Grid与容器的完美结合"
-slug: "modern-css-layout-techniques"
+slug: "modern-css-layout-techniques-20251217"
 date: 2025-12-17T13:00:00+08:00
 draft: false
 tags: ['CSS', '布局', 'Flexbox', 'Grid', '响应式']

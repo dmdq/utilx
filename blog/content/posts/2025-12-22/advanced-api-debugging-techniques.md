@@ -1,5 +1,6 @@
 ---
 title: "高级API调试技术：从接口测试到性能监控的完整调试指南"
+slug: "advanced-api-debugging-techniques"
 summary: "深入探讨现代API调试的高级技术和最佳实践，包括自动化测试、性能监控、错误追踪、安全调试和调试工具的使用，帮助开发者快速定位和解决API问题。"
 date: 2025-12-22T16:00:00+08:00
 draft: false

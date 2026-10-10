@@ -1,5 +1,6 @@
 ---
 title: "数据库慢查询优化的方法论与实践：从索引到SQL重写的完整指南"
+slug: "database-slow-query-optimization"
 date: 2026-01-05
 draft: false
 description: "深入剖析数据库慢查询的成因与优化方法，详细介绍执行计划分析、索引优化策略、SQL重写技巧，以及MySQL/PostgreSQL的实战案例"

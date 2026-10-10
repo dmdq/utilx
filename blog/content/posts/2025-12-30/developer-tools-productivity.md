@@ -1,5 +1,6 @@
 ---
 title: "开发者工具完全指南：提升编程效率的实用工具集"
+slug: "developer-tools-productivity"
 description: "全面介绍开发者必备工具，涵盖代码编辑器、调试工具、版本控制、API测试等，帮助开发者大幅提升工作效率。"
 author: "有条工具团队"
 date: 2025-12-30T19:00:00+08:00

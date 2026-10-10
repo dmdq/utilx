@@ -1,5 +1,6 @@
 ---
 title: "API安全最佳实践：构建可信赖的API接口"
+slug: "api-security-best-practices"
 summary: "全面解析API安全的方方面面，包括身份认证、授权控制、数据加密、输入验证、速率限制等，帮助你构建安全可靠的API服务。"
 date: 2025-12-25T18:00:00+08:00
 draft: false

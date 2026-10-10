@@ -1,5 +1,6 @@
 ---
 title: "存算一体架构：打破冯·诺依曼瓶颈的计算革命"
+slug: "compute-in-memory"
 date: 2026-01-07T12:00:00+08:00
 draft: false
 author: "技术团队"

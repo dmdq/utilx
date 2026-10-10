@@ -1,5 +1,6 @@
 ---
 title: "现代前端架构深度解析：构建可扩展的大型应用"
+slug: "modern-frontend-architecture-deep-dive"
 description: "深入探讨现代前端架构设计，包括微前端、模块联邦、状态管理、性能优化等核心主题，帮助开发者构建可维护、可扩展的大型前端应用。"
 author: "有条工具团队"
 date: 2025-12-30T10:00:00+08:00

@@ -1,5 +1,6 @@
 ---
 title: "营销归因与ROI分析：科学衡量每一分营销投入"
+slug: "marketing-attribution-roi-analysis"
 description: "全面解析营销归因模型和ROI分析方法，从多触点归因、LTV计算到预算优化，帮助企业科学评估营销效果，优化投入产出比。"
 author: "有条工具团队"
 date: 2025-12-23T18:00:00+08:00

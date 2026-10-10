@@ -1,5 +1,6 @@
 ---
 title: "现代前端开发调试技巧：从Console到DevTools的完整指南"
+slug: "modern-frontend-debugging-techniques"
 summary: "深入探讨现代前端开发中的调试技巧，包括浏览器DevTools高级功能、Source Map配置、断点调试、性能分析和常见问题排查方法。"
 date: 2025-12-22T09:00:00+08:00
 draft: false

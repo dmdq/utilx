@@ -1,5 +1,6 @@
 ---
 title: "Web可访问性设计实践：构建人人可用的数字产品"
+slug: "accessibility-design-practice"
 summary: "深入探讨Web可访问性（a11y）的核心原则、技术实现和测试方法，帮助你构建对所有人都友好的、符合WCAG标准的无障碍网站。"
 date: 2025-12-25T17:30:00+08:00
 draft: false

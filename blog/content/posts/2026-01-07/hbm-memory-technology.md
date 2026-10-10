@@ -1,5 +1,6 @@
 ---
 title: "HBM高带宽内存技术：从HBM3到HBM4的演进之路"
+slug: "hbm-memory-technology"
 date: 2026-01-07T11:00:00+08:00
 draft: false
 author: "技术团队"

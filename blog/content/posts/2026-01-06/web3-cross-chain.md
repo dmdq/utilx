@@ -1,5 +1,6 @@
 ---
 title: "区块链跨链技术深度解析：从原子交换到轻客户端验证"
+slug: "web3-cross-chain"
 date: 2026-01-06T14:00:00+08:00
 draft: false
 author: "技术团队"

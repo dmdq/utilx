@@ -1,5 +1,6 @@
 ---
 title: "GitHub Actions 实战指南：从入门到精通的完整CI/CD流水线"
+slug: "github-actions-complete-guide"
 summary: "深入讲解GitHub Actions的核心概念、工作流语法和最佳实践，帮助你构建高效的自动化CI/CD流水线。"
 date: 2026-01-09T08:00:00+08:00
 draft: false

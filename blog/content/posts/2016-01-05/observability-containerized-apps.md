@@ -1,5 +1,6 @@
 ---
 title: "容器化应用的可观测性架构设计：Metrics、Tracing、Logging 的完整实践"
+slug: "observability-containerized-apps"
 date: 2026-01-05
 draft: false
 description: "深入探讨云原生时代的可观测性体系，详细介绍 Prometheus + Grafana + Jaeger + Loki 的组合使用，以及如何在 Kubernetes 环境下构建完整的监控体系"

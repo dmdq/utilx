@@ -1,5 +1,6 @@
 ---
 title: "可观测性3.0：AI驱动的智能监控与故障预测"
+slug: "observability-3-ai-driven"
 description: "探讨可观测性的演进，从传统监控到AI增强的智能运维，包括异常检测、根因分析、容量预测等。"
 author: "有条工具团队"
 date: 2025-12-31T16:00:00+08:00

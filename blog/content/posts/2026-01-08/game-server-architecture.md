@@ -1,5 +1,6 @@
 ---
 title: "游戏服务器架构设计：从MMO到实时对战的完整指南"
+slug: "game-server-architecture"
 date: 2026-01-08T09:00:00+08:00
 draft: false
 author: "技术团队"

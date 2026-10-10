@@ -1,5 +1,6 @@
 ---
 title: "容器部署最佳实践：从Docker到Kubernetes的完整部署指南"
+slug: "container-deployment-best-practices"
 summary: "深入探讨现代容器化部署的最佳实践，包括Docker容器化、Docker Compose编排、Kubernetes集群管理、CI/CD集成和监控告警，帮助企业构建可靠的容器化应用部署流程。"
 date: 2025-12-22T12:00:00+08:00
 draft: false

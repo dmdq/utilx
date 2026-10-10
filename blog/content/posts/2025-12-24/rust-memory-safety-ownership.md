@@ -1,5 +1,6 @@
 ---
 title: "Rust内存安全与所有权机制深度解析：零成本抽象的实现原理"
+slug: "rust-memory-safety-ownership"
 description: "深入探讨Rust的核心特性：所有权系统、借用检查、生命周期等内存安全机制，理解Rust如何在不使用垃圾回收的情况下实现内存安全，以及零成本抽象的设计哲学。"
 author: "有条工具团队"
 date: 2025-12-24T12:00:00+08:00

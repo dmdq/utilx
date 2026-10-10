@@ -1,5 +1,6 @@
 ---
 title: "游戏引擎深度对比：Unity vs Unreal vs Godot全方位解析"
+slug: "game-engine-comparison"
 date: 2026-01-08T11:00:00+08:00
 draft: false
 author: "技术团队"

@@ -1,5 +1,6 @@
 ---
 title: "Vibe Coding：下一代编程范式的崛起与实践"
+slug: "vibe-coding-next-generation-paradigm"
 summary: "探索Vibe Coding这一新兴编程范式，如何通过直觉驱动、AI辅助和流畅体验重新定义开发方式，让编程回归创造的本质。"
 date: 2025-12-25T10:00:00+08:00
 draft: false

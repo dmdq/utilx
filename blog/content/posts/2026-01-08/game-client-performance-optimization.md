@@ -1,5 +1,6 @@
 ---
 title: "游戏客户端性能优化指南：从帧率到内存的全方位优化"
+slug: "game-client-performance-optimization"
 date: 2026-01-08T12:00:00+08:00
 draft: false
 author: "技术团队"

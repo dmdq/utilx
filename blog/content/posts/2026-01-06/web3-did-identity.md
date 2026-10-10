@@ -1,5 +1,6 @@
 ---
 title: "WEB3去中心化身份（DID）技术深度解析"
+slug: "web3-did-identity"
 date: 2026-01-06T11:00:00+08:00
 draft: false
 author: "技术团队"

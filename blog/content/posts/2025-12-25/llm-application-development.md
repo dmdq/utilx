@@ -1,5 +1,6 @@
 ---
 title: "LLM应用开发实战：从原型到生产部署的完整指南"
+slug: "llm-application-development"
 summary: "深入探讨大语言模型应用开发的全流程，包括模型选择、提示工程、API设计、性能优化和生产部署等实战技巧。"
 date: 2025-12-25T22:00:00+08:00
 draft: false

@@ -1,5 +1,6 @@
 ---
 title: "CI/CD流水线设计最佳实践：从构建到部署的完整优化指南"
+slug: "cicd-pipeline-best-practices"
 summary: "深入探讨CI/CD流水线设计的核心原则、性能优化策略和安全实践，帮助你构建高效可靠的生产级持续集成交付系统。"
 date: 2026-01-09T10:00:00+08:00
 draft: false

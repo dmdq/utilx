@@ -1,5 +1,6 @@
 ---
 title: "DevOps与CI/CD完全指南：构建高效的软件交付流水线"
+slug: "devops-cicd-complete-guide"
 description: "深入探讨DevOps实践和CI/CD流水线设计，涵盖持续集成、持续部署、基础设施即代码、监控告警等核心主题，帮助团队构建高效的软件交付体系。"
 author: "有条工具团队"
 date: 2025-12-30T13:00:00+08:00

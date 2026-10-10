@@ -1,5 +1,6 @@
 ---
 title: "前端监控与错误追踪实战指南"
+slug: "frontend-monitoring"
 date: 2026-01-04T16:00:00+08:00
 draft: false
 author: "技术团队"

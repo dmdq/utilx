@@ -1,5 +1,6 @@
 ---
 title: "DDoS防护完全指南：从原理分析到实战部署的完整防护体系"
+slug: "ddos-protection-comprehensive-guide"
 summary: "全面解析DDoS攻击的类型、原理和防护策略，包括网络层防护、应用层防护、云原生安全方案和应急响应流程，帮助企业构建多层次、智能化的DDoS防护体系。"
 date: 2025-12-22T13:00:00+08:00
 draft: false

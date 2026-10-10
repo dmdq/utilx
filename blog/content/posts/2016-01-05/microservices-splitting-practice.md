@@ -1,5 +1,6 @@
 ---
 title: "微服务架构拆分实践与反思：从单体到分布式的演进之路"
+slug: "microservices-splitting-practice"
 date: 2026-01-05
 draft: false
 description: "深入探讨微服务架构拆分的实践方法、常见陷阱以及如何避免过度设计，基于真实项目的经验总结"

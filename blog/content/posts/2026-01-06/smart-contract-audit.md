@@ -1,5 +1,6 @@
 ---
 title: "智能合约安全审计：从漏洞分析到最佳实践"
+slug: "smart-contract-audit"
 date: 2026-01-06T15:00:00+08:00
 draft: false
 author: "技术团队"

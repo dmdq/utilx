@@ -1,5 +1,6 @@
 ---
 title: "云原生架构完全指南：Kubernetes与微服务实践"
+slug: "cloud-native-architecture-2025"
 description: "深入探讨云原生架构设计，涵盖Kubernetes、服务网格、容器化、DevOps等核心主题，帮助团队构建弹性、可扩展的云原生应用。"
 author: "有条工具团队"
 date: 2025-12-30T17:00:00+08:00

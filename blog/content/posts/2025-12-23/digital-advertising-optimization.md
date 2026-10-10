@@ -1,5 +1,6 @@
 ---
 title: "数字广告投放完全指南：从0到1打造高效广告投放体系"
+slug: "digital-advertising-optimization"
 description: "全面解析数字广告投放策略，涵盖Facebook、Google、抖音等主流平台的广告优化技巧，教你如何用数据驱动的方法降低获客成本，提升广告ROI。"
 author: "有条工具团队"
 date: 2025-12-23T11:00:00+08:00

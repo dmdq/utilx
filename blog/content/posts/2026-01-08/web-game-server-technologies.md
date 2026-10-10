@@ -1,5 +1,6 @@
 ---
 title: "Web游戏服务器技术栈对比：Node.js vs Go vs Rust全方位分析"
+slug: "web-game-server-technologies"
 date: 2026-01-08T13:00:00+08:00
 draft: false
 author: "技术团队"

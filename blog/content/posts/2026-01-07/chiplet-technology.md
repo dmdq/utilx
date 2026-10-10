@@ -1,5 +1,6 @@
 ---
 title: "芯粒技术：打破摩尔定律的芯片设计革命"
+slug: "chiplet-technology"
 date: 2026-01-07T11:00:00+08:00
 draft: false
 author: "技术团队"

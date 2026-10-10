@@ -1,5 +1,6 @@
 ---
 title: "大数据处理框架深度对比：Spark vs Flink vs Storm"
+slug: "bigdata-framework-comparison"
 summary: "全面对比主流大数据处理框架的特点、性能和使用场景，帮助你根据业务需求选择最合适的技术方案。"
 date: 2025-12-25T20:00:00+08:00
 draft: false

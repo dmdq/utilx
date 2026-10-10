@@ -1,5 +1,6 @@
 ---
 title: "AI芯片架构：从GPU到TPU再到专用加速器的演进"
+slug: "ai-chip-architecture"
 date: 2026-01-07T18:00:00+08:00
 draft: false
 author: "技术团队"

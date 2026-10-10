@@ -1,5 +1,6 @@
 ---
 title: "数据库分库分表架构设计指南：从单表到百亿级数据的演进之路"
+slug: "database-sharding-guide"
 date: 2026-01-05
 draft: false
 description: "深入剖析数据库水平拆分的完整方案，详细介绍分库分表的路由策略、数据迁移、扩容方案，以及 ShardingSphere、Vitess 等中间件的实战应用"

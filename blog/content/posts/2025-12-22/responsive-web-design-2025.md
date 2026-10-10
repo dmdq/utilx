@@ -1,5 +1,6 @@
 ---
 title: "2025年响应式Web设计完全指南：从移动优先到自适应布局的最佳实践"
+slug: "responsive-web-design-2025"
 summary: "全面介绍2025年响应式Web设计的最新技术和最佳实践，包括CSS Grid、Flexbox、Container Queries、现代媒体查询和跨设备适配策略，帮助设计师和开发者创建完美的多设备体验。"
 date: 2025-12-22T17:00:00+08:00
 draft: false

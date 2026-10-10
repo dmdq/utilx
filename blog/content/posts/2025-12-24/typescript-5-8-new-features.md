@@ -1,5 +1,6 @@
 ---
 title: "TypeScript 5.8新特性详解：类型系统进化与开发体验升级"
+slug: "typescript-5-8-new-features"
 description: "全面解析TypeScript 5.8带来的新特性，包括装饰器标准化、类型系统增强、性能优化、以及开发者工具改进，帮助开发者掌握最新类型编程技巧。"
 author: "有条工具团队"
 date: 2025-12-24T10:00:00+08:00

@@ -1,5 +1,6 @@
 ---
 title: "LLM驱动的软件工程2.0：从编码到架构的全面变革"
+slug: "llm-driven-software-engineering"
 description: "深入探讨大语言模型时代软件工程方法论的演进，从AI辅助编程到人机协作开发模式，分析开发角色转变和核心技能重构。"
 author: "有条工具团队"
 date: 2025-12-31T09:00:00+08:00

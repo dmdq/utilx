@@ -1,6 +1,6 @@
 ---
 title: "Docker 容器化部署完全指南"
-slug: "docker-containerization-guide"
+slug: "docker-containerization-guide-20251207"
 date: 2025-12-07T10:00:00+08:00
 draft: false
 tags: ['Docker', '容器化', 'DevOps', '部署']

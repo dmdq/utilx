@@ -1,5 +1,6 @@
 ---
 title: "AI Agent架构设计模式：从单一智能到群体协作"
+slug: "ai-agent-architecture-patterns"
 summary: "深入探讨AI Agent的架构设计模式，涵盖ReAct、CoT、多智能体协作等核心模式，帮助开发者构建更强大的AI应用系统。"
 date: 2025-12-30T08:00:00+08:00
 draft: false

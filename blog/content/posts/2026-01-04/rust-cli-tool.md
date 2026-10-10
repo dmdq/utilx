@@ -1,5 +1,6 @@
 ---
 title: "用Rust构建高性能CLI工具：从零到部署完整指南"
+slug: "rust-cli-tool"
 date: 2026-01-04T11:00:00+08:00
 draft: false
 author: "技术团队"

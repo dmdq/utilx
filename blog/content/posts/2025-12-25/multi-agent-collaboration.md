@@ -1,5 +1,6 @@
 ---
 title: "多智能体协作系统：构建团队协作式AI应用"
+slug: "multi-agent-collaboration"
 summary: "深入探讨多Agent协作系统的设计架构、通信机制和协调策略，让多个AI智能体像人类团队一样高效协作完成复杂任务。"
 date: 2025-12-25T16:00:00+08:00
 draft: false

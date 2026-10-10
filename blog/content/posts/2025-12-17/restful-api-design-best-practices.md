@@ -1,6 +1,6 @@
 ---
 title: "RESTful API设计最佳实践：从规范到生产环境的完整指南"
-slug: "restful-api-design-best-practices"
+slug: "restful-api-design-best-practices-20251217"
 date: 2025-12-17T15:00:00+08:00
 draft: false
 tags: ['API设计', 'RESTful', '后端开发', '架构设计', '最佳实践']

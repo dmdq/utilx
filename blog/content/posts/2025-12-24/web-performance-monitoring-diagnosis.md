@@ -1,5 +1,6 @@
 ---
 title: "Web性能监控与诊断实战：从Core Web Vitals到性能优化"
+slug: "web-performance-monitoring-diagnosis"
 description: "全面介绍Web性能监控体系，包括Core Web Vitals指标、性能API使用、性能数据采集与分析、以及性能优化策略，帮助构建高性能Web应用。"
 author: "有条工具团队"
 date: 2025-12-24T13:00:00+08:00

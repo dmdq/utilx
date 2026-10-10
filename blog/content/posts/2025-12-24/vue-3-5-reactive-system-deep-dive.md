@@ -1,5 +1,6 @@
 ---
 title: "Vue 3.5响应式系统深度解析：Proxy与Reactivity API的实现原理"
+slug: "vue-3-5-reactive-system-deep-dive"
 description: "深入探索Vue 3.5响应式系统的内部机制，包括Proxy代理原理、Reactivity API使用方法、响应式追踪与触发机制，以及性能优化最佳实践。"
 author: "有条工具团队"
 date: 2025-12-24T08:00:00+08:00

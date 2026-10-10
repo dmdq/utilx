@@ -1,5 +1,6 @@
 ---
 title: "Serverless架构与前端部署：现代化部署策略"
+slug: "serverless-deployment"
 date: 2026-01-04T19:00:00+08:00
 draft: false
 author: "技术团队"

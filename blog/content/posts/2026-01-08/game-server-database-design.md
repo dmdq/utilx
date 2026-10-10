@@ -1,5 +1,6 @@
 ---
 title: "游戏服务器数据库设计：从玩家数据到排行榜的完整方案"
+slug: "game-server-database-design"
 date: 2026-01-08T18:00:00+08:00
 draft: false
 author: "技术团队"

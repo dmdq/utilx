@@ -1,5 +1,6 @@
 ---
 title: "移动应用营销与ASO实战：从0到100万用户的增长路径"
+slug: "mobile-app-marketing-aso"
 description: "全面解析移动应用营销策略，从ASO优化、应用商店广告、 influencer营销到裂变增长，分享打造爆款应用的实战经验和方法论。"
 author: "有条工具团队"
 date: 2025-12-23T16:00:00+08:00

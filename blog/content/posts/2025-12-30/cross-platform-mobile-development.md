@@ -1,5 +1,6 @@
 ---
 title: "跨平台移动开发完全指南：React Native与Flutter深度实践"
+slug: "cross-platform-mobile-development"
 description: "深入探讨React Native和Flutter两大跨平台移动开发框架，涵盖架构设计、性能优化、原生模块开发、状态管理等核心主题。"
 author: "有条工具团队"
 date: 2025-12-30T16:00:00+08:00

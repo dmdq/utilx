@@ -1,5 +1,6 @@
 ---
 title: "技术债务管理2.0：从负担到战略资产的重构思维"
+slug: "technical-debt-management"
 description: "重新定义技术债务，探讨量化评估方法、偿还策略，以及如何将重构转化为技术投资。"
 author: "有条工具团队"
 date: 2025-12-31T17:00:00+08:00

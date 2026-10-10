@@ -1,5 +1,6 @@
 ---
 title: "分布式系统一致性保障方案设计：从理论到落地的完整指南"
+slug: "distributed-consistency-patterns"
 date: 2026-01-05
 draft: false
 description: "深入分析分布式系统中的一致性问题，对比 CAP 理论的实践取舍，介绍 Saga、TCC、2PC/3PC、本地消息表等主流方案的实现细节与适用场景"

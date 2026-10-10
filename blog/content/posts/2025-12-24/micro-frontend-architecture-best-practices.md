@@ -1,5 +1,6 @@
 ---
 title: "微前端架构设计最佳实践：从理论到落地的完整指南"
+slug: "micro-frontend-architecture-best-practices"
 description: "深入探讨微前端架构的设计原理、技术选型、落地实践以及常见问题解决方案，帮助团队构建可扩展、可维护的大型前端应用。"
 author: "有条工具团队"
 date: 2025-12-24T14:00:00+08:00

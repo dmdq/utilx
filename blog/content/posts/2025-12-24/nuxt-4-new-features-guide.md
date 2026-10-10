@@ -1,5 +1,6 @@
 ---
 title: "Nuxt 4新特性完全指南：下一代Vue全栈框架的进化之路"
+slug: "nuxt-4-new-features-guide"
 description: "全面解析Nuxt 4带来的重大更新，包括新的项目结构、服务端引擎改进、TypeScript增强、性能优化以及迁移指南，帮助开发者快速掌握下一代全栈框架。"
 author: "有条工具团队"
 date: 2025-12-24T09:00:00+08:00

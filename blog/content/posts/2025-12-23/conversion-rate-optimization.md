@@ -1,5 +1,6 @@
 ---
 title: "转化率优化（CRO）完全指南：科学方法提升网站转化"
+slug: "conversion-rate-optimization"
 description: "系统讲解转化率优化的方法论，从数据分析、用户体验优化、A/B测试到心理学应用，帮助你科学地提升网站转化率，降低获客成本。"
 author: "有条工具团队"
 date: 2025-12-23T15:00:00+08:00

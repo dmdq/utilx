@@ -1,5 +1,6 @@
 ---
 title: "AI晶体管技术：从FinFET到AIFET的革命性演进"
+slug: "ai-transistor-technology"
 date: 2026-01-07T09:00:00+08:00
 draft: false
 author: "技术团队"

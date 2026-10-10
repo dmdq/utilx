@@ -1,5 +1,6 @@
 ---
 title: "分布式游戏服务器设计：从架构到实践的完整指南"
+slug: "distributed-game-server-design"
 date: 2026-01-08T14:00:00+08:00
 draft: false
 author: "技术团队"

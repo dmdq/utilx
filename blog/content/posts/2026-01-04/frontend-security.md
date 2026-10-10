@@ -1,5 +1,6 @@
 ---
 title: "前端安全防护最佳实践：构建安全的Web应用"
+slug: "frontend-security"
 date: 2026-01-04T18:00:00+08:00
 draft: false
 author: "技术团队"

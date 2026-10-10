@@ -1,5 +1,6 @@
 ---
 title: "AI Agent与Web3融合：构建自主链上智能体"
+slug: "ai-agent-web3-integration"
 date: 2026-01-06T18:00:00+08:00
 draft: false
 author: "技术团队"

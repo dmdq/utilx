@@ -1,5 +1,6 @@
 ---
 title: "响应式设计完全指南：构建适配所有设备的完美体验"
+slug: "responsive-design-complete-guide"
 summary: "深入探讨响应式设计的核心原理、布局策略、媒体查询技巧和移动端适配方案，帮助你构建在各种设备上都完美展示的网站。"
 date: 2025-12-25T18:30:00+08:00
 draft: false

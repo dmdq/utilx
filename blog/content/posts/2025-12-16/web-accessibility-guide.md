@@ -1,6 +1,6 @@
 ---
 title: "Web无障碍完全指南：构建人人可访问的网站"
-slug: "web-accessibility-guide"
+slug: "web-accessibility-guide-20251216"
 date: 2025-12-16
 summary: "全面介绍Web无障碍(WA)的核心原则和实施方法，包括语义化HTML、ARIA、键盘导航、色彩对比等，帮助开发者构建包容性的网站应用。"
 author: "有条工具团队"

@@ -1,5 +1,6 @@
 ---
 title: 'Next.js 15服务端组件深度解析：从React Server Components到全栈开发的范式转移'
+slug: "nextjs-server-components-deep-dive"
 description: '深入解析Next.js 15中的React Server Components实现原理，探讨服务端组件的渲染机制、序列化策略、与客户端组件的交互模式，以及在全栈开发中的最佳实践，从实现层面理解这一革命性的范式转移。'
 publishedTime: '2025-01-09T16:00:00.000Z'
 authors:

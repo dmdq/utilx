@@ -1,6 +1,6 @@
 ---
 title: "前端性能优化实战指南：从加载到渲染的全方位优化"
-slug: "frontend-performance-optimization"
+slug: "frontend-performance-optimization-20251217"
 date: 2025-12-17T12:00:00+08:00
 draft: false
 tags: ['性能优化', '前端', 'Web性能', '优化技巧']

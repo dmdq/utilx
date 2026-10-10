@@ -1,5 +1,6 @@
 ---
 title: "大模型RAG技术实战：构建企业级知识问答系统"
+slug: "llm-rag-technology"
 date: 2026-01-06T10:00:00+08:00
 draft: false
 author: "技术团队"

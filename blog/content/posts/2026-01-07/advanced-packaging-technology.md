@@ -1,5 +1,6 @@
 ---
 title: "先进封装技术：从2.5D到3D集成的演进"
+slug: "advanced-packaging-technology"
 date: 2026-01-07T17:00:00+08:00
 draft: false
 author: "技术团队"

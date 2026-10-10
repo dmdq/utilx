@@ -1,5 +1,6 @@
 ---
 title: "Jenkins vs GitLab CI：两大CI/CD平台的深度对比与选型指南"
+slug: "jenkins-vs-gitlab-ci-comparison"
 summary: "详细对比Jenkins和GitLab CI的架构差异、功能特性、使用场景和性能表现，帮助你做出正确的技术选型决策。"
 date: 2026-01-09T09:00:00+08:00
 draft: false

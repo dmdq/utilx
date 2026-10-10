@@ -1,5 +1,6 @@
 ---
 title: "大模型微调实战：从LoRA到QLoRA的完整指南"
+slug: "llm-fine-tuning"
 date: 2026-01-06T13:00:00+08:00
 draft: false
 author: "技术团队"

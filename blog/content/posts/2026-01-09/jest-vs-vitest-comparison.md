@@ -1,5 +1,6 @@
 ---
 title: "Jest vs Vitest：现代前端测试框架的全面对比与迁移指南"
+slug: "jest-vs-vitest-comparison"
 summary: "深入对比Jest和Vitest的性能、功能、生态系统，提供完整的迁移方案和最佳实践，帮助团队选择最适合的测试框架。"
 date: 2026-01-09T11:00:00+08:00
 draft: false

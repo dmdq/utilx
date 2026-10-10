@@ -1,5 +1,6 @@
 ---
 title: "游戏客户端网络同步技术：从状态同步到帧同步的完整指南"
+slug: "game-client-network-synchronization"
 date: 2026-01-08T16:00:00+08:00
 draft: false
 author: "技术团队"

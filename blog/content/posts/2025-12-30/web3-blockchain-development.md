@@ -1,5 +1,6 @@
 ---
 title: "Web3与区块链开发完全指南：从智能合约到DApp"
+slug: "web3-blockchain-development"
 description: "深入探讨Web3与区块链开发，涵盖Solidity智能合约、Ethereum、DeFi、NFT等核心主题，帮助开发者构建去中心化应用。"
 author: "有条工具团队"
 date: 2025-12-30T18:00:00+08:00

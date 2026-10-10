@@ -1,5 +1,6 @@
 ---
 title: "AI Agent设计模式：构建智能系统的核心方法论"
+slug: "ai-agent-design-patterns"
 summary: "深入解析AI Agent的设计模式和实现方法，包括ReAct模式、工具使用、记忆系统、规划与推理，以及如何构建可靠的Agent应用。"
 date: 2025-12-25T12:00:00+08:00
 draft: false

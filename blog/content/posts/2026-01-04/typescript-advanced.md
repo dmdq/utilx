@@ -1,5 +1,6 @@
 ---
 title: "TypeScript类型体操进阶：掌握高级类型系统"
+slug: "typescript-advanced"
 date: 2026-01-04T14:00:00+08:00
 draft: false
 author: "技术团队"

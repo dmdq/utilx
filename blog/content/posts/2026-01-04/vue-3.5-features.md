@@ -1,5 +1,6 @@
 ---
 title: "Vue 3.5新特性深度解析：响应式系统的重大升级"
+slug: "vue-3.5-features"
 date: 2026-01-04T12:00:00+08:00
 draft: false
 author: "技术团队"

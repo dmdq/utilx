@@ -1,5 +1,6 @@
 ---
 title: "AI与机器学习工程化实践：从模型到生产系统的完整指南"
+slug: "ai-ml-engineering-best-practices"
 description: "深入探讨AI/ML系统的工程化实践，涵盖模型部署、MLOps、特征工程、模型监控、A/B测试等核心主题，帮助工程师构建可扩展的生产级AI系统。"
 author: "有条工具团队"
 date: 2025-12-30T12:00:00+08:00

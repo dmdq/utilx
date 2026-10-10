@@ -1,5 +1,6 @@
 ---
 title: "API安全防护与鉴权机制：构建安全可靠的RESTful API"
+slug: "api-security-authentication-guide"
 description: "深入探讨API安全的各个方面，包括身份认证、授权机制、数据加密、防止常见攻击、安全最佳实践等，帮助开发者构建安全可靠的API系统。"
 author: "有条工具团队"
 date: 2025-12-24T16:00:00+08:00

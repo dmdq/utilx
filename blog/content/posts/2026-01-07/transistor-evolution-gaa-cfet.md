@@ -1,5 +1,6 @@
 ---
 title: "晶体管演进：从FinFET到GAA再到CFET的革命之路"
+slug: "transistor-evolution-gaa-cfet"
 date: 2026-01-07T16:00:00+08:00
 draft: false
 author: "技术团队"

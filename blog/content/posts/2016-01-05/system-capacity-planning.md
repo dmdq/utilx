@@ -1,5 +1,6 @@
 ---
 title: "系统容量规划与性能测试实践：从QPS评估到全链路压测的完整指南"
+slug: "system-capacity-planning"
 date: 2026-01-05
 draft: false
 description: "深入剖析系统容量规划的方法论，详细介绍QPS预估、性能测试工具、压测方案设计、全链路压测实施，以及生产环境容量评估的实战案例"

@@ -1,5 +1,6 @@
 ---
 title: "WebCrypto API实战：前端加密与安全通信完全指南"
+slug: "webcrypto-api"
 date: 2026-01-04T15:00:00+08:00
 draft: false
 author: "技术团队"

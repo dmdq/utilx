@@ -1,5 +1,6 @@
 ---
 title: "Nuxt 4服务端渲染性能优化实战指南"
+slug: "nuxt-4-ssr"
 date: 2026-01-04T13:00:00+08:00
 draft: false
 author: "技术团队"

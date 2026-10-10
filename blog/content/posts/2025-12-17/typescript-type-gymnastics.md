@@ -1,6 +1,6 @@
 ---
 title: "TypeScript类型体操：从基础到高级的30个练习"
-slug: "typescript-type-gymnastics"
+slug: "typescript-type-gymnastics-20251217"
 date: 2025-12-17T11:00:00+08:00
 draft: false
 tags: ['TypeScript', '类型体操', '类型编程', '高级技巧']

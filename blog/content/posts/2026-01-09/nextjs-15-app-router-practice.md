@@ -1,5 +1,6 @@
 ---
 title: '2025年Next.js 15 App Router实战指南：从零构建现代化Web应用'
+slug: "nextjs-15-app-router-practice"
 description: '深入探讨Next.js 15 App Router的实战应用，包括路由架构、服务器组件、数据获取、布局系统、中间件、元数据优化等核心技术，结合实际案例从零构建完整的现代化Web应用。'
 publishedTime: '2025-01-09T15:00:00.000Z'
 authors:

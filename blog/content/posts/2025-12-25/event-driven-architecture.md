@@ -1,5 +1,6 @@
 ---
 title: "事件驱动架构：构建松耦合、高扩展系统的核心范式"
+slug: "event-driven-architecture"
 summary: "深入解析事件驱动架构的设计原理、实现模式和技术选型，帮助你构建真正解耦、可扩展的后端系统。"
 date: 2025-12-25T13:00:00+08:00
 draft: false

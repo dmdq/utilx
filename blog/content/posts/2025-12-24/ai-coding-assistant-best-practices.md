@@ -1,5 +1,6 @@
 ---
 title: "AI编程助手最佳实践指南：提升开发效率的实战技巧"
+slug: "ai-coding-assistant-best-practices"
 description: "深入探讨如何有效使用AI编程助手（如Claude、GitHub Copilot、ChatGPT等），包括最佳实践、提示工程技巧、代码审查方法以及安全注意事项，帮助开发者最大化AI辅助编程的价值。"
 author: "有条工具团队"
 date: 2025-12-24T11:00:00+08:00

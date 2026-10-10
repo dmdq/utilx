@@ -1,6 +1,6 @@
 ---
 title: "React 性能优化实战：从理论到实践"
-slug: "react-performance-optimization"
+slug: "react-performance-optimization-20251213"
 date: 2025-12-13T10:30:00+08:00
 draft: false
 tags: ['React', '性能优化', '前端优化', '用户体验']

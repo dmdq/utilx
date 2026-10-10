@@ -625,7 +625,7 @@ const analyzeComplexity = () => {
     if (algorithmType.value === 'custom' || algorithmType.value === 'array') {
       // 分析数组操作
       if (codeLower.includes('includes') || codeLower.includes('contains')) {
-        timeComplexity = 'n'  // 简化分析
+        timeComplexity.value = 'n'  // 简化分析
       }
     }
 

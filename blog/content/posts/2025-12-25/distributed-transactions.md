@@ -1,5 +1,6 @@
 ---
 title: "分布式事务处理：从理论到实践的完整指南"
+slug: "distributed-transactions"
 summary: "深入解析分布式事务的挑战、解决方案和最佳实践，包括2PC、3PC、Saga、TCC等模式，帮助你在微服务架构中实现数据一致性。"
 date: 2025-12-25T15:00:00+08:00
 draft: false

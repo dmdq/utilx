@@ -1,5 +1,6 @@
 ---
 title: "Serverless 2.0：从函数计算到无运维的演进之路"
+slug: "serverless-2-evolution"
 description: "探讨Serverless架构的演进，包括容器化Serverless、长运行任务、状态管理等2025年最新发展和2026年趋势。"
 author: "有条工具团队"
 date: 2025-12-31T14:00:00+08:00

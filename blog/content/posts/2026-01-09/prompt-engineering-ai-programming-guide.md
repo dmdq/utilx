@@ -1,5 +1,6 @@
 ---
 title: '2025年AI辅助编程Prompt工程完全指南：从零到一的提示词构建方法'
+slug: "prompt-engineering-ai-programming-guide"
 description: '深入探讨AI辅助编程中的Prompt工程技术，包括提示词设计原则、上下文优化、Few-Shot学习、思维链CoT等高级技巧，结合Claude、GPT-4等大模型的实战应用，从零到一掌握Prompt构建方法。'
 publishedTime: '2025-01-09T14:00:00.000Z'
 authors:

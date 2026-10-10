@@ -1,5 +1,6 @@
 ---
 title: "高并发场景下的缓存架构演进：从单一 Redis 到多层缓存的实战之路"
+slug: "cache-architecture-evolution"
 date: 2026-01-05
 draft: false
 description: "深入剖析高并发系统中缓存架构的演进路径，详细介绍本地缓存、分布式缓存、多级缓存、缓存预热、缓存雪崩/击穿/穿透的解决方案"

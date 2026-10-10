@@ -1,5 +1,6 @@
 ---
 title: "CDN加速优化完全指南：从基础原理到高级配置实战"
+slug: "cdn-acceleration-optimization-guide"
 summary: "全面解析CDN加速技术的核心原理、配置方法和优化策略，包括缓存策略、边缘计算、安全防护和性能监控，帮助开发者构建高性能的全球内容分发网络。"
 date: 2025-12-22T11:00:00+08:00
 draft: false

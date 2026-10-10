@@ -1,6 +1,6 @@
 ---
 title: "Git进阶使用技巧：从基础到高级的实战指南"
-slug: "git-advanced-techniques"
+slug: "git-advanced-techniques-20251217"
 date: 2025-12-17T16:00:00+08:00
 draft: false
 tags: ['Git', '版本控制', '开发工具', '团队协作', '最佳实践']

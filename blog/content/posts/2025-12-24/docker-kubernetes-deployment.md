@@ -1,5 +1,6 @@
 ---
 title: "Docker与Kubernetes容器化部署：从零搭建生产级容器化系统"
+slug: "docker-kubernetes-deployment"
 description: "全面讲解Docker容器技术和Kubernetes编排系统，包括镜像构建、容器编排、服务发现、负载均衡、自动扩缩容以及CI/CD集成，帮助构建高可用的容器化部署方案。"
 author: "有条工具团队"
 date: 2025-12-24T15:00:00+08:00

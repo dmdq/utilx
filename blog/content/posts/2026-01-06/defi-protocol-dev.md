@@ -1,5 +1,6 @@
 ---
 title: "DeFi协议开发实战：从AMM到借贷平台的完整指南"
+slug: "defi-protocol-dev"
 date: 2026-01-06T17:00:00+08:00
 draft: false
 author: "技术团队"

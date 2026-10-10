@@ -1,0 +1,903 @@
+# 有条工具（Util.cn）
+
+> 免费在线工具箱：513 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+
+本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
+
+- [首页](https://www.util.cn/): 工具导航与推荐
+- [全部工具](https://www.util.cn/all/): 513 款工具完整目录
+- [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
+- [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
+- [技术博客](https://www.util.cn/blog/): 266 篇工具教程与实践文章
+
+## 工具分类
+
+- [随机决策（13款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
+- [计算工具（36款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
+- [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
+- [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
+- [时间日期（25款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
+- [文本处理（39款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
+- [网络工具（31款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
+- [图像处理（36款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
+- [开发辅助（69款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
+- [设计工具（51款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
+- [安全工具（26款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
+- [其他工具（23款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [健康工具（39款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
+- [金融工具（23款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
+- [文件工具（14款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
+
+## 随机决策
+
+- [随机骰子](https://www.util.cn/tools/random-dice/): 投掷虚拟骰子，支持多种面数和多个骰子
+- [随机扑克牌](https://www.util.cn/tools/random-cards/): 从牌堆中随机抽取扑克牌，支持多种玩法
+- [随机硬币](https://www.util.cn/tools/random-coin/): 抛硬币做决定，支持多次抛掷和统计
+- [随机吃什么](https://www.util.cn/tools/random-food/): 解决"吃什么"难题，随机推荐美食
+- [随机数字生成器](https://www.util.cn/tools/random-number-generator/): 生成随机数字，支持范围、排除、抽奖模式
+- [随机选择器](https://www.util.cn/tools/random-choice/): 从列表中随机选择一个或多个选项
+- [随机颜色生成](https://www.util.cn/tools/random-color/): 生成随机颜色和配色方案
+- [随机分队工具](https://www.util.cn/tools/random-team/): 随机将人员分成多个队伍
+- [随机密码生成（游戏版）](https://www.util.cn/tools/random-password-game/): 用游戏化的方式生成易记的随机密码
+- [随机名言/句子](https://www.util.cn/tools/random-quote/): 随机显示名言警句、电影台词或有趣句子
+- [随机日期生成](https://www.util.cn/tools/random-date/): 生成随机日期，用于测试、创意或决策
+- [随机姓名抽取](https://www.util.cn/tools/random-name-picker/): 从名单中随机抽取姓名，支持点名、抽奖
+- [随机大转盘](https://www.util.cn/tools/random-wheel/): 自定义奖项的转盘抽奖工具，支持编辑奖项内容和概率
+
+## 计算工具
+
+- [单位换算器](https://www.util.cn/tools/unit-converter/): 支持长度、重量、温度、面积、体积等多种单位类型的相互转换
+- [百分比计算器](https://www.util.cn/tools/percentage-calculator/): 计算百分比变化、百分比增减、占比等，支持正逆向计算
+- [科学计算器](https://www.util.cn/tools/scientific-calculator/): 高级数学运算，支持三角函数、对数、指数运算等科学计算，包含内存管理和历史记录
+- [矩阵计算器](https://www.util.cn/tools/matrix-calculator/): 矩阵运算工具，支持加减乘除、转置、求逆、行列式计算，适合线性代数学习
+- [统计学计算器](https://www.util.cn/tools/statistics-calculator/): 数据分析工具，支持描述统计、回归分析、概率分布、假设检验等统计计算
+- [日期时间计算器](https://www.util.cn/tools/datetime-calculator/): 日期间隔计算、工作日计算、时区转换、Unix时间戳转换等时间相关计算工具
+- [几何图形计算器](https://www.util.cn/tools/geometry-calculator/): 计算2D和3D图形的面积、周长、体积、表面积等几何属性，支持公式展示和单位转换
+- [进制转换计算器](https://www.util.cn/tools/number-base-calculator/): 二进制、八进制、十进制、十六进制互转，支持大数据处理、浮点数和补码计算
+- [分数计算器](https://www.util.cn/tools/fraction-calculator/): 分数加减乘除、约分、通分、小数转换等分数运算工具，支持混合数和假分数转换
+- [方程求解器](https://www.util.cn/tools/equation-solver/): 一次方程、二次方程、方程组求解，支持图像绘制、牛顿迭代法和数值方法
+- [概率计算器](https://www.util.cn/tools/probability-calculator/): 排列组合、概率分布、贝叶斯计算、概率树等概率统计工具，支持二项分布和正态分布
+- [财务比率计算器](https://www.util.cn/tools/financial-ratios-calculator/): 盈利能力、偿债能力、运营能力比率分析，支持图表展示、行业对比和财务健康评分
+- [折扣计算器](https://www.util.cn/tools/discount-calculator/): 计算折扣后价格、节省金额和折扣率，支持折扣率和折数输入
+- [小费计算器](https://www.util.cn/tools/tip-calculator/): 餐厅小费计算、分账计算、税率支持
+- [速度计算器](https://www.util.cn/tools/speed-calculator/): 速度/时间/距离互转、单位换算、平均速度计算
+- [贷款计算器](https://www.util.cn/tools/loan-calculator/): 等额本息/等额本金还款计算、利息分析
+- [GPA计算器](https://www.util.cn/tools/gpa-calculator/): 成绩绩点计算、加权平均、目标GPA规划
+- [年龄计算器](https://www.util.cn/tools/age-calculator/): 精确年龄计算、生日倒计时、星座生肖
+- [复数计算器](https://www.util.cn/tools/complex-number-calculator/): 复数四则运算、模幅角计算、极坐标转换
+- [向量计算器](https://www.util.cn/tools/vector-calculator/): 向量运算、点积叉积、角度计算、2D/3D支持
+- [油耗计算器](https://www.util.cn/tools/fuel-calculator/): 百公里油耗、油费计算、行程成本估算
+- [ROI计算器](https://www.util.cn/tools/roi-calculator/): 投资回报率、净现值NPV、内部收益率IRR、投资对比分析
+- [折旧计算器](https://www.util.cn/tools/depreciation-calculator/): 直线法、双倍余额递减法、年数总和法
+- [卡路里计算器](https://www.util.cn/tools/calories-calculator/): 基础代谢率、每日消耗、饮食热量计算
+- [大数计算器](https://www.util.cn/tools/big-number-calculator/): 超大整数精确计算、阶乘、幂运算
+- [数列计算器](https://www.util.cn/tools/sequence-calculator/): 等差等比数列求和、通项公式、数列生成
+- [比例计算器](https://www.util.cn/tools/proportion-calculator/): 正比例/反比例计算、比例缩放、配方调整
+- [销售税计算器](https://www.util.cn/tools/sales-tax-calculator/): 增值税计算、含税价/不含税价转换
+- [单价计算器](https://www.util.cn/tools/unit-price-calculator/): 单价对比、按重量/体积/尺寸换算
+- [排卵期计算器](https://www.util.cn/tools/ovulation-calculator/): 排卵期预测、受孕窗口、安全期计算
+- [瓷砖用量计算器](https://www.util.cn/tools/tile-calculator/): 输入铺贴面积与瓷砖规格，自动计算块数、损耗与整箱数，含常用规格速查
+- [壁纸用量计算器](https://www.util.cn/tools/wallpaper-calculator/): 按房间周长与墙高计算壁纸卷数，支持对花损耗与规格自定义，装修备料必备
+- [电器耗电量计算器](https://www.util.cn/tools/electricity-calculator/): 电器功率×使用时长×电价算电费，内置空调冰箱洗衣机等常见电器功率速查
+- [宠物年龄换算器](https://www.util.cn/tools/pet-age-calculator/): 狗猫年龄与人类年龄互转，按体型分段的科学对数公式，比"乘7"更准确
+- [宠物喂食量计算器](https://www.util.cn/tools/pet-food-calculator/): 按体重与生命阶段计算猫狗每日热量与干粮克数（RER×系数），科学喂养不超标
+- [烘焙模具换算器](https://www.util.cn/tools/cake-pan-converter/): 蛋糕模具尺寸换算与配方等比缩放，圆模方模6-12寸全覆盖，烤箱食谱必配
+
+## 数据格式化
+
+- [JSON格式化](https://www.util.cn/tools/json-formatter/): 美化、压缩、验证JSON数据
+- [JSON转XML](https://www.util.cn/tools/json-to-xml/): JSON数据转换为XML格式
+- [JSON转YAML](https://www.util.cn/tools/json-to-yaml/): JSON数据转换为YAML格式
+- [JSON转CSV](https://www.util.cn/tools/json-to-csv/): JSON数据转换为CSV格式
+- [XML格式化](https://www.util.cn/tools/xml-formatter/): 格式化、压缩XML数据
+- [XML转JSON](https://www.util.cn/tools/xml-to-json/): XML数据转换为JSON格式
+- [SQL格式化](https://www.util.cn/tools/sql-formatter/): 美化SQL语句，支持多种数据库
+- [CSS格式化](https://www.util.cn/tools/css-formatter/): 美化、压缩CSS代码
+- [HTML格式化](https://www.util.cn/tools/html-formatter/): 格式化HTML代码
+- [CSV格式化](https://www.util.cn/tools/csv-formatter/): 美化CSV数据，表格预览
+- [YAML格式化](https://www.util.cn/tools/yaml-formatter/): 美化YAML配置文件
+- [TOML格式化](https://www.util.cn/tools/toml-formatter/): 格式化TOML配置文件
+- [TOML与JSON互转](https://www.util.cn/tools/toml-to-json/): TOML与JSON格式互相转换
+- [HTML转Markdown](https://www.util.cn/tools/html-to-markdown/): HTML转换为Markdown格式
+- [Markdown转HTML](https://www.util.cn/tools/markdown-to-html/): Markdown转换为HTML（支持扩展语法）
+- [JSON与PHP数组转换](https://www.util.cn/tools/json-php-converter/): JSON数据与PHP数组语法互相转换
+- [GraphQL格式化器](https://www.util.cn/tools/graphql-formatter/): GraphQL查询格式化与压缩，字符串感知缩进，注释保留
+- [Properties/INI格式化器](https://www.util.cn/tools/properties-ini-formatter/): Properties与INI配置格式化：等号对齐、分节排序、注释保留
+- [CSV转SQL工具](https://www.util.cn/tools/csv-to-sql/): CSV生成INSERT语句与CREATE TABLE，支持MySQL/PostgreSQL/SQLite方言
+
+## 编码解码
+
+- [Base64编码](https://www.util.cn/tools/base64-encode/): 文本/图片Base64编码
+- [Base64解码](https://www.util.cn/tools/base64-decode/): Base64数据解码还原
+- [URL编码](https://www.util.cn/tools/url-encode/): 对URL进行编码
+- [URL解码](https://www.util.cn/tools/url-decode/): 解码URL编码数据
+- [HTML编码](https://www.util.cn/tools/html-encode/): HTML实体编码
+- [HTML解码](https://www.util.cn/tools/html-decode/): HTML实体解码
+- [十六进制转换](https://www.util.cn/tools/hex-convert/): 文本与十六进制互转
+- [二进制转换](https://www.util.cn/tools/binary-convert/): 文本与二进制互转
+- [ASCII码表](https://www.util.cn/tools/ascii-table/): ASCII字符查询表
+- [二维码生成](https://www.util.cn/tools/qrcode-generate/): 生成二维码图片
+- [多编码转换工具](https://www.util.cn/tools/base-encoding/): 支持Base32、Base58、Base62等多种编码格式的相互转换
+- [UTF-8编码转换](https://www.util.cn/tools/utf-8-convert/): 支持UTF-8、UTF-16、UTF-32之间的编码转换，实时显示字节数组和编码详情
+- [JS字符串转义](https://www.util.cn/tools/js-string-escape/): JavaScript字符串转义与反转义，支持单引号、双引号、模板字符串格式
+- [JSON URL编码](https://www.util.cn/tools/json-url-encode/): 将JSON对象转换为URL编码格式，适用于API请求参数传递
+- [SQL转义](https://www.util.cn/tools/sql-escape/): SQL语句转义与反转义，防止SQL注入攻击，支持多种数据库类型
+- [正则转义](https://www.util.cn/tools/regex-escape/): 自动转义正则表达式特殊字符，构建安全的模式匹配
+- [IP地址转换](https://www.util.cn/tools/ip-address-convert/): IPv4地址与十进制、十六进制、二进制之间的互转
+- [Unicode编码转换](https://www.util.cn/tools/unicode-convert/): 文本与Unicode转义序列(\uXXXX)之间的转换，支持中文、Emoji等
+- [ASCII编码转换](https://www.util.cn/tools/ascii-convert/): 文本与ASCII码互转，显示完整ASCII字符表，支持多种格式
+- [Query String解析](https://www.util.cn/tools/query-string-parser/): 解析URL查询字符串为JSON对象，支持数组、嵌套对象格式
+- [CSS转义](https://www.util.cn/tools/css-escape/): CSS选择器和字符串转义，处理特殊字符和中文等多语言字符
+- [Punycode编码转换](https://www.util.cn/tools/punycode-convert/): 国际化域名(IDN)与Punycode编码互转，支持中文域名转换
+- [XML转义](https://www.util.cn/tools/xml-escape/): XML特殊字符转义与反转义，防止XML解析错误
+- [颜色编码转换](https://www.util.cn/tools/color-convert/): HEX、RGB、HSL、HSV颜色格式之间的相互转换
+- [Quoted-Printable编码](https://www.util.cn/tools/quoted-printable/): 电子邮件QP编码与解码，用于邮件内容传输
+- [Bash命令转义](https://www.util.cn/tools/bash-escape/): Shell命令转义与反转义，防止命令注入攻击
+- [Base32编码](https://www.util.cn/tools/base32-encode/): Base32编码与解码，RFC 4648标准字符集
+- [Base58编码](https://www.util.cn/tools/base58-encode/): Base58编码与解码，用于比特币地址和短链接服务
+- [Base62编码](https://www.util.cn/tools/base62-encode/): Base62编码与解码，用于短链接服务和URL压缩
+- [MAC地址转换](https://www.util.cn/tools/mac-address-convert/): MAC地址格式转换，支持冒号、横杠、点分隔等多种格式
+- [二进制查看器](https://www.util.cn/tools/binary-viewer/): 以十六进制和ASCII格式查看文件内容
+- [MIME 编码工具](https://www.util.cn/tools/mime-encode/): MIME Base64 编码，用于电子邮件附件和HTTP表单数据传输
+- [UUEncode 编码工具](https://www.util.cn/tools/uuencode/): Unix-to-Unix 编码与解码，用于二进制文件传输
+- [摩尔斯电码工具](https://www.util.cn/tools/morse-code/): 文本与摩尔斯电码相互转换，支持播放电码声音
+- [ROT13 加密工具](https://www.util.cn/tools/rot13/): ROT13 字母替换加密，常用于隐藏剧透和敏感信息
+- [凯撒密码工具](https://www.util.cn/tools/caesar-cipher/): 经典凯撒密码加密与解密，支持自定义偏移量
+- [位运算计算器](https://www.util.cn/tools/bit-calculator/): 支持 AND、OR、XOR、NOT、左移、右移等位运算操作
+- [BOM 处理工具](https://www.util.cn/tools/bom-handling/): 检测、添加和移除 UTF-8/UTF-16/UTF-32 文件的 BOM (字节顺序标记)
+- [FormData 转换工具](https://www.util.cn/tools/form-data-converter/): JSON 与 FormData 格式相互转换，用于表单数据处理
+- [LRC 校验工具](https://www.util.cn/tools/lrc-check/): 纵向冗余校验 (Longitudinal Redundancy Check)，用于数据传输错误检测
+- [CRC 校验工具](https://www.util.cn/tools/crc-check/): 循环冗余校验 (Cyclic Redundancy Check)，支持多种CRC标准
+- [Base85编码转换](https://www.util.cn/tools/base85-encoder/): Ascii85编码解码，比Base64更紧凑的编码方案，UTF-8中文支持
+- [零宽字符编码器](https://www.util.cn/tools/zero-width-encoder/): 用零宽字符在文本中隐藏信息（水印溯源），支持编码/解码/检测/清理
+
+## 加密安全
+
+- [MD5生成器](https://www.util.cn/tools/md5-generator/): 生成MD5哈希值
+- [SHA生成器](https://www.util.cn/tools/sha-generator/): SHA-1/256/512哈希计算
+- [AES加密](https://www.util.cn/tools/aes-encrypt/): AES对称加密
+- [AES解密](https://www.util.cn/tools/aes-decrypt/): AES对称解密
+- [RSA密钥生成](https://www.util.cn/tools/rsa-generate/): 生成RSA公私钥对
+- [RSA加密](https://www.util.cn/tools/rsa-encrypt/): RSA非对称加密
+- [RSA解密](https://www.util.cn/tools/rsa-decrypt/): RSA非对称解密
+- [Bcrypt加密](https://www.util.cn/tools/bcrypt-generate/): 密码Bcrypt哈希
+- [Bcrypt验证](https://www.util.cn/tools/bcrypt-verify/): 验证Bcrypt哈希
+- [JWT解析器](https://www.util.cn/tools/jwt-decode/): 解析JWT令牌
+- [JWT验证器](https://www.util.cn/tools/jwt-verify/): 验证JWT签名
+- [UUID生成器](https://www.util.cn/tools/uuid-generator/): 生成UUID/GUID
+- [国密算法工具](https://www.util.cn/tools/gmsm-tools/): SM2/SM3/SM4国密算法
+- [CRC校验计算器](https://www.util.cn/tools/crc-calculator/): 计算CRC-8/CRC-16/CRC-32校验值
+- [Scrypt哈希生成器](https://www.util.cn/tools/scrypt-generator/): 内存密集型Scrypt密码哈希算法，可配置CPU/内存成本参数
+- [Argon2哈希工具](https://www.util.cn/tools/argon2-hash/): 2015年密码哈希竞赛冠军算法，支持Argon2d/2i/2id三种变体
+- [RSA签名验签工具](https://www.util.cn/tools/rsa-sign-verify/): RSA数字签名生成和验证，支持PKCS#1 v1.5和PSS填充模式
+- [ECDSA椭圆曲线签名](https://www.util.cn/tools/ecdsa-tools/): ECDSA签名验签工具，支持P-256/P-384/P-521和secp256k1曲线
+- [Ed25519签名工具](https://www.util.cn/tools/ed25519-tools/): 现代Ed25519签名算法，基于Curve25519，支持SSH公钥格式
+- [Diffie-Hellman密钥交换](https://www.util.cn/tools/diffie-hellman/): ECDH/X25519密钥交换协议，支持P-256/P-384/P-521/X25519曲线
+- [ChaCha20-Poly1305加密](https://www.util.cn/tools/chacha20-poly1305/): AEAD对称加密算法，ChaCha20流加密+Poly1305认证，支持AAD附加数据
+- [HKDF密钥派生器](https://www.util.cn/tools/hkdf-generator/): 基于RFC 5869标准的HMAC密钥派生函数，支持SHA-1/256/384/512哈希算法
+- [BLAKE2哈希计算器](https://www.util.cn/tools/blake2-hash/): 高性能BLAKE2b/BLAKE2s哈希算法，比SHA-256更快且安全，支持可变输出长度
+- [RIPEMD-160哈希计算器](https://www.util.cn/tools/ripemd160-hash/): 160位加密哈希函数，主要用于比特币地址生成和OpenPGP
+- [SSH密钥生成器](https://www.util.cn/tools/ssh-key-generator/): 生成SSH密钥对，支持RSA和Ed25519算法，用于服务器登录、Git等
+- [OTP动态口令生成器](https://www.util.cn/tools/otp-generator/): 生成TOTP/HOTP一次性密码，兼容Google Authenticator、Authy等验证器
+
+## 时间日期
+
+- [时间戳转换](https://www.util.cn/tools/timestamp-convert/): Unix时间戳与日期互转
+- [Cron解析器](https://www.util.cn/tools/cron-parser/): 解析Cron表达式
+- [Cron生成器](https://www.util.cn/tools/cron-generator/): 可视化生成Cron表达式
+- [时区转换](https://www.util.cn/tools/timezone-convert/): 不同时区时间转换
+- [日期计算器](https://www.util.cn/tools/date-calculator/): 日期加减计算
+- [日期差计算](https://www.util.cn/tools/date-diff/): 计算两个日期差值
+- [周数计算器](https://www.util.cn/tools/week-calculator/): 计算日期所在周数
+- [倒计时器](https://www.util.cn/tools/countdown-timer/): 倒计时工具
+- [秒表计时器](https://www.util.cn/tools/stopwatch/): 秒表计时工具
+- [工作日计算](https://www.util.cn/tools/workday-calculator/): 排除周末计算工作日
+- [日期格式化工具](https://www.util.cn/tools/date-formatter/): 将日期转换为各种标准格式，支持ISO 8601、RFC 2822等
+- [季度计算器](https://www.util.cn/tools/quarter-calculator/): 查询日期所在季度，计算季度起止日期和进度
+- [时区查询工具](https://www.util.cn/tools/timezone-lookup/): 查询全球城市时区信息、UTC偏移量、夏令时状态
+- [时间戳批量转换工具](https://www.util.cn/tools/timestamp-batch-convert/): 同时处理多个Unix时间戳，支持秒和毫秒格式
+- [时间单位转换器](https://www.util.cn/tools/time-unit-convert/): 秒分时天周月年相互转换，支持双向转换和快速输入
+- [农历日历转换工具](https://www.util.cn/tools/lunar-calendar/): 公历与农历互转，显示天干地支、生肖和传统节日
+- [闰年检查器](https://www.util.cn/tools/leap-year-checker/): 快速查询年份是否为闰年，支持单个和批量查询
+- [时间差可视化工具](https://www.util.cn/tools/time-diff-visual/): 直观展示两个时间点之间的差值，支持多种单位显示
+- [工作时间计算器](https://www.util.cn/tools/work-hours-calculator/): 计算工作时长、加班时长，支持弹性工作制和排班管理
+- [二十四节气查询工具](https://www.util.cn/tools/solar-term-calculator/): 查询二十四节气日期时间，了解中国传统农耕文化
+- [中国法定节假日查询工具](https://www.util.cn/tools/holiday-calculator/): 查询中国法定节假日安排、调休信息及放假天数统计
+- [学期计算器](https://www.util.cn/tools/semester-calculator/): 计算学年、学期起止日期，适用于教学安排、选课规划
+- [Unix时间戳边界查询工具](https://www.util.cn/tools/unix-timestamp-bounds/): 查询Unix时间戳的最值、特殊日期对应的边界值
+- [ICS日历文件生成器](https://www.util.cn/tools/ics-generator/): 按RFC5545生成.ics日历邀请，支持重复规则与提醒，兼容Google/Outlook/Apple日历
+- [日出日落时间计算器](https://www.util.cn/tools/sunrise-sunset/): 按经纬度与日期计算日出日落、白昼时长与晨昏蒙影，内置常用城市
+
+## 文本处理
+
+- [正则表达式测试](https://www.util.cn/tools/regex-tester/): 在线测试正则
+- [正则生成器](https://www.util.cn/tools/regex-generator/): 可视化生成正则
+- [文本对比](https://www.util.cn/tools/text-diff/): 比较两个文本差异
+- [大小写转换](https://www.util.cn/tools/case-converter/): 文本大小写转换
+- [Markdown编辑器](https://www.util.cn/tools/markdown-editor/): 实时预览编辑器
+- [字数统计](https://www.util.cn/tools/text-counter/): 统计字数、字符数
+- [文本替换](https://www.util.cn/tools/text-replace/): 批量文本查找替换
+- [行操作工具](https://www.util.cn/tools/line-operations/): 行排序、去重、过滤
+- [JSON路径查询](https://www.util.cn/tools/json-path/): JSONPath查询工具
+- [XPath测试器](https://www.util.cn/tools/xpath-tester/): XML XPath测试
+- [随机文本生成](https://www.util.cn/tools/lorem-ipsum/): 生成Lorem Ipsum文本
+- [代码格式化](https://www.util.cn/tools/code-format/): 格式化代码片段
+- [随机昵称生成器](https://www.util.cn/tools/nickname-generator/): 生成多语言随机昵称，支持自定义导入姓名库
+- [数据格式验证器](https://www.util.cn/tools/data-format-validator/): 验证身份证号、手机号、邮箱等格式
+- [正则表达式调试器](https://www.util.cn/tools/regex-debugger/): 逐步调试正则表达式匹配过程
+- [命名格式转换](https://www.util.cn/tools/camel-case-converter/): camelCase、PascalCase、snake_case、kebab-case互转
+- [罗马数字转换](https://www.util.cn/tools/roman-numeral-converter/): 罗马数字与阿拉伯数字互转
+- [人民币大写转换](https://www.util.cn/tools/rmb-capital-converter/): 数字转换为人民币大写金额
+- [文本清洗工具](https://www.util.cn/tools/text-cleaner/): 去除特殊字符、多余空白、不可见字符、控制字符，适用于日志处理、数据清洗
+- [文本统计分析工具](https://www.util.cn/tools/text-statistics/): 词频统计、字符频率分析、行数统计、段落数统计、平均长度计算，适用于SEO分析
+- [文本分割合并工具](https://www.util.cn/tools/text-split-merge/): 按行、字符、自定义分隔符分割或合并文本，支持批量处理、数据整理、日志分析
+- [全角半角转换工具](https://www.util.cn/tools/full-half-converter/): 全角与半角字符互转，支持字母、数字、标点符号转换，适用于中英文混合文本处理
+- [文本转义工具](https://www.util.cn/tools/text-escape/): HTML/XML/JSON/SQL特殊字符转义和反转义，防止注入攻击和格式错误
+- [文本倒置工具](https://www.util.cn/tools/text-reverse/): 字符倒序、单词倒序、行倒序，支持多种倒置方式
+- [句首大写工具](https://www.util.cn/tools/sentence-case/): 将每个句子的首字母转换为大写，支持多种句子分隔符，适用于英文文本编辑
+- [空格格式化工具](https://www.util.cn/tools/text-whitespace/): 统一Tab和空格、去除多余空白、去除行尾空格、删除空行，适用于代码格式化
+- [繁简体转换工具](https://www.util.cn/tools/traditional-simplified/): 繁体字与简体字相互转换，支持常见词汇转换
+- [拼音转换工具](https://www.util.cn/tools/pinyin-converter/): 汉字转拼音，支持有声调、无声调、首字母多种格式
+- [维吉尼亚密码工具](https://www.util.cn/tools/vigenere-cipher/): 使用密钥进行多表替换加密，安全性高于凯撒密码
+- [文本相似度计算工具](https://www.util.cn/tools/text-similarity/): 计算两段文本的相似度，基于编辑距离(Levenshtein距离)
+- [HTML转纯文本工具](https://www.util.cn/tools/html-to-text/): 去除HTML标签，提取纯文本内容
+- [文本转表格工具](https://www.util.cn/tools/text-to-table/): 将分隔符分隔的文本转换为表格或Markdown表格
+- [文本缩进格式化工具](https://www.util.cn/tools/text-indent/): 调整文本缩进，支持空格和Tab互转
+- [Prompt提示词库](https://www.util.cn/tools/prompt-library/): 写作/编程/翻译/学习/办公五类提示词模板，变量占位填充，支持自定义与导入导出
+- [文本三方对比](https://www.util.cn/tools/text-diff-3way/): 原文加两个版本行级LCS差异对比，高亮增删行并提示双方都改动的冲突行，纯本地计算
+- [身份证号校验解析器](https://www.util.cn/tools/id-card-validator/): 身份证号校验位验证与信息解析（省市/生日/性别/生肖），15位转18位，支持批量与脱敏
+- [文本提取器](https://www.util.cn/tools/text-extractor/): 一键提取文本中的邮箱/URL/手机号/IP/身份证等，支持自定义正则，去重分组
+- [中文数字转换器](https://www.util.cn/tools/chinese-number-converter/): 阿拉伯数字与中文数字互转，支持财务大写（壹贰叁）与人民币金额大写
+- [占位文案生成器](https://www.util.cn/tools/placeholder-text-generator/): 按行业生成可读的中文占位文案，科技/电商/餐饮等模板，填充原型与演示
+
+## 网络工具
+
+- [IP信息查询](https://www.util.cn/tools/ip-info/): 查询IP地址信息
+- [WHOIS查询](https://www.util.cn/tools/whois-lookup/): 查询域名WHOIS信息
+- [DNS查询](https://www.util.cn/tools/dns-lookup/): 查询DNS记录
+- [HTTP客户端](https://www.util.cn/tools/http-client/): 发送HTTP请求
+- [WebSocket测试](https://www.util.cn/tools/websocket-test/): WebSocket连接测试
+- [SSL证书检查](https://www.util.cn/tools/ssl-checker/): 检查SSL证书信息
+- [子网计算器](https://www.util.cn/tools/subnet-calculator/): IP子网划分计算
+- [端口扫描器](https://www.util.cn/tools/port-checker/): 检查端口开放状态
+- [cURL转代码](https://www.util.cn/tools/curl-to-code/): cURL命令转编程语言代码
+- [请求分析器](https://www.util.cn/tools/request-analysis/): 分析HTTP请求头
+- [UserAgent解析](https://www.util.cn/tools/user-agent-parser/): 解析浏览器UA信息
+- [MIME类型查询](https://www.util.cn/tools/mime-types/): 查询文件MIME类型
+- [IPv6地址转换器](https://www.util.cn/tools/ipv6-address-converter/): IPv6地址格式转换、压缩展开、前缀计算
+- [网络速度测试](https://www.util.cn/tools/network-speed-test/): 测试网络下载/上传速度、延迟和抖动
+- [URL规范化工具](https://www.util.cn/tools/url-canonicalizer/): URL规范化、清理UTM参数、生成规范链接
+- [DNS缓存刷新](https://www.util.cn/tools/dns-cache-flusher/): DNS缓存刷新命令和指导
+- [CORS测试工具](https://www.util.cn/tools/cors-tester/): CORS跨域测试和配置代码生成
+- [WebRTC诊断工具](https://www.util.cn/tools/webrtc-diagnostics/): WebRTC连接测试、ICE候选收集、媒体设备检测
+- [Open Graph验证器](https://www.util.cn/tools/open-graph-validator/): OG标签验证、社交媒体预览模拟
+- [路由追踪工具](https://www.util.cn/tools/route-tracer/): Traceroute网络路由追踪、跳数分析
+- [TXT记录编辑器](https://www.util.cn/tools/txt-record-editor/): DNS TXT记录生成、SPF/DKIM记录生成和验证
+- [DNSSEC验证工具](https://www.util.cn/tools/dns-sec-verifier/): DNSSEC验证、签名链检查、安全状态检测
+- [IPv6范围计算器](https://www.util.cn/tools/ipv6-scope-calculator/): IPv6前缀范围计算、子网规划、SLAAC和EUI-64
+- [Nginx配置生成器](https://www.util.cn/tools/nginx-config-generator/): 根据需求生成Nginx配置文件
+- [hosts片段生成器](https://www.util.cn/tools/hosts-generator/): 生成本地域名映射与广告屏蔽hosts片段，域名校验去重，附各系统应用方法
+- [IP子网计算器](https://www.util.cn/tools/ip-subnet-calculator/): CIDR解析计算网络地址、广播地址、可用主机范围与子网划分，附二进制视图
+- [IPv6地址转换工具](https://www.util.cn/tools/ipv6-converter/): IPv6完整展开、RFC5952压缩、IPv4映射识别与ip6.arpa反向解析名生成
+- [私有IP检测器](https://www.util.cn/tools/private-ip-checker/): 判断IPv4/IPv6属于私网、公网、CGNAT、链路本地还是保留段，附NAT场景说明
+- [HTTP状态码速查表](https://www.util.cn/tools/http-status-codes/): 61个HTTP状态码全解：含义、发生场景与排查建议，按五大类分组检索
+- [常用端口速查表](https://www.util.cn/tools/port-lookup/): 81个常用端口大全：服务协议说明与公网暴露安全风险标注
+- [MAC地址厂商查询](https://www.util.cn/tools/mac-vendor-lookup/): 通过MAC前缀OUI查询设备厂商，识别随机化隐私MAC，支持批量
+
+## 图像处理
+
+- [图片压缩](https://www.util.cn/tools/image-compress/): 在线压缩图片
+- [图片格式转换](https://www.util.cn/tools/image-convert/): 转换图片格式
+- [图片转PDF](https://www.util.cn/tools/image-to-pdf/): 将多张图片合并导出为PDF文档
+- [图片尺寸调整](https://www.util.cn/tools/image-resize/): 调整图片尺寸
+- [Base64图片](https://www.util.cn/tools/base64-image/): 图片与Base64互转
+- [颜色选择器](https://www.util.cn/tools/color-picker/): 取色器、颜色转换
+- [二维码识别](https://www.util.cn/tools/qrcode-scan/): 识别二维码内容
+- [EXIF查看器](https://www.util.cn/tools/exif-viewer/): 查看图片EXIF信息
+- [图标生成器](https://www.util.cn/tools/icon-generator/): 生成favicon等图标
+- [图片水印](https://www.util.cn/tools/image-watermark/): 添加文字/图片水印
+- [图片裁剪](https://www.util.cn/tools/image-crop/): 在线裁剪图片
+- [图片合并](https://www.util.cn/tools/image-merge/): 合并多张图片
+- [网页截图](https://www.util.cn/tools/screenshot-tool/): 生成网页截图
+- [图片旋转翻转](https://www.util.cn/tools/image-rotate/): 在线旋转、翻转图片，支持自定义角度和方向
+- [图片滤镜效果](https://www.util.cn/tools/image-filter/): 为图片添加滤镜效果，包括亮度、对比度、饱和度等调整
+- [图片边框圆角](https://www.util.cn/tools/image-border/): 为图片添加边框、圆角和阴影效果
+- [图片背景处理](https://www.util.cn/tools/image-background/): 更换图片背景颜色、添加模糊效果，支持纯色背景移除
+- [图片分割](https://www.util.cn/tools/image-split/): 将图片分割成九宫格、自定义行列，支持切片下载
+- [图片添加文字](https://www.util.cn/tools/image-text/): 在图片上添加文字标题、说明，支持自定义字体、颜色和样式
+- [表情包制作器](https://www.util.cn/tools/image-meme/): 快速制作表情包，支持顶部/底部文字、预设模板
+- [拼图制作器](https://www.util.cn/tools/image-collage/): 多张图片拼接成网格拼图，支持自定义布局和背景
+- [图片叠加工具](https://www.util.cn/tools/image-overlay/): 多张图片叠加混合，支持多种混合模式、渐变蒙版和透明度调整
+- [像素化工具](https://www.util.cn/tools/pixelate/): 将图片像素化，创建复古像素艺术或马赛克效果
+- [GIF制作工具](https://www.util.cn/tools/gif-maker/): 将多张图片制作成GIF动图，支持调整帧率和播放顺序
+- [图片对比工具](https://www.util.cn/tools/image-compare/): 对比两张图片的差异，支持并排对比、滑动对比和切换对比
+- [图片信息查看](https://www.util.cn/tools/image-info/): 查看图片的详细信息，包括尺寸、格式、EXIF数据等
+- [批量图片处理](https://www.util.cn/tools/batch-process/): 批量调整图片尺寸、格式、质量，支持多种操作
+- [OCR图片文字识别](https://www.util.cn/tools/image-ocr/): 从图片中提取文字，支持多语言识别
+- [头像生成器](https://www.util.cn/tools/avatar-generator/): 生成个性化头像，支持多种风格和自定义选项
+- [相框效果工具](https://www.util.cn/tools/image-frame/): 为图片添加相框、边框和装饰效果
+- [图片配色方案提取](https://www.util.cn/tools/color-palette/): 从图片中提取配色方案，生成和谐的色彩组合
+- [双色调效果工具](https://www.util.cn/tools/image-duotone/): 为图片添加双色调效果，创建艺术化的单色风格
+- [散景虚化效果工具](https://www.util.cn/tools/bokeh-generator/): 为图片添加散景虚化效果，模拟景深和镜头光斑
+- [EXIF清除器](https://www.util.cn/tools/exif-cleaner/): 清除照片中的GPS定位、拍摄设备等EXIF隐私元数据，支持PNG/JPEG/WebP输出，纯本地处理
+- [SVG优化压缩器](https://www.util.cn/tools/svg-optimizer/): SVG无损压缩：去除编辑器元数据、精简数值精度，前后体积对比与预览
+- [图片背景纯色替换](https://www.util.cn/tools/image-bg-replace/): 点选背景色一键替换，容差与边缘柔化可调，证件照换底色利器，纯本地处理
+
+## 开发辅助
+
+- [Mock数据生成](https://www.util.cn/tools/mock-data/): 生成模拟数据
+- [API文档生成](https://www.util.cn/tools/api-doc/): 生成API文档
+- [GoDaddy域名解析](https://www.util.cn/tools/godaddy-dns/): 在线管理GoDaddy域名的DNS解析记录
+- [SQL转Model类](https://www.util.cn/tools/sql-to-model/): SQL转编程语言Model类
+- [JSON转Model类](https://www.util.cn/tools/json-to-model/): JSON转编程语言类
+- [XML转Model类](https://www.util.cn/tools/xml-to-model/): XML转编程语言类
+- [Swagger查看器](https://www.util.cn/tools/swagger-viewer/): 查看Swagger文档
+- [Git命令生成](https://www.util.cn/tools/git-command/): 生成Git操作命令
+- [Docker命令生成](https://www.util.cn/tools/docker-command/): 生成Docker命令
+- [Linux命令生成](https://www.util.cn/tools/linux-command/): 生成Linux命令
+- [正则备忘单](https://www.util.cn/tools/regex-cheatsheet/): 正则表达式速查表
+- [字符集转换](https://www.util.cn/tools/charset-convert/): 文本字符集转换
+- [Crontab生成](https://www.util.cn/tools/crontab-generator/): 生成Crontab配置
+- [JSON Schema生成](https://www.util.cn/tools/json-schema/): 生成JSON Schema
+- [JSON转TypeScript接口](https://www.util.cn/tools/json-to-typescript/): 根据JSON数据自动生成TypeScript类型定义
+- [Spine动画编辑器](https://www.util.cn/tools/spine-animation-editor/): 专业的Spine动画预览和编辑工具，支持多引擎导出
+- [JVM启动参数配置](https://www.util.cn/tools/jvm-args-config/): 可视化配置Java虚拟机启动参数，支持内存、GC、性能等选项
+- [代码片段转换](https://www.util.cn/tools/code-snippet-converter/): 不同编程语言间代码片段转换（如Python↔JavaScript）
+- [API响应模拟器](https://www.util.cn/tools/api-response-mocker/): 根据JSON Schema自动生成模拟API响应数据
+- [HTTP响应模拟器](https://www.util.cn/tools/api-response-simulator/): 模拟HTTP API响应，支持自定义状态码、响应头、延迟时间和JSON/XML数据模板
+- [SQL查询优化器](https://www.util.cn/tools/sql-query-optimizer/): 分析SQL查询并提供优化建议
+- [算法复杂度计算器](https://www.util.cn/tools/algorithm-complexity-calculator/): 分析代码片段的时间/空间复杂度
+- [环境变量管理器](https://www.util.cn/tools/env-variable-manager/): .env文件格式转换、验证和管理
+- [Docker Compose编辑器](https://www.util.cn/tools/docker-compose-editor/): 可视化编辑docker-compose.yml文件
+- [测试数据生成器](https://www.util.cn/tools/test-data-generator/): 根据业务规则生成测试数据
+- [Web组件分析器](https://www.util.cn/tools/web-component-analyzer/): 分析HTML元素的可访问属性和事件
+- [API契约测试器](https://www.util.cn/tools/api-contract-tester/): 验证API请求响应是否符合契约
+- [性能基准测试](https://www.util.cn/tools/performance-benchmark/): 对代码片段进行性能测试和对比
+- [JSON转Protobuf](https://www.util.cn/tools/json-to-protobuf/): JSON数据转换为Protobuf定义文件，支持v2/v3版本
+- [代码格式化工具（开发版）](https://www.util.cn/tools/dev-code-formatter/): 专为开发者设计的代码格式化工具，支持语法高亮和实时预览
+- [SQL格式化工具（开发版）](https://www.util.cn/tools/dev-sql-formatter/): 专为开发者设计的SQL美化工具，支持关键字大写、多数据库语法
+- [JSON/XML验证器](https://www.util.cn/tools/json-xml-validator/): 验证JSON/XML格式，定位错误位置，查看详细错误信息
+- [文件Base64转换器](https://www.util.cn/tools/base64-file-converter/): 将图片、字体等文件转换为Base64编码，支持CSS/HTML Data URI格式
+- [JSON对比工具](https://www.util.cn/tools/json-diff-compare/): 对比两个JSON的差异，高亮显示新增、删除、修改的内容
+- [URL参数构建器](https://www.util.cn/tools/url-params-builder/): 可视化构建URL查询参数，支持编码/解码，生成完整URL
+- [JWT调试器](https://www.util.cn/tools/jwt-debugger/): 解码JWT Token，查看Header和Payload，验证签名
+- [Cron表达式调试器](https://www.util.cn/tools/cron-expression-debugger/): 解析Cron表达式，显示执行时间，可视化调试定时任务
+- [代码片段管理器](https://www.util.cn/tools/code-snippet-manager/): 保存、管理和搜索常用代码片段，支持多语言分类
+- [HTML实体编码器](https://www.util.cn/tools/html-entities-encoder/): 编码/解码HTML特殊字符，防止XSS攻击
+- [YAML验证格式化工具](https://www.util.cn/tools/yaml-validator-formatter/): 验证YAML格式，美化YAML结构，支持YAML 1.2规范
+- [GraphQL查询构建器](https://www.util.cn/tools/graphql-query-builder/): 可视化构建GraphQL查询和变更，自动生成语法
+- [Postman集合转换器](https://www.util.cn/tools/postman-collection-converter/): 将Postman Collection转换为其他格式：cURL、HTTP Archive、OpenAPI
+- [package.json工具](https://www.util.cn/tools/package-json-tools/): 格式化、验证和分析package.json文件
+- [.gitignore生成器](https://www.util.cn/tools/gitignore-generator/): 根据项目类型和操作系统生成.gitignore文件
+- [Dockerfile生成器](https://www.util.cn/tools/dockerfile-generator/): 可视化生成Dockerfile，支持多种语言和框架
+- [K8s YAML生成器](https://www.util.cn/tools/kubernetes-yaml-generator/): 可视化生成K8s部署配置，支持Deployment、Service、ConfigMap等
+- [OpenAPI规范生成器](https://www.util.cn/tools/openapi-spec-generator/): 生成OpenAPI 3.0规范文档，支持导出JSON/YAML格式
+- [Markdown表格生成器](https://www.util.cn/tools/markdown-table-generator/): 可视化生成Markdown表格，支持对齐和合并单元格
+- [JSONPath测试器](https://www.util.cn/tools/json-path-tester/): 测试JSONPath表达式，提取JSON数据中的特定字段
+- [XML与JSON互转工具](https://www.util.cn/tools/xml-json-converter/): XML和JSON格式互相转换，支持属性处理和命名空间
+- [URL Slug生成器](https://www.util.cn/tools/html-slug-generator/): 将标题转换为URL友好的Slug，支持多语言和自定义规则
+- [Cookie编辑器](https://www.util.cn/tools/cookie-editor/): 解析、编辑和生成Cookie字符串，支持各种Cookie格式
+- [User-Agent生成器](https://www.util.cn/tools/user-agent-generator/): 生成各浏览器和设备的User-Agent字符串
+- [MIME类型查询器](https://www.util.cn/tools/mime-type-lookup/): 查询文件扩展名对应的MIME类型，支持反向查询
+- [电脑系统检测](https://www.util.cn/tools/system-info/): 全面检测您的电脑系统信息，包括操作系统、硬件配置、浏览器环境等
+- [屏幕检测](https://www.util.cn/tools/screen-test/): 检测屏幕分辨率、像素密度、色深等显示参数，测试坏点和显示效果
+- [FPS在线测试](https://www.util.cn/tools/fps-test/): 实时测试浏览器的帧率（FPS），评估动画性能和渲染能力
+- [浏览器版本检测](https://www.util.cn/tools/browser-detect/): 全面检测浏览器类型、版本、引擎和功能支持情况
+- [IP地址查询](https://www.util.cn/tools/ip-lookup/): 查询IP地址的地理位置、运营商、ASN等信息，支持IPv4和IPv6
+- [GPU检测与模型推荐](https://www.util.cn/tools/gpu-detector/): 检测显卡型号、显存与WebGPU支持，推荐电脑能流畅运行的本地大模型及GGUF量化版本
+- [Token计数与API成本计算](https://www.util.cn/tools/token-cost-calculator/): 估算文本Token数量，对比GPT/Claude/DeepSeek等模型API价格与本地推理电费成本
+- [LoRA微调显存计算器](https://www.util.cn/tools/lora-vram-calculator/): 估算全参/LoRA/QLoRA微调所需显存，按批大小与序列长度给出显存账单与显卡建议
+- [开源协议生成器](https://www.util.cn/tools/license-generator/): 选择开源协议生成LICENSE文件与README徽章，附主流协议对比表帮助选型
+- [SemVer版本解析比较器](https://www.util.cn/tools/semver-parser/): 语义化版本解析、比较、批量排序与^~范围匹配，完整prerelease优先级
+- [Emoji速查复制器](https://www.util.cn/tools/emoji-picker/): 按分类搜索常用Emoji，一键复制，记录最近使用
+- [ReDoS风险检测器](https://www.util.cn/tools/redos-detector/): 静态分析正则表达式的灾难性回溯风险，定位危险片段并给出重构建议
+- [Conventional Commits生成器](https://www.util.cn/tools/commit-message-generator/): 表单式生成规范提交信息，type/scope/breaking/footer，含历史记录
+- [Changelog生成器](https://www.util.cn/tools/changelog-generator/): 粘贴git log按Keep a Changelog规范分组生成更新日志
+- [代码行数统计器](https://www.util.cn/tools/loc-counter/): 统计代码总行数/代码行/注释行/空行，支持20+语言注释规则，注释率分析
+
+## 设计工具
+
+- [CSS布局生成器](https://www.util.cn/tools/css-layout-generator/): 可视化生成Flexbox和Grid布局代码
+- [SVG路径编辑器](https://www.util.cn/tools/svg-path-editor/): 可视化编辑SVG path数据
+- [在线提词器](https://www.util.cn/tools/teleprompter/): 专业在线提词器，支持滚动速度调节、字体大小自定义、镜像模式、背景色切换。为自媒体创作者提供沉浸式提词体验，录制视频不再忘词。
+- [颜色对比度检查](https://www.util.cn/tools/color-contrast-checker/): 检查颜色对比度是否符合WCAG标准
+- [SVG代码编辑器](https://www.util.cn/tools/svg-code-editor/): 实时编辑和预览SVG代码，支持导出多种图片格式
+- [CSS渐变生成器](https://www.util.cn/tools/gradient-generator/): 可视化生成CSS渐变代码，支持线性、径向和锥形渐变
+- [CSS阴影生成器](https://www.util.cn/tools/shadow-generator/): 可视化生成CSS阴影效果，支持box-shadow和text-shadow
+- [CSS边框生成器](https://www.util.cn/tools/border-generator/): 生成CSS边框样式，支持圆角、虚线、图片边框等
+- [字体配对工具](https://www.util.cn/tools/font-pairing/): Web字体组合预览和推荐，找到完美的字体搭配
+- [CSS动画生成器](https://www.util.cn/tools/css-animation-generator/): 可视化编辑CSS关键帧动画，实时预览和代码生成
+- [贝塞尔曲线编辑器](https://www.util.cn/tools/bezier-curve-editor/): 可视化调试CSS缓动函数，实时预览动画效果
+- [Logo制作器](https://www.util.cn/tools/logo-maker/): 使用几何图形组合设计专业Logo
+- [图案生成器](https://www.util.cn/tools/pattern-generator/): 生成可重复的背景图案，支持多种样式和自定义参数
+- [设计规范检查器](https://www.util.cn/tools/design-specs-checker/): 检查设计系统一致性，确保间距、字号、颜色等符合设计规范
+- [调色板生成器](https://www.util.cn/tools/color-palette-generator/): 从单色生成和谐的配色方案，支持多种配色规则(单色、类比、互补、三角色等)
+- [专业取色器](https://www.util.cn/tools/pro-color-picker/): 屏幕取色、HEX/RGB/HSL/HSV格式转换、色彩历史记录
+- [CSS裁剪路径生成器](https://www.util.cn/tools/clip-path-generator/): 可视化生成clip-path多边形、圆形、椭圆等形状
+- [CSS背景滤镜生成器](https://www.util.cn/tools/backdrop-filter-generator/): 生成毛玻璃、模糊等backdrop-filter效果
+- [CSS滤镜生成器](https://www.util.cn/tools/css-filter-generator/): 可视化调节blur/brightness/contrast/saturate等滤镜效果
+- [CSS变换生成器](https://www.util.cn/tools/transform-generator/): 可视化调节rotate/scale/skew/translate变换效果
+- [圆角生成器](https://www.util.cn/tools/border-radius-generator/): 可视化生成复杂的border-radius，分别设置8个角的圆角
+- [黄金比例计算器](https://www.util.cn/tools/golden-ratio-calculator/): 计算黄金比例分割，用于版式设计和排版
+- [字体比例系统](https://www.util.cn/tools/typography-scale/): 生成和谐的字体大小比例(大标题、标题、正文、小字)
+- [行高计算器](https://www.util.cn/tools/line-height-calculator/): 根据字号计算合适的行高，保持垂直节奏一致
+- [字间距工具](https://www.util.cn/tools/letter-spacing-tool/): 调整字母间距，预览效果
+- [内阴影生成器](https://www.util.cn/tools/box-shadow-inset-generator/): 专门生成inset box-shadow效果
+- [文字阴影生成器](https://www.util.cn/tools/text-shadow-generator/): 生成多层text-shadow效果
+- [背景图案生成器](https://www.util.cn/tools/background-pattern-generator/): CSS background图案(网格、点阵、斜线等)
+- [CSS遮罩生成器](https://www.util.cn/tools/mask-image-generator/): 生成mask-image效果，渐变遮罩、图片遮罩
+- [混合模式工具](https://www.util.cn/tools/blend-mode-tool/): CSS mix-blend-mode可视化预览
+- [CSS计数器生成器](https://www.util.cn/tools/css-counter-generator/): 生成自动编号样式
+- [占位图生成器](https://www.util.cn/tools/placeholder-image-generator/): 生成指定尺寸的占位图片，可添加文字
+- [Favicon生成器](https://www.util.cn/tools/favicon-generator/): 上传图片生成各尺寸favicon和图标
+- [二维码生成器](https://www.util.cn/tools/qr-code-generator/): 生成自定义样式的二维码
+- [SVG图标库](https://www.util.cn/tools/svg-icon-library/): 常用SVG图标，支持导出和定制
+- [图标字体生成器](https://www.util.cn/tools/icon-font-generator/): 将SVG图标转换为Web字体使用
+- [色盲模拟器](https://www.util.cn/tools/color-blindness-simulator/): 模拟不同类型的色盲视觉效果
+- [EM断点生成器](https://www.util.cn/tools/em-breakpoint-generator/): px转em计算，响应式断点生成
+- [宽高比计算器](https://www.util.cn/tools/aspect-ratio-calculator/): 计算和锁定元素宽高比
+- [网格系统生成器](https://www.util.cn/tools/grid-system-generator/): 生成12/16/24列网格系统
+- [间距计算器](https://www.util.cn/tools/spacing-calculator/): 基于基准单位生成间距系统
+- [色彩命名工具](https://www.util.cn/tools/color-naming-tool/): 为颜色值生成语义化名称
+- [Material Design色板](https://www.util.cn/tools/material-design-colors/): Material Design 3官方色板参考
+- [Tailwind色板生成器](https://www.util.cn/tools/tailwind-color-palette/): 生成Tailwind风格的色阶
+- [渐变文字生成器](https://www.util.cn/tools/gradient-text-generator/): 生成文字渐变效果和背景裁剪代码
+- [Blob形状生成器](https://www.util.cn/tools/blob-shape-generator/): 随机生成有机Blob形状，可复现随机种子，输出CSS与SVG，装饰设计利器
+- [玻璃拟态生成器](https://www.util.cn/tools/glassmorphism-generator/): 玻璃拟态效果参数面板，实时预览并生成含Safari兼容的CSS代码
+- [SVG波浪分割线生成器](https://www.util.cn/tools/svg-wave-divider/): 生成多层波浪SVG分割线，可调波峰波幅颜色，用于网页背景过渡装饰
+- [骨架屏生成器](https://www.util.cn/tools/skeleton-generator/): 可视化拼装骨架屏，脉冲/扫光动画，输出纯CSS的HTML代码
+- [网页按钮生成器](https://www.util.cn/tools/button-generator/): 可视化配置按钮样式：渐变/阴影/hover效果，生成生产级CSS代码
+- [开关组件生成器](https://www.util.cn/tools/toggle-generator/): 自定义开关(Toggle)组件样式，生成无JS的纯CSS checkbox实现
+
+## 安全工具
+
+- [密码生成器](https://www.util.cn/tools/password-generator/): 生成高安全性随机密码，支持自定义长度和字符类型
+- [密码强度检测器](https://www.util.cn/tools/password-strength-checker/): 检测密码强度，分析安全性，提供改进建议
+- [哈希计算器](https://www.util.cn/tools/hash-calculator/): 计算文本的哈希值，支持多种哈希算法和文件哈希计算
+- [编码转换器](https://www.util.cn/tools/encoding-converter/): 支持多种编码格式转换，Base64、URL编码、HTML实体等
+- [API密钥管理器](https://www.util.cn/tools/api-key-manager/): 安全管理API密钥，生成安全的密钥，本地存储加密
+- [安全令牌生成器](https://www.util.cn/tools/token-generator/): 生成各种类型的安全令牌，JWT、API Token、CSRF Token等
+- [XSS攻击检测器](https://www.util.cn/tools/xss-detector/): 检测输入内容中的XSS攻击代码，提供安全建议和防护方案
+- [SQL注入检测器](https://www.util.cn/tools/sql-injection-scanner/): 检测输入内容中的SQL注入攻击代码，提供安全建议和防护方案
+- [JWT令牌解析器](https://www.util.cn/tools/jwt-parser/): 解析JWT令牌，验证签名，检查有效性
+- [SSL/TLS配置检查器](https://www.util.cn/tools/ssl-tls-checker/): 检查SSL/TLS配置安全性，提供优化建议和漏洞检测
+- [BCrypt哈希生成器](https://www.util.cn/tools/bcrypt-generator/): 生成安全的BCrypt密码哈希，支持自定义成本因子，在线验证密码
+- [AES加密/解密工具](https://www.util.cn/tools/aes-encryptor/): 使用AES-256算法进行数据加密和解密，支持CBC和GCM模式，完全在浏览器本地处理
+- [RSA密钥对生成器](https://www.util.cn/tools/rsa-key-pair/): 生成RSA密钥对，支持多种密钥长度，导出PEM格式，完全在浏览器本地生成
+- [敏感信息扫描器](https://www.util.cn/tools/secret-scanner/): 扫描代码中的敏感信息，包括API密钥、密码、令牌等，防止密钥泄露造成的安全风险
+- [CSP策略生成器](https://www.util.cn/tools/csp-builder/): 可视化生成内容安全策略(CSP)配置，支持多种输出格式，提供预设模板和实时预览
+- [Argon2哈希生成器](https://www.util.cn/tools/argon2-hasher/): 生成安全的Argon2密码哈希，支持Argon2id/Argon2i/Argon2d模式，自定义内存、迭代次数和并行度
+- [HMAC生成器](https://www.util.cn/tools/hmac-generator/): 生成HMAC消息认证码，支持SHA-1/SHA-256/SHA-512等多种算法，用于消息认证和完整性验证
+- [OTP认证器](https://www.util.cn/tools/otp-authenticator/): 生成和验证TOTP/HOTP一次性密码，支持Google Authenticator，生成QR码
+- [CORS配置生成器](https://www.util.cn/tools/cors-configurator/): 可视化生成跨域资源共享CORS配置，支持Nginx/Apache/Node.js等多种服务器环境
+- [HTTP头分析器](https://www.util.cn/tools/http-header-analyzer/): 分析和验证HTTP响应头，检查安全配置、CORS、缓存策略，提供安全建议
+- [安全头检查器](https://www.util.cn/tools/security-headers-check/): 检查网站的安全HTTP头配置，包括CSP、HSTS、X-Frame-Options等，获取安全评分和改进建议
+- [SSL/TLS证书验证器](https://www.util.cn/tools/certificate-validator/): 验证SSL/TLS证书的有效性、检查证书链、过期时间和配置安全性
+- [PII信息检测器](https://www.util.cn/tools/pii-detector/): 扫描文本中的个人身份信息（PII），包括身份证号、手机号、邮箱、银行卡号等敏感信息
+- [PBKDF2生成器](https://www.util.cn/tools/pbkdf2-generator/): 使用PBKDF2算法生成密码哈希，支持自定义迭代次数、盐值和密钥长度
+- [加密伪随机数生成器](https://www.util.cn/tools/crypto-prng/): 使用Web Crypto API生成密码学安全的随机数，支持多种格式，适用于密钥生成和令牌创建
+- [数据脱敏工具](https://www.util.cn/tools/data-masking-tool/): 对敏感数据进行脱敏处理
+
+## 其他工具
+
+- [数据采样工具](https://www.util.cn/tools/data-sampling-tool/): 对数据集进行采样、分桶、分组操作
+- [数据结构构建器](https://www.util.cn/tools/data-structure-builder/): 可视化构建和操作数据结构
+- [排序算法可视化](https://www.util.cn/tools/sorting-algorithm-visualizer/): 可视化展示冒泡、快速、归并等排序过程
+- [增强剪贴板管理器](https://www.util.cn/tools/clipboard-manager-pro/): 支持分类、搜索、格式化的剪贴板历史
+- [图表生成器](https://www.util.cn/tools/chart-generator/): 在线生成柱状图、折线图、饼图、雷达图等可视化图表，支持CSV/JSON数据导入导出
+- [流程图绘制工具](https://www.util.cn/tools/flowchart-builder/): 在线绘制流程图，支持拖拽创建节点、连接线和分支结构，可导出为PNG/SVG图片，适用于业务流程设计、系统架构图等场景
+- [文件合并拆分工具](https://www.util.cn/tools/file-merge-split/): 在线文件合并与拆分工具，支持按行数、大小拆分文本文件，可合并多个文件，适用于日志处理、数据分割等场景
+- [重复数据清理器](https://www.util.cn/tools/duplicate-remover/): 在线去除文本行重复数据、数组对象去重，支持自定义去重规则，适用于数据清洗、列表整理等场景
+- [会议纪要生成器](https://www.util.cn/tools/meeting-minutes/): 在线创建和管理会议纪要，支持参会人员管理、任务分配追踪，可导出为PDF/Word格式，适用于团队协作会议
+- [待办事项看板](https://www.util.cn/tools/kanban-board/): 在线看板管理工具，支持Todo/Doing/Done三栏管理，拖拽操作，本地存储，适用于项目管理和任务跟踪
+- [任务清单生成器](https://www.util.cn/tools/todo-list-generator/): 在线创建任务清单，支持优先级标记、分类管理、进度追踪，可导出分享，适用于个人和团队任务规划
+- [快速笔记工具](https://www.util.cn/tools/quick-notes/): 轻量级在线笔记工具，支持Markdown编辑、本地存储、自动保存，可快速记录想法和待办事项
+- [思维导图工具](https://www.util.cn/tools/mind-map/): 在线思维导图编辑器，支持节点创建、编辑、折叠展开，可导出为PNG/SVG图片，适用于知识整理、头脑风暴、项目规划
+- [数据透视分析](https://www.util.cn/tools/pivot-table/): 在线数据透视表工具，支持CSV/JSON数据导入，创建数据透视表、分类汇总统计、多维度数据分析，可导出Excel/CSV格式
+- [Headers查看器](https://www.util.cn/tools/headers-viewer/): 在线HTTP请求头查看器，实时监控请求头信息，支持Headers解析、格式化显示、复制导出，适用于API调试和开发
+- [Cookies管理器](https://www.util.cn/tools/cookies-manager/): 在线Cookie管理工具，支持Cookie解析、编辑、导入导出，可查看和修改浏览器Cookie信息，适用于开发调试和会话管理
+- [时间跟踪器](https://www.util.cn/tools/time-tracker/): 在线时间跟踪工具，支持任务计时、工时统计、番茄钟工作法，可记录和导出时间日志，适用于时间管理和生产力提升
+- [批量请求工具](https://www.util.cn/tools/bulk-request/): 在线批量HTTP请求工具，支持并发请求、自定义Headers、延迟控制，可批量测试API接口，适用于开发和测试场景
+- [ASCII艺术生成器](https://www.util.cn/tools/ascii-art-generator/): 在线ASCII艺术生成工具，支持图片转ASCII字符画、文本转ASCII艺术样式，可调整字符密度和大小，适用于创意设计和装饰文本
+- [词云生成器](https://www.util.cn/tools/word-cloud/): 在线词云生成工具，支持文本分析生成词云图，可自定义颜色、字体、布局样式，可导出为图片，适用于数据可视化和文本分析
+- [番茄钟与白噪音](https://www.util.cn/tools/pomodoro-timer/): 番茄工作法专注计时，自定义时长，内置白/粉/棕噪音实时合成，统计存本机
+- [打字速度测试](https://www.util.cn/tools/typing-test/): 60秒在线打字测速，中英文双模式，实时准确率与速度统计，历史最佳记录
+- [洗涤标签速查](https://www.util.cn/tools/laundry-symbol-guide/): 衣服洗涤标志图解对照，水洗/漂白/熨烫/干洗符号一键查询，再也不怕洗坏衣服
+
+## 健康工具
+
+- [BMI计算器](https://www.util.cn/tools/bmi-calculator/): 计算身体质量指数(BMI)，评估体重状况，支持公制和英制单位
+- [体脂率计算器](https://www.util.cn/tools/body-fat-calculator/): 通过BMI、年龄、性别计算体脂率，支持多种测量方法，提供健康评估
+- [基础代谢率计算器](https://www.util.cn/tools/bmr-calculator/): 计算基础代谢率(BMR)和每日总能量消耗(TDEE)，制定科学的体重管理计划
+- [心率计算器](https://www.util.cn/tools/heart-rate-calculator/): 计算最大心率、目标心率区间，提供科学的运动强度指导
+- [血压健康评估](https://www.util.cn/tools/blood-pressure-tracker/): 血压记录和健康评估，血压分类、多次测量平均值计算，健康建议和风险提示
+- [睡眠质量计算器](https://www.util.cn/tools/sleep-quality-calculator/): 评估睡眠质量和效率，睡眠 debt 和补觉建议，作息规律分析
+- [水分摄入计算器](https://www.util.cn/tools/water-intake-calculator/): 计算每日建议水分摄入量，基于体重、运动量、环境因素，不同饮品含水量换算
+- [营养需求计算器](https://www.util.cn/tools/nutrition-calculator/): 计算每日营养素需求，蛋白质、碳水化合物、脂肪需求，维生素和矿物质基础需求
+- [理想体重计算器](https://www.util.cn/tools/ideal-weight-calculator/): 计算理想体重范围，支持多种公式，结合身体骨架类型调整，体重目标设定建议
+- [运动消耗计算器](https://www.util.cn/tools/exercise-calorie-calculator/): 计算各种运动消耗的热量，基于体重、运动时长、强度，减重目标运动计划制定
+- [健康年龄评估](https://www.util.cn/tools/health-age-calculator/): 综合评估生理年龄，生活方式因素评分，慢性病风险评估，健康改善建议
+- [腰臀比计算器](https://www.util.cn/tools/waist-to-hip-calculator/): 计算腰臀比(WHR)，评估中心性肥胖风险，预防心血管疾病和糖尿病
+- [腰高比计算器](https://www.util.cn/tools/waist-to-height-calculator/): 计算腰高比(WHtR)，更准确的肥胖评估指标，预测代谢综合征和心血管疾病风险
+- [身体围度追踪器](https://www.util.cn/tools/body-measurement-tracker/): 记录身体各部位围度变化，可视化健身塑形效果，支持数据导出
+- [皮脂厚度计算器](https://www.util.cn/tools/caliper-calculator/): 使用皮脂钳测量数据计算体脂率，支持3点和7点测量法，准确评估身体成分
+- [1RM最大力量计算器](https://www.util.cn/tools/1rm-calculator/): 根据训练重量和重复次数估算单次最大重量，支持多种公式，科学制定训练计划
+- [跑步配速计算器](https://www.util.cn/tools/running-pace-calculator/): 计算跑步配速、预计完成时间，支持5K/10K/半马/全马，科学规划跑步训练
+- [运动计划生成器](https://www.util.cn/tools/workout-planner/): 根据健身目标自动生成个性化运动计划，支持增肌、减脂、耐力、力量等目标
+- [柔韧性评估测试](https://www.util.cn/tools/flexibility-assessment/): 测试身体各部位的柔韧性水平，预防运动损伤，改善体态和关节活动度
+- [卡路里计数器](https://www.util.cn/tools/calorie-counter/): 记录每日食物热量摄入，计算热量缺口，科学管理体重，支持常见食物热量查询
+- [宏量营养素追踪器](https://www.util.cn/tools/macro-tracker/): 追踪每日蛋白质、碳水、脂肪摄入，科学配比营养，支持增肌减脂目标
+- [一周食谱规划](https://www.util.cn/tools/meal-planner/): 智能生成健康的一周食谱，科学搭配营养，支持增肌、减脂、均衡饮食等多种目标
+- [食物份量换算器](https://www.util.cn/tools/food-calculator/): 快速换算食物份量、营养素和计量单位，支持常见食物的重量体积转换
+- [饮水习惯追踪器](https://www.util.cn/tools/hydration-tracker/): 追踪每日饮水量，保持身体水分平衡，支持多种饮品记录和饮水提醒
+- [最大摄氧量计算器](https://www.util.cn/tools/vo2max-calculator/): 计算VO2max评估心肺功能和有氧能力，预测运动表现和健康水平，支持多种测试方法
+- [呼吸频率检测](https://www.util.cn/tools/respiratory-rate-check/): 测量呼吸频率，评估呼吸健康状况，发现异常呼吸模式，支持计时和手动输入
+- [心血管fitness年龄评估](https://www.util.cn/tools/cardio-fitness-age/): 基于VO2max评估心血管"年龄"，了解心脏健康状态，制定科学改善计划
+- [瘦体重指数计算器](https://www.util.cn/tools/ffmi-calculator/): 计算FFMI评估肌肉发达程度，排除脂肪干扰，更准确反映身材水平
+- [骨密度风险评估](https://www.util.cn/tools/bone-density-risk/): 评估骨质疏松风险，了解骨骼健康状况，提供预防建议和改善措施
+- [睡眠周期计算器](https://www.util.cn/tools/sleep-cycle-calculator/): 基于90分钟睡眠周期计算最佳起床和就寝时间，提高睡眠质量，科学安排作息
+- [昼夜节律测试](https://www.util.cn/tools/circadian-rhythm-test/): 评估生物钟类型（晨型/夜型），了解最佳作息时间，优化生活质量和工作效率
+- [压力水平测试](https://www.util.cn/tools/stress-level-test/): 基于PSS量表评估感知压力水平，识别压力来源，获得科学减压建议
+- [体态评估](https://www.util.cn/tools/posture-assessment/): 自测圆肩驼背、骨盆前倾、科技脖等不良体态，获得科学矫正练习建议
+- [屏幕时间追踪器](https://www.util.cn/tools/screen-time-tracker/): 记录每日屏幕使用时间，分析数字设备使用习惯，建立健康的屏幕时间管理
+- [久坐时间计算器](https://www.util.cn/tools/sitting-time-calculator/): 计算每日久坐时间，评估久坐健康风险，获得定时活动建议
+- [预产期计算器](https://www.util.cn/tools/pregnancy-due-date/): 计算预产期和重要孕期时间节点，追踪胎儿发育进程，提供孕期注意事项
+- [儿童生长发育曲线](https://www.util.cn/tools/pediatric-growth/): 追踪儿童身高体重发育，对比WHO标准生长曲线，评估营养状况
+- [健康习惯追踪器](https://www.util.cn/tools/habit-tracker-health/): 追踪日常健康习惯，建立良好的生活方式，支持连续打卡和成就系统
+- [体重目标规划器](https://www.util.cn/tools/weight-goal-planner/): 科学规划减重或增重目标，计算时间线和热量需求，制定可行的体重管理计划
+
+## 金融工具
+
+- [税务计算器](https://www.util.cn/tools/tax-calculator/): 计算个人所得税、增值税、企业所得税等税费，支持2025年最新税率表
+- [汇率转换器](https://www.util.cn/tools/currency-converter/): 150+国家货币实时汇率转换，支持历史汇率查询和汇率走势分析
+- [企业财务分析器](https://www.util.cn/tools/business-finance-analyzer/): 分析企业财务指标，包括流动比率、负债率、利润率等，提供财务健康度评估
+- [个人养老金计算器](https://www.util.cn/tools/pension-calculator/): 计算个人养老金个税抵扣优惠和退休收益预测，支持多方案对比分析
+- [年终奖计算器](https://www.util.cn/tools/year-end-bonus-calculator/): 年终奖个税计算和发放方案优化，支持多种发放策略对比分析，帮助合法节税
+- [退休储蓄规划器](https://www.util.cn/tools/retirement-planner/): 计算退休目标储蓄金额和月储蓄建议，考虑通胀率和多种收入来源
+- [理财收益计算器](https://www.util.cn/tools/investment-calculator/): 计算各类理财产品收益，支持定期、基金、债券等多种投资方式
+- [信用卡还款计算器](https://www.util.cn/tools/credit-card-payment-calculator/): 计算信用卡最低还款、分期还款计划和利息成本，支持多种还款策略对比
+- [基金定投计算器](https://www.util.cn/tools/fund-sip-calculator/): 计算基金定投收益和收益率，支持定投频率分析和历史数据回测
+- [股票收益计算器](https://www.util.cn/tools/stock-profit-calculator/): 计算股票买卖收益、税费成本和持仓收益率，支持多笔交易汇总分析
+- [保险费计算器](https://www.util.cn/tools/insurance-premium-calculator/): 计算寿险、健康险、车险等保险费用，支持多产品对比和保费优化建议
+- [众筹回报计算器](https://www.util.cn/tools/crowdfunding-roi-calculator/): 计算众筹投资回报率和收益预测，支持风险评估和投资组合分析
+- [房租收益计算器](https://www.util.cn/tools/rental-yield-calculator/): 计算房产租金收益率和投资回报，分析物业管理成本和税费影响
+- [教育储蓄计算器](https://www.util.cn/tools/education-savings-calculator/): 计算子女教育储蓄目标和月储蓄建议，考虑教育通胀率和多种投资方式
+- [外汇套利计算器](https://www.util.cn/tools/forex-arbitrage-calculator/): 计算外汇套利机会和收益预测，分析汇率差和交易成本影响
+- [提前还款计算器](https://www.util.cn/tools/prepayment-calculator/): 对比房贷提前还款缩短年限与减少月供两种方式的节省利息，支持等额本息与等额本金
+- [订阅费用管理器](https://www.util.cn/tools/subscription-manager/): 管理各类订阅的价格周期与扣费日，自动换算月度年化支出，临近扣费提醒，数据存本机
+- [AA分账计算器](https://www.util.cn/tools/bill-split-calculator/): 聚餐旅游AA记账分摊，自动算出每人应收应付与最少转账方案
+- [记账流水本](https://www.util.cn/tools/expense-tracker/): 本地记账本，记录收支流水分分类统计，数据保存在本机浏览器不上传
+- [公积金贷款计算器](https://www.util.cn/tools/provident-fund-loan/): 公积金贷款额度试算与月供计算，公积金与商贷组合贷方案对比
+- [信用卡分期实际利率计算器](https://www.util.cn/tools/installment-rate-calculator/): 信用卡分期手续费率一键换算真实年化利率（IRR），名义费率与实际利率对照，看清分期的坑
+- [车贷月供计算器](https://www.util.cn/tools/car-loan-calculator/): 车贷月供一键计算，等额本息/等额本金对比，含首付比例与总利息明细
+- [通货膨胀计算器](https://www.util.cn/tools/inflation-calculator/): 基于中国历年CPI估算货币购买力变化，N年前的100元相当于现在多少钱
+
+## 文件工具
+
+- [文件加密解密器](https://www.util.cn/tools/file-encryptor/): 基于AES-256-GCM的本地文件加密解密工具，支持密码强度检测，文件不上传服务器
+- [PDF合并拆分器](https://www.util.cn/tools/pdf-merge-split/): 本地合并多个PDF文件、按页码范围提取或按页数拆分，支持批量打包下载，文件不上传
+- [CSV格式转换器](https://www.util.cn/tools/csv-converter/): CSV/TSV一键转换为JSON、Markdown表格、HTML、YAML，自动识别分隔符与表头
+- [字幕工具箱](https://www.util.cn/tools/subtitle-toolbox/): SRT与VTT字幕互转、时间轴整体平移、按倍率缩放、去重复行，本地处理不上传
+- [目录树生成器](https://www.util.cn/tools/directory-tree/): 选择本地文件夹生成ASCII/Markdown目录树，支持排除node_modules与深度限制
+- [Excel表格查看转换器](https://www.util.cn/tools/excel-viewer/): 在线查看xlsx/xls/csv并转换，多Sheet切换，导出JSON/CSV/Markdown，纯本地解析不上传
+- [ZIP压缩包查看器](https://www.util.cn/tools/zip-viewer/): 在线查看ZIP压缩包内容列表，预览文本文件，解压下载单个文件，本地处理不上传
+- [文件编码批量转换器](https://www.util.cn/tools/file-encoding-converter/): 批量检测文件编码（UTF-8/GBK/Big5等）并转换为UTF-8，解决中文乱码问题
+- [文本乱码修复器](https://www.util.cn/tools/mojibake-fixer/): 自动修复乱码文本，支持UTF-8/GBK/Big5误读逆向还原，多条修复链候选对比
+- [JSONL/NDJSON转换器](https://www.util.cn/tools/jsonl-converter/): JSONL与JSON/CSV互转，逐行校验标注错误行号，支持表格预览
+- [PEM证书解析器](https://www.util.cn/tools/pem-parser/): 本地解析X.509证书PEM文件，查看主体、有效期、SAN、指纹，识别私钥与公钥
+- [Markdown导出器](https://www.util.cn/tools/markdown-exporter/): Markdown转独立HTML文件，内置浅色/深色样式与代码高亮，支持片段导出与行号
+- [.env与JSON转换器](https://www.util.cn/tools/env-json-converter/): .env与JSON双向转换，支持引号注释export前缀解析，键名校验
+- [JSON合并工具](https://www.util.cn/tools/json-merger/): 两个JSON深度合并，数组可选替换/拼接/去重，冲突键对比预览
+
+## 场景专题
+
+- [本地跑大模型全套工具](https://www.util.cn/collections/local-llm-starter/): 从"我的显卡能跑什么模型"到"量化怎么选、微调要多少显存、API 和本地哪个划算"，本地部署大模型全流程需要的工具都在这里。
+- [视频创作者工具箱](https://www.util.cn/collections/video-creator-kit/): 字幕转换与时间轴调整、图片压缩缩放、加水印、清 EXIF——视频生产链路上的高频小任务，全部在浏览器本地完成，未发布素材不上传。
+- [隐私脱敏防护包](https://www.util.cn/collections/privacy-shield/): 照片里的 GPS、文件里的隐私、弱密码带来的风险——这套组合拳帮你把"随手发出去"的信息先处理一遍。全部处理在本地完成，敏感内容不经过任何服务器。
+- [前端开发日常套件](https://www.util.cn/collections/frontend-daily-pack/): JSON 格式化、颜色体系、正则调试、命名转换、Cron 表达式——前端高频小工具一次集齐，全部本地运行，接口数据不出浏览器。
+- [接口联调工具包](https://www.util.cn/collections/api-debug-kit/): Mock 数据生成、HTTP 响应模拟、JWT 解析、CORS 排查、时间戳转换——联调时那些"卡住半小时"的小问题，这里都有对应工具。
+- [家庭财务计算套装](https://www.util.cn/collections/family-finance-suite/): 房贷月供、提前还款怎么选、投资回报测算、订阅开支盘点——把家庭里最常见的几笔"大账"一次算清楚，计算全部在本地完成。
+- [写作者工具箱](https://www.util.cn/collections/writer-toolkit/): Markdown 编辑、多版本对比、大小写与文本清理、AI 提示词模板——写作流程里"改稿比写稿还费劲"的部分，交给工具。
+- [学习与专注套装](https://www.util.cn/collections/study-focus-kit/): 番茄钟专注计时、正倒计时器、秒表、提示词学习模板——把"开始学习"的启动成本和"学多久"的度量问题都交给工具。
+- [网络排查工具包](https://www.util.cn/collections/network-troubleshoot-kit/): 子网计算、IP 类型判定、IPv6 格式归一化、hosts 片段生成——网络问题排查中"算一算、查一查"的环节全部本地完成。
+- [文件处理流水线](https://www.util.cn/collections/file-ops-pipeline/): PDF 合并拆分、CSV 转换、目录树生成、文件加密、格式互转——处理文件不用再装软件、更不用上传第三方网站。
+
+## AI 百科词条
+
+- [Token（词元）](https://www.util.cn/wiki/token/): Token 是大语言模型处理文本的最小单位，模型按 Token 计数与计费，一个汉字约占 1 个 Token，4 个英文字符约占 1 个 Token。
+- [上下文窗口（Context Window）](https://www.util.cn/wiki/context-window/): 上下文窗口是模型单次能处理的 Token 上限，包含系统提示词、全部对话历史和输出。超出窗口的内容对模型来说等于不存在。
+- [系统提示词（System Prompt）](https://www.util.cn/wiki/system-prompt/): 系统提示词是置于对话最前方的指令，定义模型的角色、任务边界与输出格式。它是整个上下文中"性价比最低、也最重要"的一段——每次请求都会重复计费。
+- [温度系数（Temperature）](https://www.util.cn/wiki/temperature/): 温度控制模型输出的随机性：值越低输出越确定（适合抽取、分类），值越高输出越发散（适合创意写作）。常用区间 0-1，默认多为 0.7。
+- [幻觉（Hallucination）](https://www.util.cn/wiki/hallucination/): 幻觉指模型生成看似合理实则错误或虚构内容的现象，根源在于模型本质是基于统计的下一词预测，而不是事实检索。
+- [推理速度（Token/s）](https://www.util.cn/wiki/inference-speed/): 推理速度指模型每秒生成的 Token 数，是衡量本地部署体验的核心指标。它主要受内存带宽而非算力峰值的限制。
+- [GGUF 格式](https://www.util.cn/wiki/gguf/): GGUF 是 llama.cpp 生态定义的单文件模型格式，把权重、分词器、元信息打包在一个文件里，是 Ollama、LM Studio 等本地工具的标准载体。
+- [模型量化（Quantization）](https://www.util.cn/wiki/quantization/): 量化是把模型权重从 16-bit 浮点压缩到 8-bit、4-bit 甚至更低精度的技术，体积与显存占用成倍下降，是消费级硬件跑大模型的前提。
+- [Q4_K_M 量化等级](https://www.util.cn/wiki/q4-k-m/): Q4_K_M 是 GGUF 生态最流行的 4-bit 量化档位，约每 1B 参数占 0.6GB，质量与体积的最佳平衡点，也是 Ollama 等工具的默认选择。
+- [KV Cache](https://www.util.cn/wiki/kv-cache/): KV Cache 是推理时缓存的注意力键值张量，用空间换时间：没有它每生成一个词都要重算全部历史，有了它生成速度才能保持稳定。
+- [混合专家模型（MoE）](https://www.util.cn/wiki/moe/): MoE 模型把前馈层拆成多个"专家"，每个 Token 只激活其中一小部分（如 Qwen3-30B-A3B 只激活 3B），从而用大参数的质量换来接近小模型的推理速度。
+- [显存（VRAM）](https://www.util.cn/wiki/vram/): 显存是显卡板载的高速内存，跑本地大模型的第一约束条件：模型权重、KV Cache、运行开销全都要装进去，装不下就只能分层卸载或换更小的量化。
+- [统一内存（Unified Memory）](https://www.util.cn/wiki/unified-memory/): 苹果 M 系列芯片的 CPU 与 GPU 共享同一块内存，无需在系统内存和显存之间拷贝权重，是大内存 Mac 能跑大模型的结构性原因。
+- [知识蒸馏（Distillation）](https://www.util.cn/wiki/distillation/): 知识蒸馏是让小模型学习大模型输出的训练方法：大模型当老师生成高质量样本，小模型在其上训练，以小模型的成本获得接近老师的效果。
+- [LoRA（低秩适配微调）](https://www.util.cn/wiki/lora/): LoRA 冻结原模型权重，只训练注入各层的低秩矩阵（适配器），训练参数量不到原模型 1%，显存约为推理的 1.2 倍，是个人微调的主流方案。
+- [QLoRA](https://www.util.cn/wiki/qlora/): QLoRA 把基础模型量化到 4-bit 再做 LoRA 训练，显存约 0.9GB/1B 参数，让 24GB 消费级显卡也能微调 32B 模型，是低资源微调的事实标准。
+- [全参微调（Full Fine-tuning）](https://www.util.cn/wiki/full-fine-tuning/): 全参微调更新模型全部权重，效果上限最高，但显存约 16GB/1B 参数——7B 模型就需要 112GB 以上，通常只有多卡或数据中心环境才跑得动。
+- [RAG（检索增强生成）](https://www.util.cn/wiki/rag/): RAG 先从知识库检索相关资料、再让模型基于资料回答，用外部知识弥补模型训练数据的时效与私有性缺口，同时显著降低幻觉。
+- [Embedding（向量化）](https://www.util.cn/wiki/embedding/): Embedding 模型把文本映射为高维向量，语义相近的文本向量距离也相近——它是语义搜索、RAG、聚类推荐的底层组件。
+- [本地推理引擎（Ollama / llama.cpp / LM Studio）](https://www.util.cn/wiki/inference-engine/): 本地推理引擎负责把 GGUF 等格式的模型高效跑在你的硬件上：llama.cpp 是底层核心，Ollama 和 LM Studio 是它之上的两种典型封装——命令行服务化与图形界面。
+
+## 博客文章
+
+- [居家生活数字决策指南：从狗粮克数到空调电费](https://www.util.cn/blog/articles/pet-home-life-calculator-guide/): 狗粮喂多少、毛衣能不能热水洗、6寸配方转8寸、空调开一晚多少钱——这些凭感觉容易翻车的小决策，其实都有公式可算。讲清背后的原理与数字，顺手把计算工具收进书签。
+- [分期的真实利率：0.6% 手续费背后的 13% 年化](https://www.util.cn/blog/articles/credit-card-installment-real-interest-guide/): 每期 0.6% 的分期手续费，名义费率年化 7.2%，按 IRR 折算真实年化约 13%。讲透费率与利率的换算原理，再看车贷、最低还款和通胀里的同类陷阱。
+- [装修备料不踩坑：瓷砖、壁纸用量与损耗的算法](https://www.util.cn/blog/articles/renovation-material-quantity-guide/): 装修买建材，商家报的量往往偏
+- [打字速度怎么练：从测基线到 WPM 60 的训练体系](https://www.util.cn/blog/articles/typing-speed-training/): 打字是程序员和写作者的底层输出带宽。从测基线、纠指法到刻意练习，一套可执行的 4 周训练计划。
+- [私有 IP 还是公网？看懂日志里那个 IP 的身份](https://www.util.cn/blog/articles/ip-address-identity-guide/): 排查问题时常被 IP 绕晕：100.64 开头是谁？169.254 说明什么？一文讲清 IPv4/IPv6 的身份判定规则，以及每类地址对应的排查方向。
+- [身份证号码里的信息学：校验位、地区码与隐私](https://www.util.cn/blog/articles/id-card-numerology/): 18 位身份证号是一段精心设计的编码：地址码、出生日期、顺序码与 ISO 7064 校验位。解剖它的结构，也讲讲为什么填表时要打码。
+- [摄影黄金时刻：日出日落时间与拍摄计划](https://www.util.cn/blog/articles/golden-hour-photography/): 同一机位，日出后一小时与正午拍出的照片判若两张。讲清黄金时刻的原理，教你查询任意地点的精确时间，并给出一份可直接套用的拍摄计划工作流。
+- [hosts 文件妙用：本地域名映射与联调加速](https://www.util.cn/blog/articles/hosts-file-tricks/): 用真实域名调本地服务、批量屏蔽广告域名、联调时手动切流——hosts 是开发者手里最古老也最好用的开关，附生成器实操与不生效排查清单。
+- [密码安全自检：弱密码清单与升级路径](https://www.util.cn/blog/articles/password-security-checklist/)
+- [敏感文件安全传输实操：加密、校验与渠道选择](https://www.util.cn/blog/articles/secure-file-sharing-guide/): 合同、证件、报表要走网盘或即时通讯？一套三步的安全传输流程：先加密、再校验、渠道分离，全程浏览器本地处理，敏感文件不上传。
+- [RAG 知识库搭建：让 AI 回答你的私有数据](https://www.util.cn/blog/articles/rag-knowledge-base-guide/): 模型不知道你的内部文档？RAG 用检索增强弥补私有知识缺口。从切块、向量化到提示词的完整搭建指南与调优清单。
+- [订阅审计法：一年省下几千块的订阅管理术](https://www.util.cn/blog/articles/subscription-audit/): 视频、音乐、云盘、AI 助手……单笔小额的自动扣费最容易被忽略。一套季度订阅审计法，用本地工具管住隐形支出。
+- [开源协议怎么选：一张决策树 + LICENSE 生成](https://www.util.cn/blog/articles/choose-open-source-license/): 仓库里没有 LICENSE 文件，法律上等于
+- [Git 提交规范落地：Conventional Commits 与自动 Changelog](https://www.util.cn/blog/articles/conventional-commits-workflow/): 提交信息是团队的公共记忆。从 type、scope、breaking 的速成口诀，到把 git log 一键转成规范 Changelog，两步把提交规范落成习惯而不是口号。
+- [正则安全课：从入门到避开 ReDoS 陷阱](https://www.util.cn/blog/articles/regex-safety-redos/): 一条嵌套量词写错的正则，能让 29 个字符吃满一个 CPU 核几十秒。讲透灾难性回溯的成因，给出四种高危模式清单、修复范式与上线前检查清单。
+- [CIDR 与子网速成：写给开发者的网络课](https://www.util.cn/blog/articles/cidr-subnet-for-developers/): 配 K8s 网段、写防火墙规则、看日志里的陌生 IP——开发者绕不开的网络基本功，一篇讲透 CIDR 与子网划分，配合可视化工具学得更快。
+- [字幕从下载到可用：格式转换、时间轴校准与双语制作](https://www.util.cn/blog/articles/subtitle-workflow-guide/): 字幕比声音快两秒、播放器不认格式、双语字幕不会做——这篇指南覆盖字幕从下载到可用的全部环节，所有处理都在浏览器本地完成，未发布素材不上传。
+- [PDF 全场景手册：合并、拆分、加密与安全分享](https://www.util.cn/blog/articles/pdf-everyday-handbook/): 扫描件合并、章节提取、敏感文档加密——一份覆盖日常九成 PDF 需求的手册，全部浏览器本地完成，文件不上传。
+- [LoRA 微调入门：单卡调出自己的模型](https://www.util.cn/blog/articles/lora-qlora-finetune-guide/): 从数据准备到训练与合并，走通 LoRA/QLoRA 微调全流程。核心原则是先算显存预算再选方案，避免一上来就撞 OOM。
+- [GGUF 量化怎么选：Q3 / Q4 / Q6 / Q8 的质量与体积取舍](https://www.util.cn/blog/articles/gguf-quantization-guide/): 量化是大模型进消费级硬件的门票。解读 GGUF 文件命名规则，给出各档位体积与质量对照表，并按显存富余程度给出选择决策树。
+- [证件照自己动手：换底色、裁尺寸、去 EXIF](https://www.util.cn/blog/articles/diy-id-photo/): 一寸照、二寸照、白底蓝底……重温印店之前先试试自己动手：换底色、裁尺寸、清元数据三步搞定，照片不出设备。
+- [买房金融课：月供、提前还款与组合贷的数学](https://www.util.cn/blog/articles/mortgage-math-guide/): 等额本息还是等额本金？提前还款选缩期还是减月供？用三道可复算的数字案例讲清买房贷款的每一个决策点。
+- [前端联调提速：Mock、CORS、JWT 的调试套路](https://www.util.cn/blog/articles/frontend-api-debugging/): 后端接口没好、跨域报错看不懂、登录态莫名失效——联调卡住的三大问题都有固定解法，一套套路全部覆盖，配合免费在线工具即开即用。
+- [不装 Office 处理 Excel：浏览器里的表格工作流](https://www.util.cn/blog/articles/excel-online-without-office/): 临时看个表格、转个格式，不想装 Office 也不想上传网盘？从查看到导出的完整浏览器工作流，数据不出设备。
+- [中文乱码终结指南：GBK / UTF-8 误读的成因与修复](https://www.util.cn/blog/articles/chinese-mojibake-fix-guide/)
+- [本地部署还是调 API？一笔算得清的成本账](https://www.util.cn/blog/articles/local-vs-api-cost/): API 按 Token 计费，本地只花电费——但折旧、并发与质量差距也要算进去。用一套可复算的成本模型，给轻度、中度、重度三档调用量的明确结论。
+- [7B / 14B / 32B 模型需要什么显卡：显存计算公式与速查表](https://www.util.cn/blog/articles/model-vram-requirements/): 显存占用 = 模型权重 + KV Cache + 运行开销。一文讲清计算公式，给出各参数量乘量化档位的显存速查表，常见显卡直接对号入座。
+- [Ollama 从安装到跑通：新手完整教程与常见报错](https://www.util.cn/blog/articles/ollama-getting-started-guide/): 手把手安装 Ollama、拉取模型、调通 REST API，覆盖 OOM、生成速度慢、连接拒绝等高频报错的排查思路，新手照做即可跑通。
+- [2026 本地大模型选型指南：Qwen3 / Llama / DeepSeek 怎么选](https://www.util.cn/blog/articles/local-llm-model-comparison-2026/): 从任务类型、硬件显存、量化生态与中文能力四个维度对比三大开源模型家族，给出 8G/16G/24G/48G 显存档位的选型清单，三分钟对号入座。
+- [发照片前必做的一件事：10 分钟完成照片与文件隐私脱敏](https://www.util.cn/blog/articles/privacy-cleanup-before-sharing/): 照片里的 GPS 定位、文件里的敏感内容、弱密码保护的压缩包——这篇文章给出一套 10 分钟的发布前隐私处理流程，全部工具在浏览器本地运行，敏感内容不上传。
+- [16G 内存 Mac 怎么跑本地大模型：从检测到部署的完整流程](https://www.util.cn/blog/articles/run-local-llm-on-16g-mac/): 以 16GB 统一内存的 M 系 Mac 为例，走一遍本地部署大模型的完整决策流程：先测硬件、再选量化、最后算清本地与云端的成本账。全程配合免费在线工具，不需要任何专业知识。
+- [游戏 DevOps 最佳实践：构建高效研发运维体系](https://www.util.cn/blog/articles/game-devops-best-practices/): 深入探讨游戏研发的DevOps最佳实践，包括容器化部署、自动化运维、监控告警等
+- [事件驱动工作流引擎：构建灵活的游戏后台系统](https://www.util.cn/blog/articles/event-driven-workflow-engine/): 深入探讨事件驱动工作流引擎的设计与实现，包括事件总线、工作流编排、状态管理等
+- [游戏运营自动化工作流：提升运营效率的利器](https://www.util.cn/blog/articles/game-automation-workflow/): 深入探讨游戏运营的自动化工作流设计，包括活动配置、数据分析、用户运营等
+- [游戏自动化测试：构建可靠的质量保障体系](https://www.util.cn/blog/articles/game-automated-testing/): 深入探讨游戏自动化测试体系，包括单元测试、集成测试、UI自动化、性能测试等
+- [游戏研发 CI/CD 流水线：构建高效交付体系](https://www.util.cn/blog/articles/game-cicd-pipeline/): 深入探讨游戏研发的CI/CD流水线设计，包括自动化构建、测试、发布等全流程
+- [游戏出海支付与合规：构建全球化支付体系](https://www.util.cn/blog/articles/game-payment-compliance/): 深入探讨游戏出海的支付系统设计和合规要求，包括多渠道支付、风控体系、隐私保护等
+- [游戏出海基础设施：多区域部署架构设计](https://www.util.cn/blog/articles/game-multi-region-deployment/): 深入探讨游戏出海的多区域部署架构，包括全球CDN、数据库同步、流量调度等技术
+- [游戏出海技术方案：构建全球化本地化系统](https://www.util.cn/blog/articles/game-globalization-i18n/): 深入探讨游戏出海的本地化技术方案，包括多语言系统、文化适配、时区处理等
+- [微信小游戏性能优化实战：60FPS 流畅体验的秘密](https://www.util.cn/blog/articles/mini-game-performance/): 深入探讨微信小游戏的性能优化技术，包括渲染优化、内存管理、CPU优化等实战技巧
+- [微信小游戏架构设计：从零构建高性能游戏引擎](https://www.util.cn/blog/articles/mini-game-architecture/): 深入探讨微信小游戏的架构设计，包括引擎选择、模块化设计、资源管理等核心技术
+- [云原生安全实践：构建零信任架构](https://www.util.cn/blog/articles/cloud-native-security/): 深入探讨云原生环境下的安全实践，包括零信任架构、容器安全、服务网格安全等
+- [AI 辅助开发工具深度剖析：从代码生成到智能调试](https://www.util.cn/blog/articles/ai-assisted-development-tools/): 深入探讨AI辅助开发工具的技术原理和最佳实践，包括代码生成、智能调试、重构建议等功能
+- [实时数据架构：从流处理到智能决策](https://www.util.cn/blog/articles/real-time-data-architecture/): 深入探讨实时数据架构设计，包括流处理、事件溯源、CQRS模式等核心技术
+- [低代码平台架构设计：从可视化到智能生成](https://www.util.cn/blog/articles/low-code-platform-architecture/): 深入探讨低代码平台的架构设计，包括元数据驱动、组件体系、代码生成等核心技术
+- [Rust 系统编程：构建高性能、内存安全的基础设施](https://www.util.cn/blog/articles/rust-system-programming/): 深入探讨Rust在系统编程领域的应用，包括异步运行时、零拷贝技术、内存管理等核心技术
+- [微前端架构2.0：模块联邦与云前端实践](https://www.util.cn/blog/articles/micro-frontend-architecture/): 深入探讨微前端架构的最新实践，包括Module Federation、云前端部署、独立发布等核心技术
+- [边缘计算与边缘AI：将智能推向数据源](https://www.util.cn/blog/articles/edge-computing-ai/): 深入探讨边缘计算架构设计和边缘AI应用场景，分析如何在边缘节点部署智能服务，实现低延迟、高效率的数据处理
+- [WebAssembly 2.0：开启浏览器高性能计算新时代](https://www.util.cn/blog/articles/webassembly-new-frontier/): 探索WebAssembly 2.0的新特性，包括垃圾回收、线程并行、组件模型等，以及在AI推理、视频处理等场景的实战应用
+- [Serverless 3.0：下一代无服务器架构深度解析](https://www.util.cn/blog/articles/serverless-architecture-evolution/): 探讨Serverless架构的最新演进，从FaaS到Serverless Containers，再到Distributed Serverless，解析下一代无服务器架构的设计理念
+- [AI Agent 开发实战指南：从零构建智能代理系统](https://www.util.cn/blog/articles/ai-agent-development-guide/): 深入探讨AI Agent的设计原理与开发实践，帮助你构建能够自主规划、调用工具、协同工作的智能代理系统
+- [AI代码审查实战：如何用Claude和GPT-4提升代码质量和团队效率](https://www.util.cn/blog/articles/ai-code-review-best-practices/): 深入探讨AI辅助代码审查的最佳实践，包括工具配置、审查流程、质量标准和团队协作，帮助开发者建立高效的AI代码审查体系。
+- [端到端自动化测试实战：从Cypress到Playwright的完整测试方案](https://www.util.cn/blog/articles/e2e-testing-complete-guide/): 深入探讨E2E测试的最佳实践，对比Cypress和Playwright两大框架，提供完整的测试策略、数据管理和CI/CD集成方案。
+- [Jest vs Vitest：现代前端测试框架的全面对比与迁移指南](https://www.util.cn/blog/articles/jest-vs-vitest-comparison/): 深入对比Jest和Vitest的性能、功能、生态系统，提供完整的迁移方案和最佳实践，帮助团队选择最适合的测试框架。
+- [CI/CD流水线设计最佳实践：从构建到部署的完整优化指南](https://www.util.cn/blog/articles/cicd-pipeline-best-practices/): 深入探讨CI/CD流水线设计的核心原则、性能优化策略和安全实践，帮助你构建高效可靠的生产级持续集成交付系统。
+- [Jenkins vs GitLab CI：两大CI/CD平台的深度对比与选型指南](https://www.util.cn/blog/articles/jenkins-vs-gitlab-ci-comparison/): 详细对比Jenkins和GitLab CI的架构差异、功能特性、使用场景和性能表现，帮助你做出正确的技术选型决策。
+- [GitHub Actions 实战指南：从入门到精通的完整CI/CD流水线](https://www.util.cn/blog/articles/github-actions-complete-guide/): 深入讲解GitHub Actions的核心概念、工作流语法和最佳实践，帮助你构建高效的自动化CI/CD流水线。
+- [游戏服务器数据库设计：从玩家数据到排行榜的完整方案](https://www.util.cn/blog/articles/game-server-database-design/)
+- [现代Web服务器架构：从单体到微服务的演进之路](https://www.util.cn/blog/articles/modern-web-server-architecture/)
+- [游戏客户端网络同步技术：从状态同步到帧同步的完整指南](https://www.util.cn/blog/articles/game-client-network-synchronization/)
+- [AI驱动的游戏内容生成：从关卡设计到剧情生成的革命](https://www.util.cn/blog/articles/ai-game-content-generation/)
+- [分布式游戏服务器设计：从架构到实践的完整指南](https://www.util.cn/blog/articles/distributed-game-server-design/)
+- [Web游戏服务器技术栈对比：Node.js vs Go vs Rust全方位分析](https://www.util.cn/blog/articles/web-game-server-technologies/)
+- [游戏客户端性能优化指南：从帧率到内存的全方位优化](https://www.util.cn/blog/articles/game-client-performance-optimization/)
+- [游戏引擎深度对比：Unity vs Unreal vs Godot全方位解析](https://www.util.cn/blog/articles/game-engine-comparison/)
+- [大语言模型游戏NPC开发：从对话系统到智能角色的演进](https://www.util.cn/blog/articles/llm-game-npc-development/)
+- [游戏服务器架构设计：从MMO到实时对战的完整指南](https://www.util.cn/blog/articles/game-server-architecture/)
+- [AI芯片架构：从GPU到TPU再到专用加速器的演进](https://www.util.cn/blog/articles/ai-chip-architecture/)
+- [先进封装技术：从2.5D到3D集成的演进](https://www.util.cn/blog/articles/advanced-packaging-technology/)
+- [晶体管演进：从FinFET到GAA再到CFET的革命之路](https://www.util.cn/blog/articles/transistor-evolution-gaa-cfet/)
+- [半导体新材料：从二维材料到超半导体的革命](https://www.util.cn/blog/articles/semiconductor-new-materials/)
+- [光子芯片技术：硅光子与光互连的革命](https://www.util.cn/blog/articles/photonic-chips/)
+- [量子计算芯片：从超导到中性原子的技术演进](https://www.util.cn/blog/articles/quantum-computing-chips/)
+- [存算一体架构：打破冯·诺依曼瓶颈的计算革命](https://www.util.cn/blog/articles/compute-in-memory/)
+- [HBM高带宽内存技术：从HBM3到HBM4的演进之路](https://www.util.cn/blog/articles/hbm-memory-technology/)
+- [芯粒技术：打破摩尔定律的芯片设计革命](https://www.util.cn/blog/articles/chiplet-technology/)
+- [AI晶体管技术：从FinFET到AIFET的革命性演进](https://www.util.cn/blog/articles/ai-transistor-technology/)
+- [AI Agent与Web3融合：构建自主链上智能体](https://www.util.cn/blog/articles/ai-agent-web3-integration/)
+- [DeFi协议开发实战：从AMM到借贷平台的完整指南](https://www.util.cn/blog/articles/defi-protocol-dev/)
+- [多模态大模型应用开发：从GPT-4V到LLaVA的实战指南](https://www.util.cn/blog/articles/multimodal-llm-apps/)
+- [智能合约安全审计：从漏洞分析到最佳实践](https://www.util.cn/blog/articles/smart-contract-audit/)
+- [区块链跨链技术深度解析：从原子交换到轻客户端验证](https://www.util.cn/blog/articles/web3-cross-chain/)
+- [大模型微调实战：从LoRA到QLoRA的完整指南](https://www.util.cn/blog/articles/llm-fine-tuning/)
+- [AI Agent工作流编排：从LangChain到AutoGPT的实战指南](https://www.util.cn/blog/articles/ai-agent-workflow/)
+- [WEB3去中心化身份（DID）技术深度解析](https://www.util.cn/blog/articles/web3-did-identity/)
+- [大模型RAG技术实战：构建企业级知识问答系统](https://www.util.cn/blog/articles/llm-rag-technology/)
+- [AI Agent智能体架构设计：从理论到实践](https://www.util.cn/blog/articles/ai-agent-architecture/)
+- [系统容量规划与性能测试实践：从QPS评估到全链路压测的完整指南](https://www.util.cn/blog/articles/system-capacity-planning/)
+- [大规模微服务系统的服务治理实战：从服务发现到流量控制的完整体系](https://www.util.cn/blog/articles/service-governance-microservices/)
+- [容器化应用的可观测性架构设计：Metrics、Tracing、Logging 的完整实践](https://www.util.cn/blog/articles/observability-containerized-apps/)
+- [微服务架构拆分实践与反思：从单体到分布式的演进之路](https://www.util.cn/blog/articles/microservices-splitting-practice/)
+- [消息队列技术选型与深度对比：Kafka vs RabbitMQ vs RocketMQ vs Pulsar](https://www.util.cn/blog/articles/message-queue-comparison/)
+- [Go语言高并发服务性能优化实战：从理论到落地的完整指南](https://www.util.cn/blog/articles/go-concurrency-optimization/)
+- [分布式系统一致性保障方案设计：从理论到落地的完整指南](https://www.util.cn/blog/articles/distributed-consistency-patterns/)
+- [数据库慢查询优化的方法论与实践：从索引到SQL重写的完整指南](https://www.util.cn/blog/articles/database-slow-query-optimization/)
+- [数据库分库分表架构设计指南：从单表到百亿级数据的演进之路](https://www.util.cn/blog/articles/database-sharding-guide/)
+- [高并发场景下的缓存架构演进：从单一 Redis 到多层缓存的实战之路](https://www.util.cn/blog/articles/cache-architecture-evolution/)
+- [Serverless架构与前端部署：现代化部署策略](https://www.util.cn/blog/articles/serverless-deployment/)
+- [前端安全防护最佳实践：构建安全的Web应用](https://www.util.cn/blog/articles/frontend-security/)
+- [Tailwind CSS性能优化完全指南](https://www.util.cn/blog/articles/tailwind-optimization/)
+- [前端监控与错误追踪实战指南](https://www.util.cn/blog/articles/frontend-monitoring/)
+- [WebCrypto API实战：前端加密与安全通信完全指南](https://www.util.cn/blog/articles/webcrypto-api/)
+- [TypeScript类型体操进阶：掌握高级类型系统](https://www.util.cn/blog/articles/typescript-advanced/)
+- [Nuxt 4服务端渲染性能优化实战指南](https://www.util.cn/blog/articles/nuxt-4-ssr/)
+- [Vue 3.5新特性深度解析：响应式系统的重大升级](https://www.util.cn/blog/articles/vue-3.5-features/)
+- [用Rust构建高性能CLI工具：从零到部署完整指南](https://www.util.cn/blog/articles/rust-cli-tool/)
+- [WebAssembly在前端工程中的实践：突破JavaScript性能瓶颈](https://www.util.cn/blog/articles/webassembly-practice/)
+- [Markdown编辑器开发实战指南](https://www.util.cn/blog/articles/markdown-editor-development/): 从零开始讲解如何开发一个功能完整的Markdown编辑器，包括语法高亮、实时预览和导出功能
+- [AES加密算法完全指南](https://www.util.cn/blog/articles/aes-encryption-guide/): 深入解析AES加密算法的原理、模式和实践应用，帮助开发者正确使用AES保护数据安全
+- [SQL格式化与查询优化完全指南](https://www.util.cn/blog/articles/sql-formatting-optimization/): 深入讲解SQL格式化的最佳实践和查询优化技巧，帮助开发者编写高效、可读的SQL代码
+- [URL编码与解码完全指南](https://www.util.cn/blog/articles/url-encoding-guide/): 深入讲解URL编码的原理、规则和应用场景，帮助开发者正确处理URL中的特殊字符
+- [MD5与SHA哈希算法完全对比](https://www.util.cn/blog/articles/hash-algorithms-comparison/): 深入对比MD5和SHA系列哈希算法的特点、安全性和应用场景，帮助开发者选择合适的哈希算法
+- [时间戳转换与时间处理完全指南](https://www.util.cn/blog/articles/timestamp-processing-guide/): 全面讲解时间戳的概念、转换方法和常见时间处理场景，帮助开发者轻松应对各种时间相关问题
+- [JWT认证机制完全指南](https://www.util.cn/blog/articles/jwt-authentication-guide/): 深入解析JWT认证机制的工作原理、结构和最佳实践，帮助开发者构建安全的身份认证系统
+- [正则表达式实战指南：从入门到精通](https://www.util.cn/blog/articles/regex-practical-guide/): 全面讲解正则表达式的核心概念、常用模式和实战案例，帮助开发者掌握强大的文本处理工具
+- [JSON格式化工具的幕后原理与实现](https://www.util.cn/blog/articles/json-formatter-principles/): 深入解析JSON格式化工具的工作原理，包括词法分析、语法树构建和格式化算法的实现
+- [Base64编码原理与实战应用指南](https://www.util.cn/blog/articles/base64-encoding-guide/): 深入解析Base64编码的原理、应用场景和实战技巧，帮助开发者理解并正确使用Base64编码
+- [AI应用指南：从入门到实践](https://www.util.cn/blog/articles/ai-applications-guide/): 全面介绍AI应用的发展现状、核心技术和实践案例，帮助读者了解如何在实际场景中应用人工智能技术
+- [技术债务管理2.0：从负担到战略资产的重构思维](https://www.util.cn/blog/articles/technical-debt-management/)
+- [可观测性3.0：AI驱动的智能监控与故障预测](https://www.util.cn/blog/articles/observability-3-ai-driven/)
+- [构建实时协作系统：从OT到CRDT的深度解析](https://www.util.cn/blog/articles/realtime-collaboration-architecture/)
+- [Serverless 2.0：从函数计算到无运维的演进之路](https://www.util.cn/blog/articles/serverless-2-evolution/)
+- [开发者体验(DX)设计：像设计用户体验一样设计开发体验](https://www.util.cn/blog/articles/developer-experience-design/)
+- [零信任架构从理论到实践：构建永不信任、始终验证的安全体系](https://www.util.cn/blog/articles/zero-trust-architecture-guide/)
+- [Edge AI架构设计：在资源受限设备上部署智能应用](https://www.util.cn/blog/articles/edge-ai-architecture-guide/)
+- [WebAssembly 2025：从边缘技术到主流平台的跨越](https://www.util.cn/blog/articles/webassembly-2025-ecosystem-maturity/)
+- [LLM驱动的软件工程2.0：从编码到架构的全面变革](https://www.util.cn/blog/articles/llm-driven-software-engineering/)
+- [2025技术浪潮回顾与2026趋势前瞻：开发者必知的变革方向](https://www.util.cn/blog/articles/2025-tech-review-2026-trends/)
+- [开发者工具完全指南：提升编程效率的实用工具集](https://www.util.cn/blog/articles/developer-tools-productivity/)
+- [Web3与区块链开发完全指南：从智能合约到DApp](https://www.util.cn/blog/articles/web3-blockchain-development/)
+- [云原生架构完全指南：Kubernetes与微服务实践](https://www.util.cn/blog/articles/cloud-native-architecture-2025/)
+- [跨平台移动开发完全指南：React Native与Flutter深度实践](https://www.util.cn/blog/articles/cross-platform-mobile-development/)
+- [数据库优化与分布式存储：构建高性能数据架构](https://www.util.cn/blog/articles/database-optimization-distributed-storage/)
+- [网络安全与漏洞深度分析：从攻击到防御的完整指南](https://www.util.cn/blog/articles/cybersecurity-vulnerability-analysis/)
+- [DevOps与CI/CD完全指南：构建高效的软件交付流水线](https://www.util.cn/blog/articles/devops-cicd-complete-guide/)
+- [AI与机器学习工程化实践：从模型到生产系统的完整指南](https://www.util.cn/blog/articles/ai-ml-engineering-best-practices/)
+- [后端系统架构设计：从单体到微服务的演进之路](https://www.util.cn/blog/articles/backend-system-design-microservices/)
+- [现代前端架构深度解析：构建可扩展的大型应用](https://www.util.cn/blog/articles/modern-frontend-architecture-deep-dive/)
+- [分布式系统一致性算法深度解析：从Paxos到Raft](https://www.util.cn/blog/articles/distributed-consensus-algorithms/): 深入探讨分布式系统中的核心一致性算法，包括Paxos、Raft、EPaxOS等，理解其工作原理、应用场景和实现细节。
+- [WebAssembly性能优化实践：突破Web应用性能瓶颈](https://www.util.cn/blog/articles/webassembly-performance-optimization/): 深入探讨WebAssembly的性能优化技巧，从内存管理到SIMD优化，帮助开发者构建高性能的Web应用。
+- [AI Agent架构设计模式：从单一智能到群体协作](https://www.util.cn/blog/articles/ai-agent-architecture-patterns/): 深入探讨AI Agent的架构设计模式，涵盖ReAct、CoT、多智能体协作等核心模式，帮助开发者构建更强大的AI应用系统。
+- [Prompt工程完全指南：掌握与大语言模型沟通的艺术](https://www.util.cn/blog/articles/prompt-engineering-guide/): 系统性地介绍Prompt工程的核心原理、设计模式、高级技巧和最佳实践，帮助你更好地驾驭LLM的能力。
+- [AI辅助编程工具深度解析：Claude Code、Cursor、GitHub Copilot全对比](https://www.util.cn/blog/articles/ai-coding-tools-comparison/): 全面对比主流AI编程工具的功能特点、使用场景和最佳实践，帮助开发者选择最适合自己的AI编程助手。
+- [RAG系统构建完全指南：打造企业级知识问答系统](https://www.util.cn/blog/articles/rag-system-complete-guide/): 深入解析检索增强生成（RAG）系统的架构设计、向量数据库、嵌入模型和评估方法，帮助你构建准确可靠的企业知识问答系统。
+- [LLM应用开发实战：从原型到生产部署的完整指南](https://www.util.cn/blog/articles/llm-application-development/): 深入探讨大语言模型应用开发的全流程，包括模型选择、提示工程、API设计、性能优化和生产部署等实战技巧。
+- [现代数据湖架构设计：从存储到分析的完整方案](https://www.util.cn/blog/articles/data-lake-architecture/): 深入解析数据湖的核心概念、架构设计、分区策略和最佳实践，帮助企业构建高性能、低成本的数据分析平台。
+- [用户体验设计原则：打造让用户爱不释手的产品](https://www.util.cn/blog/articles/ux-design-principles/): 深入探讨用户体验设计的核心原则、心理学基础和实战技巧，帮助你设计出直观、高效、愉悦的数字产品。
+- [大数据处理框架深度对比：Spark vs Flink vs Storm](https://www.util.cn/blog/articles/bigdata-framework-comparison/): 全面对比主流大数据处理框架的特点、性能和使用场景，帮助你根据业务需求选择最合适的技术方案。
+- [前端性能优化完全指南：从加载到渲染的全方位优化](https://www.util.cn/blog/articles/frontend-performance-optimization-20251225/): 深入探讨前端性能优化的核心技术，包括资源加载优化、渲染性能优化、网络优化和JavaScript性能优化，帮助你打造秒开的Web应用。
+- [后端性能优化实战：从诊断到优化的完整方法论](https://www.util.cn/blog/articles/performance-optimization/): 深入剖析后端性能优化的全流程，包括性能诊断、数据库优化、缓存策略、并发处理、异步编程等实战技巧，帮助你构建高性能的后端系统。
+- [响应式设计完全指南：构建适配所有设备的完美体验](https://www.util.cn/blog/articles/responsive-design-complete-guide/): 深入探讨响应式设计的核心原理、布局策略、媒体查询技巧和移动端适配方案，帮助你构建在各种设备上都完美展示的网站。
+- [API安全最佳实践：构建可信赖的API接口](https://www.util.cn/blog/articles/api-security-best-practices/): 全面解析API安全的方方面面，包括身份认证、授权控制、数据加密、输入验证、速率限制等，帮助你构建安全可靠的API服务。
+- [Web可访问性设计实践：构建人人可用的数字产品](https://www.util.cn/blog/articles/accessibility-design-practice/): 深入探讨Web可访问性（a11y）的核心原则、技术实现和测试方法，帮助你构建对所有人都友好的、符合WCAG标准的无障碍网站。
+- [高可用系统设计：构建永不宕机的后端架构](https://www.util.cn/blog/articles/high-availability-system-design/): 全面解析高可用系统设计的原则、模式和实战技巧，包括冗余设计、故障转移、限流降级、容错机制等，帮助你构建99.99%可用性的系统。
+- [多智能体协作系统：构建团队协作式AI应用](https://www.util.cn/blog/articles/multi-agent-collaboration/): 深入探讨多Agent协作系统的设计架构、通信机制和协调策略，让多个AI智能体像人类团队一样高效协作完成复杂任务。
+- [分布式事务处理：从理论到实践的完整指南](https://www.util.cn/blog/articles/distributed-transactions/): 深入解析分布式事务的挑战、解决方案和最佳实践，包括2PC、3PC、Saga、TCC等模式，帮助你在微服务架构中实现数据一致性。
+- [零信任架构：重塑网络安全的现代防护体系](https://www.util.cn/blog/articles/zero-trust-architecture/): 全面解析零信任安全架构的设计原则、核心组件和实施路径，帮助你构建适应云原生时代的动态安全防护体系。
+- [事件驱动架构：构建松耦合、高扩展系统的核心范式](https://www.util.cn/blog/articles/event-driven-architecture/): 深入解析事件驱动架构的设计原理、实现模式和技术选型，帮助你构建真正解耦、可扩展的后端系统。
+- [AI Agent设计模式：构建智能系统的核心方法论](https://www.util.cn/blog/articles/ai-agent-design-patterns/): 深入解析AI Agent的设计模式和实现方法，包括ReAct模式、工具使用、记忆系统、规划与推理，以及如何构建可靠的Agent应用。
+- [微服务架构实战：从理论到落地的完整指南](https://www.util.cn/blog/articles/microservices-architecture-practice/): 深入探讨微服务架构的设计原则、技术选型、服务拆分策略和实战经验，帮助你构建可扩展、可维护的后端系统。
+- [Vibe Coding：下一代编程范式的崛起与实践](https://www.util.cn/blog/articles/vibe-coding-next-generation-paradigm/): 探索Vibe Coding这一新兴编程范式，如何通过直觉驱动、AI辅助和流畅体验重新定义开发方式，让编程回归创造的本质。
+- [现代前端工程化体系搭建：从零构建企业级前端项目架构](https://www.util.cn/blog/articles/modern-frontend-engineering-setup/)
+- [API安全防护与鉴权机制：构建安全可靠的RESTful API](https://www.util.cn/blog/articles/api-security-authentication-guide/)
+- [Docker与Kubernetes容器化部署：从零搭建生产级容器化系统](https://www.util.cn/blog/articles/docker-kubernetes-deployment/)
+- [微前端架构设计最佳实践：从理论到落地的完整指南](https://www.util.cn/blog/articles/micro-frontend-architecture-best-practices/)
+- [Web性能监控与诊断实战：从Core Web Vitals到性能优化](https://www.util.cn/blog/articles/web-performance-monitoring-diagnosis/)
+- [Rust内存安全与所有权机制深度解析：零成本抽象的实现原理](https://www.util.cn/blog/articles/rust-memory-safety-ownership/)
+- [AI编程助手最佳实践指南：提升开发效率的实战技巧](https://www.util.cn/blog/articles/ai-coding-assistant-best-practices/)
+- [TypeScript 5.8新特性详解：类型系统进化与开发体验升级](https://www.util.cn/blog/articles/typescript-5-8-new-features/)
+- [Nuxt 4新特性完全指南：下一代Vue全栈框架的进化之路](https://www.util.cn/blog/articles/nuxt-4-new-features-guide/)
+- [Vue 3.5响应式系统深度解析：Proxy与Reactivity API的实现原理](https://www.util.cn/blog/articles/vue-3-5-reactive-system-deep-dive/)
+- [营销归因与ROI分析：科学衡量每一分营销投入](https://www.util.cn/blog/articles/marketing-attribution-roi-analysis/)
+- [社交媒体营销完全指南：打造病毒式传播的品牌内容](https://www.util.cn/blog/articles/social-media-marketing-guide/)
+- [移动应用营销与ASO实战：从0到100万用户的增长路径](https://www.util.cn/blog/articles/mobile-app-marketing-aso/)
+- [转化率优化（CRO）完全指南：科学方法提升网站转化](https://www.util.cn/blog/articles/conversion-rate-optimization/)
+- [内容营销与SEO完美结合：打造流量与转化的双重引擎](https://www.util.cn/blog/articles/content-marketing-seo-strategy/)
+- [用户行为分析实战：洞察用户行为，优化产品体验](https://www.util.cn/blog/articles/user-behavior-analysis/)
+- [数据分析方法论：从数据到洞察的完整思维框架](https://www.util.cn/blog/articles/data-analytics-methodology/)
+- [数字广告投放完全指南：从0到1打造高效广告投放体系](https://www.util.cn/blog/articles/digital-advertising-optimization/)
+- [技术营销增长实战：如何用数据驱动实现10倍用户增长](https://www.util.cn/blog/articles/tech-marketing-growth-strategies/)
+- [2025年SEO优化完全指南：从基础到进阶的实战策略](https://www.util.cn/blog/articles/seo-optimization-guide/)
+- [2025年云原生部署完全指南：从容器化到Serverless的现代化部署策略](https://www.util.cn/blog/articles/cloud-native-deployment-2025/): 深入探讨2025年云原生部署的最新技术和最佳实践，包括Kubernetes、Serverless、微服务架构、DevOps流水线、可观测性和自动化运维，帮助企业构建高效、可扩展的云原生应用。
+- [2025年响应式Web设计完全指南：从移动优先到自适应布局的最佳实践](https://www.util.cn/blog/articles/responsive-web-design-2025/): 全面介绍2025年响应式Web设计的最新技术和最佳实践，包括CSS Grid、Flexbox、Container Queries、现代媒体查询和跨设备适配策略，帮助设计师和开发者创建完美的多设备体验。
+- [高级API调试技术：从接口测试到性能监控的完整调试指南](https://www.util.cn/blog/articles/advanced-api-debugging-techniques/): 深入探讨现代API调试的高级技术和最佳实践，包括自动化测试、性能监控、错误追踪、安全调试和调试工具的使用，帮助开发者快速定位和解决API问题。
+- [2025年前端性能优化终极指南：从Core Web Vitals到用户体验优化](https://www.util.cn/blog/articles/frontend-performance-optimization-2025/): 深入探讨2025年前端性能优化的最新技术和最佳实践，包括Core Web Vitals优化、代码分割、懒加载、缓存策略和现代Web性能工具的使用。
+- [现代服务器运维完全指南：自动化监控与智能运维最佳实践](https://www.util.cn/blog/articles/modern-server-operations-guide/): 全面介绍现代服务器运维的核心技术和最佳实践，包括自动化部署、监控告警、性能优化、故障排除和安全加固，帮助运维团队构建高效、可靠的服务器管理体系。
+- [DDoS防护完全指南：从原理分析到实战部署的完整防护体系](https://www.util.cn/blog/articles/ddos-protection-comprehensive-guide/): 全面解析DDoS攻击的类型、原理和防护策略，包括网络层防护、应用层防护、云原生安全方案和应急响应流程，帮助企业构建多层次、智能化的DDoS防护体系。
+- [容器部署最佳实践：从Docker到Kubernetes的完整部署指南](https://www.util.cn/blog/articles/container-deployment-best-practices/): 深入探讨现代容器化部署的最佳实践，包括Docker容器化、Docker Compose编排、Kubernetes集群管理、CI/CD集成和监控告警，帮助企业构建可靠的容器化应用部署流程。
+- [CDN加速优化完全指南：从基础原理到高级配置实战](https://www.util.cn/blog/articles/cdn-acceleration-optimization-guide/): 全面解析CDN加速技术的核心原理、配置方法和优化策略，包括缓存策略、边缘计算、安全防护和性能监控，帮助开发者构建高性能的全球内容分发网络。
+- [2025年现代网页设计原则：打造极致用户体验的完整指南](https://www.util.cn/blog/articles/modern-web-design-principles-2025/): 探讨2025年网页设计的最新趋势和核心原则，包括用户体验设计、视觉设计、交互设计、可访问性等关键要素，帮助设计师和开发者创建出色的网站。
+- [现代前端开发调试技巧：从Console到DevTools的完整指南](https://www.util.cn/blog/articles/modern-frontend-debugging-techniques/): 深入探讨现代前端开发中的调试技巧，包括浏览器DevTools高级功能、Source Map配置、断点调试、性能分析和常见问题排查方法。
+- [Web无障碍实践指南：构建包容性网络应用](https://www.util.cn/blog/articles/web-accessibility-guide/): 全面了解Web无障碍开发实践，为所有用户创造平等访问的网络体验。
+- [Node.js安全最佳实践：构建安全的后端应用](https://www.util.cn/blog/articles/nodejs-security-best-practices/): 全面掌握Node.js安全开发的最佳实践，构建安全、可靠的Web应用。
+- [Git高级技巧：掌握版本控制的精髓](https://www.util.cn/blog/articles/git-advanced-techniques/): 深入Git的高级特性，掌握强大的版本控制技巧，提升开发效率和团队协作能力。
+- [前端性能优化完全指南：让你的网站快如闪电](https://www.util.cn/blog/articles/frontend-performance-optimization/): 全面掌握前端性能优化技巧，从加载速度到运行时性能，打造极速用户体验。
+- [RESTful API设计原则：构建优雅的Web服务接口](https://www.util.cn/blog/articles/restful-api-design-best-practices/): 深入探讨RESTful API的设计原则和最佳实践，帮助你构建清晰、一致、易用的API接口。
+- [Docker容器化完全指南：从入门到生产实践](https://www.util.cn/blog/articles/docker-containerization-guide/): 全面掌握Docker容器化技术，从基础概念到生产环境部署的最佳实践。
+- [TypeScript类型体操：掌握高级泛型和类型操作技巧](https://www.util.cn/blog/articles/typescript-type-gymnastics/): 深入TypeScript高级类型系统，掌握泛型编程和类型操作的精髓，写出类型安全的代码。
+- [JavaScript异步编程最佳实践：从回调到async/await](https://www.util.cn/blog/articles/javascript-async-programming-best-practices/): 深入探讨JavaScript异步编程的演进历程，掌握Promise和async/await的最佳实践。
+- [现代CSS布局技术：Grid与Flexbox完全指南](https://www.util.cn/blog/articles/modern-css-layout-techniques/): 深入解析CSS Grid和Flexbox布局技术，帮助你轻松构建复杂而灵活的网页布局。
+- [Vue 3.5 Composition API 深度解析：掌握响应式编程的艺术](https://www.util.cn/blog/articles/vue-3-5-composition-api-deep-dive/): 深入探索Vue 3.5 Composition API的核心概念和高级用法，帮助你掌握响应式编程的精髓。
+- [构建实用型Web开发工具：从需求到实现的完整指南](https://www.util.cn/blog/articles/building-practical-web-dev-tools-guide/): 探讨如何从实际需求出发，一步步构建实用的Web开发工具，涵盖设计思路、技术选型和最佳实践。
+- [独立游戏开发完全指南：从创意到发布的成功之路](https://www.util.cn/blog/articles/indie-game-development-guide/): 深入剖析独立游戏开发的全过程，从创意构思到市场发行的实战经验分享。
+- [移动应用营销增长黑客：从0到100万用户的实战策略](https://www.util.cn/blog/articles/mobile-app-marketing-growth/): 深度剖析移动应用营销的全渠道策略，从用户获取到留存变现的完整增长路径。
+- [微信小程序生态深度解析：从流量到变现的商业逻辑](https://www.util.cn/blog/articles/wechat-mini-program-ecosystem/): 深度剖析微信小程序生态系统，从流量获取、用户运营到商业变现的完整路径。
+- [Flutter高级动画完全指南：打造电影级流畅体验的终极秘籍](https://www.util.cn/blog/articles/flutter-advanced-animations/): 深入Flutter动画系统的核心原理，掌握高级动画技巧，打造令人惊艳的用户界面。
+- [React Native性能优化实战：打造60FPS流畅体验的终极指南](https://www.util.cn/blog/articles/react-native-performance-optimization/): 深入React Native性能优化的核心技术，从原理到实践的完整解决方案。
+- [游戏出海全攻略：从本土化到全球发行的制胜之道](https://www.util.cn/blog/articles/game-localization-overseas-strategy/): 深度解析游戏出海的完整策略，从产品本地化到海外市场运营的实战经验。
+- [小游戏开发与变现完全指南：从创意到盈利的实战手册](https://www.util.cn/blog/articles/mini-game-development-monetization/): 深入探讨小游戏开发的核心技巧和多种变现模式，帮助开发者打造盈利的游戏产品。
+- [小程序开发完全指南：从零到上线的高级技巧](https://www.util.cn/blog/articles/mini-program-development-best-practices/): 全面掌握小程序开发的核心技巧，包括性能优化、用户体验提升、跨平台适配等高级实践。
+- [全球游戏发行策略：从立项到运营的完整指南](https://www.util.cn/blog/articles/global-game-publishing-strategy/)
+- [跨平台移动应用开发：React Native vs Flutter vs Uni-app 深度对比](https://www.util.cn/blog/articles/cross-platform-mobile-app-development/): 深入分析三大跨平台移动开发框架的优缺点，帮助开发者选择最适合的技术栈。
+- [2025年Web Vitals性能优化终极指南](https://www.util.cn/blog/articles/web-vitals-optimization-2025/): 掌握最新的Web性能优化技术，提升网站用户体验和搜索排名。
+- [微服务通信模式深度解析](https://www.util.cn/blog/articles/microservices-communication-patterns/): 掌握微服务通信的核心模式，构建高效可靠的分布式系统。
+- [AWS Lambda性能优化完全指南](https://www.util.cn/blog/articles/aws-lambda-optimization/): 掌握AWS Lambda优化技巧，构建高效经济的无服务器应用。
+- [Django 5.0新特性全面解析](https://www.util.cn/blog/articles/django-5-new-features/): 全面了解Django 5.0的强大新功能，提升Web开发效率和性能。
+- [Redis 7性能优化完全指南](https://www.util.cn/blog/articles/redis-7-optimization-guide/): 掌握Redis 7的核心优化技巧，构建高性能缓存系统。
+- [PostgreSQL 17新特性全面解析](https://www.util.cn/blog/articles/postgresql-17-new-features/): 全面了解PostgreSQL 17的强大新功能，提升数据库性能和开发体验。
+- [Tailwind CSS 4.0新特性深度解析](https://www.util.cn/blog/articles/tailwindcss-4-new-features/): 深入了解Tailwind CSS 4.0的核心改进，提升开发效率和应用性能。
+- [Next.js 15 App Router完全指南](https://www.util.cn/blog/articles/nextjs-15-app-router-guide/): 掌握Next.js 15 App Router的核心概念，构建高性能的全栈应用。
+- [Kubernetes 1.30新特性全面解析](https://www.util.cn/blog/articles/kubernetes-1-30-new-features/): 全面了解Kubernetes 1.30的创新功能，提升集群管理效率。
+- [Rust异步编程完全指南](https://www.util.cn/blog/articles/rust-async-programming-guide/): 掌握Rust异步编程的关键技术，构建高性能并发应用。
+- [Vue 3.5 Composition API深度解析](https://www.util.cn/blog/articles/vue-3-5-composition-api-deep-dive-20251219/): 全面解析Vue 3.5 Composition API的核心改进，助您掌握最新前端开发技术。
+- [现代CSS布局技术全解析：Flexbox、Grid与最佳实践](https://www.util.cn/blog/articles/modern-css-layout-techniques-20251218/): 全面介绍现代CSS布局技术，包括Flexbox、Grid、容器查询、多列布局等核心特性，帮助你构建响应式、现代化的网页布局。
+- [JavaScript异步编程最佳实践：从回调到Async/Await的完整指南](https://www.util.cn/blog/articles/javascript-async-programming-best-practices-20251218/): 深入探讨JavaScript异步编程的最佳实践，涵盖回调函数、Promise、Async/Await、错误处理、并发控制等关键概念，帮助开发者编写更优雅的异步代码。
+- [Webpack 5现代化前端工具链配置：从零开始构建高性能项目](https://www.util.cn/blog/articles/webpack5-modern-frontend-toolchain/): 全面介绍Webpack 5的现代化配置，涵盖模块联邦、持久化缓存、Tree Shaking、性能优化等核心特性，助你构建高效的前端工具链。
+- [React Hooks深度解析：原理、最佳实践和性能优化](https://www.util.cn/blog/articles/react-hooks-deep-dive/): 深入探讨React Hooks的内部实现原理，涵盖自定义Hooks开发、性能优化、常见陷阱以及最佳实践，帮助你更好地掌握React现代化开发。
+- [Docker容器化最佳实践：从开发到生产的完整指南](https://www.util.cn/blog/articles/docker-best-practices-guide/): 全面的Docker最佳实践指南，涵盖镜像优化、容器安全、多环境部署、监控告警等关键主题，帮助你构建可靠的容器化应用。
+- [Vue 3性能优化实战指南：从渲染到内存管理的全方位优化](https://www.util.cn/blog/articles/vue3-performance-optimization/): 深入探讨Vue 3应用的性能优化策略，涵盖渲染优化、组件懒加载、内存管理、虚拟滚动等多个方面的实战技巧。
+- [前端性能优化终极指南：提升Web应用加载速度的15个实战技巧](https://www.util.cn/blog/articles/frontend-performance-optimization-guide/): 掌握15个实用的前端性能优化技巧，从网络层面到代码层面的全方位优化策略
+- [TypeScript高级泛型技巧：构建类型安全且灵活的代码](https://www.util.cn/blog/articles/advanced-typescript-generics/): 深入探讨TypeScript泛型的高级用法，包括条件类型、映射类型、模板字面量类型等，帮助你写出更加类型安全且灵活的代码。
+- [JSON格式化工具完全指南：从基础到进阶的实用教程](https://www.util.cn/blog/articles/json-formatter-complete-guide/): 掌握JSON格式化工具的使用方法，提升数据处理效率，包含实战案例和最佳实践
+- [算法与数据结构学习路径：从零基础到算法大师的完整指南](https://www.util.cn/blog/articles/algorithm-data-structures-learning-path/): 提供一个完整的算法与数据结构学习路径，从基础概念开始，逐步深入到高级算法，包含详细的实践项目和面试准备建议
+- [前端工程化实践指南：从零搭建现代化的前端项目](https://www.util.cn/blog/articles/frontend-engineering-practices/): 深入探讨前端工程化的核心理念和实践方法，包括项目脚手架、构建优化、自动化测试、代码质量保证等，帮助团队建立规范的前端开发流程
+- [Docker容器化部署完全指南：从入门到生产环境](https://www.util.cn/blog/articles/docker-deployment-guide/): 全面介绍Docker容器化技术，包括基础概念、镜像构建、容器编排、监控日志、安全配置等，并提供生产环境部署的最佳实践
+- [Git进阶使用技巧：从基础到高级的实战指南](https://www.util.cn/blog/articles/git-advanced-techniques-20251217/): 深入探讨Git的高级使用技巧，包括分支管理策略、合并冲突解决、性能优化、自动化工作流等，帮助开发者提升Git使用效率
+- [RESTful API设计最佳实践：从规范到生产环境的完整指南](https://www.util.cn/blog/articles/restful-api-design-best-practices-20251217/): 深入探讨RESTful API的设计原则和最佳实践，包括资源命名、HTTP方法使用、错误处理、版本控制等，并提供实际项目中的设计经验
+- [JavaScript异步编程最佳实践：从回调到async/await的完整指南](https://www.util.cn/blog/articles/javascript-async-programming-best-practices-20251217/): 全面介绍JavaScript异步编程的演进历程，从回调函数到Promise再到async/await，以及在实际开发中的最佳实践
+- [现代CSS布局技巧：Flexbox、Grid与容器的完美结合](https://www.util.cn/blog/articles/modern-css-layout-techniques-20251217/): 深入探讨现代CSS布局技术，包括Flexbox、Grid、Container Queries等，以及如何在实际项目中灵活运用这些布局技巧
+- [前端性能优化实战指南：从加载到渲染的全方位优化](https://www.util.cn/blog/articles/frontend-performance-optimization-20251217/): 全面介绍前端性能优化的方法和技巧，涵盖加载、渲染、动画、内存管理等多个方面的实战经验
+- [TypeScript类型体操：从基础到高级的30个练习](https://www.util.cn/blog/articles/typescript-type-gymnastics-20251217/): 通过30个精心设计的TypeScript类型练习，掌握类型编程的精髓，提升类型推导和类型操作能力
+- [Vue 3响应式原理深入解析：从Proxy到Composition API](https://www.util.cn/blog/articles/vue3-reactive-system-deep-dive/): 深入解析Vue 3的响应式系统原理，了解Proxy如何实现响应式，以及Composition API背后的设计思想
+- [Hugo博客URL优化：重构文章管理结构的最佳实践](https://www.util.cn/blog/articles/hugo-url-best-practices/): 介绍如何重构Hugo博客的URL路径和文章管理结构，实现更友好的SEO和更清晰的文件组织方式。
+- [Web无障碍完全指南：构建人人可访问的网站](https://www.util.cn/blog/articles/web-accessibility-guide-20251216/): 全面介绍Web无障碍(WA)的核心原则和实施方法，包括语义化HTML、ARIA、键盘导航、色彩对比等，帮助开发者构建包容性的网站应用。
+- [VS Code扩展开发完全指南：打造个性化的开发环境](https://www.util.cn/blog/articles/vscode-extensions-guide/): 深入介绍VS Code扩展开发的完整流程，包括API使用、发布流程、最佳实践等，帮助开发者创建强大实用的VS Code扩展。
+- [Redis最佳实践指南：高性能内存数据库实战技巧](https://www.util.cn/blog/articles/redis-best-practices/): 深入探讨Redis的使用最佳实践，包括数据结构选择、性能优化、集群配置、持久化策略等，帮助开发者构建高可用的Redis应用。
+- [React性能优化完全指南：从基础到高级的性能提升技巧](https://www.util.cn/blog/articles/react-performance-optimization/): 深入探讨React应用性能优化的核心策略，包括组件优化、状态管理、渲染优化、Bundle优化等，帮助构建高性能的React应用。
+- [Node.js安全最佳实践：构建安全可靠的服务端应用](https://www.util.cn/blog/articles/node-security-best-practices/): 全面介绍Node.js应用的安全防护策略，包括输入验证、认证授权、数据加密、安全配置等关键技术，帮助开发者构建安全的服务端应用。
+- [Git工作流完全指南：从入门到精通的版本控制实践](https://www.util.cn/blog/articles/git-workflow-guide/): 全面介绍Git版本控制的核心概念和最佳实践，包括分支策略、协作流程、冲突解决、代码审查等，帮助团队建立高效的Git工作流程。
+- [Docker容器化最佳实践：构建高效安全的容器应用](https://www.util.cn/blog/articles/docker-best-practices/): 深入探讨Docker容器化的最佳实践，包括多阶段构建、安全配置、性能优化等关键技术，帮助开发者构建企业级容器应用。
+- [CSS Grid与Flexbox完全指南：现代布局实战技巧](https://www.util.cn/blog/articles/css-grid-flexbox-guide/): 深入对比CSS Grid和Flexbox的使用场景，通过实战案例演示如何选择合适的布局方案，掌握现代CSS布局的核心技巧。
+- [RESTful API设计原则：构建可扩展的Web服务接口](https://www.util.cn/blog/articles/api-design-principles/): 深入探讨RESTful API的核心设计原则，包括资源定义、HTTP方法使用、状态码选择、版本管理等关键技术，帮助开发者设计出清晰、可维护的API接口。
+- [欢迎来到有条工具技术博客](https://www.util.cn/blog/articles/welcome-to-util-tech-blog/): 我们的技术博客正式上线，这里将分享开发经验、技术见解和工具使用技巧
+- [Vite vs Webpack：现代前端构建工具对比](https://www.util.cn/blog/articles/vite-vs-webpack-comparison/): 深入对比 Vite 和 Webpack 两大主流前端构建工具，分析各自的优势和适用场景
+- [TypeScript 最佳实践：构建类型安全的前端应用](https://www.util.cn/blog/articles/typescript-best-practices/): 分享 TypeScript 开发中的最佳实践，帮助团队构建类型安全、可维护的前端应用
+- [React 性能优化实战：从理论到实践](https://www.util.cn/blog/articles/react-performance-optimization-20251213/): 深入探讨 React 应用性能优化的各种技巧，包括组件优化、状态管理优化和渲染优化
+- [Vue 3 Composition API 完全指南](https://www.util.cn/blog/articles/vue3-composition-api-guide/): 全面介绍 Vue 3 Composition API 的使用方法和最佳实践
+- [CSS Grid 布局完全教程](https://www.util.cn/blog/articles/css-grid-layout-tutorial/): 全面学习 CSS Grid 布局系统，掌握现代网页布局技术
+- [Git 高级技巧：提升开发效率的实用指南](https://www.util.cn/blog/articles/git-advanced-techniques-20251209/): 分享 Git 的高级使用技巧，帮助开发者更高效地管理代码和协作
+- [Web 安全最佳实践：保护你的应用免受攻击](https://www.util.cn/blog/articles/web-security-best-practices/): 全面介绍 Web 应用安全开发的最佳实践，防范常见的安全威胁
+- [Docker 容器化部署完全指南](https://www.util.cn/blog/articles/docker-containerization-guide-20251207/): 全面介绍 Docker 容器化的最佳实践，从基础概念到生产部署
+- [RESTful API 设计最佳实践](https://www.util.cn/blog/articles/api-design-best-practices/): 全面介绍 RESTful API 的设计原则和最佳实践，构建优雅、易用的 API
+- [2025年测试覆盖率优化完全指南：从0%到100%的实践路径与工具配置](https://www.util.cn/blog/articles/test-coverage-optimization-guide/)
+- [2025年AI辅助编程Prompt工程完全指南：从零到一的提示词构建方法](https://www.util.cn/blog/articles/prompt-engineering-ai-programming-guide/)
+- [Next.js 15服务端组件深度解析：从React Server Components到全栈开发的范式转移](https://www.util.cn/blog/articles/nextjs-server-components-deep-dive/)
+- [2025年Next.js 15 App Router实战指南：从零构建现代化Web应用](https://www.util.cn/blog/articles/nextjs-15-app-router-practice/)
+
+## Optional
+
+- [关于本站](https://www.util.cn/about/): 站点介绍与免责声明
+- [常见问题](https://www.util.cn/faq/): 使用问题解答
+- [隐私政策](https://www.util.cn/privacy/): 数据不出本机的说明
+- [下载桌面版](https://www.util.cn/download/): macOS 桌面客户端

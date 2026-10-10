@@ -1,6 +1,6 @@
 ---
 title: "Git 高级技巧：提升开发效率的实用指南"
-slug: "git-advanced-techniques"
+slug: "git-advanced-techniques-20251209"
 date: 2025-12-09T11:00:00+08:00
 draft: false
 tags: ['Git', '版本控制', '开发工具', '团队协作']

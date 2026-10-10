@@ -1,5 +1,6 @@
 ---
 title: "消息队列技术选型与深度对比：Kafka vs RabbitMQ vs RocketMQ vs Pulsar"
+slug: "message-queue-comparison"
 date: 2026-01-05
 draft: false
 description: "深入对比主流消息队列的架构设计、性能特性、适用场景，以及如何根据业务需求选择合适的消息中间件"

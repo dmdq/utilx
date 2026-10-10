@@ -390,8 +390,8 @@ const calculateDifference = () => {
 
 // 计算工作日
 const calculateWorkdays = (startDate, endDate) => {
-  const start = new Date(startDate)
-  const end = new Date(endDate)
+  let start = new Date(startDate)
+  let end = new Date(endDate)
   const isReverse = start > end
 
   if (isReverse) {

@@ -1,5 +1,6 @@
 ---
 title: "开发者体验(DX)设计：像设计用户体验一样设计开发体验"
+slug: "developer-experience-design"
 description: "深入探讨开发者体验(DX)的设计方法论，包括DX评估框架、工具链优化、文档设计等，帮助团队提升开发效率和满意度。"
 author: "有条工具团队"
 date: 2025-12-31T13:00:00+08:00

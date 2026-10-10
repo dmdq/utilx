@@ -1,5 +1,6 @@
 ---
 title: "AI辅助编程工具深度解析：Claude Code、Cursor、GitHub Copilot全对比"
+slug: "ai-coding-tools-comparison"
 summary: "全面对比主流AI编程工具的功能特点、使用场景和最佳实践，帮助开发者选择最适合自己的AI编程助手。"
 date: 2025-12-25T23:30:00+08:00
 draft: false

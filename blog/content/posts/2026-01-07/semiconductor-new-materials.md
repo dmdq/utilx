@@ -1,5 +1,6 @@
 ---
 title: "半导体新材料：从二维材料到超半导体的革命"
+slug: "semiconductor-new-materials"
 date: 2026-01-07T15:00:00+08:00
 draft: false
 author: "技术团队"

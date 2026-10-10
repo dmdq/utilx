@@ -1,5 +1,6 @@
 ---
 title: "光子芯片技术：硅光子与光互连的革命"
+slug: "photonic-chips"
 date: 2026-01-07T14:00:00+08:00
 draft: false
 author: "技术团队"

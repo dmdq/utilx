@@ -1,5 +1,6 @@
 ---
 title: "量子计算芯片：从超导到中性原子的技术演进"
+slug: "quantum-computing-chips"
 date: 2026-01-07T13:00:00+08:00
 draft: false
 author: "技术团队"

@@ -1,5 +1,6 @@
 ---
 title: "微服务架构实战：从理论到落地的完整指南"
+slug: "microservices-architecture-practice"
 summary: "深入探讨微服务架构的设计原则、技术选型、服务拆分策略和实战经验，帮助你构建可扩展、可维护的后端系统。"
 date: 2025-12-25T11:00:00+08:00
 draft: false

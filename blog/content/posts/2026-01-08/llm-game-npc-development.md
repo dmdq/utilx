@@ -1,5 +1,6 @@
 ---
 title: "大语言模型游戏NPC开发：从对话系统到智能角色的演进"
+slug: "llm-game-npc-development"
 date: 2026-01-08T10:00:00+08:00
 draft: false
 author: "技术团队"

@@ -1,5 +1,6 @@
 ---
 title: "AI Agent工作流编排：从LangChain到AutoGPT的实战指南"
+slug: "ai-agent-workflow"
 date: 2026-01-06T12:00:00+08:00
 draft: false
 author: "技术团队"

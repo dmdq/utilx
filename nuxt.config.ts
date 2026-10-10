@@ -85,20 +85,22 @@ export default defineNuxtConfig({
               type: 'image/png'
             },
             {
+              src: 'icon-192.png',
+              sizes: '192x192',
+              type: 'image/png'
+            },
+            {
               src: 'logo/logo-256.png',
               sizes: '256x256',
               type: 'image/png'
             },
             {
-              src: 'logo/logo-512.png',
+              src: 'icon-512.png',
               sizes: '512x512',
               type: 'image/png'
             }
           ],
-          categories: ['productivity', 'utilities', 'developer'],
-          // 推送通知相关配置
-          gcm_sender_id: '103953800507', // GCM 发送者ID（需要替换为您的）
-          gcm_user_visible_only: true
+          categories: ['productivity', 'utilities', 'developer']
         }
       }
     ]
@@ -175,11 +177,12 @@ export default defineNuxtConfig({
         },
         // 优化依赖预构建
         output: {
-          manualChunks: {
-            vendor: ['vue'], // 核心框架
-            ui: ['lucide-vue-next', '@vueuse/integrations'], // UI工具
-            utils: ['crypto-js', 'marked', 'qrcode', 'sortablejs'], // 工具库
-            graphics: ['@esotericsoftware/spine-player'] // 图形库
+          // vite 8/rolldown 仅支持函数形式（对象形式会报 manualChunks is not a function）
+          manualChunks(id) {
+            if (/node_modules\/(vue)\//.test(id)) return 'vendor' // 核心框架
+            if (/node_modules\/(lucide-vue-next|@vueuse)\//.test(id)) return 'ui' // UI工具
+            if (/node_modules\/(crypto-js|marked|qrcode|sortablejs)\//.test(id)) return 'utils' // 工具库
+            if (/node_modules\/@esotericsoftware\//.test(id)) return 'graphics' // 图形库
           }
         }
       },
@@ -247,7 +250,6 @@ export default defineNuxtConfig({
   // 配置路由规则
   nitro: {
     // 优化内存使用
-    minify: true,
     sourceMap: false,
     // 只预渲染重要页面，避免内存溢出
     prerender: {
@@ -325,7 +327,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon.png' },
         { rel: 'apple-touch-icon', href: '/icon-192.png' },
-        { rel: 'manifest', href: '/manifest.json' }
+        { rel: 'manifest', href: '/manifest.webmanifest' }
       ],
       // 添加主题初始化脚本，在页面加载前执行
       script: [

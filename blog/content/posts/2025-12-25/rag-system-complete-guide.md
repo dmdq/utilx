@@ -1,5 +1,6 @@
 ---
 title: "RAG系统构建完全指南：打造企业级知识问答系统"
+slug: "rag-system-complete-guide"
 summary: "深入解析检索增强生成（RAG）系统的架构设计、向量数据库、嵌入模型和评估方法，帮助你构建准确可靠的企业知识问答系统。"
 date: 2025-12-25T23:00:00+08:00
 draft: false

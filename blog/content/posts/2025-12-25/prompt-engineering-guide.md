@@ -1,5 +1,6 @@
 ---
 title: "Prompt工程完全指南：掌握与大语言模型沟通的艺术"
+slug: "prompt-engineering-guide"
 summary: "系统性地介绍Prompt工程的核心原理、设计模式、高级技巧和最佳实践，帮助你更好地驾驭LLM的能力。"
 date: 2025-12-25T23:45:00+08:00
 draft: false

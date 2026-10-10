@@ -1,5 +1,6 @@
 ---
 title: "端到端自动化测试实战：从Cypress到Playwright的完整测试方案"
+slug: "e2e-testing-complete-guide"
 summary: "深入探讨E2E测试的最佳实践，对比Cypress和Playwright两大框架，提供完整的测试策略、数据管理和CI/CD集成方案。"
 date: 2026-01-09T12:00:00+08:00
 draft: false

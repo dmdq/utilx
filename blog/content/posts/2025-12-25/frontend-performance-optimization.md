@@ -1,5 +1,6 @@
 ---
 title: "前端性能优化完全指南：从加载到渲染的全方位优化"
+slug: "frontend-performance-optimization-20251225"
 summary: "深入探讨前端性能优化的核心技术，包括资源加载优化、渲染性能优化、网络优化和JavaScript性能优化，帮助你打造秒开的Web应用。"
 date: 2025-12-25T19:30:00+08:00
 draft: false

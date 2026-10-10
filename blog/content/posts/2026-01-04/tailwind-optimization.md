@@ -1,5 +1,6 @@
 ---
 title: "Tailwind CSS性能优化完全指南"
+slug: "tailwind-optimization"
 date: 2026-01-04T17:00:00+08:00
 draft: false
 author: "技术团队"

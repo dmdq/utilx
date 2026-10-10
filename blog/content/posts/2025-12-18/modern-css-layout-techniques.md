@@ -1,6 +1,6 @@
 ---
 title: "现代CSS布局技术全解析：Flexbox、Grid与最佳实践"
-slug: "modern-css-layout-techniques"
+slug: "modern-css-layout-techniques-20251218"
 date: 2025-12-18T20:00:00+08:00
 lastmod: 2025-12-18T20:00:00+08:00
 summary: "全面介绍现代CSS布局技术，包括Flexbox、Grid、容器查询、多列布局等核心特性，帮助你构建响应式、现代化的网页布局。"

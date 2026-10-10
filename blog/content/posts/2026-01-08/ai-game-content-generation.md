@@ -1,5 +1,6 @@
 ---
 title: "AI驱动的游戏内容生成：从关卡设计到剧情生成的革命"
+slug: "ai-game-content-generation"
 date: 2026-01-08T15:00:00+08:00
 draft: false
 author: "技术团队"

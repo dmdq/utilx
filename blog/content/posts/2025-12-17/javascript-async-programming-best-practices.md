@@ -1,6 +1,6 @@
 ---
 title: "JavaScript异步编程最佳实践：从回调到async/await的完整指南"
-slug: "javascript-async-programming-best-practices"
+slug: "javascript-async-programming-best-practices-20251217"
 date: 2025-12-17T14:00:00+08:00
 draft: false
 tags: ['JavaScript', '异步编程', 'Promise', 'async/await', '最佳实践']

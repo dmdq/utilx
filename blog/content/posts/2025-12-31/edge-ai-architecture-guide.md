@@ -1,5 +1,6 @@
 ---
 title: "Edge AI架构设计：在资源受限设备上部署智能应用"
+slug: "edge-ai-architecture-guide"
 description: "深入探讨边缘AI架构设计，涵盖模型压缩、端云协同推理、边缘AI芯片选型、实时性优化等核心主题。"
 author: "有条工具团队"
 date: 2025-12-31T11:00:00+08:00

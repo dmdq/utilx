@@ -22,7 +22,7 @@
 
 ## ✨ Features
 
-- 🎯 **200+ Utilities** - Covering development, encryption, text processing, image processing, health, finance, and more
+- 🎯 **500+ Utilities** - Covering development, encryption, text processing, image processing, health, finance, and more
 - 🌙 **Dark/Light Theme** - Theme switching support to protect your eyes
 - 📱 **Responsive Design** - Perfect adaptation for desktop and mobile devices
 - ⚡ **Pure Frontend** - All calculations run locally in your browser, protecting data privacy
@@ -242,12 +242,12 @@ util/
 │   │   └── useToolPersistence.js # Tool persistence
 │   ├── data/             # Data files
 │   │   ├── categories.js  # Tool categories (15 categories)
-│   │   ├── tools.js       # Tool definitions (200+ tools)
+│   │   ├── tools.js       # Tool definitions (500+ tools)
 │   │   ├── site.js        # Site configuration
 │   │   └── tags.js        # Tag management
 │   ├── layouts/          # Layout components
 │   ├── pages/            # Page components
-│   │   ├── tools/        # Tool pages (200+ tool pages)
+│   │   ├── tools/        # Tool pages (500+ tool pages)
 │   │   ├── category/     # Category pages
 │   │   └── tag/          # Tag pages
 │   ├── plugins/          # Plugins

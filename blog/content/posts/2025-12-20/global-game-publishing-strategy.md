@@ -1,5 +1,6 @@
 ---
 title: "全球游戏发行策略：从立项到运营的完整指南"
+slug: "global-game-publishing-strategy"
 date: 2025-12-20T10:00:00+08:00
 draft: false
 description: "详解全球游戏发行的完整流程，包括市场进入策略、渠道选择、推广策略、运营管理等关键环节，助力游戏成功出海"

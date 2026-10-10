@@ -1,6 +1,6 @@
 ---
 title: "Vue 3.5 Composition API深度解析"
-slug: "vue-3-5-composition-api-deep-dive"
+slug: "vue-3-5-composition-api-deep-dive-20251219"
 date: "2025-12-19T10:00:00+08:00"
 author: "技术团队"
 draft: false
