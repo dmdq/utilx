@@ -36,6 +36,7 @@
     "package:macos-simple": "./scripts/package-macos-simple.sh"
   },
   "dependencies": {
+    "@breezystack/lamejs": "^1.2.7",
     "@esotericsoftware/spine-player": "^4.2.96",
     "@esotericsoftware/spine-webgl": "^4.2.96",
     "@tauri-apps/api": "2.9.1",
@@ -44,6 +45,7 @@
     "@vueuse/integrations": "^14.1.0",
     "crypto-js": "^4.2.0",
     "exifreader": "^4.48.0",
+    "gifenc": "^1.0.3",
     "jsencrypt": "^3.5.4",
     "jspdf": "^4.2.1",
     "jszip": "^3.10.1",

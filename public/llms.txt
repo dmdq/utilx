@@ -1,11 +1,11 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：513 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：537 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 513 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 537 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
 - [技术博客](https://www.util.cn/blog/): 266 篇工具教程与实践文章
@@ -13,21 +13,21 @@
 ## 工具分类
 
 - [随机决策（13款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（36款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（39款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
 - [时间日期（25款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
-- [文本处理（39款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
+- [文本处理（43款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（31款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
-- [图像处理（36款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
-- [开发辅助（69款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
-- [设计工具（51款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
+- [图像处理（37款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
+- [开发辅助（74款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
+- [设计工具（52款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（26款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
 - [其他工具（23款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
-- [健康工具（39款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
+- [健康工具（41款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
 - [金融工具（23款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
-- [文件工具（14款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
+- [文件工具（22款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
 
@@ -83,6 +83,9 @@
 - [宠物年龄换算器](https://www.util.cn/tools/pet-age-calculator/): 狗猫年龄与人类年龄互转，按体型分段的科学对数公式，比"乘7"更准确
 - [宠物喂食量计算器](https://www.util.cn/tools/pet-food-calculator/): 按体重与生命阶段计算猫狗每日热量与干粮克数（RER×系数），科学喂养不超标
 - [烘焙模具换算器](https://www.util.cn/tools/cake-pan-converter/): 蛋糕模具尺寸换算与配方等比缩放，圆模方模6-12寸全覆盖，烤箱食谱必配
+- [驾照换证记分计算器](https://www.util.cn/tools/driver-license-calculator/): 算换证窗口（期满前90天）、记分清分日、逾期分级后果，C1/A/B 类通用
+- [外卖满减凑单计算器](https://www.util.cn/tools/delivery-deal-calculator/): 输入满减档位与购物车，动态规划求最优凑单组合，附"差1元不划算"警示
+- [汽车保养周期计算器](https://www.util.cn/tools/car-maintenance-calculator/): 按里程/时间双维度推算下次保养，生成全年保养日历，不怕被过度保养
 
 ## 数据格式化
 
@@ -250,6 +253,10 @@
 - [文本提取器](https://www.util.cn/tools/text-extractor/): 一键提取文本中的邮箱/URL/手机号/IP/身份证等，支持自定义正则，去重分组
 - [中文数字转换器](https://www.util.cn/tools/chinese-number-converter/): 阿拉伯数字与中文数字互转，支持财务大写（壹贰叁）与人民币金额大写
 - [占位文案生成器](https://www.util.cn/tools/placeholder-text-generator/): 按行业生成可读的中文占位文案，科技/电商/餐饮等模板，填充原型与演示
+- [口播稿时长换算器](https://www.util.cn/tools/speech-script-timer/): 口播稿字数与时长双向换算，慢速/正常/快节奏语速档位，标点停顿加权估算
+- [GB/T 7714引文生成器](https://www.util.cn/tools/gbt7714-citation-generator/): 按文献类型生成国标 2015 参考文献格式，期刊/学位论文/图书/网页等批量输出
+- [小红书排版器](https://www.util.cn/tools/xhs-formatter/): 笔记正文一键美化：emoji 分隔、标题符号模板、话题标签，实时预览复制
+- [广告法违禁词检测](https://www.util.cn/tools/banned-words-checker/): 详情页/直播话术发布前自查极限词，分级高亮+替换建议，词表内置可维护
 
 ## 网络工具
 
@@ -323,6 +330,7 @@
 - [EXIF清除器](https://www.util.cn/tools/exif-cleaner/): 清除照片中的GPS定位、拍摄设备等EXIF隐私元数据，支持PNG/JPEG/WebP输出，纯本地处理
 - [SVG优化压缩器](https://www.util.cn/tools/svg-optimizer/): SVG无损压缩：去除编辑器元数据、精简数值精度，前后体积对比与预览
 - [图片背景纯色替换](https://www.util.cn/tools/image-bg-replace/): 点选背景色一键替换，容差与边缘柔化可调，证件照换底色利器，纯本地处理
+- [视频转GIF动图](https://www.util.cn/tools/video-to-gif/): 本地抽帧把短视频片段转 GIF，帧率/尺寸/起止时间可调，无上传无水印
 
 ## 开发辅助
 
@@ -395,6 +403,11 @@
 - [Conventional Commits生成器](https://www.util.cn/tools/commit-message-generator/): 表单式生成规范提交信息，type/scope/breaking/footer，含历史记录
 - [Changelog生成器](https://www.util.cn/tools/changelog-generator/): 粘贴git log按Keep a Changelog规范分组生成更新日志
 - [代码行数统计器](https://www.util.cn/tools/loc-counter/): 统计代码总行数/代码行/注释行/空行，支持20+语言注释规则，注释率分析
+- [MyBatis日志还原SQL](https://www.util.cn/tools/mybatis-sql-restore/): 粘贴 MyBatis 日志的 Preparing 与 Parameters 两行，按类型回填占位符生成可执行 SQL
+- [Java堆栈异常解析器](https://www.util.cn/tools/java-stack-analyzer/): 粘贴异常堆栈自动折叠框架帧、高亮业务代码行、理清 Caused by 异常链
+- [数据库连接串解析器](https://www.util.cn/tools/db-connection-parser/): 解析 mysql/postgres/mongo/redis/jdbc 五种连接串，键值表展示、密码脱敏、反向生成
+- [JSON-LD结构化数据生成器](https://www.util.cn/tools/json-ld-generator/): 按类型生成 Schema.org 结构化数据（FAQ/面包屑/文章/商品/组织），附格式校验
+- [rpx/px换算器](https://www.util.cn/tools/rpx-px-converter/): 小程序设计稿单位双向换算，多机型宽度速查，整段样式批量转换
 
 ## 设计工具
 
@@ -449,6 +462,7 @@
 - [骨架屏生成器](https://www.util.cn/tools/skeleton-generator/): 可视化拼装骨架屏，脉冲/扫光动画，输出纯CSS的HTML代码
 - [网页按钮生成器](https://www.util.cn/tools/button-generator/): 可视化配置按钮样式：渐变/阴影/hover效果，生成生产级CSS代码
 - [开关组件生成器](https://www.util.cn/tools/toggle-generator/): 自定义开关(Toggle)组件样式，生成无JS的纯CSS checkbox实现
+- [HTML邮件签名生成器](https://www.util.cn/tools/email-signature-generator/): 中文友好模板生成 table+内联样式签名，兼容 Gmail/Outlook/企业微信邮箱
 
 ## 安全工具
 
@@ -546,6 +560,8 @@
 - [儿童生长发育曲线](https://www.util.cn/tools/pediatric-growth/): 追踪儿童身高体重发育，对比WHO标准生长曲线，评估营养状况
 - [健康习惯追踪器](https://www.util.cn/tools/habit-tracker-health/): 追踪日常健康习惯，建立良好的生活方式，支持连续打卡和成就系统
 - [体重目标规划器](https://www.util.cn/tools/weight-goal-planner/): 科学规划减重或增重目标，计算时间线和热量需求，制定可行的体重管理计划
+- [孕周计算产检日历](https://www.util.cn/tools/pregnancy-week-calculator/): 末次月经输入得孕周与预产期，40周逐周发育对照，产检节点自动换算为日期
+- [儿童疫苗接种日历](https://www.util.cn/tools/vaccine-schedule-calculator/): 按出生日期生成国家免疫规划接种日历，标注当前月龄应接种项与补种提示
 
 ## 金融工具
 
@@ -589,6 +605,14 @@
 - [Markdown导出器](https://www.util.cn/tools/markdown-exporter/): Markdown转独立HTML文件，内置浅色/深色样式与代码高亮，支持片段导出与行号
 - [.env与JSON转换器](https://www.util.cn/tools/env-json-converter/): .env与JSON双向转换，支持引号注释export前缀解析，键名校验
 - [JSON合并工具](https://www.util.cn/tools/json-merger/): 两个JSON深度合并，数组可选替换/拼接/去重，冲突键对比预览
+- [PDF水印添加器](https://www.util.cn/tools/pdf-watermark/): 本地为 PDF 平铺文字水印，角度/透明度/密度/页码范围可调，文件不出浏览器
+- [工资条成绩单批量生成](https://www.util.cn/tools/payslip-generator/): Excel 数据行套模板逐人生成 PDF 工资条/成绩单，可加打开密码，全程本地
+- [Excel两表免公式合并](https://www.util.cn/tools/excel-table-merge/): 选关键列即完成两表匹配合并（左/内连接），不会 VLOOKUP 也能对表，本地处理
+- [Excel地址姓名拆列](https://www.util.cn/tools/excel-column-splitter/): 地址智能拆省市区、姓名拆姓/名（识别复姓），批量回填新列，杂乱地址也能拆
+- [音频裁剪铃声制作](https://www.util.cn/tools/audio-trimmer/): 本地波形选区裁剪音乐片段，一键导出 iPhone 铃声 m4r（自动校验40秒限制）
+- [音频格式互转](https://www.util.cn/tools/audio-converter/): 浏览器本地互转 wav/m4a/webm/ogg，无大小限制不排队，录音笔微信语音通用
+- [音频音量增大](https://www.util.cn/tools/audio-volume-booster/): 本地放大音量并归一化响度，峰值测量+限幅防爆音，录音太小声一键调大
+- [录音机与降噪](https://www.util.cn/tools/audio-noise-reducer/): 在线录音或导入音频，高通低通滤波+噪声采样降噪，A/B 试听后导出
 
 ## 场景专题
 
