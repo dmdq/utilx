@@ -1,0 +1,5909 @@
+[
+  {
+    "name": "1rm-calculator",
+    "url": "http://localhost:4173/tools/1rm-calculator/",
+    "status": 404,
+    "responseTime": 17,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "aes-decrypt",
+    "url": "http://localhost:4173/tools/aes-decrypt/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "aes-encrypt",
+    "url": "http://localhost:4173/tools/aes-encrypt/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "aes-encryptor",
+    "url": "http://localhost:4173/tools/aes-encryptor/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "age-calculator",
+    "url": "http://localhost:4173/tools/age-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "algorithm-complexity-calculator",
+    "url": "http://localhost:4173/tools/algorithm-complexity-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "api-contract-tester",
+    "url": "http://localhost:4173/tools/api-contract-tester/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "api-doc",
+    "url": "http://localhost:4173/tools/api-doc/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "api-key-manager",
+    "url": "http://localhost:4173/tools/api-key-manager/",
+    "status": 404,
+    "responseTime": 1,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "api-response-mocker",
+    "url": "http://localhost:4173/tools/api-response-mocker/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "api-response-simulator",
+    "url": "http://localhost:4173/tools/api-response-simulator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "argon2-hash",
+    "url": "http://localhost:4173/tools/argon2-hash/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "argon2-hasher",
+    "url": "http://localhost:4173/tools/argon2-hasher/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ascii-art-generator",
+    "url": "http://localhost:4173/tools/ascii-art-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ascii-convert",
+    "url": "http://localhost:4173/tools/ascii-convert/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ascii-table",
+    "url": "http://localhost:4173/tools/ascii-table/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "aspect-ratio-calculator",
+    "url": "http://localhost:4173/tools/aspect-ratio-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "audio-converter",
+    "url": "http://localhost:4173/tools/audio-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "audio-noise-reducer",
+    "url": "http://localhost:4173/tools/audio-noise-reducer/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "audio-trimmer",
+    "url": "http://localhost:4173/tools/audio-trimmer/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "audio-volume-booster",
+    "url": "http://localhost:4173/tools/audio-volume-booster/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "avatar-generator",
+    "url": "http://localhost:4173/tools/avatar-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "backdrop-filter-generator",
+    "url": "http://localhost:4173/tools/backdrop-filter-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "background-pattern-generator",
+    "url": "http://localhost:4173/tools/background-pattern-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "banned-words-checker",
+    "url": "http://localhost:4173/tools/banned-words-checker/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "base-encoding",
+    "url": "http://localhost:4173/tools/base-encoding/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "base32-encode",
+    "url": "http://localhost:4173/tools/base32-encode/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "base58-encode",
+    "url": "http://localhost:4173/tools/base58-encode/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "base62-encode",
+    "url": "http://localhost:4173/tools/base62-encode/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "base64-decode",
+    "url": "http://localhost:4173/tools/base64-decode/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "base64-encode",
+    "url": "http://localhost:4173/tools/base64-encode/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "base64-file-converter",
+    "url": "http://localhost:4173/tools/base64-file-converter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "base64-image",
+    "url": "http://localhost:4173/tools/base64-image/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "base85-encoder",
+    "url": "http://localhost:4173/tools/base85-encoder/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bash-escape",
+    "url": "http://localhost:4173/tools/bash-escape/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "batch-process",
+    "url": "http://localhost:4173/tools/batch-process/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bcrypt-generate",
+    "url": "http://localhost:4173/tools/bcrypt-generate/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bcrypt-generator",
+    "url": "http://localhost:4173/tools/bcrypt-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bcrypt-verify",
+    "url": "http://localhost:4173/tools/bcrypt-verify/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bezier-curve-editor",
+    "url": "http://localhost:4173/tools/bezier-curve-editor/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "big-number-calculator",
+    "url": "http://localhost:4173/tools/big-number-calculator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bill-split-calculator",
+    "url": "http://localhost:4173/tools/bill-split-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "binary-convert",
+    "url": "http://localhost:4173/tools/binary-convert/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "binary-viewer",
+    "url": "http://localhost:4173/tools/binary-viewer/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bit-calculator",
+    "url": "http://localhost:4173/tools/bit-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "blake2-hash",
+    "url": "http://localhost:4173/tools/blake2-hash/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "blend-mode-tool",
+    "url": "http://localhost:4173/tools/blend-mode-tool/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "blob-shape-generator",
+    "url": "http://localhost:4173/tools/blob-shape-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "blood-pressure-tracker",
+    "url": "http://localhost:4173/tools/blood-pressure-tracker/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bmi-calculator",
+    "url": "http://localhost:4173/tools/bmi-calculator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bmr-calculator",
+    "url": "http://localhost:4173/tools/bmr-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "body-fat-calculator",
+    "url": "http://localhost:4173/tools/body-fat-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "body-measurement-tracker",
+    "url": "http://localhost:4173/tools/body-measurement-tracker/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bokeh-generator",
+    "url": "http://localhost:4173/tools/bokeh-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bom-handling",
+    "url": "http://localhost:4173/tools/bom-handling/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bone-density-risk",
+    "url": "http://localhost:4173/tools/bone-density-risk/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "border-generator",
+    "url": "http://localhost:4173/tools/border-generator/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "border-radius-generator",
+    "url": "http://localhost:4173/tools/border-radius-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "box-shadow-inset-generator",
+    "url": "http://localhost:4173/tools/box-shadow-inset-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "browser-detect",
+    "url": "http://localhost:4173/tools/browser-detect/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "bulk-request",
+    "url": "http://localhost:4173/tools/bulk-request/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "business-finance-analyzer",
+    "url": "http://localhost:4173/tools/business-finance-analyzer/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "button-generator",
+    "url": "http://localhost:4173/tools/button-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "caesar-cipher",
+    "url": "http://localhost:4173/tools/caesar-cipher/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "cake-pan-converter",
+    "url": "http://localhost:4173/tools/cake-pan-converter/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "caliper-calculator",
+    "url": "http://localhost:4173/tools/caliper-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "calorie-counter",
+    "url": "http://localhost:4173/tools/calorie-counter/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "calories-calculator",
+    "url": "http://localhost:4173/tools/calories-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "camel-case-converter",
+    "url": "http://localhost:4173/tools/camel-case-converter/",
+    "status": 404,
+    "responseTime": 1,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "car-loan-calculator",
+    "url": "http://localhost:4173/tools/car-loan-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "car-maintenance-calculator",
+    "url": "http://localhost:4173/tools/car-maintenance-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "cardio-fitness-age",
+    "url": "http://localhost:4173/tools/cardio-fitness-age/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "case-converter",
+    "url": "http://localhost:4173/tools/case-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "certificate-validator",
+    "url": "http://localhost:4173/tools/certificate-validator/",
+    "status": 404,
+    "responseTime": 6,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "chacha20-poly1305",
+    "url": "http://localhost:4173/tools/chacha20-poly1305/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "changelog-generator",
+    "url": "http://localhost:4173/tools/changelog-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "charset-convert",
+    "url": "http://localhost:4173/tools/charset-convert/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "chart-generator",
+    "url": "http://localhost:4173/tools/chart-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "chinese-number-converter",
+    "url": "http://localhost:4173/tools/chinese-number-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "circadian-rhythm-test",
+    "url": "http://localhost:4173/tools/circadian-rhythm-test/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "clip-path-generator",
+    "url": "http://localhost:4173/tools/clip-path-generator/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "clipboard-manager-pro",
+    "url": "http://localhost:4173/tools/clipboard-manager-pro/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "code-format",
+    "url": "http://localhost:4173/tools/code-format/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "code-snippet-converter",
+    "url": "http://localhost:4173/tools/code-snippet-converter/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "code-snippet-manager",
+    "url": "http://localhost:4173/tools/code-snippet-manager/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "color-blindness-simulator",
+    "url": "http://localhost:4173/tools/color-blindness-simulator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "color-contrast-checker",
+    "url": "http://localhost:4173/tools/color-contrast-checker/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "color-convert",
+    "url": "http://localhost:4173/tools/color-convert/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "color-naming-tool",
+    "url": "http://localhost:4173/tools/color-naming-tool/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "color-palette",
+    "url": "http://localhost:4173/tools/color-palette/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "color-palette-generator",
+    "url": "http://localhost:4173/tools/color-palette-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "color-picker",
+    "url": "http://localhost:4173/tools/color-picker/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "commit-message-generator",
+    "url": "http://localhost:4173/tools/commit-message-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "complex-number-calculator",
+    "url": "http://localhost:4173/tools/complex-number-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "cookie-editor",
+    "url": "http://localhost:4173/tools/cookie-editor/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "cookies-manager",
+    "url": "http://localhost:4173/tools/cookies-manager/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "cors-configurator",
+    "url": "http://localhost:4173/tools/cors-configurator/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "cors-tester",
+    "url": "http://localhost:4173/tools/cors-tester/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "countdown-timer",
+    "url": "http://localhost:4173/tools/countdown-timer/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "crc-calculator",
+    "url": "http://localhost:4173/tools/crc-calculator/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "crc-check",
+    "url": "http://localhost:4173/tools/crc-check/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "credit-card-payment-calculator",
+    "url": "http://localhost:4173/tools/credit-card-payment-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "cron-expression-debugger",
+    "url": "http://localhost:4173/tools/cron-expression-debugger/",
+    "status": 404,
+    "responseTime": 6,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "cron-generator",
+    "url": "http://localhost:4173/tools/cron-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "cron-parser",
+    "url": "http://localhost:4173/tools/cron-parser/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "crontab-generator",
+    "url": "http://localhost:4173/tools/crontab-generator/",
+    "status": 404,
+    "responseTime": 1,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "crowdfunding-roi-calculator",
+    "url": "http://localhost:4173/tools/crowdfunding-roi-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "crypto-prng",
+    "url": "http://localhost:4173/tools/crypto-prng/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "csp-builder",
+    "url": "http://localhost:4173/tools/csp-builder/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "css-animation-generator",
+    "url": "http://localhost:4173/tools/css-animation-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "css-counter-generator",
+    "url": "http://localhost:4173/tools/css-counter-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "css-escape",
+    "url": "http://localhost:4173/tools/css-escape/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "css-filter-generator",
+    "url": "http://localhost:4173/tools/css-filter-generator/",
+    "status": 404,
+    "responseTime": 6,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "css-formatter",
+    "url": "http://localhost:4173/tools/css-formatter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "css-layout-generator",
+    "url": "http://localhost:4173/tools/css-layout-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "csv-converter",
+    "url": "http://localhost:4173/tools/csv-converter/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "csv-formatter",
+    "url": "http://localhost:4173/tools/csv-formatter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "csv-to-sql",
+    "url": "http://localhost:4173/tools/csv-to-sql/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "curl-to-code",
+    "url": "http://localhost:4173/tools/curl-to-code/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "currency-converter",
+    "url": "http://localhost:4173/tools/currency-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "data-format-validator",
+    "url": "http://localhost:4173/tools/data-format-validator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "data-masking-tool",
+    "url": "http://localhost:4173/tools/data-masking-tool/",
+    "status": 404,
+    "responseTime": 6,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "data-sampling-tool",
+    "url": "http://localhost:4173/tools/data-sampling-tool/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "data-structure-builder",
+    "url": "http://localhost:4173/tools/data-structure-builder/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "date-calculator",
+    "url": "http://localhost:4173/tools/date-calculator/",
+    "status": 404,
+    "responseTime": 6,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "date-diff",
+    "url": "http://localhost:4173/tools/date-diff/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "date-formatter",
+    "url": "http://localhost:4173/tools/date-formatter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "datetime-calculator",
+    "url": "http://localhost:4173/tools/datetime-calculator/",
+    "status": 404,
+    "responseTime": 58,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "db-connection-parser",
+    "url": "http://localhost:4173/tools/db-connection-parser/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "delivery-deal-calculator",
+    "url": "http://localhost:4173/tools/delivery-deal-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "depreciation-calculator",
+    "url": "http://localhost:4173/tools/depreciation-calculator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "design-specs-checker",
+    "url": "http://localhost:4173/tools/design-specs-checker/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "dev-code-formatter",
+    "url": "http://localhost:4173/tools/dev-code-formatter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "dev-sql-formatter",
+    "url": "http://localhost:4173/tools/dev-sql-formatter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "diffie-hellman",
+    "url": "http://localhost:4173/tools/diffie-hellman/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "directory-tree",
+    "url": "http://localhost:4173/tools/directory-tree/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "discount-calculator",
+    "url": "http://localhost:4173/tools/discount-calculator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "dns-cache-flusher",
+    "url": "http://localhost:4173/tools/dns-cache-flusher/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "dns-lookup",
+    "url": "http://localhost:4173/tools/dns-lookup/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "dns-sec-verifier",
+    "url": "http://localhost:4173/tools/dns-sec-verifier/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "docker-command",
+    "url": "http://localhost:4173/tools/docker-command/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "docker-compose-editor",
+    "url": "http://localhost:4173/tools/docker-compose-editor/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "dockerfile-generator",
+    "url": "http://localhost:4173/tools/dockerfile-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "driver-license-calculator",
+    "url": "http://localhost:4173/tools/driver-license-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "duplicate-remover",
+    "url": "http://localhost:4173/tools/duplicate-remover/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ecdsa-tools",
+    "url": "http://localhost:4173/tools/ecdsa-tools/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ed25519-tools",
+    "url": "http://localhost:4173/tools/ed25519-tools/",
+    "status": 404,
+    "responseTime": 7,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "education-savings-calculator",
+    "url": "http://localhost:4173/tools/education-savings-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "electricity-calculator",
+    "url": "http://localhost:4173/tools/electricity-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "em-breakpoint-generator",
+    "url": "http://localhost:4173/tools/em-breakpoint-generator/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "email-signature-generator",
+    "url": "http://localhost:4173/tools/email-signature-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "emoji-picker",
+    "url": "http://localhost:4173/tools/emoji-picker/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "encoding-converter",
+    "url": "http://localhost:4173/tools/encoding-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "env-json-converter",
+    "url": "http://localhost:4173/tools/env-json-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "env-variable-manager",
+    "url": "http://localhost:4173/tools/env-variable-manager/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "equation-solver",
+    "url": "http://localhost:4173/tools/equation-solver/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "excel-column-splitter",
+    "url": "http://localhost:4173/tools/excel-column-splitter/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "excel-table-merge",
+    "url": "http://localhost:4173/tools/excel-table-merge/",
+    "status": 404,
+    "responseTime": 21,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "excel-viewer",
+    "url": "http://localhost:4173/tools/excel-viewer/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "exercise-calorie-calculator",
+    "url": "http://localhost:4173/tools/exercise-calorie-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "exif-cleaner",
+    "url": "http://localhost:4173/tools/exif-cleaner/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "exif-viewer",
+    "url": "http://localhost:4173/tools/exif-viewer/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "expense-tracker",
+    "url": "http://localhost:4173/tools/expense-tracker/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "favicon-generator",
+    "url": "http://localhost:4173/tools/favicon-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ffmi-calculator",
+    "url": "http://localhost:4173/tools/ffmi-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "file-encoding-converter",
+    "url": "http://localhost:4173/tools/file-encoding-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "file-encryptor",
+    "url": "http://localhost:4173/tools/file-encryptor/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "file-merge-split",
+    "url": "http://localhost:4173/tools/file-merge-split/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "financial-ratios-calculator",
+    "url": "http://localhost:4173/tools/financial-ratios-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "flexibility-assessment",
+    "url": "http://localhost:4173/tools/flexibility-assessment/",
+    "status": 404,
+    "responseTime": 6,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "flowchart-builder",
+    "url": "http://localhost:4173/tools/flowchart-builder/",
+    "status": 404,
+    "responseTime": 6,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "font-pairing",
+    "url": "http://localhost:4173/tools/font-pairing/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "food-calculator",
+    "url": "http://localhost:4173/tools/food-calculator/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "forex-arbitrage-calculator",
+    "url": "http://localhost:4173/tools/forex-arbitrage-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "form-data-converter",
+    "url": "http://localhost:4173/tools/form-data-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "fps-test",
+    "url": "http://localhost:4173/tools/fps-test/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "fraction-calculator",
+    "url": "http://localhost:4173/tools/fraction-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "fuel-calculator",
+    "url": "http://localhost:4173/tools/fuel-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "full-half-converter",
+    "url": "http://localhost:4173/tools/full-half-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "fund-sip-calculator",
+    "url": "http://localhost:4173/tools/fund-sip-calculator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "gbt7714-citation-generator",
+    "url": "http://localhost:4173/tools/gbt7714-citation-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "geometry-calculator",
+    "url": "http://localhost:4173/tools/geometry-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "gif-maker",
+    "url": "http://localhost:4173/tools/gif-maker/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "git-command",
+    "url": "http://localhost:4173/tools/git-command/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "gitignore-generator",
+    "url": "http://localhost:4173/tools/gitignore-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "glassmorphism-generator",
+    "url": "http://localhost:4173/tools/glassmorphism-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "gmsm-tools",
+    "url": "http://localhost:4173/tools/gmsm-tools/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "godaddy-dns",
+    "url": "http://localhost:4173/tools/godaddy-dns/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "golden-ratio-calculator",
+    "url": "http://localhost:4173/tools/golden-ratio-calculator/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "gpa-calculator",
+    "url": "http://localhost:4173/tools/gpa-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "gpu-detector",
+    "url": "http://localhost:4173/tools/gpu-detector/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "gradient-generator",
+    "url": "http://localhost:4173/tools/gradient-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "gradient-text-generator",
+    "url": "http://localhost:4173/tools/gradient-text-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "graphql-formatter",
+    "url": "http://localhost:4173/tools/graphql-formatter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "graphql-query-builder",
+    "url": "http://localhost:4173/tools/graphql-query-builder/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "grid-system-generator",
+    "url": "http://localhost:4173/tools/grid-system-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "habit-tracker-health",
+    "url": "http://localhost:4173/tools/habit-tracker-health/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "hash-calculator",
+    "url": "http://localhost:4173/tools/hash-calculator/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "headers-viewer",
+    "url": "http://localhost:4173/tools/headers-viewer/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "health-age-calculator",
+    "url": "http://localhost:4173/tools/health-age-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "heart-rate-calculator",
+    "url": "http://localhost:4173/tools/heart-rate-calculator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "hex-convert",
+    "url": "http://localhost:4173/tools/hex-convert/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "hkdf-generator",
+    "url": "http://localhost:4173/tools/hkdf-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "hmac-generator",
+    "url": "http://localhost:4173/tools/hmac-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "holiday-calculator",
+    "url": "http://localhost:4173/tools/holiday-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "hosts-generator",
+    "url": "http://localhost:4173/tools/hosts-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "html-decode",
+    "url": "http://localhost:4173/tools/html-decode/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "html-encode",
+    "url": "http://localhost:4173/tools/html-encode/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "html-entities-encoder",
+    "url": "http://localhost:4173/tools/html-entities-encoder/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "html-formatter",
+    "url": "http://localhost:4173/tools/html-formatter/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "html-slug-generator",
+    "url": "http://localhost:4173/tools/html-slug-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "html-to-markdown",
+    "url": "http://localhost:4173/tools/html-to-markdown/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "html-to-text",
+    "url": "http://localhost:4173/tools/html-to-text/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "http-client",
+    "url": "http://localhost:4173/tools/http-client/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "http-header-analyzer",
+    "url": "http://localhost:4173/tools/http-header-analyzer/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "http-status-codes",
+    "url": "http://localhost:4173/tools/http-status-codes/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "hydration-tracker",
+    "url": "http://localhost:4173/tools/hydration-tracker/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "icon-font-generator",
+    "url": "http://localhost:4173/tools/icon-font-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "icon-generator",
+    "url": "http://localhost:4173/tools/icon-generator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ics-generator",
+    "url": "http://localhost:4173/tools/ics-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "id-card-validator",
+    "url": "http://localhost:4173/tools/id-card-validator/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ideal-weight-calculator",
+    "url": "http://localhost:4173/tools/ideal-weight-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-background",
+    "url": "http://localhost:4173/tools/image-background/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-bg-replace",
+    "url": "http://localhost:4173/tools/image-bg-replace/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-border",
+    "url": "http://localhost:4173/tools/image-border/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-collage",
+    "url": "http://localhost:4173/tools/image-collage/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-compare",
+    "url": "http://localhost:4173/tools/image-compare/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-compress",
+    "url": "http://localhost:4173/tools/image-compress/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-convert",
+    "url": "http://localhost:4173/tools/image-convert/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-crop",
+    "url": "http://localhost:4173/tools/image-crop/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-duotone",
+    "url": "http://localhost:4173/tools/image-duotone/",
+    "status": 404,
+    "responseTime": 1,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-filter",
+    "url": "http://localhost:4173/tools/image-filter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-frame",
+    "url": "http://localhost:4173/tools/image-frame/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-info",
+    "url": "http://localhost:4173/tools/image-info/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-meme",
+    "url": "http://localhost:4173/tools/image-meme/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-merge",
+    "url": "http://localhost:4173/tools/image-merge/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-ocr",
+    "url": "http://localhost:4173/tools/image-ocr/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-overlay",
+    "url": "http://localhost:4173/tools/image-overlay/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-resize",
+    "url": "http://localhost:4173/tools/image-resize/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-rotate",
+    "url": "http://localhost:4173/tools/image-rotate/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-split",
+    "url": "http://localhost:4173/tools/image-split/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-text",
+    "url": "http://localhost:4173/tools/image-text/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-to-pdf",
+    "url": "http://localhost:4173/tools/image-to-pdf/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "image-watermark",
+    "url": "http://localhost:4173/tools/image-watermark/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "inflation-calculator",
+    "url": "http://localhost:4173/tools/inflation-calculator/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "installment-rate-calculator",
+    "url": "http://localhost:4173/tools/installment-rate-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "insurance-premium-calculator",
+    "url": "http://localhost:4173/tools/insurance-premium-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "investment-calculator",
+    "url": "http://localhost:4173/tools/investment-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ip-address-convert",
+    "url": "http://localhost:4173/tools/ip-address-convert/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ip-info",
+    "url": "http://localhost:4173/tools/ip-info/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ip-lookup",
+    "url": "http://localhost:4173/tools/ip-lookup/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ip-subnet-calculator",
+    "url": "http://localhost:4173/tools/ip-subnet-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ipv6-address-converter",
+    "url": "http://localhost:4173/tools/ipv6-address-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ipv6-converter",
+    "url": "http://localhost:4173/tools/ipv6-converter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ipv6-scope-calculator",
+    "url": "http://localhost:4173/tools/ipv6-scope-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "java-stack-analyzer",
+    "url": "http://localhost:4173/tools/java-stack-analyzer/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "js-string-escape",
+    "url": "http://localhost:4173/tools/js-string-escape/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-diff-compare",
+    "url": "http://localhost:4173/tools/json-diff-compare/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-formatter",
+    "url": "http://localhost:4173/tools/json-formatter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-ld-generator",
+    "url": "http://localhost:4173/tools/json-ld-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-merger",
+    "url": "http://localhost:4173/tools/json-merger/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-path",
+    "url": "http://localhost:4173/tools/json-path/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-path-tester",
+    "url": "http://localhost:4173/tools/json-path-tester/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-php-converter",
+    "url": "http://localhost:4173/tools/json-php-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-schema",
+    "url": "http://localhost:4173/tools/json-schema/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-to-csv",
+    "url": "http://localhost:4173/tools/json-to-csv/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-to-model",
+    "url": "http://localhost:4173/tools/json-to-model/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-to-protobuf",
+    "url": "http://localhost:4173/tools/json-to-protobuf/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-to-typescript",
+    "url": "http://localhost:4173/tools/json-to-typescript/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-to-xml",
+    "url": "http://localhost:4173/tools/json-to-xml/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-to-yaml",
+    "url": "http://localhost:4173/tools/json-to-yaml/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-url-encode",
+    "url": "http://localhost:4173/tools/json-url-encode/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "json-xml-validator",
+    "url": "http://localhost:4173/tools/json-xml-validator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "jsonl-converter",
+    "url": "http://localhost:4173/tools/jsonl-converter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "jvm-args-config",
+    "url": "http://localhost:4173/tools/jvm-args-config/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "jwt-debugger",
+    "url": "http://localhost:4173/tools/jwt-debugger/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "jwt-decode",
+    "url": "http://localhost:4173/tools/jwt-decode/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "jwt-parser",
+    "url": "http://localhost:4173/tools/jwt-parser/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "jwt-verify",
+    "url": "http://localhost:4173/tools/jwt-verify/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "kanban-board",
+    "url": "http://localhost:4173/tools/kanban-board/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "kubernetes-yaml-generator",
+    "url": "http://localhost:4173/tools/kubernetes-yaml-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "laundry-symbol-guide",
+    "url": "http://localhost:4173/tools/laundry-symbol-guide/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "leap-year-checker",
+    "url": "http://localhost:4173/tools/leap-year-checker/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "letter-spacing-tool",
+    "url": "http://localhost:4173/tools/letter-spacing-tool/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "license-generator",
+    "url": "http://localhost:4173/tools/license-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "line-height-calculator",
+    "url": "http://localhost:4173/tools/line-height-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "line-operations",
+    "url": "http://localhost:4173/tools/line-operations/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "linux-command",
+    "url": "http://localhost:4173/tools/linux-command/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "loan-calculator",
+    "url": "http://localhost:4173/tools/loan-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "loc-counter",
+    "url": "http://localhost:4173/tools/loc-counter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "logo-maker",
+    "url": "http://localhost:4173/tools/logo-maker/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "lora-vram-calculator",
+    "url": "http://localhost:4173/tools/lora-vram-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "lorem-ipsum",
+    "url": "http://localhost:4173/tools/lorem-ipsum/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "lrc-check",
+    "url": "http://localhost:4173/tools/lrc-check/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "lunar-calendar",
+    "url": "http://localhost:4173/tools/lunar-calendar/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "mac-address-convert",
+    "url": "http://localhost:4173/tools/mac-address-convert/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "mac-vendor-lookup",
+    "url": "http://localhost:4173/tools/mac-vendor-lookup/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "macro-tracker",
+    "url": "http://localhost:4173/tools/macro-tracker/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "markdown-editor",
+    "url": "http://localhost:4173/tools/markdown-editor/",
+    "status": 404,
+    "responseTime": 1,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "markdown-exporter",
+    "url": "http://localhost:4173/tools/markdown-exporter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "markdown-table-generator",
+    "url": "http://localhost:4173/tools/markdown-table-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "markdown-to-html",
+    "url": "http://localhost:4173/tools/markdown-to-html/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "mask-image-generator",
+    "url": "http://localhost:4173/tools/mask-image-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "material-design-colors",
+    "url": "http://localhost:4173/tools/material-design-colors/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "matrix-calculator",
+    "url": "http://localhost:4173/tools/matrix-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "md5-generator",
+    "url": "http://localhost:4173/tools/md5-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "meal-planner",
+    "url": "http://localhost:4173/tools/meal-planner/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "meeting-minutes",
+    "url": "http://localhost:4173/tools/meeting-minutes/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "mime-encode",
+    "url": "http://localhost:4173/tools/mime-encode/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "mime-type-lookup",
+    "url": "http://localhost:4173/tools/mime-type-lookup/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "mime-types",
+    "url": "http://localhost:4173/tools/mime-types/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "mind-map",
+    "url": "http://localhost:4173/tools/mind-map/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "mock-data",
+    "url": "http://localhost:4173/tools/mock-data/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "mojibake-fixer",
+    "url": "http://localhost:4173/tools/mojibake-fixer/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "morse-code",
+    "url": "http://localhost:4173/tools/morse-code/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "mybatis-sql-restore",
+    "url": "http://localhost:4173/tools/mybatis-sql-restore/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "network-speed-test",
+    "url": "http://localhost:4173/tools/network-speed-test/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "nginx-config-generator",
+    "url": "http://localhost:4173/tools/nginx-config-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "nickname-generator",
+    "url": "http://localhost:4173/tools/nickname-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "number-base-calculator",
+    "url": "http://localhost:4173/tools/number-base-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "nutrition-calculator",
+    "url": "http://localhost:4173/tools/nutrition-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "open-graph-validator",
+    "url": "http://localhost:4173/tools/open-graph-validator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "openapi-spec-generator",
+    "url": "http://localhost:4173/tools/openapi-spec-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "otp-authenticator",
+    "url": "http://localhost:4173/tools/otp-authenticator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "otp-generator",
+    "url": "http://localhost:4173/tools/otp-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ovulation-calculator",
+    "url": "http://localhost:4173/tools/ovulation-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "package-json-tools",
+    "url": "http://localhost:4173/tools/package-json-tools/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "password-generator",
+    "url": "http://localhost:4173/tools/password-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "password-strength-checker",
+    "url": "http://localhost:4173/tools/password-strength-checker/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pattern-generator",
+    "url": "http://localhost:4173/tools/pattern-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "payslip-generator",
+    "url": "http://localhost:4173/tools/payslip-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pbkdf2-generator",
+    "url": "http://localhost:4173/tools/pbkdf2-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pdf-merge-split",
+    "url": "http://localhost:4173/tools/pdf-merge-split/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pdf-watermark",
+    "url": "http://localhost:4173/tools/pdf-watermark/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pediatric-growth",
+    "url": "http://localhost:4173/tools/pediatric-growth/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pem-parser",
+    "url": "http://localhost:4173/tools/pem-parser/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pension-calculator",
+    "url": "http://localhost:4173/tools/pension-calculator/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "percentage-calculator",
+    "url": "http://localhost:4173/tools/percentage-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "performance-benchmark",
+    "url": "http://localhost:4173/tools/performance-benchmark/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pet-age-calculator",
+    "url": "http://localhost:4173/tools/pet-age-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pet-food-calculator",
+    "url": "http://localhost:4173/tools/pet-food-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pii-detector",
+    "url": "http://localhost:4173/tools/pii-detector/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pinyin-converter",
+    "url": "http://localhost:4173/tools/pinyin-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pivot-table",
+    "url": "http://localhost:4173/tools/pivot-table/",
+    "status": 404,
+    "responseTime": 1,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pixelate",
+    "url": "http://localhost:4173/tools/pixelate/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "placeholder-image-generator",
+    "url": "http://localhost:4173/tools/placeholder-image-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "placeholder-text-generator",
+    "url": "http://localhost:4173/tools/placeholder-text-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pomodoro-timer",
+    "url": "http://localhost:4173/tools/pomodoro-timer/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "port-checker",
+    "url": "http://localhost:4173/tools/port-checker/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "port-lookup",
+    "url": "http://localhost:4173/tools/port-lookup/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "postman-collection-converter",
+    "url": "http://localhost:4173/tools/postman-collection-converter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "posture-assessment",
+    "url": "http://localhost:4173/tools/posture-assessment/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pregnancy-due-date",
+    "url": "http://localhost:4173/tools/pregnancy-due-date/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pregnancy-week-calculator",
+    "url": "http://localhost:4173/tools/pregnancy-week-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "prepayment-calculator",
+    "url": "http://localhost:4173/tools/prepayment-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "private-ip-checker",
+    "url": "http://localhost:4173/tools/private-ip-checker/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "pro-color-picker",
+    "url": "http://localhost:4173/tools/pro-color-picker/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "probability-calculator",
+    "url": "http://localhost:4173/tools/probability-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "prompt-library",
+    "url": "http://localhost:4173/tools/prompt-library/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "properties-ini-formatter",
+    "url": "http://localhost:4173/tools/properties-ini-formatter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "proportion-calculator",
+    "url": "http://localhost:4173/tools/proportion-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "provident-fund-loan",
+    "url": "http://localhost:4173/tools/provident-fund-loan/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "punycode-convert",
+    "url": "http://localhost:4173/tools/punycode-convert/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "qr-code-generator",
+    "url": "http://localhost:4173/tools/qr-code-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "qrcode-generate",
+    "url": "http://localhost:4173/tools/qrcode-generate/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "qrcode-scan",
+    "url": "http://localhost:4173/tools/qrcode-scan/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "quarter-calculator",
+    "url": "http://localhost:4173/tools/quarter-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "query-string-parser",
+    "url": "http://localhost:4173/tools/query-string-parser/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "quick-notes",
+    "url": "http://localhost:4173/tools/quick-notes/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "quoted-printable",
+    "url": "http://localhost:4173/tools/quoted-printable/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-cards",
+    "url": "http://localhost:4173/tools/random-cards/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-choice",
+    "url": "http://localhost:4173/tools/random-choice/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-coin",
+    "url": "http://localhost:4173/tools/random-coin/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-color",
+    "url": "http://localhost:4173/tools/random-color/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-date",
+    "url": "http://localhost:4173/tools/random-date/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-dice",
+    "url": "http://localhost:4173/tools/random-dice/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-food",
+    "url": "http://localhost:4173/tools/random-food/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-name-picker",
+    "url": "http://localhost:4173/tools/random-name-picker/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-number-generator",
+    "url": "http://localhost:4173/tools/random-number-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-password-game",
+    "url": "http://localhost:4173/tools/random-password-game/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-quote",
+    "url": "http://localhost:4173/tools/random-quote/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-team",
+    "url": "http://localhost:4173/tools/random-team/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "random-wheel",
+    "url": "http://localhost:4173/tools/random-wheel/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "redos-detector",
+    "url": "http://localhost:4173/tools/redos-detector/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "regex-cheatsheet",
+    "url": "http://localhost:4173/tools/regex-cheatsheet/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "regex-debugger",
+    "url": "http://localhost:4173/tools/regex-debugger/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "regex-escape",
+    "url": "http://localhost:4173/tools/regex-escape/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "regex-generator",
+    "url": "http://localhost:4173/tools/regex-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "regex-tester",
+    "url": "http://localhost:4173/tools/regex-tester/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "rental-yield-calculator",
+    "url": "http://localhost:4173/tools/rental-yield-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "request-analysis",
+    "url": "http://localhost:4173/tools/request-analysis/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "respiratory-rate-check",
+    "url": "http://localhost:4173/tools/respiratory-rate-check/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "retirement-planner",
+    "url": "http://localhost:4173/tools/retirement-planner/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ripemd160-hash",
+    "url": "http://localhost:4173/tools/ripemd160-hash/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "rmb-capital-converter",
+    "url": "http://localhost:4173/tools/rmb-capital-converter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "roi-calculator",
+    "url": "http://localhost:4173/tools/roi-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "roman-numeral-converter",
+    "url": "http://localhost:4173/tools/roman-numeral-converter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "rot13",
+    "url": "http://localhost:4173/tools/rot13/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "route-tracer",
+    "url": "http://localhost:4173/tools/route-tracer/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "rpx-px-converter",
+    "url": "http://localhost:4173/tools/rpx-px-converter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "rsa-decrypt",
+    "url": "http://localhost:4173/tools/rsa-decrypt/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "rsa-encrypt",
+    "url": "http://localhost:4173/tools/rsa-encrypt/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "rsa-generate",
+    "url": "http://localhost:4173/tools/rsa-generate/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "rsa-key-pair",
+    "url": "http://localhost:4173/tools/rsa-key-pair/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "rsa-sign-verify",
+    "url": "http://localhost:4173/tools/rsa-sign-verify/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "running-pace-calculator",
+    "url": "http://localhost:4173/tools/running-pace-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sales-tax-calculator",
+    "url": "http://localhost:4173/tools/sales-tax-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "scientific-calculator",
+    "url": "http://localhost:4173/tools/scientific-calculator/",
+    "status": 404,
+    "responseTime": 1,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "screen-test",
+    "url": "http://localhost:4173/tools/screen-test/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "screen-time-tracker",
+    "url": "http://localhost:4173/tools/screen-time-tracker/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "screenshot-tool",
+    "url": "http://localhost:4173/tools/screenshot-tool/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "scrypt-generator",
+    "url": "http://localhost:4173/tools/scrypt-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "secret-scanner",
+    "url": "http://localhost:4173/tools/secret-scanner/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "security-headers-check",
+    "url": "http://localhost:4173/tools/security-headers-check/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "semester-calculator",
+    "url": "http://localhost:4173/tools/semester-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "semver-parser",
+    "url": "http://localhost:4173/tools/semver-parser/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sentence-case",
+    "url": "http://localhost:4173/tools/sentence-case/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sequence-calculator",
+    "url": "http://localhost:4173/tools/sequence-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sha-generator",
+    "url": "http://localhost:4173/tools/sha-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "shadow-generator",
+    "url": "http://localhost:4173/tools/shadow-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sitting-time-calculator",
+    "url": "http://localhost:4173/tools/sitting-time-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "skeleton-generator",
+    "url": "http://localhost:4173/tools/skeleton-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sleep-cycle-calculator",
+    "url": "http://localhost:4173/tools/sleep-cycle-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sleep-quality-calculator",
+    "url": "http://localhost:4173/tools/sleep-quality-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "solar-term-calculator",
+    "url": "http://localhost:4173/tools/solar-term-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sorting-algorithm-visualizer",
+    "url": "http://localhost:4173/tools/sorting-algorithm-visualizer/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "spacing-calculator",
+    "url": "http://localhost:4173/tools/spacing-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "speech-script-timer",
+    "url": "http://localhost:4173/tools/speech-script-timer/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "speed-calculator",
+    "url": "http://localhost:4173/tools/speed-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "spine-animation-editor",
+    "url": "http://localhost:4173/tools/spine-animation-editor/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sql-escape",
+    "url": "http://localhost:4173/tools/sql-escape/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sql-formatter",
+    "url": "http://localhost:4173/tools/sql-formatter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sql-injection-scanner",
+    "url": "http://localhost:4173/tools/sql-injection-scanner/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sql-query-optimizer",
+    "url": "http://localhost:4173/tools/sql-query-optimizer/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sql-to-model",
+    "url": "http://localhost:4173/tools/sql-to-model/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ssh-key-generator",
+    "url": "http://localhost:4173/tools/ssh-key-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ssl-checker",
+    "url": "http://localhost:4173/tools/ssl-checker/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "ssl-tls-checker",
+    "url": "http://localhost:4173/tools/ssl-tls-checker/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "statistics-calculator",
+    "url": "http://localhost:4173/tools/statistics-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "stock-profit-calculator",
+    "url": "http://localhost:4173/tools/stock-profit-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "stopwatch",
+    "url": "http://localhost:4173/tools/stopwatch/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "stress-level-test",
+    "url": "http://localhost:4173/tools/stress-level-test/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "subnet-calculator",
+    "url": "http://localhost:4173/tools/subnet-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "subscription-manager",
+    "url": "http://localhost:4173/tools/subscription-manager/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "subtitle-toolbox",
+    "url": "http://localhost:4173/tools/subtitle-toolbox/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "sunrise-sunset",
+    "url": "http://localhost:4173/tools/sunrise-sunset/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "svg-code-editor",
+    "url": "http://localhost:4173/tools/svg-code-editor/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "svg-icon-library",
+    "url": "http://localhost:4173/tools/svg-icon-library/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "svg-optimizer",
+    "url": "http://localhost:4173/tools/svg-optimizer/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "svg-path-editor",
+    "url": "http://localhost:4173/tools/svg-path-editor/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "svg-wave-divider",
+    "url": "http://localhost:4173/tools/svg-wave-divider/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "swagger-viewer",
+    "url": "http://localhost:4173/tools/swagger-viewer/",
+    "status": 404,
+    "responseTime": 1,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "system-info",
+    "url": "http://localhost:4173/tools/system-info/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "tailwind-color-palette",
+    "url": "http://localhost:4173/tools/tailwind-color-palette/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "tax-calculator",
+    "url": "http://localhost:4173/tools/tax-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "teleprompter",
+    "url": "http://localhost:4173/tools/teleprompter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "test-data-generator",
+    "url": "http://localhost:4173/tools/test-data-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-cleaner",
+    "url": "http://localhost:4173/tools/text-cleaner/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-counter",
+    "url": "http://localhost:4173/tools/text-counter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-diff",
+    "url": "http://localhost:4173/tools/text-diff/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-diff-3way",
+    "url": "http://localhost:4173/tools/text-diff-3way/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-escape",
+    "url": "http://localhost:4173/tools/text-escape/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-extractor",
+    "url": "http://localhost:4173/tools/text-extractor/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-indent",
+    "url": "http://localhost:4173/tools/text-indent/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-replace",
+    "url": "http://localhost:4173/tools/text-replace/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-reverse",
+    "url": "http://localhost:4173/tools/text-reverse/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-shadow-generator",
+    "url": "http://localhost:4173/tools/text-shadow-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-similarity",
+    "url": "http://localhost:4173/tools/text-similarity/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-split-merge",
+    "url": "http://localhost:4173/tools/text-split-merge/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-statistics",
+    "url": "http://localhost:4173/tools/text-statistics/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-to-table",
+    "url": "http://localhost:4173/tools/text-to-table/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "text-whitespace",
+    "url": "http://localhost:4173/tools/text-whitespace/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "tile-calculator",
+    "url": "http://localhost:4173/tools/tile-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "time-diff-visual",
+    "url": "http://localhost:4173/tools/time-diff-visual/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "time-tracker",
+    "url": "http://localhost:4173/tools/time-tracker/",
+    "status": 404,
+    "responseTime": 1,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "time-unit-convert",
+    "url": "http://localhost:4173/tools/time-unit-convert/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "timestamp-batch-convert",
+    "url": "http://localhost:4173/tools/timestamp-batch-convert/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "timestamp-convert",
+    "url": "http://localhost:4173/tools/timestamp-convert/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "timezone-convert",
+    "url": "http://localhost:4173/tools/timezone-convert/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "timezone-lookup",
+    "url": "http://localhost:4173/tools/timezone-lookup/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "tip-calculator",
+    "url": "http://localhost:4173/tools/tip-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "todo-list-generator",
+    "url": "http://localhost:4173/tools/todo-list-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "toggle-generator",
+    "url": "http://localhost:4173/tools/toggle-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "token-cost-calculator",
+    "url": "http://localhost:4173/tools/token-cost-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "token-generator",
+    "url": "http://localhost:4173/tools/token-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "toml-formatter",
+    "url": "http://localhost:4173/tools/toml-formatter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "toml-to-json",
+    "url": "http://localhost:4173/tools/toml-to-json/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "traditional-simplified",
+    "url": "http://localhost:4173/tools/traditional-simplified/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "transform-generator",
+    "url": "http://localhost:4173/tools/transform-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "txt-record-editor",
+    "url": "http://localhost:4173/tools/txt-record-editor/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "typing-test",
+    "url": "http://localhost:4173/tools/typing-test/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "typography-scale",
+    "url": "http://localhost:4173/tools/typography-scale/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "unicode-convert",
+    "url": "http://localhost:4173/tools/unicode-convert/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "unit-converter",
+    "url": "http://localhost:4173/tools/unit-converter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "unit-price-calculator",
+    "url": "http://localhost:4173/tools/unit-price-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "unix-timestamp-bounds",
+    "url": "http://localhost:4173/tools/unix-timestamp-bounds/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "url-canonicalizer",
+    "url": "http://localhost:4173/tools/url-canonicalizer/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "url-decode",
+    "url": "http://localhost:4173/tools/url-decode/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "url-encode",
+    "url": "http://localhost:4173/tools/url-encode/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "url-params-builder",
+    "url": "http://localhost:4173/tools/url-params-builder/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "user-agent-generator",
+    "url": "http://localhost:4173/tools/user-agent-generator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "user-agent-parser",
+    "url": "http://localhost:4173/tools/user-agent-parser/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "utf-8-convert",
+    "url": "http://localhost:4173/tools/utf-8-convert/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "uuencode",
+    "url": "http://localhost:4173/tools/uuencode/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "uuid-generator",
+    "url": "http://localhost:4173/tools/uuid-generator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "vaccine-schedule-calculator",
+    "url": "http://localhost:4173/tools/vaccine-schedule-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "vector-calculator",
+    "url": "http://localhost:4173/tools/vector-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "video-to-gif",
+    "url": "http://localhost:4173/tools/video-to-gif/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "vigenere-cipher",
+    "url": "http://localhost:4173/tools/vigenere-cipher/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "vo2max-calculator",
+    "url": "http://localhost:4173/tools/vo2max-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "waist-to-height-calculator",
+    "url": "http://localhost:4173/tools/waist-to-height-calculator/",
+    "status": 404,
+    "responseTime": 5,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "waist-to-hip-calculator",
+    "url": "http://localhost:4173/tools/waist-to-hip-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "wallpaper-calculator",
+    "url": "http://localhost:4173/tools/wallpaper-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "water-intake-calculator",
+    "url": "http://localhost:4173/tools/water-intake-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "web-component-analyzer",
+    "url": "http://localhost:4173/tools/web-component-analyzer/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "webrtc-diagnostics",
+    "url": "http://localhost:4173/tools/webrtc-diagnostics/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "websocket-test",
+    "url": "http://localhost:4173/tools/websocket-test/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "week-calculator",
+    "url": "http://localhost:4173/tools/week-calculator/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "weight-goal-planner",
+    "url": "http://localhost:4173/tools/weight-goal-planner/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "whois-lookup",
+    "url": "http://localhost:4173/tools/whois-lookup/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "word-cloud",
+    "url": "http://localhost:4173/tools/word-cloud/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "work-hours-calculator",
+    "url": "http://localhost:4173/tools/work-hours-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "workday-calculator",
+    "url": "http://localhost:4173/tools/workday-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "workout-planner",
+    "url": "http://localhost:4173/tools/workout-planner/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "xhs-formatter",
+    "url": "http://localhost:4173/tools/xhs-formatter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "xml-escape",
+    "url": "http://localhost:4173/tools/xml-escape/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "xml-formatter",
+    "url": "http://localhost:4173/tools/xml-formatter/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "xml-json-converter",
+    "url": "http://localhost:4173/tools/xml-json-converter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "xml-to-json",
+    "url": "http://localhost:4173/tools/xml-to-json/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "xml-to-model",
+    "url": "http://localhost:4173/tools/xml-to-model/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "xpath-tester",
+    "url": "http://localhost:4173/tools/xpath-tester/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "xss-detector",
+    "url": "http://localhost:4173/tools/xss-detector/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "yaml-formatter",
+    "url": "http://localhost:4173/tools/yaml-formatter/",
+    "status": 404,
+    "responseTime": 4,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "yaml-validator-formatter",
+    "url": "http://localhost:4173/tools/yaml-validator-formatter/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "year-end-bonus-calculator",
+    "url": "http://localhost:4173/tools/year-end-bonus-calculator/",
+    "status": 404,
+    "responseTime": 3,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "zero-width-encoder",
+    "url": "http://localhost:4173/tools/zero-width-encoder/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  },
+  {
+    "name": "zip-viewer",
+    "url": "http://localhost:4173/tools/zip-viewer/",
+    "status": 404,
+    "responseTime": 2,
+    "seo": {
+      "title": "Error response",
+      "description": "",
+      "keywords": ""
+    }
+  }
+]

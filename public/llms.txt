@@ -8,7 +8,7 @@
 - [全部工具](https://www.util.cn/all/): 537 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 266 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 272 篇工具教程与实践文章
 
 ## 工具分类
 
@@ -652,6 +652,12 @@
 
 ## 博客文章
 
+- [录音和视频别急着上传：浏览器里的本地音视频工具箱](https://www.util.cn/blog/articles/local-audio-video-toolkit/): 会议录音、私人语音、未发布素材，最忌讳上传到在线处理网站。其实浏览器的 WebAudio 已经能完成裁剪、转格式、调音量、降噪、转 GIF 这些轻处理——文件全程不出本机。顺带讲清 m4r 的真面目、增益与响度的区别、谱减法降噪和 GIF 帧率取舍。
+- [从验孕到周岁：孕产育儿的时间账，交给工具算](https://www.util.cn/blog/articles/pregnancy-parenting-calculators/): 怀孕育儿路上全是日期：孕周、预产期、产检窗口、接种月龄。讲清孕周为什么从末次月经算起、NT 为什么卡在 11-13+6 周、补种为什么至少间隔 28 天，再用一组本地小工具把全家的日程排明白——数据全程留在浏览器，不上传。
+- [生活里容易吃亏的三笔账：驾照换证、外卖凑单与保养周期](https://www.util.cn/blog/articles/daily-life-calculators-guide/): 换证错过窗口、凑单凑过头、保养被加次数——这些亏都吃在
+- [自媒体发布前三道关：排版、违禁词与口播时长自查](https://www.util.cn/blog/articles/creator-copywriting-toolkit/): 内容报废多半不在选题，而在发布前的最后一步：排版读不下去、口播稿超时、极限词踩线。按
+- [合同、工资条、员工名单：为什么它们不该离开你的电脑](https://www.util.cn/blog/articles/office-pdf-excel-local-tools/): 合同扫描件加水印、批量做工资条、几百行名单合并拆分——交给在线工具等于把敏感文件上传到别人的服务器。本地处理三件套：加水印、做工资条、表格合并拆分，全程数据不出设备。
+- [后端排查三件套：MyBatis 日志还原、堆栈定位与连接串核对](https://www.util.cn/blog/articles/backend-debug-log-tools/): 日志里的 SQL 满屏问号、堆栈一层包一层、连接串参数数不清——后端三类高频排查场景各有固定套路，这篇文章把原理和坑讲透，配上浏览器本地运行、数据不出本机的工具。
 - [居家生活数字决策指南：从狗粮克数到空调电费](https://www.util.cn/blog/articles/pet-home-life-calculator-guide/): 狗粮喂多少、毛衣能不能热水洗、6寸配方转8寸、空调开一晚多少钱——这些凭感觉容易翻车的小决策，其实都有公式可算。讲清背后的原理与数字，顺手把计算工具收进书签。
 - [分期的真实利率：0.6% 手续费背后的 13% 年化](https://www.util.cn/blog/articles/credit-card-installment-real-interest-guide/): 每期 0.6% 的分期手续费，名义费率年化 7.2%，按 IRR 折算真实年化约 13%。讲透费率与利率的换算原理，再看车贷、最低还款和通胀里的同类陷阱。
 - [装修备料不踩坑：瓷砖、壁纸用量与损耗的算法](https://www.util.cn/blog/articles/renovation-material-quantity-guide/): 装修买建材，商家报的量往往偏
