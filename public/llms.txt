@@ -1,30 +1,30 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：621 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：629 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 621 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 629 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 284 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 310 篇工具教程与实践文章
 
 ## 工具分类
 
-- [随机决策（15款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
+- [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
 - [计算工具（51款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
 - [时间日期（29款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
-- [文本处理（48款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
+- [文本处理（51款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（32款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
-- [图像处理（45款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
+- [图像处理（46款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
 - [开发辅助（95款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（53款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（31款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [其他工具（33款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（43款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
 - [金融工具（30款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（34款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
@@ -46,6 +46,8 @@
 - [随机大转盘](https://www.util.cn/tools/random-wheel/): 自定义奖项的转盘抽奖工具，支持编辑奖项内容和概率
 - [抽卡保底计算器](https://www.util.cn/tools/gacha-pity-calculator/): 通用抽卡模型算距保底抽数与期望，可调基础概率/软保底/硬保底参数
 - [评论区抽奖工具](https://www.util.cn/tools/comment-lottery/): 粘贴评论名单按用户去重/加权随机抽奖，生成开奖结果卡片，运营开奖神器
+- [跑团骰子集](https://www.util.cn/tools/rpg-dice-set/): d4-d100 任意组合加修正值投掷，支持 COC/DND 检定成功等级判定
+- [狼人杀法官助手](https://www.util.cn/tools/werewolf-judge/): 内置经典板子夜晚流程与分段计时，面杀法官照屏推进不再手忙脚乱
 
 ## 计算工具
 
@@ -280,6 +282,9 @@
 - [古诗文默写挖空](https://www.util.cn/tools/recite-blank-generator/): 粘贴古诗文篇目自动挖空生成默写卷，随机/等距/实词三种策略，可打印可自测判分
 - [英语听写挖空生成](https://www.util.cn/tools/dictation-generator/): 粘贴单词表或课文按规则挖空生成听写稿，A4 打印排版，家长教师两用
 - [作文稿纸方格估算](https://www.util.cn/tools/manuscript-paper-estimator/): 作文按稿纸规格（300/400格）折算页数与剩余格数，达标状态一目了然
+- [电商评价回复生成器](https://www.util.cn/tools/review-reply-generator/): 选好评/中评/差评类型与场景生成客服回复话术，可复制可微调
+- [周报结构生成器](https://www.util.cn/tools/weekly-report-generator/): 勾选本周要点套结构模板生成规范周报，本周工作/数据/问题/下周计划分段
+- [成语词典接龙](https://www.util.cn/tools/idiom-dictionary/): 内置高频成语库查询释义，支持首尾字成语接龙与随机挑战，附学习收藏
 
 ## 网络工具
 
@@ -363,6 +368,7 @@
 - [时间地点水印相机](https://www.util.cn/tools/photo-timestamp-watermark/): 照片加时间地点水印（本地生成不定位，可读EXIF拍摄时间），打卡记录用
 - [壁纸多机型适配](https://www.util.cn/tools/wallpaper-adapter/): 一张图一键裁剪适配 iPhone/安卓/平板全套壁纸，焦点裁切+模糊补边
 - [拍立得排版](https://www.util.cn/tools/polaroid-layout-maker/): 照片排成拍立得相纸墙（白框+投影+手写配文），导出长图适合打印手账
+- [封面瀑布流预览](https://www.util.cn/tools/cover-grid-preview/): 上传封面图模拟抖音三列/B站信息流卡片观感，帮博主挑选最抓眼封面
 
 ## 开发辅助
 
@@ -581,6 +587,8 @@
 - [旅行行李清单生成器](https://www.util.cn/tools/travel-packing-list/): 按目的地类型与天数勾选生成打包清单，怕落东西的旅行急救包
 - [露营装备清单生成器](https://www.util.cn/tools/camping-gear-checklist/): 按场景人数与是否过夜勾选生成露营装备清单，新手露营照单备齐
 - [礼金往来参考表](https://www.util.cn/tools/gift-money-reference/): 按关系亲疏场合与城市给份子钱参考区间，附回礼对等建议，随礼不再纠结
+- [字帖生成器](https://www.util.cn/tools/copybook-generator/): 输入文字生成田字格/米字格描红字帖，可注音可打印，练字与儿童识字两用
+- [LED滚动字幕屏](https://www.util.cn/tools/led-scroll-display/): 全屏滚动大字应援屏/接机牌/摊位招牌，可调颜色字号速度，手机秒变灯牌
 
 ## 健康工具
 
@@ -736,6 +744,32 @@
 
 ## 博客文章
 
+- [文件处理工具箱：转换、查看、隐私清理](https://www.util.cn/blog/articles/file-toolbox/): 压缩包不想解压只想看一眼、老文件打开全是乱码、.env 要变成 JSON、发照片前得抹掉 GPS——这些活的共同点是
+- [随机决策与聚会工具：选择困难症救星](https://www.util.cn/blog/articles/random-fun-toolbox/): 中午吃什么、谁来发言、名单里抽三人、八个人分四队——这些三秒钟的小事，人肉做总有人觉得不公平。站内的随机家族把
+- [理财与税务计算器合集：把钱的账先算清](https://www.util.cn/blog/articles/finance-calculators-collection/): 发年终奖前不知道税前一档还是税后一档、房贷要不要提前还、分期手续费到底几个点、养老金能抵多少税——这些决定没人算就真的没人替你算。这篇把站内理财与税务计算器按税务、外汇、投资收益、贷款、长期规划、家庭账本、企业与保险七条线收齐，参数全部本地计算，你的收支数据不上传。
+- [网站安全自查工具箱：上线前过一遍](https://www.util.cn/blog/articles/security-toolbox/): 新功能上线前那一小时，最该过的不是功能测试，是安全清单：头配没配、CORS 开没开大、密钥有没有写进代码、手机号有没有原样回显。这篇把站内安全自查工具排成一条流水线——响应头、传输、注入、数据、凭据、本地加密六站，逐个过完再点发布。全部浏览器本地计算，检测样本不出本机。
+- [加密与哈希工具全景：从 MD5 到国密](https://www.util.cn/blog/articles/crypto-security-overview/): 学密码学最缺的不是教材，是能立刻
+- [时间日期工具全家桶：Cron、时区、倒计时一次配齐](https://www.util.cn/blog/articles/time-toolbox/): 时间戳看不懂、Cron 表达式全靠抄、约跨国会议靠心算、闰年要背口诀——时间这摊事，浏览器里其实有一整套仪表盘。这篇把站内 time 家族二十多款一次收齐：时间戳、Cron、时区、日期计算、农历节气、倒计时秒表全覆盖，全部本地计算，你的时间数据不上传。
+- [万能计算器合集：51 款覆盖学习、生活与工程](https://www.util.cn/blog/articles/calculate-master-list/): 站内计算器家族正好 51 款，免安装、无广告、一个书签全搞定。这篇按三类人群挑 24 款过一遍：学生党从分数、矩阵到概率统计和 GPA；工程与理科看复数、向量、进制和大数运算；生活与财务管年龄、折旧、税和小费。全部浏览器本地计算，成绩、财务、身体周期数据都不上传；周期类结果仅供参考，不构成医疗建议。
+- [网络排查工具箱：从 ping 到 TLS 的 30 款浏览器工具](https://www.util.cn/blog/articles/network-toolkit/): 网站打不开、接口报跨域、证书快过期——网络问题层层有对应工具。站内网络工具箱已有三十余款，这篇挑 24 款串成完整排查链：WHOIS 与 DNS 查域名，路由追踪与测速看路径，子网和 IPv6 管规划，HTTP 客户端、cURL 转码、状态码表调接口，SSL 检查与 DNSSEC 守 TLS 这一环。解析与生成类全部在浏览器本地完成，敏感配置不出本机。
+- [容易被忽略的宝藏小工具：效率、记录与杂项](https://www.util.cn/blog/articles/others-misc-toolbox/): 站内
+- [健身与健康管理计算器合集：43 个指标一次讲清](https://www.util.cn/blog/articles/health-calculators-overview/): 站内健康分类攒了 43 款工具，值得一次收藏、对照一年：减脂增肌看体成分与摄支两本账，心肺与力量看 VO2max、配速和 1RM，日常健康管饮水、睡眠、久坐与自测筛查，孕产儿童简列收尾。全部浏览器本地计算，身体数据不出本机。测算结果仅供参考，不构成医疗建议。
+- [数据格式化与互转：JSON/XML/YAML/TOML/SQL 一篇收齐](https://www.util.cn/blog/articles/format-toolbox/): 接口返回一坨 JSON 要看花、K8s 的 YAML 缩进对不齐、Rust 的 TOML 想读成 JSON、Postman 里一堆数据要导进数据库——数据格式的日常就是
+- [图片处理不装软件：46 款浏览器工具](https://www.util.cn/blog/articles/image-toolbox/): 改尺寸、换格式、打码、加水印、识文字、清 GPS——这些活不需要装 Photoshop，也不该把照片交给来路不明的网站。站内图片家族已经 46 款，这篇按修图、合成、识别、隐私清理四条线收一遍，全部浏览器本地处理，原图不出本机。
+- [文本处理工具箱：从正则到繁简转换的 30 款](https://www.util.cn/blog/articles/text-toolbox/): 正则写不出、改完配置看不出和原版差在哪、粘贴进来的文本全角半角混着、繁简转换一键翻车——文本处理的日常就这几件事。这篇把站内文本家族的三十来款工具按匹配、对比、字符转换、清洗排版四条线收齐，老工具点到为止，全部本地处理。
+- [编码解码全家桶：Base64 之外还有这 30+ 种](https://www.util.cn/blog/articles/encode-toolbox/): 日常说的
+- [在线设计工具间（二）：配色、SVG、字体与图像素材，25 款备齐](https://www.util.cn/blog/articles/design-toolbox-part2/): 定一套色板、画一条波浪、配一对字体、出一张占位图——设计落地最常用的四类素材，站内 25 款工具全部浏览器本地运行：调色板与无障碍检查、SVG 编辑与图标、字体配对与行高节奏、占位图与 favicon 与 OG 卡片。收藏这一页，开新项目时不再临时到处搜。
+- [在线设计工具间（一）：CSS 生成器 25 款，复制即用](https://www.util.cn/blog/articles/design-toolbox-part1/): 渐变、阴影、毛玻璃、骨架屏、裁剪路径——这些 CSS 效果人人都要，但没人愿意记语法。这篇把站内 25 款 CSS 生成器按效果类型收齐：布局、渐变、阴影边框、动画、滤镜遮罩、现成组件，每一款都是调节面板加实时预览，出代码复制即用，全部浏览器本地运行。
+- [开发者的浏览器工具箱（二）：调试排障与数据转换](https://www.util.cn/blog/articles/dev-toolbox-part2/): 排障和转换是开发里最费时间的两类小事：日志贴错地方、JSON 转不出类名、正则看不懂别人写的。这篇收录站内 25 款浏览器工具，覆盖日志与堆栈分析、结构转换、编码转义、正则与公式、LLM 成本与 Prompt 版本管理，全部本地处理，敏感日志不出本机。
+- [开发者的浏览器工具箱（一）：命令生成与项目配置](https://www.util.cn/blog/articles/dev-toolbox-part1/): Crontab 字段、Docker 参数、YAML 缩进，这些都不该靠记忆。这篇把站内 25 款
+- [聚会场子不冷场：跑团骰子、狼人法官、成语接龙与救场三件套](https://www.util.cn/blog/articles/party-games-idiom/): 跑团检定算错数、狼人杀法官念错流程、暖场游戏三秒冷场——聚会的成败在道具和节奏。三款新工具管全场：d4 到 d100 带修正检定、内置板子流程带计时、成语库加接龙挑战，再加转盘、分队、骰子三位老将救场，全部本地计算不上传。
+- [发图之前的最后十步：带壳截图、分享卡片、情侣头像与封面挑图](https://www.util.cn/blog/articles/social-image-toolkit/): 发图之前的最后十步：应用商店要带壳截图，文章要有分享卡片，合照想拆情侣头像，发布前还想预览封面在信息流里的样子——社交场景的图片加工全是细碎活。八款工具把这些活从 Photoshop 里接出来，浏览器本地合成，原图不出本机不上传。
+- [配置文件别再抄了：从 CI、ESLint 到 ER 图，九个生成器一次讲透](https://www.util.cn/blog/articles/dev-config-generators/): 新仓库开工要手搓 workflow、flat config、Dockerfile，画库表现在要截图 Mermaid，连给 AI 的规范文件都靠复制粘贴——工程配置这件事早该模板化。六个新生成器加三位老将，浏览器里点选生成，全部本地计算不上传。
+- [后端排查进阶包：雪花 ID 反推、日志速析、补丁定位与跳板配置](https://www.util.cn/blog/articles/backend-troubleshooting-advanced/): 订单号里藏着生成时刻、十万行 access.log 里找异常来源、补丁死活 apply 不上、SSH 命令越敲越长——后端排查的五件新活各有套路，外加还原 SQL、堆栈定位、连接串核对三位老将。日志、堆栈、配置全部本地处理不上传。
+- [周报、年假、提成、报价：打工人该算清的四笔账](https://www.util.cn/blog/articles/workplace-efficiency-tools/): 周报憋到周五晚上、年假不知道能折几天、提成工资条对不上、接单报价心里没底——职场吃亏大多不是能力问题，是账没算清。五款新工具加两位老朋友，把时间账和钱账一次摆平，数据全部本地计算不上传。
+- [厨房里的配比数学：点菜、烘焙、腌菜和咖啡，各有一笔算得清的账](https://www.util.cn/blog/articles/kitchen-ratio-calculators/): 家宴点多吃不完、烤蛋糕缺泡打粉、腌菜第几天能吃、下午那杯咖啡会不会失眠——厨房的四大纠结全是比例问题。这篇用六款工具把每笔账算成可复算的数字，全部本地计算不上传。
+- [出门怕落东西，随礼怕给错数：旅行与家务的六张清单](https://www.util.cn/blog/articles/travel-home-organizer/): 落充电宝、忘换护照、随礼纠结、家务扯皮——生活里这些扯皮事的解法都是同一张纸：一份写得清、算得对的清单。行李、露营、礼金、护照、轮值五款新工具加上日历导出，全部本地计算不上传。
+- [开学提效七件套：默写卷、听写稿、座位表到比赛计分，浏览器里全搞定](https://www.util.cn/blog/articles/teacher-parent-toolkit/): 出默写题、排座位、算稿纸字数、统计比赛分数——老师和家长的时间，多半耗在这些一次性琐事上。这篇把站内七款师生工具按场景过一遍：粘贴即生成、参数一换就是第二套卷子，全部浏览器本地计算，名单和成绩不上传。
 - [电商运营的三件日常小事：开奖、起标题、建 SKU](https://www.util.cn/blog/articles/ecommerce-ops-toolkit/): 电商运营的日常是三件小事：评论区开奖要公平可复核，30 字标题靠词根排列组合，上架建 SKU 是一道笛卡尔积题。本文把三件事背后的算法拆开复算，外加一道大促到手价的逐层扣减，全部浏览器本地完成。
 - [家庭账单里的两笔糊涂账：阶梯电价拆账与电车每公里成本](https://www.util.cn/blog/articles/home-utility-calculators/): 家庭账单里最看不懂的两笔钱：阶梯电价是怎么一档一档累出来的，电车一公里到底几分钱。本文把两套算法拆开复算，附油电并排对比和一个可复算的年度账，全部浏览器本地完成。
 - [办事打印三件套：身份证复印件、会议桌牌与节假日值班表](https://www.util.cn/blog/articles/print-office-toolkit/): 交材料要复印身份证、开会前十分钟要做桌牌、节前要排值班表——办公打印三件高频小事，全部在浏览器本地完成：85.6×54mm 原件大小排版加防挪用水印、双面镜像对折桌牌的几何原理、法定节假日自动标红的轮转值班表，照片和数据不出本机。

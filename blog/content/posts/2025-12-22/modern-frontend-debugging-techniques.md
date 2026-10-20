@@ -328,3 +328,14 @@ window.addEventListener('unhandledrejection', (event) => {
 4. **简化维护工作**：建立有效的错误监控和日志体系
 
 记住，调试不仅仅是找错的过程，更是理解应用运行机制的重要途径。持续学习和实践这些技巧，将让你成为一个更加高效的前端开发者。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [Headers查看器](https://www.util.cn/tools/headers-viewer/)：解析 Network 面板抓下的报文头
+- [Cookies管理器](https://www.util.cn/tools/cookies-manager/)：检查编辑会话 Cookie 排查登录态
+- [Query String解析](https://www.util.cn/tools/query-string-parser/)：拆解复杂 URL 参数定位传参错误
+- [UserAgent解析](https://www.util.cn/tools/user-agent-parser/)：解析 UA 串复现设备兼容问题
+- [HTTP客户端](https://www.util.cn/tools/http-client/)：页面外独立重放异常请求
+- [JSON对比工具](https://www.util.cn/tools/json-diff-compare/)：对比接口返回差异定位数据问题

@@ -612,5 +612,5 @@ AI Agent 开发的核心要点：
 ---
 
 **相关工具：**
-- [AI 对话工具](https://www.util.cn/tools/ai-chat/)
-- [Prompt 优化工具](https://www.util.cn/tools/prompt-optimizer/)
+- [Prompt 提示词库](https://www.util.cn/tools/prompt-library/)
+- [Prompt 版本对比器](https://www.util.cn/tools/prompt-diff-checker/)

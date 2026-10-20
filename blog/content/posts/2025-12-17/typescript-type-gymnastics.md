@@ -465,3 +465,13 @@ TypeScript类型体操不仅仅是技术挑战，更是编程思维的锻炼。�
 记住，类型编程的目的是让代码更安全、更清晰。在追求类型技巧的同时，也要保持代码的可读性和可维护性。
 
 ---
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [JSON转TypeScript接口](https://www.util.cn/tools/json-to-typescript/)：从真实 JSON 反推接口声明练对照
+- [JSON Schema生成](https://www.util.cn/tools/json-schema/)：生成数据模式约束校验练习
+- [Mock数据生成](https://www.util.cn/tools/mock-data/)：造样例数据验证类型边界假设
+- [代码格式化工具（开发版）](https://www.util.cn/tools/dev-code-formatter/)：整理练习代码片段高亮预览
+- [JSON/XML验证器](https://www.util.cn/tools/json-xml-validator/)：校验运行时 JSON 对照推导结果

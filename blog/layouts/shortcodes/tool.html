@@ -1,0 +1,10 @@
+{{- /* 统一工具内链：{{< tool id="audio-trimmer" >}}音频裁剪{{< /tool >}} 或 {{< tool id="x" >}} 自动用 id 可读名 */ -}}
+{{- $id := .Get "id" -}}
+{{- if not $id -}}
+  {{- errorf "tool shortcode missing id" -}}
+{{- end -}}
+{{- $label := trim .Inner " \n" -}}
+{{- if not $label -}}
+  {{- $label = replace $id "-" " " -}}
+{{- end -}}
+<a href="https://www.util.cn/tools/{{ $id }}/" class="tool-link">🔧 {{ $label }}</a>

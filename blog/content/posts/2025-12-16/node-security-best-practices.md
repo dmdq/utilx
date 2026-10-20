@@ -1112,3 +1112,15 @@ Node.js应用安全需要从多个层面考虑：
 安全是一个持续的过程，需要定期更新安全策略、监控安全事件、及时修复漏洞。记住，安全没有终点，只有持续改进。
 
 ---
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [XSS攻击检测器](https://www.util.cn/tools/xss-detector/)：检测输入验证章节的注入载荷
+- [SQL注入检测器](https://www.util.cn/tools/sql-injection-scanner/)：自查 ORM 绕过场景的注入特征
+- [BCrypt哈希生成器](https://www.util.cn/tools/bcrypt-generator/)：实践口令哈希与成本因子调优
+- [CSP策略生成器](https://www.util.cn/tools/csp-builder/)：生成文中 helmet 同款安全头策略
+- [CORS配置生成器](https://www.util.cn/tools/cors-configurator/)：产出 Node 后端跨域白名单配置
+- [敏感信息扫描器](https://www.util.cn/tools/secret-scanner/)：扫代码防硬编码密钥随仓库泄露
+- [环境变量管理器](https://www.util.cn/tools/env-variable-manager/)：规范 .env 配置杜绝密钥入库

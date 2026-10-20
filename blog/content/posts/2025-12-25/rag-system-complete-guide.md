@@ -554,3 +554,14 @@ if __name__ == "__main__":
 7. **持续评估**：跟踪系统性能
 
 RAG系统不是一成不变的，需要根据实际使用情况持续优化。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [文本分割合并工具](https://www.util.cn/tools/text-split-merge/)：手动切分语料对比分块粒度效果
+- [JSONL/NDJSON转换器](https://www.util.cn/tools/jsonl-converter/)：知识库语料逐行转 JSONL 入库
+- [文本相似度计算工具](https://www.util.cn/tools/text-similarity/)：算编辑距离粗验召回文本相关性
+- [Token计数与API成本计算](https://www.util.cn/tools/token-cost-calculator/)：测算拼装上下文后的问答成本
+- [大模型API价格对比](https://www.util.cn/tools/llm-pricing-compare/)：对比生成模型单价定 RAG 方案
+- [数据采样工具](https://www.util.cn/tools/data-sampling-tool/)：抽样评估集快速跑召回验收

@@ -1328,3 +1328,14 @@ if __name__ == '__main__':
 5. **故障排除**：快速定位和解决系统问题
 
 通过持续学习和实践这些技能，运维团队可以构建稳定、高效、可扩展的服务器运维体系，为业务的持续发展提供坚实的技术保障。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [Nginx配置生成器](https://www.util.cn/tools/nginx-config-generator/)：按需求生成反向代理负载均衡配置
+- [Nginx日志速析](https://www.util.cn/tools/nginx-log-analyzer/)：解析访问日志定位异常流量
+- [Crontab生成](https://www.util.cn/tools/crontab-generator/)：可视化生成定时巡检清理任务
+- [Linux命令生成](https://www.util.cn/tools/linux-command/)：自然语言查出文中运维命令
+- [SSH密钥生成器](https://www.util.cn/tools/ssh-key-generator/)：禁用口令登录后批量换发密钥
+- [SSL证书检查](https://www.util.cn/tools/ssl-checker/)：检查证书链有效期防 HTTPS 故障

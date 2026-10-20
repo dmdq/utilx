@@ -1274,3 +1274,14 @@ API调试是一个系统性的工程，需要掌握多种技术和工具：
 5. **错误追踪**：快速定位和解决API问题
 
 通过这些技术的综合应用，你可以大大提高API开发和调试的效率，确保API的稳定性和性能。记住，好的调试工具和方法论是高质量API开发的重要保障。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [HTTP客户端](https://www.util.cn/tools/http-client/)：手发请求核对状态码与响应体
+- [cURL转代码](https://www.util.cn/tools/curl-to-code/)：把 curl 复现命令转成工程代码
+- [Postman集合转换器](https://www.util.cn/tools/postman-collection-converter/)：集合转成 cURL 等调试格式
+- [HTTP响应模拟器](https://www.util.cn/tools/api-response-simulator/)：模拟延迟错误码验证前端容错
+- [API契约测试器](https://www.util.cn/tools/api-contract-tester/)：按契约校验接口字段是否漂移
+- [批量请求工具](https://www.util.cn/tools/bulk-request/)：小流量并发压测接口性能基线

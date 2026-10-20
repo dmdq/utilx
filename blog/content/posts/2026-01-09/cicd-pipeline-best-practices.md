@@ -796,3 +796,14 @@ code-quality:
 5. **安全第一**：Secret管理、漏洞扫描
 
 记住：CI/CD是持续改进的过程，不断优化才能发挥最大价值。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [GitHub Actions生成器](https://www.util.cn/tools/github-actions-generator/)：勾选语言缓存生成 workflow 配置
+- [YAML验证格式化工具](https://www.util.cn/tools/yaml-validator-formatter/)：校验流水线 yml 缩进语法再提交
+- [Dockerfile生成器](https://www.util.cn/tools/dockerfile-generator/)：为流水线构建环境生成标准镜像
+- [环境变量管理器](https://www.util.cn/tools/env-variable-manager/)：转换校验 CI 注入的密文变量
+- [API密钥管理器](https://www.util.cn/tools/api-key-manager/)：安全生成部署凭据并本地保管
+- [SemVer版本解析比较器](https://www.util.cn/tools/semver-parser/)：解析版本号驱动自动发布策略

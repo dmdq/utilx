@@ -184,6 +184,7 @@
         <div class="min-h-full flex flex-col">
           <div class="flex-auto">
             <slot />
+            <TutorialLinks />
           </div>
           <Footer />
         </div>

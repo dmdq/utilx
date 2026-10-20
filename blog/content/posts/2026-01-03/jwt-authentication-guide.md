@@ -588,3 +588,14 @@ async function refreshToken() {
 JWT是一种强大且灵活的认证机制，特别适合现代分布式应用和微服务架构。正确使用JWT可以简化认证流程，提升应用性能和可扩展性。
 
 记住安全第一：始终使用HTTPS、设置合理的过期时间、不在JWT中存储敏感信息，并根据具体需求选择合适的认证方案。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [JWT令牌解析器](https://www.util.cn/tools/jwt-parser/)：三段式拆解令牌载荷结构
+- [JWT验证器](https://www.util.cn/tools/jwt-verify/)：验证签名确认令牌有无被篡改
+- [JWT调试器](https://www.util.cn/tools/jwt-debugger/)：换密钥试文中 HS256 验签流程
+- [Base64解码](https://www.util.cn/tools/base64-decode/)：手动解码 base64url 段看载荷
+- [HMAC生成器](https://www.util.cn/tools/hmac-generator/)：用 HMAC-SHA256 复现签名过程
+- [安全令牌生成器](https://www.util.cn/tools/token-generator/)：生成本地调试用的测试 JWT 令牌

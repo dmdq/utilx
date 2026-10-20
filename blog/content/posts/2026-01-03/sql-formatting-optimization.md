@@ -500,3 +500,14 @@ FROM pg_stat_user_tables;
 - 在性能和可读性之间找平衡
 
 好的SQL不仅要正确，还要高效、易读、易维护。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [SQL格式化](https://www.util.cn/tools/sql-formatter/)：一键把乱排 SQL 按文中规范美化
+- [SQL查询优化器](https://www.util.cn/tools/sql-query-optimizer/)：分析慢查询给出优化改写建议
+- [SQL IN条件格式化](https://www.util.cn/tools/sql-in-formatter/)：粘贴 ID 列拼长 IN 条件查询
+- [MyBatis日志还原SQL](https://www.util.cn/tools/mybatis-sql-restore/)：日志占位符回填可执行完整 SQL
+- [DDL转ER图](https://www.util.cn/tools/ddl-to-er-diagram/)：建表语句生成 ER 图梳理关系
+- [CSV转SQL工具](https://www.util.cn/tools/csv-to-sql/)：数据表转 INSERT 灌测试库

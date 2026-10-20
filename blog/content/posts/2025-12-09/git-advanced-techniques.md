@@ -616,3 +616,14 @@ Git 高级技巧能够显著提升开发效率：
 掌握这些技巧将帮助你更专业地使用 Git，提升团队协作效率。
 
 ---
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [Git命令生成](https://www.util.cn/tools/git-command/)：把高级操作翻成可执行命令
+- [.gitignore生成器](https://www.util.cn/tools/gitignore-generator/)：按项目类型生成仓库忽略规则
+- [Conventional Commits生成器](https://www.util.cn/tools/commit-message-generator/)：表单式产出规范提交说明
+- [Changelog生成器](https://www.util.cn/tools/changelog-generator/)：粘贴 git log 汇总发布更新日志
+- [SSH密钥生成器](https://www.util.cn/tools/ssh-key-generator/)：为远程推送提前备好密钥
+- [文本对比](https://www.util.cn/tools/text-diff/)：对比 stash 与分支改动的差异文本

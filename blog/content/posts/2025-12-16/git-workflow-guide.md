@@ -711,3 +711,14 @@ Git是强大的版本控制工具，掌握其核心概念和最佳实践对现�
 记住，Git的学习是一个持续的过程。从基础操作开始，逐步掌握高级功能，根据团队需求选择合适的工作流程，才能充分发挥Git的威力。
 
 ---
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [Git命令生成](https://www.util.cn/tools/git-command/)：分支策略操作步骤快速换算
+- [Conventional Commits生成器](https://www.util.cn/tools/commit-message-generator/)：团队协作统一提交信息规范
+- [文本三方对比](https://www.util.cn/tools/text-diff-3way/)：合并冲突时定位双方改动冲突行
+- [.gitignore生成器](https://www.util.cn/tools/gitignore-generator/)：各语言栈初始化仓库忽略文件
+- [Changelog生成器](https://www.util.cn/tools/changelog-generator/)：按提交历史整理版本发布日志
+- [SemVer版本解析比较器](https://www.util.cn/tools/semver-parser/)：发布标签版本号比较与范围校验

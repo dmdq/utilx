@@ -976,3 +976,14 @@ describe('购物车功能', () => {
 8. **最佳实践**：减少脆弱性、良好组织
 
 记住：E2E测试应该是测试金字塔的顶端，数量虽少但价值巨大！
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [测试数据生成器](https://www.util.cn/tools/test-data-generator/)：按业务规则批量造用例测试数据
+- [Mock数据生成](https://www.util.cn/tools/mock-data/)：快速造假列表表单字段数据
+- [HTTP响应模拟器](https://www.util.cn/tools/api-response-simulator/)：挡掉后端依赖单独跑通前端流程
+- [网页截图](https://www.util.cn/tools/screenshot-tool/)：断言前后截网页留档对比
+- [数据格式验证器](https://www.util.cn/tools/data-format-validator/)：手机号邮箱表单格式用例齐备
+- [Cron生成器](https://www.util.cn/tools/cron-generator/)：生成每日回归的定时任务表达式

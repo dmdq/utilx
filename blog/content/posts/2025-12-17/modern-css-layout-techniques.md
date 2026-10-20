@@ -537,3 +537,13 @@ Container Queries允许我们基于容器的大小而非视口大小来应用样
 
 ---
 
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [网格系统生成器](https://www.util.cn/tools/grid-system-generator/)：生成 12/16/24 列版式网格参数
+- [CSS布局生成器](https://www.util.cn/tools/css-layout-generator/)：可视化生成弹性与网格代码
+- [EM断点生成器](https://www.util.cn/tools/em-breakpoint-generator/)：px 断点换算成 em 适配缩放场景
+- [间距计算器](https://www.util.cn/tools/spacing-calculator/)：按基准单位推导全站布局间距
+- [宽高比计算器](https://www.util.cn/tools/aspect-ratio-calculator/)：响应式卡片锁定宽高比防塌陷
+- [CSS格式化](https://www.util.cn/tools/css-formatter/)：美化压缩布局样式方便对照检查

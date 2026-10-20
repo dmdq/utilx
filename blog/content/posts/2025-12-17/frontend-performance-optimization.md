@@ -604,3 +604,14 @@ class VirtualTable {
 记住，性能优化的最终目标是提升用户体验，而不是盲目追求极致的性能指标。在优化时，要平衡性能、开发成本和维护成本，选择最适合项目的优化方案。
 
 ---
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [图片压缩](https://www.util.cn/tools/image-compress/)：按文中指标实测压缩前后体积
+- [图片格式转换](https://www.util.cn/tools/image-convert/)：转 WebP/AVIF 验证新格式收益
+- [SVG优化压缩器](https://www.util.cn/tools/svg-optimizer/)：内联前无损瘦身图标矢量文件
+- [Base64图片](https://www.util.cn/tools/base64-image/)：小图内联 Data URI 编码权衡
+- [CSS格式化](https://www.util.cn/tools/css-formatter/)：压缩样式产物对照减少体积
+- [FPS在线测试](https://www.util.cn/tools/fps-test/)：渲染优化后实测页面帧率表现

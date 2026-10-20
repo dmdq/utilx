@@ -763,3 +763,13 @@ Docker 容器化的最佳实践：
 
 **相关资源：**
 - [Docker 官方文档](https://docs.docker.com/)
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [Dockerfile生成器](https://www.util.cn/tools/dockerfile-generator/)：按语言栈一键生成Dockerfile
+- [Docker命令生成](https://www.util.cn/tools/docker-command/)：镜像与容器常用操作命令快速查找
+- [Docker Compose编辑器](https://www.util.cn/tools/docker-compose-editor/)：可视化编排多应用的服务组合文件
+- [K8s YAML生成器](https://www.util.cn/tools/kubernetes-yaml-generator/)：部署上云时快速生成 K8s 编排清单
+- [环境变量管理器](https://www.util.cn/tools/env-variable-manager/)：梳理校验注入容器的环境变量配置

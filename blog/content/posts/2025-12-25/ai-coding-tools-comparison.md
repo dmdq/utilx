@@ -540,3 +540,13 @@ cc "批量重命名所有的 .js 文件为 .ts"
 | 团队协作 | Copilot + Claude Code | 统一标准，知识共享 |
 
 没有最好的工具，只有最合适的工具。根据你的需求和场景灵活选择，才能发挥最大价值。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [AI编程规则生成器](https://www.util.cn/tools/ai-rules-generator/)：生成项目 AI 规则配置文件
+- [MCP配置生成器](https://www.util.cn/tools/mcp-config-generator/)：生成编辑器 MCP 服务配置
+- [Prompt版本对比](https://www.util.cn/tools/prompt-diff-checker/)：项目提示词改版逐字对比留痕
+- [Token计数与API成本计算](https://www.util.cn/tools/token-cost-calculator/)：估算补全对话档位 token 开销
+- [大模型API价格对比](https://www.util.cn/tools/llm-pricing-compare/)：对比各模型单价做选型预算

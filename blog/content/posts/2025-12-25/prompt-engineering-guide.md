@@ -571,3 +571,14 @@ class PromptTemplates:
 7. **测试验证**：用多个测试用例验证效果
 
 Prompt工程是一个持续优化的过程，需要不断实验和改进。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [Prompt提示词库](https://www.util.cn/tools/prompt-library/)：套用五类场景模板改写练习
+- [Prompt版本对比](https://www.util.cn/tools/prompt-diff-checker/)：A/B 版本提示词逐字对比增删
+- [Token计数与API成本计算](https://www.util.cn/tools/token-cost-calculator/)：估算长提示词的 token 量
+- [大模型API价格对比](https://www.util.cn/tools/llm-pricing-compare/)：按模型单价对比迭代成本
+- [字数统计](https://www.util.cn/tools/text-counter/)：统计提示词字数防上下文截断
+- [截断JSON修复器](https://www.util.cn/tools/truncated-json-repair/)：抢救被截断的结构化输出 JSON

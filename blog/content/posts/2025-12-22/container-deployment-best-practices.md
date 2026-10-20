@@ -1106,3 +1106,14 @@ spec:
 5. **安全加固**：实施多层次的安全防护措施
 
 记住，容器化是一个持续改进的过程，需要根据具体需求和最佳实践不断调整和优化。通过合理规划和技术选型，你可以构建一个可靠、可扩展、安全的容器化应用部署系统。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [Dockerfile生成器](https://www.util.cn/tools/dockerfile-generator/)：按技术栈一键产出瘦身生产级镜像
+- [Docker Compose编辑器](https://www.util.cn/tools/docker-compose-editor/)：可视化编辑本地验证编排配置
+- [K8s YAML生成器](https://www.util.cn/tools/kubernetes-yaml-generator/)：生成滚动更新的部署清单
+- [YAML验证格式化工具](https://www.util.cn/tools/yaml-validator-formatter/)：校验编排清单缩进语法
+- [Docker命令生成](https://www.util.cn/tools/docker-command/)：随时查容器调试与健康检查命令
+- [镜像源配置生成器](https://www.util.cn/tools/mirror-source-generator/)：配国内镜像源加速基础镜像拉取

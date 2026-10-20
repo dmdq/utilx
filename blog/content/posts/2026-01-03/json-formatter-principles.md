@@ -548,3 +548,14 @@ function jsonDiff(obj1, obj2) {
 JSON格式化工具看似简单，实际上涉及词法分析、语法树构建和格式化生成等多个复杂环节。理解这些原理不仅能帮助我们更好地使用格式化工具，还能让我们在需要时自定义实现更适合特定场景的格式化逻辑。
 
 记住：好的工具不仅要功能正确，还要提供良好的用户体验，包括清晰的错误提示、灵活的配置选项和优秀的性能表现。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [JSON格式化](https://www.util.cn/tools/json-formatter/)：对照文中词法分析看格式化效果
+- [JSON/XML验证器](https://www.util.cn/tools/json-xml-validator/)：验证括号逗号引号并定位语法错误
+- [JSON对比工具](https://www.util.cn/tools/json-diff-compare/)：对比两种格式化实现的输出差异
+- [JSON路径查询](https://www.util.cn/tools/json-path/)：用路径查询体验语法树节点提取
+- [JSON转YAML](https://www.util.cn/tools/json-to-yaml/)：序列化逻辑跨格式对照测试
+- [截断JSON修复器](https://www.util.cn/tools/truncated-json-repair/)：残缺 JSON 补全括号引号救急

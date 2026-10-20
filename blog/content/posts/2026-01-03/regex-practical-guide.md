@@ -407,3 +407,14 @@ function testRegex(pattern, string, flags = '') {
 正则表达式是强大的文本处理工具，掌握它能极大提升开发效率。通过理解基本语法、学习常用模式和不断实践，你将能够轻松应对各种文本处理需求。
 
 记住：简单的正则表达式往往比复杂的更好，只有在必要时才使用高级特性。良好的代码注释和测试能让你的正则表达式更易维护。
+
+## 🧰 本章配套工具箱
+
+边读边练：以下工具均在浏览器本地运行，数据不上传，可直接打开使用。
+
+- [正则表达式测试](https://www.util.cn/tools/regex-tester/)：粘贴测试文本实时验证文中示例
+- [正则生成器](https://www.util.cn/tools/regex-generator/)：从描述需求反向生成正则表达式
+- [正则表达式调试器](https://www.util.cn/tools/regex-debugger/)：逐步拆解匹配过程看懂回溯走向
+- [正则备忘单](https://www.util.cn/tools/regex-cheatsheet/)：元字符与语法速查随用随查
+- [ReDoS风险检测器](https://www.util.cn/tools/redos-detector/)：检测文中案例的灾难性回溯风险
+- [正则可视化图解](https://www.util.cn/tools/regex-visualizer/)：把复杂表达式画成分段结构图
