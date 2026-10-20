@@ -107,12 +107,11 @@ export default defineNuxtConfig({
   ],
 
   vite: {
-    plugins: [
-      visualizer({
-        open: false,
-        filename: 'stats.html'
-      })
-    ],
+    // 产物分析器仅在 ANALYZE=1 时启用：641 页规模下 stats.html 收集会抬高打包内存，
+    // 普通 generate/build/preview 无需，避免低内存机打包被系统杀掉
+    plugins: process.env.ANALYZE === '1'
+      ? [visualizer({ open: false, filename: 'stats.html' })]
+      : [],
     // 开发环境优化
     server: isDev ? {
       fs: {

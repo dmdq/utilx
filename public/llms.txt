@@ -1,11 +1,11 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：629 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：641 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 629 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 641 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
 - [技术博客](https://www.util.cn/blog/): 310 篇工具教程与实践文章
@@ -13,21 +13,21 @@
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（51款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（52款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
-- [时间日期（29款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
+- [时间日期（30款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
 - [文本处理（51款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（32款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
-- [图像处理（46款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
+- [图像处理（48款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
 - [开发辅助（95款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（53款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（33款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
-- [健康工具（43款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
+- [其他工具（35款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [健康工具（45款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
 - [金融工具（30款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
-- [文件工具（34款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
+- [文件工具（38款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
 
@@ -102,6 +102,7 @@
 - [烘焙原料替换对照](https://www.util.cn/tools/baking-substitution-chart/): 泡打粉小苏打鸡蛋黄油牛奶等烘焙原料换算与替换关系，缺料不慌
 - [腌渍配比计算器](https://www.util.cn/tools/pickling-ratio-calculator/): 按食材重量算泡菜酸菜糖醋的盐糖醋比例与用量，附亚硝酸盐安全期提示
 - [护照有效期提醒](https://www.util.cn/tools/passport-expiry-checker/): 输入护照到期日与出行日期，按各国6个月规则判定能否出境并提示换发
+- [骑行配速换算表](https://www.util.cn/tools/cycling-speed-calc/): 速度/踏频/齿比/功率/时间距离互算，通勤与训练配速参考
 
 ## 数据格式化
 
@@ -231,6 +232,7 @@
 - [备考倒排规划器](https://www.util.cn/tools/exam-countdown-planner/): 从考试日反向拆解各科任务到每日，按剩余天数与章节权重自动重算
 - [节假日值班表生成器](https://www.util.cn/tools/duty-roster-generator/): 成员×日期段自动轮转排班，法定节假日自动标注，打印公示一张表
 - [课程表制作器](https://www.util.cn/tools/class-schedule-maker/): 填写每周课程格子选配色导出课表图，支持上课铃声时间，学生老师常用
+- [农历生日提醒](https://www.util.cn/tools/lunar-birthday-reminder/): 输入农历或公历生日，换算今年对应的另一种生日并算距下次天数
 
 ## 文本处理
 
@@ -369,6 +371,8 @@
 - [壁纸多机型适配](https://www.util.cn/tools/wallpaper-adapter/): 一张图一键裁剪适配 iPhone/安卓/平板全套壁纸，焦点裁切+模糊补边
 - [拍立得排版](https://www.util.cn/tools/polaroid-layout-maker/): 照片排成拍立得相纸墙（白框+投影+手写配文），导出长图适合打印手账
 - [封面瀑布流预览](https://www.util.cn/tools/cover-grid-preview/): 上传封面图模拟抖音三列/B站信息流卡片观感，帮博主挑选最抓眼封面
+- [视频抽帧取图](https://www.util.cn/tools/video-frame-extractor/): 上传视频按间隔或数量批量截取画面帧导出 PNG，挑封面/取素材不用装软件
+- [HEIC转JPG](https://www.util.cn/tools/heic-to-jpg/): iPhone 照片 HEIC 批量转 JPG/PNG，本地转换微信与Windows都能打开
 
 ## 开发辅助
 
@@ -589,6 +593,8 @@
 - [礼金往来参考表](https://www.util.cn/tools/gift-money-reference/): 按关系亲疏场合与城市给份子钱参考区间，附回礼对等建议，随礼不再纠结
 - [字帖生成器](https://www.util.cn/tools/copybook-generator/): 输入文字生成田字格/米字格描红字帖，可注音可打印，练字与儿童识字两用
 - [LED滚动字幕屏](https://www.util.cn/tools/led-scroll-display/): 全屏滚动大字应援屏/接机牌/摊位招牌，可调颜色字号速度，手机秒变灯牌
+- [可打印网格纸生成器](https://www.util.cn/tools/grid-paper-printer/): 方格/点阵/坐标/五线谱/康奈尔笔记纸按规格生成 A4 打印，手账笔记数学全能
+- [婚宴座位安排器](https://www.util.cn/tools/seating-arranger/): 宾客按关系分组摆桌，同组聚坐并规避冲突对，输出桌次座位图打印
 
 ## 健康工具
 
@@ -635,6 +641,8 @@
 - [儿童疫苗接种日历](https://www.util.cn/tools/vaccine-schedule-calculator/): 按出生日期生成国家免疫规划接种日历，标注当前月龄应接种项与补种提示
 - [冰箱食材保质期速查](https://www.util.cn/tools/fridge-shelf-life/): 生鲜/剩菜/调料的冷藏冷冻参考天数，输入已放天数给尽快吃或建议丢弃分级
 - [咖啡因摄入计算器](https://www.util.cn/tools/caffeine-intake-calculator/): 内置常见咖啡茶饮咖啡因含量，算今日摄入是否超400mg并推算安全停饮时间
+- [键盘按键测试](https://www.util.cn/tools/keyboard-test/): 逐键测试新键盘/排查坏键，实时高亮按键冲突与无冲，含全键测试布局
+- [呼吸训练引导](https://www.util.cn/tools/breathing-exercise/): 4-7-8 与盒式呼吸引导动画跟练，缓解焦虑助眠，可调时长与节拍
 
 ## 金融工具
 
@@ -705,6 +713,10 @@
 - [会议桌牌批量生成](https://www.util.cn/tools/meeting-table-card/): 粘贴名单批量生成对折桌牌，双面镜像排版，A4 打印即用
 - [文字转语音朗读](https://www.util.cn/tools/text-to-speech/): 浏览器原生语音合成朗读中文文案，语速音调可调，配音试听不装软件
 - [SKU规格组合生成](https://www.util.cn/tools/sku-combination-generator/): 颜色×尺码等规格笛卡尔积生成 SKU 表格，可编辑价格库存，导出 CSV 上架
+- [视频压缩](https://www.util.cn/tools/video-compressor/): 浏览器重编码压缩视频体积，解决微信发送超限，本地处理不上传
+- [视频提取音频](https://www.util.cn/tools/extract-audio/): 从视频抽取音轨导出音频文件（MP3/无损），把网课演唱会变成能听的
+- [人声消除伴奏](https://www.util.cn/tools/vocal-remover/): 相位抵消法本地去除居中的人声得到简易伴奏，或反向保留人声
+- [收条收据生成器](https://www.util.cn/tools/receipt-generator/): 填交款人与金额自动生成规范收条，大小写金额自动转换，打印签字即用
 
 ## 场景专题
 
