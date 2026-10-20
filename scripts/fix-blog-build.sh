@@ -30,7 +30,7 @@ cd ..
 
 # 5. 再构建 Nuxt 应用
 echo "🚀 构建 Nuxt 应用..."
-NODE_OPTIONS="--max-old-space-size=8192" nuxt build
+NODE_OPTIONS="--max-old-space-size=$(node "$(dirname "$0")/heap-size.cjs" 2>/dev/null || echo 4096)" nuxt build
 
 # 6. 检查博客文件是否还在
 if [ -d "public/blog" ] && [ -f "public/blog/index.html" ]; then

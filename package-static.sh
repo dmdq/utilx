@@ -10,7 +10,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 # 内存参数已在 package.json 的 build:nuxt/generate 内置，此处兜底防止被外部环境覆盖
-export NODE_OPTIONS="${NODE_OPTIONS:---max-old-space-size=8192 --max-semi-space-size=1024}"
+export NODE_OPTIONS="${NODE_OPTIONS:---max-old-space-size=$(node scripts/heap-size.cjs 2>/dev/null || echo 4096) --max-semi-space-size=256}"
 
 OUT_DIR="${1:-.}"
 TS=$(date +%Y%m%d-%H%M%S)

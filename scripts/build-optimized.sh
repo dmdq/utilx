@@ -6,7 +6,7 @@
 echo "🚀 开始优化构建..."
 
 # 设置 Node.js 内存限制
-export NODE_OPTIONS="--max-old-space-size=8192 --max-semi-space-size=1024"
+export NODE_OPTIONS="--max-old-space-size=$(node "$(dirname "$0")/heap-size.cjs" 2>/dev/null || echo 4096) --max-semi-space-size=256"
 
 # 清理之前的构建
 echo "📦 清理旧文件..."
@@ -20,6 +20,6 @@ node scripts/generate-minimal-sitemap.js
 
 # 运行优化的构建
 echo "🔨 开始构建..."
-NODE_OPTIONS="--max-old-space-size=8192" npm run build
+NODE_OPTIONS="--max-old-space-size=$(node "$(dirname "$0")/heap-size.cjs" 2>/dev/null || echo 4096)" npm run build
 
 echo "✅ 构建完成！"

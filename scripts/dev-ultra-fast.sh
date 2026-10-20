@@ -7,7 +7,7 @@ echo "🚀 启动超快速开发模式..."
 
 # 设置环境变量
 export NODE_ENV=development
-export NODE_OPTIONS="--max-old-space-size=8192"
+export NODE_OPTIONS="--max-old-space-size=$(node "$(dirname "$0")/heap-size.cjs" 2>/dev/null || echo 4096)"
 export VITE_CJS_IGNORE_WARNING=true
 
 # 设置Chokidar使用原生文件监听（最高效）
