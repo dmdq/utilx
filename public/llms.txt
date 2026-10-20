@@ -1,11 +1,11 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：609 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：621 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 609 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 621 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
 - [技术博客](https://www.util.cn/blog/): 284 篇工具教程与实践文章
@@ -21,7 +21,7 @@
 - [文本处理（48款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（32款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
 - [图像处理（45款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
-- [开发辅助（83款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
+- [开发辅助（95款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（53款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
 - [其他工具（31款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
@@ -449,6 +449,18 @@
 - [SQL IN条件格式化](https://www.util.cn/tools/sql-in-formatter/): Excel 粘来的 ID 列表一键拼成 SQL IN 条件，自动去重/数字识别/引号转义
 - [地图坐标转换](https://www.util.cn/tools/gps-coordinate-converter/): WGS-84 / GCJ-02 火星坐标 / BD-09 三系互转，支持批量，LBS 开发必用
 - [正则可视化图解](https://www.util.cn/tools/regex-visualizer/): 把正则表达式解析成分段结构图，评审讲解他人正则不再靠猜
+- [雪花ID解码器](https://www.util.cn/tools/snowflake-id-decoder/): 拆解 64 位雪花 ID 的符号/时间戳/数据中心/机器/序列号，支持自定义 epoch 反推生成时刻
+- [Nginx日志速析](https://www.util.cn/tools/nginx-log-analyzer/): 粘贴 access.log 本地解析，状态码分布/Top IP/热门URL/流量占比一目了然
+- [ANSI转义码预览](https://www.util.cn/tools/ansi-preview/): 粘贴含 ANSI 颜色码的文本渲染出终端效果，支持16/256色与转 HTML
+- [Patch补丁应用器](https://www.util.cn/tools/patch-applier/): 上传 .patch/.diff 与源文件，本地预览改动并尝试应用，失败定位到具体块
+- [SSH配置生成器](https://www.util.cn/tools/ssh-config-generator/): 填主机/IP/用户/跳板生成 ~/.ssh/config，ProxyJump 免敲长命令
+- [GitHub Actions生成器](https://www.util.cn/tools/github-actions-generator/): 勾选语言/触发/缓存/测试命令生成 workflow yml，CI 不再抄文档
+- [ESLint配置生成器](https://www.util.cn/tools/eslint-config-generator/): 选框架与规则生成 ESLint9 flat config + .editorconfig + husky 配套片段
+- [DDL转ER图](https://www.util.cn/tools/ddl-to-er-diagram/): 粘贴建表语句自动生成数据库 ER 图（mermaid erDiagram），导出 PNG
+- [LaTeX公式渲染](https://www.util.cn/tools/latex-formula-render/): 输入 LaTeX 即时渲染为公式图片（KaTeX 本地），支持复制图片与导出 PNG
+- [大模型API价格对比](https://www.util.cn/tools/llm-pricing-compare/): 内置主流大模型输入/输出单价静态表，按价与上下文排序辅助选型（标注更新日期）
+- [AI编程规则生成器](https://www.util.cn/tools/ai-rules-generator/): 勾选技术栈与风格生项目规范文件 .cursorrules / CLAUDE.md / AGENTS.md
+- [Prompt版本对比](https://www.util.cn/tools/prompt-diff-checker/): 两个提示词逐字对比高亮增删，附字符/行/估算 token 差异统计
 
 ## 设计工具
 
