@@ -1,11 +1,11 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：597 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：609 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 597 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 609 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
 - [技术博客](https://www.util.cn/blog/): 284 篇工具教程与实践文章
@@ -13,7 +13,7 @@
 ## 工具分类
 
 - [随机决策（15款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（47款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（51款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
@@ -24,9 +24,9 @@
 - [开发辅助（83款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（53款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（27款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
-- [健康工具（42款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
-- [金融工具（27款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
+- [其他工具（31款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [健康工具（43款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
+- [金融工具（30款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（34款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
@@ -96,6 +96,10 @@
 - [阶梯电价计算器](https://www.util.cn/tools/tiered-electricity-calculator/): 按省份分档规则算电费，输入用电量出各档明细，看懂账单预估换档
 - [电动车充电成本计算](https://www.util.cn/tools/ev-charging-cost-calculator/): 电池容量×电价÷续航算一公里几分钱，与油车成本并排对比，购车决策参考
 - [演讲比赛计分器](https://www.util.cn/tools/contest-scoring-calculator/): 录入各评委打分自动去最高最低求均值并实时排名，附可打印评分表模板
+- [家宴点菜计算器](https://www.util.cn/tools/banquet-dish-calculator/): 按人数与场合生成凉热汤点配比与主食克重，聚餐宴请不再点多吃不饱
+- [烘焙原料替换对照](https://www.util.cn/tools/baking-substitution-chart/): 泡打粉小苏打鸡蛋黄油牛奶等烘焙原料换算与替换关系，缺料不慌
+- [腌渍配比计算器](https://www.util.cn/tools/pickling-ratio-calculator/): 按食材重量算泡菜酸菜糖醋的盐糖醋比例与用量，附亚硝酸盐安全期提示
+- [护照有效期提醒](https://www.util.cn/tools/passport-expiry-checker/): 输入护照到期日与出行日期，按各国6个月规则判定能否出境并提示换发
 
 ## 数据格式化
 
@@ -561,6 +565,10 @@
 - [衣物尺码中外对照表](https://www.util.cn/tools/clothing-size-chart/): 男女装与鞋码的中国/欧/美/英/日五地尺码互查，海淘网购必备
 - [元素周期表速查](https://www.util.cn/tools/periodic-table/): 118 种元素交互式周期表，点选查看名称/原子量/分类与常见用途
 - [班级座位表生成器](https://www.util.cn/tools/seating-chart-generator/): 导入名单按网格自动排座或随机打乱，可拖拽微调导出打印，班主任定期刚需
+- [家务轮值排班生成器](https://www.util.cn/tools/chore-roster-generator/): 成员×家务×频率自动排周期轮值表，公平分配不扯皮，支持打印贴墙
+- [旅行行李清单生成器](https://www.util.cn/tools/travel-packing-list/): 按目的地类型与天数勾选生成打包清单，怕落东西的旅行急救包
+- [露营装备清单生成器](https://www.util.cn/tools/camping-gear-checklist/): 按场景人数与是否过夜勾选生成露营装备清单，新手露营照单备齐
+- [礼金往来参考表](https://www.util.cn/tools/gift-money-reference/): 按关系亲疏场合与城市给份子钱参考区间，附回礼对等建议，随礼不再纠结
 
 ## 健康工具
 
@@ -606,6 +614,7 @@
 - [孕周计算产检日历](https://www.util.cn/tools/pregnancy-week-calculator/): 末次月经输入得孕周与预产期，40周逐周发育对照，产检节点自动换算为日期
 - [儿童疫苗接种日历](https://www.util.cn/tools/vaccine-schedule-calculator/): 按出生日期生成国家免疫规划接种日历，标注当前月龄应接种项与补种提示
 - [冰箱食材保质期速查](https://www.util.cn/tools/fridge-shelf-life/): 生鲜/剩菜/调料的冷藏冷冻参考天数，输入已放天数给尽快吃或建议丢弃分级
+- [咖啡因摄入计算器](https://www.util.cn/tools/caffeine-intake-calculator/): 内置常见咖啡茶饮咖啡因含量，算今日摄入是否超400mg并推算安全停饮时间
 
 ## 金融工具
 
@@ -636,6 +645,9 @@
 - [Offer多维对比器](https://www.util.cn/tools/offer-comparator/): 两个 Offer 的 base/奖金/签字费/期权本地折算逐年总包，并排比税后与时薪
 - [加班费计算器](https://www.util.cn/tools/overtime-pay-calculator/): 按工作日1.5倍/休息日2倍/法定节假日3倍自动套算，内置当年法定节假日表
 - [大促到手价计算器](https://www.util.cn/tools/promotion-price-calculator/): 定金膨胀+跨店满减+优惠券+红包逐层抵扣，算清大促真实到手价
+- [带薪年假折算器](https://www.util.cn/tools/annual-leave-calculator/): 按累计工龄算年假天数，入离职当年按比例折算并给未休补偿参考
+- [销售提成计算器](https://www.util.cn/tools/commission-calculator/): 阶梯销售额自动算提成，支持全额累进与超额累进两种口径，核对工资条
+- [自由职业报价换算器](https://www.util.cn/tools/freelance-rate-calculator/): 时薪日薪项目价互算，叠加社保自缴与空窗期成本系数，接单报价不亏
 
 ## 文件工具
 
