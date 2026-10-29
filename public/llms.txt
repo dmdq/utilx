@@ -1,14 +1,14 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：641 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：654 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 641 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 654 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 313 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 335 篇工具教程与实践文章
 
 ## 工具分类
 
@@ -17,17 +17,17 @@
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
-- [时间日期（30款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
+- [时间日期（31款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
 - [文本处理（51款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（32款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
-- [图像处理（48款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
-- [开发辅助（95款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
-- [设计工具（53款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
+- [图像处理（49款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
+- [开发辅助（98款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
+- [设计工具（54款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
 - [其他工具（35款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
-- [健康工具（45款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
-- [金融工具（30款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
-- [文件工具（38款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
+- [健康工具（47款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
+- [金融工具（32款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
+- [文件工具（41款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
 
@@ -233,6 +233,7 @@
 - [节假日值班表生成器](https://www.util.cn/tools/duty-roster-generator/): 成员×日期段自动轮转排班，法定节假日自动标注，打印公示一张表
 - [课程表制作器](https://www.util.cn/tools/class-schedule-maker/): 填写每周课程格子选配色导出课表图，支持上课铃声时间，学生老师常用
 - [农历生日提醒](https://www.util.cn/tools/lunar-birthday-reminder/): 输入农历或公历生日，换算今年对应的另一种生日并算距下次天数
+- [倒数日管理](https://www.util.cn/tools/days-countdown/): 生日、考试、纪念日、还款日倒数看板，支持每年重复与进度条，数据本地保存不上传
 
 ## 文本处理
 
@@ -373,6 +374,7 @@
 - [封面瀑布流预览](https://www.util.cn/tools/cover-grid-preview/): 上传封面图模拟抖音三列/B站信息流卡片观感，帮博主挑选最抓眼封面
 - [视频抽帧取图](https://www.util.cn/tools/video-frame-extractor/): 上传视频按间隔或数量批量截取画面帧导出 PNG，挑封面/取素材不用装软件
 - [HEIC转JPG](https://www.util.cn/tools/heic-to-jpg/): iPhone 照片 HEIC 批量转 JPG/PNG，本地转换微信与Windows都能打开
+- [条形码生成器](https://www.util.cn/tools/barcode-generator/): EAN-13、UPC-A、Code128 等六种条码单个或批量生成，PNG/SVG/ZIP 导出，校验位自动核算
 
 ## 开发辅助
 
@@ -471,6 +473,9 @@
 - [大模型API价格对比](https://www.util.cn/tools/llm-pricing-compare/): 内置主流大模型输入/输出单价静态表，按价与上下文排序辅助选型（标注更新日期）
 - [AI编程规则生成器](https://www.util.cn/tools/ai-rules-generator/): 勾选技术栈与风格生项目规范文件 .cursorrules / CLAUDE.md / AGENTS.md
 - [Prompt版本对比](https://www.util.cn/tools/prompt-diff-checker/): 两个提示词逐字对比高亮增删，附字符/行/估算 token 差异统计
+- [摄像头麦克风测试](https://www.util.cn/tools/camera-mic-test/): 摄像头回显与分辨率帧率实测、麦克风波形电平与录音回放，视频会议前本地自检零上传
+- [游戏手柄测试](https://www.util.cn/tools/gamepad-tester/): 手柄按键、摇杆漂移校准判定与震动测试，17 键标准映射可视化，新买手柄验货必备
+- [RAG分块预览器](https://www.util.cn/tools/rag-chunk-previewer/): 固定长度、递归分隔、Markdown 感知三种分块策略与 overlap 调参，token 估算与 JSONL 导出
 
 ## 设计工具
 
@@ -527,6 +532,7 @@
 - [开关组件生成器](https://www.util.cn/tools/toggle-generator/): 自定义开关(Toggle)组件样式，生成无JS的纯CSS checkbox实现
 - [HTML邮件签名生成器](https://www.util.cn/tools/email-signature-generator/): 中文友好模板生成 table+内联样式签名，兼容 Gmail/Outlook/企业微信邮箱
 - [OG分享卡片生成器](https://www.util.cn/tools/og-image-generator/): 生成 1200×630 社交分享卡片图，模板配色本地合成导出 PNG
+- [名片生成器](https://www.util.cn/tools/business-card-generator/): 90×54mm 标准 300dpi 名片正反面设计，出血线安全线预览，PNG 直接送印
 
 ## 安全工具
 
@@ -643,6 +649,8 @@
 - [咖啡因摄入计算器](https://www.util.cn/tools/caffeine-intake-calculator/): 内置常见咖啡茶饮咖啡因含量，算今日摄入是否超400mg并推算安全停饮时间
 - [键盘按键测试](https://www.util.cn/tools/keyboard-test/): 逐键测试新键盘/排查坏键，实时高亮按键冲突与无冲，含全键测试布局
 - [呼吸训练引导](https://www.util.cn/tools/breathing-exercise/): 4-7-8 与盒式呼吸引导动画跟练，缓解焦虑助眠，可调时长与节拍
+- [鼠标按键测试](https://www.util.cn/tools/mouse-test/): 左中右键与侧键点击计数、双击间隔检测、滚轮与移动轨迹测试，新鼠标验货排查双击失灵
+- [噪音分贝检测](https://www.util.cn/tools/decibel-meter/): 麦克风实时声级检测，dB 曲线与最大/平均值，噪声等级对照参考，本地采集不上传
 
 ## 金融工具
 
@@ -676,6 +684,8 @@
 - [带薪年假折算器](https://www.util.cn/tools/annual-leave-calculator/): 按累计工龄算年假天数，入离职当年按比例折算并给未休补偿参考
 - [销售提成计算器](https://www.util.cn/tools/commission-calculator/): 阶梯销售额自动算提成，支持全额累进与超额累进两种口径，核对工资条
 - [自由职业报价换算器](https://www.util.cn/tools/freelance-rate-calculator/): 时薪日薪项目价互算，叠加社保自缴与空窗期成本系数，接单报价不亏
+- [账单分析器](https://www.util.cn/tools/bill-analyzer/): 微信、支付宝导出账单 CSV 本地解析，自动分类统计收支趋势与 Top 商户，数据不上传
+- [报价单生成器](https://www.util.cn/tools/quotation-generator/): 行项目、折扣、税率与人民币大写合计自动计算，A4 打印/另存 PDF，销售报价单模板
 
 ## 文件工具
 
@@ -717,6 +727,9 @@
 - [视频提取音频](https://www.util.cn/tools/extract-audio/): 从视频抽取音轨导出音频文件（MP3/无损），把网课演唱会变成能听的
 - [人声消除伴奏](https://www.util.cn/tools/vocal-remover/): 相位抵消法本地去除居中的人声得到简易伴奏，或反向保留人声
 - [收条收据生成器](https://www.util.cn/tools/receipt-generator/): 填交款人与金额自动生成规范收条，大小写金额自动转换，打印签字即用
+- [商业发票生成器](https://www.util.cn/tools/invoice-generator/): 外贸 Commercial/Proforma Invoice 双语生成，英文大写金额、Incoterms 与付款条款，打印导出
+- [借条生成器](https://www.util.cn/tools/iou-generator/): 借款金额大写、利率红线提示、还款期限与担保条款，生成规范借条可打印
+- [标价签生成器](https://www.util.cn/tools/price-tag-generator/): 品名规格价格与条码排版成 A4 标价签，多规格标签纸精确毫米打印
 
 ## 场景专题
 
@@ -756,6 +769,28 @@
 
 ## 博客文章
 
+- [搭 RAG 知识库前，先把分块调对：chunk size、overlap 与切分策略](https://www.util.cn/blog/articles/rag-chunking-guide/): RAG 检索质量差，八成不是模型不行，是文档切块切得不对：块太大检索不精，块太小语义断裂，overlap 设 0 边界信息两头丢。这篇讲清三种切分策略的适用场景、chunk size 和 overlap 的经验起点，以及怎么用本地分块预览器在上线前把边界看清楚——不用写代码，粘贴文档就能调参。
+- [视频会议前三分钟：摄像头麦克风自检，顺便把手柄也验了](https://www.util.cn/blog/articles/video-call-device-check/): 距离汇报开始还有五分钟，摄像头黑屏、麦克风没有声音——这种事故完全可以在会前三分钟拦住。这篇给一套会议前设备自检流程：摄像头看实测分辨率和帧率，麦克风看电平表和录音回放，顺便讲讲同一套浏览器检测思路怎么用来验新手柄的摇杆漂移。全程本地采集，画面和声音不上传。
+- [微信支付宝账单导出后怎么分析？CSV 本地跑，数据不出电脑](https://www.util.cn/blog/articles/bill-export-analysis-privacy/): 想知道钱花哪儿了，微信支付宝其实都支持导出完整账单——但拿到手的是带说明头的 CSV 文件，微信是 UTF-8、支付宝是 GBK，Excel 打开一半是乱码。这篇讲清导出步骤、编码坑，以及怎么用一个纯本地工具把账单变成月度趋势、分类占比和 Top 商户。全程浏览器解析，账单不上传任何服务器。
+- [小店开业打印三件套：条形码、标价签、名片，一台打印机全搞定](https://www.util.cn/blog/articles/small-shop-print-kit/): 开店要印的东西比想象中多：商品要条码、货架要标价签、递出去要名片。找印刷厂起订量动辄几百张，其实开业初期这三样用 A4 不干胶纸和普通打印机就能自己出——条形码生成器管编码，标价签生成器管排版，名片生成器管门面。全程本地生成，扫一篇文章讲清怎么把每一分钱花在货上。
+- [自由职业接单必备的三份单据：报价单、发票、借条，浏览器里就能做](https://www.util.cn/blog/articles/freelance-document-trio/): 接单之后才发现在线做单据的工具全是注册墙：报价单要开会员，发票模板要登录，借条模板搜出来排版还不能打印。这篇把三份最常用的单据一次讲清——报价单怎么算税和折扣、外贸形式发票和增值税发票差在哪、借条里哪几行真正决定法律效力。全部本地生成，填完直接打印或另存 PDF。
+- [办公室健康自检：久坐、噪音、用眼、手腕，一次说清](https://www.util.cn/blog/articles/office-health-self-check/): 工位是健康管理的盲区：没人给你量久坐时长、测工位噪音、数你的眨眼次数。这篇按久坐、噪音、用眼、手腕四项做一次自检，给出可对照的量化红线和立刻能做的起身策略、20-20-20 法则与 4-7-8 呼吸，配的检测工具全部在浏览器本地运行。结果均为日常参考，不构成医疗诊断。
+- [发薪日、还款日、账单日：打工人的日子都是数字，这样管不踩坑](https://www.util.cn/blog/articles/payday-bill-date-management/): 工资 10 日发、还款 8 日扣，现金流永远差着两天；分期
+- [你的房间到底有多吵？浏览器打开就能测噪音](https://www.util.cn/blog/articles/room-noise-decibel-guide/)
+- [考试日、纪念日、还款日：把重要日子管理起来，不再临时抱佛脚](https://www.util.cn/blog/articles/days-countdown-important-dates/): 日历适合
+- [新键鼠显示器到手别急着好评：5 分钟外设验货清单](https://www.util.cn/blog/articles/peripheral-unboxing-checklist/): 外设到手的前几天是验货黄金期：坏点、坏键、双击失灵这类出厂问题多半第一周就现形，错过窗口就只能走维修。这篇给一份 5 分钟自检清单——显示器过一遍全屏色场，键盘逐键点亮再试同按，鼠标重点测双击间隔与滚轮，最后打一段字留个手感基线，顺手核对整机识别。全部浏览器本地完成，不装驱动、不上传数据。
+- [本月工具地图：10 月新上线工具按分类速查与站内导航](https://www.util.cn/blog/articles/new-tools-october-2023-overview/): 这是一张
+- [系统检测与性能基准：换机、验收、调优前先摸清这台机器](https://www.util.cn/blog/articles/system-hardware-detect-benchmark/): 买二手本怕配置对不上、装机验收怕屏幕有坏点、跑动画不知道掉没掉帧、想上本地大模型不知道显卡带不带得动、前端想知道某个写法快多少——这些都得先把机器摸清楚。这篇串站内七款浏览器端检测与基准工具：电脑系统检测、浏览器版本检测、屏幕检测、FPS在线测试、GPU检测与模型推荐、性能基准测试，再加一个 Spine 动画编辑器看渲染效果。全程浏览器本地读取，不装驱动、不上传配置，验收和排障都在当场完成。想看浏览器媒体能力，见站内《浏览器音视频工具箱》。
+- [睡不好，多半是节律和压力在算账：睡眠质量、生物钟与压力自测](https://www.util.cn/blog/articles/sleep-circadian-stress-tools/): 同样的八小时，有人醒来满血、有人更困，差别在睡眠效率、生物钟类型和白天攒下的压力。这篇用睡眠质量、昼夜节律、压力水平三个自测把觉睡明白，再靠睡眠周期、屏幕时间和番茄钟把作息理顺。均为量表估算，仅供参考，不构成医疗建议。
+- [前端开发与 API 调试工具箱：文档、转义、查询与片段](https://www.util.cn/blog/articles/frontend-dev-api-toolkit/): 接口写完要出文档、贴 JSON 要转 TS 类型、拼 GraphQL 全靠手敲、UA 字符串每次现找、把用户输入塞进模板忘了转义——前端和联调的这些琐碎动作，天天重复就是天天耗时间。这篇串七款浏览器本地工具：API 文档生成、OpenAPI 规范生成器、Web 组件分析器、代码片段管理器、GraphQL 查询构建器、User-Agent 生成器、文本转义工具，外加 JSON 转 TypeScript 接口。代码、接口定义和内部文档全程不出本机，公司项目也能放心用。想扩充常用开发小工具，见站内《开发者工具箱（一）》。
+- [数据结构与算法可视化：面试前的手感训练](https://www.util.cn/blog/articles/data-structure-algorithm-visualizer/): 算法题刷了忘、关了讲解就空白，是因为背了结论而不是过程。亲手搭一遍二叉搜索树、盯着气泡看完三轮冒泡、把大 O 翻译成秒数，知识点才会变成视觉记忆。全程浏览器本地运行，练题笔记和代码片段不出本机。
+- [心肺与训练： fitness 年龄、呼吸频率、柔韧性，练之前先量清楚](https://www.util.cn/blog/articles/cardio-fitness-training-tools/): 练之前先知道自己站在哪：最大摄氧量是心肺耐力的硬标尺，心血管年龄把它翻译成一个更扎心的数字，呼吸频率是最便宜的自测项。加上柔韧性评估和计划生成器，把力量与配速练得有据可依。结果均为估算参考，不构成医疗建议，不适请就医。
+- [图片处理进阶：叠加、比对、取色与图标的四件事](https://www.util.cn/blog/articles/image-processing-advanced/): 压缩、转格式是图片处理的基本功，站内《图片工具箱》已经讲透。这篇往上一层，聊四件更容易卡住的设计向操作：做多图叠加合成不用开 Photoshop、上线前后对比两张图找差异、从一张参考图里抽出可用配色、把一张正方形 Logo 一键铺成全尺寸 favicon 与图标。全部在浏览器本地完成，出图不上传，客户素材和未发布稿都留在自己机器上。
+- [古典密码、校验与鉴权：从维吉尼亚到一次性口令的安全小抄](https://www.util.cn/blog/articles/cipher-checksum-security-tools/): 加密管保密、校验管完整、鉴权管身份，安全事故多半是拿错工具。手算一遍维吉尼亚、CRC-32、MD5、HMAC、Diffie-Hellman 与 TOTP，能算出来就知道各自的边界在哪。全部浏览器本地运行，密钥、哈希和口令一个字符都不上传。
+- [别只盯体重秤那一个数：理想体重、腰高比、皮脂与 FFMI 的四种读法](https://www.util.cn/blog/articles/body-composition-metrics/): 体重秤只有一个数字，身体却由脂肪、肌肉、骨骼、水四件事组成。这篇讲清四个指标各管什么：理想体重定目标、腰高比看内脏脂肪、皮脂钳和体脂公式估脂肪占比、FFMI 判肌肉量是否达标。所有测算基于统计公式，结果仅供参考，不构成医疗建议。
+- [站长网络工具箱：从 URL 规范化到 TXT 记录的解析与 SEO 维护](https://www.util.cn/blog/articles/webmaster-network-toolkit/): 改版做完 301 却还有重复收录、换域名后局部地区解析迟迟不生效、发出去的文章在社交平台没有预览卡片、SPF 少写一个空格退信一大片——站长日常这些坑都有对应工具。这篇把站内五款新上线的网络工具串成一条维护链：URL 规范化治重复收录，DNS 缓存刷新加速解析生效，Open Graph 验证器管社交预览，TXT 记录编辑器写对 SPF/DKIM，MAC 地址厂商查询认设备。加上 WHOIS、DNS 查询和 HTTP 状态码三件老伙计，解析、收录、邮件、安全一次过。
+- [编解码与转义进阶手册：乱码、实体、注入与 Base 家族一次讲清](https://www.util.cn/blog/articles/encoding-decode-escape-handbook/): 乱码、实体没还原、转义打架，三类问题占了编解码报错的大头。从
+- [时间差不该靠心算：把日期差、工作日和倒计时变成看得见的图](https://www.util.cn/blog/articles/time-difference-visualization/): 两个日期之间隔了多少天、还剩几个工作日、距目标日还有多久——这些
 - [打印与生活小事：网格纸、婚宴桌次、收条与农历生日，浏览器本地一次搞定](https://www.util.cn/blog/articles/print-and-life-helpers/): 给孩子打一张方格纸、给婚礼排十桌宾客、给房东写张收条、给老人算农历生日还剩几天——四件生活小事各有各的坑：网格纸规格不对、婚宴要按关系分桌、收条金额大小写容易写错、闰月的生日不知道去哪天过。四个新工具加对照说明，全部浏览器本地完成，宾客名单和金额不出本机。
 - [身体的四项体检：验键盘、测屏幕、跟练呼吸与算骑行配速的本地打法](https://www.util.cn/blog/articles/body-sensory-mini-tools/): CPU、内存、浏览器都体检过，身体和感官这套设备却从没量过。四个本地小练习排一下序：逐键加无冲验新键盘、全屏色场加 DPR 验屏幕、跟着圆环练 4-7-8 与盒式呼吸、用踏频乘齿比乘轮周长推骑行时速。数字全部可复算，数据不出本机。
 - [视频与音频，不装软件也不上传：浏览器本地处理的轻需求打法](https://www.util.cn/blog/articles/browser-video-audio-toolkit/): 没发布的视频、私人录音，是最不该上传的一类文件。浏览器原生的 video、canvas、MediaRecorder 与 WebAudio 已经能处理压缩、抽帧、提取音频、降噪、做动图等大部分轻需求：不装软件，也不走服务器。这篇把站内五款新工具讲透，也如实交代每个方案的边界——重编码要实时录一遍、mp4 容器未必能解码、相位抵消不是 AI 分离。

@@ -119,7 +119,31 @@
 | 骑行配速换算表 | 速度/档位/踏频/距离时间互算（运动细分补位） | 高 |
 | 农历生日提醒计算器 | 阳历生日↔农历生日互查+今年对应公历日期（联动站内农历转换） | 高 |
 
+## 十二、商业潜力提案（2026-10-29，主推 10 款已全部落地=第十一批，详报告 docs/TOOL_COMMERCIAL_RESEARCH_2026-10-29.md）
+
+| 工具 | id（零撞车已核） | 一句话 | 可行性 |
+|---|---|---|---|
+| 账单分析器 | bill-analyzer | 支付宝/微信导出 CSV 本地解析分类统计（自行解压 zip 后上传；竞品全是 Python 脚本） | 中 |
+| 报价单生成器 | quotation-generator | 行项目+税率+大小写总额→打印/PDF，单据簇补最关键一环 | 高 |
+| 商业发票生成器 | invoice-generator | 外贸 PI/CI 形式发票双语 PDF；**须标注"非增值税发票"** | 高 |
+| 借条生成器 | iou-generator | 规范借条要素+利率红线提示+打印；与收条姊妹，须法律免责声明 | 高 |
+| 条形码生成器 | barcode-generator | EAN-13/UPC/Code128 单个+批量，新依赖 jsbarcode | 高 |
+| 标价签生成器 | price-tag-generator | 品名价格条码→A4 多联裁切打印（小商户引流款） | 中 |
+| 名片生成器 | business-card-generator | 90×54mm 300dpi+出血正反面；与 logo/邮件签名组品牌起步包 | 中 |
+| 摄像头麦克风测试 | camera-mic-test | getUserMedia 本地回显+分辨率帧率+录音回放，会议前刚需 | 高 |
+| 游戏手柄测试 | gamepad-tester | Gamepad API 按键/摇杆漂移/震动，外设三件套收官 | 高 |
+| RAG 分块预览器 | rag-chunk-previewer | 固定/递归/Markdown 感知分块+overlap+token 统计，导出 JSONL | 中 |
+
+备选 6：system-prompt-builder / shipping-fee-calculator / cap-table-calculator / robots-txt-generator / sitemap-generator / gantt-chart-maker。弃选：resume-builder（木及简历/OhMyCV/魔方简历等免费隐私竞品已饱和）。
+
 ---
+
+## 批次记录
+
+- 2026-10-29：**第十一批落地**：第十二节主推 10 款全部实施（账单分析/报价单/商业发票/借条/条形码/标价签/名片/摄像头麦克风/手柄/RAG分块），全站 654 款。新依赖 jsbarcode。配套 5 篇推文（posts/2026-10-29/）覆盖率 100%。备选 6 款留池待选。agent 规格笔误两处被自纠（EAN 校验位向量 690123456789→2 而非 0；A4 40×30 gap2 为 32 枚/页而非 36）。
+- 2026-10-29：商业潜力调研新增第十二节 10 款主推+6 款备选，详 docs/TOOL_COMMERCIAL_RESEARCH_2026-10-29.md。
+- 2026-10-13~20：第五~九批共 56 款全部落地，本清单池子（含十一类新提案）已消化完毕，全站 641 款。
+- **2026-10-26：池外高频补缺 3 款（全站 644 款）**——鼠标按键测试 mouse-test（health）、倒数日管理 days-countdown（time）、噪音分贝检测 decibel-meter（health）。选品依据：全库零撞车 + 高频搜索场景（外设验货/重要日子管理/环境噪音），均纯本地零新依赖。配套 5 篇推文（posts/2026-10-26/）覆盖三款新工具，覆盖率保持 100%。
 
 ## 建议的第五批组合（20 款，按主题聚合力挑选）
 

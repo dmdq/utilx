@@ -49,6 +49,7 @@
     "exifreader": "^4.48.0",
     "gifenc": "^1.0.3",
     "heic2any": "^0.0.4",
+    "jsbarcode": "^3.12.3",
     "jsencrypt": "^3.5.4",
     "jspdf": "^4.2.1",
     "jszip": "^3.10.1",
