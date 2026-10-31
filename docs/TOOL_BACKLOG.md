@@ -138,8 +138,28 @@
 
 ---
 
+## 十三、第十二批提案（2026-10-31，备选池升级+4 新增，共 10 款，全库零撞车已核）
+
+| 工具 | id | 分类 | 来源 | 主题分组 |
+|---|---|---|---|---|
+| robots.txt 生成器 | robots-txt-generator | dev | 备选池 | 站长 SEO 三件套 |
+| sitemap.xml 生成器 | sitemap-generator | dev | 备选池 | 站长 SEO 三件套 |
+| Meta 标签生成器 | meta-tags-generator | dev | 新增 | 站长 SEO 三件套 |
+| system prompt 构建器 | system-prompt-builder | dev | 备选池 | AI 提示词工程 |
+| 股权稀释计算器 | cap-table-calculator | finance | 备选池 | 创业两笔账 |
+| 现金跑道计算器 | burn-rate-calculator | finance | 新增 | 创业两笔账 |
+| 增值税含税换算 | vat-calculator | finance | 新增 | 生意数字账 |
+| 体积重运费计算器 | shipping-fee-calculator | calculate | 备选池 | 生意数字账 |
+| 甘特图生成器 | gantt-chart-maker | others | 备选池 | 职场时间账 |
+| 会议成本计算器 | meeting-cost-calculator | others | 新增 | 职场时间账 |
+
+> 全部零新依赖（纯 JS/文本/SVG）。sortOrder 接位：dev 2420-2450 / finance 2130-2150 / calculate 1820 / others 1930-1940。新图标白名单：Bot/ListTree/Tags/GanttChart/Ship（lucide 导出已验证）。配文 5 篇：seo-meta-toolkit / startup-equity-and-runway / system-prompt-anatomy / freight-volumetric-weight-guide / meeting-cost-gantt-schedule。
+
+---
+
 ## 批次记录
 
+- 2026-10-31：**第十二批落地**：第十三节 10 款全部实施（robots/sitemap/meta-tags/system-prompt/cap-table/burn-rate/vat/shipping/gantt/meeting-cost），全站 664 款，零新依赖。配套 5 篇推文（posts/2026-10-31/）覆盖率 100%。本批经验：**宿主并发限制约 2 个 agent**（一次派 5 个只有 2 个获准执行，"user concurrency limit exceeded"），后续派发按 2 并发分波。
 - 2026-10-29：**第十一批落地**：第十二节主推 10 款全部实施（账单分析/报价单/商业发票/借条/条形码/标价签/名片/摄像头麦克风/手柄/RAG分块），全站 654 款。新依赖 jsbarcode。配套 5 篇推文（posts/2026-10-29/）覆盖率 100%。备选 6 款留池待选。agent 规格笔误两处被自纠（EAN 校验位向量 690123456789→2 而非 0；A4 40×30 gap2 为 32 枚/页而非 36）。
 - 2026-10-29：商业潜力调研新增第十二节 10 款主推+6 款备选，详 docs/TOOL_COMMERCIAL_RESEARCH_2026-10-29.md。
 - 2026-10-13~20：第五~九批共 56 款全部落地，本清单池子（含十一类新提案）已消化完毕，全站 641 款。

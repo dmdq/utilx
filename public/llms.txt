@@ -1,19 +1,19 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：654 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：664 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 654 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 664 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 335 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 340 篇工具教程与实践文章
 
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（52款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（53款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
@@ -21,12 +21,12 @@
 - [文本处理（51款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（32款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
 - [图像处理（49款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
-- [开发辅助（98款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
+- [开发辅助（102款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（54款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（35款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [其他工具（37款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（47款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
-- [金融工具（32款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
+- [金融工具（35款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（41款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
@@ -103,6 +103,7 @@
 - [腌渍配比计算器](https://www.util.cn/tools/pickling-ratio-calculator/): 按食材重量算泡菜酸菜糖醋的盐糖醋比例与用量，附亚硝酸盐安全期提示
 - [护照有效期提醒](https://www.util.cn/tools/passport-expiry-checker/): 输入护照到期日与出行日期，按各国6个月规则判定能否出境并提示换发
 - [骑行配速换算表](https://www.util.cn/tools/cycling-speed-calc/): 速度/踏频/齿比/功率/时间距离互算，通勤与训练配速参考
+- [体积重运费计算器](https://www.util.cn/tools/shipping-fee-calculator/): 国际快递体积重与实重取大计费，多件汇总、五档抛比对比与费用明细
 
 ## 数据格式化
 
@@ -476,6 +477,10 @@
 - [摄像头麦克风测试](https://www.util.cn/tools/camera-mic-test/): 摄像头回显与分辨率帧率实测、麦克风波形电平与录音回放，视频会议前本地自检零上传
 - [游戏手柄测试](https://www.util.cn/tools/gamepad-tester/): 手柄按键、摇杆漂移校准判定与震动测试，17 键标准映射可视化，新买手柄验货必备
 - [RAG分块预览器](https://www.util.cn/tools/rag-chunk-previewer/): 固定长度、递归分隔、Markdown 感知三种分块策略与 overlap 调参，token 估算与 JSONL 导出
+- [robots.txt生成器](https://www.util.cn/tools/robots-txt-generator/): 可视化配置爬虫分组、Allow/Disallow 规则与 Sitemap，预设 WordPress 等模板一键生成
+- [sitemap.xml生成器](https://www.util.cn/tools/sitemap-generator/): URL 列表一键生成规范 sitemap.xml，支持 lastmod、changefreq、priority 与去重校验
+- [Meta标签生成器](https://www.util.cn/tools/meta-tags-generator/): title、description、OG 与 Twitter Card 一键生成，SERP 预览与长度检查
+- [System Prompt构建器](https://www.util.cn/tools/system-prompt-builder/): 角色、上下文、约束、输出格式与少样本示例区块化拼装，token 估算实时预览
 
 ## 设计工具
 
@@ -601,6 +606,8 @@
 - [LED滚动字幕屏](https://www.util.cn/tools/led-scroll-display/): 全屏滚动大字应援屏/接机牌/摊位招牌，可调颜色字号速度，手机秒变灯牌
 - [可打印网格纸生成器](https://www.util.cn/tools/grid-paper-printer/): 方格/点阵/坐标/五线谱/康奈尔笔记纸按规格生成 A4 打印，手账笔记数学全能
 - [婚宴座位安排器](https://www.util.cn/tools/seating-arranger/): 宾客按关系分组摆桌，同组聚坐并规避冲突对，输出桌次座位图打印
+- [甘特图生成器](https://www.util.cn/tools/gantt-chart-maker/): 任务起止日期与进度生成 SVG 甘特图，日周月刻度、今日线与进度条，可下载打印
+- [会议成本计算器](https://www.util.cn/tools/meeting-cost-calculator/): 人数、时薪与时长算出一场会议的真实成本，月度年度累计与缩时省费对比
 
 ## 健康工具
 
@@ -686,6 +693,9 @@
 - [自由职业报价换算器](https://www.util.cn/tools/freelance-rate-calculator/): 时薪日薪项目价互算，叠加社保自缴与空窗期成本系数，接单报价不亏
 - [账单分析器](https://www.util.cn/tools/bill-analyzer/): 微信、支付宝导出账单 CSV 本地解析，自动分类统计收支趋势与 Top 商户，数据不上传
 - [报价单生成器](https://www.util.cn/tools/quotation-generator/): 行项目、折扣、税率与人民币大写合计自动计算，A4 打印/另存 PDF，销售报价单模板
+- [股权稀释计算器](https://www.util.cn/tools/cap-table-calculator/): 多轮融资逐轮推演创始人、期权池与投资人持股变化，控制权三档预警
+- [现金跑道计算器](https://www.util.cn/tools/burn-rate-calculator/): 月收支与增长率推演现金耗尽月数，健康度三档预警与敏感度对比
+- [增值税含税换算](https://www.util.cn/tools/vat-calculator/): 13%、9%、6%、3% 等税率含税价与不含税价互转，价税分离实时公式
 
 ## 文件工具
 
@@ -769,6 +779,11 @@
 
 ## 博客文章
 
+- [把会议标上价格，把项目画成甘特图：职场时间两件套](https://www.util.cn/blog/articles/meeting-cost-gantt-schedule/): 十个部门骨干开一小时会，公司花了多少钱？一百多块，乘以十个人，是一千块——多数人没算过这笔账，因为成本从来没有出现在任何一张发票上。这篇给两个把时间变成数字的工具：会议成本计算器让召集人看见价格，甘特图生成器让排期从表格变成一张图。
+- [跨境发货两笔账：体积重怎么算，含税价怎么换算](https://www.util.cn/blog/articles/freight-volumetric-weight-guide/): 做外贸和跨境电商，两个数字最容易让人破防：货代账单上的计费重比你的实重多了 60%，含税报价拆出的不含税价和自己的算法对不上。这篇把体积重的来历、抛比口径、取大规则讲透，顺带把含税不含税的换算公式一次算明白。
+- [System prompt 怎么写才管用：把指令拆成六个区块](https://www.util.cn/blog/articles/system-prompt-anatomy/): 同样是让 AI 当代码评审，有人三句话出活，有人写满一屏还在跑偏。差别多半在 system prompt 的结构上。这篇把可复用的区块拆给你看：角色、上下文、边界、输出格式、语气、少样本示例，每一块该写什么、写到多长，最后用本地构建器拼出成品。
+- [创业两笔账：融资会被稀释多少，现金还能撑多少个月](https://www.util.cn/blog/articles/startup-equity-and-runway/): 创始人最容易在心里高估两件事：自己还剩多少股份，公司还能撑多少个月。这篇把这两笔账拆开算——期权池融资前扩还是融资后扩、两轮融资后创始人还剩几成、6/12/18 个月的三条警戒线怎么用。两个计算器都在浏览器本地跑，数字不出电脑。
+- [网站上线前的 SEO 三件套：robots.txt、sitemap.xml 和 meta 标签](https://www.util.cn/blog/articles/seo-meta-toolkit/): 网站做完就完了吗？搜索引擎还进不来。这篇把上线前最基础的三件事一次讲清：robots.txt 决定爬虫能抓什么，sitemap.xml 告诉搜索引擎你有哪些页面，meta 标签决定你在搜索结果里长什么样。三个都能在浏览器里本地生成，复制粘贴就能用。
 - [搭 RAG 知识库前，先把分块调对：chunk size、overlap 与切分策略](https://www.util.cn/blog/articles/rag-chunking-guide/): RAG 检索质量差，八成不是模型不行，是文档切块切得不对：块太大检索不精，块太小语义断裂，overlap 设 0 边界信息两头丢。这篇讲清三种切分策略的适用场景、chunk size 和 overlap 的经验起点，以及怎么用本地分块预览器在上线前把边界看清楚——不用写代码，粘贴文档就能调参。
 - [视频会议前三分钟：摄像头麦克风自检，顺便把手柄也验了](https://www.util.cn/blog/articles/video-call-device-check/): 距离汇报开始还有五分钟，摄像头黑屏、麦克风没有声音——这种事故完全可以在会前三分钟拦住。这篇给一套会议前设备自检流程：摄像头看实测分辨率和帧率，麦克风看电平表和录音回放，顺便讲讲同一套浏览器检测思路怎么用来验新手柄的摇杆漂移。全程本地采集，画面和声音不上传。
 - [微信支付宝账单导出后怎么分析？CSV 本地跑，数据不出电脑](https://www.util.cn/blog/articles/bill-export-analysis-privacy/): 想知道钱花哪儿了，微信支付宝其实都支持导出完整账单——但拿到手的是带说明头的 CSV 文件，微信是 UTF-8、支付宝是 GBK，Excel 打开一半是乱码。这篇讲清导出步骤、编码坑，以及怎么用一个纯本地工具把账单变成月度趋势、分类占比和 Top 商户。全程浏览器解析，账单不上传任何服务器。
