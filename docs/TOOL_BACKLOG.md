@@ -188,6 +188,7 @@ flashcard-printer / random-quiz-picker / molar-mass-calculator / phone-attributi
 
 ## 批次记录
 
+- 2026-11-03：**第十四批落地**：第十四节第二梯队 10 款全部实施（白噪音/电子木鱼/FIRE/52周存钱/AB样本量/广告指标/中文排版检查/日志查看/可打印日历/电子请柬），全站 **684 款**，零新依赖，两批十款全零依赖。toolIcons 补 AudioLines/Fish/PiggyBank/SplitSquareHorizontal（总 223）。配套 5 篇推文（posts/2026-11-03/ 下午场）覆盖率 100%。可打印日历接入 lunar-birthday-reminder 的 lunarInfo 真历法表（弃用 lunar-calendar.vue 的近似实现与 solar-term-calculator 的固定日期表，改用通用 sTermInfo 公式）。AB 计算器再次纠正规格笔误（每组 122,124 非 6.3 万，R power.prop.test 交叉验证）。至此 2026-11-02 调研 28 款中 20 款已落地，备选 8 款留池。
 - 2026-11-03：**第十三批落地**：第十四节第一梯队 10 款全部实施（证件照换底色/PDF文本提取/劳动补偿/二手房税费/Excel公式/化学配平/反应测试/节拍器/吉他调音器/批量文本），全站 674 款。toolIcons 补 FlaskConical/Guitar（Table 已存在勿重复 import——重复声明会编译失败）。配套 6 篇推文（posts/2026-11-03/）覆盖率 100%。**新坑：环境 PATH 偶发丢 node/nvm（`command not found: node`），后台命令与 npm/node 调用统一前置 `export PATH="$HOME/.nvm/versions/node/$(ls ~/.nvm/versions/node/ | tail -1)/bin:$PATH"`**。
 - 2026-11-02：扩面深度调研新增第十四节 28 款（第一/第二梯队各 10 + 备选 8，未实施，待用户拍板），详 docs/TOOL_MARKET_RESEARCH_2026-11-02.md。站点现状：日活约 300 IP、必应多词有排名。
 - 2026-10-31：**第十二批落地**：第十三节 10 款全部实施（robots/sitemap/meta-tags/system-prompt/cap-table/burn-rate/vat/shipping/gantt/meeting-cost），全站 664 款，零新依赖。配套 5 篇推文（posts/2026-10-31/）覆盖率 100%。本批经验：**宿主并发限制约 2 个 agent**（一次派 5 个只有 2 个获准执行，"user concurrency limit exceeded"），后续派发按 2 并发分波。
