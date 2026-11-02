@@ -579,6 +579,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/dev-and-writer-tools</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/dev-config-generators</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1062,6 +1069,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/gym-number-gadgets</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/hardcore-calculators-psu-luggage-gacha</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1238,6 +1252,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/kubernetes-1-30-new-features</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/life-three-big-accounts</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1539,6 +1560,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/nextjs-server-components-deep-dive</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/nightly-two-papers</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2008,6 +2036,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/sleep-circadian-stress-tools</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/small-biz-pair</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -4191,6 +4226,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/break-even-calculator</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/breathing-exercise</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -4388,6 +4430,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/chinese-typography-linter</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/chmod-calculator</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -4738,6 +4787,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/csv-to-sql</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/curl-command-builder</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -5906,6 +5962,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/interval-timer</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/investment-calculator</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -6165,6 +6228,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/keyword-density-checker</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/kubernetes-yaml-generator</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -6403,6 +6473,20 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/maternity-allowance-calculator</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/math-worksheet-printer</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/matrix-calculator</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -6586,6 +6670,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/og-image-generator</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/one-rep-max-calculator</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -6894,6 +6985,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/port-lookup</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/poster-generator</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -7250,6 +7348,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/rent-vs-buy-calculator</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/rental-yield-calculator</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -7265,6 +7370,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/respiratory-rate-check</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/retirement-age-calculator</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -7734,6 +7846,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/subtitle-toolbox</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/sudoku-printer</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

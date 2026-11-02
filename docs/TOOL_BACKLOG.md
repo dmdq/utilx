@@ -223,6 +223,7 @@ flashcard-printer / random-quiz-picker / molar-mass-calculator / phone-attributi
 
 ## 批次记录
 
+- 2026-11-03：**第十五批落地**：第十五节第一梯队 12 款全部实施（租房买房对比/生育津贴/延迟退休/盈亏平衡/口算题卡/数独打印/1RM/HIIT计时/chmod/curl构建器/关键词密度/海报生成），全站 **696 款**，零新依赖（海报复用 qrcode）。toolIcons 补 Building2/Hourglass（总 225）。配套 5 篇推文（posts/2026-11-03/ 晚场）覆盖率 100%。**延迟退休官方校准**：agent 核对人社部 12333 官方 PDF 纠正规格样例 1 个月偏差（首组 +1 口径，1970-01 男→2031-05 延 16 个月）。EPIPE 中断的 interval-timer 文件已完整写完，重派 agent 审计保留——"先查文件再重派"惯例再次生效。
 - 2026-11-03：第三轮市场调研新增第十五节 32 新+池 8=40 款路线图（未实施，待用户拍板），详 docs/TOOL_MARKET_RESEARCH_BATCH15_2026-11-03.md。关键验证：租房vs买房简体中文真空；延迟退休需求巨大竞品中等（干净版差异位）；生育津贴竞品仅简单版（各省产假表差异位）；口算题卡家长每日高频竞品中等。
 - 2026-11-03：**第十四批落地**：第十四节第二梯队 10 款全部实施（白噪音/电子木鱼/FIRE/52周存钱/AB样本量/广告指标/中文排版检查/日志查看/可打印日历/电子请柬），全站 **684 款**，零新依赖，两批十款全零依赖。toolIcons 补 AudioLines/Fish/PiggyBank/SplitSquareHorizontal（总 223）。配套 5 篇推文（posts/2026-11-03/ 下午场）覆盖率 100%。可打印日历接入 lunar-birthday-reminder 的 lunarInfo 真历法表（弃用 lunar-calendar.vue 的近似实现与 solar-term-calculator 的固定日期表，改用通用 sTermInfo 公式）。AB 计算器再次纠正规格笔误（每组 122,124 非 6.3 万，R power.prop.test 交叉验证）。至此 2026-11-02 调研 28 款中 20 款已落地，备选 8 款留池。
 - 2026-11-03：**第十三批落地**：第十四节第一梯队 10 款全部实施（证件照换底色/PDF文本提取/劳动补偿/二手房税费/Excel公式/化学配平/反应测试/节拍器/吉他调音器/批量文本），全站 674 款。toolIcons 补 FlaskConical/Guitar（Table 已存在勿重复 import——重复声明会编译失败）。配套 6 篇推文（posts/2026-11-03/）覆盖率 100%。**新坑：环境 PATH 偶发丢 node/nvm（`command not found: node`），后台命令与 npm/node 调用统一前置 `export PATH="$HOME/.nvm/versions/node/$(ls ~/.nvm/versions/node/ | tail -1)/bin:$PATH"`**。

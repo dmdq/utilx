@@ -1,14 +1,14 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：684 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：696 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 684 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 696 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 351 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 356 篇工具教程与实践文章
 
 ## 工具分类
 
@@ -18,15 +18,15 @@
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
 - [时间日期（32款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
-- [文本处理（53款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
+- [文本处理（54款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（32款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
 - [图像处理（50款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
-- [开发辅助（103款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
-- [设计工具（55款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
+- [开发辅助（105款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
+- [设计工具（56款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（42款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
-- [健康工具（47款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
-- [金融工具（39款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
+- [其他工具（44款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [健康工具（49款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
+- [金融工具（43款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（43款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
@@ -295,6 +295,7 @@
 - [成语词典接龙](https://www.util.cn/tools/idiom-dictionary/): 内置高频成语库查询释义，支持首尾字成语接龙与随机挑战，附学习收藏
 - [批量文本生成器](https://www.util.cn/tools/mail-merge-tool/): CSV 名单加 {{占位符}} 模板批量套版生成通知、邀请与话术，导出 TXT/CSV
 - [中文排版检查器](https://www.util.cn/tools/chinese-typography-linter/): 中英文空格、全半角、重复标点与的地得九条规则逐条标注，一键自动修复
+- [关键词密度检查器](https://www.util.cn/tools/keyword-density-checker/): 中英混排 n-gram 词频与密度统计，目标词四档判定与堆砌风险警示
 
 ## 网络工具
 
@@ -489,6 +490,8 @@
 - [Meta标签生成器](https://www.util.cn/tools/meta-tags-generator/): title、description、OG 与 Twitter Card 一键生成，SERP 预览与长度检查
 - [System Prompt构建器](https://www.util.cn/tools/system-prompt-builder/): 角色、上下文、约束、输出格式与少样本示例区块化拼装，token 估算实时预览
 - [日志着色查看器](https://www.util.cn/tools/log-viewer/): 粘贴日志按级别着色，ERROR 聚类统计、级别与正则过滤，堆栈异常一眼定位
+- [chmod权限计算器](https://www.util.cn/tools/chmod-calculator/): 九宫格勾选与八进制符号双向换算，生成含递归的 chmod 命令与常见预设
+- [curl命令构建器](https://www.util.cn/tools/curl-command-builder/): 表单化构建 curl 请求，POSIX/Windows/PowerShell/HTTPie 四平台转义一键生成
 
 ## 设计工具
 
@@ -547,6 +550,7 @@
 - [OG分享卡片生成器](https://www.util.cn/tools/og-image-generator/): 生成 1200×630 社交分享卡片图，模板配色本地合成导出 PNG
 - [名片生成器](https://www.util.cn/tools/business-card-generator/): 90×54mm 标准 300dpi 名片正反面设计，出血线安全线预览，PNG 直接送印
 - [电子请柬生成器](https://www.util.cn/tools/invitation-card-maker/): 婚礼满月乔迁升学宴四场景请柬，六套配色长图导出与微信文本版一键复制
+- [海报生成器](https://www.util.cn/tools/poster-generator/): 促销招聘课程三场景海报，六套配色与三种装饰，Canvas 长图导出可带二维码
 
 ## 安全工具
 
@@ -622,6 +626,8 @@
 - [吉他调音器](https://www.util.cn/tools/guitar-tuner/): 麦克风实时检音高，吉他/尤克里里/贝斯/小提琴多预设，音分表盘与标准音播放
 - [白噪音发生器](https://www.util.cn/tools/white-noise-generator/): 白粉棕噪音与雨声海浪风扇六种声景实时合成，专注定时与渐弱淡出，零音频文件
 - [电子木鱼](https://www.util.cn/tools/electronic-woodfish/): 敲一下加一功德，合成木鱼音、禅语弹幕与连击彩蛋，纯本地解压小玩具
+- [口算题卡生成器](https://www.util.cn/tools/math-worksheet-printer/): 加减乘除混合比大小填空六种题型，进退位与带余数控制，A4 双栏打印附答案页
+- [数独生成打印器](https://www.util.cn/tools/sudoku-printer/): 四难度唯一解数独生成，中心对称挖洞，A4 打印附答案页
 
 ## 健康工具
 
@@ -672,6 +678,8 @@
 - [呼吸训练引导](https://www.util.cn/tools/breathing-exercise/): 4-7-8 与盒式呼吸引导动画跟练，缓解焦虑助眠，可调时长与节拍
 - [鼠标按键测试](https://www.util.cn/tools/mouse-test/): 左中右键与侧键点击计数、双击间隔检测、滚轮与移动轨迹测试，新鼠标验货排查双击失灵
 - [噪音分贝检测](https://www.util.cn/tools/decibel-meter/): 麦克风实时声级检测，dB 曲线与最大/平均值，噪声等级对照参考，本地采集不上传
+- [1RM力量计算器](https://www.util.cn/tools/one-rep-max-calculator/): Epley 等四公式估算一次极限重量，百分比训练表与力量肥大耐力三区间
+- [HIIT间歇计时器](https://www.util.cn/tools/interval-timer/): Tabata 等四种预设与自定义训练方案，阶段变色大屏、提示音与防后台漂移
 
 ## 金融工具
 
@@ -714,6 +722,10 @@
 - [二手房税费计算器](https://www.util.cn/tools/house-transfer-tax-calculator/): 契税增值税个税按 2024 新政口径计算，满二满五唯一免征判定与买卖双方费用明细
 - [FIRE计算器](https://www.util.cn/tools/fire-calculator/): 4% 法则推算财务自由数字与达成年龄，储蓄率敏感度与提取率对照
 - [52周存钱计划](https://www.util.cn/tools/savings-challenge-tracker/): 正序倒序随机三种阶梯存钱表，每周打卡追踪进度，A4 打印贴墙版
+- [租房还是买房计算器](https://www.util.cn/tools/rent-vs-buy-calculator/): 买房与租房累计净成本逐年对比，交叉年份、租售比判定与涨幅敏感度
+- [生育津贴计算器](https://www.util.cn/tools/maternity-allowance-calculator/): 单位月均缴费工资÷30×产假天数，各省奖励假预设、难产多胞胎加项与就高补差
+- [延迟退休计算器](https://www.util.cn/tools/retirement-age-calculator/): 按 2024 人大决定对照表算法定退休年月，弹性提前/延迟窗口与最低缴费年限
+- [盈亏平衡计算器](https://www.util.cn/tools/break-even-calculator/): 固定成本与边际贡献算保本销量销售额，目标利润所需销量与安全边际率
 
 ## 文件工具
 
@@ -799,6 +811,11 @@
 
 ## 博客文章
 
+- [小生意的两张图：一张海报，一条保本线](https://www.util.cn/blog/articles/small-biz-pair/): 开店的两端：一头要吆喝（海报），一头要算账（保本点）。新上的海报生成器三场景六配色出长图，盈亏平衡计算器告诉你每天卖多少件才不亏。吆喝和算账用同一台浏览器。
+- [写代码与写文章的三件小工具：chmod、curl 构建器和关键词密度](https://www.util.cn/blog/articles/dev-and-writer-tools/): chmod 755 到底改了什么？curl 的引号在 Windows 里为什么老出错？文章的关键词密度多少算堆砌？三个高频小问题，三件本地小工具。都是十年常青的需求，做成了勾选即得的样子。
+- [每晚八点的两张纸：口算题卡和数独，打印即用](https://www.util.cn/blog/articles/nightly-two-papers/): 孩子放学后的二十分钟口算和睡前的两道数独，是很多家庭的固定节目。市面题卡工具不是塞广告就是按月收费。新上的口算题卡生成器和数独打印器按
+- [健身房里的数字装备：1RM 估算和 HIIT 计时器](https://www.util.cn/blog/articles/gym-number-gadgets/): 练力量的人绕不开两个数字：极限重量（1RM）和组间时间。前者决定训练计划里的重量怎么排，后者决定间歇训练的节奏怎么走。新上的 1RM 计算器和 HIIT 间歇计时器把这两件事搬进浏览器，本地运行，训练时手机开着页面就行。
+- [人生三笔大账：哪年退休、生育津贴能领多少、租房还是买房](https://www.util.cn/blog/articles/life-three-big-accounts/): 人一生里最贵的三个决定——什么时候退休、生不生孩子、买不买房——每个都裹着一层政策黑话和情绪争论。这篇把三笔账拆成纯数字：延迟退休的组距规则、生育津贴的除以三十、买房租房的净成本交叉点。三个计算器本地就能算。
 - [打印一张日历，做一张请柬：生活里的两张纸](https://www.util.cn/blog/articles/printable-calendar-invitation/): 冰箱上要贴一张能手写的月历，孩子满月要给亲友发一张像样的请柬——这两件事的共同解法是
 - [发布前的两道质检：中文排版检查器和日志着色查看器](https://www.util.cn/blog/articles/text-and-log-checkers/): 文章发出去才发现
 - [投放与实验的两笔账：AB 样本量怎么算，保本 ROAS 是多少](https://www.util.cn/blog/articles/ab-test-and-ad-metrics/): 增长岗的两笔高频账：实验开之前，样本量够不够、要跑几天；投放开之后，ROAS 多少才保本、CPA 压到多少不亏。新上的两件计算器把这两笔账公式化了——不联网、不注册，数字本地算。
