@@ -1,33 +1,33 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：664 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：674 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 664 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 674 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 340 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 346 篇工具教程与实践文章
 
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（53款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（54款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
 - [时间日期（31款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
-- [文本处理（51款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
+- [文本处理（52款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（32款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
-- [图像处理（49款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
+- [图像处理（50款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
 - [开发辅助（102款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（54款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（37款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [其他工具（40款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（47款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
-- [金融工具（35款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
-- [文件工具（41款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
+- [金融工具（37款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
+- [文件工具（43款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
 
@@ -104,6 +104,7 @@
 - [护照有效期提醒](https://www.util.cn/tools/passport-expiry-checker/): 输入护照到期日与出行日期，按各国6个月规则判定能否出境并提示换发
 - [骑行配速换算表](https://www.util.cn/tools/cycling-speed-calc/): 速度/踏频/齿比/功率/时间距离互算，通勤与训练配速参考
 - [体积重运费计算器](https://www.util.cn/tools/shipping-fee-calculator/): 国际快递体积重与实重取大计费，多件汇总、五档抛比对比与费用明细
+- [化学方程式配平](https://www.util.cn/tools/chem-equation-balancer/): 输入反应式自动配平系数，元素守恒核对与括号嵌套解析，化学作业利器
 
 ## 数据格式化
 
@@ -289,6 +290,7 @@
 - [电商评价回复生成器](https://www.util.cn/tools/review-reply-generator/): 选好评/中评/差评类型与场景生成客服回复话术，可复制可微调
 - [周报结构生成器](https://www.util.cn/tools/weekly-report-generator/): 勾选本周要点套结构模板生成规范周报，本周工作/数据/问题/下周计划分段
 - [成语词典接龙](https://www.util.cn/tools/idiom-dictionary/): 内置高频成语库查询释义，支持首尾字成语接龙与随机挑战，附学习收藏
+- [批量文本生成器](https://www.util.cn/tools/mail-merge-tool/): CSV 名单加 {{占位符}} 模板批量套版生成通知、邀请与话术，导出 TXT/CSV
 
 ## 网络工具
 
@@ -376,6 +378,7 @@
 - [视频抽帧取图](https://www.util.cn/tools/video-frame-extractor/): 上传视频按间隔或数量批量截取画面帧导出 PNG，挑封面/取素材不用装软件
 - [HEIC转JPG](https://www.util.cn/tools/heic-to-jpg/): iPhone 照片 HEIC 批量转 JPG/PNG，本地转换微信与Windows都能打开
 - [条形码生成器](https://www.util.cn/tools/barcode-generator/): EAN-13、UPC-A、Code128 等六种条码单个或批量生成，PNG/SVG/ZIP 导出，校验位自动核算
+- [证件照换底色](https://www.util.cn/tools/id-photo-maker/): 一寸二寸证件照在线换红蓝白底，纯本地处理照片不上传，300dpi 导出与六寸排版打印
 
 ## 开发辅助
 
@@ -608,6 +611,9 @@
 - [婚宴座位安排器](https://www.util.cn/tools/seating-arranger/): 宾客按关系分组摆桌，同组聚坐并规避冲突对，输出桌次座位图打印
 - [甘特图生成器](https://www.util.cn/tools/gantt-chart-maker/): 任务起止日期与进度生成 SVG 甘特图，日周月刻度、今日线与进度条，可下载打印
 - [会议成本计算器](https://www.util.cn/tools/meeting-cost-calculator/): 人数、时薪与时长算出一场会议的真实成本，月度年度累计与缩时省费对比
+- [反应速度测试](https://www.util.cn/tools/reaction-time-test/): 五轮视觉反应时间测试，毫秒级精度、等级评定与历史记录，游戏玩家手速自检
+- [在线节拍器](https://www.util.cn/tools/online-metronome/): 30-240 BPM 精确节拍器，重音拍号音色可调、Tap Tempo 测速与曲速术语对照
+- [吉他调音器](https://www.util.cn/tools/guitar-tuner/): 麦克风实时检音高，吉他/尤克里里/贝斯/小提琴多预设，音分表盘与标准音播放
 
 ## 健康工具
 
@@ -696,6 +702,8 @@
 - [股权稀释计算器](https://www.util.cn/tools/cap-table-calculator/): 多轮融资逐轮推演创始人、期权池与投资人持股变化，控制权三档预警
 - [现金跑道计算器](https://www.util.cn/tools/burn-rate-calculator/): 月收支与增长率推演现金耗尽月数，健康度三档预警与敏感度对比
 - [增值税含税换算](https://www.util.cn/tools/vat-calculator/): 13%、9%、6%、3% 等税率含税价与不含税价互转，价税分离实时公式
+- [劳动补偿金计算器](https://www.util.cn/tools/labor-severance-calculator/): N、N+1、2N 三口径估算离职经济补偿，工龄折算、社平三倍封顶与 12 年上限规则
+- [二手房税费计算器](https://www.util.cn/tools/house-transfer-tax-calculator/): 契税增值税个税按 2024 新政口径计算，满二满五唯一免征判定与买卖双方费用明细
 
 ## 文件工具
 
@@ -740,6 +748,8 @@
 - [商业发票生成器](https://www.util.cn/tools/invoice-generator/): 外贸 Commercial/Proforma Invoice 双语生成，英文大写金额、Incoterms 与付款条款，打印导出
 - [借条生成器](https://www.util.cn/tools/iou-generator/): 借款金额大写、利率红线提示、还款期限与担保条款，生成规范借条可打印
 - [标价签生成器](https://www.util.cn/tools/price-tag-generator/): 品名规格价格与条码排版成 A4 标价签，多规格标签纸精确毫米打印
+- [PDF文本提取](https://www.util.cn/tools/pdf-text-extractor/): PDF 文字复制导出 txt/md，页码范围选择与段落重组，浏览器本地解析不上传
+- [Excel公式生成器](https://www.util.cn/tools/excel-formula-builder/): VLOOKUP、SUMIFS 等十大高频公式参数化生成，每个参数配人话解释与常见坑提醒
 
 ## 场景专题
 
@@ -779,6 +789,12 @@
 
 ## 博客文章
 
+- [浏览器里的练习室：节拍器、调音器，顺手测个反应速度](https://www.util.cn/blog/articles/study-tools-quartet/): 练乐器的三件套之一是节拍器，之二就是调音器——这两样网页版都够用还不用装 App。学生党这边，化学方程式配平从
+- [不会写 VLOOKUP 和批量发通知：办公室两件套](https://www.util.cn/blog/articles/office-excel-and-mail-merge/): 办公室两大高频卡点：一是表格函数不会写，二是几十条
+- [买二手房到底要交哪些税：契税、增值税、个税一次说明白](https://www.util.cn/blog/articles/house-transfer-fee-guide/): 看房时中介说
+- [被裁了能拿多少：N、N+1、2N 一篇算清，附免费计算器](https://www.util.cn/blog/articles/severance-n-plus-one/): HR 说
+- [PDF 里的文字复制不出来？第十件 PDF 工具专治这个](https://www.util.cn/blog/articles/pdf-toolbox-complete/): 收到一份 PDF 想引用几段话，选中却复制不出来——这是文本层缺失或被限制的典型症状。新上线的 PDF 文本提取工具在浏览器本地读文件、重组段落、导出 txt/md，加上这一件，站内 PDF 工具凑齐十件，从合并压缩到签名解锁全链路覆盖。
+- [证件照换底色不用花钱了：本地处理，照片不上传](https://www.util.cn/blog/articles/id-photo-local-guide/): 考试报名、入职、签证，一年总有几次要换底色的证件照。市面工具的模式出奇一致：换底免费，高清下载收几块钱。这篇讲清换底色的原理、各家尺寸对照，以及为什么把这件事放在浏览器本地做才是对的选择——照片从头到尾不离开你的电脑。
 - [把会议标上价格，把项目画成甘特图：职场时间两件套](https://www.util.cn/blog/articles/meeting-cost-gantt-schedule/): 十个部门骨干开一小时会，公司花了多少钱？一百多块，乘以十个人，是一千块——多数人没算过这笔账，因为成本从来没有出现在任何一张发票上。这篇给两个把时间变成数字的工具：会议成本计算器让召集人看见价格，甘特图生成器让排期从表格变成一张图。
 - [跨境发货两笔账：体积重怎么算，含税价怎么换算](https://www.util.cn/blog/articles/freight-volumetric-weight-guide/): 做外贸和跨境电商，两个数字最容易让人破防：货代账单上的计费重比你的实重多了 60%，含税报价拆出的不含税价和自己的算法对不上。这篇把体积重的来历、抛比口径、取大规则讲透，顺带把含税不含税的换算公式一次算明白。
 - [System prompt 怎么写才管用：把指令拆成六个区块](https://www.util.cn/blog/articles/system-prompt-anatomy/): 同样是让 AI 当代码评审，有人三句话出活，有人写满一屏还在跑偏。差别多半在 system prompt 的结构上。这篇把可复用的区块拆给你看：角色、上下文、边界、输出格式、语气、少样本示例，每一块该写什么、写到多长，最后用本地构建器拼出成品。

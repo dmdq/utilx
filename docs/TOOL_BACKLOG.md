@@ -157,8 +157,39 @@
 
 ---
 
+## 十四、扩面选品提案（2026-11-02，28 款，全库零撞车已核，详报告 docs/TOOL_MARKET_RESEARCH_2026-11-02.md）
+
+### 第一梯队（第十三批建议，10）
+
+| 工具 | id | 分类 | 一句话 | 可行性 |
+|---|---|---|---|---|
+| 证件照换底色排版 | id-photo-maker | image | 纯色底替换+尺寸库+六寸排版；竞品全收费，本地免费是差异位 | 中（发丝边缘诚实标注） |
+| PDF 文本提取 | pdf-text-extractor | file | pdfjs-dist 已在库零成本；主打"本地上传竞品"差异 | 高 |
+| 劳动补偿金计算器 | labor-severance-calculator | finance | N/N+1/2N+社平3倍封顶+12年封顶；SERP 全文章无工具 | 高 |
+| 二手房税费计算器 | house-transfer-tax-calculator | finance | 契税/增值税/个税满五唯一规则引擎；竞争强但盘子大 | 高 |
+| Excel 公式生成器 | excel-formula-builder | file | 参数化模板+教学注释，不与 AI 正面打，卡"看懂"长尾 | 高 |
+| 化学方程式配平 | chem-equation-balancer | calculate | 元素矩阵+整数解；学生常青 | 高 |
+| 反应速度测试 | reaction-time-test | others | 5次均值+人类基准；外设矩阵第 7 件 | 高 |
+| 在线节拍器 | online-metronome | others | WebAudio lookahead 调度+tap tempo；网页版供给少 | 高 |
+| 吉他调音器 | guitar-tuner | others | 自相关音高检测+多乐器预设+教学 | 中（噪音环境） |
+| 批量文本生成器 | mail-merge-tool | text | CSV+{{占位符}}批量套版；办公蓝海 | 高 |
+
+### 第二梯队（第十四批建议，10）
+
+white-noise-generator（白噪音合成）/ electronic-woodfish（功德计数流量款）/ fire-calculator（4%法则）/ savings-challenge-tracker（52周存钱）/ ab-sample-size-calculator（双比例z检验功效）/ ad-metrics-calculator（CPM/CPC/CPA 互转）/ chinese-typography-linter（中英空格等指北规则）/ log-viewer（级别着色过滤）/ printable-calendar（农历节气打印，复用 lunarInfo）/ invitation-card-maker（请柬长图）。
+
+### 备选池（8）
+
+flashcard-printer / random-quiz-picker / molar-mass-calculator / phone-attribution-lookup（需数据包）/ virtual-piano / batch-rename-tool（FSA，Chrome 限定）/ compound-interest-calculator（先与 investment 差异化）/ business-scope-generator（模板库工程）。
+
+弃选：经期追踪（ovulation 已覆盖）/ 公众号排版（mdnice 饱和）/ 函数图像（Desmos 垄断）/ 语音转文字（Web Speech 走云端违本地品牌）/ 中文 OCR（质量不足）/ 天气快递（外部 API）。
+
+---
+
 ## 批次记录
 
+- 2026-11-03：**第十三批落地**：第十四节第一梯队 10 款全部实施（证件照换底色/PDF文本提取/劳动补偿/二手房税费/Excel公式/化学配平/反应测试/节拍器/吉他调音器/批量文本），全站 674 款。toolIcons 补 FlaskConical/Guitar（Table 已存在勿重复 import——重复声明会编译失败）。配套 6 篇推文（posts/2026-11-03/）覆盖率 100%。**新坑：环境 PATH 偶发丢 node/nvm（`command not found: node`），后台命令与 npm/node 调用统一前置 `export PATH="$HOME/.nvm/versions/node/$(ls ~/.nvm/versions/node/ | tail -1)/bin:$PATH"`**。
+- 2026-11-02：扩面深度调研新增第十四节 28 款（第一/第二梯队各 10 + 备选 8，未实施，待用户拍板），详 docs/TOOL_MARKET_RESEARCH_2026-11-02.md。站点现状：日活约 300 IP、必应多词有排名。
 - 2026-10-31：**第十二批落地**：第十三节 10 款全部实施（robots/sitemap/meta-tags/system-prompt/cap-table/burn-rate/vat/shipping/gantt/meeting-cost），全站 664 款，零新依赖。配套 5 篇推文（posts/2026-10-31/）覆盖率 100%。本批经验：**宿主并发限制约 2 个 agent**（一次派 5 个只有 2 个获准执行，"user concurrency limit exceeded"），后续派发按 2 并发分波。
 - 2026-10-29：**第十一批落地**：第十二节主推 10 款全部实施（账单分析/报价单/商业发票/借条/条形码/标价签/名片/摄像头麦克风/手柄/RAG分块），全站 654 款。新依赖 jsbarcode。配套 5 篇推文（posts/2026-10-29/）覆盖率 100%。备选 6 款留池待选。agent 规格笔误两处被自纠（EAN 校验位向量 690123456789→2 而非 0；A4 40×30 gap2 为 32 枚/页而非 36）。
 - 2026-10-29：商业潜力调研新增第十二节 10 款主推+6 款备选，详 docs/TOOL_COMMERCIAL_RESEARCH_2026-10-29.md。
