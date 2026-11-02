@@ -186,8 +186,44 @@ flashcard-printer / random-quiz-picker / molar-mass-calculator / phone-attributi
 
 ---
 
+## 十五、第三轮市场调研提案（2026-11-03，32 新 + 池 8 = 40 款路线图，零撞车已核，详报告 docs/TOOL_MARKET_RESEARCH_BATCH15_2026-11-03.md）
+
+### 第一梯队（批十五，12）
+
+| 工具 | id | 分类 | 一句话 | 可行性 |
+|---|---|---|---|---|
+| 租房还是买房计算器 | rent-vs-buy-calculator | finance | **简体中文真空**；租售比 1:200-300+全成本模型 | 高 |
+| 生育津贴计算器 | maternity-allowance-calculator | finance | 单位月均缴费工资÷30×产假；各省奖励假预设表 | 高 |
+| 延迟退休年龄计算器 | retirement-age-calculator | finance | 2024 人大决定对照表+弹性提前/延迟+最低缴费年限 | 高 |
+| 口算题卡生成器 | math-worksheet-printer | others | 家长每日打印；竖式/带余数/求算数项/答案页 | 高 |
+| 数独生成打印器 | sudoku-printer | others | 4 难度+唯一解校验+答案页 | 中 |
+| 1RM 力量计算器 | one-rep-max-calculator | health | Epley/Brzycki 多公式+百分比训练表 | 高 |
+| HIIT 间歇计时器 | interval-timer | health | 备战/组间/循环+WebAudio 提示+全屏大字 | 高 |
+| 盈亏平衡计算器 | break-even-calculator | finance | 保本量额+安全边际 | 高 |
+| chmod 权限计算器 | chmod-calculator | dev | 经典款 rwx 勾选 | 高 |
+| curl 命令构建器 | curl-command-builder | dev | 表单→多平台 curl（与 curl-to-code 反向） | 高 |
+| 关键词密度检查器 | keyword-density-checker | text | 词频 TopN+双字词+密度带 | 高 |
+| 海报生成器 | poster-generator | design | 促销/招聘/课程 Canvas 模板（邀请函模式复用） | 中 |
+
+### 第二梯队（批十六，12）
+
+pricing-calculator（定价三模式）/ ltv-cac-calculator（健康线 3:1）/ json-to-go-struct / json-to-pydantic / editorconfig-generator / prettier-config-generator / baby-feed-tracker（喂养计时 localStorage）/ quit-smoking-calculator（戒烟账本）/ mood-tracker（情绪曲线）/ chord-chart-viewer（和弦指法 SVG）/ ear-training-trainer（音程听辨）/ shoe-size-converter（鞋码互转）。
+
+### 第三梯队（批十七/机动，8）
+
+video-trimmer（重）/ audio-merger / audio-speed-changer / daily-routine-printer / eye-rest-timer（20-20-20）/ plant-watering-tracker / zodiac-lookup / feels-like-temperature-calculator（体感温度）。
+
+### 原备选池并入（8，机动）
+
+flashcard-printer / random-quiz-picker / molar-mass-calculator / phone-attribution-lookup / virtual-piano / batch-rename-tool / compound-interest-calculator / business-scope-generator。
+
+弃选：股价 K 线（API）/车牌估价（数据垄断）/电子签与合同（合规）/在职收入证明（伪造风险）/儿童 AI 绘本（云端 AI）/菜谱内容型/域名估价（数据源不稳）。
+
+---
+
 ## 批次记录
 
+- 2026-11-03：第三轮市场调研新增第十五节 32 新+池 8=40 款路线图（未实施，待用户拍板），详 docs/TOOL_MARKET_RESEARCH_BATCH15_2026-11-03.md。关键验证：租房vs买房简体中文真空；延迟退休需求巨大竞品中等（干净版差异位）；生育津贴竞品仅简单版（各省产假表差异位）；口算题卡家长每日高频竞品中等。
 - 2026-11-03：**第十四批落地**：第十四节第二梯队 10 款全部实施（白噪音/电子木鱼/FIRE/52周存钱/AB样本量/广告指标/中文排版检查/日志查看/可打印日历/电子请柬），全站 **684 款**，零新依赖，两批十款全零依赖。toolIcons 补 AudioLines/Fish/PiggyBank/SplitSquareHorizontal（总 223）。配套 5 篇推文（posts/2026-11-03/ 下午场）覆盖率 100%。可打印日历接入 lunar-birthday-reminder 的 lunarInfo 真历法表（弃用 lunar-calendar.vue 的近似实现与 solar-term-calculator 的固定日期表，改用通用 sTermInfo 公式）。AB 计算器再次纠正规格笔误（每组 122,124 非 6.3 万，R power.prop.test 交叉验证）。至此 2026-11-02 调研 28 款中 20 款已落地，备选 8 款留池。
 - 2026-11-03：**第十三批落地**：第十四节第一梯队 10 款全部实施（证件照换底色/PDF文本提取/劳动补偿/二手房税费/Excel公式/化学配平/反应测试/节拍器/吉他调音器/批量文本），全站 674 款。toolIcons 补 FlaskConical/Guitar（Table 已存在勿重复 import——重复声明会编译失败）。配套 6 篇推文（posts/2026-11-03/）覆盖率 100%。**新坑：环境 PATH 偶发丢 node/nvm（`command not found: node`），后台命令与 npm/node 调用统一前置 `export PATH="$HOME/.nvm/versions/node/$(ls ~/.nvm/versions/node/ | tail -1)/bin:$PATH"`**。
 - 2026-11-02：扩面深度调研新增第十四节 28 款（第一/第二梯队各 10 + 备选 8，未实施，待用户拍板），详 docs/TOOL_MARKET_RESEARCH_2026-11-02.md。站点现状：日活约 300 IP、必应多词有排名。
