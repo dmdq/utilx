@@ -1272,6 +1272,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/lightweight-daily-tools</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/llm-application-development</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -1350,6 +1357,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/marketing-attribution-roi-analysis</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/media-trio-print-and-health</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2547,6 +2561,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/zero-trust-architecture-guide</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/zodiac-lookup-benmingnian</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -3946,7 +3967,21 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/audio-merger</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/audio-noise-reducer</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/audio-speed-changer</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -4870,6 +4905,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/daily-routine-printer</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/data-format-validator</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -5297,7 +5339,21 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/eye-rest-timer</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/favicon-generator</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/feels-like-temperature-calculator</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -7054,6 +7110,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/plant-watering-tracker</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/polaroid-layout-maker</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -8475,6 +8538,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/video-trimmer</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/vigenere-cipher</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -8721,6 +8791,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/zip-viewer</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/zodiac-lookup</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

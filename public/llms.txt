@@ -1,33 +1,33 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：708 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：716 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 708 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 716 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 361 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 364 篇工具教程与实践文章
 
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（58款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（59款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
-- [时间日期（32款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
+- [时间日期（33款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
 - [文本处理（54款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（32款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
 - [图像处理（50款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
 - [开发辅助（109款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（56款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（46款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
-- [健康工具（52款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
+- [其他工具（48款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [健康工具（53款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
 - [金融工具（44款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
-- [文件工具（43款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
+- [文件工具（46款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
 
@@ -109,6 +109,7 @@
 - [广告指标换算器](https://www.util.cn/tools/ad-metrics-calculator/): CPM、CPC、CTR、CVR、CPA、ROAS、ROI 一表互算，保本 ROAS 与盈亏平衡反推
 - [LTV/CAC计算器](https://www.util.cn/tools/ltv-cac-calculator/): 订阅制客户生命周期价值两种口径，流失率敏感度、回收期与 3x 健康线判定
 - [鞋码对照转换](https://www.util.cn/tools/shoe-size-converter/): 脚长、中欧美英日鞋码互转对照表，男女童分栏，海淘选码量脚指南
+- [体感温度计算](https://www.util.cn/tools/feels-like-temperature-calculator/): NOAA 热指数与 NWS 风寒公式双向计算，档位建议与湿度风速敏感度表
 
 ## 数据格式化
 
@@ -241,6 +242,7 @@
 - [农历生日提醒](https://www.util.cn/tools/lunar-birthday-reminder/): 输入农历或公历生日，换算今年对应的另一种生日并算距下次天数
 - [倒数日管理](https://www.util.cn/tools/days-countdown/): 生日、考试、纪念日、还款日倒数看板，支持每年重复与进度条，数据本地保存不上传
 - [可打印日历](https://www.util.cn/tools/printable-calendar/): 月历年历 A4 打印模板，含农历节气与今日高亮，备注栏可手写
+- [生肖年份速查](https://www.util.cn/tools/zodiac-lookup/): 出生年份查生肖干支与本命年，12 生肖反查出生年，立春口径显著注明
 
 ## 文本处理
 
@@ -636,6 +638,8 @@
 - [数独生成打印器](https://www.util.cn/tools/sudoku-printer/): 四难度唯一解数独生成，中心对称挖洞，A4 打印附答案页
 - [吉他和弦图查询](https://www.util.cn/tools/chord-chart-viewer/): 47 个常用和弦标准指法 SVG 指板图，横按与指法标注，逐弦试听
 - [音程听辨训练](https://www.util.cn/tools/ear-training-trainer/): 八度内 13 种音程随机出题听辨，中文歌锚点记忆，分音程正确率统计
+- [作息计划表打印](https://www.util.cn/tools/daily-routine-printer/): 上学日暑假工作日四套模板，单日与周视图，A4 贴墙打印手写打卡
+- [植物浇水提醒](https://www.util.cn/tools/plant-watering-tracker/): 绿植浇水日程清单，十种常见植物模板，逾期今日状态卡与浇水活动流
 
 ## 健康工具
 
@@ -691,6 +695,7 @@
 - [婴儿喂养记录器](https://www.util.cn/tools/baby-feed-tracker/): 亲喂计时、瓶喂奶量与换尿布三合一记录，当日小结、喂养间隔与历史回看
 - [戒烟账本](https://www.util.cn/tools/quit-smoking-calculator/): 戒烟天数、省下金额与身体恢复时间线，20 分钟到 15 年的里程碑正向记录
 - [情绪日记](https://www.util.cn/tools/mood-tracker/): 每日五档情绪加标签备注，月历热图、SVG 曲线与连续记录，数据仅存本地
+- [护眼提醒器](https://www.util.cn/tools/eye-rest-timer/): 20-20-20 法则循环提醒，全屏休息遮罩与防漂移计时，今日护眼统计
 
 ## 金融工具
 
@@ -784,6 +789,9 @@
 - [标价签生成器](https://www.util.cn/tools/price-tag-generator/): 品名规格价格与条码排版成 A4 标价签，多规格标签纸精确毫米打印
 - [PDF文本提取](https://www.util.cn/tools/pdf-text-extractor/): PDF 文字复制导出 txt/md，页码范围选择与段落重组，浏览器本地解析不上传
 - [Excel公式生成器](https://www.util.cn/tools/excel-formula-builder/): VLOOKUP、SUMIFS 等十大高频公式参数化生成，每个参数配人话解释与常见坑提醒
+- [视频裁剪器](https://www.util.cn/tools/video-trimmer/): 本地截取视频片段去头去尾，时间段可视化选择，重编码导出 WebM，文件不上传
+- [音频拼接器](https://www.util.cn/tools/audio-merger/): 多段音频按序合并加段间静音，排序调音试听，导出无损 WAV，全程本地
+- [音频变速器](https://www.util.cn/tools/audio-speed-changer/): 变速不变调时间拉伸与倍速直变双模式，语言学习试听与 WAV 导出
 
 ## 场景专题
 
@@ -823,6 +831,9 @@
 
 ## 博客文章
 
+- [1 月 2 月出生的人，属年前还是年后？一张速查表说清属相这回事](https://www.util.cn/blog/articles/zodiac-lookup-benmingnian/): 填表时
+- [把时间管起来的四件小事：作息表、护眼提醒、浇水清单和体感温度](https://www.util.cn/blog/articles/lightweight-daily-tools/): 假期的作息、盯屏的休息、阳台植物的水、出门穿什么——四件生活小事，四件新上的轻量工具。一件打印贴墙，一件开着标签页默默计时，两件帮你把
+- [剪视频、拼音频、变速听：三件浏览器里的媒体工具](https://www.util.cn/blog/articles/media-trio-print-and-health/): 把一段网课视频的头尾剪掉、把几段录音合成一个文件、把听力材料放慢半速反复听——这三件事以前要么装剪辑软件要么传给在线网站。新上的三件媒体工具全在浏览器本地完成：文件不上传，处理靠 WebAudio 和 MediaRecorder。
 - [海淘买鞋先看这篇：脚长怎么量，美码欧码怎么换](https://www.util.cn/blog/articles/shoe-size-guide/): 海淘鞋子退一次货，运费比鞋还贵——尺码是海淘鞋类唯一的雷区。这篇讲清脚长的正确量法、各国码制的换算逻辑、为什么同一双鞋不同品牌差半码，附一个男女童分栏的鞋码对照换算器。
 - [练琴房的另外两块屏：和弦图和音程听辨](https://www.util.cn/blog/articles/music-room-chords/): 学吉他卡在两处：和弦按不住（其实是不确定按得对不对），音听不出差别（其实是从没对照练过）。新上的和弦图查询收录 47 个常用和弦标准指法，音程听辨训练用中文歌做锚点——加上节拍器和调音器，练琴房的四块屏凑齐了。
 - [新手爸妈的三件记录工具：喂养、戒烟账本和情绪日记](https://www.util.cn/blog/articles/three-life-trackers/): 生活里最值得记录的三件事：宝宝每顿奶、戒掉的每一支烟、每天的心情。市面记录 App 要么强制注册要么塞广告。新上的三件工具全部本地存储——最私密的数据不该上传到任何服务器。
