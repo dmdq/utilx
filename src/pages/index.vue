@@ -201,54 +201,70 @@
         </section>
       </div>
 
-      <!-- 右侧索引栏 -->
-      <aside class="min-w-0">
-        <!-- AI 导航精选 -->
-        <section class="mb-9">
-          <div class="flex items-baseline justify-between border-b border-border/70 pb-2">
-            <h2 class="text-xs tracking-[0.16em] text-muted-foreground">AI 导航精选</h2>
-            <span class="font-mono text-xs text-muted-foreground/60">{{ aiTools.length }}</span>
+      <!-- 右侧索引栏：大数字锚点 + 编号模块 + 结构化索引，靠字阶与留白制造权重差 -->
+      <aside class="min-w-0 lg:pt-1">
+        <!-- 站点速览：唯一的视觉焦点 -->
+        <section class="mb-10">
+          <div class="flex items-baseline gap-2.5">
+            <span class="font-mono text-4xl tabular-nums tracking-tight text-foreground">{{ tools.length }}</span>
+            <span class="text-xs text-muted-foreground">款工具 / {{ categories.length }} 类</span>
+          </div>
+          <p class="mt-3 border-l-2 border-primary/60 pl-3 text-xs leading-relaxed text-muted-foreground">
+            全部在浏览器本地运行，数据不上传，打开即用。
+          </p>
+        </section>
+
+        <!-- 01 AI 导航精选：编号榜单 -->
+        <section class="mb-10">
+          <div class="flex items-baseline justify-between border-b border-foreground/20 pb-2 mb-2">
+            <h2 class="text-base font-medium text-foreground">AI 导航精选</h2>
+            <span class="font-mono text-[11px] text-muted-foreground/60">01 / 02</span>
           </div>
           <a
-            v-for="item in aiFeatured"
+            v-for="(item, i) in aiFeatured"
             :key="item.id"
             :href="item.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="group flex items-baseline justify-between gap-2 border-b border-border/40 py-2 text-sm hover:text-primary transition-colors"
+            class="group flex items-baseline gap-3 border-b border-border/40 py-2 text-sm hover:text-primary transition-colors"
           >
-            <span class="truncate">{{ item.name }}</span>
-            <span class="text-xs text-muted-foreground/70 shrink-0 group-hover:text-primary">{{ aiCategoryName(item.category) }} ↗</span>
+            <span class="font-mono text-[11px] tabular-nums text-muted-foreground/50 w-5 shrink-0">{{ pad(i + 1) }}</span>
+            <span class="truncate flex-1">{{ item.name }}</span>
+            <span class="text-[11px] text-muted-foreground/60 shrink-0 group-hover:text-primary">{{ aiCategoryName(item.category) }} ↗</span>
           </a>
-          <NuxtLink to="/ai/" class="inline-block text-xs text-primary hover:underline pt-3">
+          <NuxtLink to="/ai/" class="inline-block text-xs text-muted-foreground hover:text-primary pt-3">
             全部 {{ aiTools.length }} 款 / {{ aiCategories.length }} 个分类 →
           </NuxtLink>
         </section>
 
-        <!-- 词条索引 -->
-        <section class="mb-9">
-          <div class="flex items-baseline justify-between border-b border-border/70 pb-2">
-            <h2 class="text-xs tracking-[0.16em] text-muted-foreground">词条索引</h2>
-            <span class="font-mono text-xs text-muted-foreground/60">{{ wikiTerms.length }}</span>
+        <!-- 02 词条索引：分组 + 行列表，替代斜线文字流 -->
+        <section class="mb-10">
+          <div class="flex items-baseline justify-between border-b border-foreground/20 pb-2 mb-3">
+            <h2 class="text-base font-medium text-foreground">词条索引</h2>
+            <span class="font-mono text-[11px] text-muted-foreground/60">02 / 02</span>
           </div>
-          <div v-for="group in wikiIndex" :key="group.name" class="pt-3">
-            <div class="text-xs text-muted-foreground/70 mb-1.5">{{ group.name }} / {{ group.count }}</div>
-            <div class="text-sm leading-7">
-              <template v-for="(term, i) in group.terms" :key="term.slug">
-                <NuxtLink :to="`/wiki/${term.slug}/`" class="hover:text-primary transition-colors">{{ term.term }}</NuxtLink>
-                <span v-if="i < group.terms.length - 1" class="text-muted-foreground/50"> / </span>
-              </template>
+          <div v-for="group in wikiIndex" :key="group.name" class="mb-4">
+            <div class="text-[11px] tracking-[0.08em] text-muted-foreground/70 mb-1.5">
+              {{ group.name }} / {{ group.count }}
             </div>
+            <NuxtLink
+              v-for="(term, i) in group.terms"
+              :key="term.slug"
+              :to="`/wiki/${term.slug}/`"
+              class="group flex items-baseline gap-2.5 py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              <span class="font-mono text-[11px] tabular-nums text-muted-foreground/40 w-5 shrink-0">{{ pad(i + 1) }}</span>
+              <span class="truncate">{{ term.term }}</span>
+            </NuxtLink>
           </div>
-          <NuxtLink to="/wiki/" class="inline-block text-xs text-primary hover:underline pt-4">全部 {{ wikiTerms.length }} 条词条 →</NuxtLink>
+          <NuxtLink to="/wiki/" class="inline-block text-xs text-muted-foreground hover:text-primary pt-1">
+            全部 {{ wikiTerms.length }} 条词条 →
+          </NuxtLink>
         </section>
 
-        <!-- 快捷入口 -->
-        <section class="mb-4">
-          <div class="border-b border-border/70 pb-2 mb-3">
-            <h2 class="text-xs tracking-[0.16em] text-muted-foreground">快捷入口</h2>
-          </div>
-          <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
+        <!-- 快捷入口：压成一行元信息，不再占一个等权模块 -->
+        <section class="border-t border-border/60 pt-4">
+          <div class="flex flex-wrap gap-x-3 gap-y-1.5 text-[11px] text-muted-foreground/70">
             <NuxtLink v-for="link in quickLinks" :key="link.to" :to="link.to" class="hover:text-primary transition-colors">
               {{ link.label }}
             </NuxtLink>

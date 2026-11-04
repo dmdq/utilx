@@ -4,7 +4,7 @@
     <div class="max-w-8xl mx-auto py-8 px-4">
       <!-- 加载状态 -->
       <div v-if="isLoading" class="text-center py-12">
-        <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20">
+        <div class="inline-flex items-center justify-center w-12 h-12 mb-4 text-muted-foreground">
           <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
         </div>
         <p class="text-muted-foreground">加载标签数据中...</p>
@@ -13,7 +13,7 @@
       <!-- 标签内容 -->
       <div v-else-if="tag" class="space-y-8">
         <!-- 标签头部信息 -->
-        <div class="bg-card/40 backdrop-blur-sm border-0 rounded-xl p-8 relative overflow-hidden">
+        <div class="bg-transparent border-0 border-b border-border/40 rounded-none p-8 relative overflow-hidden">
           <!-- 背景装饰 -->
           <div class="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10"
                :style="{ backgroundColor: tag.color + '40', transform: 'translate(30%, -30%)' }"></div>
@@ -26,7 +26,7 @@
 
                 <!-- 标签标题 -->
                 <div class="flex items-center gap-6">
-                  <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl shadow-lg"
+                  <div class="inline-flex items-center justify-center w-16 h-16"
                        :style="{ backgroundColor: tag.color + '20', color: tag.color }">
                     <component :is="getIconComponent(tag.icon)" class="w-10 h-10" />
                   </div>
@@ -50,25 +50,25 @@
 
             <!-- 标签统计卡片：仅使用真实字段，不展示静态填充的 viewCount / new -->
             <div v-if="tagStats" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              <div class="bg-card/60 backdrop-blur-sm rounded-lg p-4 text-center border border-border/50">
+              <div class="bg-transparent rounded-none p-4 text-center border-0 border-b border-border/40">
                 <div class="text-3xl font-bold text-primary mb-1">
                   {{ tagStats.totalTools }}
                 </div>
                 <div class="text-sm text-muted-foreground">工具总数</div>
               </div>
-              <div class="bg-card/60 backdrop-blur-sm rounded-lg p-4 text-center border border-border/50">
+              <div class="bg-transparent rounded-none p-4 text-center border-0 border-b border-border/40">
                 <div class="text-3xl font-bold text-red-500 mb-1">
                   {{ tagStats.hotTools }}
                 </div>
                 <div class="text-sm text-muted-foreground">热门工具</div>
               </div>
-              <div class="bg-card/60 backdrop-blur-sm rounded-lg p-4 text-center border border-border/50">
+              <div class="bg-transparent rounded-none p-4 text-center border-0 border-b border-border/40">
                 <div class="text-3xl font-bold text-emerald-500 mb-1">
                   {{ tagStats.localTools }}
                 </div>
                 <div class="text-sm text-muted-foreground">本地计算</div>
               </div>
-              <div class="bg-card/60 backdrop-blur-sm rounded-lg p-4 text-center border border-border/50">
+              <div class="bg-transparent rounded-none p-4 text-center border-0 border-b border-border/40">
                 <div class="text-3xl font-bold text-purple-500 mb-1">
                   {{ tagStats.categoryCount }}
                 </div>
@@ -100,7 +100,7 @@
         </div>
 
         <!-- 工具列表控制栏 -->
-        <div class="bg-card/40 backdrop-blur-sm border-0 rounded-xl p-6">
+        <div class="bg-transparent border-0 border-b border-border/40 rounded-none p-6">
           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <h2 class="text-xl font-semibold text-foreground">
               相关工具 ({{ tagTools.length }})
@@ -110,7 +110,7 @@
               <!-- 排序选择 -->
               <select
                 v-model="sortBy"
-                class="px-4 py-2 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"
+                class="px-4 py-2 bg-transparent border-0 border-b border-border/60 rounded-none focus:ring-2 focus:ring-primary focus:border-primary"
               >
                 <option value="popularity">按热度排序</option>
                 <option value="views">按访问量排序</option>
@@ -121,23 +121,13 @@
               <!-- 视图切换 -->
               <div class="flex border border-border rounded-lg">
                 <button
-                  :class="[
-                    'px-3 py-2',
-                    viewMode === 'grid'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-background text-foreground hover:bg-muted'
-                  ]"
+                  :class="[ 'px-3 py-2', viewMode === 'grid' ? 'bg-primary text-primary-foreground' : 'bg-background text-foreground hover:bg-muted' ]"
                   @click="viewMode = 'grid'"
                 >
                   <Grid class="w-5 h-5" />
                 </button>
                 <button
-                  :class="[
-                    'px-3 py-2 border-l border-border',
-                    viewMode === 'list'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-background text-foreground hover:bg-muted'
-                  ]"
+                  :class="[ 'px-3 py-2 border-l border-border', viewMode === 'list' ? 'bg-primary text-primary-foreground' : 'bg-background text-foreground hover:bg-muted' ]"
                   @click="viewMode = 'list'"
                 >
                   <List class="w-5 h-5" />
@@ -149,12 +139,12 @@
 
         <!-- 工具网格视图 -->
         <div v-if="viewMode === 'grid' && filteredAndSortedTools.length > 0"
-             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8">
           <NuxtLink
             v-for="tool in filteredAndSortedTools"
             :key="tool.id"
             :to="`/tools/${tool.id}/`"
-            class="bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group"
+            class="bg-transparent border-0 border-b border-border/40 rounded-none p-5 hover:bg-muted/25 transition-colors duration-200 cursor-pointer group"
           >
             <div class="flex justify-between items-start mb-3">
               <component
@@ -165,10 +155,7 @@
               <div class="flex flex-col items-end gap-1">
                 <span
                   v-if="getToolBadge(tool)"
-                  :class="[
-                    'text-xs px-2 py-1 rounded-full',
-                    getToolBadge(tool).class
-                  ]"
+                  :class="[ 'text-xs px-2 py-1 rounded-full', getToolBadge(tool).class ]"
                 >
                   {{ getToolBadge(tool).label }}
                 </span>
@@ -184,13 +171,13 @@
 
         <!-- 工具列表视图 -->
         <div v-else-if="viewMode === 'list' && filteredAndSortedTools.length > 0"
-             class="bg-card/40 backdrop-blur-sm border-0 rounded-xl">
+             class="bg-transparent border-0 border-b border-border/40 rounded-none">
           <div class="divide-y divide-border">
             <NuxtLink
               v-for="tool in filteredAndSortedTools"
               :key="tool.id"
               :to="`/tools/${tool.id}/`"
-              class="p-6 hover:bg-card/70 transition-colors cursor-pointer block"
+              class="p-6 hover:bg-muted/25 transition-colors cursor-pointer block"
             >
               <div class="flex items-center justify-between">
                 <div class="flex-1">
@@ -235,7 +222,7 @@
 
         <!-- 空状态 -->
         <div v-else-if="!isLoading && filteredAndSortedTools.length === 0"
-             class="text-center py-12 bg-card/40 backdrop-blur-sm border-0 rounded-xl">
+             class="text-center py-12 bg-transparent border-0 border-b border-border/40 rounded-none">
           <div class="inline-flex items-center justify-center w-16 h-16 bg-muted rounded-full mb-4">
             <WrenchIcon class="w-8 h-8 text-muted-foreground" />
           </div>
@@ -244,14 +231,14 @@
         </div>
 
         <!-- 相关标签 -->
-        <div v-if="relatedTags.length > 0" class="bg-card/40 backdrop-blur-sm border-0 rounded-xl p-6">
+        <div v-if="relatedTags.length > 0" class="bg-transparent border-0 border-b border-border/40 rounded-none p-6">
           <h2 class="text-xl font-semibold text-foreground mb-4">相关标签</h2>
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             <NuxtLink
               v-for="relatedTag in relatedTags"
               :key="relatedTag.name"
               :to="`/tag/${relatedTag.urlName}`"
-              class="flex flex-col items-center p-4 bg-card/60 rounded-lg hover:bg-card/80 transition-all duration-200 group"
+              class="flex flex-col items-center p-4 bg-transparent rounded-none border-0 border-b border-border/40 hover:bg-muted/25 transition-colors duration-200 group"
             >
               <component
                 :is="getIconComponent(relatedTag.icon)"

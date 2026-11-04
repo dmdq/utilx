@@ -157,13 +157,13 @@ const getIconComponent = (iconName) => {
         v-model="searchQuery"
         type="text"
         placeholder="搜索标签，如：转换、加密、图片..."
-        class="w-full max-w-md px-4 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+        class="w-full max-w-md px-0 py-2.5 bg-transparent border-0 border-b border-border/60 rounded-none text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
       />
     </div>
 
     <!-- 加载状态 -->
     <div v-if="isLoading" class="text-center py-12">
-      <div class="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20">
+      <div class="inline-flex items-center justify-center w-12 h-12 mb-4 text-muted-foreground">
         <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
       </div>
       <p class="text-muted-foreground">加载标签数据中...</p>
@@ -171,12 +171,12 @@ const getIconComponent = (iconName) => {
 
     <!-- 标签卡片列表 -->
     <div v-else>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8">
         <NuxtLink
           v-for="tag in visibleTags"
           :key="tag.name"
           :to="`/tag/${tag.name}/`"
-          class="bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group"
+          class="bg-transparent border-0 border-b border-border/40 rounded-none p-5 hover:bg-muted/25 transition-colors duration-200 cursor-pointer group"
         >
           <div class="flex justify-between items-start mb-3">
             <component
@@ -225,7 +225,7 @@ const getIconComponent = (iconName) => {
       <div v-if="visibleTags.length < filteredTags.length" class="mt-8 text-center">
         <button
           @click="showAllTags"
-          class="bg-muted hover:bg-muted/80 text-muted-foreground px-6 py-2.5 rounded-lg text-sm transition-all"
+          class="bg-transparent text-muted-foreground px-6 py-2.5 text-sm hover:text-primary transition-colors"
         >
           显示全部 {{ filteredTags.length }} 个标签（当前显示 {{ visibleTags.length }} 个）
         </button>

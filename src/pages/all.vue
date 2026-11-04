@@ -12,7 +12,7 @@
         <input
           v-model="searchQuery"
           type="text"
-          class="block w-full rounded-xl border border-border bg-card/40 pl-11 pr-4 py-3.5 text-base transition-all placeholder:text-muted-foreground/70 focus:border-primary/50 focus:outline-none"
+          class="block w-full rounded-none border-0 border-b border-border/70 bg-transparent pl-11 pr-4 py-3.5 text-base transition-colors placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none"
           placeholder="搜索工具名称、描述或关键词…"
           @input="page = 1"
           @keydown.enter="syncUrl"
@@ -21,7 +21,7 @@
     </div>
 
     <!-- 分类筛选 -->
-    <div class="flex flex-wrap gap-2 mb-8 pb-6 border-b border-border/60">
+    <div class="flex flex-wrap gap-x-5 mb-8 border-b border-border/60">
       <button
         :class="filterClass('all')"
         @click="setCategory('all')"
@@ -40,17 +40,17 @@
 
     <!-- 结果统计 -->
     <div class="flex items-center justify-between mb-5">
-      <h2 class="text-lg font-semibold flex items-center gap-2">
-        <LayoutGrid class="w-5 h-5 text-primary" />
+      <h2 class="text-base font-medium flex items-center gap-2">
+        <LayoutGrid class="w-4 h-4 text-muted-foreground" />
         {{ activeCategory === 'all' ? '全部工具' : activeCategoryName }}
       </h2>
       <span class="text-sm text-muted-foreground">
-        {{ filteredTools.length }} 个结果<span v-if="totalPages > 1"> · 第 {{ currentPage }} / {{ totalPages }} 页</span>
+        {{ filteredTools.length }} 个结果<span v-if="totalPages > 1"> / 第 {{ currentPage }} / {{ totalPages }} 页</span>
       </span>
     </div>
 
     <!-- 工具网格：每页 48 个，避免一次渲染 748 张卡 -->
-    <div v-if="pagedTools.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <div v-if="pagedTools.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8">
       <ToolCard
         v-for="tool in pagedTools"
         :key="tool.id"
@@ -64,7 +64,7 @@
 
     <!-- 空状态 -->
     <div v-else class="text-center py-24">
-      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-4">
+      <div class="inline-flex items-center justify-center w-16 h-16 text-muted-foreground/60 mb-4">
         <SearchX class="w-8 h-8 text-muted-foreground" />
       </div>
       <h3 class="text-lg font-medium text-foreground">未找到相关工具</h3>
@@ -76,13 +76,13 @@
     <!-- 分页 -->
     <div v-if="totalPages > 1" class="flex items-center justify-center gap-3 mt-10">
       <button
-        class="px-4 py-2 rounded-lg border border-border/60 text-sm text-muted-foreground hover:bg-card hover:text-foreground disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+        class="px-4 py-2 text-sm text-muted-foreground hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
         :disabled="currentPage <= 1"
         @click="goToPage(currentPage - 1)"
       >上一页</button>
       <span class="text-sm text-muted-foreground tabular-nums">{{ currentPage }} / {{ totalPages }}</span>
       <button
-        class="px-4 py-2 rounded-lg border border-border/60 text-sm text-muted-foreground hover:bg-card hover:text-foreground disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+        class="px-4 py-2 text-sm text-muted-foreground hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
         :disabled="currentPage >= totalPages"
         @click="goToPage(currentPage + 1)"
       >下一页</button>
@@ -152,10 +152,10 @@ const pagedTools = computed(() => {
 })
 
 const filterClass = (id) => [
-  'inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-lg border transition-all',
+  'inline-flex items-center gap-1.5 text-sm px-1 py-2.5 border-b-2 -mb-px transition-colors',
   activeCategory.value === id
-    ? 'bg-primary/10 border-primary/40 text-primary'
-    : 'bg-card/30 border-border/60 text-muted-foreground hover:bg-card/70 hover:text-foreground'
+    ? 'border-primary text-foreground'
+    : 'border-transparent text-muted-foreground hover:text-foreground'
 ]
 
 const syncUrl = () => {

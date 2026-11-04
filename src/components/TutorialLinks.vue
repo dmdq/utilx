@@ -29,7 +29,7 @@ const fmtDate = (d) => (d ? String(d).slice(0, 10) : '')
         v-for="t in tutorials"
         :key="t.slug"
         :href="`/blog/articles/${t.slug}/`"
-        class="block bg-card border border-border rounded-lg p-4 hover:border-primary/50 hover:shadow-md transition-all"
+        class="block bg-transparent border-0 border-b border-border/40 rounded-none p-4 hover:bg-muted/25 transition-colors"
       >
         <h3 class="font-medium text-foreground text-sm leading-snug line-clamp-2">{{ t.title }}</h3>
         <p class="text-xs text-muted-foreground mt-2 line-clamp-2">{{ t.summary }}</p>

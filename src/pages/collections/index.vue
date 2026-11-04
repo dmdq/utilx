@@ -3,7 +3,7 @@
     <!-- Hero 头部 -->
     <div class="mb-8">
       <div class="flex items-center gap-3 mb-3">
-        <div class="p-2 bg-primary/10 rounded-lg">
+        <div class="p-0">
           <FolderHeart class="h-6 w-6 text-primary" />
         </div>
         <div>
@@ -22,10 +22,10 @@
         v-for="col in collections"
         :key="col.slug"
         :to="`/collections/${col.slug}/`"
-        class="bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group"
+        class="bg-transparent border-0 border-b border-border/40 rounded-none p-6 hover:bg-muted/25 transition-colors duration-200 cursor-pointer group"
       >
         <div class="flex items-start gap-4">
-          <div class="p-2.5 bg-primary/10 rounded-xl flex-shrink-0 group-hover:scale-105 transition-transform">
+          <div class="flex-shrink-0 text-muted-foreground group-hover:text-primary transition-colors">
             <component :is="resolveToolIcon(col.icon, 'dev')" class="w-6 h-6 text-primary" />
           </div>
           <div class="min-w-0 flex-1">
@@ -53,7 +53,7 @@
         <ChevronUp v-if="seoVisible" class="w-5 h-5" />
         <ChevronDown v-else class="w-5 h-5" />
       </button>
-      <div v-show="seoVisible" class="bg-card border border-border rounded-lg p-6 mb-12">
+      <div v-show="seoVisible" class="bg-transparent border-0 border-b border-border/40 rounded-none p-6 mb-12">
         <h2 class="text-2xl font-bold text-foreground mb-4"><span class="text-primary mr-2">#</span>为什么按场景组织工具</h2>
         <div class="space-y-4 text-sm text-muted-foreground leading-relaxed">
           <p>传统工具站按功能分类：加密类、图片类、计算类。但真实的使用场景往往横跨多个分类——"发布一条视频"需要字幕转换、图片压缩、EXIF 清除三种工具；"买套房"需要贷款计算、提前还款对比、投资测算。场景专题把这些散落的工具按任务重新编排，并给出推荐的操作顺序。</p>

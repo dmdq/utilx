@@ -3,7 +3,7 @@
     <!-- Hero 头部 -->
     <div class="mb-8">
       <div class="flex items-center gap-3 mb-3">
-        <div class="p-2 bg-primary/10 rounded-lg">
+        <div class="p-0">
           <BookOpen class="h-6 w-6 text-primary" />
         </div>
         <div>
@@ -22,7 +22,7 @@
         v-model="searchQuery"
         type="text"
         placeholder="搜索词条，如：量化、LoRA、Token..."
-        class="w-full max-w-md px-4 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+        class="w-full max-w-md px-0 py-2.5 bg-transparent border-0 border-b border-border/60 rounded-none text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
       />
       <div class="flex flex-wrap gap-2">
         <button
@@ -30,7 +30,7 @@
           :key="cat"
           @click="activeCategory = cat"
           :class="activeCategory === cat ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80 text-muted-foreground'"
-          class="px-3.5 py-1.5 rounded-full text-sm font-medium transition-all"
+          class="px-3.5 py-1.5 rounded-full text-sm font-medium transition-colors"
         >{{ cat }}</button>
       </div>
     </div>
@@ -41,7 +41,7 @@
         v-for="t in filteredTerms"
         :key="t.slug"
         :to="`/wiki/${t.slug}/`"
-        class="bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group"
+        class="bg-transparent border-0 border-b border-border/40 rounded-none p-5 hover:bg-muted/25 transition-colors duration-200 cursor-pointer group"
       >
         <div class="flex items-center justify-between mb-2.5">
           <span class="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary">{{ t.category }}</span>
@@ -62,7 +62,7 @@
         <ChevronUp v-if="seoVisible" class="w-5 h-5" />
         <ChevronDown v-else class="w-5 h-5" />
       </button>
-      <div v-show="seoVisible" class="bg-card border border-border rounded-lg p-6 mb-12">
+      <div v-show="seoVisible" class="bg-transparent border-0 border-b border-border/40 rounded-none p-6 mb-12">
         <h2 class="text-2xl font-bold text-foreground mb-4"><span class="text-primary mr-2">#</span>关于本词条库</h2>
         <div class="space-y-4 text-sm text-muted-foreground leading-relaxed">
           <p>技术概念的解释散落在各类博客和问答里，质量参差且大多止步于"是什么"。本词条库的每个词条都遵循固定结构：一句话定义、原理展开、可操作的实践建议，以及配套的站内工具——读完"Q4_K_M 是什么"，下一步就能用 GPU 检测工具算清自己的显卡能跑哪个模型。</p>

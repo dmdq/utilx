@@ -16,7 +16,7 @@
           v-for="page in mainPages"
           :key="page.to"
           :to="page.to"
-          class="block p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
+          class="block p-4 bg-transparent border-0 border-b border-border/40 rounded-none transition-colors"
         >
           <h3 class="font-medium text-foreground mb-1">{{ page.name }}</h3>
           <p class="text-sm text-muted-foreground">{{ page.description }}</p>
@@ -27,7 +27,7 @@
     <!-- 工具分类 -->
     <section class="mb-10">
       <h2 class="text-xl font-semibold mb-4 flex items-center gap-2">
-        <LayoutGrid class="w-5 h-5 text-primary" />
+        <LayoutGrid class="w-4 h-4 text-muted-foreground" />
         工具分类
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -35,7 +35,7 @@
           v-for="category in sortedCategories"
           :key="category.id"
           :to="`/${category.id}/`"
-          class="flex items-center justify-between gap-2 p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
+          class="flex items-center justify-between gap-2 p-4 bg-transparent border-0 border-b border-border/40 rounded-none transition-colors"
         >
           <div class="flex items-center gap-3 min-w-0">
             <component :is="resolveToolIcon(category.icon, category.id)" class="w-5 h-5 text-primary flex-shrink-0" />
@@ -54,7 +54,7 @@
       </h2>
       <NuxtLink
         to="/all/"
-        class="group flex items-center justify-between gap-4 p-5 bg-card border border-border rounded-lg hover:border-primary/50 hover:shadow-elevation-1 transition-all"
+        class="group flex items-center justify-between gap-4 p-5 bg-transparent border-0 border-b border-border/40 rounded-none transition-colors"
       >
         <div>
           <h3 class="font-medium text-foreground mb-1 group-hover:text-primary transition-colors">浏览全部 {{ tools.length }} 款工具</h3>
@@ -75,7 +75,7 @@
           v-for="page in otherPages"
           :key="page.to"
           :to="page.to"
-          class="block p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
+          class="block p-4 bg-transparent border-0 border-b border-border/40 rounded-none transition-colors"
         >
           <h3 class="font-medium text-foreground mb-1">{{ page.name }}</h3>
           <p class="text-sm text-muted-foreground">{{ page.description }}</p>
@@ -84,7 +84,7 @@
     </section>
 
     <!-- 站点信息 -->
-    <section class="p-6 bg-muted/30 rounded-lg">
+    <section class="p-6 bg-muted/30 rounded-none">
       <h2 class="text-lg font-semibold mb-4">站点信息</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
         <div>
@@ -101,7 +101,7 @@
           <a
             href="/sitemap.xml"
             target="_blank"
-            class="inline-flex items-center gap-2 px-4 py-2 bg-background border border-border rounded-lg hover:bg-muted transition-colors"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-transparent border-0 border-b border-border/60 rounded-none hover:bg-muted transition-colors"
           >
             <Globe class="w-4 h-4" />
             /sitemap.xml

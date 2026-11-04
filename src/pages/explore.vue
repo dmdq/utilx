@@ -8,21 +8,21 @@
     <!-- 按任务发现 -->
     <section class="mb-10">
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        <NuxtLink to="/collections/" class="group flex items-center gap-3 p-4 bg-card border border-border rounded-xl hover:border-foreground/10 hover:shadow-elevation-1 transition-all">
+        <NuxtLink to="/collections/" class="group flex items-center gap-3 p-4 bg-transparent border-0 border-b border-border/40 rounded-none   transition-colors">
           <FolderHeart class="w-5 h-5 text-primary flex-shrink-0" />
           <div class="min-w-0">
             <h3 class="text-sm font-medium group-hover:text-primary transition-colors">场景专题</h3>
             <p class="text-xs text-muted-foreground truncate">按任务编排的工具合集</p>
           </div>
         </NuxtLink>
-        <NuxtLink to="/tags/" class="group flex items-center gap-3 p-4 bg-card border border-border rounded-xl hover:border-foreground/10 hover:shadow-elevation-1 transition-all">
+        <NuxtLink to="/tags/" class="group flex items-center gap-3 p-4 bg-transparent border-0 border-b border-border/40 rounded-none   transition-colors">
           <Tag class="w-5 h-5 text-primary flex-shrink-0" />
           <div class="min-w-0">
             <h3 class="text-sm font-medium group-hover:text-primary transition-colors">标签导航</h3>
             <p class="text-xs text-muted-foreground truncate">按功能标签检索工具</p>
           </div>
         </NuxtLink>
-        <NuxtLink to="/wiki/" class="group flex items-center gap-3 p-4 bg-card border border-border rounded-xl hover:border-foreground/10 hover:shadow-elevation-1 transition-all">
+        <NuxtLink to="/wiki/" class="group flex items-center gap-3 p-4 bg-transparent border-0 border-b border-border/40 rounded-none   transition-colors">
           <BookOpen class="w-5 h-5 text-primary flex-shrink-0" />
           <div class="min-w-0">
             <h3 class="text-sm font-medium group-hover:text-primary transition-colors">技术词条库</h3>
@@ -36,7 +36,7 @@
     <section class="mb-12">
       <div class="flex items-center justify-between mb-6">
         <h2 class="text-xl font-semibold flex items-center gap-2">
-          <LayoutGrid class="w-5 h-5 text-primary" />
+          <LayoutGrid class="w-4 h-4 text-muted-foreground" />
           工具分类
         </h2>
         <NuxtLink to="/all/" class="text-sm text-muted-foreground hover:text-primary flex items-center gap-1">
@@ -48,7 +48,7 @@
         <div
           v-for="category in categoriesWithCount"
           :key="category.id"
-          class="bg-card border border-border rounded-xl p-5 hover:border-foreground/10 hover:shadow-elevation-2 hover:-translate-y-0.5 transition-all cursor-pointer group"
+          class="bg-transparent border-0 border-b border-border/40 rounded-none p-5    transition-colors cursor-pointer group"
           @click="goToCategory(category.id)"
         >
           <div class="flex justify-between items-start mb-3">
@@ -83,7 +83,7 @@
         </NuxtLink>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8">
         <ToolCard
           v-for="tool in featuredTools"
           :key="tool.id"
@@ -122,7 +122,7 @@
           class="group relative block"
           @click="addRecentTool(tool.id)"
         >
-          <div class="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-4 hover:bg-card/60 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group h-full">
+          <div class="bg-transparent border-0 border-b border-border/40 rounded-none p-4 hover:bg-muted/25   transition-colors duration-200 cursor-pointer group h-full">
             <div class="flex flex-col items-center text-center h-full">
               <component
                 :is="getCategoryIcon(tool.icon)"

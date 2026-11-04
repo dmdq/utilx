@@ -11,7 +11,7 @@
       </nav>
 
       <div class="flex items-center gap-3 mb-3 flex-wrap">
-        <div class="p-2 bg-primary/10 rounded-lg">
+        <div class="p-0">
           <BookOpen class="h-6 w-6 text-primary" />
         </div>
         <h1 class="text-display text-foreground">{{ term.term }}</h1>
@@ -26,7 +26,7 @@
         <div
           v-for="section in term.body"
           :key="section.h"
-          class="bg-card border border-border rounded-lg p-6"
+          class="bg-transparent border-0 border-b border-border/40 rounded-none p-6"
         >
           <h2 class="text-lg font-semibold text-foreground mb-3 flex items-center">
             <span class="text-primary mr-2">#</span>{{ section.h }}
@@ -44,7 +44,7 @@
         </div>
 
         <!-- 相关词条 -->
-        <div v-if="relatedTerms.length > 0" class="bg-card border border-border rounded-lg p-6">
+        <div v-if="relatedTerms.length > 0" class="bg-transparent border-0 border-b border-border/40 rounded-none p-6">
           <h2 class="text-lg font-semibold text-foreground mb-4 flex items-center">
             <LinkIcon class="w-5 h-5 mr-2 text-primary" /> 相关词条
           </h2>
@@ -53,7 +53,7 @@
               v-for="rt in relatedTerms"
               :key="rt.slug"
               :to="`/wiki/${rt.slug}/`"
-              class="bg-muted hover:bg-muted/80 px-3.5 py-1.5 rounded-full text-sm text-muted-foreground hover:text-primary transition-all"
+              class="bg-transparent px-0 py-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
             >{{ rt.term }}</NuxtLink>
           </div>
         </div>
@@ -62,7 +62,7 @@
       <!-- 侧栏：相关工具 -->
       <div class="lg:col-span-1">
         <div class="sticky top-20 space-y-4">
-          <div v-if="relatedTools.length > 0" class="bg-card border border-border rounded-lg p-5">
+          <div v-if="relatedTools.length > 0" class="bg-transparent border-0 border-b border-border/40 rounded-none p-5">
             <h2 class="text-base font-semibold text-foreground mb-1 flex items-center">
               <Wrench class="w-4 h-4 mr-2 text-primary" /> 配套工具
             </h2>
@@ -72,7 +72,7 @@
                 v-for="tool in relatedTools"
                 :key="tool.id"
                 :to="`/tools/${tool.id}/`"
-                class="flex items-center gap-3 bg-muted/50 hover:bg-muted rounded-lg p-3 transition-all group"
+                class="flex items-center gap-3 hover:bg-muted/25 p-3 transition-colors group"
               >
                 <component :is="resolveToolIcon(tool.icon, tool.category)" class="w-5 h-5 text-primary flex-shrink-0" />
                 <div class="min-w-0">
@@ -84,7 +84,7 @@
           </div>
 
           <!-- 目录 -->
-          <div class="bg-card border border-border rounded-lg p-5">
+          <div class="bg-transparent border-0 border-b border-border/40 rounded-none p-5">
             <h3 class="text-sm font-semibold text-foreground mb-3">本页目录</h3>
             <ul class="space-y-2">
               <li v-for="section in term.body" :key="section.h" class="text-sm text-muted-foreground flex gap-2">
@@ -103,7 +103,7 @@
         <ChevronUp v-if="seoVisible" class="w-5 h-5" />
         <ChevronDown v-else class="w-5 h-5" />
       </button>
-      <div v-show="seoVisible" class="bg-card border border-border rounded-lg p-6 mb-12">
+      <div v-show="seoVisible" class="bg-transparent border-0 border-b border-border/40 rounded-none p-6 mb-12">
         <h2 class="text-2xl font-bold text-foreground mb-4"><span class="text-primary mr-2">#</span>关于「{{ term.term }}」的常见问题</h2>
         <div class="space-y-4 text-sm text-muted-foreground leading-relaxed">
           <p>{{ term.summary }}</p>

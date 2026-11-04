@@ -1,13 +1,9 @@
 <template>
   <div class="max-w-8xl mx-auto pb-10">
     <!-- Hero -->
-    <section class="relative mt-2 mb-6 overflow-hidden rounded-2xl border border-border/60 bg-gradient-to-br from-indigo-500/10 via-card/50 to-fuchsia-500/5 px-5 py-8 sm:px-8 md:mb-10 lg:px-10 lg:py-10">
-      <div class="pointer-events-none absolute inset-0 opacity-40" :style="heroGridStyle"></div>
-      <div class="pointer-events-none absolute -top-24 right-0 h-64 w-64 rounded-full bg-indigo-500/20 blur-3xl"></div>
-      <div class="pointer-events-none absolute -bottom-28 left-1/3 h-56 w-56 rounded-full bg-fuchsia-500/10 blur-3xl"></div>
-
+    <section class="relative mt-2 mb-8 border-0 border-b border-border/40 bg-transparent px-0 py-8 sm:px-8 md:mb-10 lg:px-10 lg:py-10">
       <div class="relative">
-        <div class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+        <div class="inline-flex items-center gap-2 text-xs font-medium text-primary">
           <Sparkles class="h-3.5 w-3.5" />
           AI 工具导航 · 2026 年 10 月更新
         </div>
@@ -22,19 +18,19 @@
         </p>
 
         <div class="mt-6 grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap">
-          <div class="rounded-xl border border-border/50 bg-background/40 px-4 py-2.5 backdrop-blur-sm">
+          <div class="border-0 border-b border-border/40 bg-transparent px-0 py-2.5 rounded-none">
             <div class="text-xl font-bold tabular-nums">{{ aiTools.length }}</div>
             <div class="text-[11px] text-muted-foreground">收录产品</div>
           </div>
-          <div class="rounded-xl border border-border/50 bg-background/40 px-4 py-2.5 backdrop-blur-sm">
+          <div class="border-0 border-b border-border/40 bg-transparent px-0 py-2.5 rounded-none">
             <div class="text-xl font-bold tabular-nums">{{ aiCategories.length }}</div>
             <div class="text-[11px] text-muted-foreground">内容分类</div>
           </div>
-          <div class="rounded-xl border border-border/50 bg-background/40 px-4 py-2.5 backdrop-blur-sm">
+          <div class="border-0 border-b border-border/40 bg-transparent px-0 py-2.5 rounded-none">
             <div class="text-xl font-bold tabular-nums">{{ freeCount }}</div>
             <div class="text-[11px] text-muted-foreground">可免费使用</div>
           </div>
-          <div class="rounded-xl border border-border/50 bg-background/40 px-4 py-2.5 backdrop-blur-sm">
+          <div class="border-0 border-b border-border/40 bg-transparent px-0 py-2.5 rounded-none">
             <div class="text-xl font-bold tabular-nums">{{ cnCount }}<span class="mx-0.5 text-sm font-normal text-muted-foreground">/</span>{{ aiTools.length - cnCount }}</div>
             <div class="text-[11px] text-muted-foreground">国内 / 海外</div>
           </div>
@@ -45,7 +41,7 @@
           <button
             v-for="term in quickSearches"
             :key="term"
-            class="rounded-full border border-border/60 bg-background/40 px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+            class="rounded-full border border-border/60 bg-background/40 px-3 py-1 text-xs text-muted-foreground transition-colors  hover:text-primary"
             @click="applyQuickSearch(term)"
           >
             {{ term }}
@@ -65,7 +61,7 @@
               type="text"
               aria-label="搜索 AI 产品"
               placeholder="搜索产品、厂商或场景…"
-              class="h-9 w-full rounded-lg border border-border/60 bg-muted/40 pl-9 pr-8 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary/60 focus:outline-none focus:ring-1 focus:ring-primary/40"
+              class="h-9 w-full border-0 border-b border-border/60 bg-transparent rounded-none pl-9 pr-8 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary/60 focus:outline-none focus:ring-1 focus:ring-primary/40"
             >
             <button
               v-if="query"
@@ -177,7 +173,7 @@
           :href="tool.url"
           target="_blank"
           rel="noopener noreferrer"
-          class="group relative flex h-full min-w-[82%] snap-start flex-col overflow-hidden rounded-xl border border-border/60 bg-card/50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-foreground/10 hover:bg-card/80 hover:shadow-elevation-2 sm:min-w-0"
+          class="group relative flex h-full min-w-[82%] snap-start flex-col border-0 border-b border-border/40 bg-transparent p-4 transition-colors duration-200   hover:bg-muted/25  sm:min-w-0"
         >
           <div class="absolute inset-x-0 top-0 h-px" :style="{ background: `linear-gradient(90deg, transparent, ${toolColor(tool)}, transparent)` }"></div>
           <div class="flex items-start justify-between gap-2">
@@ -191,7 +187,7 @@
           </div>
           <h3 class="mt-3 flex items-center gap-1 text-sm font-semibold transition-colors group-hover:text-primary">
             {{ tool.name }}
-            <ArrowUpRight class="h-3.5 w-3.5 -translate-x-0.5 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
+            <ArrowUpRight class="h-3.5 w-3.5 -translate-x-0.5 opacity-0 transition-colors group-hover:translate-x-0 group-hover:opacity-100" />
           </h3>
           <p class="mt-0.5 truncate text-[11px] text-muted-foreground">{{ tool.company }} · {{ categoryName(tool.category) }}</p>
           <p class="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">{{ tool.description }}</p>
@@ -266,7 +262,7 @@
               :href="tool.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="group flex h-full flex-col rounded-xl border border-border/60 bg-card/40 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:border-foreground/10 hover:bg-card/80 hover:shadow-elevation-2"
+              class="group flex h-full flex-col border-0 border-b border-border/40 bg-transparent p-3.5 transition-colors duration-200   hover:bg-muted/25 "
             >
               <div class="flex items-start gap-3">
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border text-sm font-bold" :style="toolTileStyle(tool)">
@@ -276,7 +272,7 @@
                   <div class="flex items-center gap-1.5">
                     <h4 class="truncate text-sm font-semibold transition-colors group-hover:text-primary">{{ tool.name }}</h4>
                     <span v-if="tool.hot" class="shrink-0 rounded bg-red-500/15 px-1.5 py-0.5 text-[10px] font-semibold leading-none text-red-600 dark:text-red-400">HOT</span>
-                    <ArrowUpRight class="ml-auto h-3.5 w-3.5 shrink-0 text-muted-foreground opacity-0 transition-all group-hover:opacity-100" />
+                    <ArrowUpRight class="ml-auto h-3.5 w-3.5 shrink-0 text-muted-foreground opacity-0 transition-colors group-hover:opacity-100" />
                   </div>
                   <p class="mt-0.5 truncate text-[11px] text-muted-foreground">{{ tool.company }}</p>
                 </div>
@@ -295,7 +291,7 @@
       </div>
 
       <!-- 无结果 -->
-      <div v-else class="rounded-xl border border-dashed border-border/70 py-16 text-center">
+      <div v-else class="border-0 border-b border-border/40 py-16 text-center">
         <div class="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-muted/60">
           <SearchX class="h-7 w-7 text-muted-foreground" />
         </div>
@@ -312,7 +308,7 @@
     </section>
 
     <!-- SEO 长尾内容 -->
-    <section class="mt-14 rounded-xl border border-border/60 bg-card/40 p-5 sm:p-6">
+    <section class="mt-14 border-0 border-t border-border/40 bg-transparent p-5 sm:p-6">
       <div class="flex items-start justify-between gap-4">
         <div>
           <h2 class="text-lg font-semibold">关于这份 AI 导航</h2>
@@ -381,7 +377,7 @@
     <div class="mt-8 grid gap-3 md:grid-cols-2">
       <NuxtLink
         to="/feedback/"
-        class="group flex items-center justify-between gap-4 rounded-xl border border-border/60 bg-card/40 p-5 transition-colors hover:border-primary/40 hover:bg-card/70"
+        class="group flex items-center justify-between gap-4 border-0 border-b border-border/40 bg-transparent p-5 transition-colors  hover:bg-muted/25"
       >
         <div>
           <h3 class="text-sm font-semibold transition-colors group-hover:text-primary">推荐产品或纠正链接</h3>
@@ -391,7 +387,7 @@
       </NuxtLink>
       <NuxtLink
         to="/all/"
-        class="group flex items-center justify-between gap-4 rounded-xl border border-border/60 bg-card/40 p-5 transition-colors hover:border-primary/40 hover:bg-card/70"
+        class="group flex items-center justify-between gap-4 border-0 border-b border-border/40 bg-transparent p-5 transition-colors  hover:bg-muted/25"
       >
         <div>
           <h3 class="text-sm font-semibold transition-colors group-hover:text-primary">需要本地工具箱？</h3>
@@ -552,13 +548,6 @@ const anyCollapsed = computed(() =>
   groupedCategories.value.some(group => group.tools.length > DEFAULT_VISIBLE && !expandedCats.value[group.id])
 )
 
-const heroGridStyle = {
-  backgroundImage:
-    'linear-gradient(to right, rgba(148,163,184,0.10) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.10) 1px, transparent 1px)',
-  backgroundSize: '32px 32px',
-  maskImage: 'radial-gradient(ellipse at top, black, transparent 72%)',
-  WebkitMaskImage: 'radial-gradient(ellipse at top, black, transparent 72%)'
-}
 
 const categoryIcon = (iconName) => categoryIcons[iconName] || LayoutGrid
 const categoryName = (id) => categoryMap[id]?.name || id

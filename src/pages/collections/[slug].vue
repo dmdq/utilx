@@ -11,7 +11,7 @@
       </nav>
 
       <div class="flex items-start gap-4 flex-wrap">
-        <div class="p-3 bg-primary/10 rounded-2xl">
+        <div class="p-0">
           <component :is="resolveToolIcon(col.icon, 'dev')" class="w-7 h-7 text-primary" />
         </div>
         <div class="flex-1 min-w-[240px]">
@@ -23,7 +23,7 @@
     </div>
 
     <!-- 工作流 -->
-    <div class="bg-card border border-border rounded-lg p-6 mb-8">
+    <div class="bg-transparent border-0 border-b border-border/40 rounded-none p-6 mb-8">
       <h2 class="text-lg font-semibold text-foreground mb-4 flex items-center">
         <ListOrdered class="w-5 h-5 mr-2 text-primary" /> 推荐工作流
       </h2>
@@ -50,7 +50,7 @@
     </div>
 
     <!-- 相关词条 -->
-    <div v-if="relatedTerms.length > 0" class="bg-card border border-border rounded-lg p-6 mb-12">
+    <div v-if="relatedTerms.length > 0" class="bg-transparent border-0 border-b border-border/40 rounded-none p-6 mb-12">
       <h2 class="text-lg font-semibold text-foreground mb-4 flex items-center">
         <BookOpen class="w-5 h-5 mr-2 text-primary" /> 配套词条
       </h2>
@@ -59,7 +59,7 @@
           v-for="t in relatedTerms"
           :key="t.slug"
           :to="`/wiki/${t.slug}/`"
-          class="bg-muted hover:bg-muted/80 px-3.5 py-1.5 rounded-full text-sm text-muted-foreground hover:text-primary transition-all"
+          class="bg-transparent px-0 py-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
         >{{ t.term }}</NuxtLink>
       </div>
     </div>
@@ -70,7 +70,7 @@
         <ChevronUp v-if="seoVisible" class="w-5 h-5" />
         <ChevronDown v-else class="w-5 h-5" />
       </button>
-      <div v-show="seoVisible" class="bg-card border border-border rounded-lg p-6 mb-12">
+      <div v-show="seoVisible" class="bg-transparent border-0 border-b border-border/40 rounded-none p-6 mb-12">
         <h2 class="text-2xl font-bold text-foreground mb-4"><span class="text-primary mr-2">#</span>{{ col.title }}：一套解决完整任务的工具组合</h2>
         <div class="space-y-4 text-sm text-muted-foreground leading-relaxed">
           <p>{{ col.description }}本专题面向{{ col.scene }}，精选了 {{ col.tools.length }} 个{{ col.title.replace(/全套|套装|工具箱|防护包|包|流水线|套件|盒子/g, '') }}场景下的高频工具。</p>

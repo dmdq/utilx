@@ -2,7 +2,7 @@
   <div class="max-w-6xl mx-auto py-8">
     <!-- Hero Section -->
     <div class="text-center mb-12">
-      <div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6">
+      <div class="inline-flex items-center justify-center w-16 h-16 mb-6 text-muted-foreground">
         <DownloadCloud class="w-10 h-10 text-primary" />
       </div>
       <h1 class="text-display-lg text-foreground mb-4">桌面版本，即将发布</h1>
@@ -12,7 +12,7 @@
 
     <!-- Features Preview -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-      <div class="bg-card border border-border rounded-xl p-6 text-center">
+      <div class="bg-transparent border-0 border-b border-border/40 rounded-none p-6 text-center">
         <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mx-auto mb-4">
           <WifiOff class="w-6 h-6 text-blue-500" />
         </div>
@@ -20,7 +20,7 @@
         <p class="text-sm text-muted-foreground">无需网络连接，随时随地使用所有工具</p>
       </div>
 
-      <div class="bg-card border border-border rounded-xl p-6 text-center">
+      <div class="bg-transparent border-0 border-b border-border/40 rounded-none p-6 text-center">
         <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mx-auto mb-4">
           <Zap class="w-6 h-6 text-green-500" />
         </div>
@@ -28,7 +28,7 @@
         <p class="text-sm text-muted-foreground">原生应用性能，秒级启动响应</p>
       </div>
 
-      <div class="bg-card border border-border rounded-xl p-6 text-center">
+      <div class="bg-transparent border-0 border-b border-border/40 rounded-none p-6 text-center">
         <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mx-auto mb-4">
           <Shield class="w-6 h-6 text-purple-500" />
         </div>
@@ -38,7 +38,7 @@
     </div>
 
     <!-- Coming Soon Badge -->
-    <div class="bg-gradient-to-r from-primary/10 to-purple-500/10 border border-border rounded-xl p-8 text-center mb-12">
+    <div class="bg-transparent border-0 border-b border-border/40 rounded-none p-8 text-center mb-12">
       <div class="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium mb-4">
         <Clock class="w-4 h-4" />
         即将推出
@@ -67,7 +67,7 @@
     </div>
 
     <!-- Platform Support -->
-    <div class="bg-card border border-border rounded-xl p-8">
+    <div class="bg-transparent border-0 border-b border-border/40 rounded-none p-8">
       <h2 class="text-xl font-semibold mb-6 text-center">支持平台</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="text-center">

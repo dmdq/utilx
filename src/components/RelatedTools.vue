@@ -72,11 +72,11 @@ const goToTool = (toolId) => {
         v-for="tool in relatedTools"
         :key="tool.id"
         @click="goToTool(tool.id)"
-        class="bg-card border border-border rounded-lg p-4 hover:bg-accent hover:border-primary transition-all cursor-pointer group"
+        class="bg-transparent border-0 border-b border-border/40 rounded-none p-4 hover:bg-muted/25 transition-colors cursor-pointer group"
       >
         <div class="flex items-start space-x-3">
           <!-- 工具图标 -->
-          <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+          <div class="flex-shrink-0 w-6 h-6 flex items-center justify-center text-muted-foreground group-hover:text-primary transition-colors">
             <component :is="tool.icon" class="w-5 h-5 text-primary" />
           </div>
 

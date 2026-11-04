@@ -4,7 +4,6 @@ import {
   Star, ArrowRight, GripVertical
 } from 'lucide-vue-next'
 import { isFavorite, toggleFavorite as toggleFavoriteTool } from '~/composables/useTools'
-import { getCategoryColor } from '~/utils/categoryColors'
 import { resolveToolIcon } from '~/utils/toolIcons'
 
 const props = defineProps({
@@ -50,37 +49,15 @@ const iconComponent = computed(() => {
   return resolveToolIcon(props.icon, props.category)
 })
 
-// 分类徽章的配色与短标签：键与 categories.js 的 id 一一对应
-const categoryBadgeMap = {
-  'dev': { class: 'bg-red-500/10 text-red-500', label: '开发' },
-  'design': { class: 'bg-indigo-500/10 text-indigo-500', label: '设计' },
-  'encode': { class: 'bg-blue-500/10 text-blue-500', label: '编码' },
-  'crypto': { class: 'bg-green-500/10 text-green-500', label: '加密' },
-  'security': { class: 'bg-emerald-500/10 text-emerald-500', label: '安全' },
-  'time': { class: 'bg-purple-500/10 text-purple-500', label: '时间' },
-  'text': { class: 'bg-pink-500/10 text-pink-500', label: '文本' },
-  'network': { class: 'bg-cyan-500/10 text-cyan-500', label: '网络' },
-  'image': { class: 'bg-yellow-500/10 text-yellow-500', label: '图像' },
-  'calculate': { class: 'bg-sky-500/10 text-sky-500', label: '计算' },
-  'format': { class: 'bg-orange-500/10 text-orange-500', label: '格式' },
-  'random': { class: 'bg-fuchsia-500/10 text-fuchsia-500', label: '随机' },
-  'health': { class: 'bg-rose-500/10 text-rose-500', label: '健康' },
-  'finance': { class: 'bg-lime-500/10 text-lime-500', label: '金融' },
-  'others': { class: 'bg-slate-500/10 text-slate-500', label: '其他' },
-  'file': { class: 'bg-teal-500/10 text-teal-500', label: '文件' }
+// 分类短标签：键与 categories.js 的 id 一一对应（不再使用彩色徽章）
+const categoryLabels = {
+  dev: '开发', design: '设计', encode: '编码', crypto: '加密',
+  security: '安全', time: '时间', text: '文本', network: '网络',
+  image: '图像', calculate: '计算', format: '格式', random: '随机',
+  health: '健康', finance: '金融', others: '其他', file: '文件'
 }
 
-const getCategoryColorClass = (category) => {
-  return categoryBadgeMap[category]?.class || 'bg-purple-500/10 text-purple-500'
-}
-
-const getCategoryBadgeClass = (category) => {
-  return categoryBadgeMap[category]?.class || 'bg-purple-500/10 text-purple-500'
-}
-
-const getCategoryLabel = (category) => {
-  return categoryBadgeMap[category]?.label || '工具'
-}
+const getCategoryLabel = (category) => categoryLabels[category] || '工具'
 
 const toggleFavorite = () => {
   isFavoriteRef.value = toggleFavoriteTool(props.tool.id)
@@ -107,7 +84,7 @@ onMounted(() => {
   <component
     :is="disableLink ? 'div' : 'NuxtLink'"
     :to="disableLink ? null : getToolUrl(tool)"
-    class="tool-card group relative bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-2 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer block h-full"
+    class="tool-card group relative bg-transparent border-0 border-b border-border/40 rounded-none p-5 hover:bg-muted/25 transition-colors duration-200 cursor-pointer block h-full"
     :data-category="category"
     @click="!disableLink && handleCardClick"
   >
@@ -135,10 +112,9 @@ onMounted(() => {
     
     <div class="flex items-center gap-4 mb-4" :class="{ 'ml-8': isDraggable }">
       <div
-        class="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform"
-        :class="getCategoryColorClass(category)"
+        class="w-6 h-6 flex items-center justify-center text-muted-foreground group-hover:text-primary transition-colors shrink-0"
       >
-        <component :is="iconComponent" class="w-6 h-6" :style="{ color: getCategoryColor(category).icon }" />
+        <component :is="iconComponent" class="w-5 h-5" />
       </div>
       <div class="flex items-center gap-1.5 min-w-0">
         <NuxtLink
@@ -150,8 +126,7 @@ onMounted(() => {
           {{ title }}
         </NuxtLink>
         <span
-          class="text-[10px] px-1.5 py-0.5 rounded whitespace-nowrap flex-shrink-0"
-          :class="getCategoryBadgeClass(category)"
+          class="text-xs text-muted-foreground/70 whitespace-nowrap flex-shrink-0"
         >
           {{ getCategoryLabel(category) }}
         </span>
@@ -160,7 +135,7 @@ onMounted(() => {
     <p class="text-sm text-muted-foreground line-clamp-2 mb-4">
       {{ description }}
     </p>
-    <div class="flex items-center justify-between text-xs text-muted-foreground border-t border-border/50 pt-3">
+    <div class="flex items-center justify-between text-xs text-muted-foreground pt-3">
       <span class="inline-flex items-center gap-1.5">
         <span class="w-1.5 h-1.5 rounded-full" :class="tool.local === false ? 'bg-amber-500' : 'bg-emerald-500'"></span>
         {{ tool.local === false ? '在线服务' : '纯本地计算' }}
