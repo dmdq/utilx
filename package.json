@@ -35,7 +35,8 @@
     "package:static": "./package-static.sh",
     "package:macos": "./scripts/package-macos.sh",
     "package:macos-universal": "./scripts/package-macos-universal.sh",
-    "package:macos-simple": "./scripts/package-macos-simple.sh"
+    "package:macos-simple": "./scripts/package-macos-simple.sh",
+    "persona-audit": "node scripts/persona-audit.js"
   },
   "dependencies": {
     "@breezystack/lamejs": "^1.2.7",
