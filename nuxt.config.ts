@@ -254,6 +254,7 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/',
+        '/ai',
         '/all',
         '/about',
         '/tags',

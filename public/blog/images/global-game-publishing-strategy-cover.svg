@@ -1,0 +1,42 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="url(#game-gradient)"/>
+  <defs>
+    <linearGradient id="game-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 游戏图标背景 -->
+  <circle cx="600" cy="180" r="80" fill="#ffffff" opacity="0.2"/>
+  <circle cx="600" cy="180" r="60" fill="#ffffff" opacity="0.3"/>
+
+  <!-- 游戏手柄图标 -->
+  <path d="M560 160 Q560 140, 580 140 Q600 120, 640 160 Q680 120, 680 140 L640 160 Q640 180, 600 180 Q560 180, 560 160" fill="#ffffff" opacity="0.9"/>
+  <circle cx="580" cy="160" r="8" fill="#6d28d9"/>
+  <circle cx="620" cy="160" r="8" fill="#6d28d9"/>
+  <circle cx="600" cy="200" r="6" fill="#ffffff" opacity="0.7"/>
+  <circle cx="590" cy="200" r="6" fill="#ffffff" opacity="0.7"/>
+  <circle cx="610" cy="200" r="6" fill="#ffffff" opacity="0.7"/>
+
+  <!-- 标题文本 -->
+  <text x="600" y="300" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="white">全球游戏发行策略</text>
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#e5e7eb">从立项到运营的完整指南</text>
+
+  <!-- 特性标签 -->
+  <rect x="400" y="420" width="80" height="30" rx="15" fill="#ffffff" opacity="0.2"/>
+  <text x="440" y="440" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">市场分析</text>
+
+  <rect x="500" y="420" width="80" height="30" rx="15" fill="#ffffff" opacity="0.2"/>
+  <text x="540" y="440" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">渠道选择</text>
+
+  <rect x="600" y="420" width="80" height="30" rx="15" fill="#ffffff" opacity="0.2"/>
+  <text x="640" y="440" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">推广策略</text>
+
+  <rect x="700" y="420" width="80" height="30" rx="15" fill="#ffffff" opacity="0.2"/>
+  <text x="740" y="440" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">运营管理</text>
+
+  <!-- 底部文本 -->
+  <text x="600" y="520" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#e5e7eb">助力游戏成功出海</text>
+  <text x="600" y="560" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#a1a1aa">游戏出海 · 海外市场 · 运营策略 · 商业模式</text>
+</svg>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外链拦截器测试页面</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        .test-section {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+        .test-link {
+            display: inline-block;
+            margin: 0.5rem 0;
+            padding: 0.5rem 1rem;
+            background-color: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .test-link:hover {
+            background-color: #2563eb;
+        }
+        .internal-link {
+            background-color: #10b981;
+        }
+        .internal-link:hover {
+            background-color: #059669;
+        }
+        .note {
+            background-color: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>外链拦截器测试页面</h1>
+
+    <div class="note">
+        <strong>测试说明：</strong>
+        <ul>
+            <li>点击外部链接应该会显示确认对话框</li>
+            <li>点击内部链接应该会正常跳转</li>
+            <li>确认对话框应该显示倒计时和安全提示</li>
+            <li>可以选择记住选择，24小时内不再拦截相同链接</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>外部链接测试（应该被拦截）</h2>
+
+        <a href="https://www.google.com" class="test-link" target="_blank">
+            Google 搜索（外部链接）
+        </a>
+
+        <br><br>
+
+        <a href="https://github.com" class="test-link" target="_blank">
+            GitHub（外部链接）
+        </a>
+
+        <br><br>
+
+        <a href="https://www.example.com" class="test-link" target="_blank">
+            Example.com（外部链接）
+        </a>
+    </div>
+
+    <div class="test-section">
+        <h2>内部链接测试（不应该被拦截）</h2>
+
+        <a href="/" class="test-link internal-link">
+            首页（内部链接）
+        </a>
+
+        <br><br>
+
+        <a href="/blog/" class="test-link internal-link">
+            博客首页（内部链接）
+        </a>
+
+        <br><br>
+
+        <a href="#test-section" class="test-link internal-link">
+            页面内锚点（内部链接）
+        </a>
+    </div>
+
+    <div class="test-section">
+        <h2>特殊链接测试</h2>
+
+        <a href="mailto:test@example.com" class="test-link" style="background-color: #8b5cf6;">
+            Email 链接（不应该被拦截）
+        </a>
+
+        <br><br>
+
+        <a href="tel:+86123456789" class="test-link" style="background-color: #8b5cf6;">
+            电话链接（不应该被拦截）
+        </a>
+
+        <br><br>
+
+        <a href="javascript:void(0)" class="test-link" style="background-color: #8b5cf6;">
+            JavaScript 链接（不应该被拦截）
+        </a>
+    </div>
+
+    <!-- 加载外链拦截器 -->
+    <script src="/js/external-link-config.js"></script>
+    <script src="/js/external-link-interceptor.js"></script>
+
+    <script>
+        // 页面加载完成后的提示
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('外链拦截器测试页面已加载');
+            console.log('当前域名:', window.location.hostname);
+            console.log('请尝试点击上述链接进行测试');
+        });
+    </script>
+</body>
+</html>
