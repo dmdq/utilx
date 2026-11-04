@@ -41,13 +41,25 @@ if [ "$TOOL_PAGES" -lt 503 ]; then
   fail "工具页仅 ${TOOL_PAGES} 个（应 ≥503），构建不完整"
 fi
 
+# 分页守卫：/all/page/N 必须是真实静态目录，否则 nginx 只能 404 或退回首页软 404
+EXPECTED_PAGE_DIRS=$(node --input-type=module -e "import('./src/data/pagination.js').then(m=>console.log(Math.max(0,m.TOTAL_TOOL_PAGES-1)))" 2>/dev/null | tail -1)
+[ -n "${EXPECTED_PAGE_DIRS}" ] || EXPECTED_PAGE_DIRS=15
+ALL_PAGE_HTML=0
+if [ -d "${PUB}/all/page" ]; then
+  ALL_PAGE_HTML=$(find "${PUB}/all/page" -name 'index.html' | wc -l | tr -d ' ')
+fi
+if [ "${ALL_PAGE_HTML}" -lt "${EXPECTED_PAGE_DIRS}" ]; then
+  fail "全部工具分页仅 ${ALL_PAGE_HTML} 页（应 ≥${EXPECTED_PAGE_DIRS}），检查 /all/page/N 预渲染"
+fi
+grep -q "全部工具 第 2 页" "${PUB}/all/page/2/index.html" || fail "/all/page/2 内容异常（标题未含「全部工具 第 2 页」）"
+
 # 回归守卫：/blog/ 曾被 Nuxt 预渲染错误页覆盖（nitro 爬虫跟踪页脚链接所致）
 grep -q "技术博客" "${PUB}/blog/index.html" || fail "blog/index.html 被 Nuxt 错误页污染（prerender.ignore 失效？）"
 if [ -f "${PUB}/blog/_payload.json" ]; then
   fail "blog/_payload.json 残留，博客产物被污染"
 fi
 
-ok "HTML 总数 ${HTML_COUNT}，工具页 ${TOOL_PAGES} 个，博客首页正常"
+ok "HTML 总数 ${HTML_COUNT}，工具页 ${TOOL_PAGES} 个，分页 ${ALL_PAGE_HTML} 页，博客首页正常"
 
 step "3/4 压缩为 zip（archive 根目录即站点根，解压即部署）"
 mkdir -p "$OUT_DIR"
@@ -60,5 +72,6 @@ step "4/4 完成"
 SIZE=$(du -h "$ZIP_PATH" | cut -f1 | tr -d ' ')
 ok "部署包: ${ZIP_PATH}（${SIZE}，${FILES} 个文件）"
 echo "  部署方式: 解压到 nginx 站点根目录"
-echo "  nginx 关键配置: try_files \$uri \$uri/ \$uri/index.html =404;"
+echo "  nginx 关键配置: try_files \$uri \$uri/index.html \$uri/ =404;"
+echo "  （\$uri/index.html 必须排在 \$uri/ 之前，否则 /all/page/2 会 301 到 /all/page/2/）"
 echo "  上线后复检: TOOLS_BASE_URL=\"https://你的域名/tools/\" node scripts/test-tools.js"
