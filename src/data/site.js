@@ -9,17 +9,17 @@ export const siteConfig = {
   // 自定义底部脚本
   customFooterScripts: process.env.CUSTOM_FOOTER_SCRIPTS || '',
 
-  // 网站标题
-  title: '有条工具 - 开发者的常用的工具集合',
+  // 网站标题（与首页 TDK 保持同一定位：具体场景 + 隐私本地，避开红海通用词）
+  title: '有条工具 · 免注册的本地小工具集',
 
   // SEO标题后缀（用于页面标题）
   titleSuffix: ' - 有条工具',
 
   // 网站描述
-  description: '无广告 · 本地计算 · 即开即用的在线工具平台',
+  description: '收录各类浏览器本地小工具，覆盖开发、计算、设计、健康与工程场景，数据不上传、免注册、无广告，打开即用。',
 
   // 网站关键词
-  keywords: '在线工具, 开发工具, JSON格式化, Base64编码, 时间戳转换, 正则表达式测试',
+  keywords: '本地计算工具,免注册在线工具,在线换算器,隐私安全工具箱,场景工具合集,离线可用小工具,有条工具',
 
   // 快捷工具配置
   quickTools: {

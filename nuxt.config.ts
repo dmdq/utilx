@@ -316,11 +316,11 @@ export default defineNuxtConfig({
     // 轻量路由过渡：仅进入时淡入，不引入 out-in 等待，避免 748 页切换体感变慢
     pageTransition: { name: 'page' },
     head: {
-      title: '有条工具 - 开发者的常用的工具集合',
+      title: '有条工具 · 免注册的本地小工具集',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: '无广告 · 本地计算 · 即开即用的在线工具平台' },
+        { name: 'description', content: '收录各类浏览器本地小工具，覆盖开发、计算、设计、健康与工程场景，数据不上传、免注册、无广告，打开即用。' },
         { name: 'theme-color', content: '#6366f1' },
         { name: 'msapplication-TileColor', content: '#6366f1' },
         { name: 'msapplication-config', content: '/browserconfig.xml' }

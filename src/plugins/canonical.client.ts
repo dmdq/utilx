@@ -16,7 +16,8 @@ export default defineNuxtPlugin((nuxtApp) => {
     link: [
       {
         rel: 'canonical',
-        href: getCanonicalUrl(route.path)
+        href: getCanonicalUrl(route.path),
+        key: 'canonical'
       }
     ]
   })
