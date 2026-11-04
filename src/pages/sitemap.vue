@@ -103,22 +103,16 @@
             </div>
             <div class="flex gap-1">
               <span
-                v-if="tool.hot"
+                v-if="getToolBadge(tool)"
                 class="text-xs px-2 py-1 bg-red-500/20 text-red-400 rounded-full"
               >
                 HOT
-              </span>
-              <span
-                v-if="tool.new"
-                class="text-xs px-2 py-1 bg-green-500/20 text-green-400 rounded-full"
-              >
-                NEW
               </span>
             </div>
           </div>
           <div class="flex items-center justify-between text-xs text-muted-foreground">
             <span class="px-2 py-1 bg-muted rounded">{{ getCategoryName(tool.category) }}</span>
-            <span>{{ formatViewCount(tool.viewCount) }}</span>
+            <span>{{ tool.local === false ? '在线服务' : '纯本地计算' }}</span>
           </div>
         </NuxtLink>
       </div>
@@ -202,6 +196,7 @@
 </template>
 
 <script setup>
+import { getToolBadge } from '~/utils/toolBadges'
 import { ref, computed } from 'vue'
 import {
   Home, LayoutGrid, Wrench, Search, FileText, Globe,

@@ -53,11 +53,11 @@
                   <div class="text-sm text-muted-foreground truncate">{{ tool.description }}</div>
                 </div>
                 <span
-                  v-if="tool.hot || tool.new"
+                  v-if="getToolBadge(tool)"
                   class="text-xs px-2 py-1 rounded-full flex-shrink-0"
-                  :class="tool.hot ? 'bg-red-500/20 text-red-400' : 'bg-green-500/20 text-green-400'"
+                  :class="getToolBadge(tool).class"
                 >
-                  {{ tool.hot ? 'HOT' : 'NEW' }}
+                  {{ getToolBadge(tool).label }}
                 </span>
               </div>
             </div>
@@ -145,6 +145,7 @@
 </template>
 
 <script setup>
+import { getToolBadge } from '~/utils/toolBadges'
 import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import { Search, FileJson, Hash, Database, Link, Shield, Timer, Image, Code, Layout, FileText, Book, Github, Clock, Type, Wifi } from 'lucide-vue-next'
@@ -195,7 +196,7 @@ const pages = [
 // 热门工具
 const popularTools = computed(() => {
   return tools
-    .filter(tool => tool.hot || tool.viewCount > 10000)
+    .filter(tool => tool.hot)
     .slice(0, 6)
 })
 

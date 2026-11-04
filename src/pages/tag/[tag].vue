@@ -48,25 +48,13 @@
               </div>
             </div>
 
-            <!-- 标签统计卡片 -->
-            <div v-if="tagStats" class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+            <!-- 标签统计卡片：仅使用真实字段，不展示静态填充的 viewCount / new -->
+            <div v-if="tagStats" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               <div class="bg-card/60 backdrop-blur-sm rounded-lg p-4 text-center border border-border/50">
                 <div class="text-3xl font-bold text-primary mb-1">
                   {{ tagStats.totalTools }}
                 </div>
                 <div class="text-sm text-muted-foreground">工具总数</div>
-              </div>
-              <div class="bg-card/60 backdrop-blur-sm rounded-lg p-4 text-center border border-border/50">
-                <div class="text-3xl font-bold text-green-500 mb-1">
-                  {{ tagStats.totalViews.toLocaleString() }}
-                </div>
-                <div class="text-sm text-muted-foreground">总访问量</div>
-              </div>
-              <div class="bg-card/60 backdrop-blur-sm rounded-lg p-4 text-center border border-border/50">
-                <div class="text-3xl font-bold text-purple-500 mb-1">
-                  {{ tagStats.avgViews.toLocaleString() }}
-                </div>
-                <div class="text-sm text-muted-foreground">平均访问量</div>
               </div>
               <div class="bg-card/60 backdrop-blur-sm rounded-lg p-4 text-center border border-border/50">
                 <div class="text-3xl font-bold text-red-500 mb-1">
@@ -75,10 +63,16 @@
                 <div class="text-sm text-muted-foreground">热门工具</div>
               </div>
               <div class="bg-card/60 backdrop-blur-sm rounded-lg p-4 text-center border border-border/50">
-                <div class="text-3xl font-bold text-yellow-500 mb-1">
-                  {{ tagStats.newTools }}
+                <div class="text-3xl font-bold text-emerald-500 mb-1">
+                  {{ tagStats.localTools }}
                 </div>
-                <div class="text-sm text-muted-foreground">新工具</div>
+                <div class="text-sm text-muted-foreground">本地计算</div>
+              </div>
+              <div class="bg-card/60 backdrop-blur-sm rounded-lg p-4 text-center border border-border/50">
+                <div class="text-3xl font-bold text-purple-500 mb-1">
+                  {{ tagStats.categoryCount }}
+                </div>
+                <div class="text-sm text-muted-foreground">覆盖分类</div>
               </div>
             </div>
 
@@ -170,16 +164,16 @@
               />
               <div class="flex flex-col items-end gap-1">
                 <span
-                  v-if="tool.hot || tool.new"
+                  v-if="getToolBadge(tool)"
                   :class="[
                     'text-xs px-2 py-1 rounded-full',
-                    tool.hot ? 'bg-red-500/20 text-red-400' : 'bg-green-500/20 text-green-400'
+                    getToolBadge(tool).class
                   ]"
                 >
-                  {{ tool.hot ? 'HOT' : 'NEW' }}
+                  {{ getToolBadge(tool).label }}
                 </span>
                 <span class="text-xs text-muted-foreground">
-                  {{ (tool.viewCount || 0).toLocaleString() }}
+                  {{ tool.local === false ? '在线服务' : '纯本地计算' }}
                 </span>
               </div>
             </div>
@@ -210,19 +204,16 @@
                       {{ tool.name }}
                     </h3>
                     <div class="flex gap-2">
-                      <span v-if="tool.hot" class="inline-flex items-center px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">
+                      <span v-if="getToolBadge(tool)" class="inline-flex items-center px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">
                         热门
-                      </span>
-                      <span v-if="tool.new" class="inline-flex items-center px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
-                        新品
                       </span>
                     </div>
                   </div>
                   <p class="text-muted-foreground mt-2">{{ tool.description }}</p>
                   <div class="flex items-center gap-4 mt-3 text-sm text-muted-foreground">
-                    <span class="flex items-center gap-1">
-                      <Eye class="w-4 h-4" />
-                      {{ (tool.viewCount || 0).toLocaleString() }} 次访问
+                    <span class="flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full" :class="tool.local === false ? 'bg-amber-500' : 'bg-emerald-500'"></span>
+                      {{ tool.local === false ? '在线服务' : '纯本地计算' }}
                     </span>
                     <span class="flex items-center gap-1">
                       <Clock class="w-4 h-4" />
@@ -282,6 +273,7 @@
 
 
 <script setup>
+import { getToolBadge } from '~/utils/toolBadges'
 import { ref, computed, onMounted, watch } from 'vue'
 import {
   ArrowLeft, Tag, Wrench, Clock, Eye, TrendingUp, Grid, List,
@@ -376,16 +368,12 @@ const filteredAndSortedTools = computed(() => {
 const tagStats = computed(() => {
   if (!tag.value) return null
 
-  const totalViews = tagTools.value.reduce((sum, tool) => sum + (tool.viewCount || 0), 0)
-  const hotTools = tagTools.value.filter(tool => tool.hot).length
-  const newTools = tagTools.value.filter(tool => tool.new).length
-
+  const list = tagTools.value
   return {
-    totalTools: tagTools.value.length,
-    totalViews,
-    hotTools,
-    newTools,
-    avgViews: tagTools.value.length > 0 ? Math.round(totalViews / tagTools.value.length) : 0
+    totalTools: list.length,
+    hotTools: list.filter(tool => tool.hot).length,
+    localTools: list.filter(tool => tool.local !== false).length,
+    categoryCount: new Set(list.map(tool => tool.category)).size
   }
 })
 

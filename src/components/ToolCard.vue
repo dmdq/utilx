@@ -26,7 +26,7 @@ const props = defineProps({
   },
   usageCount: {
     type: String,
-    required: true
+    default: ''
   },
   icon: {
     type: String,
@@ -161,7 +161,10 @@ onMounted(() => {
       {{ description }}
     </p>
     <div class="flex items-center justify-between text-xs text-muted-foreground border-t border-border/50 pt-3">
-      <span>使用: {{ usageCount }}</span>
+      <span class="inline-flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full" :class="tool.local === false ? 'bg-amber-500' : 'bg-emerald-500'"></span>
+        {{ tool.local === false ? '在线服务' : '纯本地计算' }}
+      </span>
       <NuxtLink
         :to="getToolUrl(tool)"
         class="group-hover:text-primary flex items-center gap-1 hover:text-primary transition-colors"

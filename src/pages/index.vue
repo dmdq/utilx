@@ -169,13 +169,13 @@
                   :style="{ color: getCategoryColor(tool.category).icon }"
                 />
                 <span
-                  v-if="tool.hot || tool.new"
+                  v-if="getToolBadge(tool)"
                   :class="[
                     'text-xs px-2 py-1 rounded-full',
-                    tool.hot ? 'bg-red-500/20 text-red-400' : 'bg-green-500/20 text-green-400'
+                    getToolBadge(tool).class
                   ]"
                 >
-                  {{ tool.hot ? 'HOT' : 'NEW' }}
+                  {{ getToolBadge(tool).label }}
                 </span>
               </div>
               <h3 class="font-semibold mb-2">{{ tool.name }}</h3>
@@ -218,6 +218,7 @@
 </template>
 
 <script setup>
+import { getToolBadge } from '~/utils/toolBadges'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import {

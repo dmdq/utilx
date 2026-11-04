@@ -1,4 +1,5 @@
 <script setup>
+import { getToolBadge } from '~/utils/toolBadges'
 import { computed } from 'vue'
 import { tools } from '~/data/tools'
 import { useRouter } from 'vue-router'
@@ -46,11 +47,8 @@ const calculateToolPriority = (tool, currentTool) => {
 
   // 热门工具加分
   if (tool.hot) priority += 20
-  // 新工具加分
-  if (tool.new) priority += 10
-  // 浏览量加分（对数缩放）
-  priority += Math.log10(tool.viewCount || 1) * 5
   // 相似功能加分（基于关键词）
+  // 注：不再使用 new / viewCount 加权 —— new 覆盖 97.5% 无区分度，viewCount 为静态填充值
   const commonKeywords = currentTool.keywords?.filter(keyword =>
     tool.keywords?.includes(keyword)
   ).length || 0
@@ -94,16 +92,10 @@ const goToTool = (toolId) => {
             <!-- 工具标签 -->
             <div class="flex items-center gap-2 mt-2">
               <span
-                v-if="tool.hot"
+                v-if="getToolBadge(tool)"
                 class="inline-flex items-center px-2 py-1 bg-red-100 text-red-700 text-xs rounded-full"
               >
                 热门
-              </span>
-              <span
-                v-if="tool.new"
-                class="inline-flex items-center px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full"
-              >
-                新品
               </span>
               <span
                 v-if="tool.local"
