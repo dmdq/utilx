@@ -1,175 +1,31 @@
 <template>
-  <div>
-    <!-- Hero 区域 -->
-    <div 
-      id="heroSection" 
-      class="max-w-8xl mx-auto mb-12 mt-4 lg:mt-8 text-center animate-fade-in"
+  <div class="max-w-xl mx-auto py-24 text-center">
+    <h1 class="text-display text-foreground mb-4">该页面已合并</h1>
+    <p class="text-muted-foreground mb-8">
+      「全部工具」已统一到 /all，并提供分类筛选与分页。正在为你跳转…
+    </p>
+    <NuxtLink
+      to="/all/"
+      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
     >
-      <h2 class="text-display lg:text-display-lg mb-4 text-foreground">
-        数字创作者的<span class="text-primary">万能工具箱</span>
-      </h2>
-      <p class="text-muted-foreground mb-8 text-lg">无论是调试代码还是处理图像，这里都有你得心应手的利器。纯本地，更安全。</p>
-      
-      <!-- 大搜索框 -->
-      <div class="relative max-w-2xl mx-auto shadow-elevation-2 rounded-xl">
-        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-          <Search class="w-5 h-5 text-muted-foreground" />
-        </div>
-        <input 
-          v-model="heroSearch"
-          type="text" 
-          class="block w-full rounded-xl border border-border bg-muted/50 pl-11 pr-4 py-4 text-base transition-all placeholder:text-muted-foreground/70"
-          placeholder="搜索你需要的工具，如 'JSON', 'MD5', '正则'..."
-          @input="handleSearch"
-        >
-        <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-          <span class="text-xs text-muted-foreground bg-muted border border-border px-2 py-1 rounded hidden sm:block">Enter</span>
-        </div>
-      </div>
-
-      <!-- 热门推荐胶囊 -->
-      <div class="mt-6 flex flex-wrap justify-center gap-2">
-        <span class="text-xs text-muted-foreground py-1">热门搜索：</span>
-        <button 
-          class="text-xs px-3 py-1 rounded-full bg-muted/50 hover:bg-primary/20 hover:text-primary transition-colors border border-border"
-          @click="setSearchTerm('JSON 修复')"
-        >
-          JSON 修复
-        </button>
-        <button 
-          class="text-xs px-3 py-1 rounded-full bg-muted/50 hover:bg-primary/20 hover:text-primary transition-colors border border-border"
-          @click="setSearchTerm('Unix 时间戳')"
-        >
-          Unix 时间戳
-        </button>
-        <button 
-          class="text-xs px-3 py-1 rounded-full bg-muted/50 hover:bg-primary/20 hover:text-primary transition-colors border border-border"
-          @click="setSearchTerm('Base64 图片')"
-        >
-          Base64 图片
-        </button>
-        <button 
-          class="text-xs px-3 py-1 rounded-full bg-muted/50 hover:bg-primary/20 hover:text-primary transition-colors border border-border"
-          @click="setSearchTerm('Cron 表达式')"
-        >
-          Cron 表达式
-        </button>
-      </div>
-    </div>
-
-    <!-- 工具网格 -->
-    <div class="max-w-8xl mx-auto">
-      <div class="flex items-center justify-between mb-6">
-        <h3 class="text-lg font-semibold flex items-center gap-2" id="gridTitle">
-          <LayoutGrid class="w-5 h-5 text-primary" />
-          全部工具
-        </h3>
-        <div class="text-sm text-muted-foreground" id="toolCount">
-          {{ filteredTools.length }} 个工具
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="toolGrid">
-        <ToolCard
-          v-for="tool in filteredTools"
-          :key="tool.id"
-          :tool="tool"
-          :title="tool.name"
-          :description="tool.description"
-          :category="tool.category"
-          :usage-count="formatViewCount(tool.viewCount)"
-          :icon="tool.icon"
-          @select="handleToolSelect"
-        />
-      </div>
-
-      <!-- 空状态 -->
-      <div 
-        id="emptyState" 
-        class="hidden text-center py-24"
-        v-show="filteredTools.length === 0"
-      >
-        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-4">
-          <SearchX class="w-8 h-8 text-muted-foreground" />
-        </div>
-        <h3 class="text-lg font-medium text-foreground">未找到相关工具</h3>
-        <p class="text-muted-foreground mt-2">试试搜索 "json" 或 "timestamp"</p>
-      </div>
-    </div>
+      前往全部工具 <ArrowRight class="w-4 h-4" />
+    </NuxtLink>
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
-import { 
-  Search, LayoutGrid, SearchX, Github
-} from 'lucide-vue-next'
-import { categories } from '~/data/categories'
-import { tools } from '~/data/tools'
-import { initToolsData, addRecentTool } from '~/composables/useTools'
-import ToolCard from '~/components/ToolCard.vue'
+import { onMounted } from 'vue'
+import { ArrowRight } from 'lucide-vue-next'
 
-
-
-import { useSEO } from '~/composables/useSEO'
-
-// 使用SEO composable设置页面标题
-const { setPageTitle } = useSEO()
-setPageTitle('未找到相关工具')
-
-
-// 初始化工具数据
-initToolsData()
-
-const router = useRouter()
-const route = useRoute()
-
-// 数据状态
-const currentCategory = ref('all')
-const heroSearch = ref('')
-const sidebarSearch = ref('')
-
-// 计算属性：过滤后的工具
-const filteredTools = computed(() => {
-  const searchTerm = (heroSearch.value || '').toLowerCase()
-
-  return tools.filter(tool => {
-    const matchesCategory = currentCategory.value === 'all' || tool.category === currentCategory.value
-    const matchesSearch = !searchTerm ||
-      tool.name.toLowerCase().includes(searchTerm) ||
-      tool.description.toLowerCase().includes(searchTerm) ||
-      tool.keywords.some(keyword => keyword.toLowerCase().includes(searchTerm))
-
-    return matchesCategory && matchesSearch
-  }).sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
+// 原页面是 /all.vue 的逐行复制（含两处失效 bug），现改为重定向入口。
+// SSR 输出带 canonical 与 noindex 的静态兜底页，客户端再跳转，兼容历史外链。
+useHead({
+  title: '全部工具 - 有条工具',
+  meta: [{ name: 'robots', content: 'noindex, follow' }],
+  link: [{ rel: 'canonical', href: 'https://www.util.cn/all/' }]
 })
 
-// 格式化浏览量
-const formatViewCount = (count) => {
-  if (count >= 10000) {
-    return `${(count / 10000).toFixed(1)}w+`
-  } else if (count >= 1000) {
-    return `${(count / 1000).toFixed(1)}k+`
-  }
-  return `${count}`
-}
-
-const handleSearch = (term) => {
-  heroSearch.value = term
-  sidebarSearch.value = term
-}
-
-const setSearchTerm = (term) => {
-  heroSearch.value = term
-  sidebarSearch.value = term
-}
-
-const handleToolSelect = (tool) => {
-  console.log('Selected tool:', tool)
-  // 跳转到工具详情页 - 使用目录结构格式
-  router.push(`/tools/${tool.id}/`)
-  // 添加到最近使用
-  addRecentTool(tool.id)
-}
+onMounted(() => {
+  navigateTo('/all/', { replace: true })
+})
 </script>

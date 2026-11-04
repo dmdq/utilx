@@ -1,429 +1,318 @@
 <template>
   <div class="max-w-8xl mx-auto py-8">
-    <!-- Hero 区域 -->
-    <div class="relative text-center mb-8 mt-4 rounded-2xl border border-border/60 bg-card/30">
-      <div class="relative z-10 px-6 py-8 lg:px-8 lg:py-12">
+    <!-- Hero：唯一入口 -->
+    <section class="relative text-center mb-12 mt-4 rounded-2xl border border-border/60 bg-card/30">
+      <div class="px-6 py-10 lg:px-8 lg:py-14">
         <h1 class="text-display lg:text-display-lg mb-4 text-foreground">
           不仅是工具，更是<span class="text-primary">创造力</span>的延伸
         </h1>
-        <p class="text-lg text-muted-foreground mb-6">极简、高效、全能。为极客、设计师和所有探索者打造。</p>
+        <p class="text-lg text-muted-foreground mb-8">极简、高效、全能。为极客、设计师和所有探索者打造。</p>
 
-        <!-- 大搜索框 -->
-        <div class="relative max-w-2xl mx-auto mb-6">
-        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
-          <Search class="w-5 h-5 text-muted-foreground" />
-        </div>
-        <input
-          ref="searchInput"
-          v-model="searchQuery"
-          type="text"
-          class="block w-full rounded-xl border border-border/60 bg-card/40 backdrop-blur-sm pl-11 pr-24 py-4 text-base placeholder:text-muted-foreground/60 transition-all duration-300 "
-          placeholder="搜索你需要的工具，如 Markdown , JSON , MD5 , 正则 , 图片 ... "
-          @input="handleSearch"
-          @keydown.enter="handleSearchEnter"
-        >
-        <div class="absolute inset-y-0 right-0 pr-3 flex items-center gap-2">
-          <!-- 智能剪贴板检测按钮 -->
-          <button
-            @click="detectClipboardContent"
-            class="text-xs text-muted-foreground/60 bg-background/80 backdrop-blur-sm border border-border/40 px-2 py-1.5 rounded-lg shadow-sm hover:bg-primary/10 hover:text-primary transition-colors"
-            title="检测剪贴板内容"
-          >
-            <Clipboard class="w-3 h-3" />
-          </button>
-          <span class="text-xs text-muted-foreground/60 font-mono bg-background/80 backdrop-blur-sm border border-border/40 px-2 py-1.5 rounded-lg shadow-sm hidden sm:inline-flex items-center gap-1">
-            <kbd class="text-[11px] font-semibold bg-muted/50 px-1.5 py-0.5 rounded border border-border/30">⌘</kbd>
-            <kbd class="text-[11px] font-semibold bg-muted/50 px-1.5 py-0.5 rounded border border-border/30">K</kbd>
-          </span>
-        </div>
-      </div>
-      
-      <!-- 智能粘贴提示 -->
-      <div 
-        v-if="clipboardSuggestion" 
-        class="max-w-2xl mx-auto mb-6 p-4 bg-primary/10 border border-primary/20 rounded-lg flex items-center justify-between"
-      >
-        <div class="text-sm">
-          <span class="text-primary">检测到剪贴板包含 {{ clipboardSuggestion.type }} 数据，</span>
-          <button 
-            class="text-primary font-medium underline ml-1"
-            @click="goToTool(clipboardSuggestion.toolId)"
-          >
-            是否打开 {{ clipboardSuggestion.toolName }}？
-          </button>
-        </div>
-        <button 
-          class="text-muted-foreground hover:text-foreground"
-          @click="dismissClipboardSuggestion"
-        >
-          <X class="w-4 h-4" />
-        </button>
-      </div>
-      
-      <!-- 热门/快捷标签 -->
-      <div class="flex flex-wrap items-center justify-center gap-2">
-        <span class="text-xs text-muted-foreground">热门搜索：</span>
-        <button
-          v-for="tag in popularTags"
-          :key="tag"
-          class="text-xs px-3 py-1 rounded-full bg-muted/30 hover:bg-primary/15 hover:text-primary hover:border-primary/40 hover:scale-105 transition-all duration-200 border border-border/50 shadow-sm hover:shadow-md"
-          @click="setSearchTerm(tag)"
-        >
-          {{ tag }}
-        </button>
-      </div>
-    </div>
-    </div>
-    
-    <!-- 个性化工作台 (最近使用/收藏) -->
-    <section class="mb-16">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold flex items-center gap-2">
-          <Clock class="w-6 h-6 text-primary" />
-          最近使用
-        </h2>
-        <button 
-          v-if="recentTools.length > 0"
-          class="text-sm text-muted-foreground hover:text-primary flex items-center gap-1"
-          @click="clearRecentToolsHandler"
-        >
-          <Trash2 class="w-4 h-4" />
-          清空记录
-        </button>
-      </div>
-      
-      <div v-if="recentTools.length > 0" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-        <NuxtLink
-          v-for="tool in recentTools"
-          :key="tool.id"
-          :to="`/tools/${tool.id}/`"
-          class="group relative block"
-          @click="addRecentTool(tool.id)"
-        >
-          <div class="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-4 hover:bg-card/60 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group h-full">
-            <div class="flex flex-col items-center text-center h-full">
-              <component
-                :is="getIconComponent(tool.icon, tool.category)"
-                class="w-8 h-8 mb-2 transition-transform group-hover:scale-110"
-                :style="{ color: getCategoryColor(tool.category).icon }"
-              />
-              <span class="text-sm font-medium truncate w-full">{{ tool.name }}</span>
+        <div class="relative max-w-2xl mx-auto">
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
+              <Search class="w-5 h-5 text-muted-foreground" />
+            </div>
+            <input
+              v-model="searchQuery"
+              type="text"
+              class="block w-full rounded-xl border border-border/60 bg-card/40 backdrop-blur-sm pl-11 pr-24 py-4 text-base placeholder:text-muted-foreground/60 transition-all duration-200 focus:border-primary/50 focus:outline-none"
+              placeholder="搜索你需要的工具，如 Markdown、JSON、MD5、正则、图片…"
+              @keydown.enter="handleSearchEnter"
+            >
+            <div class="absolute inset-y-0 right-0 pr-3 flex items-center gap-2">
+              <button
+                class="text-xs text-muted-foreground/60 bg-background/80 border border-border/40 px-2 py-1.5 rounded-lg hover:bg-primary/10 hover:text-primary transition-colors"
+                title="检测剪贴板内容"
+                @click="detectClipboardContent"
+              >
+                <Clipboard class="w-3 h-3" />
+              </button>
+              <span class="hidden sm:inline-flex items-center gap-1 text-xs text-muted-foreground/60 font-mono bg-background/80 border border-border/40 px-2 py-1.5 rounded-lg">
+                <kbd class="text-[11px] font-semibold bg-muted/50 px-1.5 py-0.5 rounded border border-border/30">⌘</kbd>
+                <kbd class="text-[11px] font-semibold bg-muted/50 px-1.5 py-0.5 rounded border border-border/30">K</kbd>
+              </span>
             </div>
           </div>
-        </NuxtLink>
-      </div>
 
-      <!-- 新用户显示推荐工具 -->
-      <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-        <NuxtLink
-          v-for="tool in recommendedTools"
-          :key="tool.id"
-          :to="`/tools/${tool.id}/`"
-          class="group relative block"
-          @click="addRecentTool(tool.id)"
-        >
-          <div class="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-4 hover:bg-card/60 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group h-full">
-            <div class="flex flex-col items-center text-center h-full">
+          <!-- 即时搜索结果 -->
+          <div
+            v-if="searchResults.length > 0"
+            class="absolute z-20 left-0 right-0 top-full mt-2 rounded-xl border border-border bg-card text-left shadow-elevation-3 overflow-hidden"
+          >
+            <NuxtLink
+              v-for="tool in searchResults"
+              :key="tool.id"
+              :to="`/tools/${tool.id}/`"
+              class="flex items-center gap-3 px-4 py-2.5 hover:bg-muted/60 transition-colors"
+              @click="addRecentTool(tool.id)"
+            >
               <component
-                :is="getIconComponent(tool.icon, tool.category)"
-                class="w-8 h-8 mb-2 transition-transform group-hover:scale-110"
+                :is="resolveToolIcon(tool.icon, tool.category)"
+                class="w-4 h-4 flex-shrink-0"
                 :style="{ color: getCategoryColor(tool.category).icon }"
               />
-              <span class="text-sm font-medium truncate w-full">{{ tool.name }}</span>
+              <span class="text-sm font-medium truncate">{{ tool.name }}</span>
+              <span class="text-xs text-muted-foreground truncate ml-auto hidden sm:block">{{ tool.description }}</span>
+            </NuxtLink>
+            <button
+              class="w-full text-left text-xs text-primary px-4 py-2.5 border-t border-border hover:bg-muted/60 transition-colors"
+              @click="handleSearchEnter"
+            >
+              查看全部结果 →
+            </button>
+          </div>
+        </div>
+
+        <!-- 智能粘贴提示 -->
+        <div
+          v-if="clipboardSuggestion"
+          class="max-w-2xl mx-auto mt-4 p-3 bg-primary/10 border border-primary/20 rounded-lg flex items-center justify-between text-left"
+        >
+          <div class="text-sm">
+            <span class="text-primary">检测到剪贴板包含 {{ clipboardSuggestion.type }} 数据，</span>
+            <button class="text-primary font-medium underline ml-1" @click="goToTool(clipboardSuggestion.toolId)">
+              是否打开 {{ clipboardSuggestion.toolName }}？
+            </button>
+          </div>
+          <button class="text-muted-foreground hover:text-foreground" @click="dismissClipboardSuggestion">
+            <X class="w-4 h-4" />
+          </button>
+        </div>
+
+        <!-- 最近使用：轻量文字链，不渲染卡片 -->
+        <div v-if="recentTools.length > 0" class="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+          <Clock class="w-3.5 h-3.5" />
+          <span>最近使用：</span>
+          <NuxtLink
+            v-for="tool in recentTools"
+            :key="tool.id"
+            :to="`/tools/${tool.id}/`"
+            class="hover:text-primary transition-colors"
+            @click="addRecentTool(tool.id)"
+          >{{ tool.name }}</NuxtLink>
+          <NuxtLink to="/recent/" class="text-primary hover:underline">全部 →</NuxtLink>
+        </div>
+      </div>
+    </section>
+
+    <!-- 精选工具 -->
+    <section class="mb-14">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-h1 flex items-center gap-2">
+          <LayoutGrid class="w-5 h-5 text-primary" />
+          精选工具
+        </h2>
+        <NuxtLink to="/all/" class="text-sm text-muted-foreground hover:text-primary flex items-center gap-1">
+          查看全部 {{ tools.length }} 款 <ArrowRight class="w-4 h-4" />
+        </NuxtLink>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <NuxtLink
+          v-for="tool in featuredTools"
+          :key="tool.id"
+          :to="`/tools/${tool.id}/`"
+          class="group block"
+          @click="addRecentTool(tool.id)"
+        >
+          <div class="h-full bg-card/40 border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-2 hover:-translate-y-0.5 transition-all duration-200">
+            <div class="flex items-center gap-3 mb-3">
+              <component
+                :is="resolveToolIcon(tool.icon, tool.category)"
+                class="w-6 h-6 group-hover:scale-110 transition-transform"
+                :style="{ color: getCategoryColor(tool.category).icon }"
+              />
+              <span
+                v-if="getToolBadge(tool)"
+                :class="['text-[10px] px-1.5 py-0.5 rounded-full', getToolBadge(tool).class]"
+              >{{ getToolBadge(tool).label }}</span>
             </div>
+            <h3 class="font-semibold mb-1.5 group-hover:text-primary transition-colors">{{ tool.name }}</h3>
+            <p class="text-sm text-muted-foreground line-clamp-2">{{ tool.description }}</p>
           </div>
         </NuxtLink>
       </div>
     </section>
-    
-    <!-- 分类导航展架 -->
-    <section class="mb-16">
-      <div 
-        v-for="category in categoriesWithTools" 
-        :key="category.id"
-        class="mb-12 scroll-mt-24"
-        :id="`category-${category.id}`"
-      >
-        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+
+    <!-- 分类快捷入口 -->
+    <section class="mb-14">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-h1">按分类浏览</h2>
+        <NuxtLink to="/explore/" class="text-sm text-muted-foreground hover:text-primary flex items-center gap-1">
+          工具探索 <ArrowRight class="w-4 h-4" />
+        </NuxtLink>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <NuxtLink
+          v-for="category in categoriesWithCount"
+          :key="category.id"
+          :to="`/${category.id}/`"
+          class="inline-flex items-center gap-2 text-sm px-3.5 py-2 rounded-lg border border-border/60 bg-card/30 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-1 transition-all"
+        >
           <component
-            :is="getIconComponent(category.icon, category.id)"
-            class="w-6 h-6"
+            :is="resolveToolIcon(category.icon, category.id)"
+            class="w-4 h-4"
             :style="{ color: getCategoryColor(category.id).icon }"
           />
           {{ category.name }}
+          <span class="text-xs text-muted-foreground">{{ category.count }}</span>
+        </NuxtLink>
+      </div>
+    </section>
+
+    <!-- 场景专题 -->
+    <section class="mb-14">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-h1 flex items-center gap-2">
+          <FolderHeart class="w-5 h-5 text-primary" />
+          场景专题
         </h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <NuxtLink
-            v-for="tool in category.tools.slice(0, 6)"
-            :key="tool.id"
-            :to="`/tools/${tool.id}/`"
-            class="group relative block"
-            @click="addRecentTool(tool.id)"
-          >
-            <div class="bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-2 transition-all duration-200 cursor-pointer group h-full">
-              <div class="flex justify-between items-start mb-3">
-                <component
-                  :is="getIconComponent(tool.icon, tool.category)"
-                  class="w-8 h-8 group-hover:scale-110 transition-transform"
-                  :style="{ color: getCategoryColor(tool.category).icon }"
-                />
-                <span
-                  v-if="getToolBadge(tool)"
-                  :class="[
-                    'text-xs px-2 py-1 rounded-full',
-                    getToolBadge(tool).class
-                  ]"
-                >
-                  {{ getToolBadge(tool).label }}
-                </span>
-              </div>
-              <h3 class="font-semibold mb-2">{{ tool.name }}</h3>
-              <p class="text-sm text-muted-foreground">{{ tool.description }}</p>
+        <NuxtLink to="/collections/" class="text-sm text-muted-foreground hover:text-primary flex items-center gap-1">
+          全部专题 <ArrowRight class="w-4 h-4" />
+        </NuxtLink>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <NuxtLink
+          v-for="col in featuredCollections"
+          :key="col.slug"
+          :to="`/collections/${col.slug}/`"
+          class="group block"
+        >
+          <div class="h-full bg-card/40 border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-1 transition-all">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <h3 class="font-semibold group-hover:text-primary transition-colors">{{ col.title }}</h3>
+              <span class="text-xs text-muted-foreground whitespace-nowrap">{{ col.tools.length }} 个工具</span>
             </div>
-          </NuxtLink>
-        </div>
+            <p class="text-sm text-muted-foreground line-clamp-2">{{ col.description }}</p>
+          </div>
+        </NuxtLink>
       </div>
     </section>
-    
-    <!-- 特性与信任背书 -->
-    <section class="mb-16">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-card border border-border rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-            <Lock class="w-6 h-6 text-primary" />
-          </div>
-          <h3 class="font-semibold mb-2">纯本地计算</h3>
-          <p class="text-sm text-muted-foreground">您的数据不会上传到服务器，所有计算均在浏览器本地完成，安全隐私。</p>
-        </div>
-        
-        <div class="bg-card border border-border rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-            <Zap class="w-6 h-6 text-primary" />
-          </div>
-          <h3 class="font-semibold mb-2">极速响应</h3>
-          <p class="text-sm text-muted-foreground">WebAssembly加速，毫秒级处理速度，无需等待服务器响应。</p>
-        </div>
-        
-        <div class="bg-card border border-border rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-            <Heart class="w-6 h-6 text-primary" />
-          </div>
-          <h3 class="font-semibold mb-2">开源免费</h3>
-          <p class="text-sm text-muted-foreground">无广告，社区驱动，永久免费，GitHub开源项目。</p>
-        </div>
-      </div>
-    </section>
+
+    <!-- 信任背书：单行 -->
+    <footer class="border-t border-border/60 pt-6 pb-2 text-center text-sm text-muted-foreground">
+      纯本地计算，数据不上传 · 开源免费 · 无广告 · 共 {{ tools.length }} 款工具
+    </footer>
   </div>
 </template>
 
 <script setup>
-import { getToolBadge } from '~/utils/toolBadges'
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import {
-  Search, Clock, Trash2, X, Lock, Zap, Heart,
-  FileJson, FileText, Database, Link, Hash, Timer, Regex, FileDiff,
-  Globe, FolderOpen, GitBranch, Type, Wifi, Image, Code,
-  Shield, Layout, Clipboard
-} from 'lucide-vue-next'
+import { Search, Clipboard, X, Clock, LayoutGrid, ArrowRight, FolderHeart } from 'lucide-vue-next'
 import { categories } from '~/data/categories'
 import { tools } from '~/data/tools'
-import { initToolsData, getRecentTools, addRecentTool, clearRecentTools } from '~/composables/useTools'
-import { siteConfig } from '~/data/site'
+import { collections } from '~/data/collections'
+import { initToolsData, getRecentTools, addRecentTool } from '~/composables/useTools'
 import { resolveToolIcon } from '~/utils/toolIcons'
+import { getCategoryColor } from '~/utils/categoryColors'
+import { getToolBadge } from '~/utils/toolBadges'
 
-const router = useRouter()
-
-// 初始化工具数据
 initToolsData()
 
-// 设置页面标题和SEO元数据
+const router = useRouter()
+const searchQuery = ref('')
+const clipboardSuggestion = ref(null)
+
+const description = `为开发者打造的免费工具箱。JSON格式化、Base64编解码、正则表达式测试、MD5加密、时间戳转换、JWT解码等 ${tools.length} 款工具。纯本地计算，数据不上传，安全高效。`
+
 useHead({
   title: '开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT - 有条工具',
   meta: [
+    { name: 'description', content: description },
     { property: 'og:title', content: '开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT - 有条工具' },
-    { property: 'og:description', content: '为开发者打造的免费工具箱。JSON格式化、Base64编解码、正则表达式测试、MD5加密、时间戳转换、JWT解码、Cron表达式生成等100+工具。纯本地计算，数据不上传，安全高效。' },
+    { property: 'og:description', content: description },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://www.util.cn/' },
     { property: 'og:image', content: 'https://www.util.cn/logo.png' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: '开发者工具箱 - JSON格式化 Base64 正则 MD5 JWT - 有条工具' },
-    { name: 'twitter:description', content: '为开发者打造的免费工具箱。JSON格式化、Base64编解码、正则表达式测试、MD5加密、时间戳转换、JWT解码、Cron表达式生成等100+工具。纯本地计算，数据不上传，安全高效。' }
+    { name: 'twitter:description', content: description }
   ]
 })
 
-// 数据状态
-const searchQuery = ref('')
-const clipboardSuggestion = ref(null)
-
-// 热门标签
-const popularTags = ref([
-  'Markdown编辑器',
-  '时间戳转换',
-  'MD5生成器',
-  'Cron生成器',
-  'JWT解码',
-  '图片尺寸调整'
-])
-
-// 推荐工具（新用户）
-const recommendedTools = computed(() => {
-  // 选择一些热门工具作为推荐
-  return tools.filter(tool => tool.hot).slice(0, 6)
+const searchResults = computed(() => {
+  const q = String(searchQuery.value || '').trim().toLowerCase()
+  if (!q) return []
+  return tools.filter(tool =>
+    String(tool.name || '').toLowerCase().includes(q) ||
+    String(tool.description || '').toLowerCase().includes(q) ||
+    (tool.keywords || []).some(k => String(k || '').toLowerCase().includes(q)) ||
+    (tool.tags || []).some(k => String(k || '').toLowerCase().includes(q))
+  ).slice(0, 6)
 })
 
-// 最近使用的工具
-const recentTools = computed(() => {
-  return getRecentTools()
-    .map(id => tools.find(tool => tool.id === id))
-    .filter(Boolean)
-    .slice(0, 6)
-})
+const featuredTools = computed(() => tools.filter(tool => tool.hot).slice(0, 8))
 
-// 分类及工具
-const categoriesWithTools = computed(() => {
-  return categories.map(category => ({
+const categoriesWithCount = computed(() => categories
+  .map(category => ({
     ...category,
-    tools: tools.filter(tool => tool.category === category.id)
+    count: tools.filter(tool => tool.category === category.id).length
   }))
-})
+  .sort((a, b) => (a.sort || 0) - (b.sort || 0))
+)
 
-// 搜索输入引用
-const searchInput = ref(null)
+const featuredCollections = computed(() => collections.slice(0, 4))
 
-// 处理搜索
-const handleSearch = (event) => {
-  searchQuery.value = event.target.value
-}
+const recentTools = computed(() => getRecentTools()
+  .map(id => tools.find(tool => tool.id === id))
+  .filter(Boolean)
+  .slice(0, 5)
+)
 
-// 处理回车搜索
 const handleSearchEnter = () => {
-  if (searchQuery.value.trim()) {
-    // 跳转到搜索结果页面或过滤工具
-    router.push(`/all/?search=${encodeURIComponent(searchQuery.value)}`)
-  }
+  const q = String(searchQuery.value || '').trim()
+  if (q) router.push(`/all/?search=${encodeURIComponent(q)}`)
 }
 
-// 设置搜索词
-const setSearchTerm = (term) => {
-  searchQuery.value = term
-  handleSearchEnter()
-}
-
-// 跳转到工具
 const goToTool = (toolId) => {
   const tool = tools.find(t => t.id === toolId)
-  if (tool) {
-    // 使用目录结构格式
-    const toolUrl = `/tools/${tool.id}/`
-    router.push(toolUrl)
-    addRecentTool(tool.id)
-  }
+  if (!tool) return
+  router.push(`/tools/${tool.id}/`)
+  addRecentTool(tool.id)
 }
 
-
-// 清空最近使用的工具
-const clearRecentToolsHandler = () => {
-  clearRecentTools()
-}
-
-// 关闭剪贴板提示
 const dismissClipboardSuggestion = () => {
   clipboardSuggestion.value = null
 }
 
-// 获取图标组件
-const getIconComponent = (iconName, categoryId) => {
-  return resolveToolIcon(iconName, categoryId)
-}
-
-// 导入通用颜色配置
-import { getCategoryColor as getCatColor } from '~/utils/categoryColors'
-
-// 获取分类对应的霓虹色彩
-const getCategoryColor = getCatColor
-
-// 检测剪贴板内容（仅在用户主动交互时调用）
+// 仅在用户主动点击时读取剪贴板：不再全局监听 paste，避免干扰搜索框输入
 const detectClipboardContent = async () => {
-  // 只有在用户上下文中（如点击、粘贴事件）才尝试读取剪贴板
-  if (!navigator.clipboard || !window.isSecureContext) {
-    console.log('当前环境不支持剪贴板API')
-    return
-  }
-
+  if (typeof window === 'undefined' || !navigator.clipboard || !window.isSecureContext) return
   try {
-    const text = await navigator.clipboard.readText()
+    const text = (await navigator.clipboard.readText()).trim()
+    if (!text) return
 
-    // 检测不同类型的内容
-    if (text.startsWith('{') && text.endsWith('}')) {
+    if ((text.startsWith('{') && text.endsWith('}')) || (text.startsWith('[') && text.endsWith(']'))) {
       try {
         JSON.parse(text)
-        clipboardSuggestion.value = {
-          type: 'JSON',
-          toolId: 'json-formatter',
-          toolName: 'JSON格式化'
-        }
+        clipboardSuggestion.value = { type: 'JSON', toolId: 'json-formatter', toolName: 'JSON格式化' }
         return
-      } catch (e) {
-        // 不是有效的JSON
-      }
+      } catch (e) { /* 非合法 JSON，继续检测其它类型 */ }
     }
 
-    // 检测时间戳
+    if (text.startsWith('eyJ') && text.split('.').length === 3) {
+      clipboardSuggestion.value = { type: 'JWT', toolId: 'jwt-decoder', toolName: 'JWT解码' }
+      return
+    }
+
     if (/^\d{10,13}$/.test(text)) {
-      clipboardSuggestion.value = {
-        type: '时间戳',
-        toolId: 'unix-timestamp',
-        toolName: 'Unix时间戳转换'
-      }
+      clipboardSuggestion.value = { type: '时间戳', toolId: 'unix-timestamp', toolName: 'Unix时间戳转换' }
       return
     }
 
-    // 检测Base64
-    if (/^[A-Za-z0-9+/]*={0,2}$/.test(text) && text.length > 10) {
-      clipboardSuggestion.value = {
-        type: 'Base64',
-        toolId: 'base64-encoder',
-        toolName: 'Base64编码/解码'
+    // Base64：要求长度 ≥16、4 的倍数、字母与数字/符号混合，且能真正解码
+    if (text.length >= 16 && text.length % 4 === 0 && /^[A-Za-z0-9+/]+={0,2}$/.test(text)) {
+      if (/[A-Za-z]/.test(text) && /[0-9+/=]/.test(text)) {
+        try {
+          if (atob(text).length > 0) {
+            clipboardSuggestion.value = { type: 'Base64', toolId: 'base64-encoder', toolName: 'Base64编码/解码' }
+          }
+        } catch (e) { /* 无法解码，不是 Base64 */ }
       }
-      return
-    }
-
-    // 检测JWT
-    if (text.startsWith('eyJ') && text.includes('.')) {
-      clipboardSuggestion.value = {
-        type: 'JWT',
-        toolId: 'jwt-decoder',
-        toolName: 'JWT解码'
-      }
-      return
     }
   } catch (error) {
-    // 用户拒绝权限或其他错误，静默处理
-    console.log('剪贴板访问被拒绝或不支持:', error.message)
+    // 用户拒绝剪贴板权限，静默处理
   }
 }
-
-// 处理粘贴事件
-const handlePaste = (event) => {
-  // 延迟一段时间后检测剪贴板内容
-  setTimeout(detectClipboardContent, 100)
-}
-
-// 在组件挂载时初始化
-onMounted(() => {
-  // 添加粘贴事件监听器
-  window.addEventListener('paste', handlePaste)
-
-  // 移除页面加载时自动检测剪贴板的功能
-  // detectClipboardContent()  // 注释掉自动检测
-})
-
-// 在组件卸载时移除事件监听器
-onUnmounted(() => {
-  window.removeEventListener('paste', handlePaste)
-})
 </script>
-
-<style scoped></style>
