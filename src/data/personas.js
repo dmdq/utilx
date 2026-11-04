@@ -172,6 +172,8 @@ export const personas = [
       { task: '压缩打包与格式转换', tools: ['zip-viewer', 'file-merge-split', 'base64-file-converter', 'file-encoding-converter'] },
       { task: '时间与日期换算', tools: ['date-diff', 'date-calculator', 'workday-calculator', 'work-hours-calculator', 'timestamp-convert'] },
       { task: '中英文排版与字数', tools: ['chinese-typography-linter', 'text-counter', 'text-statistics'] },
+      { task: '排版红头公文与发文笺', tools: ['official-document-generator'] },
+      { task: '制作电子印章与姓名章预览', tools: ['seal-maker-online'] },
     ],
   },
   {
@@ -188,6 +190,7 @@ export const personas = [
       { task: '批量通知与话术', tools: ['mail-merge-tool', 'review-reply-generator'] },
       { task: '招聘测评与打字速度', tools: ['typing-test', 'keyboard-test'] },
       { task: '办公空间与工位安排', tools: ['seating-arranger', 'seating-chart-generator', 'meeting-table-card'] },
+      { task: '起草授权委托书与保密协议', tools: ['legal-doc-generator'] },
     ],
   },
   {
@@ -290,6 +293,7 @@ export const personas = [
       { task: '借贷利率是否超红线', tools: ['labor-severance-calculator'] },
       { task: '诉讼时效天数计算', tools: ['statute-limitations-calculator'] },
       { task: '法院诉讼费预估', tools: ['court-fee-calculator', 'statute-limitations-calculator'] },
+      { task: '起草租房合同、授权书等法律文书', tools: ['legal-doc-generator'] },
     ],
   },
   {

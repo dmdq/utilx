@@ -1,15 +1,15 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：777 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：780 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 777 款工具完整目录
-- [场景专题](https://www.util.cn/collections/): 19 个按使用场景组织的工具组合
+- [全部工具](https://www.util.cn/all/): 780 款工具完整目录
+- [场景专题](https://www.util.cn/collections/): 21 个按使用场景组织的工具组合
 - [按职业找工具](https://www.util.cn/professions/): 29 张职业工具卡，按任务对应工具
-- [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 392 篇工具教程与实践文章
+- [AI 百科](https://www.util.cn/wiki/): 40 条大模型相关词条
+- [技术博客](https://www.util.cn/blog/): 394 篇工具教程与实践文章
 
 ## 工具分类
 
@@ -23,9 +23,9 @@
 - [网络工具（33款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
 - [图像处理（51款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
 - [开发辅助（109款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
-- [设计工具（56款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
+- [设计工具（57款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（61款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [其他工具（63款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（53款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
 - [金融工具（47款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（47款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
@@ -604,6 +604,7 @@
 - [名片生成器](https://www.util.cn/tools/business-card-generator/): 90×54mm 标准 300dpi 名片正反面设计，出血线安全线预览，PNG 直接送印
 - [电子请柬生成器](https://www.util.cn/tools/invitation-card-maker/): 婚礼满月乔迁升学宴四场景请柬，六套配色长图导出与微信文本版一键复制
 - [海报生成器](https://www.util.cn/tools/poster-generator/): 促销招聘课程三场景海报，六套配色与三种装饰，Canvas 长图导出可带二维码
+- [印章生成器](https://www.util.cn/tools/seal-maker-online/): 圆章/椭圆章/姓名章 Canvas 绘制，弧形文字与做旧质感，导出透明底 PNG，仅供排版预览
 
 ## 安全工具
 
@@ -698,6 +699,8 @@
 - [十字绣尺寸计算器](https://www.util.cn/tools/cross-stitch-calculator/): 格数与布频算绣面裁布尺寸、用线估算、绣绷吸附与装裱框档建议
 - [毛线用量估算器](https://www.util.cn/tools/knitting-yarn-calculator/): 部位清单算织物面积，克重密度档估算用线量与团数，两/克双显
 - [模型比例换算器](https://www.util.cn/tools/model-scale-calculator/): 实物与模型尺寸双向换算，1:35 到 1:700 全档，铁模轨距专区
+- [法律文书生成器](https://www.util.cn/tools/legal-doc-generator/): 租房合同、授权委托书、保密协议等 5 套文书模板填空即用，实时预览与打印，条款骨架完整
+- [公文红头排版生成器](https://www.util.cn/tools/official-document-generator/): 按 GB/T 9704 惯用口径排红头、文号、红色分隔线与正文，A4 打印即出，机关风格发文笺
 
 ## 健康工具
 
@@ -876,6 +879,8 @@
 - [打工人维权计算器](https://www.util.cn/collections/rights-guard-kit/): 离职补偿 N/N+1、加班费、年假天数、社保公积金、诉讼时效与诉讼费——打工人要算的账一次算清，全部本地计算不上传。
 - [健康与运动仪表台](https://www.util.cn/collections/fitness-health-desk/): BMI、体脂、基础代谢、每日热量缺口、心率区间、饮水量、1RM 与 HIIT 计时——把身体数据算明白再练，全部本地计算。
 - [PDF 处理工作台](https://www.util.cn/collections/pdf-workbench/): 合并拆分、压缩瘦身、加水印、签名、页码、整理页序、转图片、提取文本——一套 PDF 处理流程全在浏览器本地完成，文件不出电脑。
+- [电商卖家促销工作台](https://www.util.cn/collections/seller-promo-desk/): 满减算到肉、大促到手价、SKU 组合、标题组合与评论抽奖——活动策划前后的账都在浏览器里算完，定价策略不拍脑袋。
+- [音乐与音频创作台](https://www.util.cn/collections/audio-creator-kit/): 录音降噪、剪音频、变调变速、和弦图、音程听辨、节拍器调音器——从练习到成品的音频工具全在浏览器本地跑，素材不出电脑。
 
 ## 按职业找工具
 
@@ -887,14 +892,14 @@
 - [K12 学生与家长工具箱](https://www.util.cn/professions/student-k12/): 小学到高中学生和陪学的家长：9 条核心任务对应 28 款工具
 - [大学生/考研考公工具箱](https://www.util.cn/professions/student-college/): 大学在读与备考深造的学生：8 条核心任务对应 20 款工具
 - [中小学教师工具箱](https://www.util.cn/professions/teacher/): 备课排课管班级的任课与班主任：8 条核心任务对应 21 款工具
-- [通用办公文员/行政工具箱](https://www.util.cn/professions/office-clerk/): 每天和文档表格邮件打交道的办公室职员：9 条核心任务对应 43 款工具
-- [HR/行政主管工具箱](https://www.util.cn/professions/hr-admin/): 管人事、薪酬、考勤与办公室事务的人力行政：7 条核心任务对应 17 款工具
+- [通用办公文员/行政工具箱](https://www.util.cn/professions/office-clerk/): 每天和文档表格邮件打交道的办公室职员：11 条核心任务对应 45 款工具
+- [HR/行政主管工具箱](https://www.util.cn/professions/hr-admin/): 管人事、薪酬、考勤与办公室事务的人力行政：8 条核心任务对应 18 款工具
 - [个人/家庭理财工具箱](https://www.util.cn/professions/finance-personal/): 管家庭收支、存款保险与长期规划的个人：8 条核心任务对应 25 款工具
 - [财务/会计/出纳工具箱](https://www.util.cn/professions/finance-pro/): 做账开票报税的企业财务人员：7 条核心任务对应 17 款工具
 - [电商卖家/运营工具箱](https://www.util.cn/professions/ecommerce-seller/): 开网店做运营推广的卖家与运营：8 条核心任务对应 24 款工具
 - [自媒体/短视频创作者工具箱](https://www.util.cn/professions/content-creator/): 做短视频、直播、图文的内容创作者：8 条核心任务对应 24 款工具
 - [作家/编辑/文案工具箱](https://www.util.cn/professions/writer-editor/): 写长文、编稿子、做校对的文字工作者：9 条核心任务对应 26 款工具
-- [劳动者/法律需求个人工具箱](https://www.util.cn/professions/legal-labor/): 遇到借贷、离职、维权等法律 adjacent 事务的个人：8 条核心任务对应 10 款工具
+- [劳动者/法律需求个人工具箱](https://www.util.cn/professions/legal-labor/): 遇到借贷、离职、维权等法律 adjacent 事务的个人：9 条核心任务对应 11 款工具
 - [电工/电气安装工具箱](https://www.util.cn/professions/electrician/): 跑现场布线、配电、维修的电工与电气爱好者：10 条核心任务对应 12 款工具
 - [机修/机加/五金工具箱](https://www.util.cn/professions/mechanic/): 做机加工、设备维修与五金装配的技工：8 条核心任务对应 7 款工具
 - [建筑施工/装修/木工工具箱](https://www.util.cn/professions/construction/): 做施工、装修与木作的从业者与自建房主：9 条核心任务对应 9 款工具
@@ -931,9 +936,31 @@
 - [RAG（检索增强生成）](https://www.util.cn/wiki/rag/): RAG 先从知识库检索相关资料、再让模型基于资料回答，用外部知识弥补模型训练数据的时效与私有性缺口，同时显著降低幻觉。
 - [Embedding（向量化）](https://www.util.cn/wiki/embedding/): Embedding 模型把文本映射为高维向量，语义相近的文本向量距离也相近——它是语义搜索、RAG、聚类推荐的底层组件。
 - [本地推理引擎（Ollama / llama.cpp / LM Studio）](https://www.util.cn/wiki/inference-engine/): 本地推理引擎负责把 GGUF 等格式的模型高效跑在你的硬件上：llama.cpp 是底层核心，Ollama 和 LM Studio 是它之上的两种典型封装——命令行服务化与图形界面。
+- [公差配合（Tolerance & Fit）](https://www.util.cn/wiki/tolerance-fit/): 公差配合是孔与轴装配时允许的尺寸偏差制度，由公差等级（IT01-IT18）和配合性质（间隙、过渡、过盈）共同决定，现行国标 GB/T 1800 与 ISO 286 对应。
+- [齿轮模数（Gear Module）](https://www.util.cn/wiki/gear-module/): 齿轮模数是分度圆直径与齿数之比（m=d/z），单位毫米，决定轮齿大小和承载能力。一对啮合的齿轮模数必须相同，否则无法正确啮合。
+- [硬度 HRC（洛氏硬度 C 标尺）](https://www.util.cn/wiki/hardness-hrc/): HRC 是洛氏硬度 C 标尺的记号：金刚石压头在 150kgf 总试验力下压入试样，按残余压入深度定值，量程约 20-70，数字越大越硬，是淬火件检验的通用口径。
+- [轴承代号（如 6204）](https://www.util.cn/wiki/bearing-code/): 滚动轴承基本代号由类型代号、尺寸系列和内径代号组成：如 6204 表示深沟球轴承、(0)2 尺寸系列、内径 20mm——末两位乘 5 就是内径毫米数。
+- [桥架填充率（Cable Tray Fill）](https://www.util.cn/wiki/cable-tray-fill/): 桥架填充率指桥架内电缆总截面占桥架横截面的比例，现行规范口径为电力电缆不超过 40%、控制电缆不超过 50%，给散热、施工和后期扩容留余量。
+- [星三角启动（Star-Delta Starting）](https://www.util.cn/wiki/star-delta-starting/): 星三角启动是鼠笼电机的降压启动方式：启动时绕组接成星形，每相电压降为额定的 1/√3，启动电流与转矩都降为直接启动的 1/3，接近额定转速后再切回三角形运行。
+- [功率因数补偿（Power Factor Compensation）](https://www.util.cn/wiki/power-factor-compensation/): 功率因数补偿是用并联电容器就地供给感性负载所需的无功，把功率因数从 0.7-0.8 提到 0.9 以上，从而降低线路损耗、释放变压器容量并避免力调电费罚款。
+- [ND 减光镜（ND Filter）](https://www.util.cn/wiki/nd-filter/): ND 减光镜是均匀削弱进光量而不改变色彩的中性灰滤镜，ND2 减 1 档、ND8 减 3 档、ND64 减 6 档，用于强光下开大光圈或拖长快门拍流水、车轨与云层。
+- [诉讼时效（Statute of Limitations）](https://www.util.cn/wiki/statute-of-limitations/): 诉讼时效是权利人不在法定期间内行使权利将丧失胜诉权的制度：一般民事权利为三年（民法典第 188 条），自知道或应当知道权利受损及义务人之日起算。
+- [案件受理费（Court Acceptance Fee）](https://www.util.cn/wiki/court-acceptance-fee/): 案件受理费是起诉时按标的额分档累计交纳的法院费用，依据《诉讼费用交纳办法》：财产案件 1 万元以下每件 50 元，1 万至 10 万部分按 2.5%，档位越高费率递减。
+- [离职补偿 N / N+1 / 2N](https://www.util.cn/wiki/severance-pay-n-n1/): N 是按工作年限每满一年补一个月工资的经济补偿；N+1 多出的是未提前 30 日书面通知解除的代通知金；2N 是违法解除时的赔偿金标准。以下为一般口径，个案咨询律师。
+- [加班费倍率（Overtime Pay Rate）](https://www.util.cn/wiki/overtime-pay-rate/): 加班费法定倍率：工作日延长工时 150%、休息日加班又不能补休 200%、法定节假日 300%，计算基数按劳动合同约定的工资标准。以下为一般口径，个案咨询律师。
+- [年假天数（Annual Leave）](https://www.util.cn/wiki/annual-leave-days/): 职工累计工作满 1 年不满 10 年年休假 5 天，满 10 年不满 20 年 10 天，满 20 年 15 天；工龄跨单位累计，未休年假应按日工资 300% 折算报酬。以下为一般口径，个案咨询律师。
+- [社保缴费基数（Social Insurance Base）](https://www.util.cn/wiki/social-insurance-base/): 社保缴费基数是计算五险月缴费额的工资口径：按职工本人上年月平均工资核定，低于当地社平工资 60% 的按 60% 保底，高于 300% 的按 300% 封顶。
+- [体重指数（BMI）](https://www.util.cn/wiki/bmi/): BMI 是体重（kg）除以身高（m）平方的体重指数。我国成人标准：18.5-23.9 正常，24-27.9 超重，28 及以上为肥胖，是快速筛查体重健康度的通用指标。
+- [基础代谢率（BMR）](https://www.util.cn/wiki/bmr/): 基础代谢率 BMR 是清醒、静卧、空腹状态下维持呼吸心跳等生命活动的最低能耗，约占每日总消耗的 60%-70%，是制定减脂或增肌饮食量的计算起点。
+- [体脂率（Body Fat Rate）](https://www.util.cn/wiki/body-fat-rate/): 体脂率是脂肪重量占体重的百分比，比 BMI 更能反映真实胖瘦：男性较理想区间约 14%-17%、女性约 21%-24%，男性超 25%、女性超 32% 一般视为肥胖。
+- [靶心率与最大心率（Target Heart Rate）](https://www.util.cn/wiki/target-heart-rate/): 最大心率常用 220 减年龄估算，靶心率是锻炼时应维持的目标心率区间，一般取最大心率的 60%-80%：燃脂偏向 60%-70%，提升心肺耐力偏向 70%-85%。
+- [1RM 最大重复重量（One Rep Max）](https://www.util.cn/wiki/one-rep-max/): 1RM 是标准动作下只能完成一次的最大重量，衡量绝对力量的通用指标。训练强度常按 1RM 百分比安排：85% 以上练力量，67%-85% 练增肌，67% 以下练耐力。
+- [每日总消耗（TDEE）](https://www.util.cn/wiki/tdee/): TDEE 是一天消耗的总能量，约等于基础代谢率乘以活动系数（1.2-1.9）。减脂期在其基础上亏空 300-500 kcal、增肌期盈余 200-300 kcal，是通用的温和调整幅度。
 
 ## 博客文章
 
+- [排版预览最缺的就是一颗章：三种章型与一条合规边界](https://www.util.cn/blog/articles/seal-maker-preview-guide/): 文档示意稿、活动物料、设计占位，内容都齐了就差一颗章——网图带水印、截图是糊的、求设计又开不了口。新上的印章生成器用 Canvas 本地画圆章、椭圆章、姓名章三种章型，边缘做旧、512×512 实时预览、导出 1024 透明底 PNG。先把话说在前头：仅供学习与排版预览，伪造公章违法。
+- [文书别再到处求模板：租房合同、授权委托书、红头发文一次排好](https://www.util.cn/blog/articles/legal-doc-official-format/): 租房想自己拟份对等的合同，给中介开授权书不知道权限怎么写，单位让排红头文件对着格式要求抓瞎——文书这件事难的不是写字，是骨架和版式。新上的法律文书生成器五套模板填空即用，公文红头排版生成器按 GB/T 9704 惯用口径出 A4 版式，全部本地生成。模板仅供参考，不构成法律意见。
 - [PDF 处理工作台：文件不出电脑，从合并到签名一条流水线](https://www.util.cn/blog/articles/pdf-toolkit-local-guide/): 工资条、租房合同、体检报告、孩子的学籍表——这些 PDF 最常见却又最不该被上传到陌生服务器。新的「PDF 处理工作台」专题把站内十款 PDF 工具按一条流水线排好：合并拆分、压缩瘦身、加水印、签名、补页码、提取文本，全程在浏览器本地完成，文件不出电脑。这篇按真实流程走一遍。
 - [健康与运动仪表台：体检报告、减脂缺口、跑步心率，一张台子算明白](https://www.util.cn/blog/articles/fitness-health-calculators/): 体检报告上的 BMI 箭头、减脂两个月纹丝不动的体重、跑步机上永远对不上的燃脂心率——多数健康焦虑卡在数字没算明白。新的「健康与运动仪表台」专题把 BMI、体脂、BMR、热量缺口、心率区间、饮水、1RM 十款计算器排成一张台子，三个真实场景带你走一遍，全部本地计算。
 - [打工人维权计算器合集：离职谈判、加班费、起诉前先算清这三本账](https://www.util.cn/blog/articles/legal-rights-calculators/): 被约谈协商解除时不知道 N 和 N+1 差多少，加班费按 1.5 倍还是 2 倍算不清，决定起诉前不知道时效还剩多久。新的「打工人维权计算器」专题把 8 款计算器按维权流程串成一条线，全部本地计算——谈判期间，这些数字最好不要经过任何第三方服务器。本文仅作一般性说明，不构成法律意见。

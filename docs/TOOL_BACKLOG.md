@@ -284,6 +284,10 @@ bitrate-calculator（视频码率/文件大小+OBS 推流档）· star-exposure-
 
 ---
 
+## 十九、第二十三批：聚合反推法（2026-11-05 调研并落地，全站 780 款）
+
+> 详 docs/TOOL_BATCH23_RESEARCH_2026-11-05.md。新方法：**经典 idea 全清单 × 注册表碰撞检测**（50 个高频 idea 中 28 个已有——重复造轮子是最大浪费）+ Bing 验证。主推 3 款全部落地：legal-doc-generator（法律文书 5 模板，「租房合同生成器」房源劫持真空）、official-document-generator（GB/T 9704 红头公文，语义劫持真空）、seal-maker-online（印章 Canvas 透明 PNG，8 家小站无垄断）。备选留池：derivative-calculator（MathDF/ToolV 两家成熟竞品）、五笔反查（码表重）。弃选重申：语音转文字/OCR/手写/植物辨识（云端或视觉模型违纯本地）、简历（饱和）。**本轮内容层并行**：RelatedTools 职业推荐位（组件级 777 页生效）、collections 16→21（维权/健康/PDF/电商/音频）、wiki 词条 20→40（新增工程/法律/健康三分类）。
+
 ## 批次记录
 
 ---

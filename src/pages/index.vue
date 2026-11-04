@@ -329,7 +329,7 @@ const categoryIndex = categories
 
 const featuredCollections = collections.slice(0, 6)
 const aiFeatured = aiTools.filter(t => t.featured).slice(0, 8)
-const wikiIndex = wikiCategories.map(name => ({
+const wikiIndex = wikiCategories.slice(0, 4).map(name => ({ // 首页右栏只展示前 4 个词条分类，完整索引在 /wiki/
   name,
   count: wikiTerms.filter(t => t.category === name).length,
   terms: wikiTerms.filter(t => t.category === name).slice(0, 3)

@@ -11704,5 +11704,50 @@ export const tools = [
     lastUpdated: '2026-11-05 00:00:00',
     tags: ['诉讼费', '案件受理费', '保全费'],
     keywords: ['诉讼费计算器', '法院收费标准', '案件受理费计算', '保全费计算', 'court fee calculator', '诉讼费 10 档']
+  },
+  {
+    id: 'legal-doc-generator',
+    name: '法律文书生成器',
+    description: '租房合同、授权委托书、保密协议等 5 套文书模板填空即用，实时预览与打印，条款骨架完整',
+    category: 'others',
+    icon: 'FileSignature',
+    viewCount: 600,
+    hot: false,
+    new: true,
+    local: true,
+    sortOrder: 2190,
+    lastUpdated: '2026-11-05 00:00:00',
+    tags: ['法律文书', '租房合同', '授权书', '文书模板'],
+    keywords: ['租房合同模板', '授权书生成器', '委托书模板', '保密协议模板', 'contract template generator', '法律文书模板']
+  },
+  {
+    id: 'official-document-generator',
+    name: '公文红头排版生成器',
+    description: '按 GB/T 9704 惯用口径排红头、文号、红色分隔线与正文，A4 打印即出，机关风格发文笺',
+    category: 'others',
+    icon: 'Landmark',
+    viewCount: 600,
+    hot: false,
+    new: true,
+    local: true,
+    sortOrder: 2200,
+    lastUpdated: '2026-11-05 00:00:00',
+    tags: ['红头文件', '公文排版', '发文笺', '公文格式'],
+    keywords: ['红头文件模板', '公文排版', '公文生成器', '红头文件生成', 'official document generator', '发文笺']
+  },
+  {
+    id: 'seal-maker-online',
+    name: '印章生成器',
+    description: '圆章/椭圆章/姓名章 Canvas 绘制，弧形文字与做旧质感，导出透明底 PNG，仅供排版预览',
+    category: 'design',
+    icon: 'Stamp',
+    viewCount: 600,
+    hot: false,
+    new: true,
+    local: true,
+    sortOrder: 2120,
+    lastUpdated: '2026-11-05 00:00:00',
+    tags: ['印章生成', '电子印章', '公章预览', '姓名章'],
+    keywords: ['印章生成器', '电子印章在线制作', '圆形公章生成', '椭圆章生成器', '个人姓名章', 'seal maker online', 'stamp generator']
   }
 ]

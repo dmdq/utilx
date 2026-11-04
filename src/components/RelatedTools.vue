@@ -2,6 +2,8 @@
 import { getToolBadge } from '~/utils/toolBadges'
 import { computed } from 'vue'
 import { tools } from '~/data/tools'
+import { personas } from '~/data/personas'
+import { resolveToolIcon } from '~/utils/toolIcons'
 import { useRouter } from 'vue-router'
 
 const props = defineProps({
@@ -16,6 +18,11 @@ const props = defineProps({
 })
 
 const router = useRouter()
+
+// 引用了当前工具的职业画像（personas.js 底账反向查询）
+const professionsUsing = computed(() =>
+  personas.filter(p => p.tasks.some(t => (t.tools || []).includes(props.currentToolId)))
+)
 
 // 相关工具推荐算法
 const relatedTools = computed(() => {
@@ -127,6 +134,22 @@ const goToTool = (toolId) => {
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
       </router-link>
+    </div>
+
+    <!-- 职业场景：哪些职业的工具卡引用了当前工具（personas.js 数据驱动，全站工具页自动生效） -->
+    <div v-if="professionsUsing.length > 0" class="mt-8 border-t border-border/40 pt-6">
+      <h3 class="text-sm font-semibold text-foreground mb-3">这张卡挂在哪些职业工具箱</h3>
+      <div class="flex flex-wrap gap-x-5 gap-y-2">
+        <NuxtLink
+          v-for="p in professionsUsing"
+          :key="p.id"
+          :to="`/professions/${p.id}/`"
+          class="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1.5"
+        >
+          <component :is="resolveToolIcon(p.icon, 'dev')" class="w-3.5 h-3.5" />
+          {{ p.name }}
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
