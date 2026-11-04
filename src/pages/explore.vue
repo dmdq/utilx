@@ -2,15 +2,47 @@
   <div class="max-w-8xl mx-auto py-8">
     <div class="mb-8">
       <h1 class="text-display text-foreground mb-2">工具探索</h1>
-      <p class="text-muted-foreground">发现和使用各种实用工具</p>
+      <p class="text-muted-foreground">按分类浏览全部 {{ categories.length }} 类工具，或从场景专题、标签与词条库按任务发现。</p>
     </div>
+
+    <!-- 按任务发现 -->
+    <section class="mb-10">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <NuxtLink to="/collections/" class="group flex items-center gap-3 p-4 bg-card border border-border rounded-xl hover:border-foreground/10 hover:shadow-elevation-1 transition-all">
+          <FolderHeart class="w-5 h-5 text-primary flex-shrink-0" />
+          <div class="min-w-0">
+            <h3 class="text-sm font-medium group-hover:text-primary transition-colors">场景专题</h3>
+            <p class="text-xs text-muted-foreground truncate">按任务编排的工具合集</p>
+          </div>
+        </NuxtLink>
+        <NuxtLink to="/tags/" class="group flex items-center gap-3 p-4 bg-card border border-border rounded-xl hover:border-foreground/10 hover:shadow-elevation-1 transition-all">
+          <Tag class="w-5 h-5 text-primary flex-shrink-0" />
+          <div class="min-w-0">
+            <h3 class="text-sm font-medium group-hover:text-primary transition-colors">标签导航</h3>
+            <p class="text-xs text-muted-foreground truncate">按功能标签检索工具</p>
+          </div>
+        </NuxtLink>
+        <NuxtLink to="/wiki/" class="group flex items-center gap-3 p-4 bg-card border border-border rounded-xl hover:border-foreground/10 hover:shadow-elevation-1 transition-all">
+          <BookOpen class="w-5 h-5 text-primary flex-shrink-0" />
+          <div class="min-w-0">
+            <h3 class="text-sm font-medium group-hover:text-primary transition-colors">技术词条库</h3>
+            <p class="text-xs text-muted-foreground truncate">概念解释与配套工具</p>
+          </div>
+        </NuxtLink>
+      </div>
+    </section>
 
     <!-- 分类导航 -->
     <section class="mb-12">
-      <h2 class="text-xl font-semibold mb-6 flex items-center gap-2">
-        <LayoutGrid class="w-5 h-5 text-primary" />
-        工具分类
-      </h2>
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-semibold flex items-center gap-2">
+          <LayoutGrid class="w-5 h-5 text-primary" />
+          工具分类
+        </h2>
+        <NuxtLink to="/all/" class="text-sm text-muted-foreground hover:text-primary flex items-center gap-1">
+          查看全部工具 <ArrowRight class="w-4 h-4" />
+        </NuxtLink>
+      </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div
@@ -25,9 +57,9 @@
               class="w-8 h-8 group-hover:scale-110 transition-transform"
               :style="{ color: getCategoryColor(category.id).icon }"
             />
-            <!-- <span class="text-sm bg-muted px-2 py-1 rounded-full">
+            <span class="text-xs text-muted-foreground bg-muted/60 px-2 py-1 rounded-full">
               {{ category.toolCount }} 个工具
-            </span> -->
+            </span>
           </div>
           <h3 class="font-semibold mb-2">{{ category.name }}</h3>
           <p class="text-sm text-muted-foreground">{{ category.description }}</p>
@@ -110,13 +142,12 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import {
-  LayoutGrid, Star, Clock, ArrowRight,
+  LayoutGrid, Star, Clock, ArrowRight, FolderHeart, Tag, BookOpen,
   FileJson, Database, Lock, Regex, Globe, Image as ImageIcon, Code,
   Calculator, FileText, Shield, Type, Wifi, BarChart, Heart, DollarSign, Zap,
   Dice6, Heart as CardIcon, Circle, Utensils, Hash, List, Palette, Calendar, Quote
 } from 'lucide-vue-next'
 import { getCategoryColor as getCatColor } from '~/utils/categoryColors'
-import { ChevronRight } from 'lucide-vue-next'
 import { categories } from '~/data/categories'
 import { tools } from '~/data/tools'
 import { initToolsData, getRecentTools, addRecentTool } from '~/composables/useTools'

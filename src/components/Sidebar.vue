@@ -51,6 +51,7 @@
     <div class="flex-1 overflow-y-auto no-scrollbar px-3 py-2 space-y-6">
       <!-- 主要页面导航 -->
       <div>
+        <h3 class="px-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2" :class="{ 'lg:hidden': collapsed }">导航</h3>
         <nav class="space-y-0.5">
           <!-- 首页 -->
           <NuxtLink
@@ -95,6 +96,20 @@
             <span :class="{ 'lg:hidden': collapsed }">我的收藏</span>
           </NuxtLink>
 
+          <!-- 最近使用 -->
+          <NuxtLink
+            to="/recent/"
+            class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
+            :class="[
+              $route.path === '/recent/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+              { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
+            ]"
+            @click="handleNavClick"
+          >
+            <Clock class="w-4 h-4" />
+            <span :class="{ 'lg:hidden': collapsed }">最近使用</span>
+          </NuxtLink>
+
           <!-- 更多按钮 -->
           <button
             class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors text-muted-foreground hover:bg-muted/50 hover:text-foreground"
@@ -115,20 +130,6 @@
             class="space-y-0.5 overflow-hidden transition-all duration-300"
             :class="{ 'lg:hidden': collapsed }"
           >
-            <!-- 最近使用 -->
-            <NuxtLink
-              to="/recent/"
-              class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors pl-8"
-              :class="[
-                $route.path === '/recent/' ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
-                { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
-              ]"
-              @click="handleNavClick"
-            >
-              <Clock class="w-4 h-4" />
-              <span :class="{ 'lg:hidden': collapsed }">最近使用</span>
-            </NuxtLink>
-
             <!-- AI导航 -->
             <NuxtLink
               to="/ai/"
@@ -179,7 +180,7 @@
 
       <!-- 分类导航 -->
       <div>
-        <h3 class="px-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2" :class="{ 'lg:hidden': collapsed }">工具箱</h3>
+        <h3 class="px-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2" :class="{ 'lg:hidden': collapsed }">浏览与内容</h3>
         <nav class="space-y-0.5" id="categoryNav">
           <NuxtLink
             to="/all/"
@@ -217,6 +218,9 @@
             <FolderHeart class="w-4 h-4" />
             <span :class="{ 'lg:hidden': collapsed }">场景专题</span>
           </NuxtLink>
+          <div class="pt-3 mt-2 mb-1 border-t border-sidebar-border" :class="{ 'lg:hidden': collapsed }">
+            <p class="px-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">分类</p>
+          </div>
           <NuxtLink
             v-for="category in categoriesWithIcons"
             :key="category.id"
