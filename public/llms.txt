@@ -1,32 +1,32 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：736 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：748 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 736 款工具完整目录
-- [场景专题](https://www.util.cn/collections/): 14 个按使用场景组织的工具组合
+- [全部工具](https://www.util.cn/all/): 748 款工具完整目录
+- [场景专题](https://www.util.cn/collections/): 16 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 374 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 379 篇工具教程与实践文章
 
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（69款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（77款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
-- [时间日期（33款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
+- [时间日期（34款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
 - [文本处理（54款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（33款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
 - [图像处理（50款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
 - [开发辅助（109款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（56款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（55款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [其他工具（57款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（53款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
-- [金融工具（45款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
+- [金融工具（46款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（47款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
@@ -120,6 +120,14 @@
 - [梯度稀释计算器](https://www.util.cn/tools/serial-dilution-calculator/): C1V1=C2V2 单步稀释、等比系列多管方案逐管移液量与可行性提示
 - [钢筋每米重量换算](https://www.util.cn/tools/rebar-weight-calculator/): 钢筋理论米重表 Φ6-Φ40、下料清单分规格吨位、重量反推米数
 - [空调匹数BTU计算器](https://www.util.cn/tools/ac-btu-calculator/): 按面积工况估制冷负荷选匹数，修正可追溯、机型反查与季节电费估算
+- [电池组串并联计算器](https://www.util.cn/tools/battery-pack-calculator/): 锂电池串并联电压容量能量换算，目标反查组阵、BMS 电流与度电成本估算
+- [电容标号读取器](https://www.util.cn/tools/capacitor-code-reader/): 104 等三位数代码与直标互查，pF/nF/µF 换算、误差字母与贴片电阻双解
+- [皮带长度计算器](https://www.util.cn/tools/belt-length-calculator/): 两带轮中心距求皮带长、带长反算中心距，速比线速度与标准带长吸附
+- [轮胎尺寸对比计算器](https://www.util.cn/tools/tire-size-calculator/): 轮胎规格解析、双胎直径周长对比、时速表误差判定与同直径替代清单
+- [经济订货量EOQ计算器](https://www.util.cn/tools/eoq-calculator/): √(2DS/H) 最优订货批量、补货节奏、成本曲线与现批量多花的钱对比
+- [安全库存再订货点](https://www.util.cn/tools/reorder-point-calculator/): Z 值服务水平算安全库存与再订货点，提前期波动复合模式与库存资金敏感度
+- [鸡尾酒配方计算器](https://www.util.cn/tools/cocktail-calculator/): 11 款经典配方酒精度与稀释估算、标准杯换算、派对批量备料与单杯成本
+- [酒精降度勾兑计算器](https://www.util.cn/tools/alcohol-dilution-calculator/): 白酒果酒降度加水量、两种酒互配比、医用酒精 95 配 75 与反向推算
 
 ## 数据格式化
 
@@ -253,6 +261,7 @@
 - [倒数日管理](https://www.util.cn/tools/days-countdown/): 生日、考试、纪念日、还款日倒数看板，支持每年重复与进度条，数据本地保存不上传
 - [可打印日历](https://www.util.cn/tools/printable-calendar/): 月历年历 A4 打印模板，含农历节气与今日高亮，备注栏可手写
 - [生肖年份速查](https://www.util.cn/tools/zodiac-lookup/): 出生年份查生肖干支与本命年，12 生肖反查出生年，立春口径显著注明
+- [月相计算](https://www.util.cn/tools/moon-phase-calculator/): 任意日期月龄与八相月相 SVG 图、照度、下一满月新月与潮汐大小潮参考
 
 ## 文本处理
 
@@ -658,6 +667,8 @@
 - [电缆载流量速查](https://www.util.cn/tools/cable-ampacity-lookup/): 铜铝电线明敷穿管安全载流量速查，温度并排修正、负载反推线径与空开档位
 - [房间混响RT60计算器](https://www.util.cn/tools/room-reverb-calculator/): 赛宾与艾雷恩公式估房间混响时间，吸声材料用量表与达标反推
 - [螺纹规格速查表](https://www.util.cn/tools/thread-reference-table/): 公制粗细牙、UNC/UNF、G/NPT 管螺纹大径螺距底孔速查，TPI 换算与扳手反查
+- [AQL抽样方案查询](https://www.util.cn/tools/aql-sampling-calculator/): 批量与检验水平查字码样本量，CR/MAJ/MIN 三等级并列 Ac/Re 判定与箭头规则
+- [鱼缸水体计算器](https://www.util.cn/tools/aquarium-calculator/): 三形状水体净容积、加热棒功率吸附、换水量、海缸盐度与生物负载参考
 
 ## 健康工具
 
@@ -762,6 +773,7 @@
 - [盈亏平衡计算器](https://www.util.cn/tools/break-even-calculator/): 固定成本与边际贡献算保本销量销售额，目标利润所需销量与安全边际率
 - [定价计算器](https://www.util.cn/tools/pricing-calculator/): 成本加成、目标毛利反推、竞品对齐三种定价模式，加成率与毛利率换算科普
 - [复利计算器](https://www.util.cn/tools/compound-interest-calculator/): 复利终值与年金追加、名义与实际年化 APY、72 法则翻倍年限、通胀实际购买力
+- [菜品成本核算卡](https://www.util.cn/tools/recipe-cost-calculator/): 按净料率算菜品实耗成本，目标成本率定售价、外卖抽佣对照与打印成本卡
 
 ## 文件工具
 
@@ -829,6 +841,8 @@
 - [车间与工地速查](https://www.util.cn/collections/shop-floor-quickref/): 螺纹底孔、钢筋米重、空调匹数、材料算量——干活前最常用的几张表，从图纸到报价的速查台。
 - [光影与声学问算台](https://www.util.cn/collections/optics-acoustics-bench/): 景深超焦距、频率波长、混响时间、人声分离——光路和声路里的物理账，都在浏览器本地算。
 - [实验台面换算器](https://www.util.cn/collections/lab-bench-calculators/): 梯度稀释、离心力换算、分子量、方程式配平——实验课前把台面四件计算器打开，移液枪和离心机设定不再靠估。
+- [电子维修工作台](https://www.util.cn/collections/electronics-repair-bench/): 电池组配几串几并、电容代码怎么读、电阻色环、LED 限流电阻——维修台上最高频的四件换算，本地计算不漏料。
+- [质检与库存工作台](https://www.util.cn/collections/qc-inventory-desk/): 抽多少验货、订多少省钱、库存降到多少下单——供应链最常被问的三道题的标准答案表。
 
 ## AI 百科词条
 
@@ -855,6 +869,11 @@
 
 ## 博客文章
 
+- [吧台和后厨的三本账：配方酒精度、降度勾兑、菜品成本](https://www.util.cn/blog/articles/bar-and-kitchen/): 家里调杯酒该知道自己喝下去多少酒精；自酿果酒想降两度加多少水；菜单上的 38 块是怎么从成本卡上长出来的。三件新工具分别回答这三问——配方计算器、降度勾兑器、菜品成本卡，本地计算，数据不出电脑。
+- [头顶的月亮和缸里的水：两件爱好者的计算小事](https://www.util.cn/blog/articles/moon-and-tank/): 海钓的人看月相定潮汐，养鱼的人算水体配加热棒——两群爱好者，共同点是
+- [质检与库存的三张表：抽多少、订多少、什么时候补](https://www.util.cn/blog/articles/qc-inventory-trio/): 工厂和电商的日常就三个问题：这批货抽几件、验到几个算过；一次订多少最省钱；库存降到多少该下单。三件新工具把这三张纸做成网页——AQL 抽样查询、EOQ 经济订货量、安全库存与再订货点，全部本地计算，批量和成本数据不出电脑。
+- [转动的两笔账：皮带有多长，轮胎会不会蹭](https://www.util.cn/blog/articles/wheel-and-belt/): 台钻皮带断了，量不出旧带多长；换轮毂想试 18 寸，怕时速表跑偏——两件
+- [电子维修台的两件小工具：电池组怎么配、电容码怎么读](https://www.util.cn/blog/articles/electronics-bench-duo/): 给电动车换过 18650 的人、修功放被
 - [实验台面四件换算器：稀释、离心力、分子量和配平](https://www.util.cn/blog/articles/lab-bench-calculators/): 实验室新手的第一道坎不是操作，是算：1:10 稀释六管每管吸多少、protocol 写的 10000×g 我这离心机该拧多少转。新上的梯度稀释与离心力换算器，加上已有的分子量和方程式配平，实验台上这四件算账的事都有了。
 - [调音师的平板上，应该有这两块屏：波长与混响](https://www.util.cn/blog/articles/acoustics-two-screens/): 音响这行有两道
 - [摄影师该会算的那笔光学账：景深、超焦距和它的图解](https://www.util.cn/blog/articles/photographer-optics/): 风光摄影圈流传一句话：会用超焦距的人，景深是算出来的，不是

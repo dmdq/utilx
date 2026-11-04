@@ -264,6 +264,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/bar-and-kitchen</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/base64-encoding-guide</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -783,6 +790,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/electrician-pocket-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/electronics-bench-duo</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1573,6 +1587,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/moon-and-tank</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/mortgage-math-guide</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -1854,6 +1875,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/prompt-engineering-guide</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/qc-inventory-trio</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2609,6 +2637,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/wheel-and-belt</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/word-flashcard-printer</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -2791,6 +2826,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/collections/electronics-repair-bench</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/collections/family-finance-suite</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -2841,6 +2883,13 @@
 
   <url>
     <loc>https://www.util.cn/collections/privacy-shield</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/collections/qc-inventory-desk</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -3967,6 +4016,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/alcohol-dilution-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/algorithm-complexity-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -4017,6 +4073,20 @@
 
   <url>
     <loc>https://www.util.cn/tools/api-response-simulator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/aql-sampling-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/aquarium-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -4254,6 +4324,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/battery-pack-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/bcrypt-generate</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -4269,6 +4346,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/bcrypt-verify</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/belt-length-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -4562,6 +4646,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/capacitor-code-reader</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/car-loan-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -4696,6 +4787,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/clothing-size-chart</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/cocktail-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -5382,6 +5480,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/env-variable-manager</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/eoq-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -6907,6 +7012,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/moon-phase-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/morse-code</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -7663,6 +7775,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/recipe-cost-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/recite-blank-generator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -7727,6 +7846,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/rental-yield-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/reorder-point-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -8532,6 +8658,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/tip-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/tire-size-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
