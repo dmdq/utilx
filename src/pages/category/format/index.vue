@@ -5,7 +5,7 @@
     
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">在线数据格式化工具箱</h1>
+      <h1 class="text-display mb-3">在线数据格式化工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">专业的JSON、XML、SQL等数据格式化和美化工具，支持实时预览和多种格式转换，提高开发效率。</p>
     </div>
     

@@ -5,7 +5,7 @@
     
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">在线图像处理工具箱</h1>
+      <h1 class="text-display mb-3">在线图像处理工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">图片压缩、格式转换、尺寸调整、水印添加等图像处理工具，无需上传即可本地处理。</p>
     </div>
     

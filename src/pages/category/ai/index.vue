@@ -12,10 +12,10 @@
           AI 工具导航 · 2026 年 10 月更新
         </div>
 
-        <h1 class="mt-4 text-3xl font-bold tracking-tight lg:text-4xl">
+        <h1 class="mt-4 text-display lg:text-display-lg">
           <span class="sr-only">AI 工具导航：</span>
           发现好用的
-          <span class="bg-gradient-to-r from-indigo-500 via-sky-500 to-fuchsia-500 bg-clip-text text-transparent dark:from-indigo-400 dark:via-sky-400 dark:to-fuchsia-400">AI 产品</span>
+          <span class="text-primary">AI 产品</span>
         </h1>
         <p class="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
           收录国内外 {{ aiTools.length }} 款 AI 工具，覆盖 {{ aiCategories.length }} 个分类。用搜索、筛选和分类快速定位，不再在收藏夹里翻链接。
@@ -177,7 +177,7 @@
           :href="tool.url"
           target="_blank"
           rel="noopener noreferrer"
-          class="group relative flex h-full min-w-[82%] snap-start flex-col overflow-hidden rounded-xl border border-border/60 bg-card/50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-card/80 hover:shadow-lg hover:shadow-primary/5 sm:min-w-0"
+          class="group relative flex h-full min-w-[82%] snap-start flex-col overflow-hidden rounded-xl border border-border/60 bg-card/50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-foreground/10 hover:bg-card/80 hover:shadow-elevation-2 sm:min-w-0"
         >
           <div class="absolute inset-x-0 top-0 h-px" :style="{ background: `linear-gradient(90deg, transparent, ${toolColor(tool)}, transparent)` }"></div>
           <div class="flex items-start justify-between gap-2">
@@ -266,7 +266,7 @@
               :href="tool.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="group flex h-full flex-col rounded-xl border border-border/60 bg-card/40 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-card/80 hover:shadow-lg hover:shadow-primary/5"
+              class="group flex h-full flex-col rounded-xl border border-border/60 bg-card/40 p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:border-foreground/10 hover:bg-card/80 hover:shadow-elevation-2"
             >
               <div class="flex items-start gap-3">
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border text-sm font-bold" :style="toolTileStyle(tool)">

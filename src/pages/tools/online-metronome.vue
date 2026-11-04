@@ -563,7 +563,7 @@ function dotClassOf(n) {
     ? (active ? 'w-9 h-9 text-sm' : 'w-8 h-8 text-xs')
     : (active ? 'w-7 h-7 text-xs' : 'w-6 h-6 text-[10px]')
   const tone = active
-    ? 'border-primary bg-primary text-primary-foreground scale-110 shadow-lg shadow-primary/30'
+    ? 'border-primary bg-primary text-primary-foreground scale-110 shadow-elevation-2'
     : (n === 1 ? 'border-primary/50 bg-primary/10 text-primary' : 'border-border bg-muted/60 text-muted-foreground')
   return `${size} ${tone}`
 }

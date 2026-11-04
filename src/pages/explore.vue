@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-8xl mx-auto py-8">
     <div class="mb-8">
-      <h1 class="text-3xl font-bold text-foreground mb-2">工具探索</h1>
+      <h1 class="text-display text-foreground mb-2">工具探索</h1>
       <p class="text-muted-foreground">发现和使用各种实用工具</p>
     </div>
 
@@ -16,7 +16,7 @@
         <div
           v-for="category in categoriesWithCount"
           :key="category.id"
-          class="bg-card border border-border rounded-xl p-5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer group"
+          class="bg-card border border-border rounded-xl p-5 hover:border-foreground/10 hover:shadow-elevation-2 hover:-translate-y-0.5 transition-all cursor-pointer group"
           @click="goToCategory(category.id)"
         >
           <div class="flex justify-between items-start mb-3">
@@ -90,7 +90,7 @@
           class="group relative block"
           @click="addRecentTool(tool.id)"
         >
-          <div class="bg-card/30 backdrop-blur-sm border-0 rounded-xl p-4 hover:bg-card/60 hover:shadow-sm hover:shadow-primary/5 transition-all duration-200 cursor-pointer group h-full">
+          <div class="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-4 hover:bg-card/60 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group h-full">
             <div class="flex flex-col items-center text-center h-full">
               <component
                 :is="getCategoryIcon(tool.icon)"

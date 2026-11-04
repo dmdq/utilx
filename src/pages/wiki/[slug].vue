@@ -14,7 +14,7 @@
         <div class="p-2 bg-primary/10 rounded-lg">
           <BookOpen class="h-6 w-6 text-primary" />
         </div>
-        <h1 class="text-3xl font-bold text-foreground">{{ term.term }}</h1>
+        <h1 class="text-display text-foreground">{{ term.term }}</h1>
         <span class="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary">{{ term.category }}</span>
       </div>
       <p class="text-muted-foreground text-lg max-w-3xl leading-relaxed">{{ term.summary }}</p>

@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-8xl mx-auto py-8">
     <div class="mb-8">
-      <h1 class="text-3xl font-bold text-foreground mb-2 flex items-center gap-2">
+      <h1 class="text-display text-foreground mb-2 flex items-center gap-2">
         <Clock class="w-8 h-8 text-primary" />
         最近使用
       </h1>

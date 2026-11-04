@@ -3,7 +3,7 @@
     <div class="max-w-4xl mx-auto">
       <!-- 页面头部 -->
       <div class="mb-8">
-        <h1 class="text-3xl font-bold text-foreground mb-2">通知设置</h1>
+        <h1 class="text-display text-foreground mb-2">通知设置</h1>
         <p class="text-muted-foreground">管理您的推送通知偏好设置</p>
       </div>
 

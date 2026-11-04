@@ -2,7 +2,7 @@
   <div class="max-w-8xl mx-auto">
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">本地文件工具箱</h1>
+      <h1 class="text-display mb-3">本地文件工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">文件加密、PDF合并拆分、EXIF清理、CSV格式转换等工具，全部在浏览器本地完成处理，文件不会上传到服务器，保护数据隐私。</p>
     </div>
 

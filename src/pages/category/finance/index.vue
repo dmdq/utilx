@@ -2,7 +2,7 @@
   <div class="max-w-8xl mx-auto">
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">在线金融工具箱</h1>
+      <h1 class="text-display mb-3">在线金融工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">专业的贷款计算、投资收益、汇率换算等金融工具，支持实时计算和财务规划，帮助您做出明智的财务决策。</p>
     </div>
 

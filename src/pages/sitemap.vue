@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-4xl mx-auto py-8">
     <div class="mb-8">
-      <h1 class="text-3xl font-bold text-foreground mb-2">站点地图</h1>
+      <h1 class="text-display text-foreground mb-2">站点地图</h1>
       <p class="text-muted-foreground">Util.cn 完整的网站页面索引</p>
     </div>
 

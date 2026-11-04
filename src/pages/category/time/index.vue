@@ -5,7 +5,7 @@
     
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">在线时间日期工具箱</h1>
+      <h1 class="text-display mb-3">在线时间日期工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">Unix时间戳转换、时区计算、日期格式化等时间处理工具，解决跨时区时间计算问题。</p>
     </div>
     

@@ -7,7 +7,7 @@
           <FolderHeart class="h-6 w-6 text-primary" />
         </div>
         <div>
-          <h1 class="text-3xl font-bold text-foreground">场景专题</h1>
+          <h1 class="text-display text-foreground">场景专题</h1>
           <p class="text-sm text-muted-foreground mt-1">按任务组织的精选工具合集：一次解决"做 XX 该用什么"的问题</p>
         </div>
       </div>
@@ -22,7 +22,7 @@
         v-for="col in collections"
         :key="col.slug"
         :to="`/collections/${col.slug}/`"
-        class="bg-card/40 backdrop-blur-sm border-0 rounded-xl p-6 hover:bg-card/70 hover:shadow-md hover:shadow-primary/5 transition-all duration-200 cursor-pointer group"
+        class="bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group"
       >
         <div class="flex items-start gap-4">
           <div class="p-2.5 bg-primary/10 rounded-xl flex-shrink-0 group-hover:scale-105 transition-transform">

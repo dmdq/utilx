@@ -382,7 +382,7 @@ const handleToolSelect = (tool) => {
       
       <!-- 标题和描述 -->
       <div class="mt-4">
-        <h1 class="text-3xl font-bold mb-3">{{ seoContent.title }}</h1>
+        <h1 class="text-display mb-3">{{ seoContent.title }}</h1>
         <p class="text-muted-foreground max-w-3xl">{{ seoContent.description }}</p>
       </div>
     </div>

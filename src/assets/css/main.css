@@ -5,7 +5,7 @@
 
 /* 默认应用深色主题的变量，防止闪烁 */
 html, body {
-  background-color: hsl(220 13% 11%);
+  background-color: hsl(240 15% 5%);
   color: hsl(0 0% 98%);
 }
 
@@ -86,30 +86,30 @@ html, body {
 
 /* 深色模式变量 */
 .dark {
-  --background: 220 13% 11%;
+  --background: 240 15% 5%;
   --foreground: 0 0% 98%;
-  --card: 220 13% 11%;
+  --card: 240 12% 8%;
   --card-foreground: 0 0% 98%;
-  --popover: 220 13% 11%;
+  --popover: 240 12% 8%;
   --popover-foreground: 0 0% 98%;
   --primary: 239 84% 67%;
   --primary-foreground: 0 0% 98%;
-  --secondary: 240 3.7% 15.9%;
+  --secondary: 240 6% 11%;
   --secondary-foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --accent: 240 3.7% 15.9%;
+  --muted: 240 6% 11%;
+  --muted-foreground: 240 5% 72%;
+  --accent: 240 6% 11%;
   --accent-foreground: 0 0% 98%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
   --border: 240 3.7% 22%; /* 提高边框亮度以减少对比度 */
   --input: 240 3.7% 22%; /* 提高输入框边框亮度以减少对比度 */
   --ring: 239 84% 67%;
-  --sidebar-background: 240 5.9% 10%;
+  --sidebar-background: 240 10% 7%;
   --sidebar-foreground: 240 4.8% 95.9%;
   --sidebar-primary: 239 84% 67%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent: 240 6% 11%;
   --sidebar-accent-foreground: 0 0% 98%;
   --sidebar-border: 240 3.7% 22%; /* 提高侧边栏边框亮度以减少对比度 */
   --sidebar-ring: 239 84% 67%;
@@ -363,4 +363,55 @@ pre, code {
     rgb(90, 90, 90) 100%
   ) !important;
   box-shadow: 0 0 10px rgba(150, 150, 150, 0.2) !important;
+}
+
+/* ===== 设计系统 · 标题排版基准 =====
+   :where() 特异性为 0，text-display / tracking-* 等工具类可正常覆盖；
+   用于让全站 700+ 工具页标题统一获得收紧字距 */
+:where(h1, h2, h3) {
+  letter-spacing: -0.015em;
+}
+
+/* ===== 设计系统 · 键盘焦点 =====
+   只作用于链接与按钮；输入框沿用既有的 primary 边框聚焦样式，避免双环 */
+:where(a, button, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+/* ===== 设计系统 · 页面过渡 =====
+   仅定义 enter：离开即时、进入淡入，不给路由切换增加等待 */
+.page-enter-active {
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+/* ===== 设计系统 · 骨架屏 =====
+   通用工具类，页面加载态可按需用 <div class="skeleton h-4 w-full" /> */
+.skeleton {
+  background: linear-gradient(90deg,
+    hsl(var(--muted)) 25%,
+    hsl(var(--accent)) 50%,
+    hsl(var(--muted)) 75%
+  );
+  background-size: 200% 100%;
+  border-radius: var(--radius);
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+@keyframes skeleton-shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+/* ===== 设计系统 · 尊重系统减少动态效果偏好 ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -2,7 +2,7 @@
   <div class="max-w-8xl mx-auto">
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">在线设计工具箱</h1>
+      <h1 class="text-display mb-3">在线设计工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">专业的CSS布局、颜色、SVG编辑等设计工具，支持可视化操作和实时预览，助力高效完成设计任务。</p>
     </div>
 

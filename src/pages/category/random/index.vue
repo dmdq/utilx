@@ -2,7 +2,7 @@
   <div class="max-w-8xl mx-auto">
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">在线随机决策工具箱</h1>
+      <h1 class="text-display mb-3">在线随机决策工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">专业的随机骰子、硬币、选择器等决策工具，支持多种游戏模式和统计分析，让决策变得简单有趣。</p>
     </div>
 

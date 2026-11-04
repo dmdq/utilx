@@ -5,7 +5,7 @@
     
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">在线编码解码工具箱</h1>
+      <h1 class="text-display mb-3">在线编码解码工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">支持Base64、URL编码、HTML实体编码等多种编码解码操作，保障数据传输安全性和完整性。</p>
     </div>
     

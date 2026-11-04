@@ -151,7 +151,7 @@ const getIconComponent = (iconName) => {
   <div class="max-w-8xl mx-auto py-8">
     <!-- 页面标题 -->
     <div class="mb-8">
-      <h1 class="text-3xl font-bold text-foreground mb-2">标签导航</h1>
+      <h1 class="text-display text-foreground mb-2">标签导航</h1>
       <p class="text-muted-foreground mb-5">通过标签快速找到合适的工具</p>
       <input
         v-model="searchQuery"
@@ -176,7 +176,7 @@ const getIconComponent = (iconName) => {
           v-for="tag in visibleTags"
           :key="tag.name"
           :to="`/tag/${tag.name}/`"
-          class="bg-card/40 backdrop-blur-sm border-0 rounded-xl p-5 hover:bg-card/70 hover:shadow-sm hover:shadow-primary/5 transition-all duration-200 cursor-pointer group"
+          class="bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group"
         >
           <div class="flex justify-between items-start mb-3">
             <component

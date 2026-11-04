@@ -5,7 +5,7 @@
     
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">在线文本处理工具箱</h1>
+      <h1 class="text-display mb-3">在线文本处理工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">正则表达式测试、文本对比、大小写转换、字符统计等文本处理工具，提高文本操作效率。</p>
     </div>
     

@@ -2,7 +2,7 @@
   <div class="max-w-8xl mx-auto">
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">在线计算工具箱</h1>
+      <h1 class="text-display mb-3">在线计算工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">专业的单位换算、百分比计算、科学计算等工具，支持实时计算和多种单位转换，提高计算效率。</p>
     </div>
 

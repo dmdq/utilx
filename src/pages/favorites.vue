@@ -2,7 +2,7 @@
   <div class="max-w-8xl mx-auto py-8">
     <div class="mb-8 flex items-center justify-between">
       <div>
-        <h1 class="text-3xl font-bold text-foreground mb-2 flex items-center gap-2">
+        <h1 class="text-display text-foreground mb-2 flex items-center gap-2">
           <Heart class="w-8 h-8 text-red-500 fill-current" />
           我的收藏
         </h1>

@@ -5,7 +5,7 @@
     
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">加密解密工具箱</h1>
+      <h1 class="text-display mb-3">加密解密工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">提供全面的加密解密算法工具，包括哈希生成、对称加密、非对称加密、国密算法等，保障数据安全传输和存储。</p>
     </div>
     

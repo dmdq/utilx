@@ -7,7 +7,7 @@
           <BookOpen class="h-6 w-6 text-primary" />
         </div>
         <div>
-          <h1 class="text-3xl font-bold text-foreground">技术词条库</h1>
+          <h1 class="text-display text-foreground">技术词条库</h1>
           <p class="text-sm text-muted-foreground mt-1">用大白话解释开发与技术概念，每个词条都附带可以直接上手的站内工具</p>
         </div>
       </div>
@@ -41,7 +41,7 @@
         v-for="t in filteredTerms"
         :key="t.slug"
         :to="`/wiki/${t.slug}/`"
-        class="bg-card/40 backdrop-blur-sm border-0 rounded-xl p-5 hover:bg-card/70 hover:shadow-sm hover:shadow-primary/5 transition-all duration-200 cursor-pointer group"
+        class="bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group"
       >
         <div class="flex items-center justify-between mb-2.5">
           <span class="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary">{{ t.category }}</span>

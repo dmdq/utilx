@@ -2,7 +2,7 @@
   <component :is="categoryComponent" v-if="categoryComponent" />
   <div v-else class="flex items-center justify-center min-h-screen">
     <div class="text-center">
-      <h1 class="text-2xl font-bold text-destructive mb-4">分类不存在</h1>
+      <h1 class="text-h1 text-destructive mb-4">分类不存在</h1>
       <p class="text-muted-foreground">该分类页面不存在，请检查链接是否正确</p>
     </div>
   </div>

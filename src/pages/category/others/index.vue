@@ -2,7 +2,7 @@
   <div class="max-w-8xl mx-auto">
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">其他工具集合</h1>
+      <h1 class="text-display mb-3">其他工具集合</h1>
       <p class="text-muted-foreground max-w-3xl">包含数据采样、数据结构可视化、剪贴板管理等实用工具，为您提供多样化的辅助功能。</p>
     </div>
 

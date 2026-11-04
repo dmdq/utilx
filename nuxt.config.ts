@@ -313,6 +313,8 @@ export default defineNuxtConfig({
     payloadExtraction: true
   },
   app: {
+    // 轻量路由过渡：仅进入时淡入，不引入 out-in 等待，避免 748 页切换体感变慢
+    pageTransition: { name: 'page' },
     head: {
       title: '有条工具 - 开发者的常用的工具集合',
       meta: [

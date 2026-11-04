@@ -5,7 +5,7 @@
       <div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mb-6">
         <DownloadCloud class="w-10 h-10 text-primary" />
       </div>
-      <h1 class="text-4xl font-bold text-foreground mb-4">桌面版本，即将发布</h1>
+      <h1 class="text-display-lg text-foreground mb-4">桌面版本，即将发布</h1>
       <p class="text-xl text-muted-foreground mb-2">我们正在努力为您带来更好的本地体验</p>
       <p class="text-muted-foreground">敬请期待 Util.cn 桌面版，享受离线使用和更多高级功能</p>
     </div>

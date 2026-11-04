@@ -5,7 +5,7 @@
     
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">在线网络工具箱</h1>
+      <h1 class="text-display mb-3">在线网络工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">IP地址查询、DNS解析、HTTP请求测试等网络诊断工具，帮助排查网络连接问题。</p>
     </div>
     

@@ -5,7 +5,7 @@
     
     <!-- 增强型头部 -->
     <div class="mt-4 mb-8">
-      <h1 class="text-3xl font-bold mb-3">在线开发辅助工具箱</h1>
+      <h1 class="text-display mb-3">在线开发辅助工具箱</h1>
       <p class="text-muted-foreground max-w-3xl">Mock数据生成、API文档查看、代码片段生成等开发辅助工具，提升开发效率。</p>
     </div>
     

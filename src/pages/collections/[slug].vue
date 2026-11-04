@@ -15,7 +15,7 @@
           <component :is="resolveToolIcon(col.icon, 'dev')" class="w-7 h-7 text-primary" />
         </div>
         <div class="flex-1 min-w-[240px]">
-          <h1 class="text-3xl font-bold text-foreground mb-2">{{ col.title }}</h1>
+          <h1 class="text-display text-foreground mb-2">{{ col.title }}</h1>
           <p class="text-muted-foreground leading-relaxed max-w-3xl">{{ col.description }}</p>
           <p class="text-xs text-muted-foreground mt-2.5">适合：{{ col.scene }}</p>
         </div>

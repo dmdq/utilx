@@ -32,7 +32,7 @@
                   </div>
                   <div class="flex-1">
                     <div class="flex items-center gap-3 mb-2">
-                      <h1 class="text-4xl font-bold text-foreground">{{ tag.name }}</h1>
+                      <h1 class="text-display-lg text-foreground">{{ tag.name }}</h1>
                       <h2 class="text-2xl font-normal text-muted-foreground">标签工具合集</h2>
                       <div v-if="tag.toolCount >= 5" class="inline-flex items-center px-3 py-1 bg-red-500/10 text-red-400 rounded-full text-sm font-medium">
                         <TrendingUp class="w-4 h-4 mr-1" />
@@ -160,7 +160,7 @@
             v-for="tool in filteredAndSortedTools"
             :key="tool.id"
             :to="`/tools/${tool.id}/`"
-            class="bg-card/40 backdrop-blur-sm border-0 rounded-xl p-5 hover:bg-card/70 hover:shadow-sm hover:shadow-primary/5 transition-all duration-200 cursor-pointer group"
+            class="bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group"
           >
             <div class="flex justify-between items-start mb-3">
               <component

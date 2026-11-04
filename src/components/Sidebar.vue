@@ -4,7 +4,7 @@
     <div class="logo h-16 flex items-center px-6 border-b border-sidebar-border">
       <div class="flex items-center gap-2.5">
         <div 
-          class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white shadow-lg shadow-primary/20 cursor-pointer"
+          class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white shadow-elevation-1 cursor-pointer"
           @click="$router.push('/')"
         >
         <svg 
