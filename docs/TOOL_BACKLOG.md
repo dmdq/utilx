@@ -221,6 +221,26 @@ flashcard-printer / random-quiz-picker / molar-mass-calculator / phone-attributi
 
 ---
 
+## 十六、职业画像交叉分析提案（2026-11-04，38 款三梯队，全库零撞车已核，详报告 docs/TOOL_PERSONA_RESEARCH_2026-11-04.md）
+
+> 换视角：从词根驱动改为"职业画像找空白"。交叉矩阵结论：**程序员/设计师/学生/教师/办公/财务/宝妈/自媒体画像已饱和不补**；主战场=蓝领技术工（电工/机修/建筑）+专业技术岗（音频/摄影/实验室/质检）+爱好者经济（水族/手工/模型/调酒）。
+
+### 第一梯队（第十九批，12）
+
+voltage-drop-calculator 电压降 / cable-ampacity-lookup 载流量 / ohms-law-calculator 欧姆定律 / resistor-color-code 电阻色环 / depth-of-field-calculator 景深超焦距（**验证：中文交互供给≈0**）/ audio-frequency-calculator 频率波长 / room-reverb-calculator RT60 混响 / rcf-calculator 离心力换算 / serial-dilution-calculator 梯度稀释 / rebar-weight-calculator 钢筋米重 / ac-btu-calculator 空调匹数 / thread-reference-table 螺纹速查（**验证：电压降类"概念有工具无"**）
+
+### 第二梯队（第二十批，12）
+
+battery-pack-calculator 电池组 / capacitor-code-reader 电容标号 / belt-length-calculator 皮带长 / tire-size-calculator 轮胎对比 / aql-sampling-calculator AQL 抽样（**验证：仅 QIMA/HQTS 验货公司附带**）/ eoq-calculator EOQ / reorder-point-calculator 安全库存 / moon-phase-calculator 月相 / aquarium-calculator 鱼缸水体 / cocktail-calculator 鸡尾酒 / alcohol-dilution-calculator 降度勾兑 / recipe-cost-calculator 菜品成本卡
+
+### 第三梯队（第二十一批/机动，14）
+
+concrete-mix-calculator / room-volume-calculator / pesticide-dilution-calculator / gas-ppm-calculator / plywood-cut-planner / lumber-calculator / cross-stitch-calculator / knitting-yarn-calculator / model-scale-calculator / print-cost-calculator / truck-loading-calculator / print-resolution-calculator / nd-filter-calculator / torque-unit-converter
+
+备选：iv-drip-calculator（医疗强免责）/ audio-bitrate-calculator / crossover-calculator / 星空 500 法则 / rhyme-finder。不补画像：程序员/设计师/学生/教师/办公/财务/宝妈/自媒体（存量饱和）；弃：军警（涉敏）/医生处方（合规）/快递面单（API）。
+
+---
+
 ## 批次记录
 
 - 2026-11-04：**第十八批落地**：第三轮备选池 8 款全部实施（单词卡打印/随机抽题/分子量/手机归属地/虚拟钢琴/批量重命名/复利计算器/经营范围生成器），全站 **724 款**，零新依赖。toolIcons 补 Piano/Atom/FilePen/Shuffle（总 237；Shuffle 此前仅 import 未入映射表的漏项顺带修复）。配套 5 篇推文（posts/2026-11-04/）覆盖率 100%。**至此第三轮调研 40 款（32 新+8 池）全部消化完毕，backlog 池子清空**——下次选品需新一轮调研。agent 自纠规格两处：flashcard 背面镜像矩阵按长边翻页物理原理修正（规格示例与"行同序列倒序"自述矛盾）；复利精确翻倍年限公式量纲修正（n>1 时为年非期）。批量重命名与手机归属地是"浏览器本地能力扩张"路线代表作（FSA+内置号段库）。两 agent 600s inactive 但文件未落盘，重派成功——"先查文件"惯例再次验证（有时真没写）。
