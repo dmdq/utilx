@@ -107,7 +107,7 @@ onMounted(() => {
   <component
     :is="disableLink ? 'div' : 'NuxtLink'"
     :to="disableLink ? null : getToolUrl(tool)"
-    class="tool-card group relative bg-card/40 backdrop-blur-sm border-0 rounded-xl p-5 hover:bg-card/70 hover:shadow-lg hover:shadow-primary/8 transition-all duration-300 cursor-pointer block h-full"
+    class="tool-card group relative bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-2 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer block h-full"
     :data-category="category"
     @click="!disableLink && handleCardClick"
   >

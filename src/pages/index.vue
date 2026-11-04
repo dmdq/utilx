@@ -1,25 +1,10 @@
 <template>
   <div class="max-w-8xl mx-auto py-8">
     <!-- Hero 区域 -->
-    <div class="relative text-center mb-8 mt-4 overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 via-transparent to-secondary/5">
-      <!-- 呼吸极光背景效果 -->
-      <div class="absolute inset-0 -z-10">
-        <!-- 主要呼吸光层 -->
-        <div class="absolute top-1/4 left-1/3 w-64 h-64 bg-primary/20 rounded-full filter blur-2xl animate-breathe"></div>
-        <div class="absolute bottom-1/4 right-1/3 w-72 h-72 bg-secondary/15 rounded-full filter blur-2xl animate-breathe delay-2000"></div>
-        <div class="absolute top-1/2 left-1/2 w-56 h-56 bg-accent/10 rounded-full filter blur-2xl animate-breathe delay-4000"></div>
-
-        <!-- 细节光点层 -->
-        <div class="absolute top-1/6 left-1/4 w-32 h-32 bg-primary/15 rounded-full filter blur-xl animate-pulse-slow"></div>
-        <div class="absolute bottom-1/6 right-1/4 w-40 h-40 bg-secondary/10 rounded-full filter blur-xl animate-pulse-slow delay-1000"></div>
-
-        <!-- 微光渐变叠加 -->
-        <div class="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-background/30"></div>
-      </div>
-
+    <div class="relative text-center mb-8 mt-4 rounded-2xl border border-border/60 bg-card/30">
       <div class="relative z-10 px-6 py-8 lg:px-8 lg:py-12">
-        <h1 class="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-          不仅是工具，更是创造力的延伸
+        <h1 class="text-display lg:text-display-lg mb-4 text-foreground">
+          不仅是工具，更是<span class="text-primary">创造力</span>的延伸
         </h1>
         <p class="text-lg text-muted-foreground mb-6">极简、高效、全能。为极客、设计师和所有探索者打造。</p>
 
@@ -115,7 +100,7 @@
           class="group relative block"
           @click="addRecentTool(tool.id)"
         >
-          <div class="bg-card/30 backdrop-blur-sm border-0 rounded-xl p-4 hover:bg-card/60 hover:shadow-sm hover:shadow-primary/5 transition-all duration-200 cursor-pointer group h-full">
+          <div class="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-4 hover:bg-card/60 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group h-full">
             <div class="flex flex-col items-center text-center h-full">
               <component
                 :is="getIconComponent(tool.icon, tool.category)"
@@ -137,7 +122,7 @@
           class="group relative block"
           @click="addRecentTool(tool.id)"
         >
-          <div class="bg-card/30 backdrop-blur-sm border-0 rounded-xl p-4 hover:bg-card/60 hover:shadow-sm hover:shadow-primary/5 transition-all duration-200 cursor-pointer group h-full">
+          <div class="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-4 hover:bg-card/60 hover:border-foreground/10 hover:shadow-elevation-1 transition-all duration-200 cursor-pointer group h-full">
             <div class="flex flex-col items-center text-center h-full">
               <component
                 :is="getIconComponent(tool.icon, tool.category)"
@@ -176,7 +161,7 @@
             class="group relative block"
             @click="addRecentTool(tool.id)"
           >
-            <div class="bg-card/40 backdrop-blur-sm border-0 rounded-xl p-5 hover:bg-card/70 hover:shadow-lg hover:shadow-primary/8 transition-all duration-200 cursor-pointer group h-full">
+            <div class="bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover:bg-card/70 hover:border-foreground/10 hover:shadow-elevation-2 transition-all duration-200 cursor-pointer group h-full">
               <div class="flex justify-between items-start mb-3">
                 <component
                   :is="getIconComponent(tool.icon, tool.category)"
@@ -440,54 +425,4 @@ onUnmounted(() => {
 })
 </script>
 
-<style scoped>
-/* 呼吸动画效果 */
-@keyframes breathe {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0.15;
-  }
-  50% {
-    transform: translate(-10px, -10px) scale(1.1);
-    opacity: 0.25;
-  }
-}
-
-.animate-breathe {
-  animation: breathe 8s ease-in-out infinite;
-}
-
-/* 慢速脉冲动画 */
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 0.08;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.12;
-    transform: scale(1.05);
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 4s ease-in-out infinite;
-}
-
-/* 延迟动画类 */
-.delay-1000 {
-  animation-delay: 1s;
-}
-
-.delay-2000 {
-  animation-delay: 2s;
-}
-
-.delay-4000 {
-  animation-delay: 4s;
-}
-
-/* 确保背景元素不影响布局 */
-.absolute.inset-0.-z-10 {
-  pointer-events: none;
-}
-</style>
+<style scoped></style>

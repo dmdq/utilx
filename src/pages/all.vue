@@ -5,13 +5,13 @@
       id="heroSection"
       class="max-w-8xl mx-auto mb-12 mt-4 lg:mt-8 text-center animate-fade-in"
     >
-      <h2 class="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
-        数字创作者的万能工具箱
+      <h2 class="text-display lg:text-display-lg mb-4 text-foreground">
+        数字创作者的<span class="text-primary">万能工具箱</span>
       </h2>
       <p class="text-muted-foreground mb-8 text-lg">无论是调试代码还是处理图像，这里都有你得心应手的利器。纯本地，更安全。</p>
 
       <!-- 大搜索框 -->
-      <div class="relative max-w-2xl mx-auto shadow-2xl shadow-primary/10 rounded-xl">
+      <div class="relative max-w-2xl mx-auto shadow-elevation-2 rounded-xl">
         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
           <Search class="w-5 h-5 text-muted-foreground" />
         </div>

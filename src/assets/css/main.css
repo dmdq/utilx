@@ -57,7 +57,7 @@ html, body {
   --card-foreground: 240 10% 3.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 240 10% 3.9%;
-  --primary: 221 83% 53%;
+  --primary: 239 84% 67%;
   --primary-foreground: 0 0% 98%;
   --secondary: 240 4.8% 95.9%;
   --secondary-foreground: 240 5.9% 10%;
@@ -69,16 +69,19 @@ html, body {
   --destructive-foreground: 0 0% 98%;
   --border: 240 5.9% 90%;
   --input: 240 5.9% 90%;
-  --ring: 221 83% 53%;
+  --ring: 239 84% 67%;
   --radius: 0.5rem;
+  --elevation-1: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.08);
+  --elevation-2: 0 4px 12px rgba(15, 23, 42, 0.08), 0 2px 4px rgba(15, 23, 42, 0.06);
+  --elevation-3: 0 12px 32px rgba(15, 23, 42, 0.12), 0 4px 8px rgba(15, 23, 42, 0.08);
   --sidebar-background: 0 0% 98%;
   --sidebar-foreground: 240 5.3% 26.1%;
-  --sidebar-primary: 221 83% 53%;
+  --sidebar-primary: 239 84% 67%;
   --sidebar-primary-foreground: 0 0% 100%;
   --sidebar-accent: 240 4.8% 95.9%;
   --sidebar-accent-foreground: 240 5.9% 10%;
   --sidebar-border: 240 5.9% 90%;
-  --sidebar-ring: 217 91% 60%;
+  --sidebar-ring: 239 84% 67%;
 }
 
 /* 深色模式变量 */
@@ -89,7 +92,7 @@ html, body {
   --card-foreground: 0 0% 98%;
   --popover: 220 13% 11%;
   --popover-foreground: 0 0% 98%;
-  --primary: 221 83% 53%;
+  --primary: 239 84% 67%;
   --primary-foreground: 0 0% 98%;
   --secondary: 240 3.7% 15.9%;
   --secondary-foreground: 0 0% 98%;
@@ -101,15 +104,18 @@ html, body {
   --destructive-foreground: 0 0% 98%;
   --border: 240 3.7% 22%; /* 提高边框亮度以减少对比度 */
   --input: 240 3.7% 22%; /* 提高输入框边框亮度以减少对比度 */
-  --ring: 221 83% 53%;
+  --ring: 239 84% 67%;
   --sidebar-background: 240 5.9% 10%;
   --sidebar-foreground: 240 4.8% 95.9%;
-  --sidebar-primary: 221 83% 53%;
+  --sidebar-primary: 239 84% 67%;
   --sidebar-primary-foreground: 0 0% 100%;
   --sidebar-accent: 240 3.7% 15.9%;
   --sidebar-accent-foreground: 0 0% 98%;
   --sidebar-border: 240 3.7% 22%; /* 提高侧边栏边框亮度以减少对比度 */
-  --sidebar-ring: 217 91% 60%;
+  --sidebar-ring: 239 84% 67%;
+  --elevation-1: 0 1px 2px rgba(0, 0, 0, 0.40);
+  --elevation-2: 0 4px 12px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.40);
+  --elevation-3: 0 12px 32px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.40);
 }
 
 /* 重置默认样式 */
@@ -188,8 +194,8 @@ html, body {
 .dark input[type="tel"]:focus,
 .dark textarea:focus,
 .dark select:focus {
-  border-color: hsl(221 83% 53%) !important;
-  outline-color: hsl(221 83% 53%) !important;
+  border-color: hsl(239 84% 67%) !important;
+  outline-color: hsl(239 84% 67%) !important;
 }
 
 /* 暗色模式下的卡片边框 */
