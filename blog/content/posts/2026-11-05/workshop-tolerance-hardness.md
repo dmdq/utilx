@@ -13,7 +13,7 @@ summary: '图纸角上标着 H7/g6，机修师傅心里有数、徒弟只能干�
 
 机修车间里最能划出"老师傅"和"新学徒"的一条线，不是谁拧螺丝快，是谁看得懂图纸角上那行标注。H7/g6 这类代号，拆开是基孔制、间隙配合、IT7 级公差一整套体系，手工教材第三章——可现场没人翻书，量具一夹、游标卡尺一卡，答案要当场出来。
 
-这批上新把车间里最后四个高频查表活补齐了：公差配合、齿轮模数、轴承对照、硬度换算。加上之前上的[螺纹对照表](/tools/thread-reference-table)和[钢筋重量计算器](/tools/rebar-weight-calculator)，[车间速查专题](/collections/shop-floor-quickref)这一套算是收了官。
+这批上新把车间里最后四个高频查表活补齐了：公差配合、齿轮模数、轴承对照、硬度换算。加上之前上的[螺纹对照表](\/tools/thread-reference-table/)和[钢筋重量计算器](\/tools/rebar-weight-calculator/)，[车间速查专题](/collections/shop-floor-quickref)这一套算是收了官。
 
 ## 公差配合：H7/g6 不再靠背
 

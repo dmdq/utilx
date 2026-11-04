@@ -38,6 +38,7 @@ function parsePost(file) {
   const ids = new Set()
   for (const m of raw.matchAll(/util\.cn\/tools\/([a-z0-9-]+)\//g)) ids.add(m[1])
   for (const m of raw.matchAll(/\{\{<\s*tool\s+id="([a-z0-9-]+)"/g)) ids.add(m[1])
+  for (const m of raw.matchAll(/\/tools\/([a-z0-9-]+)\//g)) ids.add(m[1]) // 相对链接（旧文与新增文均可能用）
   return { slug, title: get('title') || slug, date: get('date'), summary: get('summary'), ids: [...ids] }
 }
 

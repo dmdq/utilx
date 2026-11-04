@@ -1113,8 +1113,8 @@ window.addEventListener('beforeunload', cleanup);
 
 **相关资源**
 
-- [Web性能测试工具](/tools/performance-test)
-- [图片压缩工具](/tools/image-compressor)
-- [代码压缩工具](/tools/code-minifier)
+- [性能基准测试工具](\/tools/performance-benchmark/)
+- [图片压缩工具](\/tools/image-compress/)
+- [代码格式化工具](\/tools/code-format/)
 
 **分享你的优化经验**：欢迎在评论区分享你的性能优化技巧和经验！

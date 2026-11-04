@@ -37,7 +37,7 @@ summary: '文档示意稿、活动物料、设计占位，内容都齐了就差�
 
 ## 放进你的流程里
 
-单用是占位，串起来是一条文书预览线。先用{{< tool id="official-document-generator" >}}公文红头排版生成器{{< /tool >}}把 A4 版面排出来，落款处要演示盖章效果的，章从这里补上；设计稿占位同理——给客户过方案时放一颗示例章标出"此处盖章"，比口头解释省事得多；合同类模板的签字用印位置，{{< tool id="legal-doc-generator" >}}法律文书生成器{{< /tool >}}的纸张预览里同样留着口。开票相关的示意文档，配[商业发票生成器](/tools/invoice-generator)一起用；这些零碎活儿本来就挂在[办公文员的日常清单](/professions/office-clerk/)里，做完要归档合并的，[PDF 工作台专题](/collections/pdf-workbench/)接着处理。
+单用是占位，串起来是一条文书预览线。先用{{< tool id="official-document-generator" >}}公文红头排版生成器{{< /tool >}}把 A4 版面排出来，落款处要演示盖章效果的，章从这里补上；设计稿占位同理——给客户过方案时放一颗示例章标出"此处盖章"，比口头解释省事得多；合同类模板的签字用印位置，{{< tool id="legal-doc-generator" >}}法律文书生成器{{< /tool >}}的纸张预览里同样留着口。开票相关的示意文档，配[商业发票生成器](\/tools/invoice-generator/)一起用；这些零碎活儿本来就挂在[办公文员的日常清单](/professions/office-clerk/)里，做完要归档合并的，[PDF 工作台专题](/collections/pdf-workbench/)接着处理。
 
 ## 常见问题
 

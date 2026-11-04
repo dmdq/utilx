@@ -790,9 +790,9 @@ if (validate(data)) {
 - [ECMAScript JSON规范](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)
 
 #### 开发工具
-- [JSON Formatter](/tools/json-formatter) - 在线JSON格式化工具
-- [JSON Validator](/tools/json-validator) - JSON数据验证工具
-- [JSON Converter](/tools/json-converter) - 多格式转换工具
+- [JSON Formatter](\/tools/json-formatter/) - 在线JSON格式化工具
+- [JSON/XML 验证器](\/tools/json-xml-validator/) - JSON数据验证工具
+- [JSON 与 XML 互转](\/tools/xml-json-converter/) - 多格式转换工具
 
 #### 学习资源
 - [MDN JSON指南](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)
@@ -808,7 +808,7 @@ if (validate(data)) {
 **教程完成！🎉**
 
 如果你觉得这个教程有帮助，欢迎：
-- 尝试使用我们的[JSON格式化工具](/tools/json-formatter)
+- 尝试使用我们的[JSON格式化工具](\/tools/json-formatter/)
 - 分享给其他开发者朋友
 - 在评论区提出宝贵建议
 
