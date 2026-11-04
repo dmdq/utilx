@@ -316,7 +316,7 @@ export default defineNuxtConfig({
     // 轻量路由过渡：仅进入时淡入，不引入 out-in 等待，避免 748 页切换体感变慢
     pageTransition: { name: 'page' },
     head: {
-      title: '有条工具 · 免注册的本地小工具集',
+      title: '免注册的本地小工具集 - 有条工具',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

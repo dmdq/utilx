@@ -10,7 +10,7 @@ export const siteConfig = {
   customFooterScripts: process.env.CUSTOM_FOOTER_SCRIPTS || '',
 
   // 网站标题（与首页 TDK 保持同一定位：具体场景 + 隐私本地，避开红海通用词）
-  title: '有条工具 · 免注册的本地小工具集',
+  title: '免注册的本地小工具集 - 有条工具',
 
   // SEO标题后缀（用于页面标题）
   titleSuffix: ' - 有条工具',

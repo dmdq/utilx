@@ -2,7 +2,7 @@
   <div class="max-w-8xl mx-auto py-8">
     <!-- Hero：无容器、无圆角，靠字号与留白建立层级 -->
     <section class="pt-4 pb-10">
-      <p class="text-[11px] tracking-[0.2em] text-muted-foreground/70 mb-5">独立 · 本地计算 · 开源</p>
+      <p class="text-[11px] tracking-[0.2em] text-muted-foreground/70 mb-5">独立 / 本地计算 / 开源</p>
       <h1 class="text-display lg:text-display-lg text-foreground mb-5">
         {{ tools.length }} 个小工具，<span class="text-primary">把具体问题算清楚</span>
       </h1>
@@ -90,7 +90,7 @@
           <span class="text-xs text-muted-foreground/70 hidden md:inline">
             试试
             <NuxtLink v-for="(q, i) in tryQueries" :key="q" :to="`/all/?search=${encodeURIComponent(q)}`" class="hover:text-primary transition-colors">
-              {{ q }}<span v-if="i < tryQueries.length - 1"> · </span>
+              {{ q }}<span v-if="i < tryQueries.length - 1"> / </span>
             </NuxtLink>
           </span>
         </div>
@@ -221,7 +221,7 @@
             <span class="text-xs text-muted-foreground/70 shrink-0 group-hover:text-primary">{{ aiCategoryName(item.category) }} ↗</span>
           </a>
           <NuxtLink to="/ai/" class="inline-block text-xs text-primary hover:underline pt-3">
-            全部 {{ aiTools.length }} 款 · {{ aiCategories.length }} 个分类 →
+            全部 {{ aiTools.length }} 款 / {{ aiCategories.length }} 个分类 →
           </NuxtLink>
         </section>
 
@@ -232,11 +232,11 @@
             <span class="font-mono text-xs text-muted-foreground/60">{{ wikiTerms.length }}</span>
           </div>
           <div v-for="group in wikiIndex" :key="group.name" class="pt-3">
-            <div class="text-xs text-muted-foreground/70 mb-1.5">{{ group.name }} · {{ group.count }}</div>
+            <div class="text-xs text-muted-foreground/70 mb-1.5">{{ group.name }} / {{ group.count }}</div>
             <div class="text-sm leading-7">
               <template v-for="(term, i) in group.terms" :key="term.slug">
                 <NuxtLink :to="`/wiki/${term.slug}/`" class="hover:text-primary transition-colors">{{ term.term }}</NuxtLink>
-                <span v-if="i < group.terms.length - 1" class="text-muted-foreground/50"> · </span>
+                <span v-if="i < group.terms.length - 1" class="text-muted-foreground/50"> / </span>
               </template>
             </div>
           </div>
@@ -258,7 +258,7 @@
     </div>
 
     <footer class="border-t border-border/60 mt-12 pt-5 pb-2 text-xs text-muted-foreground">
-      纯本地计算，数据不上传 · 开源免费 · 无广告 · 共 {{ tools.length }} 款工具
+      纯本地计算，数据不上传 / 开源免费 / 无广告 / 共 {{ tools.length }} 款工具
     </footer>
   </div>
 </template>
@@ -332,7 +332,8 @@ const quickLinks = [
 // ---- 首页 TDK：差异化定位，避开「开发者工具箱 / JSON格式化」等红海通用词正面竞争 ----
 // 战略：首页只承担「品牌 + 品类 + 隐私本地」的信号，具体长尾词交给 762 个工具页与 16 个专题页去覆盖。
 const siteUrl = 'https://www.util.cn'
-const seoTitle = `有条工具 · ${tools.length} 款免注册的本地小工具 | 计算 换算 转换`
+// 标题规范：分隔符统一用 " - "，品牌名后置（与 site.titleSuffix 一致），不使用圆点分隔符
+const seoTitle = `${tools.length} 款免注册的本地小工具 - 计算、换算、转换 - 有条工具`
 const seoDescription = `有条工具收录 ${tools.length} 款免注册的浏览器小工具，覆盖 ${categories.length} 类真实场景：除 JSON 格式化、正则测试，还有混凝土配合比、板材开料、扭矩换算、毛线用量这类少见的实用计算。纯本地运行，数据不上传、无广告，另附 AI 导航与技术词条。`
 const seoKeywords = '本地计算工具,免注册在线工具,在线换算器,隐私安全工具箱,场景工具合集,离线可用小工具,实用计算器,有条工具'
 
