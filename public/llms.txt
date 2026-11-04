@@ -1,33 +1,33 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：716 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：724 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 716 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 724 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 10 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 364 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 369 篇工具教程与实践文章
 
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（59款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（60款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
 - [时间日期（33款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
 - [文本处理（54款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
-- [网络工具（32款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
+- [网络工具（33款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
 - [图像处理（50款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
 - [开发辅助（109款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（56款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（48款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [其他工具（52款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（53款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
-- [金融工具（44款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
-- [文件工具（46款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
+- [金融工具（45款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
+- [文件工具（47款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
 
@@ -110,6 +110,7 @@
 - [LTV/CAC计算器](https://www.util.cn/tools/ltv-cac-calculator/): 订阅制客户生命周期价值两种口径，流失率敏感度、回收期与 3x 健康线判定
 - [鞋码对照转换](https://www.util.cn/tools/shoe-size-converter/): 脚长、中欧美英日鞋码互转对照表，男女童分栏，海淘选码量脚指南
 - [体感温度计算](https://www.util.cn/tools/feels-like-temperature-calculator/): NOAA 热指数与 NWS 风寒公式双向计算，档位建议与湿度风速敏感度表
+- [分子量计算器](https://www.util.cn/tools/molar-mass-calculator/): 化学式算摩尔质量与元素质量分数，嵌套括号、水合物点号与 118 元素标准原子量表
 
 ## 数据格式化
 
@@ -335,6 +336,7 @@
 - [常用端口速查表](https://www.util.cn/tools/port-lookup/): 81个常用端口大全：服务协议说明与公网暴露安全风险标注
 - [MAC地址厂商查询](https://www.util.cn/tools/mac-vendor-lookup/): 通过MAC前缀OUI查询设备厂商，识别随机化隐私MAC，支持批量
 - [Wi-Fi二维码生成器](https://www.util.cn/tools/wifi-qrcode-generator/): SSID+密码本地生成扫码连网二维码，支持加密类型与隐藏网络，密码不出浏览器
+- [手机号归属地查询](https://www.util.cn/tools/phone-attribution-lookup/): 内置号段库本地查询运营商与归属地，最长前缀匹配，携号转网口径与批量脱敏
 
 ## 图像处理
 
@@ -640,6 +642,10 @@
 - [音程听辨训练](https://www.util.cn/tools/ear-training-trainer/): 八度内 13 种音程随机出题听辨，中文歌锚点记忆，分音程正确率统计
 - [作息计划表打印](https://www.util.cn/tools/daily-routine-printer/): 上学日暑假工作日四套模板，单日与周视图，A4 贴墙打印手写打卡
 - [植物浇水提醒](https://www.util.cn/tools/plant-watering-tracker/): 绿植浇水日程清单，十种常见植物模板，逾期今日状态卡与浇水活动流
+- [单词卡片打印](https://www.util.cn/tools/flashcard-printer/): Q/A 双面单词卡对折裁剪打印，背面镜像布局长边翻页自动对齐，附答案页
+- [随机抽题组卷](https://www.util.cn/tools/random-quiz-picker/): 粘贴题库按格式解析，随机抽 N 题选项打乱，种子复现同卷，试卷答案 A4 打印
+- [虚拟钢琴](https://www.util.cn/tools/virtual-piano/): 浏览器弹钢琴，两种八度键盘映射、三种合成音色与录音回放，WebAudio 本地发声
+- [经营范围生成器](https://www.util.cn/tools/business-scope-generator/): 十二行业规范表述条目勾选组合，一般项目与许可项目分段生成，执照格式一键复制
 
 ## 健康工具
 
@@ -743,6 +749,7 @@
 - [延迟退休计算器](https://www.util.cn/tools/retirement-age-calculator/): 按 2024 人大决定对照表算法定退休年月，弹性提前/延迟窗口与最低缴费年限
 - [盈亏平衡计算器](https://www.util.cn/tools/break-even-calculator/): 固定成本与边际贡献算保本销量销售额，目标利润所需销量与安全边际率
 - [定价计算器](https://www.util.cn/tools/pricing-calculator/): 成本加成、目标毛利反推、竞品对齐三种定价模式，加成率与毛利率换算科普
+- [复利计算器](https://www.util.cn/tools/compound-interest-calculator/): 复利终值与年金追加、名义与实际年化 APY、72 法则翻倍年限、通胀实际购买力
 
 ## 文件工具
 
@@ -792,6 +799,7 @@
 - [视频裁剪器](https://www.util.cn/tools/video-trimmer/): 本地截取视频片段去头去尾，时间段可视化选择，重编码导出 WebM，文件不上传
 - [音频拼接器](https://www.util.cn/tools/audio-merger/): 多段音频按序合并加段间静音，排序调音试听，导出无损 WAV，全程本地
 - [音频变速器](https://www.util.cn/tools/audio-speed-changer/): 变速不变调时间拉伸与倍速直变双模式，语言学习试听与 WAV 导出
+- [批量重命名](https://www.util.cn/tools/batch-rename-tool/): 目录文件按五规则叠加改名：查找替换、正则、前后缀、序号模板、大小写，预览冲突可撤销
 
 ## 场景专题
 
@@ -831,6 +839,11 @@
 
 ## 博客文章
 
+- [起步两笔账：钱怎么滚（复利计算器），执照怎么写（经营范围生成器）](https://www.util.cn/blog/articles/startup-papers-two/): 想做点生意或搞长期储蓄的人，绕不开两张纸：一张算钱怎么滚——复利计算器把 72 法则、复利频率、通胀折现做成一次输入；一张写执照——经营范围生成器把十二行业的规范表述变成勾选。两件都本地运行，数字和计划都留在自己电脑里。
+- [Chrome 才有的文件魔法：批量重命名，和永不上传的手机号查询](https://www.util.cn/blog/articles/batch-rename-and-phone-lookup/): 一件用上了浏览器较新的文件系统能力：选中文件夹按规则批量改名（正则、序号、前后缀），改前预览冲突、改后当场撤销；另一件把号码数据搬到本地：内置号段库查归属地，号码不进任何服务器。两件都是
+- [浏览器里的琴房：虚拟钢琴，加练耳、调音和节拍](https://www.util.cn/blog/articles/browser-piano-room/): 不用装 App、不连 MIDI——打开网页就能弹。新上的虚拟钢琴带三种合成音色、电脑键盘弹奏和录音回放；配上听辨训练，一个浏览器标签页就是半个琴房。全部 WebAudio 本地发声，零音频文件。
+- [化学作业的两件浏览器工具：方程式配平和分子量计算](https://www.util.cn/blog/articles/chemistry-two-helpers/): 化学配平靠数原子数到崩溃，摩尔质量靠翻元素周期表一个个加——这两件新工具把重复计算交给算法：高斯消元自动配平并附守恒核对表，118 元素标准原子量表秒算分子量与质量分数。作业验算、实验配液的常用底账。
+- [两张纸的学习法：单词卡和自组试卷，打印即用](https://www.util.cn/blog/articles/word-flashcard-printer/): 背单词最有效的纸质方案是双面卡片，出练习卷最省事的方式是
 - [1 月 2 月出生的人，属年前还是年后？一张速查表说清属相这回事](https://www.util.cn/blog/articles/zodiac-lookup-benmingnian/): 填表时
 - [把时间管起来的四件小事：作息表、护眼提醒、浇水清单和体感温度](https://www.util.cn/blog/articles/lightweight-daily-tools/): 假期的作息、盯屏的休息、阳台植物的水、出门穿什么——四件生活小事，四件新上的轻量工具。一件打印贴墙，一件开着标签页默默计时，两件帮你把
 - [剪视频、拼音频、变速听：三件浏览器里的媒体工具](https://www.util.cn/blog/articles/media-trio-print-and-health/): 把一段网课视频的头尾剪掉、把几段录音合成一个文件、把听力材料放慢半速反复听——这三件事以前要么装剪辑软件要么传给在线网站。新上的三件媒体工具全在浏览器本地完成：文件不上传，处理靠 WebAudio 和 MediaRecorder。
