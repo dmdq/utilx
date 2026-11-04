@@ -1,30 +1,30 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：748 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：762 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 748 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 762 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 16 个按使用场景组织的工具组合
 - [AI 百科](https://www.util.cn/wiki/): 20 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 379 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 383 篇工具教程与实践文章
 
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（77款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（86款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
 - [时间日期（34款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
 - [文本处理（54款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（33款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
-- [图像处理（50款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
+- [图像处理（51款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
 - [开发辅助（109款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（56款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（57款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [其他工具（61款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（53款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
 - [金融工具（46款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（47款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
@@ -128,6 +128,15 @@
 - [安全库存再订货点](https://www.util.cn/tools/reorder-point-calculator/): Z 值服务水平算安全库存与再订货点，提前期波动复合模式与库存资金敏感度
 - [鸡尾酒配方计算器](https://www.util.cn/tools/cocktail-calculator/): 11 款经典配方酒精度与稀释估算、标准杯换算、派对批量备料与单杯成本
 - [酒精降度勾兑计算器](https://www.util.cn/tools/alcohol-dilution-calculator/): 白酒果酒降度加水量、两种酒互配比、医用酒精 95 配 75 与反向推算
+- [混凝土配合比计算器](https://www.util.cn/tools/concrete-mix-calculator/): 自建房 C20-C35 方量与水泥砂石用量、袋数换算，备料清单一键复制
+- [房间面积体积计算器](https://www.util.cn/tools/room-volume-calculator/): 地面墙面净面积、体积与乳胶漆用量，门窗扣除，桶装建议和空调冷负荷速估
+- [农药稀释倍数计算器](https://www.util.cn/tools/pesticide-dilution-calculator/): 倍数/ppm/亩用量三模式，克/亩到克/桶最后一公里，二次稀释法步骤
+- [气体ppm浓度换算器](https://www.util.cn/tools/gas-ppm-calculator/): ppm 与 mg/m³ 双向换算，14 种气体摩尔质量，职业限值参考与超标判定
+- [木材材积计算器](https://www.util.cn/tools/lumber-calculator/): 方木体积与 board foot、原木三种几何式并列、薪炭堆与含水率重量估算
+- [3D打印成本计算器](https://www.util.cn/tools/print-cost-calculator/): 耗材电费折旧加失败率期望成本，报价三档与每克成本，代打接单底数
+- [货车车厢装载计算器](https://www.util.cn/tools/truck-loading-calculator/): 八车型内尺寸正交摆箱取最优朝向，体积载重双约束与剩余空间提示
+- [ND减光镜快门计算器](https://www.util.cn/tools/nd-filter-calculator/): 档位换算长曝光时长，八场景快门预设，互易律与堆栈提示
+- [扭矩单位换算器](https://www.util.cn/tools/torque-unit-converter/): N·m、kgf·m、lb-ft、lb-in 精确互转，汽修场景扭矩表与螺栓预紧估算
 
 ## 数据格式化
 
@@ -408,6 +417,7 @@
 - [HEIC转JPG](https://www.util.cn/tools/heic-to-jpg/): iPhone 照片 HEIC 批量转 JPG/PNG，本地转换微信与Windows都能打开
 - [条形码生成器](https://www.util.cn/tools/barcode-generator/): EAN-13、UPC-A、Code128 等六种条码单个或批量生成，PNG/SVG/ZIP 导出，校验位自动核算
 - [证件照换底色](https://www.util.cn/tools/id-photo-maker/): 一寸二寸证件照在线换红蓝白底，纯本地处理照片不上传，300dpi 导出与六寸排版打印
+- [打印分辨率计算器](https://www.util.cn/tools/print-resolution-calculator/): 像素与打印尺寸互查，DPI 档位、相纸判定与裁剪比例提示，冲印不翻车
 
 ## 开发辅助
 
@@ -669,6 +679,10 @@
 - [螺纹规格速查表](https://www.util.cn/tools/thread-reference-table/): 公制粗细牙、UNC/UNF、G/NPT 管螺纹大径螺距底孔速查，TPI 换算与扳手反查
 - [AQL抽样方案查询](https://www.util.cn/tools/aql-sampling-calculator/): 批量与检验水平查字码样本量，CR/MAJ/MIN 三等级并列 Ac/Re 判定与箭头规则
 - [鱼缸水体计算器](https://www.util.cn/tools/aquarium-calculator/): 三形状水体净容积、加热棒功率吸附、换水量、海缸盐度与生物负载参考
+- [板材开料排版器](https://www.util.cn/tools/plywood-cut-planner/): 整张板零件排布图生成，锯缝损耗、旋转尝试、每板利用率与裁切清单
+- [十字绣尺寸计算器](https://www.util.cn/tools/cross-stitch-calculator/): 格数与布频算绣面裁布尺寸、用线估算、绣绷吸附与装裱框档建议
+- [毛线用量估算器](https://www.util.cn/tools/knitting-yarn-calculator/): 部位清单算织物面积，克重密度档估算用线量与团数，两/克双显
+- [模型比例换算器](https://www.util.cn/tools/model-scale-calculator/): 实物与模型尺寸双向换算，1:35 到 1:700 全档，铁模轨距专区
 
 ## 健康工具
 
@@ -869,6 +883,10 @@
 
 ## 博客文章
 
+- [车间、货车、果园和化验室：四个岗位的一分钟换算](https://www.util.cn/blog/articles/factory-torque-truck/): 汽修工对着进口扳手换算 lb-ft、批发商算一车能装多少件、EHS 把 ppm 折成国标单位、农户把
+- [影楼与暗房的两块屏：这张图能印多大，长曝要按多久](https://www.util.cn/blog/articles/optics-two-frames/): 影楼老板最怕客人拿手机截图来问
+- [手工房的四本账：十字绣、毛线、模型和 3D 打印](https://www.util.cn/blog/articles/crafters-four-bins/): 手工圈的坑都长得像：买布算错留边、毛线少两团补不到同批号、1:48 的零件装在 1:35 的底座上、代打报价报亏。四件新工具给手作党、模友和打印玩家各配一本账——全在浏览器本地算。
+- [自建房要算的三本账：混凝土、木料和墙面](https://www.util.cn/blog/articles/self-build-countryside/): 老家盖房、院落打坪、吊顶隔墙——自建房最大的隐形成本是
 - [吧台和后厨的三本账：配方酒精度、降度勾兑、菜品成本](https://www.util.cn/blog/articles/bar-and-kitchen/): 家里调杯酒该知道自己喝下去多少酒精；自酿果酒想降两度加多少水；菜单上的 38 块是怎么从成本卡上长出来的。三件新工具分别回答这三问——配方计算器、降度勾兑器、菜品成本卡，本地计算，数据不出电脑。
 - [头顶的月亮和缸里的水：两件爱好者的计算小事](https://www.util.cn/blog/articles/moon-and-tank/): 海钓的人看月相定潮汐，养鱼的人算水体配加热棒——两群爱好者，共同点是
 - [质检与库存的三张表：抽多少、订多少、什么时候补](https://www.util.cn/blog/articles/qc-inventory-trio/): 工厂和电商的日常就三个问题：这批货抽几件、验到几个算过；一次订多少最省钱；库存降到多少该下单。三件新工具把这三张纸做成网页——AQL 抽样查询、EOQ 经济订货量、安全库存与再订货点，全部本地计算，批量和成本数据不出电脑。
