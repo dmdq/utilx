@@ -154,6 +154,11 @@ function scanPages(dir, basePath = '') {
  * 获取页面的优先级
  */
 function getPriority(path) {
+  // 全部工具分页页：低于目录首页，避免与 /all 抢权重
+  if (path.startsWith('/all/page/')) {
+    return 0.4;
+  }
+
   // 直接匹配
   if (config.defaultPriority[path] !== undefined) {
     return config.defaultPriority[path];
@@ -238,6 +243,15 @@ async function collectDynamicPaths() {
     }
   } catch (e) {
     console.warn(`⚠️ 跳过场景专题: ${e.message}`);
+  }
+
+  // 全部工具目录分页 /all/page/2..N（真实静态路径，nginx 直接命中）
+  try {
+    const { tools } = await import(dataUrl('src/data/tools.js'));
+    const total = Math.max(1, Math.ceil((tools || []).length / 48));
+    for (let p = 2; p <= total; p++) extra.push(`all/page/${p}`);
+  } catch (e) {
+    console.warn(`⚠️ 跳过全部工具分页: ${e.message}`);
   }
 
   // Hugo 博客文章 /blog/articles/<slug>/
