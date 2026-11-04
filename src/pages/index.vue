@@ -3,7 +3,7 @@
     <!-- Hero：无容器、无圆角，靠字号与留白建立层级 -->
     <section class="pt-4 pb-10">
       <p class="text-[11px] tracking-[0.2em] text-muted-foreground/70 mb-5">独立 / 本地计算 / 开源</p>
-      <h1 class="text-display lg:text-display-lg text-foreground mb-5">
+      <h1 class="text-display sm:text-display-lg lg:text-[3.25rem] lg:leading-[1.08] font-semibold text-foreground mb-5">
         {{ tools.length }} 个小工具，<span class="text-primary">把具体问题算清楚</span>
       </h1>
       <p class="text-base sm:text-lg text-muted-foreground max-w-3xl leading-relaxed mb-9">
@@ -18,7 +18,7 @@
             v-model="searchQuery"
             type="text"
             class="block w-full bg-transparent border-0 rounded-none pl-8 pr-28 py-3.5 text-base text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-0"
-            placeholder="搜索工具、单位或场景，如 时间戳、扭矩、毛线用量…"
+            placeholder="搜索工具、单位或场景，如 正则、房贷利息、鞋码对照…"
             @keydown.enter="handleSearchEnter"
           >
           <div class="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-2">
@@ -76,6 +76,19 @@
         </button>
       </div>
 
+      <!-- 热门搜索：直角 hairline chips，也是长尾词内链入口 -->
+      <div class="mt-4 flex flex-wrap items-center gap-2">
+        <span class="text-xs text-muted-foreground/60 mr-1">热门搜索</span>
+        <NuxtLink
+          v-for="q in tryQueries"
+          :key="q"
+          :to="`/all/?search=${encodeURIComponent(q)}`"
+          class="border border-border/60 px-2.5 py-1 text-xs text-muted-foreground hover:text-primary hover:border-foreground/40 transition-colors"
+        >
+          {{ q }}
+        </NuxtLink>
+      </div>
+
       <!-- 随机工具 + 最近使用 -->
       <div class="mt-5 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
         <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
@@ -87,12 +100,6 @@
             随机打开一个工具
             <span class="text-muted-foreground/60">↗</span>
           </button>
-          <span class="text-xs text-muted-foreground/70 hidden md:inline">
-            试试
-            <NuxtLink v-for="(q, i) in tryQueries" :key="q" :to="`/all/?search=${encodeURIComponent(q)}`" class="hover:text-primary transition-colors">
-              {{ q }}<span v-if="i < tryQueries.length - 1"> / </span>
-            </NuxtLink>
-          </span>
         </div>
         <div v-if="recentTools.length > 0" class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
           <span class="text-muted-foreground/70">最近使用</span>
@@ -134,6 +141,7 @@
             @click="addRecentTool(tool.id)"
           >
             <span class="font-mono text-xs tabular-nums text-muted-foreground/60 w-6 shrink-0">{{ pad(i + 1) }}</span>
+            <component :is="resolveToolIcon(tool.icon, tool.category)" class="w-3.5 h-3.5 shrink-0 self-center text-muted-foreground/55 group-hover:text-primary/80 transition-colors" />
             <span class="font-medium text-sm sm:text-base shrink-0 group-hover:text-primary transition-colors">{{ tool.name }}</span>
             <span class="text-xs text-muted-foreground truncate hidden md:block flex-1">{{ tool.description }}</span>
             <span class="text-xs text-muted-foreground/70 ml-auto hidden sm:block shrink-0">{{ categoryName(tool.category) }}</span>
@@ -175,6 +183,7 @@
             @click="addRecentTool(tool.id)"
           >
             <span class="font-mono text-xs tabular-nums text-muted-foreground/60 w-6 shrink-0">{{ pad(i + 1) }}</span>
+            <component :is="resolveToolIcon(tool.icon, tool.category)" class="w-3.5 h-3.5 shrink-0 self-center text-muted-foreground/55 group-hover:text-primary/80 transition-colors" />
             <span class="text-sm sm:text-base shrink-0 group-hover:text-primary transition-colors">{{ tool.name }}</span>
             <span class="text-xs text-muted-foreground truncate hidden md:block flex-1">{{ tool.description }}</span>
           </NuxtLink>
@@ -201,24 +210,13 @@
         </section>
       </div>
 
-      <!-- 右侧索引栏：大数字锚点 + 编号模块 + 结构化索引，靠字阶与留白制造权重差 -->
+      <!-- 右侧索引栏：与左栏数据条去重后不再放大数字锚点，模块头用计数替代序号，避免与左栏 01-04 章节号冲突 -->
       <aside class="min-w-0 lg:pt-1">
-        <!-- 站点速览：唯一的视觉焦点 -->
-        <section class="mb-10">
-          <div class="flex items-baseline gap-2.5">
-            <span class="font-mono text-4xl tabular-nums tracking-tight text-foreground">{{ tools.length }}</span>
-            <span class="text-xs text-muted-foreground">款工具 / {{ categories.length }} 类</span>
-          </div>
-          <p class="mt-3 border-l-2 border-primary/60 pl-3 text-xs leading-relaxed text-muted-foreground">
-            全部在浏览器本地运行，数据不上传，打开即用。
-          </p>
-        </section>
-
-        <!-- 01 AI 导航精选：编号榜单 -->
+        <!-- AI 导航精选：编号榜单 -->
         <section class="mb-10">
           <div class="flex items-baseline justify-between border-b border-foreground/20 pb-2 mb-2">
             <h2 class="text-base font-medium text-foreground">AI 导航精选</h2>
-            <span class="font-mono text-[11px] text-muted-foreground/60">01 / 02</span>
+            <span class="font-mono text-[11px] text-muted-foreground/60">{{ aiTools.length }} 款</span>
           </div>
           <a
             v-for="(item, i) in aiFeatured"
@@ -237,11 +235,11 @@
           </NuxtLink>
         </section>
 
-        <!-- 02 词条索引：分组 + 行列表，替代斜线文字流 -->
+        <!-- 词条索引：分组 + 行列表，替代斜线文字流 -->
         <section class="mb-10">
           <div class="flex items-baseline justify-between border-b border-foreground/20 pb-2 mb-3">
             <h2 class="text-base font-medium text-foreground">词条索引</h2>
-            <span class="font-mono text-[11px] text-muted-foreground/60">02 / 02</span>
+            <span class="font-mono text-[11px] text-muted-foreground/60">{{ wikiTerms.length }} 条</span>
           </div>
           <div v-for="group in wikiIndex" :key="group.name" class="mb-4">
             <div class="text-[11px] tracking-[0.08em] text-muted-foreground/70 mb-1.5">
@@ -283,6 +281,7 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { Search, Clipboard, X, Shuffle } from 'lucide-vue-next'
+import { resolveToolIcon } from '~/utils/toolIcons'
 import { categories } from '~/data/categories'
 import { tools } from '~/data/tools'
 import { collections } from '~/data/collections'
@@ -336,7 +335,7 @@ const wikiIndex = wikiCategories.map(name => ({
   terms: wikiTerms.filter(t => t.category === name).slice(0, 3)
 }))
 
-const tryQueries = ['时间戳', '扭矩', '毛线用量']
+const tryQueries = ['时间戳转换', 'JSON 格式化', '扭矩换算', '混凝土配合比', '毛线用量']
 const quickLinks = [
   { label: '标签导航', to: '/tags/' },
   { label: '工具探索', to: '/explore/' },
@@ -345,13 +344,15 @@ const quickLinks = [
   { label: '站点地图', to: '/sitemap/' }
 ]
 
-// ---- 首页 TDK：差异化定位，避开「开发者工具箱 / JSON格式化」等红海通用词正面竞争 ----
-// 战略：首页只承担「品牌 + 品类 + 隐私本地」的信号，具体长尾词交给 762 个工具页与 16 个专题页去覆盖。
+// ---- 首页 TDK：承接「聚合型长尾」（计算器大全 / 单位换算表 / 对照表类多词组合），单工具词仍归工具页 ----
+// 2026-11-04 Bing 实抓：「计算器大全」前 10 名 0 条标题命中、「单位换算表大全」清一色中小工具站，均无垄断可吃；
+// 「免费在线工具箱 / 实用工具网站」这类虚词会被游戏影视、词典站语义劫持——标题只放具体名词，虚词留给 description。
+// 战略分工：首页吃聚合长尾与品牌信号，具体长尾词交给 762 个工具页与 16 个专题页，互不蚕食。
 const siteUrl = 'https://www.util.cn'
 // 标题规范：分隔符统一用 " - "，品牌名后置（与 site.titleSuffix 一致），不使用圆点分隔符
-const seoTitle = `${tools.length} 款免注册的本地小工具 - 计算、换算、转换 - 有条工具`
-const seoDescription = `有条工具收录 ${tools.length} 款免注册的浏览器小工具，覆盖 ${categories.length} 类真实场景：除 JSON 格式化、正则测试，还有混凝土配合比、板材开料、扭矩换算、毛线用量这类少见的实用计算。纯本地运行，数据不上传、无广告，另附 AI 导航与技术词条。`
-const seoKeywords = '本地计算工具,免注册在线工具,在线换算器,隐私安全工具箱,场景工具合集,离线可用小工具,实用计算器,有条工具'
+const seoTitle = `计算器大全与单位换算表 - ${tools.length} 款免注册在线工具 - 有条工具`
+const seoDescription = `有条工具是免注册的在线计算器大全，收录 ${tools.length} 款实用工具与单位换算表：混凝土配合比、扭矩换算、鞋码对照、毛线用量，装修木工、电工机修、摄影音频、母婴财务的常用计算都能打开即算。全部在浏览器本地运行，数据不上传，无广告。`
+const seoKeywords = '在线计算器大全,计算器大全,单位换算表,单位换算在线,换算对照表,免注册在线工具,免费实用工具箱,生活常用计算器,装修计算器,木工计算器,电工计算工具,混凝土配合比计算,扭矩换算,鞋码对照表,浏览器本地工具,有条工具'
 
 const jsonLd = [
   {
