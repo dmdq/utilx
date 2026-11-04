@@ -68,7 +68,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">裁剪模式</label>
               <select
                 v-model="cropMode"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               >
                 <option value="free">自由裁剪</option>
                 <option value="ratio">固定比例</option>
@@ -102,7 +102,7 @@
                     v-model.number="customWidth"
                     type="number"
                     min="1"
-                    class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                    class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                     placeholder="宽度"
                   />
                 </div>
@@ -112,7 +112,7 @@
                     v-model.number="customHeight"
                     type="number"
                     min="1"
-                    class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                    class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                     placeholder="高度"
                   />
                 </div>
@@ -128,7 +128,7 @@
                     v-model="sizeMode"
                     type="radio"
                     value="original"
-                    class="mr-2 rounded border-border text-primary focus:ring-primary bg-background"
+                    class="mr-2 rounded border border-border text-primary focus:ring-primary bg-background"
                   />
                   <span class="text-sm text-foreground">保持原始尺寸</span>
                 </label>
@@ -137,7 +137,7 @@
                     v-model="sizeMode"
                     type="radio"
                     value="custom"
-                    class="mr-2 rounded border-border text-primary focus:ring-primary bg-background"
+                    class="mr-2 rounded border border-border text-primary focus:ring-primary bg-background"
                   />
                   <span class="text-sm text-foreground">自定义尺寸</span>
                 </label>
@@ -150,7 +150,7 @@
                     v-model.number="outputWidth"
                     type="number"
                     min="1"
-                    class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                    class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                     placeholder="宽度"
                   />
                 </div>
@@ -160,7 +160,7 @@
                     v-model.number="outputHeight"
                     type="number"
                     min="1"
-                    class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                    class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                     placeholder="高度"
                   />
                 </div>
@@ -172,7 +172,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">输出格式</label>
               <select
                 v-model="outputFormat"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               >
                 <option value="png">PNG</option>
                 <option value="jpeg">JPEG</option>

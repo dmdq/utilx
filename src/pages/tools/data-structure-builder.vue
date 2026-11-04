@@ -141,7 +141,7 @@
           <div class="flex items-center justify-between mb-3">
             <h3 class="text-lg font-semibold text-foreground">生成的代码</h3>
             <div class="flex gap-2">
-              <select v-model="outputLanguage" class="px-3 py-1 bg-muted border border-border rounded text-sm text-foreground">
+              <select v-model="outputLanguage" class="px-3 py-1 bg-muted border border-border border-border rounded text-sm text-foreground">
                 <option value="javascript">JavaScript</option>
                 <option value="python">Python</option>
                 <option value="java">Java</option>

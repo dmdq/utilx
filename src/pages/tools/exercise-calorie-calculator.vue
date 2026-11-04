@@ -21,13 +21,13 @@
                   min="20"
                   max="300"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="70"
                 />
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">性别</label>
-                <select v-model="personalInfo.gender" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="personalInfo.gender" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="male">男性</option>
                   <option value="female">女性</option>
                 </select>
@@ -39,13 +39,13 @@
                   type="number"
                   min="10"
                   max="100"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="30"
                 />
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">健身水平</label>
-                <select v-model="personalInfo.fitnessLevel" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="personalInfo.fitnessLevel" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="beginner">初学者</option>
                   <option value="intermediate">中级</option>
                   <option value="advanced">高级</option>
@@ -62,7 +62,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">运动分类</label>
-              <select v-model="selectedCategory" @change="onCategoryChange" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="selectedCategory" @change="onCategoryChange" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="cardio">有氧运动</option>
                 <option value="strength">力量训练</option>
                 <option value="sports">体育运动</option>
@@ -74,7 +74,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">具体运动</label>
-              <select v-model="selectedExercise" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="selectedExercise" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option v-for="exercise in filteredExercises" :key="exercise.id" :value="exercise.id">
                   {{ exercise.name }}
                 </option>
@@ -101,13 +101,13 @@
                   type="number"
                   min="1"
                   max="480"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="30"
                 />
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">运动强度</label>
-                <select v-model="exerciseParams.intensity" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="exerciseParams.intensity" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="low">低强度</option>
                   <option value="moderate">中等强度</option>
                   <option value="high">高强度</option>
@@ -125,7 +125,7 @@
                   min="0"
                   max="100"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="5"
                 />
               </div>
@@ -137,7 +137,7 @@
                   min="1"
                   max="20"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="6"
                 />
               </div>
@@ -152,7 +152,7 @@
                   min="0"
                   max="500"
                   step="0.5"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="20"
                 />
               </div>
@@ -163,7 +163,7 @@
                   type="number"
                   min="1"
                   max="50"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="3"
                 />
               </div>
@@ -177,7 +177,7 @@
                   type="number"
                   min="1"
                   max="100"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="12"
                 />
               </div>
@@ -188,7 +188,7 @@
                   type="number"
                   min="0"
                   max="300"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="60"
                 />
               </div>
@@ -212,7 +212,7 @@
                 min="0.5"
                 max="10"
                 step="0.5"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="2"
               />
             </div>
@@ -224,7 +224,7 @@
                 type="number"
                 min="1"
                 max="7"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="4"
               />
             </div>

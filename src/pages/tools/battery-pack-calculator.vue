@@ -38,7 +38,7 @@
           <select
             v-model="cellType"
             @change="onCellTypeChange"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option value="nmc">三元锂 NMC（3.7V · 满电 4.2V）</option>
             <option value="lfp">磷酸铁锂 LFP（3.2V · 满电 3.65V）</option>
@@ -51,24 +51,24 @@
           <div>
             <label class="text-xs text-muted-foreground block mb-1">标称 V</label>
             <input v-model.number="customVoltages.nominal" type="number" step="0.01" min="0.5" max="10"
-              class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs text-muted-foreground block mb-1">满电 V</label>
             <input v-model.number="customVoltages.full" type="number" step="0.01" min="0.5" max="10"
-              class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs text-muted-foreground block mb-1">截止 V</label>
             <input v-model.number="customVoltages.cutoff" type="number" step="0.01" min="0.5" max="10"
-              class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
         </div>
 
         <div>
           <label class="text-sm font-medium text-foreground block mb-1.5">单体容量 Ah<span class="text-xs text-muted-foreground font-normal ml-1.5">（18650 常见 2.6Ah）</span></label>
           <input v-model.number="cellAh" type="number" step="0.1" min="0.1"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
         </div>
 
         <div>
@@ -172,19 +172,19 @@
           <div>
             <label class="text-xs text-muted-foreground block mb-1">目标电压 V</label>
             <input v-model.number="targetVoltage" type="number" step="0.1"
-              class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs text-muted-foreground block mb-1">目标容量 Ah</label>
             <input v-model.number="targetAh" type="number" step="0.1"
-              class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
         </div>
         <div>
           <label class="text-xs text-muted-foreground block mb-1">反查用单体</label>
           <select
             v-model="reverseCellKey"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="opt in reverseCellOptions" :key="opt.key" :value="opt.key">{{ opt.label }}</option>
           </select>
@@ -228,13 +228,13 @@
         <div>
           <label class="text-xs text-muted-foreground block mb-1">负载功率 W</label>
           <input v-model.number="loadWatts" type="number" step="10" min="0"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
         </div>
         <div>
           <label class="text-xs text-muted-foreground block mb-1">组电压 V（默认跟随上方结果）</label>
           <div class="flex gap-2">
             <input v-model.number="bmsVoltage" type="number" step="0.1" min="1" @input="bmsVoltageManual = true"
-              class="flex-1 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="flex-1 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             <button
               @click="syncBmsVoltage"
               class="px-3 py-2 bg-muted hover:bg-muted/80 border border-border rounded-lg text-sm text-foreground transition"
@@ -280,12 +280,12 @@
         <div>
           <label class="text-xs text-muted-foreground block mb-1">循环次数（默认按类型联动）</label>
           <input v-model.number="cycles" type="number" step="50" min="1"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
         </div>
         <div>
           <label class="text-xs text-muted-foreground block mb-1">电池组价格 元</label>
           <input v-model.number="packPrice" type="number" step="10" min="0"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
         </div>
 
         <div v-if="costResult" class="bg-primary/10 rounded-lg p-4 text-center">

@@ -26,7 +26,7 @@
           </h2>
           <textarea
             v-model="inputText"
-            class="w-full h-56 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-56 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴大段文本，例如客户留言、日志、表格导出内容……&#10;联系方式：zhang@example.com，电话 13812345678&#10;官网 https://www.example.com/help，色值 #1A73E8"
             spellcheck="false"
           ></textarea>
@@ -54,14 +54,14 @@
                 v-model="customPattern"
                 type="text"
                 placeholder="例如：订单号 \d{4}-\d{8}"
-                class="flex-1 min-w-0 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 min-w-0 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                 spellcheck="false"
               />
               <input
                 v-model="customFlags"
                 type="text"
                 placeholder="g"
-                class="w-16 px-2 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono text-center focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-16 px-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono text-center focus:outline-none focus:ring-2 focus:ring-ring"
                 spellcheck="false"
               />
             </div>

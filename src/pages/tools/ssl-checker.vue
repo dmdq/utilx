@@ -28,7 +28,7 @@
                 v-model="domain"
                 type="text"
                 placeholder="example.com"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 @keyup.enter="checkSSL"
               />
             </div>
@@ -38,7 +38,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">端口</label>
               <select
                 v-model="port"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option :value="443">443 (HTTPS)</option>
                 <option :value="8443">8443 (HTTPS Alternative)</option>
@@ -53,7 +53,7 @@
                 v-model="customPort"
                 type="number"
                 placeholder="输入端口号"
-                class="mt-2 w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="mt-2 w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -62,7 +62,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">快速示例</label>
               <select
                 @change="loadExample"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="">选择示例...</option>
                 <option value="google">google.com</option>
@@ -97,7 +97,7 @@
               <input
                 v-model="checkOptions.chain"
                 type="checkbox"
-                class="rounded border-border text-primary focus:ring-primary"
+                class="rounded border border-border text-primary focus:ring-primary"
               />
               <span class="ml-2 text-sm text-foreground">检查证书链</span>
             </label>
@@ -105,7 +105,7 @@
               <input
                 v-model="checkOptions.protocols"
                 type="checkbox"
-                class="rounded border-border text-primary focus:ring-primary"
+                class="rounded border border-border text-primary focus:ring-primary"
               />
               <span class="ml-2 text-sm text-foreground">检查支持的协议</span>
             </label>
@@ -113,7 +113,7 @@
               <input
                 v-model="checkOptions.ciphers"
                 type="checkbox"
-                class="rounded border-border text-primary focus:ring-primary"
+                class="rounded border border-border text-primary focus:ring-primary"
               />
               <span class="ml-2 text-sm text-foreground">检查加密套件</span>
             </label>
@@ -121,7 +121,7 @@
               <input
                 v-model="checkOptions.http2"
                 type="checkbox"
-                class="rounded border-border text-primary focus:ring-primary"
+                class="rounded border border-border text-primary focus:ring-primary"
               />
               <span class="ml-2 text-sm text-foreground">检查 HTTP/2 支持</span>
             </label>
@@ -129,7 +129,7 @@
               <input
                 v-model="checkOptions.headers"
                 type="checkbox"
-                class="rounded border-border text-primary focus:ring-primary"
+                class="rounded border border-border text-primary focus:ring-primary"
               />
               <span class="ml-2 text-sm text-foreground">检查安全头</span>
             </label>

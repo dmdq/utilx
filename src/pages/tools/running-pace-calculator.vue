@@ -59,10 +59,10 @@
                   type="number"
                   step="0.01"
                   min="0.1"
-                  class="flex-1 px-3 py-2 border rounded-lg font-mono text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg font-mono text-sm"
                   placeholder="自定义距离"
                 >
-                <select v-model="distanceUnit" class="px-3 py-2 border rounded-lg text-sm">
+                <select v-model="distanceUnit" class="px-3 py-2 border border-border rounded-lg text-sm">
                   <option value="km">公里</option>
                   <option value="mile">英里</option>
                   <option value="m">米</option>
@@ -81,7 +81,7 @@
                     type="number"
                     min="0"
                     max="30"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="分"
                   >
                 </div>
@@ -92,13 +92,13 @@
                     type="number"
                     min="0"
                     max="59"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="秒"
                   >
                 </div>
               </div>
               <div class="flex gap-2">
-                <select v-model="paceUnit" class="px-3 py-2 border rounded-lg text-sm">
+                <select v-model="paceUnit" class="px-3 py-2 border border-border rounded-lg text-sm">
                   <option value="km">每公里</option>
                   <option value="mile">每英里</option>
                 </select>
@@ -122,7 +122,7 @@
                     type="number"
                     min="0"
                     max="23"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="时"
                   >
                 </div>
@@ -133,7 +133,7 @@
                     type="number"
                     min="0"
                     max="59"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="分"
                   >
                 </div>
@@ -144,7 +144,7 @@
                     type="number"
                     min="0"
                     max="59"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="秒"
                   >
                 </div>
@@ -165,10 +165,10 @@
                   v-model.number="splitDistance"
                   type="number"
                   step="0.1"
-                  class="flex-1 px-3 py-2 border rounded-lg font-mono text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg font-mono text-sm"
                   placeholder="分段距离"
                 >
-                <select v-model="splitUnit" class="px-3 py-2 border rounded-lg text-sm">
+                <select v-model="splitUnit" class="px-3 py-2 border border-border rounded-lg text-sm">
                   <option value="km">公里</option>
                   <option value="mile">英里</option>
                   <option value="m">米</option>
@@ -180,7 +180,7 @@
                   v-model.number="splitMin"
                   type="number"
                   min="0"
-                  class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                  class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                   placeholder="分"
                 >
                 <input
@@ -188,7 +188,7 @@
                   type="number"
                   min="0"
                   max="59"
-                  class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                  class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                   placeholder="秒"
                 >
               </div>

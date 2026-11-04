@@ -57,7 +57,7 @@
           <textarea
             v-model="sqlInput"
             placeholder="输入 CREATE TABLE 语句..."
-            class="w-full h-64 px-4 py-3 border rounded-md font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-64 px-4 py-3 border border-border rounded-md font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
 
           <!-- 配置选项 -->

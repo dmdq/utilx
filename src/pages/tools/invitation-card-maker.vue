@@ -31,7 +31,7 @@
             <select
               v-model="scene"
               @change="applyScenePreset"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <option v-for="p in SCENE_PRESETS" :key="p.id" :value="p.id">{{ p.name }}</option>
             </select>
@@ -39,44 +39,44 @@
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">标题</label>
             <input v-model="form.title" type="text" maxlength="16" placeholder="婚礼请柬"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">主人公</label>
             <input v-model="form.host" type="text" maxlength="30" placeholder="张三 &amp; 李四 / 张三家小公子"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div class="grid grid-cols-2 gap-2">
             <div>
               <label class="text-xs font-medium text-muted-foreground mb-1 block">日期</label>
               <input v-model="form.date" type="date"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </div>
             <div>
               <label class="text-xs font-medium text-muted-foreground mb-1 block">时间（几点）</label>
               <input v-model="form.time" type="text" maxlength="16" placeholder="11:58"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </div>
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">地点名称</label>
             <input v-model="form.venue" type="text" maxlength="30" placeholder="幸福国际大酒店 · 宴会厅"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">详细地址</label>
             <input v-model="form.address" type="text" maxlength="50" placeholder="幸福市幸福路 88 号 3 层"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">邀约语（一句自定义）</label>
             <input v-model="form.inviteText" type="text" maxlength="40" placeholder="恭候您的光临"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">联系电话（选填）</label>
             <input v-model="form.phone" type="tel" maxlength="20" placeholder="138 0000 0000"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
         </div>
 
@@ -216,7 +216,7 @@
             :value="textInvite"
             readonly
             rows="8"
-            class="w-full px-3 py-2.5 bg-muted/40 border border-border rounded-lg text-sm text-foreground leading-relaxed focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2.5 bg-muted/40 border border-border border-border rounded-lg text-sm text-foreground leading-relaxed focus:outline-none focus:ring-2 focus:ring-primary/40"
           ></textarea>
         </div>
 

@@ -15,11 +15,11 @@
           </div>
         </div>
 
-        <textarea v-model="inputText" placeholder="请输入文本内容..." class="w-full h-64 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"></textarea>
+        <textarea v-model="inputText" placeholder="请输入文本内容..." class="w-full h-64 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"></textarea>
 
         <div class="bg-muted p-4 rounded-lg">
           <h3 class="font-medium text-sm mb-2">BOM 类型</h3>
-          <select v-model="selectedBom" class="w-full p-2 border rounded-lg text-sm">
+          <select v-model="selectedBom" class="w-full p-2 border border-border rounded-lg text-sm">
             <option value="utf8">UTF-8 BOM (EF BB BF)</option>
             <option value="utf16le">UTF-16 LE BOM (FF FE)</option>
             <option value="utf16be">UTF-16 BE BOM (FE FF)</option>

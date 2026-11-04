@@ -68,7 +68,7 @@
               type="datetime-local"
               :value="manualInput"
               @input="onManualInput"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
 
@@ -95,7 +95,7 @@
               @input="renderPreview"
               type="text"
               placeholder="例如：上海市 · 徐汇滨江工地"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <p class="text-xs text-muted-foreground mt-1.5 flex items-center gap-1">
               <Lock class="w-3.5 h-3.5" /> 不做定位、不采集地理位置，仅把此处填写的文字画进水印，隐私安全。
@@ -108,7 +108,7 @@
               @input="renderPreview"
               type="text"
               placeholder="例如：巡检记录 0371"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
         </div>
@@ -141,7 +141,7 @@
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-1.5">字体颜色</label>
-              <input v-model="fontColor" @input="renderPreview" type="color" class="w-full h-9 rounded cursor-pointer bg-background border border-input" />
+              <input v-model="fontColor" @input="renderPreview" type="color" class="w-full h-9 rounded cursor-pointer bg-background border border-border border-input" />
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-1.5">透明度</label>
@@ -153,7 +153,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
               <label class="block text-sm font-medium text-foreground mb-1.5">时间格式</label>
-              <select v-model="stampFormat" @change="renderPreview" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+              <select v-model="stampFormat" @change="renderPreview" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
                 <option value="YYYY年MM月DD日 HH:mm">YYYY年MM月DD日 HH:mm</option>
                 <option value="YYYY-MM-DD HH:mm">YYYY-MM-DD HH:mm</option>
                 <option value="YYYY/MM/DD HH:mm:ss">YYYY/MM/DD HH:mm:ss</option>

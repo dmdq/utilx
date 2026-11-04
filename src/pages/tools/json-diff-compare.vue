@@ -73,7 +73,7 @@
       <!-- 详细差异 -->
       <div class="space-y-2 max-h-96 overflow-y-auto">
         <div v-for="(diff, index) in diffResult" :key="index" class="flex">
-          <div class="w-24 py-2 text-sm text-gray-500">{{ diff.path }}</div>
+          <div class="w-24 py-2 text-sm text-muted-foreground">{{ diff.path }}</div>
           <div class="flex-1">
             <div v-if="diff.type === 'added'" class="p-2 bg-green-100 dark:bg-green-900/30 rounded">
               <span class="text-green-600 text-xs font-medium">新增</span>

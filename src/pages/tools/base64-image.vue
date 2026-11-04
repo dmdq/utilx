@@ -74,7 +74,7 @@
                   v-model="base64Output"
                   readonly
                   rows="6"
-                  class="w-full px-3 py-2 border rounded-md bg-muted font-mono text-xs resize-none"
+                  class="w-full px-3 py-2 border border-border rounded-md bg-muted font-mono text-xs resize-none"
                   placeholder="Base64 编码将显示在这里"
                 ></textarea>
                 <div class="absolute bottom-2 right-2 text-xs text-muted-foreground">
@@ -135,7 +135,7 @@
               <textarea
                 v-model="base64Input"
                 rows="6"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none"
                 placeholder="粘贴 Base64 字符串或 Data URL"
                 @input="processBase64"
               ></textarea>
@@ -179,14 +179,14 @@
                     v-model="downloadFilename"
                     type="text"
                     placeholder="image"
-                    class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
+                    class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
                   />
                 </div>
                 <div>
                   <label class="text-sm font-medium">保存格式</label>
                   <select
                     v-model="downloadFormat"
-                    class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
+                    class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
                   >
                     <option value="png">PNG</option>
                     <option value="jpeg">JPEG</option>
@@ -217,7 +217,7 @@
               <textarea
                 v-model="item.base64"
                 rows="3"
-                class="w-full px-3 py-2 border rounded-md font-mono text-xs resize-none"
+                class="w-full px-3 py-2 border border-border rounded-md font-mono text-xs resize-none"
                 :placeholder="`Base64 ${index + 1}`"
                 @input="updateBatchItem(index)"
               ></textarea>

@@ -17,7 +17,7 @@
           <label class="text-sm font-medium mb-2 block">密钥格式</label>
           <select
             v-model="keyFormat"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="PEM">PEM格式</option>
             <option value="DER">DER格式</option>
@@ -28,7 +28,7 @@
           <label class="text-sm font-medium mb-2 block">输入格式</label>
           <select
             v-model="inputFormat"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="base64">Base64</option>
             <option value="hex">十六进制</option>
@@ -40,7 +40,7 @@
           <label class="text-sm font-medium mb-2 block">加密方案</label>
           <select
             v-model="encryptionScheme"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="RSA-OAEP">RSA-OAEP</option>
             <option value="RSAES-PKCS1-v1_5">PKCS1 v1.5</option>
@@ -83,12 +83,12 @@
             v-model="privateKeyPassword"
             type="password"
             placeholder="输入私钥密码"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary mb-2"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary mb-2"
           >
           <textarea
             v-model="privateKey"
             placeholder="粘贴PEM格式的私钥，如：-----BEGIN PRIVATE KEY-----..."
-            class="w-full h-32 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+            class="w-full h-32 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
           ></textarea>
         </div>
         <div v-if="privateKeyInfo" class="text-sm text-muted-foreground">
@@ -128,7 +128,7 @@
         <textarea
           v-model="encryptedData"
           :placeholder="`请输入要解密的${inputFormat}格式数据...`"
-          class="w-full h-64 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-64 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div class="text-sm text-muted-foreground">
           数据长度：{{ encryptedData.length }}

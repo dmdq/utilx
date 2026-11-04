@@ -43,7 +43,7 @@
               type="text"
               v-model="rootElementName"
               placeholder="root"
-              class="text-xs bg-muted border border-border rounded px-2 py-1 w-24"
+              class="text-xs bg-muted border border-border border-border rounded px-2 py-1 w-24"
             />
           </div>
           <div class="flex items-center gap-2">
@@ -52,13 +52,13 @@
               type="text"
               v-model="arrayElementName"
               placeholder="item"
-              class="text-xs bg-muted border border-border rounded px-2 py-1 w-24"
+              class="text-xs bg-muted border border-border border-border rounded px-2 py-1 w-24"
             />
           </div>
         </div>
         <textarea
           v-model="inputJSON"
-          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="在此输入JSON数据..."
           @keydown.ctrl.enter="convert"
           @keydown.meta.enter="convert"

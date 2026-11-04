@@ -34,7 +34,7 @@
             min="0"
             step="any"
             placeholder="例如 11300"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p v-if="amountHint.type === 'error'" class="mt-2 text-xs text-red-500 flex items-start gap-1.5">
             <TriangleAlert class="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
@@ -80,7 +80,7 @@
           <select
             id="vat-rate"
             v-model="rateValue"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="opt in rateOptions" :key="opt.label" :value="opt.value">{{ opt.label }}（{{ opt.short }}）</option>
           </select>
@@ -103,7 +103,7 @@
             type="number"
             min="1"
             step="any"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="mt-2 text-xs text-muted-foreground">仅用于按单价口径展示拆分结果，换算总额仍以输入金额为准，默认 1。</p>
         </div>

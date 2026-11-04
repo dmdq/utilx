@@ -38,7 +38,7 @@
             <label class="text-sm font-medium text-foreground mb-1.5 block">动作（仅作标签，公式通用）</label>
             <select
               v-model="exercise"
-              class="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-sm text-foreground"
+              class="w-full px-3 py-2.5 bg-background border border-border border-border rounded-lg text-sm text-foreground"
             >
               <option v-for="ex in exercises" :key="ex.id" :value="ex.id">{{ ex.name }}</option>
             </select>
@@ -72,7 +72,7 @@
               min="0.5"
               max="500"
               step="2.5"
-              class="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground"
+              class="w-full px-3 py-2.5 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground"
             >
             <p v-if="!weightValid" class="text-xs text-red-500 mt-1 flex items-start gap-1">
               <TriangleAlert class="w-3.5 h-3.5 flex-shrink-0 mt-0.5" /> 重量需在 0.5-500 {{ unit }} 之间
@@ -91,7 +91,7 @@
               min="1"
               max="12"
               step="1"
-              class="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground"
+              class="w-full px-3 py-2.5 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground"
             >
             <p v-if="repsTooHigh" class="text-xs text-red-500 mt-1 flex items-start gap-1 font-medium">
               <TriangleAlert class="w-3.5 h-3.5 flex-shrink-0 mt-0.5" /> 次数过多公式失真，请用更重重量

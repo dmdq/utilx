@@ -41,7 +41,7 @@
                   type="number"
                   min="1"
                   max="100"
-                  class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                  class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                   placeholder="岁"
                   @input="calculateBodyFat"
                 >
@@ -92,7 +92,7 @@
                     step="0.1"
                     min="1"
                     max="50"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     @input="calculateBodyFat"
                   >
                 </div>
@@ -104,7 +104,7 @@
                     step="0.1"
                     min="1"
                     max="50"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     @input="calculateBodyFat"
                   >
                 </div>
@@ -116,7 +116,7 @@
                     step="0.1"
                     min="1"
                     max="50"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     @input="calculateBodyFat"
                   >
                 </div>
@@ -128,7 +128,7 @@
                     step="0.1"
                     min="1"
                     max="50"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     @input="calculateBodyFat"
                   >
                 </div>
@@ -142,7 +142,7 @@
                   step="0.1"
                   min="1"
                   max="50"
-                  class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                  class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                   @input="calculateBodyFat"
                 >
               </div>
@@ -170,7 +170,7 @@
                     v-model.number="skinfold7.chest"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     @input="calculateBodyFat"
                   >
                 </div>
@@ -180,7 +180,7 @@
                     v-model.number="skinfold7.abdominal"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     @input="calculateBodyFat"
                   >
                 </div>
@@ -190,7 +190,7 @@
                     v-model.number="skinfold7.thigh"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     @input="calculateBodyFat"
                   >
                 </div>
@@ -200,7 +200,7 @@
                     v-model.number="skinfold7.tricep"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     @input="calculateBodyFat"
                   >
                 </div>
@@ -210,7 +210,7 @@
                     v-model.number="skinfold7.subscapular"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     @input="calculateBodyFat"
                   >
                 </div>
@@ -220,7 +220,7 @@
                     v-model.number="skinfold7.suprailiac"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     @input="calculateBodyFat"
                   >
                 </div>
@@ -230,7 +230,7 @@
                     v-model.number="skinfold7.calf"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     @input="calculateBodyFat"
                   >
                 </div>
@@ -245,10 +245,10 @@
                   v-model.number="bodyWeight"
                   type="number"
                   step="0.1"
-                  class="flex-1 px-3 py-2 border rounded-lg font-mono text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg font-mono text-sm"
                   placeholder="输入体重"
                 >
-                <select v-model="weightUnit" class="px-3 py-2 border rounded-lg text-sm">
+                <select v-model="weightUnit" class="px-3 py-2 border border-border rounded-lg text-sm">
                   <option value="kg">kg</option>
                   <option value="lb">lb</option>
                 </select>

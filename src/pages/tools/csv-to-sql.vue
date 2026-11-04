@@ -43,7 +43,7 @@
 
           <textarea
             v-model="inputText"
-            class="w-full h-44 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-44 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴 CSV 数据（首行为表头），例如：&#10;name,age,city&#10;张三,28,北京&#10;李四,32,上海"
             spellcheck="false"
           ></textarea>
@@ -55,7 +55,7 @@
                 v-model="tableName"
                 type="text"
                 placeholder="imported_data"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
 
@@ -205,7 +205,7 @@
               v-if="fullSql"
               :value="previewSql"
               readonly
-              class="w-full h-96 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-xs font-mono focus:outline-none resize-y"
+              class="w-full h-96 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-xs font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
             <div v-else-if="parseError" class="py-16 text-center">

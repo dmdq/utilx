@@ -20,13 +20,13 @@
                   type="number"
                   min="10"
                   max="100"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="30"
                 />
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">性别</label>
-                <select v-model="basicInfo.gender" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="basicInfo.gender" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="male">男性</option>
                   <option value="female">女性</option>
                 </select>
@@ -40,7 +40,7 @@
                 type="number"
                 min="40"
                 max="100"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="70"
               />
               <div class="text-xs text-muted-foreground mt-1">
@@ -50,7 +50,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">最大心率计算公式</label>
-              <select v-model="selectedFormula" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="selectedFormula" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="220">220-年龄公式</option>
                 <option value="tanaka">田中公式 (208-0.7×年龄)</option>
                 <option value="gellish">Gellish公式 (207-0.7×年龄)</option>
@@ -60,7 +60,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">体能水平</label>
-              <select v-model="fitnessLevel" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="fitnessLevel" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="beginner">初学者 (很少运动)</option>
                 <option value="intermediate">中级 (每周运动3-4次)</option>
                 <option value="advanced">高级 (每周运动5-6次)</option>
@@ -146,7 +146,7 @@
                 <span class="text-sm">{{ zone.min }} - {{ zone.max }} 次/分</span>
               </div>
               <div class="text-xs text-muted-foreground mb-2">{{ zone.description }}</div>
-              <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="w-full bg-muted rounded-full h-2">
                 <div class="h-2 rounded-full transition-all"
                      :style="{
                        width: `${zone.percentage}%`,

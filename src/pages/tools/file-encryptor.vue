@@ -80,7 +80,7 @@
               <input
                 v-model="password"
                 :type="showPassword ? 'text' : 'password'"
-                class="w-full px-3 py-2.5 pr-10 bg-background border border-input rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 pr-10 bg-background border border-border border-input rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                 :placeholder="mode === 'encrypt' ? '输入加密密码' : '输入解密密码'"
                 @keyup.enter="process"
               />
@@ -114,7 +114,7 @@
             <input
               v-model="confirmPassword"
               type="password"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="再次输入密码"
               @keyup.enter="process"
             />

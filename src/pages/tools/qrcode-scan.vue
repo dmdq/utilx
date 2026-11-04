@@ -90,7 +90,7 @@
           ref="fileInput"
           accept="image/*"
           @change="handleFileUpload"
-          class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
         />
         <button
           @click="scanFileQRCode"

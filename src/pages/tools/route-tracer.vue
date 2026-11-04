@@ -18,18 +18,18 @@
                 v-model="target"
                 type="text"
                 placeholder="example.com 或 8.8.8.8"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
               >
             </div>
 
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block text-sm font-medium mb-2">最大跳数</label>
-                <input v-model.number="maxHops" type="number" min="1" max="64" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+                <input v-model.number="maxHops" type="number" min="1" max="64" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">超时时间(秒)</label>
-                <input v-model.number="timeout" type="number" min="1" max="10" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+                <input v-model.number="timeout" type="number" min="1" max="10" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
               </div>
             </div>
 

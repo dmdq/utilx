@@ -98,7 +98,7 @@
                 <input
                   type="text"
                   v-model="backgroundColor"
-                  class="flex-1 px-3 py-2 border rounded-lg"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg"
                 />
               </div>
             </div>
@@ -115,7 +115,7 @@
                 <input
                   type="text"
                   v-model="patternColor"
-                  class="flex-1 px-3 py-2 border rounded-lg"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg"
                 />
               </div>
             </div>
@@ -143,13 +143,13 @@
                   <input
                     type="text"
                     v-model="gradientEndColor"
-                    class="flex-1 px-3 py-2 border rounded-lg"
+                    class="flex-1 px-3 py-2 border border-border rounded-lg"
                   />
                 </div>
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">渐变方向</label>
-                <select v-model="gradientDirection" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="gradientDirection" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="45">对角线 (45°)</option>
                   <option value="0">水平 (0°)</option>
                   <option value="90">垂直 (90°)</option>
@@ -198,7 +198,7 @@
             </div>
             <div>
               <label class="block text-sm font-medium mb-2">线条方向</label>
-              <select v-model="lineDirection" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lineDirection" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="horizontal">水平</option>
                 <option value="vertical">垂直</option>
                 <option value="diagonal">对角线</option>
@@ -403,7 +403,7 @@
               <input
                 type="text"
                 v-model="exportFileName"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="my-pattern"
               />
             </div>
@@ -417,7 +417,7 @@
                     v-model.number="exportWidth"
                     min="100"
                     max="2000"
-                    class="w-full px-3 py-2 border rounded-lg"
+                    class="w-full px-3 py-2 border border-border rounded-lg"
                     placeholder="宽度"
                   />
                 </div>
@@ -427,7 +427,7 @@
                     v-model.number="exportHeight"
                     min="100"
                     max="2000"
-                    class="w-full px-3 py-2 border rounded-lg"
+                    class="w-full px-3 py-2 border border-border rounded-lg"
                     placeholder="高度"
                   />
                 </div>

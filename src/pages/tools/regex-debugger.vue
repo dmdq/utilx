@@ -37,7 +37,7 @@
                 v-model="regexPattern"
                 @input="updateRegex"
                 placeholder="输入正则表达式，如: \d+"
-                class="flex-1 px-3 py-2 font-mono text-sm border rounded-md"
+                class="flex-1 px-3 py-2 font-mono text-sm border border-border rounded-md"
               >
               <code class="px-2 py-1 bg-muted rounded text-sm font-mono">/</code>
               <input
@@ -45,7 +45,7 @@
                 @input="updateRegex"
                 placeholder="gim"
                 maxlength="10"
-                class="w-16 px-2 py-1 font-mono text-sm border rounded-md text-center"
+                class="w-16 px-2 py-1 font-mono text-sm border border-border rounded-md text-center"
               >
             </div>
 
@@ -120,7 +120,7 @@
             v-model="testText"
             @input="testRegex"
             placeholder="输入要测试的文本..."
-            class="w-full h-48 p-3 font-mono text-sm border rounded-md resize-none"
+            class="w-full h-48 p-3 font-mono text-sm border border-border rounded-md resize-none"
           ></textarea>
 
           <div class="mt-2 text-sm text-muted-foreground">
@@ -217,7 +217,7 @@
         <!-- 可视化高亮 -->
         <div class="bg-card rounded-lg p-4">
           <h3 class="text-lg font-semibold mb-3">可视化高亮</h3>
-          <div class="border rounded-md p-4 bg-white min-h-32 max-h-48 overflow-auto">
+          <div class="border rounded-md p-4 bg-card min-h-32 max-h-48 overflow-auto">
             <div v-html="highlightedText" class="font-mono text-sm whitespace-pre-wrap"></div>
           </div>
         </div>

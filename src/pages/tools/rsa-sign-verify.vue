@@ -74,7 +74,7 @@
           placeholder="-----BEGIN RSA PRIVATE KEY-----
 或
 -----BEGIN PRIVATE KEY-----"
-          class="w-full h-32 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-32 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div v-if="privateKeyInfo" class="text-sm text-green-600">
           ✓ {{ privateKeyInfo }}
@@ -95,7 +95,7 @@
         <textarea
           v-model="messageInput"
           placeholder="请输入要签名的数据..."
-          class="w-full h-32 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-32 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
       </div>
 
@@ -108,7 +108,7 @@
             <label class="text-sm font-medium">哈希算法</label>
             <select
               v-model="signHashAlgorithm"
-              class="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="SHA-1">SHA-1 (不推荐)</option>
               <option value="SHA-256">SHA-256 (推荐)</option>
@@ -122,7 +122,7 @@
             <label class="text-sm font-medium">填充模式</label>
             <select
               v-model="signPadding"
-              class="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="PKCS1-v1_5">PKCS#1 v1.5</option>
               <option value="PSS">PSS (推荐)</option>
@@ -150,7 +150,7 @@
             <select
               v-model="signatureFormat"
               @change="convertSignatureFormat"
-              class="px-3 py-1 text-sm border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="px-3 py-1 text-sm border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="hex">Hex格式</option>
               <option value="base64">Base64格式</option>
@@ -218,7 +218,7 @@
         <textarea
           v-model="publicKeyInput"
           placeholder="-----BEGIN PUBLIC KEY-----"
-          class="w-full h-32 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-32 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div v-if="publicKeyInfo" class="text-sm text-green-600">
           ✓ {{ publicKeyInfo }}
@@ -231,7 +231,7 @@
         <textarea
           v-model="verifyMessageInput"
           placeholder="请输入原始数据..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
       </div>
 
@@ -241,7 +241,7 @@
         <textarea
           v-model="verifySignatureInput"
           placeholder="请输入签名值（Hex或Base64格式）..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
       </div>
 
@@ -253,7 +253,7 @@
             <label class="text-sm font-medium">哈希算法</label>
             <select
               v-model="verifyHashAlgorithm"
-              class="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="SHA-1">SHA-1</option>
               <option value="SHA-256">SHA-256</option>
@@ -265,7 +265,7 @@
             <label class="text-sm font-medium">填充模式</label>
             <select
               v-model="verifyPadding"
-              class="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="PKCS1-v1_5">PKCS#1 v1.5</option>
               <option value="PSS">PSS</option>

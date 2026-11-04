@@ -17,7 +17,7 @@
               <input
                 v-model.number="billAmount"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入账单金额"
                 @input="calculatePayment"
               />
@@ -29,7 +29,7 @@
                 v-model.number="annualRate"
                 type="number"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入年利率"
                 @input="calculatePayment"
               />
@@ -41,7 +41,7 @@
                 v-model.number="minimumPaymentRate"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入最低还款比例"
                 @input="calculatePayment"
               />
@@ -101,7 +101,7 @@
               <label class="block text-sm font-medium mb-2">分期期数</label>
               <select
                 v-model="installmentPeriods"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 @change="calculatePayment"
               >
                 <option value="3">3期</option>
@@ -119,7 +119,7 @@
                 v-model.number="installmentFeeRate"
                 type="number"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入分期手续费率"
                 @input="calculatePayment"
               />
@@ -133,7 +133,7 @@
               <input
                 v-model.number="customPayment"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入还款金额"
                 @input="calculatePayment"
               />
@@ -200,7 +200,7 @@
         <div v-if="paymentMethod === 'installment' && installmentPlan" class="bg-card rounded-lg p-6 border">
           <h3 class="text-lg font-semibold mb-4">分期还款计划</h3>
           <div class="space-y-3">
-            <div class="p-3 bg-gray-50 rounded">
+            <div class="p-3 bg-muted/50 rounded">
               <div class="flex justify-between text-sm mb-1">
                 <span>每期还款金额</span>
                 <span class="font-medium">¥{{ installmentPlan.monthlyPayment.toFixed(2) }}</span>
@@ -236,7 +236,7 @@
               <input
                 v-model.number="paymentDays"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入还款天数"
                 @input="calculateDailyInterest"
               />

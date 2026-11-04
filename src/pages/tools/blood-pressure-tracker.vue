@@ -20,7 +20,7 @@
                   type="number"
                   min="60"
                   max="250"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="120"
                 />
               </div>
@@ -31,7 +31,7 @@
                   type="number"
                   min="40"
                   max="150"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="80"
                 />
               </div>
@@ -44,7 +44,7 @@
                 type="number"
                 min="40"
                 max="200"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="72"
               />
             </div>
@@ -55,12 +55,12 @@
                 <input
                   v-model="currentReading.time"
                   type="time"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                 />
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">测量状态</label>
-                <select v-model="currentReading.state" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="currentReading.state" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="resting">静息状态</option>
                   <option value="after-exercise">运动后</option>
                   <option value="after-meal">餐后</option>
@@ -73,7 +73,7 @@
               <label class="block text-sm font-medium mb-2">备注</label>
               <textarea
                 v-model="currentReading.notes"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 rows="2"
                 placeholder="测量时的特殊情况或症状"
               ></textarea>

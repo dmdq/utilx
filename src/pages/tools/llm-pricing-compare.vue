@@ -32,7 +32,7 @@
           <span class="text-sm font-medium text-foreground">排序</span>
           <select
             v-model="sortKey"
-            class="px-2 py-1.5 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            class="px-2 py-1.5 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option value="input">按输入价</option>
             <option value="output">按输出价</option>
@@ -128,7 +128,7 @@
             type="number"
             min="0"
             step="0.5"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
         <div>
@@ -138,7 +138,7 @@
             type="number"
             min="0"
             step="0.5"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
       </div>

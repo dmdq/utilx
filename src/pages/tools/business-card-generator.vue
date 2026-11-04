@@ -29,44 +29,44 @@
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">姓名</label>
             <input v-model="form.name" type="text" maxlength="20" placeholder="张明"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">职位</label>
             <input v-model="form.title" type="text" maxlength="24" placeholder="产品经理"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">公司名</label>
             <input v-model="form.company" type="text" maxlength="30" placeholder="云帆科技有限公司"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div class="grid grid-cols-2 gap-2">
             <div>
               <label class="text-xs font-medium text-muted-foreground mb-1 block">手机</label>
               <input v-model="form.mobile" type="text" maxlength="24" placeholder="138 0000 0000"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </div>
             <div>
               <label class="text-xs font-medium text-muted-foreground mb-1 block">电话（选填）</label>
               <input v-model="form.phone" type="text" maxlength="24" placeholder="021-8888 6666"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </div>
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">邮箱</label>
             <input v-model="form.email" type="text" maxlength="40" placeholder="name@company.com"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">地址</label>
             <input v-model="form.address" type="text" maxlength="60" placeholder="上海市浦东新区博云路 2 号"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">网站（选填）</label>
             <input v-model="form.website" type="text" maxlength="40" placeholder="www.company.com"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
         </div>
 
@@ -84,7 +84,7 @@
               >{{ backLocked ? '解锁独立编辑' : '重新同步正面' }}</button>
             </div>
             <input v-if="!backLocked" v-model="form.backCompany" type="text" maxlength="30" placeholder="与正面相同"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             <p v-else class="px-3 py-2 bg-muted/50 border border-border rounded-lg text-sm text-muted-foreground truncate">
               同步正面：{{ form.company || '（未填写）' }}
             </p>
@@ -92,12 +92,12 @@
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">Slogan（一句话）</label>
             <input v-model="form.slogan" type="text" maxlength="40" placeholder="让每一次连接更有价值"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">网址（选填）</label>
             <input v-model="form.backWebsite" type="text" maxlength="40" placeholder="www.company.com"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
         </div>
 
@@ -123,7 +123,7 @@
             </div>
             <div class="flex items-center gap-2 mt-2">
               <input v-model="themeColor" type="color"
-                class="w-8 h-8 rounded cursor-pointer border border-border bg-background p-0.5" />
+                class="w-8 h-8 rounded cursor-pointer border border-border border-border bg-background p-0.5" />
               <span class="text-xs text-muted-foreground font-mono">{{ themeColor }}</span>
               <span class="text-xs text-muted-foreground">自定义主题色</span>
             </div>

@@ -12,15 +12,15 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
           <label class="block text-sm font-medium text-foreground mb-1">上次月经第一天</label>
-          <input v-model="lastPeriod" type="date" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+          <input v-model="lastPeriod" type="date" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
         </div>
         <div>
           <label class="block text-sm font-medium text-foreground mb-1">月经周期 (天)</label>
-          <input v-model.number="cycleLength" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="默认28">
+          <input v-model.number="cycleLength" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="默认28">
         </div>
         <div>
           <label class="block text-sm font-medium text-foreground mb-1">月经持续天数</label>
-          <input v-model.number="periodDays" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="默认5">
+          <input v-model.number="periodDays" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="默认5">
         </div>
       </div>
     </div>

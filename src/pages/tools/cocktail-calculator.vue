@@ -51,7 +51,7 @@
           <select
             v-model="selectedId"
             @change="onRecipeChange"
-            class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground"
+            class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground"
           >
             <option v-for="c in COCKTAILS" :key="c.id" :value="c.id">{{ c.name }} · {{ c.zhName }}</option>
           </select>
@@ -62,9 +62,9 @@
         <div v-show="mode === 'custom'" class="space-y-2">
           <p class="text-sm font-medium text-foreground">逐行添加原料（名称 / 酒精度% / 毫升）</p>
           <div v-for="(row, idx) in customRows" :key="idx" class="grid grid-cols-[1fr_64px_64px_28px] gap-1.5 items-center">
-            <input v-model="row.name" placeholder="如 白朗姆酒" class="min-w-0 px-2 py-1.5 rounded-md border border-border bg-background text-sm text-foreground" />
-            <input v-model.number="row.abv" type="number" min="0" max="96" step="0.5" placeholder="ABV" class="min-w-0 px-2 py-1.5 rounded-md border border-border bg-background text-sm text-foreground" />
-            <input v-model.number="row.ml" type="number" min="0" step="5" placeholder="ml" class="min-w-0 px-2 py-1.5 rounded-md border border-border bg-background text-sm text-foreground" />
+            <input v-model="row.name" placeholder="如 白朗姆酒" class="min-w-0 px-2 py-1.5 rounded-md border border-border border-border bg-background text-sm text-foreground" />
+            <input v-model.number="row.abv" type="number" min="0" max="96" step="0.5" placeholder="ABV" class="min-w-0 px-2 py-1.5 rounded-md border border-border border-border bg-background text-sm text-foreground" />
+            <input v-model.number="row.ml" type="number" min="0" step="5" placeholder="ml" class="min-w-0 px-2 py-1.5 rounded-md border border-border border-border bg-background text-sm text-foreground" />
             <button @click="removeCustomRow(idx)" class="h-8 text-muted-foreground hover:text-red-500 text-lg leading-none" aria-label="删除该行">×</button>
           </div>
           <button
@@ -192,7 +192,7 @@
               <input
                 v-model.number="prices[ing.name]"
                 type="number" min="0" placeholder="元/700ml"
-                class="w-20 px-2 py-1 rounded-md border border-border bg-background text-xs text-foreground text-right"
+                class="w-20 px-2 py-1 rounded-md border border-border border-border bg-background text-xs text-foreground text-right"
               />
               <span class="w-16 text-right text-xs text-muted-foreground tabular-nums">{{ ing.costText }}</span>
             </div>

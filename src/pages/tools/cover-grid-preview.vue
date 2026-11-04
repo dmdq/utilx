@@ -60,7 +60,7 @@
               type="text"
               maxlength="30"
               :placeholder="'封面 ' + (i + 1) + ' 的标题（' + baseName(item.name) + '）'"
-              class="flex-1 px-3 py-1.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 px-3 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <button
               class="p-1.5 text-muted-foreground hover:text-red-500 transition-colors"

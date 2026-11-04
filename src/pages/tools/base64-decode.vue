@@ -36,7 +36,7 @@
           <textarea
             v-model="inputText"
             placeholder="请输入要解码的 Base64 字符串..."
-            class="w-full h-64 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+            class="w-full h-64 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
           ></textarea>
 
           <!-- 字符统计 -->

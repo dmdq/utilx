@@ -19,7 +19,7 @@
               <input
                 v-model="config.serverName"
                 type="text"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
                 placeholder="example.com"
                 @input="generateConfig"
               />
@@ -30,7 +30,7 @@
               <input
                 v-model="config.port"
                 type="number"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
                 placeholder="80"
                 @input="generateConfig"
               />
@@ -41,7 +41,7 @@
               <input
                 v-model="config.root"
                 type="text"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
                 placeholder="/var/www/html"
                 @input="generateConfig"
               />
@@ -74,7 +74,7 @@
                 <input
                   v-model="config.proxy.backend"
                   type="text"
-                  class="w-full px-3 py-2 border rounded-md"
+                  class="w-full px-3 py-2 border border-border rounded-md"
                   placeholder="http://localhost:3000"
                   @input="generateConfig"
                 />
@@ -108,7 +108,7 @@
                 <input
                   v-model="config.ssl.certPath"
                   type="text"
-                  class="w-full px-3 py-2 border rounded-md"
+                  class="w-full px-3 py-2 border border-border rounded-md"
                   placeholder="/etc/ssl/certs/cert.pem"
                   @input="generateConfig"
                 />
@@ -119,7 +119,7 @@
                 <input
                   v-model="config.ssl.keyPath"
                   type="text"
-                  class="w-full px-3 py-2 border rounded-md"
+                  class="w-full px-3 py-2 border border-border rounded-md"
                   placeholder="/etc/ssl/private/key.pem"
                   @input="generateConfig"
                 />
@@ -152,7 +152,7 @@
                 <label class="block text-sm font-medium mb-2">后端服务器（每行一个）</label>
                 <textarea
                   v-model="config.loadBalance.backends"
-                  class="w-full px-3 py-2 border rounded-md h-24"
+                  class="w-full px-3 py-2 border border-border rounded-md h-24"
                   placeholder="192.168.1.10:80&#10;192.168.1.11:80&#10;192.168.1.12:80"
                   @input="generateConfig"
                 ></textarea>
@@ -162,7 +162,7 @@
                 <label class="block text-sm font-medium mb-2">负载均衡策略</label>
                 <select
                   v-model="config.loadBalance.method"
-                  class="w-full px-3 py-2 border rounded-md"
+                  class="w-full px-3 py-2 border border-border rounded-md"
                   @change="generateConfig"
                 >
                   <option value="round_robin">轮询 (round_robin)</option>

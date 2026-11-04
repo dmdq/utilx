@@ -29,7 +29,7 @@
         <!-- Hash Algorithm -->
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">哈希算法</label>
-          <select v-model="hashAlgorithm" class="w-full px-4 py-2 border border-border rounded-lg bg-muted">
+          <select v-model="hashAlgorithm" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted">
             <option value="SHA-1">SHA-1 (160位)</option>
             <option value="SHA-256">SHA-256 (256位) - 推荐</option>
             <option value="SHA-384">SHA-384 (384位)</option>
@@ -43,7 +43,7 @@
           <textarea
             v-model="ikmInput"
             rows="3"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted font-mono text-sm"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted font-mono text-sm"
             placeholder="输入密钥材料，可以是密码、共享密钥等..."
           ></textarea>
           <div class="flex gap-2 mt-2">
@@ -84,7 +84,7 @@
           <textarea
             v-model="saltInput"
             rows="2"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted font-mono text-sm"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted font-mono text-sm"
             placeholder="可选盐值，建议使用随机值"
           ></textarea>
           <div class="flex gap-2 mt-2">
@@ -126,7 +126,7 @@
           <textarea
             v-model="infoInput"
             rows="2"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted font-mono text-sm"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted font-mono text-sm"
             placeholder="可选的上下文信息，用于绑定密钥到特定应用场景"
           ></textarea>
           <div class="flex gap-2 mt-2">
@@ -272,7 +272,7 @@
           <textarea
             v-model="batchIkm"
             rows="2"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted font-mono text-sm"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted font-mono text-sm"
             placeholder="主密钥材料"
           ></textarea>
         </div>
@@ -281,7 +281,7 @@
           <textarea
             v-model="batchInfo"
             rows="2"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted font-mono text-sm"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted font-mono text-sm"
             placeholder="encryption_key&#10;authentication_key&#10;encryption_key"
           ></textarea>
         </div>

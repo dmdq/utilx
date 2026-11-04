@@ -58,7 +58,7 @@
                 type="number"
                 min="5" max="600" step="1"
                 :disabled="running"
-                class="w-full h-10 px-2.5 bg-background border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
+                class="w-full h-10 px-2.5 bg-background border border-border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
                 @change="applyTimeField('prepare', 5)"
               />
             </div>
@@ -70,7 +70,7 @@
                 type="number"
                 min="5" max="600" step="1"
                 :disabled="running"
-                class="w-full h-10 px-2.5 bg-background border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
+                class="w-full h-10 px-2.5 bg-background border border-border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
                 @change="applyTimeField('work', 5)"
               />
             </div>
@@ -82,7 +82,7 @@
                 type="number"
                 min="0" max="600" step="1"
                 :disabled="running"
-                class="w-full h-10 px-2.5 bg-background border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
+                class="w-full h-10 px-2.5 bg-background border border-border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
                 @change="applyTimeField('rest', 0)"
               />
             </div>
@@ -94,7 +94,7 @@
                 type="number"
                 min="1" max="50" step="1"
                 :disabled="running"
-                class="w-full h-10 px-2.5 bg-background border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
+                class="w-full h-10 px-2.5 bg-background border border-border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
                 @change="applyCountField('sets', SETS_MAX)"
               />
             </div>
@@ -106,7 +106,7 @@
                 type="number"
                 min="0" max="600" step="1"
                 :disabled="running"
-                class="w-full h-10 px-2.5 bg-background border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
+                class="w-full h-10 px-2.5 bg-background border border-border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
                 @change="applyTimeField('restBetween', 0)"
               />
             </div>
@@ -118,7 +118,7 @@
                 type="number"
                 min="1" max="20" step="1"
                 :disabled="running"
-                class="w-full h-10 px-2.5 bg-background border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
+                class="w-full h-10 px-2.5 bg-background border border-border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
                 @change="applyCountField('cycles', CYCLES_MAX)"
               />
             </div>
@@ -193,7 +193,7 @@
               type="text"
               maxlength="20"
               placeholder="方案名称，如：晚间燃脂"
-              class="flex-1 min-w-0 h-10 px-2.5 bg-background border border-border rounded-lg text-sm text-foreground"
+              class="flex-1 min-w-0 h-10 px-2.5 bg-background border border-border border-border rounded-lg text-sm text-foreground"
               @keyup.enter="saveCurrentPlan"
             />
             <button

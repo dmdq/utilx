@@ -24,7 +24,7 @@
             <input
               type="text"
               v-model="foregroundColor"
-              class="flex-1 px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
+              class="flex-1 px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="#000000"
             />
           </div>
@@ -60,7 +60,7 @@
             <input
               type="text"
               v-model="backgroundColor"
-              class="flex-1 px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
+              class="flex-1 px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="#FFFFFF"
             />
           </div>
@@ -123,7 +123,7 @@
             <input
               type="text"
               placeholder="输入框示例"
-              class="w-full px-3 py-2 rounded border transition-colors"
+              class="w-full px-3 py-2 rounded border border-border transition-colors"
               :style="{
                 color: foregroundColor,
                 borderColor: foregroundColor,

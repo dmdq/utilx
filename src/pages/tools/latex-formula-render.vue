@@ -28,7 +28,7 @@
           v-model="latexSrc"
           rows="8"
           spellcheck="false"
-          class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="输入 LaTeX 公式，如 \frac{1}{2}"
         ></textarea>
 

@@ -26,7 +26,7 @@
           v-model="password"
           type="password"
           placeholder="请输入要哈希的密码"
-          class="w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full px-4 py-3 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
         >
         <div class="text-sm text-muted-foreground">
           字符数：{{ password.length }}
@@ -83,7 +83,7 @@
               type="number"
               min="4"
               max="12"
-              class="w-20 px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-20 px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
           </div>
           <div class="mt-2 text-sm text-muted-foreground">
@@ -127,7 +127,7 @@
           <textarea
             v-model="verifyHash"
             placeholder="粘贴要验证的Bcrypt哈希值..."
-            class="w-full h-24 p-3 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+            class="w-full h-24 p-3 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
           ></textarea>
         </div>
         <div>
@@ -136,7 +136,7 @@
             v-model="verifyPassword"
             type="password"
             placeholder="输入要验证的密码"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
         </div>
         <button
@@ -172,7 +172,7 @@
           <textarea
             v-model="batchPasswords"
             placeholder="输入多个密码，每行一个..."
-            class="w-full h-32 p-3 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-32 p-3 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
         </div>
         <button

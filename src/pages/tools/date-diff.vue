@@ -23,7 +23,7 @@
               <input
                 v-model="date1"
                 type="datetime-local"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @input="calculateDifference"
               />
               <div class="mt-2 flex gap-2">
@@ -54,7 +54,7 @@
               <input
                 v-model="date2"
                 type="datetime-local"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @input="calculateDifference"
               />
               <div class="mt-2 flex gap-2">

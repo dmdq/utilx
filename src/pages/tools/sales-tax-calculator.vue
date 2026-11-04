@@ -14,11 +14,11 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">不含税价格</label>
-            <input v-model.number="netPrice" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="不含税价">
+            <input v-model.number="netPrice" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="不含税价">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">税率 (%)</label>
-            <input v-model.number="taxRate" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="如 13">
+            <input v-model.number="taxRate" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="如 13">
           </div>
           <div class="p-4 bg-muted rounded">
             <p class="text-sm text-muted-foreground">含税价</p>
@@ -37,11 +37,11 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">含税价格</label>
-            <input v-model.number="grossPrice2" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="含税价">
+            <input v-model.number="grossPrice2" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="含税价">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">税率 (%)</label>
-            <input v-model.number="taxRate2" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="如 13">
+            <input v-model.number="taxRate2" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="如 13">
           </div>
           <div class="p-4 bg-muted rounded">
             <p class="text-sm text-muted-foreground">不含税价</p>

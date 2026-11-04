@@ -57,7 +57,7 @@
           <p class="text-sm font-medium text-foreground mb-2">导线截面积（铜芯 / 铝芯 PVC 绝缘）</p>
           <select
             v-model.number="section"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="row in AMPACITY_TABLE" :key="row.section" :value="row.section">
               {{ row.label }} mm²（铜明敷 {{ row.cuOpen }}A / 铜穿管 {{ row.cuPipe }}A）
@@ -90,7 +90,7 @@
               type="text"
               inputmode="decimal"
               placeholder="例如 18"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
           </div>
           <div v-else class="space-y-2">
@@ -100,7 +100,7 @@
               type="text"
               inputmode="decimal"
               placeholder="例如 15"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
             <div class="grid grid-cols-2 gap-2">
               <button
@@ -327,7 +327,7 @@
             type="text"
             inputmode="decimal"
             placeholder="过滤截面，如 2.5 / 10 / 95"
-            class="w-full sm:w-60 pl-8 pr-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full sm:w-60 pl-8 pr-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
         </div>
       </div>

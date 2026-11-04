@@ -153,7 +153,7 @@
                       <select
                         v-model="item.override"
                         @change="refreshPreview(item)"
-                        class="bg-muted text-foreground text-xs rounded px-1.5 py-1 border border-border focus:outline-none focus:ring-2 focus:ring-ring"
+                        class="bg-muted text-foreground text-xs rounded px-1.5 py-1 border border-border border-border focus:outline-none focus:ring-2 focus:ring-ring"
                       >
                         <option value="auto">自动（{{ item.detected.short }}）</option>
                         <option v-for="enc in manualEncodings" :key="enc.value" :value="enc.value">{{ enc.label }}</option>

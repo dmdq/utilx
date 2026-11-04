@@ -32,7 +32,7 @@
               min="0.01"
               max="100"
               step="0.1"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -43,7 +43,7 @@
               min="2"
               max="999"
               step="1"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
         </div>
@@ -55,7 +55,7 @@
             min="2"
             max="998"
             step="1"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
         <div>
@@ -66,7 +66,7 @@
             min="0"
             max="100"
             step="0.5"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">自第 N 抽起，单抽概率每抽增加 d 个百分点，至硬保底必出</p>
         </div>
@@ -79,7 +79,7 @@
               min="0"
               :max="safeM - 1"
               step="1"
-              class="flex-1 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <span class="text-sm text-muted-foreground whitespace-nowrap">/ {{ safeM }} 抽</span>
           </div>

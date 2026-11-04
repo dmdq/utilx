@@ -97,7 +97,7 @@
         <textarea
           :value="inputText"
           rows="9"
-          class="w-full px-4 py-3 rounded-lg border border-border bg-background text-sm leading-relaxed text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 resize-y"
+          class="w-full px-4 py-3 rounded-lg border border-border border-border bg-background text-sm leading-relaxed text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 resize-y"
           placeholder="粘贴需要检查的中文文案、公众号文章、报告草稿……（上限 50KB，超出自动截断）"
           spellcheck="false"
           @input="onTextareaInput"

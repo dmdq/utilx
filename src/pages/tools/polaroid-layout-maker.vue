@@ -52,7 +52,7 @@
                 @input="renderCollage"
                 type="text"
                 :placeholder="`第 ${idx + 1} 张配文（可留空）`"
-                class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-input rounded text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-border border-input rounded text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <button @click="removePhoto(p.id)" class="text-destructive hover:text-destructive/80 flex-shrink-0" aria-label="删除">
                 <X class="w-4 h-4" />
@@ -109,7 +109,7 @@
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-1.5">背景颜色</label>
-              <input v-model="bgColor" @input="renderCollage" type="color" class="w-full h-9 rounded cursor-pointer bg-background border border-input" />
+              <input v-model="bgColor" @input="renderCollage" type="color" class="w-full h-9 rounded cursor-pointer bg-background border border-border border-input" />
             </div>
           </div>
 
@@ -140,11 +140,11 @@
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm text-muted-foreground mb-1">相纸白边</label>
-              <input v-model="paperColor" @input="renderCollage" type="color" class="w-full h-9 rounded cursor-pointer bg-background border border-input" />
+              <input v-model="paperColor" @input="renderCollage" type="color" class="w-full h-9 rounded cursor-pointer bg-background border border-border border-input" />
             </div>
             <div>
               <label class="block text-sm text-muted-foreground mb-1">配文字色</label>
-              <input v-model="captionColor" @input="renderCollage" type="color" class="w-full h-9 rounded cursor-pointer bg-background border border-input" />
+              <input v-model="captionColor" @input="renderCollage" type="color" class="w-full h-9 rounded cursor-pointer bg-background border border-border border-input" />
             </div>
           </div>
           <button

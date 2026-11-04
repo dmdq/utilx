@@ -36,7 +36,7 @@
             step="0.01"
             inputmode="decimal"
             placeholder="如 50"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">不含税口径：进货价 + 包材 + 运费/头程等直接变动成本</p>
         </div>
@@ -51,7 +51,7 @@
             step="1"
             inputmode="decimal"
             placeholder="如 100"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">以成本为分母：加成 100% 即按成本的两倍卖，售价 = 成本 × (1 + 加成率)</p>
         </div>
@@ -68,7 +68,7 @@
             step="1"
             inputmode="decimal"
             placeholder="如 50"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">以售价为分母：毛利率 50% 即成本占售价一半，售价 = 成本 ÷ (1 − 毛利率)</p>
         </div>
@@ -84,7 +84,7 @@
             step="0.01"
             inputmode="decimal"
             placeholder="如 100"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">填主要竞品的实际成交价（含日常促销价），工具据此测算你的毛利空间与跟价策略</p>
         </div>
@@ -95,7 +95,7 @@
           <select
             id="pc-tax"
             v-model.number="taxRate"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option :value="13">13%（一般货物）</option>
             <option :value="9">9%（交通/农产品等）</option>
@@ -110,7 +110,7 @@
           <select
             id="pc-charm"
             v-model.number="charmDigit"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option :value="9">9 尾 · 99 档（如 99、149）</option>
             <option :value="8">8 尾 · 98 档（如 98、88）</option>
@@ -129,7 +129,7 @@
             step="1"
             inputmode="decimal"
             placeholder="如 3000"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">填了就联动测算保本销量 = 固定成本 ÷ 单件毛利（口径同站内「盈亏平衡计算器」）</p>
         </div>

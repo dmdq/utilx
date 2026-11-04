@@ -84,7 +84,7 @@
         <textarea
           v-model="privateKeyInput"
           placeholder="请输入32字节(64个十六进制字符)的私钥..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div v-if="privateKeyInfo" class="text-sm" :class="privateKeyInfo.valid ? 'text-green-600' : 'text-red-600'">
           {{ privateKeyInfo.valid ? '✓' : '✗' }} {{ privateKeyInfo.message }}
@@ -105,7 +105,7 @@
         <textarea
           v-model="messageInput"
           placeholder="请输入要签名的数据..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
       </div>
 
@@ -118,7 +118,7 @@
             <label class="text-sm font-medium">椭圆曲线</label>
             <select
               v-model="selectedCurve"
-              class="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option v-for="curve in curves" :key="curve.value" :value="curve.value">
                 {{ curve.label }} - {{ curve.desc }}
@@ -131,7 +131,7 @@
             <label class="text-sm font-medium">哈希算法</label>
             <select
               v-model="hashAlgorithm"
-              class="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="SHA-1">SHA-1 (不推荐)</option>
               <option value="SHA-256">SHA-256 (推荐)</option>
@@ -258,7 +258,7 @@
         <textarea
           v-model="publicKeyInput"
           placeholder="请输入公钥（04开头，130个十六进制字符，代表65字节未压缩公钥）..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div v-if="publicKeyInfo" class="text-sm" :class="publicKeyInfo.valid ? 'text-green-600' : 'text-red-600'">
           {{ publicKeyInfo.valid ? '✓' : '✗' }} {{ publicKeyInfo.message }}
@@ -271,7 +271,7 @@
         <textarea
           v-model="verifyMessageInput"
           placeholder="请输入原始数据..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
       </div>
 
@@ -285,7 +285,7 @@
               v-model="verifyRInput"
               type="text"
               placeholder="请输入R值..."
-              class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
             >
           </div>
           <div>
@@ -294,7 +294,7 @@
               v-model="verifySInput"
               type="text"
               placeholder="请输入S值..."
-              class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
             >
           </div>
         </div>
@@ -305,7 +305,7 @@
           v-model="verifyCombinedInput"
           type="text"
           placeholder="请输入组合签名（DER编码的Hex或Base64）..."
-          class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         >
       </div>
 
@@ -317,7 +317,7 @@
             <label class="text-sm font-medium">椭圆曲线</label>
             <select
               v-model="verifyCurve"
-              class="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option v-for="curve in curves" :key="curve.value" :value="curve.value">
                 {{ curve.label }} - {{ curve.desc }}
@@ -328,7 +328,7 @@
             <label class="text-sm font-medium">哈希算法</label>
             <select
               v-model="verifyHashAlgorithm"
-              class="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="SHA-1">SHA-1</option>
               <option value="SHA-256">SHA-256</option>

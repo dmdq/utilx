@@ -12,7 +12,7 @@
       <div class="grid md:grid-cols-2 gap-4">
         <div>
           <label class="block text-sm font-medium mb-2 text-foreground">绩点标准</label>
-          <select v-model="gpaScale" class="w-full px-4 py-2 border border-border rounded-lg bg-muted">
+          <select v-model="gpaScale" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted">
             <option value="4.0">4.0 标准制</option>
             <option value="5.0">5.0 标准制</option>
             <option value="custom">自定义</option>
@@ -26,7 +26,7 @@
             step="0.1"
             min="1"
             max="10"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
           >
         </div>
       </div>
@@ -81,7 +81,7 @@
             <input
               v-model="course.name"
               type="text"
-              class="w-full px-3 py-2 border border-border rounded-lg bg-card"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg bg-card"
               placeholder="课程名称"
             >
           </div>
@@ -92,7 +92,7 @@
               step="0.5"
               min="0.5"
               max="10"
-              class="w-full px-3 py-2 border border-border rounded-lg bg-card"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg bg-card"
               placeholder="学分"
             >
           </div>
@@ -102,7 +102,7 @@
               type="number"
               min="0"
               max="100"
-              class="w-full px-3 py-2 border border-border rounded-lg bg-card"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg bg-card"
               placeholder="成绩"
             >
           </div>
@@ -171,7 +171,7 @@
             step="0.01"
             min="0"
             :max="maxGpa"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
           >
         </div>
         <div>
@@ -180,7 +180,7 @@
             v-model.number="remainingCredits"
             type="number"
             min="0"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
           >
         </div>
         <div>
@@ -189,7 +189,7 @@
             v-model.number="remainingCourses"
             type="number"
             min="1"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
           >
         </div>
       </div>

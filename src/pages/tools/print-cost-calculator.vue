@@ -38,7 +38,7 @@
 
         <div>
           <label class="block text-sm font-medium text-foreground mb-1">耗材重量 <span class="text-muted-foreground">g（切片器读数）</span></label>
-          <input v-model.number="grams" type="number" min="0" step="1" class="w-full px-3 py-2 bg-muted border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+          <input v-model.number="grams" type="number" min="0" step="1" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
         </div>
 
         <div>
@@ -60,25 +60,25 @@
         <div v-show="priceMode === 'perKg'" class="space-y-2">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">耗材预设</label>
-            <select :value="presetSel" @change="onPresetChange" class="w-full px-3 py-2 bg-muted border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+            <select :value="presetSel" @change="onPresetChange" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
               <option v-for="f in FILAMENT_PRESETS" :key="f.id" :value="f.id">{{ f.name }} · {{ f.pricePerKg }} 元/kg</option>
               <option value="custom">自定义</option>
             </select>
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">耗材单价 <span class="text-muted-foreground">元/kg（树脂按 ml 售卖见下方说明）</span></label>
-            <input v-model.number="pricePerKgInput" type="number" min="0" step="5" @input="presetSel = 'custom'" class="w-full px-3 py-2 bg-muted border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input v-model.number="pricePerKgInput" type="number" min="0" step="5" @input="presetSel = 'custom'" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
         </div>
 
         <div v-show="priceMode === 'spool'" class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">整卷价 <span class="text-muted-foreground">元/卷</span></label>
-            <input v-model.number="spoolPrice" type="number" min="0" step="1" class="w-full px-3 py-2 bg-muted border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input v-model.number="spoolPrice" type="number" min="0" step="1" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">卷净重 <span class="text-muted-foreground">g</span></label>
-            <input v-model.number="spoolGrams" type="number" min="0" step="50" class="w-full px-3 py-2 bg-muted border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input v-model.number="spoolGrams" type="number" min="0" step="50" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
           <p class="col-span-2 text-xs text-muted-foreground">折合 <span class="font-mono text-foreground">{{ effectivePricePerKg }}</span> 元/kg（净重不含线轴，线轴一般 200-300g，别算进去）</p>
         </div>
@@ -86,11 +86,11 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">打印时长 <span class="text-muted-foreground">h（切片读数）</span></label>
-            <input v-model.number="hours" type="number" min="0" step="0.5" class="w-full px-3 py-2 bg-muted border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input v-model.number="hours" type="number" min="0" step="0.5" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">机器功率 <span class="text-muted-foreground">W</span></label>
-            <select v-model.number="watts" class="w-full px-3 py-2 bg-muted border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model.number="watts" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
               <option v-for="w in MACHINE_POWER_OPTIONS" :key="w" :value="w">{{ w }} W</option>
             </select>
           </div>
@@ -99,17 +99,17 @@
 
         <div>
           <label class="block text-sm font-medium text-foreground mb-1">电价 <span class="text-muted-foreground">元/kWh（默认 0.6）</span></label>
-          <input v-model.number="pricePerKwh" type="number" min="0" step="0.1" class="w-full px-3 py-2 bg-muted border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+          <input v-model.number="pricePerKwh" type="number" min="0" step="0.1" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
         </div>
 
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">机器价格 <span class="text-muted-foreground">元</span></label>
-            <input v-model.number="machinePrice" type="number" min="0" step="100" class="w-full px-3 py-2 bg-muted border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input v-model.number="machinePrice" type="number" min="0" step="100" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">预估寿命 <span class="text-muted-foreground">h</span></label>
-            <input v-model.number="lifespanHours" type="number" min="1" step="500" class="w-full px-3 py-2 bg-muted border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input v-model.number="lifespanHours" type="number" min="1" step="500" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
         </div>
 
@@ -120,7 +120,7 @@
 
         <div>
           <label class="block text-sm font-medium text-foreground mb-1">后处理人工 <span class="text-muted-foreground">元/件（打磨/喷涂，选填）</span></label>
-          <input v-model.number="postProcess" type="number" min="0" step="1" class="w-full px-3 py-2 bg-muted border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
+          <input v-model.number="postProcess" type="number" min="0" step="1" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-foreground focus:outline-none focus:ring-2 focus:ring-primary" />
         </div>
 
         <button
@@ -175,7 +175,7 @@
               <p class="text-[10px] text-muted-foreground mt-1">{{ tier.label }}</p>
             </div>
             <div class="bg-muted/50 border border-border rounded-lg p-4 text-center">
-              <p class="text-xs text-muted-foreground mb-1">毛利 <input v-model.number="customMargin" type="number" min="0" step="10" class="w-14 px-1 py-0.5 bg-background border border-border rounded text-xs text-foreground text-center focus:outline-none focus:ring-1 focus:ring-primary" />%</p>
+              <p class="text-xs text-muted-foreground mb-1">毛利 <input v-model.number="customMargin" type="number" min="0" step="10" class="w-14 px-1 py-0.5 bg-background border border-border border-border rounded text-xs text-foreground text-center focus:outline-none focus:ring-1 focus:ring-primary" />%</p>
               <p class="text-2xl font-bold text-foreground">{{ quoteCustom.toFixed(2) }}</p>
               <p class="text-[10px] text-muted-foreground mt-1">自定义报价</p>
             </div>

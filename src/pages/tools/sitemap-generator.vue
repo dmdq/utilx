@@ -31,7 +31,7 @@
           <select
             id="lastmod-mode"
             v-model="lastmodMode"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option value="none">不设置</option>
             <option value="uniform">统一日期（全部条目相同）</option>
@@ -41,7 +41,7 @@
             v-if="lastmodMode === 'uniform'"
             v-model="uniformDate"
             type="date"
-            class="w-full mt-2 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full mt-2 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
           <p v-if="lastmodMode === 'uniform' && !uniformDate" class="text-xs text-amber-600 mt-1.5">请选择日期，未选择时不会输出 lastmod 字段</p>
           <p v-if="lastmodMode === 'inline'" class="text-xs text-muted-foreground mt-1.5 leading-relaxed">
@@ -55,7 +55,7 @@
           <select
             id="changefreq"
             v-model="changefreq"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option value="">不设置</option>
             <option value="always">always</option>
@@ -74,7 +74,7 @@
           <select
             id="priority"
             v-model="priority"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option value="">不设置</option>
             <option value="1.0">1.0</option>
@@ -167,7 +167,7 @@
           v-model="urlText"
           rows="12"
           spellcheck="false"
-          class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+          class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
           placeholder="https://www.example.com/&#10;https://www.example.com/blog/post-1&#10;https://www.example.com/about 2026-10-31"
         ></textarea>
 
@@ -194,7 +194,7 @@
             v-model="suffix"
             type="text"
             spellcheck="false"
-            class="flex-1 min-w-[220px] px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+            class="flex-1 min-w-[220px] px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="可选：如 /index.html 或 ?lang=zh，追加到每一行 URL 末尾"
           >
         </div>

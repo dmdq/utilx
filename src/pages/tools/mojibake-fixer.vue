@@ -26,7 +26,7 @@
           </h2>
           <textarea
             v-model="inputText"
-            class="w-full h-48 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-48 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴乱码文本，例如：&#10;ä½ å¥½&#10;浣犲ソ涓栫晫&#10;Donâ€™t â€¦okâ€¦"
             spellcheck="false"
           ></textarea>

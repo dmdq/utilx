@@ -216,7 +216,7 @@
               <input
                 type="text"
                 v-model="borderColor"
-                class="flex-1 px-3 py-2 border rounded-lg"
+                class="flex-1 px-3 py-2 border border-border rounded-lg"
                 placeholder="#000000"
               />
             </div>
@@ -243,7 +243,7 @@
                 v-for="color in presetColors"
                 :key="color"
                 @click="borderColor = color"
-                class="w-8 h-8 rounded border-2 border-gray-200 hover:scale-110 transition-transform"
+                class="w-8 h-8 rounded border-2 border-border hover:scale-110 transition-transform"
                 :style="{ backgroundColor: color }"
                 :title="color"
               ></button>
@@ -324,7 +324,7 @@
                 type="text"
                 v-model="imageBorderUrl"
                 placeholder="https://example.com/pattern.png"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
               />
             </div>
             <div>

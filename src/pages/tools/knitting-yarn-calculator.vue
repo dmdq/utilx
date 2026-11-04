@@ -54,7 +54,7 @@
                 min="1"
                 step="0.1"
                 placeholder="如 24"
-                class="mt-1 w-full px-3 py-2 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="mt-1 w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </label>
             <p class="text-xs text-muted-foreground">10×10cm 恰为 100cm²，所以小样克数就是「克/百平方厘米」。</p>
@@ -100,7 +100,7 @@
             <select
               :value="garmentId"
               @change="onGarmentChange($event.target.value)"
-              class="mt-1 w-full px-3 py-2 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="mt-1 w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <option v-for="(preset, id) in GARMENT_PRESETS" :key="id" :value="id">{{ preset.name }}</option>
             </select>
@@ -113,12 +113,12 @@
             <div v-for="row in rows" :key="row.key" class="grid grid-cols-[1fr_60px_60px_48px_24px] gap-1.5 items-center">
               <input
                 v-model="row.name"
-                class="min-w-0 px-2 py-1.5 rounded-md border border-border bg-background text-foreground text-xs"
+                class="min-w-0 px-2 py-1.5 rounded-md border border-border border-border bg-background text-foreground text-xs"
                 aria-label="部位名称"
               />
-              <input v-model="row.w" type="number" min="0" class="px-2 py-1.5 rounded-md border border-border bg-background text-foreground text-xs w-full" aria-label="宽度" />
-              <input v-model="row.h" type="number" min="0" class="px-2 py-1.5 rounded-md border border-border bg-background text-foreground text-xs w-full" aria-label="长度" />
-              <input v-model="row.count" type="number" min="1" class="px-2 py-1.5 rounded-md border border-border bg-background text-foreground text-xs w-full" aria-label="件数" />
+              <input v-model="row.w" type="number" min="0" class="px-2 py-1.5 rounded-md border border-border border-border bg-background text-foreground text-xs w-full" aria-label="宽度" />
+              <input v-model="row.h" type="number" min="0" class="px-2 py-1.5 rounded-md border border-border border-border bg-background text-foreground text-xs w-full" aria-label="长度" />
+              <input v-model="row.count" type="number" min="1" class="px-2 py-1.5 rounded-md border border-border border-border bg-background text-foreground text-xs w-full" aria-label="件数" />
               <button
                 @click="removeRow(row.key)"
                 class="text-muted-foreground hover:text-red-500 text-sm leading-none"
@@ -153,13 +153,13 @@
           <div class="grid grid-cols-2 gap-2 mb-3">
             <label class="text-sm text-muted-foreground">
               每团克重（g）
-              <input v-model="skeinGrams" type="number" min="1" class="mt-1 w-full px-3 py-2 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              <input v-model="skeinGrams" type="number" min="1" class="mt-1 w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
             <div class="text-sm text-muted-foreground">
               线标核对（可选）
               <div class="mt-1 flex gap-1.5">
-                <input v-model="labelMeters" type="number" min="1" placeholder="米" class="w-1/2 px-2 py-2 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40" />
-                <input v-model="labelGrams" type="number" min="1" placeholder="克" class="w-1/2 px-2 py-2 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                <input v-model="labelMeters" type="number" min="1" placeholder="米" class="w-1/2 px-2 py-2 rounded-lg border border-border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                <input v-model="labelGrams" type="number" min="1" placeholder="克" class="w-1/2 px-2 py-2 rounded-lg border border-border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40" />
               </div>
             </div>
           </div>

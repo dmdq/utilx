@@ -182,19 +182,19 @@
           <div class="grid grid-cols-2 gap-4">
             <div class="space-y-2">
               <label class="text-xs text-muted-foreground">左上 (Top-Left)</label>
-              <input v-model.number="radius.tl" type="number" min="0" max="200" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground">
+              <input v-model.number="radius.tl" type="number" min="0" max="200" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground">
             </div>
             <div class="space-y-2">
               <label class="text-xs text-muted-foreground">右上 (Top-Right)</label>
-              <input v-model.number="radius.tr" type="number" min="0" max="200" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground">
+              <input v-model.number="radius.tr" type="number" min="0" max="200" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground">
             </div>
             <div class="space-y-2">
               <label class="text-xs text-muted-foreground">左下 (Bottom-Left)</label>
-              <input v-model.number="radius.bl" type="number" min="0" max="200" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground">
+              <input v-model.number="radius.bl" type="number" min="0" max="200" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground">
             </div>
             <div class="space-y-2">
               <label class="text-xs text-muted-foreground">右下 (Bottom-Right)</label>
-              <input v-model.number="radius.br" type="number" min="0" max="200" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground">
+              <input v-model.number="radius.br" type="number" min="0" max="200" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground">
             </div>
           </div>
         </div>

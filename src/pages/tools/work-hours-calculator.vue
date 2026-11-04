@@ -21,7 +21,7 @@
           <input
             v-model="workStartTime"
             type="time"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
           >
         </div>
 
@@ -31,7 +31,7 @@
           <input
             v-model="workEndTime"
             type="time"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
           >
         </div>
 
@@ -42,7 +42,7 @@
             <input
               v-model="breakMinutes"
               type="number"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
               placeholder="60"
             >
             <div class="flex gap-1">
@@ -86,7 +86,7 @@
                 v-model="overtimeRates.weekday"
                 type="number"
                 step="0.1"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted mt-1"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted mt-1"
               >
             </div>
             <div>
@@ -95,7 +95,7 @@
                 v-model="overtimeRates.weekend"
                 type="number"
                 step="0.1"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted mt-1"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted mt-1"
               >
             </div>
           </div>
@@ -214,7 +214,7 @@
               v-model="weeklyOvertime"
               type="number"
               step="0.5"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
               placeholder="输入加班时长"
               @input="calculateOvertime"
             >
@@ -226,7 +226,7 @@
               v-model="hourlyRate"
               type="number"
               step="0.01"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
               placeholder="输入时薪"
               @input="calculateOvertime"
             >

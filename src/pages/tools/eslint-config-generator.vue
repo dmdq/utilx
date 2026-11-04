@@ -78,7 +78,7 @@
             </div>
           </div>
           <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-            <input v-model="semi" type="checkbox" class="w-4 h-4 rounded border-border" >
+            <input v-model="semi" type="checkbox" class="w-4 h-4 rounded border border-border" >
             语句结尾强制分号（semi）
           </label>
         </div>
@@ -88,15 +88,15 @@
             <SlidersHorizontal class="w-4 h-4 text-primary" /> 配套与额外规则
           </h3>
           <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-            <input v-model="withPrettier" type="checkbox" class="w-4 h-4 rounded border-border" >
+            <input v-model="withPrettier" type="checkbox" class="w-4 h-4 rounded border border-border" >
             搭配 Prettier（生成 eslint-config-prettier 收尾项）
           </label>
           <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-            <input v-model="noConsoleWarn" type="checkbox" class="w-4 h-4 rounded border-border" >
+            <input v-model="noConsoleWarn" type="checkbox" class="w-4 h-4 rounded border border-border" >
             no-console 设为警告（warn）
           </label>
           <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-            <input v-model="withHusky" type="checkbox" class="w-4 h-4 rounded border-border" >
+            <input v-model="withHusky" type="checkbox" class="w-4 h-4 rounded border border-border" >
             生成 husky + lint-staged 提交前检查片段
           </label>
         </div>

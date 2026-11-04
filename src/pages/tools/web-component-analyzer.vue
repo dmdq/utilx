@@ -7,7 +7,7 @@
       <div>
         <div class="mb-4">
           <label class="block text-sm font-medium mb-2">框架类型</label>
-          <select v-model="framework" class="w-full px-3 py-2 border rounded">
+          <select v-model="framework" class="w-full px-3 py-2 border border-border rounded">
             <option value="react">React</option>
             <option value="vue">Vue.js</option>
             <option value="angular">Angular</option>
@@ -18,7 +18,7 @@
           <label class="block text-sm font-medium mb-2">组件代码</label>
           <textarea
             v-model="componentCode"
-            class="w-full h-96 p-3 font-mono border rounded"
+            class="w-full h-96 p-3 font-mono border border-border rounded"
             placeholder="输入组件代码..."
           ></textarea>
         </div>
@@ -29,14 +29,14 @@
       </div>
 
       <div>
-        <div class="bg-gray-50 p-4 rounded">
+        <div class="bg-muted/50 p-4 rounded">
           <h2 class="text-xl font-semibold mb-4">分析结果</h2>
           <div v-if="analysisResult" class="space-y-2">
             <p><strong>复杂度:</strong> {{ analysisResult.complexity }}</p>
             <p><strong>行数:</strong> {{ analysisResult.lines }}</p>
             <p><strong>依赖:</strong> {{ analysisResult.dependencies }}</p>
           </div>
-          <div v-else class="text-gray-500">
+          <div v-else class="text-muted-foreground">
             暂无分析结果
           </div>
         </div>

@@ -39,7 +39,7 @@
                 placeholder="如 CuSO4·5H2O"
                 spellcheck="false"
                 autocomplete="off"
-                class="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary"
+                class="w-full px-3 py-2.5 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary"
               />
               <button
                 v-if="formulaInputs.length > 1"
@@ -230,7 +230,7 @@
                 min="0"
                 step="any"
                 placeholder="如 36"
-                class="w-36 px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary"
+                class="w-36 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary"
               />
               <span class="text-sm text-muted-foreground">g</span>
             </div>

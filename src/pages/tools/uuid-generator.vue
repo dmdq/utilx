@@ -50,7 +50,7 @@
               type="number"
               min="1"
               max="100"
-              class="w-20 px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-20 px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
           </div>
         </div>
@@ -59,7 +59,7 @@
           <label class="text-sm font-medium mb-2 block">输出格式</label>
           <select
             v-model="outputFormat"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="uppercase">大写 (DEFAULT-XXXX-...)</option>
             <option value="lowercase">小写 (default-xxxx-...)</option>
@@ -74,7 +74,7 @@
             v-model="separator"
             type="text"
             placeholder="每行一个、逗号、分号等"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
         </div>
       </div>
@@ -88,7 +88,7 @@
             type="text"
             placeholder="输入命名空间字符串"
             :disabled="selectedVersion !== 'v5'"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
           >
         </div>
 
@@ -99,7 +99,7 @@
             type="text"
             placeholder="输入名称字符串"
             :disabled="selectedVersion !== 'v5'"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
           >
         </div>
 
@@ -108,7 +108,7 @@
             type="checkbox"
             v-model="includeTimestamp"
             id="includeTimestamp"
-            class="rounded border-border"
+            class="rounded border border-border"
           >
           <label for="includeTimestamp" class="text-sm">包含生成时间戳</label>
         </div>

@@ -29,7 +29,7 @@
         </div>
         <textarea
           v-model="text1"
-          class="w-full h-40 px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="w-full h-40 px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="输入第一段文本..."
           @input="calculate"
         ></textarea>
@@ -56,7 +56,7 @@
         </div>
         <textarea
           v-model="text2"
-          class="w-full h-40 px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="w-full h-40 px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="输入第二段文本..."
           @input="calculate"
         ></textarea>

@@ -74,7 +74,7 @@
           v-model="encryptKey"
           type="text"
           placeholder="请输入32字节的密钥（Hex格式）..."
-          class="w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full px-4 py-3 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         >
         <div v-if="encryptKey" class="text-sm text-muted-foreground">
           密钥长度: {{ encryptKey.length / 2 }} bytes
@@ -95,7 +95,7 @@
         <textarea
           v-model="plaintextInput"
           placeholder="请输入要加密的文本..."
-          class="w-full h-48 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-48 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
       </div>
 
@@ -113,7 +113,7 @@
         <textarea
           v-model="aadInput"
           placeholder="附加认证数据（AAD），不加密但会被认证。留空则不使用AAD..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary text-sm"
         ></textarea>
         <p class="text-xs text-muted-foreground">
           AAD (Additional Authenticated Data) 不会被加密，但会被包含在认证标签中，用于验证数据完整性。
@@ -138,7 +138,7 @@
           <div class="flex gap-2">
             <select
               v-model="outputFormat"
-              class="px-3 py-1 text-sm border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="px-3 py-1 text-sm border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="combined">组合格式</option>
               <option value="base64">Base64</option>
@@ -223,7 +223,7 @@
           v-model="decryptKey"
           type="text"
           placeholder="请输入32字节的密钥（Hex格式）..."
-          class="w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full px-4 py-3 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         >
       </div>
 
@@ -236,7 +236,7 @@
             <textarea
               v-model="decryptCiphertext"
               placeholder="请输入Base64格式的密文..."
-              class="w-full h-24 p-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+              class="w-full h-24 p-3 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
             ></textarea>
           </div>
           <div>
@@ -244,7 +244,7 @@
             <textarea
               v-model="decryptTag"
               placeholder="请输入Base64格式的认证标签..."
-              class="w-full h-24 p-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+              class="w-full h-24 p-3 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
             ></textarea>
           </div>
           <div>
@@ -252,7 +252,7 @@
             <textarea
               v-model="decryptAAD"
               placeholder="如果加密时使用了AAD，请输入相同的AAD..."
-              class="w-full h-24 p-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+              class="w-full h-24 p-3 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm"
             ></textarea>
           </div>
         </div>

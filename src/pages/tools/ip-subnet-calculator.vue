@@ -24,7 +24,7 @@
             v-model="input"
             type="text"
             placeholder="192.168.1.0/24 或 10.0.0.5/8"
-            class="flex-1 px-4 py-3 bg-background border border-input rounded-lg text-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="flex-1 px-4 py-3 bg-background border border-border border-input rounded-lg text-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             spellcheck="false"
           />
           <div class="flex gap-2">
@@ -87,7 +87,7 @@
         </h2>
         <div class="flex flex-wrap items-center gap-3 mb-4">
           <label class="text-sm text-muted-foreground">按新前缀</label>
-          <select v-model.number="splitPrefix" class="px-3 py-2 bg-background border border-input rounded-lg text-sm">
+          <select v-model.number="splitPrefix" class="px-3 py-2 bg-background border border-border border-input rounded-lg text-sm">
             <option v-for="p in prefixOptions" :key="p" :value="p">/{{ p }}（每个 {{ subnetsHostCount(p).toLocaleString() }} 可用主机）</option>
           </select>
           <span class="text-sm text-muted-foreground">共 {{ subnetCount.toLocaleString() }} 个子网，预览前 16 个：</span>

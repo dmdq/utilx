@@ -142,15 +142,15 @@ const handleClick = () => {
 
     <!-- 统计信息 -->
     <div v-if="showStats" class="flex items-center gap-4 mb-4">
-      <div class="flex items-center gap-1 text-sm text-gray-600">
+      <div class="flex items-center gap-1 text-sm text-muted-foreground">
         <Tag class="w-4 h-4" />
         <span>{{ tag.toolCount }} 个工具</span>
       </div>
-      <div v-if="tag.popularity" class="flex items-center gap-1 text-sm text-gray-600">
+      <div v-if="tag.popularity" class="flex items-center gap-1 text-sm text-muted-foreground">
         <TrendingUp class="w-4 h-4" />
         <span>{{ Math.round(tag.popularity) }} 热度</span>
       </div>
-      <div v-if="tag.totalViews" class="flex items-center gap-1 text-sm text-gray-600">
+      <div v-if="tag.totalViews" class="flex items-center gap-1 text-sm text-muted-foreground">
         <Eye class="w-4 h-4" />
         <span>{{ tag.totalViews.toLocaleString() }} 访问</span>
       </div>
@@ -171,7 +171,7 @@ const handleClick = () => {
         </span>
         <span
           v-if="tag.categories.length > (size === 'small' ? 2 : size === 'medium' ? 3 : 5)"
-          class="inline-block px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-600"
+          class="inline-block px-2 py-1 text-xs rounded-full bg-muted text-muted-foreground"
         >
           +{{ tag.categories.length - (size === 'small' ? 2 : size === 'medium' ? 3 : 5) }}
         </span>
@@ -180,18 +180,18 @@ const handleClick = () => {
 
     <!-- 工具预览 -->
     <div v-if="showTools && tag.tools && tag.tools.length > 0" class="border-t pt-4">
-      <div class="text-xs text-gray-500 mb-2">热门工具:</div>
+      <div class="text-xs text-muted-foreground mb-2">热门工具:</div>
       <div class="flex flex-wrap gap-2">
         <span
           v-for="tool in tag.tools.slice(0, size === 'small' ? 2 : size === 'medium' ? 3 : 4)"
           :key="tool.id"
-          class="text-xs bg-gray-50 text-gray-700 px-2 py-1 rounded"
+          class="text-xs bg-muted/50 text-foreground px-2 py-1 rounded"
         >
           {{ tool.name }}
         </span>
         <span
           v-if="tag.tools.length > (size === 'small' ? 2 : size === 'medium' ? 3 : 4)"
-          class="text-xs bg-gray-50 text-gray-500 px-2 py-1 rounded"
+          class="text-xs bg-muted/50 text-muted-foreground px-2 py-1 rounded"
         >
           +{{ tag.tools.length - (size === 'small' ? 2 : size === 'medium' ? 3 : 4) }}
         </span>

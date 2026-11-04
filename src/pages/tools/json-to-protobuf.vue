@@ -40,7 +40,7 @@
                 v-model="packageName"
                 @input="generateProtobuf"
                 placeholder="example.package"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 
@@ -50,7 +50,7 @@
                 v-model="messagePrefix"
                 @input="generateProtobuf"
                 placeholder="Auto"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 
@@ -122,7 +122,7 @@
           <textarea
             v-model="jsonInput"
             @input="generateProtobuf"
-            class="w-full h-80 p-3 font-mono text-sm border rounded-md resize-none"
+            class="w-full h-80 p-3 font-mono text-sm border border-border rounded-md resize-none"
             placeholder="输入JSON数据..."
           ></textarea>
 
@@ -146,14 +146,14 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="block text-xs font-medium mb-1">字符串类型</label>
-                <select v-model="typeMapping.string" class="w-full px-2 py-1 text-sm border rounded">
+                <select v-model="typeMapping.string" class="w-full px-2 py-1 text-sm border border-border rounded">
                   <option value="string">string</option>
                   <option value="bytes">bytes</option>
                 </select>
               </div>
               <div>
                 <label class="block text-xs font-medium mb-1">整数类型</label>
-                <select v-model="typeMapping.integer" class="w-full px-2 py-1 text-sm border rounded">
+                <select v-model="typeMapping.integer" class="w-full px-2 py-1 text-sm border border-border rounded">
                   <option value="int32">int32</option>
                   <option value="int64">int64</option>
                   <option value="uint32">uint32</option>
@@ -168,14 +168,14 @@
               </div>
               <div>
                 <label class="block text-xs font-medium mb-1">浮点类型</label>
-                <select v-model="typeMapping.float" class="w-full px-2 py-1 text-sm border rounded">
+                <select v-model="typeMapping.float" class="w-full px-2 py-1 text-sm border border-border rounded">
                   <option value="float">float</option>
                   <option value="double">double</option>
                 </select>
               </div>
               <div>
                 <label class="block text-xs font-medium mb-1">布尔类型</label>
-                <select v-model="typeMapping.boolean" class="w-full px-2 py-1 text-sm border rounded">
+                <select v-model="typeMapping.boolean" class="w-full px-2 py-1 text-sm border border-border rounded">
                   <option value="bool">bool</option>
                 </select>
               </div>

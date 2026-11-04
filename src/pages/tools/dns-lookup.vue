@@ -32,7 +32,7 @@
                 v-model="domain"
                 type="text"
                 placeholder="例如: google.com"
-                class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 @keyup.enter="queryDns"
               />
             </div>
@@ -62,7 +62,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">DNS服务器</label>
               <select
                 v-model="dnsServer"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="system">系统默认</option>
                 <option value="8.8.8.8">Google (8.8.8.8)</option>
@@ -93,7 +93,7 @@
                     type="number"
                     min="1"
                     max="30"
-                    class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
                 <label class="flex items-center">

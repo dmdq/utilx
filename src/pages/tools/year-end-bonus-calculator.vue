@@ -82,7 +82,7 @@
                   min="0"
                   step="100"
                   placeholder="50000"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -128,7 +128,7 @@
                   min="0"
                   step="100"
                   placeholder="12000"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -141,7 +141,7 @@
                   min="0"
                   step="100"
                   placeholder="2000"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -154,7 +154,7 @@
                   min="0"
                   step="100"
                   placeholder="2000"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -167,7 +167,7 @@
                   min="0"
                   step="100"
                   placeholder="0"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
             </div>
@@ -190,7 +190,7 @@
                   min="0"
                   step="100"
                   placeholder="100000"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -203,7 +203,7 @@
                   min="0"
                   step="100"
                   placeholder="12000"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -212,7 +212,7 @@
                 <select
                   v-model="optimizationData.optimizationGoal"
                   @change="calculateOptimization"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option value="maximizeAfterTax">最大化税后收入</option>
                   <option value="minimizeTaxRate">最小化实际税率</option>

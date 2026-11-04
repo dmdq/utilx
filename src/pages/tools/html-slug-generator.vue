@@ -98,15 +98,15 @@
         <div class="space-y-2">
           <button @click="setExample('blog')" class="w-full text-left px-4 py-2 bg-gray-50 dark:bg-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
             <div class="font-medium">博客文章标题</div>
-            <div class="text-sm text-gray-500">"How to Learn Vue.js in 2024"</div>
+            <div class="text-sm text-muted-foreground">"How to Learn Vue.js in 2024"</div>
           </button>
           <button @click="setExample('chinese')" class="w-full text-left px-4 py-2 bg-gray-50 dark:bg-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
             <div class="font-medium">中文标题</div>
-            <div class="text-sm text-gray-500">"Vue 3 组合式 API 入门教程"</div>
+            <div class="text-sm text-muted-foreground">"Vue 3 组合式 API 入门教程"</div>
           </button>
           <button @click="setExample('product')" class="w-full text-left px-4 py-2 bg-gray-50 dark:bg-gray-700 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
             <div class="font-medium">产品名称</div>
-            <div class="text-sm text-gray-500">"Apple iPhone 15 Pro Max 256GB"</div>
+            <div class="text-sm text-muted-foreground">"Apple iPhone 15 Pro Max 256GB"</div>
           </button>
         </div>
       </div>

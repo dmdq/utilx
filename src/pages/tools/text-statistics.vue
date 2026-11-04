@@ -37,7 +37,7 @@
 
       <textarea
         v-model="inputText"
-        class="w-full h-48 p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+        class="w-full h-48 p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
         placeholder="在此输入需要分析的文本..."
         @input="analyze"
       ></textarea>
@@ -220,7 +220,7 @@
         </h2>
         <select
           v-model="charFilter"
-          class="px-3 py-1 border border-border rounded bg-muted text-sm text-foreground"
+          class="px-3 py-1 border border-border border-border rounded bg-muted text-sm text-foreground"
           @change="analyze"
         >
           <option value="all">全部字符</option>

@@ -301,7 +301,7 @@ watch(inputText, () => {
           <h3 class="font-semibold text-foreground mb-3">输入文本</h3>
           <textarea
             v-model="inputText"
-            class="w-full h-48 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none text-sm"
+            class="w-full h-48 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none text-sm"
             placeholder="输入要分析的文本..."
           ></textarea>
           <div class="flex gap-2 mt-3">
@@ -395,7 +395,7 @@ watch(inputText, () => {
               <label class="text-xs text-muted-foreground mb-1 block">字体</label>
               <select
                 v-model="cloudConfig.fontFamily"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
               >
                 <option v-for="(font, name) in fontFamilies" :key="name" :value="font">
                   {{ name }}
@@ -407,7 +407,7 @@ watch(inputText, () => {
               <label class="text-xs text-muted-foreground mb-1 block">布局方向</label>
               <select
                 v-model="cloudConfig.layout"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
               >
                 <option value="horizontal">水平</option>
                 <option value="vertical">垂直</option>
@@ -423,7 +423,7 @@ watch(inputText, () => {
                   type="number"
                   min="8"
                   max="50"
-                  class="flex-1 px-2 py-1 bg-muted border border-border rounded text-sm"
+                  class="flex-1 px-2 py-1 bg-muted border border-border border-border rounded text-sm"
                 />
                 <span class="text-muted-foreground">-</span>
                 <input
@@ -431,7 +431,7 @@ watch(inputText, () => {
                   type="number"
                   min="20"
                   max="200"
-                  class="flex-1 px-2 py-1 bg-muted border border-border rounded text-sm"
+                  class="flex-1 px-2 py-1 bg-muted border border-border border-border rounded text-sm"
                 />
               </div>
             </div>
@@ -469,7 +469,7 @@ watch(inputText, () => {
                 <input
                   v-model="cloudConfig.backgroundColor"
                   type="text"
-                  class="flex-1 px-2 py-1 bg-muted border border-border rounded text-sm"
+                  class="flex-1 px-2 py-1 bg-muted border border-border border-border rounded text-sm"
                 />
               </div>
             </div>

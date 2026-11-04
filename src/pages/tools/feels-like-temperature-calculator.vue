@@ -56,7 +56,7 @@
             v-model.number="tempInput"
             min="-40"
             :max="unit === 'C' ? 45 : 113"
-            class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
         </div>
 
@@ -75,7 +75,7 @@
             max="100"
             step="1"
             v-model.number="rhInput"
-            class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
         </div>
 
@@ -94,7 +94,7 @@
             max="120"
             step="1"
             v-model.number="windInput"
-            class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
         </div>
 

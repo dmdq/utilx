@@ -41,7 +41,7 @@
                 step="1"
                 inputmode="numeric"
                 placeholder="如 200000"
-                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
               <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground pointer-events-none">次</span>
             </div>
@@ -57,7 +57,7 @@
                 step="0.01"
                 inputmode="decimal"
                 placeholder="如 3000"
-                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
               <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground pointer-events-none">元</span>
             </div>
@@ -73,7 +73,7 @@
                 step="1"
                 inputmode="numeric"
                 placeholder="如 6000"
-                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
               <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground pointer-events-none">次</span>
             </div>
@@ -89,7 +89,7 @@
                 step="1"
                 inputmode="numeric"
                 placeholder="如 300"
-                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
               <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground pointer-events-none">单</span>
             </div>
@@ -105,7 +105,7 @@
                 step="0.01"
                 inputmode="decimal"
                 placeholder="如 199"
-                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
               <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground pointer-events-none">元</span>
             </div>
@@ -122,7 +122,7 @@
                 step="0.1"
                 inputmode="decimal"
                 placeholder="如 40"
-                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full pl-3 pr-10 py-2.5 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
               <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground pointer-events-none">%</span>
             </div>

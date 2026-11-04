@@ -43,7 +43,7 @@
           v-model="input"
           rows="14"
           spellcheck="false"
-          class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+          class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
           placeholder='粘贴被截断或格式出错的 JSON，例如：{"name": "a", "tags": ["x", "y"'
         ></textarea>
 
@@ -55,7 +55,7 @@
             <RefreshCw class="w-4 h-4" /> 修复并验证
           </button>
           <label class="flex items-center gap-2 text-sm text-muted-foreground cursor-pointer">
-            <input v-model="autoRepair" type="checkbox" class="w-4 h-4 rounded border-border">
+            <input v-model="autoRepair" type="checkbox" class="w-4 h-4 rounded border border-border">
             输入变化时自动修复
           </label>
         </div>

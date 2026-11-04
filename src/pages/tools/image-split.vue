@@ -119,7 +119,7 @@
                   type="number"
                   min="1"
                   max="20"
-                  class="w-full p-2 border rounded-lg text-sm"
+                  class="w-full p-2 border border-border rounded-lg text-sm"
                   @input="splitImage"
                 >
               </div>
@@ -130,7 +130,7 @@
                   type="number"
                   min="1"
                   max="20"
-                  class="w-full p-2 border rounded-lg text-sm"
+                  class="w-full p-2 border border-border rounded-lg text-sm"
                   @input="splitImage"
                 >
               </div>
@@ -147,7 +147,7 @@
               <input
                 v-model="namingPattern"
                 type="text"
-                class="w-full p-2 border rounded-lg text-sm font-mono"
+                class="w-full p-2 border border-border rounded-lg text-sm font-mono"
                 placeholder="{name}_row{row}_col{col}"
                 @input="updatePreview"
               >
@@ -157,7 +157,7 @@
             <!-- 输出格式 -->
             <div>
               <label class="text-xs text-muted-foreground mb-1 block">输出格式</label>
-              <select v-model="outputFormat" class="w-full p-2 border rounded-lg text-sm">
+              <select v-model="outputFormat" class="w-full p-2 border border-border rounded-lg text-sm">
                 <option value="png">PNG (推荐)</option>
                 <option value="jpeg">JPEG</option>
                 <option value="webp">WebP</option>

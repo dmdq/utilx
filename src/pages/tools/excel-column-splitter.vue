@@ -33,7 +33,7 @@
         <template v-if="table">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">要拆分的列</label>
-            <select v-model.number="targetCol" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+            <select v-model.number="targetCol" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
               <option v-for="(h, i) in table.headers" :key="i" :value="i">{{ h }}</option>
             </select>
             <p class="text-xs text-muted-foreground mt-1.5">共 {{ table.totalRows }} 行数据，{{ table.headers.length }} 列</p>

@@ -33,7 +33,7 @@
               type="text"
               inputmode="decimal"
               placeholder="如 20 或 -5"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
           </div>
           <div class="bg-primary/10 rounded-lg p-4 text-center">
@@ -60,7 +60,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 440 或 1e3"
-                class="w-full px-3 py-2 pr-12 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 pr-12 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
               <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground">Hz</span>
             </div>
@@ -124,7 +124,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 1 或 34.3"
-                class="flex-1 min-w-0 px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="flex-1 min-w-0 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
               <button
                 @click="toggleRevUnit"
@@ -226,15 +226,15 @@
             <div class="grid grid-cols-3 gap-2">
               <div>
                 <label class="block text-[10px] text-muted-foreground mb-1">端口面积 A（cm²）</label>
-                <input v-model="portAreaInput" type="text" inputmode="decimal" class="w-full min-w-0 px-2 py-1.5 bg-background border border-border rounded text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                <input v-model="portAreaInput" type="text" inputmode="decimal" class="w-full min-w-0 px-2 py-1.5 bg-background border border-border border-border rounded text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
               </div>
               <div>
                 <label class="block text-[10px] text-muted-foreground mb-1">箱体容积 V（L）</label>
-                <input v-model="boxVolumeInput" type="text" inputmode="decimal" class="w-full min-w-0 px-2 py-1.5 bg-background border border-border rounded text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                <input v-model="boxVolumeInput" type="text" inputmode="decimal" class="w-full min-w-0 px-2 py-1.5 bg-background border border-border border-border rounded text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
               </div>
               <div>
                 <label class="block text-[10px] text-muted-foreground mb-1">端口净长 L（cm）</label>
-                <input v-model="portLengthInput" type="text" inputmode="decimal" class="w-full min-w-0 px-2 py-1.5 bg-background border border-border rounded text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                <input v-model="portLengthInput" type="text" inputmode="decimal" class="w-full min-w-0 px-2 py-1.5 bg-background border border-border border-border rounded text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
               </div>
             </div>
             <div class="flex flex-wrap items-center gap-2">
@@ -252,7 +252,7 @@
             <div class="grid grid-cols-2 gap-2 items-end">
               <div>
                 <label class="block text-[10px] text-muted-foreground mb-1">房间边长 L（m）</label>
-                <input v-model="roomLengthInput" type="text" inputmode="decimal" class="w-full px-2 py-1.5 bg-background border border-border rounded text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                <input v-model="roomLengthInput" type="text" inputmode="decimal" class="w-full px-2 py-1.5 bg-background border border-border border-border rounded text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
               </div>
               <p class="text-xs text-muted-foreground">基频 f₁ = <span class="font-mono font-bold text-foreground">{{ roomModes ? roomModes[0].toFixed(1) + ' Hz' : '—' }}</span></p>
             </div>

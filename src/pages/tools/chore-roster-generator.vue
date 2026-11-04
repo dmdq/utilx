@@ -37,7 +37,7 @@
             id="membersInput"
             v-model="membersText"
             rows="5"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="每行一位成员，如：&#10;张三&#10;李四&#10;王五"
           ></textarea>
         </div>
@@ -48,7 +48,7 @@
             id="choresInput"
             v-model="choresText"
             rows="6"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="每行一项，如：&#10;洗碗&#10;拖地&#10;倒垃圾&#10;擦桌子"
           ></textarea>
         </div>
@@ -75,7 +75,7 @@
               id="startDate"
               v-model="startDate"
               type="date"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -86,7 +86,7 @@
               type="number"
               min="1"
               max="6"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
         </div>
@@ -139,8 +139,8 @@
         <template v-if="roster.rows.length">
           <!-- 打印表头 -->
           <div class="print-only text-center mb-4">
-            <h2 class="text-xl font-bold text-neutral-900">家务轮值表</h2>
-            <p class="text-xs text-neutral-500 mt-1">{{ startDate }} 起 {{ weeksLabel }} · {{ currentCycleLabel }}</p>
+            <h2 class="text-xl font-bold text-foreground">家务轮值表</h2>
+            <p class="text-xs text-muted-foreground mt-1">{{ startDate }} 起 {{ weeksLabel }} · {{ currentCycleLabel }}</p>
           </div>
 
           <div v-for="week in weekGroups" :key="week.index" class="mb-6">

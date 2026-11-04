@@ -29,7 +29,7 @@
             <label class="block text-sm font-medium text-foreground mb-2">源坐标系</label>
             <select
               v-model="sourceSystem"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option v-for="sys in coordSystems" :key="sys.value" :value="sys.value">{{ sys.label }}</option>
             </select>
@@ -38,7 +38,7 @@
             <label class="block text-sm font-medium text-foreground mb-2">目标坐标系</label>
             <select
               v-model="targetSystem"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option v-for="sys in coordSystems" :key="sys.value" :value="sys.value">{{ sys.label }}</option>
             </select>
@@ -51,7 +51,7 @@
             <input
               v-model="singleLat"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="39.9042"
             />
           </div>
@@ -60,7 +60,7 @@
             <input
               v-model="singleLng"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="116.4074"
             />
           </div>
@@ -129,7 +129,7 @@
           <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
             <textarea
               v-model="batchText"
-              class="w-full h-64 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-64 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="每行一个坐标，纬度在前、经度在后（英文逗号或空格分隔）：&#10;39.9042,116.4074&#10;31.2304,121.4737&#10;22.5431,114.0579"
               spellcheck="false"
             ></textarea>

@@ -43,7 +43,7 @@
                   type="number"
                   min="1"
                   max="120"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="30"
                 />
               </div>
@@ -55,7 +55,7 @@
                   min="50"
                   max="250"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="170"
                 />
               </div>
@@ -67,7 +67,7 @@
                   min="10"
                   max="300"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="65"
                 />
               </div>
@@ -75,7 +75,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">计算公式</label>
-              <select v-model="selectedFormula" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="selectedFormula" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="mifflin">Mifflin-St Jeor公式（推荐）</option>
                 <option value="harris">Harris-Benedict公式（经典）</option>
                 <option value="both">两种公式对比</option>
@@ -112,7 +112,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">目标</label>
-              <select v-model="weightGoal" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="weightGoal" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="lose-fat-quick">快速减脂（每周减0.75kg）</option>
                 <option value="lose-fat-slow">缓慢减脂（每周减0.5kg）</option>
                 <option value="lose-fat-maintain">温和减脂（每周减0.25kg）</option>

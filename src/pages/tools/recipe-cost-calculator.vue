@@ -114,12 +114,12 @@
                   <select
                     :value="presetKeyOf(row.yieldPct)"
                     @change="onPresetSelect(row, $event.target.value)"
-                    class="w-auto px-2 py-1.5 bg-background border border-border rounded text-xs text-foreground"
+                    class="w-auto px-2 py-1.5 bg-background border border-border border-border rounded text-xs text-foreground"
                   >
                     <option v-for="p in YIELD_PRESETS" :key="p.name" :value="String(p.value)">{{ p.name }} {{ p.value }}%</option>
                     <option value="custom">自定义</option>
                   </select>
-                  <input v-model="row.yieldPct" type="number" min="1" max="100" step="1" class="w-20 px-2 py-1.5 bg-background border border-border rounded text-xs text-foreground" />
+                  <input v-model="row.yieldPct" type="number" min="1" max="100" step="1" class="w-20 px-2 py-1.5 bg-background border border-border border-border rounded text-xs text-foreground" />
                   <span class="text-xs text-muted-foreground">%</span>
                   <span class="text-xs text-muted-foreground sm:ml-auto">单项成本 ≈ {{ money(rowCostOf(row)) }} 元</span>
                 </div>

@@ -26,7 +26,7 @@
           </h2>
           <textarea
             v-model="diffText"
-            class="w-full h-64 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-64 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴 unified diff，例如：&#10;--- a/demo.txt&#10;+++ b/demo.txt&#10;@@ -2,3 +2,3 @@&#10; line2&#10;-line3&#10;+line3-modified&#10; line4"
             spellcheck="false"
           ></textarea>
@@ -42,7 +42,7 @@
           </h2>
           <textarea
             v-model="sourceText"
-            class="w-full h-64 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-64 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴要打补丁的源文件全文"
             spellcheck="false"
           ></textarea>

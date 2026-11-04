@@ -25,7 +25,7 @@
         </h2>
         <textarea
           v-model="ansiText"
-          class="w-full h-72 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full h-72 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="粘贴带 ANSI 码的文本（支持真实 ESC 字符或字面量 \x1b[31m / \033[31m / \e[31m），例如：&#10;\x1b[31m这是红字\x1b[0m"
           spellcheck="false"
         ></textarea>

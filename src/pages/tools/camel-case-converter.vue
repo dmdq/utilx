@@ -19,7 +19,7 @@
             placeholder="输入要转换的文本...
 支持单行、多行、驼峰式、下划线、短横线等格式
 例如：helloWorld, hello_world, hello-world, Hello World"
-            class="w-full h-48 p-3 border rounded-md resize-none"
+            class="w-full h-48 p-3 border border-border rounded-md resize-none"
           ></textarea>
           <div class="mt-3 flex justify-between text-sm text-muted-foreground">
             <span>字符数: {{ inputText.length }}</span>

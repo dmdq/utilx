@@ -22,7 +22,7 @@
             <textarea
               v-model="optionsInput"
               placeholder="输入选项，每行一个...&#10;例如：&#10;选项1&#10;选项2&#10;选项3"
-              class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary h-32 resize-none"
+              class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary h-32 resize-none"
             ></textarea>
             <div class="mt-2 text-sm text-muted-foreground">
               当前 {{ options.length }} 个选项
@@ -40,7 +40,7 @@
                   type="number"
                   min="1"
                   :max="options.length"
-                  class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <span class="px-3 py-2 bg-muted rounded-lg text-sm">个</span>
               </div>
@@ -49,7 +49,7 @@
             <!-- 选择模式 -->
             <div>
               <label class="text-sm font-medium mb-2 block">选择模式</label>
-              <select v-model="selectMode" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <select v-model="selectMode" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
                 <option value="random">随机选择</option>
                 <option value="weighted">加权随机</option>
                 <option value="unique">不重复选择</option>
@@ -63,7 +63,7 @@
                 v-model="weightsInput"
                 type="text"
                 placeholder="例如: 1, 2, 3"
-                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
           </div>

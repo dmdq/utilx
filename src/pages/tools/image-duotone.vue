@@ -71,7 +71,7 @@
                   v-model="lightColor"
                   type="text"
                   @input="updatePreview"
-                  class="flex-1 p-2 border rounded text-sm font-mono"
+                  class="flex-1 p-2 border border-border rounded text-sm font-mono"
                 >
               </div>
             </div>
@@ -89,7 +89,7 @@
                   v-model="darkColor"
                   type="text"
                   @input="updatePreview"
-                  class="flex-1 p-2 border rounded text-sm font-mono"
+                  class="flex-1 p-2 border border-border rounded text-sm font-mono"
                 >
               </div>
             </div>
@@ -158,7 +158,7 @@
           <!-- 混合模式 -->
           <div class="bg-muted p-4 rounded-lg">
             <h3 class="font-medium text-sm mb-2">混合模式</h3>
-            <select v-model="blendMode" @change="updatePreview" class="w-full p-2 border rounded text-sm">
+            <select v-model="blendMode" @change="updatePreview" class="w-full p-2 border border-border rounded text-sm">
               <option value="normal">正常</option>
               <option value="multiply">正片叠底</option>
               <option value="screen">滤色</option>

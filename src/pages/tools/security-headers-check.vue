@@ -22,7 +22,7 @@
                   v-model="websiteUrl"
                   type="url"
                   placeholder="https://example.com"
-                  class="flex-1 px-4 py-3 border rounded-lg font-mono text-sm"
+                  class="flex-1 px-4 py-3 border border-border rounded-lg font-mono text-sm"
                   @keyup.enter="checkSecurityHeaders"
                 >
                 <button
@@ -102,7 +102,7 @@
                     <CheckCircle v-if="header.status === 'pass'" class="w-4 h-4 text-green-500" />
                     <AlertTriangle v-else-if="header.status === 'warn'" class="w-4 h-4 text-yellow-500" />
                     <XCircle v-else-if="header.status === 'fail'" class="w-4 h-4 text-red-500" />
-                    <Info v-else class="w-4 h-4 text-gray-500" />
+                    <Info v-else class="w-4 h-4 text-muted-foreground" />
                     <span class="font-medium text-sm">{{ header.label }}</span>
                   </div>
                   <p class="text-xs text-muted-foreground">{{ header.description }}</p>

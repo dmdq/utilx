@@ -27,49 +27,49 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">姓名 *</label>
-            <input v-model="cfg.name" type="text" placeholder="张三" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model="cfg.name" type="text" placeholder="张三" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">职位</label>
-            <input v-model="cfg.title" type="text" placeholder="产品经理" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model="cfg.title" type="text" placeholder="产品经理" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
         </div>
 
         <div>
           <label class="block text-sm font-medium text-foreground mb-2">公司</label>
-          <input v-model="cfg.company" type="text" placeholder="某某科技有限公司" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+          <input v-model="cfg.company" type="text" placeholder="某某科技有限公司" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
         </div>
 
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">手机</label>
-            <input v-model="cfg.phone" type="text" placeholder="13800138000" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model="cfg.phone" type="text" placeholder="13800138000" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">电话</label>
-            <input v-model="cfg.tel" type="text" placeholder="010-88886666" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model="cfg.tel" type="text" placeholder="010-88886666" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
         </div>
 
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">邮箱</label>
-            <input v-model="cfg.email" type="text" placeholder="zhangsan@example.com" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model="cfg.email" type="text" placeholder="zhangsan@example.com" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">网站</label>
-            <input v-model="cfg.website" type="text" placeholder="https://example.com" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model="cfg.website" type="text" placeholder="https://example.com" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
         </div>
 
         <div>
           <label class="block text-sm font-medium text-foreground mb-2">地址</label>
-          <input v-model="cfg.address" type="text" placeholder="杭州市西湖区文三路100号" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+          <input v-model="cfg.address" type="text" placeholder="杭州市西湖区文三路100号" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
         </div>
 
         <div>
           <label class="block text-sm font-medium text-foreground mb-2">头像 URL（可选）</label>
-          <input v-model="cfg.avatar" type="text" placeholder="https://example.com/avatar.png" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+          <input v-model="cfg.avatar" type="text" placeholder="https://example.com/avatar.png" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           <p class="text-xs text-muted-foreground mt-1.5">建议使用 https 正方形图片，邮件客户端中按 80×80 显示</p>
         </div>
 

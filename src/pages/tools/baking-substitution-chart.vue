@@ -26,7 +26,7 @@
         <input
           v-model="query"
           type="text"
-          class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+          class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           placeholder="搜索：泡打粉 / 黄油 / 鸡蛋…"
         />
 
@@ -62,7 +62,7 @@
               type="number"
               min="0"
               step="1"
-              class="w-20 px-2 py-1.5 bg-background border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-20 px-2 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <span class="text-muted-foreground">{{ selectedItem.amountUnit }}</span>
           </div>
@@ -109,7 +109,7 @@
           <label class="block text-sm font-medium text-foreground mb-1.5">被替代的原料（Y）</label>
           <select
             v-model="reverseFrom"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="item in BAKING_SUBS" :key="'rf-' + item.key" :value="item.key">{{ item.zh }}</option>
           </select>
@@ -118,7 +118,7 @@
           <label class="block text-sm font-medium text-foreground mb-1.5">手头替代品（X）</label>
           <select
             v-model="reverseWith"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="sub in reverseSubOptions" :key="'rw-' + sub.name" :value="sub.name">{{ sub.name }}</option>
           </select>

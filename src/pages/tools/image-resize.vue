@@ -90,7 +90,7 @@
                     v-model.number="width"
                     type="number"
                     min="1"
-                    class="w-full px-3 py-2 pr-12 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="w-full px-3 py-2 pr-12 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                     @input="handleSizeChange"
                   />
                   <span class="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground">px</span>
@@ -103,7 +103,7 @@
                     v-model.number="height"
                     type="number"
                     min="1"
-                    class="w-full px-3 py-2 pr-12 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="w-full px-3 py-2 pr-12 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                     @input="handleSizeChange"
                   />
                   <span class="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground">px</span>

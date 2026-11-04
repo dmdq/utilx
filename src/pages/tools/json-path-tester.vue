@@ -58,7 +58,7 @@
       <div v-if="result !== null">
         <pre class="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg text-sm overflow-x-auto">{{ JSON.stringify(result, null, 2) }}</pre>
       </div>
-      <div v-else class="p-8 text-center text-gray-400">
+      <div v-else class="p-8 text-center text-muted-foreground">
         输入JSON和JSONPath表达式后点击"执行查询"
       </div>
     </div>

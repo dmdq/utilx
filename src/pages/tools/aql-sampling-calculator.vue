@@ -43,10 +43,10 @@
             type="number"
             min="2"
             step="1"
-            class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
           <select
-            class="w-full mt-2 px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-2 px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             :value="''"
             aria-label="按批量档位快速选择"
             @change="pickRange"
@@ -101,7 +101,7 @@
           <select
             id="aql-single"
             v-model.number="aqlSingle"
-            class="w-full mt-1.5 px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="a in AQL_USABLE" :key="a" :value="a">{{ a }}</option>
           </select>
@@ -111,19 +111,19 @@
           <div class="grid grid-cols-3 gap-2">
             <div>
               <label for="aql-cr" class="text-xs font-medium text-foreground">致命 CR</label>
-              <select id="aql-cr" v-model.number="aqlCR" class="w-full mt-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+              <select id="aql-cr" v-model.number="aqlCR" class="w-full mt-1 px-2 py-1.5 bg-background border border-border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
                 <option v-for="a in CR_AQL_OPTIONS" :key="a" :value="a">{{ a === 0 ? '0（收0）' : a }}</option>
               </select>
             </div>
             <div>
               <label for="aql-maj" class="text-xs font-medium text-foreground">严重 MAJ</label>
-              <select id="aql-maj" v-model.number="aqlMAJ" class="w-full mt-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+              <select id="aql-maj" v-model.number="aqlMAJ" class="w-full mt-1 px-2 py-1.5 bg-background border border-border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
                 <option v-for="a in AQL_USABLE" :key="a" :value="a">{{ a }}</option>
               </select>
             </div>
             <div>
               <label for="aql-min" class="text-xs font-medium text-foreground">轻微 MIN</label>
-              <select id="aql-min" v-model.number="aqlMIN" class="w-full mt-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+              <select id="aql-min" v-model.number="aqlMIN" class="w-full mt-1 px-2 py-1.5 bg-background border border-border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
                 <option v-for="a in AQL_USABLE" :key="a" :value="a">{{ a }}</option>
               </select>
             </div>

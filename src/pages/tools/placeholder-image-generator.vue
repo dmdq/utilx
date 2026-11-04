@@ -12,26 +12,26 @@
         <div class="grid md:grid-cols-3 gap-4 mb-6">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">宽度 (px)</label>
-            <input v-model="width" type="number" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="300">
+            <input v-model="width" type="number" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="300">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">高度 (px)</label>
-            <input v-model="height" type="number" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="200">
+            <input v-model="height" type="number" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="200">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">背景色</label>
-            <input v-model="bgColor" type="color" class="w-full h-10 rounded-lg cursor-pointer border border-border">
+            <input v-model="bgColor" type="color" class="w-full h-10 rounded-lg cursor-pointer border border-border border-border">
           </div>
         </div>
 
         <div class="mb-6">
           <label class="block text-sm font-medium text-foreground mb-2">文字内容</label>
-          <input v-model="text" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="可选文字，留空显示尺寸">
+          <input v-model="text" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="可选文字，留空显示尺寸">
         </div>
 
         <div class="mb-6">
           <label class="block text-sm font-medium text-foreground mb-2">文字颜色</label>
-          <input v-model="textColor" type="color" class="w-full h-10 rounded-lg cursor-pointer border border-border">
+          <input v-model="textColor" type="color" class="w-full h-10 rounded-lg cursor-pointer border border-border border-border">
         </div>
 
         <div class="flex justify-center mb-6">

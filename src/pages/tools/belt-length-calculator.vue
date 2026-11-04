@@ -60,7 +60,7 @@
               type="number"
               :min="0"
               step="1"
-              class="flex-1 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="flex-1 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
           </div>
           <p class="text-xs text-muted-foreground">约束：D ≥ d > 0，且 C > (D−d)/2 + 20 mm（过小无法包角安装）。</p>
@@ -75,7 +75,7 @@
               type="number"
               :min="0"
               step="0.1"
-              class="flex-1 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="flex-1 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
           </div>
           <p class="text-xs text-muted-foreground">带长 L 按开口带口径输入（节线长近似）；L 太小时两轮包不住带，会提示无实根。</p>
@@ -250,7 +250,7 @@
                 type="number"
                 min="0"
                 step="10"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </label>
             <label class="text-sm text-foreground space-y-1">
@@ -260,7 +260,7 @@
                 type="number"
                 min="0"
                 step="1"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </label>
             <label class="text-sm text-foreground space-y-1">
@@ -270,7 +270,7 @@
                 type="number"
                 min="0"
                 step="1"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </label>
           </div>

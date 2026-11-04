@@ -21,7 +21,7 @@
               <input
                 v-model="measurementDate"
                 type="date"
-                class="w-full px-4 py-3 border rounded-lg text-sm"
+                class="w-full px-4 py-3 border border-border rounded-lg text-sm"
                 :max="today"
               >
             </div>
@@ -54,7 +54,7 @@
                     v-model.number="measurements.neck"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="cm"
                   >
                 </div>
@@ -64,7 +64,7 @@
                     v-model.number="measurements.chest"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="cm"
                   >
                 </div>
@@ -77,7 +77,7 @@
                     v-model.number="measurements.waist"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="cm"
                   >
                 </div>
@@ -87,7 +87,7 @@
                     v-model.number="measurements.hips"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="cm"
                   >
                 </div>
@@ -100,7 +100,7 @@
                     v-model.number="measurements.armLeft"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="cm"
                   >
                 </div>
@@ -110,7 +110,7 @@
                     v-model.number="measurements.armRight"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="cm"
                   >
                 </div>
@@ -123,7 +123,7 @@
                     v-model.number="measurements.thighLeft"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="cm"
                   >
                 </div>
@@ -133,7 +133,7 @@
                     v-model.number="measurements.thighRight"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="cm"
                   >
                 </div>
@@ -146,7 +146,7 @@
                     v-model.number="measurements.calfLeft"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="cm"
                   >
                 </div>
@@ -156,7 +156,7 @@
                     v-model.number="measurements.calfRight"
                     type="number"
                     step="0.1"
-                    class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                     placeholder="cm"
                   >
                 </div>
@@ -171,10 +171,10 @@
                   v-model.number="weight"
                   type="number"
                   step="0.1"
-                  class="flex-1 px-3 py-2 border rounded-lg font-mono text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg font-mono text-sm"
                   placeholder="输入体重"
                 >
-                <select v-model="weightUnit" class="px-3 py-2 border rounded-lg text-sm">
+                <select v-model="weightUnit" class="px-3 py-2 border border-border rounded-lg text-sm">
                   <option value="kg">kg</option>
                   <option value="lb">lb</option>
                 </select>
@@ -186,7 +186,7 @@
               <label class="text-sm font-medium mb-1 block">备注</label>
               <textarea
                 v-model="notes"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 rows="2"
                 placeholder="记录运动、饮食或其他备注..."
               ></textarea>

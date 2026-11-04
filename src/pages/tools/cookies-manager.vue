@@ -29,7 +29,7 @@
               <input
                 v-model="newCookie.name"
                 type="text"
-                class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                 placeholder="Cookie名称"
               />
             </div>
@@ -38,7 +38,7 @@
               <input
                 v-model="newCookie.value"
                 type="text"
-                class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                 placeholder="Cookie值"
               />
             </div>
@@ -47,7 +47,7 @@
               <input
                 v-model="newCookie.domain"
                 type="text"
-                class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                 placeholder=".example.com"
               />
             </div>
@@ -57,7 +57,7 @@
                 <input
                   v-model="newCookie.path"
                   type="text"
-                  class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                   placeholder="/"
                 />
               </div>
@@ -66,7 +66,7 @@
                 <input
                   v-model="newCookie.expiration"
                   type="text"
-                  class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                   placeholder="留空为会话"
                 />
               </div>
@@ -76,7 +76,7 @@
                 <input
                   v-model="newCookie.secure"
                   type="checkbox"
-                  class="rounded border-border text-primary focus:ring-primary"
+                  class="rounded border border-border text-primary focus:ring-primary"
                 />
                 <span class="text-foreground">Secure</span>
               </label>
@@ -84,7 +84,7 @@
                 <input
                   v-model="newCookie.httpOnly"
                   type="checkbox"
-                  class="rounded border-border text-primary focus:ring-primary"
+                  class="rounded border border-border text-primary focus:ring-primary"
                 />
                 <span class="text-foreground">HttpOnly</span>
               </label>
@@ -93,7 +93,7 @@
               <label class="text-xs text-muted-foreground mb-1 block">SameSite</label>
               <select
                 v-model="newCookie.sameSite"
-                class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
               >
                 <option value="lax">Lax (宽松)</option>
                 <option value="strict">Strict (严格)</option>
@@ -125,7 +125,7 @@
           </h3>
           <textarea
             v-model="rawCookieString"
-            class="w-full h-32 px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted font-mono text-xs resize-none"
+            class="w-full h-32 px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted font-mono text-xs resize-none"
             placeholder="粘贴Cookie字符串，每行一个&#10;name=value; Domain=.example.com; Path=/; Secure"
           ></textarea>
           <button
@@ -163,13 +163,13 @@
               <input
                 v-model="searchQuery"
                 type="text"
-                class="flex-1 px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                class="flex-1 px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                 placeholder="搜索Cookie..."
               />
             </div>
             <select
               v-model="selectedDomain"
-              class="px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+              class="px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
             >
               <option value="all">所有域名</option>
               <option v-for="domain in domains" :key="domain" :value="domain">
@@ -219,7 +219,7 @@
                 <input
                   v-model="editForm.name"
                   type="text"
-                  class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                 />
               </div>
               <div>
@@ -227,7 +227,7 @@
                 <input
                   v-model="editForm.value"
                   type="text"
-                  class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                 />
               </div>
               <div>
@@ -235,7 +235,7 @@
                 <input
                   v-model="editForm.domain"
                   type="text"
-                  class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                 />
               </div>
               <div>
@@ -243,7 +243,7 @@
                 <input
                   v-model="editForm.path"
                   type="text"
-                  class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                 />
               </div>
               <div>
@@ -251,14 +251,14 @@
                 <input
                   v-model="editForm.expiration"
                   type="text"
-                  class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                 />
               </div>
               <div>
                 <label class="text-xs text-muted-foreground mb-1 block">SameSite</label>
                 <select
                   v-model="editForm.sameSite"
-                  class="w-full px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg focus:ring-2 focus:ring-primary bg-muted text-sm"
                 >
                   <option value="lax">Lax</option>
                   <option value="strict">Strict</option>
@@ -271,7 +271,7 @@
                 <input
                   v-model="editForm.secure"
                   type="checkbox"
-                  class="rounded border-border text-primary focus:ring-primary"
+                  class="rounded border border-border text-primary focus:ring-primary"
                 />
                 <Secure class="w-4 h-4 text-foreground" />
                 <span class="text-foreground">Secure</span>
@@ -280,7 +280,7 @@
                 <input
                   v-model="editForm.httpOnly"
                   type="checkbox"
-                  class="rounded border-border text-primary focus:ring-primary"
+                  class="rounded border border-border text-primary focus:ring-primary"
                 />
                 <Lock class="w-4 h-4 text-foreground" />
                 <span class="text-foreground">HttpOnly</span>

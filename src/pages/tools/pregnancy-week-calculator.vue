@@ -46,7 +46,7 @@
           <input
             v-model="lmp"
             type="date"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">月经规律（28天周期）时按此计算最准</p>
         </div>
@@ -56,7 +56,7 @@
           <input
             v-model="dueInput"
             type="date"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">医生告知的预产期，将反推末次月经日期</p>
         </div>
@@ -66,7 +66,7 @@
           <input
             v-model="today"
             type="date"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
 

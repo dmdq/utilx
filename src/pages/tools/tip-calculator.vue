@@ -23,7 +23,7 @@
                 type="number"
                 step="0.01"
                 min="0"
-                class="w-full pl-8 pr-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full pl-8 pr-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="输入账单金额"
               >
             </div>
@@ -38,7 +38,7 @@
                 step="1"
                 min="0"
                 max="100"
-                class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="小费比例"
               >
               <span class="flex items-center px-3 text-muted-foreground">%</span>
@@ -74,7 +74,7 @@
                 step="0.1"
                 min="0"
                 max="100"
-                class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="税率"
               >
               <span class="flex items-center px-3 text-muted-foreground">%</span>
@@ -96,7 +96,7 @@
                 type="number"
                 min="1"
                 max="100"
-                class="flex-1 text-center px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 text-center px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               >
               <button
                 @click="peopleCount++"
@@ -113,7 +113,7 @@
               v-model="tipOnTax"
               type="checkbox"
               id="tipOnTax"
-              class="w-4 h-4 rounded border-border"
+              class="w-4 h-4 rounded border border-border"
             >
             <label for="tipOnTax" class="text-sm text-foreground">小费基于税前金额计算</label>
           </div>
@@ -128,7 +128,7 @@
                 type="number"
                 step="0.01"
                 min="0"
-                class="w-full pl-8 pr-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full pl-8 pr-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="直接输入小费金额"
               >
             </div>

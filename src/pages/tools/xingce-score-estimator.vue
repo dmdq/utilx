@@ -36,7 +36,7 @@
                   type="number"
                   min="0"
                   step="1"
-                  class="w-20 px-2 py-1.5 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm"
+                  class="w-20 px-2 py-1.5 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm"
                 >
               </div>
               <div class="flex items-center gap-1.5">
@@ -46,7 +46,7 @@
                   type="number"
                   min="0"
                   step="1"
-                  class="w-20 px-2 py-1.5 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm"
+                  class="w-20 px-2 py-1.5 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm"
                 >
               </div>
               <span

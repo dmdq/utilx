@@ -26,7 +26,7 @@
           </h2>
           <textarea
             v-model="inputText"
-            class="w-full h-48 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-48 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴任意分隔的值列表，例如：&#10;1, 2, 2, abc, o'brien&#10;1001&#09;1002&#10;1003 1004,1005"
             spellcheck="false"
           ></textarea>
@@ -124,7 +124,7 @@
               type="number"
               min="1"
               max="10000"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <p class="text-xs text-muted-foreground mt-1.5">Oracle IN 列表最多 1000 项，超出一组自动改为 IN (...) OR IN (...)。MySQL 超长列表也可参考此写法。</p>
           </div>
@@ -165,7 +165,7 @@
               v-if="outputText"
               :value="outputText"
               readonly
-              class="w-full h-64 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+              class="w-full h-64 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
             <div v-else class="py-16 text-center">

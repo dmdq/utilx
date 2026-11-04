@@ -39,7 +39,7 @@
             <label class="text-sm font-medium text-foreground flex items-center">
               <Palette class="w-4 h-4 mr-1.5 text-primary" /> 纯色背景
             </label>
-            <input v-model="solidColor" type="color" @input="bgMode = 'solid'" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+            <input v-model="solidColor" type="color" @input="bgMode = 'solid'" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
           </div>
         </div>
 
@@ -172,7 +172,7 @@
             <textarea
               :value="cssCode"
               readonly
-              class="w-full h-80 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+              class="w-full h-80 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
           </div>

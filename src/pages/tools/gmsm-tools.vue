@@ -52,7 +52,7 @@
             <textarea
               v-model="sm2PublicKey"
               readonly
-              class="w-full h-32 p-3 border border-border rounded-lg bg-muted/50 font-mono text-xs"
+              class="w-full h-32 p-3 border border-border border-border rounded-lg bg-muted/50 font-mono text-xs"
             ></textarea>
           </div>
           <div>
@@ -60,7 +60,7 @@
             <textarea
               v-model="sm2PrivateKey"
               readonly
-              class="w-full h-32 p-3 border border-border rounded-lg bg-muted/50 font-mono text-xs"
+              class="w-full h-32 p-3 border border-border border-border rounded-lg bg-muted/50 font-mono text-xs"
             ></textarea>
           </div>
         </div>
@@ -75,7 +75,7 @@
             <textarea
               v-model="sm2EncryptKey"
               placeholder="输入PEM格式的SM2公钥"
-              class="w-full h-24 p-3 border border-border rounded-lg bg-background font-mono text-sm"
+              class="w-full h-24 p-3 border border-border border-border rounded-lg bg-background font-mono text-sm"
             ></textarea>
           </div>
           <div>
@@ -83,7 +83,7 @@
             <textarea
               v-model="sm2PlainText"
               placeholder="输入要加密的数据..."
-              class="w-full h-32 p-3 border border-border rounded-lg bg-background resize-none"
+              class="w-full h-32 p-3 border border-border border-border rounded-lg bg-background resize-none"
             ></textarea>
           </div>
           <div class="flex gap-4">
@@ -107,7 +107,7 @@
             <textarea
               v-model="sm2CipherText"
               readonly
-              class="w-full h-32 p-3 border border-border rounded-lg bg-muted/50 font-mono text-sm"
+              class="w-full h-32 p-3 border border-border border-border rounded-lg bg-muted/50 font-mono text-sm"
             ></textarea>
           </div>
         </div>
@@ -124,7 +124,7 @@
             <textarea
               v-model="sm3Input"
               placeholder="输入要计算SM3哈希的数据..."
-              class="w-full h-32 p-3 border border-border rounded-lg bg-background resize-none"
+              class="w-full h-32 p-3 border border-border border-border rounded-lg bg-background resize-none"
             ></textarea>
             <div class="mt-2 text-sm text-muted-foreground">
               长度：{{ sm3Input.length }} 字符
@@ -177,7 +177,7 @@
             <textarea
               v-model="sm3BatchInput"
               placeholder="输入多条数据，每行一条..."
-              class="w-full h-32 p-3 border border-border rounded-lg bg-background resize-none"
+              class="w-full h-32 p-3 border border-border border-border rounded-lg bg-background resize-none"
             ></textarea>
           </div>
           <button
@@ -228,7 +228,7 @@
                 v-model="sm4Key"
                 type="password"
                 placeholder="输入16字节密钥"
-                class="flex-1 px-3 py-2 border border-border rounded-lg bg-background"
+                class="flex-1 px-3 py-2 border border-border border-border rounded-lg bg-background"
               >
               <button
                 @click="generateSM4Key"
@@ -245,7 +245,7 @@
             <label class="text-sm font-medium mb-2 block">工作模式</label>
             <select
               v-model="sm4Mode"
-              class="w-full px-3 py-2 border border-border rounded-lg bg-background"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background"
             >
               <option value="ECB">ECB (电子密码本)</option>
               <option value="CBC">CBC (密码块链接)</option>
@@ -262,7 +262,7 @@
             <textarea
               v-model="sm4PlainText"
               placeholder="输入要加密的数据..."
-              class="w-full h-32 p-3 border border-border rounded-lg bg-background resize-none"
+              class="w-full h-32 p-3 border border-border border-border rounded-lg bg-background resize-none"
             ></textarea>
           </div>
           <div>
@@ -270,7 +270,7 @@
             <textarea
               v-model="sm4CipherText"
               placeholder="加密结果..."
-              class="w-full h-32 p-3 border border-border rounded-lg bg-muted/50 resize-none"
+              class="w-full h-32 p-3 border border-border border-border rounded-lg bg-muted/50 resize-none"
               readonly
             ></textarea>
           </div>
@@ -304,7 +304,7 @@
               type="file"
               ref="sm4FileInput"
               @change="handleSM4File"
-              class="w-full px-3 py-2 border border-border rounded-lg bg-background"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background"
             >
           </div>
           <div v-if="sm4FileName">

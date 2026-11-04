@@ -28,7 +28,7 @@
           <textarea
             v-model="sourceText"
             rows="10"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴需要挖空的古诗文原文，保留换行即可……"
           ></textarea>
           <div class="flex flex-wrap gap-1.5 mt-2">
@@ -83,7 +83,7 @@
             min="1"
             max="20"
             step="1"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1">以句号、问号、叹号、分号与换行分句，每句等距挖 N 个字</p>
         </div>
@@ -131,7 +131,7 @@
           </div>
           <div class="flex items-center gap-3">
             <label class="flex items-center gap-1.5 text-sm text-foreground cursor-pointer">
-              <input v-model="showOriginal" type="checkbox" class="w-4 h-4 rounded border-border" />
+              <input v-model="showOriginal" type="checkbox" class="w-4 h-4 rounded border border-border" />
               原句对照
             </label>
             <button

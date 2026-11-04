@@ -30,7 +30,7 @@
             v-model="numberInput"
             type="text"
             placeholder="例如：1024 或 1024.50"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             spellcheck="false"
           />
           <p v-if="numberError" class="text-xs text-destructive mt-1.5">{{ numberError }}</p>
@@ -104,7 +104,7 @@
             v-model="chineseInput"
             type="text"
             placeholder="例如：一千零二十四 / 十五 / 三亿二千万 / 壹佰贰拾"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             spellcheck="false"
           />
         </div>

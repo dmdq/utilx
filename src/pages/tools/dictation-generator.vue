@@ -28,7 +28,7 @@
           <textarea
             v-model="rawInput"
             rows="10"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-ring resize-y font-mono"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-ring resize-y font-mono"
             placeholder="apple 苹果&#10;banana 香蕉&#10;orange&#10;…（空格分隔中文释义可选）"
           ></textarea>
           <div class="flex flex-wrap gap-1.5 mt-2">
@@ -63,15 +63,15 @@
 
         <div class="space-y-2">
           <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-            <input v-model="twoCols" type="checkbox" class="w-4 h-4 rounded border-border" />
+            <input v-model="twoCols" type="checkbox" class="w-4 h-4 rounded border border-border" />
             A4 双栏排版（省纸）
           </label>
           <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-            <input v-model="showHint" type="checkbox" class="w-4 h-4 rounded border-border" />
+            <input v-model="showHint" type="checkbox" class="w-4 h-4 rounded border border-border" />
             行内附中文提示
           </label>
           <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-            <input v-model="showAnswerPage" type="checkbox" class="w-4 h-4 rounded border-border" />
+            <input v-model="showAnswerPage" type="checkbox" class="w-4 h-4 rounded border border-border" />
             附答案页（另起一页）
           </label>
         </div>
@@ -85,7 +85,7 @@
               min="6"
               max="40"
               step="1"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -96,7 +96,7 @@
               min="1"
               max="999"
               step="1"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
         </div>

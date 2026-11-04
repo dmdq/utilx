@@ -24,7 +24,7 @@
                 v-model="ipAddress"
                 type="text"
                 placeholder="例如: 8.8.8.8 或 util.cn"
-                class="w-full px-4 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 @keyup.enter="queryIp"
               />
               <p class="mt-1 text-xs text-muted-foreground">

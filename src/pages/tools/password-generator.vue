@@ -39,7 +39,7 @@
             <label class="text-sm font-medium mb-2 block">生成数量</label>
             <select
               v-model.number="passwordCount"
-              class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option :value="1">1 个密码</option>
               <option :value="5">5 个密码</option>
@@ -133,7 +133,7 @@
           <textarea
             v-model="customChars"
             placeholder="输入要包含的自定义字符..."
-            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             rows="2"
           ></textarea>
         </div>

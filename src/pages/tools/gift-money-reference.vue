@@ -76,7 +76,7 @@
                 type="number"
                 min="0"
                 step="100"
-                class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="如 600"
               />
             </div>
@@ -88,7 +88,7 @@
                 min="0"
                 max="30"
                 step="1"
-                class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -99,7 +99,7 @@
                 min="0"
                 max="15"
                 step="0.1"
-                class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>

@@ -65,7 +65,7 @@
                 autocomplete="off"
                 spellcheck="false"
                 placeholder="如 104、223K、470、1003"
-                class="w-full px-3 py-2 rounded-md border border-border bg-background text-sm font-mono uppercase text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 rounded-md border border-border border-border bg-background text-sm font-mono uppercase text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               >
               <p class="text-xs text-muted-foreground mt-2 leading-relaxed">
                 前 {{ fCodeDigits.length === 4 ? '三' : '两' }} 位是有效数字，末位数字是 0 的个数，<span class="font-medium text-foreground">单位 pF</span>；后缀字母是误差码（可不填）。
@@ -121,7 +121,7 @@
                 autocomplete="off"
                 spellcheck="false"
                 placeholder="如 100nF / 0.1µF / 22p / 4.7uF / 1e5pF"
-                class="w-full px-3 py-2 rounded-md border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 rounded-md border border-border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               >
               <p class="text-[10px] font-mono mt-1 leading-tight" :class="reverseParsed.error && reverseParsed.error !== '待输入' ? 'text-red-500' : 'text-muted-foreground'">
                 {{ reverseParsed.pF === null
@@ -145,7 +145,7 @@
                 autocomplete="off"
                 spellcheck="false"
                 placeholder="如 103、475、220"
-                class="w-full px-3 py-2 rounded-md border border-border bg-background text-sm font-mono uppercase text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 rounded-md border border-border border-border bg-background text-sm font-mono uppercase text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               >
               <div class="flex items-center gap-1.5 mt-3">
                 <span class="text-xs text-muted-foreground mr-1">主单位后缀：</span>
@@ -349,7 +349,7 @@
                 autocomplete="off"
                 spellcheck="false"
                 @input="onConvInput(field.key, $event)"
-                class="w-full px-2.5 py-1.5 rounded-md border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-2.5 py-1.5 rounded-md border border-border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               >
               <p class="text-[10px] text-muted-foreground mt-1.5">{{ field.hint }}</p>
             </div>

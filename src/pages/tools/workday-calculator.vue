@@ -23,7 +23,7 @@
               <input
                 v-model="startDate"
                 type="date"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @change="calculateWorkdays"
               />
               <div class="mt-2 flex gap-2">
@@ -54,7 +54,7 @@
               <input
                 v-model="endDate"
                 type="date"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @change="calculateWorkdays"
               />
               <div class="mt-2 flex gap-2">
@@ -130,14 +130,14 @@
                   <input
                     v-model="holiday.date"
                     type="date"
-                    class="flex-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="flex-1 px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                     @change="calculateWorkdays"
                   />
                   <input
                     v-model="holiday.name"
                     type="text"
                     placeholder="节日名称"
-                    class="flex-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="flex-1 px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                   <button
                     @click="removeHoliday(index)"

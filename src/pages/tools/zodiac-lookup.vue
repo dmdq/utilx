@@ -34,7 +34,7 @@
             inputmode="numeric"
             maxlength="4"
             placeholder="例如 1988"
-            class="w-full px-3 py-2.5 rounded-lg border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2.5 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
             :class="queryError ? 'border-red-500/60' : 'border-border'"
           />
           <p v-show="queryError" class="text-xs text-red-500 mt-1.5 flex items-start gap-1.5">

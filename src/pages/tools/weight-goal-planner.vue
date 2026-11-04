@@ -25,11 +25,11 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">当前体重 (kg)</label>
-                <input v-model.number="currentWeight" type="number" step="0.1" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="当前体重">
+                <input v-model.number="currentWeight" type="number" step="0.1" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="当前体重">
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">目标体重 (kg)</label>
-                <input v-model.number="targetWeight" type="number" step="0.1" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="目标体重">
+                <input v-model.number="targetWeight" type="number" step="0.1" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="目标体重">
               </div>
             </div>
 
@@ -43,17 +43,17 @@
 
             <div>
               <label class="text-sm font-medium mb-2 block">身高 (cm)</label>
-              <input v-model.number="height" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="身高">
+              <input v-model.number="height" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="身高">
             </div>
 
             <div>
               <label class="text-sm font-medium mb-2 block">年龄</label>
-              <input v-model.number="age" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="年龄">
+              <input v-model.number="age" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="年龄">
             </div>
 
             <div>
               <label class="text-sm font-medium mb-2 block">活动水平</label>
-              <select v-model="activityLevel" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="activityLevel" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option value="1.2">久坐少动</option>
                 <option value="1.375">轻度活动</option>
                 <option value="1.55">中度活动</option>
@@ -64,7 +64,7 @@
 
             <div>
               <label class="text-sm font-medium mb-2 block">每周期望减/增重 (kg)</label>
-              <select v-model="weeklyRate" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="weeklyRate" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option :value="0.5">0.5kg（温和）</option>
                 <option :value="1">1kg（标准）</option>
                 <option :value="1.5">1.5kg（积极）</option>

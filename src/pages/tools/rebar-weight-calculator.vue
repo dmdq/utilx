@@ -69,7 +69,7 @@
             <label class="block text-sm font-medium text-foreground">钢筋直径（公称）</label>
             <select
               v-model="selD"
-              class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <option v-for="s in tableSizes" :key="s" :value="s">Φ{{ s }} · {{ weightPerMeterOf(s).toFixed(3) }} kg/m</option>
             </select>
@@ -81,7 +81,7 @@
               type="number"
               min="0"
               step="0.1"
-              class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               placeholder="如 200"
             />
           </div>
@@ -92,7 +92,7 @@
               type="number"
               min="0"
               step="100"
-              class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               placeholder="如 10000"
             />
             <p class="text-[11px] text-muted-foreground mt-1.5">1000 = 一吨；工地常按「这批过磅 N 吨 ≈ 多少米 Φd」核料。</p>
@@ -107,11 +107,11 @@
           </div>
           <div class="space-y-2 max-h-[320px] overflow-y-auto pr-1">
             <div v-for="(piece, idx) in pieces" :key="idx" class="grid grid-cols-[1fr_56px_64px_28px] gap-2 items-center">
-              <select v-model="piece.d" class="px-2 py-1.5 bg-background border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+              <select v-model="piece.d" class="px-2 py-1.5 bg-background border border-border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
                 <option v-for="s in tableSizes" :key="s" :value="s">Φ{{ s }}</option>
               </select>
-              <input v-model.number="piece.count" type="number" min="0" class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" placeholder="根" />
-              <input v-model.number="piece.lengthM" type="number" min="0" step="0.1" class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" placeholder="m" />
+              <input v-model.number="piece.count" type="number" min="0" class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" placeholder="根" />
+              <input v-model.number="piece.lengthM" type="number" min="0" step="0.1" class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" placeholder="m" />
               <button @click="removePiece(idx)" class="p-1.5 rounded-lg text-muted-foreground hover:text-red-500 hover:bg-red-500/10 transition" aria-label="删除该行">
                 <X class="w-3.5 h-3.5" />
               </button>

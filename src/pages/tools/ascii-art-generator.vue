@@ -400,7 +400,7 @@ watch([imageConfig, textConfig], () => {
             <h3 class="font-semibold text-foreground mb-3">输入文本</h3>
             <textarea
               v-model="textConfig.text"
-              class="w-full h-32 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none text-sm"
+              class="w-full h-32 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none text-sm"
               placeholder="输入要转换的文本..."
             ></textarea>
           </div>

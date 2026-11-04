@@ -15,7 +15,7 @@
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block text-sm font-medium mb-2">性别</label>
-                <select v-model="personalInfo.gender" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="personalInfo.gender" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="male">男性</option>
                   <option value="female">女性</option>
                 </select>
@@ -27,7 +27,7 @@
                   type="number"
                   min="1"
                   max="120"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="30"
                 />
               </div>
@@ -39,7 +39,7 @@
                   min="20"
                   max="300"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="70"
                 />
               </div>
@@ -51,7 +51,7 @@
                   min="100"
                   max="250"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="175"
                 />
               </div>
@@ -59,7 +59,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">活动水平</label>
-              <select v-model="personalInfo.activityLevel" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="personalInfo.activityLevel" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="sedentary">久坐（很少运动）</option>
                 <option value="light">轻度活动（每周1-3次轻度运动）</option>
                 <option value="moderate">中度活动（每周3-5次中等运动）</option>
@@ -76,7 +76,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">气候环境</label>
-              <select v-model="environment.climate" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="environment.climate" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="moderate">温和气候</option>
                 <option value="hot">炎热气候</option>
                 <option value="cold">寒冷气候</option>
@@ -88,7 +88,7 @@
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block text-sm font-medium mb-2">室内外</label>
-                <select v-model="environment.location" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="environment.location" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="indoor">室内工作</option>
                   <option value="outdoor">户外工作</option>
                   <option value="mixed">室内外混合</option>
@@ -96,7 +96,7 @@
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">海拔高度</label>
-                <select v-model="environment.altitude" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="environment.altitude" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="low">低海拔（<1000米）</option>
                   <option value="medium">中等海拔（1000-2500米）</option>
                   <option value="high">高海拔（>2500米）</option>
@@ -212,7 +212,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">选择饮品类型</label>
-              <select v-model="beverageCalculator.type" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="beverageCalculator.type" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="water">纯净水 (100%)</option>
                 <option value="coffee">黑咖啡 (99.5%)</option>
                 <option value="tea">茶 (99.5%)</option>
@@ -232,7 +232,7 @@
                 min="0"
                 max="2000"
                 step="10"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="250"
               />
             </div>

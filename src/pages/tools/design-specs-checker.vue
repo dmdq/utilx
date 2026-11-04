@@ -15,7 +15,7 @@
             <!-- 预设系统 -->
             <div>
               <label class="block text-sm font-medium mb-2">选择预设系统</label>
-              <select v-model="selectedSystem" @change="applyPresetSystem" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="selectedSystem" @change="applyPresetSystem" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="">自定义配置</option>
                 <option value="material">Material Design</option>
                 <option value="ios">Human Interface Guidelines</option>
@@ -36,7 +36,7 @@
                   type="number"
                   min="0"
                   max="100"
-                  class="px-2 py-1 border rounded text-sm"
+                  class="px-2 py-1 border border-border rounded text-sm"
                   :placeholder="`${index * 4}`"
                 />
               </div>
@@ -59,7 +59,7 @@
                     type="number"
                     min="10"
                     max="100"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div class="flex items-center gap-2">
@@ -69,7 +69,7 @@
                     type="number"
                     min="10"
                     max="100"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div class="flex items-center gap-2">
@@ -79,7 +79,7 @@
                     type="number"
                     min="10"
                     max="100"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div class="flex items-center gap-2">
@@ -89,7 +89,7 @@
                     type="number"
                     min="10"
                     max="100"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div class="flex items-center gap-2">
@@ -99,7 +99,7 @@
                     type="number"
                     min="10"
                     max="100"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
               </div>
@@ -119,7 +119,7 @@
                   <input
                     type="text"
                     v-model="colors.primary"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div class="flex items-center gap-2">
@@ -132,7 +132,7 @@
                   <input
                     type="text"
                     v-model="colors.secondary"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div class="flex items-center gap-2">
@@ -145,7 +145,7 @@
                   <input
                     type="text"
                     v-model="colors.success"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div class="flex items-center gap-2">
@@ -158,7 +158,7 @@
                   <input
                     type="text"
                     v-model="colors.warning"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div class="flex items-center gap-2">
@@ -171,7 +171,7 @@
                   <input
                     type="text"
                     v-model="colors.error"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
               </div>
@@ -188,7 +188,7 @@
                     type="number"
                     min="0"
                     max="50"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div class="flex items-center gap-2">
@@ -198,7 +198,7 @@
                     type="number"
                     min="0"
                     max="50"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div class="flex items-center gap-2">
@@ -208,7 +208,7 @@
                     type="number"
                     min="0"
                     max="50"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div class="flex items-center gap-2">
@@ -218,7 +218,7 @@
                     type="number"
                     min="0"
                     max="50"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
               </div>
@@ -323,7 +323,7 @@
               <span>总体评分</span>
               <span class="font-medium">{{ checkResults.score }}%</span>
             </div>
-            <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="w-full bg-muted rounded-full h-2">
               <div
                 class="h-2 rounded-full transition-all"
                 :class="getScoreBarClass(checkResults.score)"

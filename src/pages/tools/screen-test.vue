@@ -147,7 +147,7 @@
           <!-- 坏点测试 -->
           <div v-else-if="testMode === 'badpixel'" class="aspect-video rounded bg-black overflow-hidden">
             <div class="h-full grid grid-cols-5 grid-rows-5">
-              <div v-for="i in 25" :key="i" class="border border-gray-800 flex items-center justify-center cursor-pointer hover:opacity-80" :style="{ backgroundColor: getBadPixelColor(i) }" @click="cycleBadPixelColor(i)">
+              <div v-for="i in 25" :key="i" class="border border-border flex items-center justify-center cursor-pointer hover:opacity-80" :style="{ backgroundColor: getBadPixelColor(i) }" @click="cycleBadPixelColor(i)">
                 <span class="text-white text-xs font-bold">{{ i }}</span>
               </div>
             </div>

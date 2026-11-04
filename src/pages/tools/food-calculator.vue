@@ -18,7 +18,7 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium mb-2 block">选择食物</label>
-              <select v-model="selectedFood" class="w-full px-3 py-2 border rounded-lg text-sm" @change="calculateConversion">
+              <select v-model="selectedFood" class="w-full px-3 py-2 border border-border rounded-lg text-sm" @change="calculateConversion">
                 <option value="">请选择食物...</option>
                 <optgroup label="主食类">
                   <option v-for="food in foods.staples" :key="food.name" :value="food.name">{{ food.name }}</option>
@@ -42,7 +42,7 @@
                   <input
                     v-model.number="weightGrams"
                     type="number"
-                    class="w-full px-3 py-2 border rounded-lg text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                     placeholder="输入重量"
                     @input="calculateVolume"
                   >
@@ -52,7 +52,7 @@
                   <input
                     v-model.number="volumeMl"
                     type="number"
-                    class="w-full px-3 py-2 border rounded-lg text-sm"
+                    class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                     placeholder="输入体积"
                     @input="calculateWeight"
                   >
@@ -118,7 +118,7 @@
                 <input
                   v-model.number="spoonTbsp"
                   type="number"
-                  class="w-full px-3 py-2 border rounded-lg text-sm"
+                  class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                   @input="calculateSpoons"
                 >
               </div>
@@ -127,7 +127,7 @@
                 <input
                   v-model.number="spoonTsp"
                   type="number"
-                  class="w-full px-3 py-2 border rounded-lg text-sm"
+                  class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                   @input="calculateSpoonsReverse"
                 >
               </div>
@@ -146,7 +146,7 @@
                 <input
                   v-model.number="cupAmount"
                   type="number"
-                  class="w-full px-3 py-2 border rounded-lg text-sm"
+                  class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                   @input="calculateCups"
                 >
               </div>
@@ -178,7 +178,7 @@
               <input
                 v-model.number="flourWeight"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="例如: 500"
                 @input="calculateBakingRatios"
               >

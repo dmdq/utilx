@@ -39,14 +39,14 @@
           <select
             id="sheet-select"
             v-model="sheetSelect"
-            class="w-full px-3 py-2 rounded-md border border-border bg-background text-sm text-foreground"
+            class="w-full px-3 py-2 rounded-md border border-border border-border bg-background text-sm text-foreground"
           >
             <option v-for="opt in SHEET_PRESETS" :key="opt.id" :value="opt.id">{{ opt.label }}</option>
           </select>
           <div v-show="sheetSelect === 'custom'" class="flex items-center gap-2 mt-2">
-            <input v-model.number="customW" type="number" min="1" max="6000" class="w-full px-3 py-2 rounded-md border border-border bg-background text-sm" placeholder="宽 mm" aria-label="自定义板宽" />
+            <input v-model.number="customW" type="number" min="1" max="6000" class="w-full px-3 py-2 rounded-md border border-border border-border bg-background text-sm" placeholder="宽 mm" aria-label="自定义板宽" />
             <span class="text-muted-foreground">×</span>
-            <input v-model.number="customH" type="number" min="1" max="6000" class="w-full px-3 py-2 rounded-md border border-border bg-background text-sm" placeholder="高 mm" aria-label="自定义板高" />
+            <input v-model.number="customH" type="number" min="1" max="6000" class="w-full px-3 py-2 rounded-md border border-border border-border bg-background text-sm" placeholder="高 mm" aria-label="自定义板高" />
           </div>
         </div>
 
@@ -54,7 +54,7 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-xs text-muted-foreground mb-1" for="kerf-input">锯缝 kerf（mm）</label>
-            <input id="kerf-input" v-model.number="kerf" type="number" min="0" max="6" step="0.1" class="w-full px-3 py-2 rounded-md border border-border bg-background text-sm" />
+            <input id="kerf-input" v-model.number="kerf" type="number" min="0" max="6" step="0.1" class="w-full px-3 py-2 rounded-md border border-border border-border bg-background text-sm" />
           </div>
           <label class="flex items-center gap-2 mt-6 text-sm cursor-pointer select-none">
             <input v-model="allowRotate" type="checkbox" class="w-4 h-4 accent-[#2563eb]" />
@@ -89,16 +89,16 @@
                 <tr v-for="(row, idx) in rows" :key="row.uid">
                   <td class="text-xs text-muted-foreground pr-1 align-middle">{{ idx + 1 }}</td>
                   <td class="py-0.5 pr-1">
-                    <input v-model="row.name" maxlength="20" class="w-full px-2 py-1.5 rounded-md border border-border bg-background text-sm" placeholder="如：侧板" :aria-label="'第' + (idx + 1) + '行名称'" />
+                    <input v-model="row.name" maxlength="20" class="w-full px-2 py-1.5 rounded-md border border-border border-border bg-background text-sm" placeholder="如：侧板" :aria-label="'第' + (idx + 1) + '行名称'" />
                   </td>
                   <td class="py-0.5 pr-1">
-                    <input v-model.number="row.w" type="number" min="0" class="w-full px-2 py-1.5 rounded-md border border-border bg-background text-sm tabular-nums" aria-label="宽" />
+                    <input v-model.number="row.w" type="number" min="0" class="w-full px-2 py-1.5 rounded-md border border-border border-border bg-background text-sm tabular-nums" aria-label="宽" />
                   </td>
                   <td class="py-0.5 pr-1">
-                    <input v-model.number="row.h" type="number" min="0" class="w-full px-2 py-1.5 rounded-md border border-border bg-background text-sm tabular-nums" aria-label="高" />
+                    <input v-model.number="row.h" type="number" min="0" class="w-full px-2 py-1.5 rounded-md border border-border border-border bg-background text-sm tabular-nums" aria-label="高" />
                   </td>
                   <td class="py-0.5">
-                    <input v-model.number="row.qty" type="number" :min="MIN_QTY" :max="MAX_QTY" @input="clampRowQty(idx)" class="w-full px-2 py-1.5 rounded-md border border-border bg-background text-sm tabular-nums" aria-label="数量" />
+                    <input v-model.number="row.qty" type="number" :min="MIN_QTY" :max="MAX_QTY" @input="clampRowQty(idx)" class="w-full px-2 py-1.5 rounded-md border border-border border-border bg-background text-sm tabular-nums" aria-label="数量" />
                   </td>
                   <td class="py-0.5 pl-1 align-middle">
                     <button @click="removeRow(idx)" class="p-1.5 rounded-md text-muted-foreground hover:text-red-600 hover:bg-red-500/10" :aria-label="'删除第' + (idx + 1) + '行'">
@@ -179,10 +179,10 @@
         <!-- 图例 -->
         <div v-show="result" class="flex flex-wrap items-center gap-4 text-xs text-muted-foreground print-hide">
           <span class="flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5 rounded-sm inline-block border border-slate-700" style="background-color: #86efac"></i> 同件同色（按行着色）
+            <i class="w-3.5 h-3.5 rounded-sm inline-block border border-border" style="background-color: #86efac"></i> 同件同色（按行着色）
           </span>
           <span class="flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5 rounded-sm inline-block border border-slate-700" style="background-color: #86efac; background-image: repeating-linear-gradient(45deg, rgba(15,23,42,0.45) 0 2px, transparent 2px 6px)"></i> 斜纹 = 翻板 90°（宽高校换）
+            <i class="w-3.5 h-3.5 rounded-sm inline-block border border-border" style="background-color: #86efac; background-image: repeating-linear-gradient(45deg, rgba(15,23,42,0.45) 0 2px, transparent 2px 6px)"></i> 斜纹 = 翻板 90°（宽高校换）
           </span>
           <span>块内数字 = 该件在板上的占位尺寸 mm</span>
         </div>

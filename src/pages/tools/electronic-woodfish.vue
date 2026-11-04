@@ -153,7 +153,7 @@
           <select
             id="wf-tone"
             v-model="tone"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="t in toneOptions" :key="t.value" :value="t.value">{{ t.label }}</option>
           </select>

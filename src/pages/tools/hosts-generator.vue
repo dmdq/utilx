@@ -25,9 +25,9 @@
         <div class="space-y-2 mb-3">
           <div v-for="(row, idx) in mappings" :key="idx" class="flex items-center gap-2">
             <input v-model="row.ip" type="text" placeholder="127.0.0.1"
-              class="w-28 px-2.5 py-2 bg-background border border-input rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring" />
+              class="w-28 px-2.5 py-2 bg-background border border-border border-input rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring" />
             <input v-model="row.domain" type="text" placeholder="dev.example.com"
-              class="flex-1 px-2.5 py-2 bg-background border border-input rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring" />
+              class="flex-1 px-2.5 py-2 bg-background border border-border border-input rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring" />
             <button @click="mappings.splice(idx, 1)" class="p-2 text-muted-foreground hover:text-destructive transition-colors">
               <Trash2 class="w-4 h-4" />
             </button>
@@ -46,13 +46,13 @@
         </h2>
         <textarea
           v-model="blockInput"
-          class="w-full h-40 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full h-40 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="每行一个域名，例如：&#10;ads.example.com&#10;tracker.example.net&#10;&#10;也可粘贴空白分隔的批量域名"
           spellcheck="false"
         ></textarea>
         <div class="flex items-center gap-3 mt-3">
           <label class="text-sm text-muted-foreground whitespace-nowrap">指向 IP</label>
-          <select v-model="blockIp" class="px-3 py-2 bg-background border border-input rounded-lg text-sm">
+          <select v-model="blockIp" class="px-3 py-2 bg-background border border-border border-input rounded-lg text-sm">
             <option value="0.0.0.0">0.0.0.0（推荐，直接丢弃）</option>
             <option value="127.0.0.1">127.0.0.1</option>
           </select>

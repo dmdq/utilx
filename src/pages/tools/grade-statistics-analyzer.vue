@@ -21,7 +21,7 @@
             <textarea
               v-model="rawInput"
               rows="10"
-              class="w-full px-4 py-3 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm font-mono leading-relaxed"
+              class="w-full px-4 py-3 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm font-mono leading-relaxed"
               placeholder="两种格式自动识别：&#10;95&#10;88&#10;或&#10;张三,95&#10;李四,88"
             ></textarea>
             <p class="text-xs text-muted-foreground mt-1">
@@ -40,7 +40,7 @@
                   type="number"
                   min="0"
                   max="100"
-                  class="w-full px-3 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm"
                 >
               </div>
               <div>
@@ -50,7 +50,7 @@
                   type="number"
                   min="0"
                   max="100"
-                  class="w-full px-3 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm"
                 >
               </div>
               <div>
@@ -60,7 +60,7 @@
                   type="number"
                   min="0"
                   max="100"
-                  class="w-full px-3 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground text-sm"
                 >
               </div>
             </div>

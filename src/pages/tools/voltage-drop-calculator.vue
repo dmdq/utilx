@@ -61,7 +61,7 @@
             min="100"
             max="1000"
             step="1"
-            class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
           <p class="text-xs text-muted-foreground mt-1">100–1000V 可自定义：切换制式默认填 220/380，也可改 110、660 等</p>
         </div>
@@ -96,7 +96,7 @@
           <select
             :id="uid + '-area'"
             v-model="areaChoice"
-            class="w-full mt-1.5 px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="s in STD_AREAS" :key="s" :value="s">{{ s }} mm²（常用档）</option>
             <option value="custom">自定义…</option>
@@ -108,7 +108,7 @@
               min="0.5"
               max="500"
               step="0.5"
-              class="w-full mt-2 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full mt-2 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
           </div>
         </div>
@@ -122,7 +122,7 @@
             min="1"
             max="5000"
             step="1"
-            class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
           <p class="text-xs leading-relaxed mt-1.5 px-2.5 py-1.5 rounded bg-primary/10 text-foreground">
             <strong>显著提醒：这里填「单程」长度。</strong>单相线路去、回两根导线都承载电流，往返 ×2 已自动含在公式内（买线长度才要乘 2）；三相平衡时按相线计，不乘 2。
@@ -159,7 +159,7 @@
                 min="0.01"
                 max="500"
                 step="0.1"
-                class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
             </div>
             <div v-if="loadMode === 'current'">
@@ -171,7 +171,7 @@
                 min="0.1"
                 max="1000"
                 step="0.1"
-                class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
             </div>
             <div>
@@ -183,7 +183,7 @@
                 min="0.3"
                 max="1"
                 step="0.01"
-                class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
               <p class="text-xs text-muted-foreground mt-1">电机 0.8–0.85、LED/电器 0.9+、纯阻 1.0</p>
             </div>
@@ -409,7 +409,7 @@
                 min="0"
                 max="8760"
                 step="100"
-                class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
               <p class="text-xs text-muted-foreground mt-1">默认 2000h（农用排灌/间歇负载），连续运行可到 8760</p>
             </div>
@@ -422,7 +422,7 @@
                 min="0"
                 max="3"
                 step="0.01"
-                class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
               <p class="text-xs text-muted-foreground mt-1">默认 0.6 元，按当地目录电价修改</p>
             </div>

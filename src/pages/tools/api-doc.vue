@@ -40,7 +40,7 @@
                 v-model="apiInfo.name"
                 type="text"
                 placeholder="例如：用户管理 API"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
@@ -49,7 +49,7 @@
                 v-model="apiInfo.version"
                 type="text"
                 placeholder="例如：v1.0.0"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
@@ -58,7 +58,7 @@
                 v-model="apiInfo.baseUrl"
                 type="text"
                 placeholder="例如：https://api.example.com"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
           </div>
@@ -95,7 +95,7 @@
               <div class="grid grid-cols-2 gap-3">
                 <div>
                   <label class="text-xs text-muted-foreground">请求方法</label>
-                  <select v-model="endpoint.method" class="mt-1 w-full px-2 py-1 border rounded text-sm">
+                  <select v-model="endpoint.method" class="mt-1 w-full px-2 py-1 border border-border rounded text-sm">
                     <option value="GET">GET</option>
                     <option value="POST">POST</option>
                     <option value="PUT">PUT</option>
@@ -109,7 +109,7 @@
                     v-model="endpoint.path"
                     type="text"
                     placeholder="/users/{id}"
-                    class="mt-1 w-full px-2 py-1 border rounded text-sm"
+                    class="mt-1 w-full px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
               </div>
@@ -120,7 +120,7 @@
                   v-model="endpoint.description"
                   type="text"
                   placeholder="获取用户信息"
-                  class="mt-1 w-full px-2 py-1 border rounded text-sm"
+                  class="mt-1 w-full px-2 py-1 border border-border rounded text-sm"
                 />
               </div>
 
@@ -137,15 +137,15 @@
                       v-model="param.name"
                       type="text"
                       placeholder="参数名"
-                      class="flex-1 px-2 py-1 border rounded text-sm"
+                      class="flex-1 px-2 py-1 border border-border rounded text-sm"
                     />
-                    <select v-model="param.type" class="px-2 py-1 border rounded text-sm">
+                    <select v-model="param.type" class="px-2 py-1 border border-border rounded text-sm">
                       <option value="string">string</option>
                       <option value="number">number</option>
                       <option value="boolean">boolean</option>
                       <option value="object">object</option>
                     </select>
-                    <select v-model="param.location" class="px-2 py-1 border rounded text-sm">
+                    <select v-model="param.location" class="px-2 py-1 border border-border rounded text-sm">
                       <option value="path">Path</option>
                       <option value="query">Query</option>
                       <option value="body">Body</option>

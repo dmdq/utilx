@@ -37,7 +37,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">城市</label>
           <select
             v-model="cityKey"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="(c, key) in cities" :key="key" :value="key">{{ c.name }}</option>
           </select>
@@ -50,7 +50,7 @@
             type="number"
             min="0"
             step="100"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如 20000"
           />
         </div>

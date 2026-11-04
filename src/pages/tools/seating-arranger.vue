@@ -34,7 +34,7 @@
             v-model="rosterText"
             @input="rearrange"
             rows="10"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="每行一位宾客，逗号分隔关系组&#10;张伟,男方同学&#10;李娜,女方闺蜜"
           ></textarea>
           <p class="text-xs text-muted-foreground">
@@ -64,7 +64,7 @@
                 type="number"
                 min="2"
                 max="20"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               >
             </div>
             <div>
@@ -75,14 +75,14 @@
                 type="number"
                 min="0"
                 :disabled="autoTable"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-50"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-50"
                 placeholder="0=自动"
               >
               <p class="text-xs text-muted-foreground mt-1">{{ autoTable ? `自动约 ${suggestedTables} 桌` : '按指定桌数摆桌' }}</p>
             </div>
           </div>
           <label class="flex items-center gap-2 text-sm text-foreground">
-            <input v-model="autoTable" @change="rearrange" type="checkbox" class="w-4 h-4 rounded border-border">
+            <input v-model="autoTable" @change="rearrange" type="checkbox" class="w-4 h-4 rounded border border-border">
             自动计算桌数（按人数 ÷ 每桌人数向上取整）
           </label>
           <div>
@@ -91,7 +91,7 @@
               v-model="headTableName"
               @input="rearrange"
               type="text"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="留空则不标注主桌，如填「双方父母」则第1桌标为主桌"
             >
           </div>
@@ -109,7 +109,7 @@
             v-model="conflictText"
             @input="rearrange"
             rows="4"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="每行一对，逗号分隔两个姓名&#10;王强,刘洋"
           ></textarea>
           <p class="text-xs text-muted-foreground">
@@ -148,7 +148,7 @@
             <input
               v-model="eventTitle"
               type="text"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="桌次图标题，如「张三 & 李四 新婚答谢宴」"
             >
           </div>

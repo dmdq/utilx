@@ -50,7 +50,7 @@
               type="number"
               min="0"
               step="0.5"
-              class="flex-1 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <span class="text-sm text-muted-foreground">g</span>
           </div>

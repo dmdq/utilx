@@ -31,7 +31,7 @@
             <input
               v-model="reporter"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="姓名"
             />
           </div>
@@ -40,7 +40,7 @@
             <input
               v-model="department"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 市场部"
             />
           </div>
@@ -49,7 +49,7 @@
             <input
               v-model="reportDate"
               type="date"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -59,7 +59,7 @@
               type="number"
               min="0"
               step="1"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
         </div>
@@ -69,7 +69,7 @@
           <input
             v-model="reason"
             type="text"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如 10 月客户拜访差旅报销"
           />
         </div>
@@ -93,14 +93,14 @@
             >
               <select
                 v-model="item.type"
-                class="px-2 py-2 bg-background border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                class="px-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <option v-for="t in expenseTypes" :key="t" :value="t">{{ t }}</option>
               </select>
               <input
                 v-model="item.note"
                 type="text"
-                class="px-2 py-2 bg-background border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                class="px-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
                 :placeholder="`第 ${index + 1} 行备注，如 地铁通勤`"
               />
               <input
@@ -108,7 +108,7 @@
                 type="number"
                 min="0"
                 step="0.01"
-                class="px-2 py-2 bg-background border border-input rounded-lg text-foreground text-xs text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                class="px-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-xs text-right focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="金额"
               />
               <button

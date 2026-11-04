@@ -24,7 +24,7 @@
           <span class="text-xs text-muted-foreground">{{ lineCount(baseText) }} 行</span>
         </div>
         <textarea v-model="baseText" rows="10"
-          class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="粘贴原始版本..." spellcheck="false"></textarea>
       </div>
       <div class="bg-card border border-border rounded-lg p-4">
@@ -33,7 +33,7 @@
           <span class="text-xs text-muted-foreground">{{ lineCount(aText) }} 行 · 改动 {{ changedA }} 行</span>
         </div>
         <textarea v-model="aText" rows="10"
-          class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="粘贴版本 A..." spellcheck="false"></textarea>
       </div>
       <div class="bg-card border border-border rounded-lg p-4">
@@ -42,7 +42,7 @@
           <span class="text-xs text-muted-foreground">{{ lineCount(bText) }} 行 · 改动 {{ changedB }} 行</span>
         </div>
         <textarea v-model="bText" rows="10"
-          class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="粘贴版本 B..." spellcheck="false"></textarea>
       </div>
     </div>

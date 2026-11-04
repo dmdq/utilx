@@ -31,7 +31,7 @@
           <select
             id="tplSelect"
             v-model="templateIdModel"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="tpl in TEMPLATES" :key="tpl.id" :value="tpl.id">{{ tpl.label }}</option>
           </select>
@@ -40,9 +40,9 @@
 
         <!-- 标题 / 副标题 / 激励语 -->
         <div class="space-y-2">
-          <input id="titleInput" v-model="title" maxlength="30" placeholder="表格标题" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm font-medium text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-          <input id="subtitleInput" v-model="subtitle" maxlength="60" placeholder="副标题（姓名 / 日期留空供手写）" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-          <input id="mottoInput" v-model="motto" maxlength="30" placeholder="表头激励语" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+          <input id="titleInput" v-model="title" maxlength="30" placeholder="表格标题" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm font-medium text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+          <input id="subtitleInput" v-model="subtitle" maxlength="60" placeholder="副标题（姓名 / 日期留空供手写）" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+          <input id="mottoInput" v-model="motto" maxlength="30" placeholder="表头激励语" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
         </div>
 
         <!-- 条目列表 -->
@@ -61,11 +61,11 @@
             class="flex flex-wrap items-center gap-1.5 p-2 rounded-lg border transition"
             :class="validateItem(it) ? 'bg-muted/40 border-border' : 'bg-red-500/5 border-red-500/50'"
           >
-            <input v-model="it.time" maxlength="5" placeholder="07:00" class="w-[72px] px-2 py-1.5 bg-background border border-input rounded-md text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-            <select v-model="it.icon" class="px-1.5 py-1.5 bg-background border border-input rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+            <input v-model="it.time" maxlength="5" placeholder="07:00" class="w-[72px] px-2 py-1.5 bg-background border border-border border-input rounded-md text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <select v-model="it.icon" class="px-1.5 py-1.5 bg-background border border-border border-input rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-ring">
               <option v-for="e in EMOJI_PRESETS" :key="e" :value="e">{{ e }}</option>
             </select>
-            <input v-model="it.text" maxlength="24" placeholder="事项，如：早读 20 分钟" class="flex-1 min-w-[110px] px-2 py-1.5 bg-background border border-input rounded-md text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model="it.text" maxlength="24" placeholder="事项，如：早读 20 分钟" class="flex-1 min-w-[110px] px-2 py-1.5 bg-background border border-border border-input rounded-md text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
             <div class="flex items-center gap-0.5">
               <button type="button" title="上移" class="p-1 rounded text-muted-foreground hover:bg-muted disabled:opacity-30" :disabled="idx === 0" @click="moveRow(idx, -1)">
                 <ChevronUp class="w-3.5 h-3.5" />
@@ -77,7 +77,7 @@
                 <X class="w-3.5 h-3.5" />
               </button>
             </div>
-            <input v-if="showNote" v-model="it.note" maxlength="30" placeholder="备注（可选，打印在事项下方）" class="basis-full px-2 py-1 bg-background border border-input rounded-md text-[11px] text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-if="showNote" v-model="it.note" maxlength="30" placeholder="备注（可选，打印在事项下方）" class="basis-full px-2 py-1 bg-background border border-border border-input rounded-md text-[11px] text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
 
           <p v-if="!items.length" class="text-xs text-muted-foreground p-2.5 rounded bg-muted/40 border border-dashed border-border text-center">

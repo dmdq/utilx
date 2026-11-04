@@ -28,7 +28,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">CPU 型号</label>
           <select
             v-model="cpuId"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <optgroup label="Intel">
               <option v-for="c in cpuOptions('intel')" :key="c.id" :value="c.id">{{ c.label }}（{{ c.watt }}W）</option>
@@ -43,7 +43,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">显卡型号</label>
           <select
             v-model="gpuId"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <optgroup label="NVIDIA GeForce">
               <option v-for="g in gpuOptions('nvidia')" :key="g.id" :value="g.id">{{ g.label }}（{{ g.watt }}W）</option>
@@ -63,7 +63,7 @@
               type="number"
               min="0"
               max="8"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
           </div>
           <div>
@@ -73,7 +73,7 @@
               type="number"
               min="0"
               max="12"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
           </div>
           <div>
@@ -83,7 +83,7 @@
               type="number"
               min="0"
               max="12"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
           </div>
           <div>
@@ -93,7 +93,7 @@
               type="number"
               min="0"
               max="12"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
           </div>
         </div>

@@ -44,7 +44,7 @@
             <div class="flex justify-between items-start">
               <div class="flex-1">
                 <h3 class="font-medium text-sm">{{ snippet.title }}</h3>
-                <p class="text-xs text-gray-500 mt-1">{{ snippet.description }}</p>
+                <p class="text-xs text-muted-foreground mt-1">{{ snippet.description }}</p>
               </div>
               <button @click.stop="deleteSnippet(snippet.id)" class="text-red-500 hover:text-red-700">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@
           </div>
         </div>
 
-        <div v-if="filteredSnippets.length === 0" class="text-center py-8 text-gray-400 text-sm">
+        <div v-if="filteredSnippets.length === 0" class="text-center py-8 text-muted-foreground text-sm">
           {{ snippets.length === 0 ? '暂无代码片段，点击"新建"添加' : '没有匹配的片段' }}
         </div>
       </div>
@@ -124,7 +124,7 @@
             </div>
           </div>
 
-          <div v-else class="text-center py-16 text-gray-400">
+          <div v-else class="text-center py-16 text-muted-foreground">
             <svg class="w-16 h-16 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
             </svg>
@@ -145,7 +145,7 @@
       <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 w-full max-w-2xl">
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-xl font-semibold">新建代码片段</h2>
-          <button @click="showAddModal = false" class="text-gray-500 hover:text-gray-700">
+          <button @click="showAddModal = false" class="text-muted-foreground hover:text-foreground">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>

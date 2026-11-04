@@ -67,7 +67,7 @@
           <select
             v-model="camDeviceId"
             :disabled="!camOn || camDevices.length === 0"
-            class="flex-1 h-9 px-2.5 bg-background border border-border rounded-lg text-sm text-foreground disabled:opacity-50"
+            class="flex-1 h-9 px-2.5 bg-background border border-border border-border rounded-lg text-sm text-foreground disabled:opacity-50"
             @change="switchCamera"
           >
             <option v-for="(d, i) in camDevices" :key="d.deviceId || i" :value="d.deviceId">{{ deviceLabelOf(d, i) }}</option>

@@ -37,7 +37,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">已知尺码类型</label>
           <select
             v-model="lookupField"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="f in activeFields" :key="f.key" :value="f.key">{{ f.label }}</option>
           </select>
@@ -48,7 +48,7 @@
             v-model="lookupValue"
             type="text"
             :placeholder="activeFieldObj.placeholder"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
 

@@ -28,7 +28,7 @@
           </h2>
           <textarea
             v-model="inputText"
-            class="w-full h-72 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-72 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴 JSON 数据（顶层为对象），例如：&#10;{&#10;  &quot;userId&quot;: 9527,&#10;  &quot;userName&quot;: &quot;陈默&quot;&#10;}"
             spellcheck="false"
           ></textarea>
@@ -53,7 +53,7 @@
               v-model="modelName"
               type="text"
               placeholder="Root"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
 

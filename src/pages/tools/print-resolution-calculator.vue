@@ -49,12 +49,12 @@
             <div>
               <label for="prc-pxw" class="block text-sm font-medium text-foreground mb-1">照片宽度（px）</label>
               <input id="prc-pxw" v-model.number="pxW" type="number" min="1" step="1"
-                class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono" placeholder="4000" />
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono" placeholder="4000" />
             </div>
             <div>
               <label for="prc-pxh" class="block text-sm font-medium text-foreground mb-1">照片高度（px）</label>
               <input id="prc-pxh" v-model.number="pxH" type="number" min="1" step="1"
-                class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono" placeholder="3000" />
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono" placeholder="3000" />
             </div>
           </div>
           <div>
@@ -82,7 +82,7 @@
           <div>
             <label for="prc-target" class="block text-sm font-medium text-foreground mb-1">打印目标</label>
             <select id="prc-target" v-model="targetId"
-              class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground">
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground">
               <option v-for="opt in targetOptions" :key="opt.id" :value="opt.id">{{ opt.label }}</option>
             </select>
           </div>
@@ -90,25 +90,25 @@
             <div>
               <label for="prc-cmw" class="block text-sm font-medium text-foreground mb-1">宽（cm）</label>
               <input id="prc-cmw" v-model.number="customW" type="number" min="1" step="0.1"
-                class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono" placeholder="30" />
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono" placeholder="30" />
             </div>
             <div>
               <label for="prc-cmh" class="block text-sm font-medium text-foreground mb-1">高（cm）</label>
               <input id="prc-cmh" v-model.number="customH" type="number" min="1" step="0.1"
-                class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono" placeholder="40" />
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono" placeholder="40" />
             </div>
           </div>
           <div>
             <label for="prc-dpi" class="block text-sm font-medium text-foreground mb-1">质量档（DPI）</label>
             <select id="prc-dpi" v-model.number="selectedDpi"
-              class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground">
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground">
               <option v-for="q in qualityOptions" :key="q.dpi" :value="q.dpi">{{ q.label }}</option>
             </select>
           </div>
           <div>
             <label for="prc-cam" class="block text-sm font-medium text-foreground mb-1">你的相机像素（百万像素 MP）</label>
             <input id="prc-cam" v-model.number="cameraMp" type="number" min="1" step="0.1"
-              class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono" placeholder="12" />
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono" placeholder="12" />
             <p class="text-[10px] text-muted-foreground mt-1">手机主摄常见 12 / 48 / 50 MP，全画幅相机 24–61 MP，用于反查是否达标。</p>
           </div>
         </div>

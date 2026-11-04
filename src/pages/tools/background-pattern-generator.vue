@@ -27,11 +27,11 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">背景色</label>
-            <input v-model="bgColor" type="color" class="w-full h-10 rounded-lg cursor-pointer border border-border">
+            <input v-model="bgColor" type="color" class="w-full h-10 rounded-lg cursor-pointer border border-border border-border">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">图案色</label>
-            <input v-model="patternColor" type="color" class="w-full h-10 rounded-lg cursor-pointer border border-border">
+            <input v-model="patternColor" type="color" class="w-full h-10 rounded-lg cursor-pointer border border-border border-border">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">大小 (px)</label>

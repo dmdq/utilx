@@ -40,7 +40,7 @@
         <textarea
           v-model="inputText"
           rows="6"
-          class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground font-mono text-sm"
+          class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground font-mono text-sm"
           placeholder="输入要计算哈希的文本内容..."
           @input="calculateHash"
         ></textarea>

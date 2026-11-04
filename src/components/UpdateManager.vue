@@ -89,7 +89,7 @@
                   <span>{{ getProgressText() }}</span>
                   <span>{{ getProgressPercentage() }}%</span>
                 </div>
-                <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="w-full bg-muted rounded-full h-2">
                   <div
                     class="h-2 rounded-full transition-all duration-300"
                     :class="getProgressColorClass()"
@@ -165,7 +165,7 @@
                 <input
                   type="checkbox"
                   v-model="updateConfig.auto_check_enabled"
-                  class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+                  class="w-4 h-4 text-primary border border-border rounded focus:ring-primary"
                 />
               </div>
 
@@ -178,7 +178,7 @@
                     :min="1"
                     :max="168"
                     :disabled="!updateConfig.auto_check_enabled"
-                    class="w-24 px-3 py-2 border border-border rounded-md focus:ring-2 focus:ring-primary focus:border-primary disabled:opacity-50"
+                    class="w-24 px-3 py-2 border border-border border-border rounded-md focus:ring-2 focus:ring-primary focus:border-primary disabled:opacity-50"
                   />
                   <span class="text-sm text-muted-foreground">小时</span>
                 </div>
@@ -189,7 +189,7 @@
                 <input
                   type="checkbox"
                   v-model="updateConfig.auto_download_hotfix"
-                  class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+                  class="w-4 h-4 text-primary border border-border rounded focus:ring-primary"
                 />
               </div>
 
@@ -198,7 +198,7 @@
                 <input
                   type="checkbox"
                   v-model="updateConfig.auto_install_hotfix"
-                  class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+                  class="w-4 h-4 text-primary border border-border rounded focus:ring-primary"
                 />
               </div>
 
@@ -206,7 +206,7 @@
                 <label class="block text-sm font-medium text-foreground mb-2">发布频道</label>
                 <select
                   v-model="updateConfig.release_channel"
-                  class="w-full px-3 py-2 border border-border rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                  class="w-full px-3 py-2 border border-border border-border rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
                 >
                   <option value="stable">稳定版</option>
                   <option value="beta">测试版</option>
@@ -220,7 +220,7 @@
                   type="text"
                   v-model="updateConfig.update_server"
                   placeholder="https://updates.util.cn"
-                  class="w-full px-3 py-2 border border-border rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                  class="w-full px-3 py-2 border border-border border-border rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
                 />
               </div>
 
@@ -297,7 +297,7 @@
             </div>
 
             <div v-else class="text-center py-12">
-              <svg class="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-16 h-16 mx-auto text-muted-foreground mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               <p class="text-muted-foreground">暂无更新历史</p>

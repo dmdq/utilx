@@ -31,7 +31,7 @@
             type="number"
             min="0"
             step="100"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
 
@@ -64,7 +64,7 @@
             type="number"
             min="0"
             step="0.01"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">常见为每期 0.60% ~ 0.75%，以账单展示为准</p>
         </div>

@@ -45,7 +45,7 @@
               v-model="parseInput"
               type="text"
               placeholder="例如：1.2.3 或 2.0.0-rc.1+build.5"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               spellcheck="false"
             />
             <p class="text-xs text-muted-foreground mt-2">输入单个版本号，实时分解并校验是否符合 SemVer 规范</p>
@@ -60,7 +60,7 @@
                   v-model="compareA"
                   type="text"
                   placeholder="1.0.0-alpha"
-                  class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                   spellcheck="false"
                 />
               </div>
@@ -70,7 +70,7 @@
                   v-model="compareB"
                   type="text"
                   placeholder="1.0.0-beta.11"
-                  class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                   spellcheck="false"
                 />
               </div>
@@ -97,7 +97,7 @@
             </div>
             <textarea
               v-model="sortInput"
-              class="w-full h-44 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-44 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="1.0.0&#10;2.1.3&#10;1.9.0-beta&#10;0.9.5"
               spellcheck="false"
             ></textarea>
@@ -118,7 +118,7 @@
               v-model="rangeVersionInput"
               type="text"
               placeholder="例如：1.5.0"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               spellcheck="false"
             />
             <p class="text-xs text-muted-foreground mt-3">多个比较器用空格分隔表示「与」，用 || 分隔表示「或」，语义与 npm 依赖范围一致</p>

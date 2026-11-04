@@ -48,7 +48,7 @@
                 type="number"
                 min="1"
                 max="120"
-                class="w-full px-4 py-3 border rounded-lg font-mono text-sm"
+                class="w-full px-4 py-3 border border-border rounded-lg font-mono text-sm"
                 placeholder="输入年龄"
                 @input="calculateWHtR"
               >
@@ -83,7 +83,7 @@
                   step="0.1"
                   min="30"
                   max="200"
-                  class="w-full px-4 py-3 border rounded-lg font-mono text-sm pr-16"
+                  class="w-full px-4 py-3 border border-border rounded-lg font-mono text-sm pr-16"
                   placeholder="输入腰围"
                   @input="calculateWHtR"
                 >
@@ -102,7 +102,7 @@
                   step="0.1"
                   min="100"
                   max="250"
-                  class="w-full px-4 py-3 border rounded-lg font-mono text-sm pr-16"
+                  class="w-full px-4 py-3 border border-border rounded-lg font-mono text-sm pr-16"
                   placeholder="输入身高"
                   @input="calculateWHtR"
                 >

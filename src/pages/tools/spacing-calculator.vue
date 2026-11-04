@@ -17,13 +17,13 @@
               type="number"
               min="4"
               max="16"
-              class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground"
             >
             <p class="text-xs text-muted-foreground mt-1">建议: 4px, 8px, 或 16px</p>
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">比例类型</label>
-            <select v-model="scaleType" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground">
+            <select v-model="scaleType" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground">
               <option value="linear">线性 (0.5x, 1x, 1.5x...)</option>
               <option value="fibonacci">斐波那契数列</option>
               <option value="powers">2的幂次 (1, 2, 4, 8...)</option>

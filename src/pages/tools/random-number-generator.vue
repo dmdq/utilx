@@ -22,7 +22,7 @@
             <input
               v-model.number="minValue"
               type="number"
-              class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
@@ -32,7 +32,7 @@
             <input
               v-model.number="maxValue"
               type="number"
-              class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
@@ -44,14 +44,14 @@
               type="number"
               min="1"
               max="100"
-              class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
           <!-- 生成模式 -->
           <div>
             <label class="text-sm font-medium mb-2 block">生成模式</label>
-            <select v-model="mode" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="mode" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="normal">普通模式</option>
               <option value="unique">不重复模式</option>
               <option value="lottery">抽奖模式</option>
@@ -66,7 +66,7 @@
             v-model="excludeInput"
             type="text"
             placeholder="例如: 7, 13, 21"
-            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
 

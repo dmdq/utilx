@@ -57,7 +57,7 @@
           </div>
         </div>
 
-        <div v-if="cookies.length === 0" class="text-center py-8 text-gray-400 text-sm">
+        <div v-if="cookies.length === 0" class="text-center py-8 text-muted-foreground text-sm">
           暂无Cookie，添加或解析Cookie字符串
         </div>
       </div>

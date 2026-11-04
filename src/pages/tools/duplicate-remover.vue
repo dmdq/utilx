@@ -64,7 +64,7 @@
             <input
               v-model="uniqueKey"
               type="text"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
               placeholder="例如: id, name, email"
             />
             <p class="text-xs text-muted-foreground mt-1">留空则基于整个对象去重</p>
@@ -72,7 +72,7 @@
 
           <textarea
             v-model="inputData"
-            class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+            class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
             :placeholder="mode === 'text' ? '输入文本数据，每行一条...' : '输入JSON数组...'"
           ></textarea>
 
@@ -163,7 +163,7 @@
           <textarea
             v-model="outputData"
             readonly
-            class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border rounded-lg font-mono text-sm resize-none"
+            class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border border-border rounded-lg font-mono text-sm resize-none"
             placeholder="去重结果将显示在这里..."
           ></textarea>
         </div>

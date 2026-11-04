@@ -62,7 +62,7 @@
 
             <div>
               <label class="text-xs text-muted-foreground mb-1 block">配色方案</label>
-              <select v-model="paletteType" @change="extractColors" class="w-full p-2 border rounded text-sm">
+              <select v-model="paletteType" @change="extractColors" class="w-full p-2 border border-border rounded text-sm">
                 <option value="dominant">主色调</option>
                 <option value="vibrant">鲜艳色</option>
                 <option value="muted">柔和色</option>

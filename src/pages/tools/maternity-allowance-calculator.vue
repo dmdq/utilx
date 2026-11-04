@@ -35,7 +35,7 @@
               min="0"
               step="100"
               placeholder="如 9000"
-              class="flex-1 min-w-0 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 min-w-0 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <span class="text-xs text-muted-foreground flex-shrink-0">元 / 月</span>
           </div>
@@ -52,7 +52,7 @@
             <select
               v-model="cityId"
               @change="onCityChange"
-              class="flex-shrink-0 px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-shrink-0 px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               aria-label="所在城市或省份"
             >
               <option v-for="p in PROVINCE_LEAVE_DAYS" :key="p.id" :value="p.id">{{ p.name }}</option>
@@ -63,7 +63,7 @@
               min="0"
               max="280"
               step="1"
-              class="flex-1 min-w-0 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 min-w-0 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
               aria-label="当地奖励假天数"
             />
             <span class="text-xs text-muted-foreground flex-shrink-0">天奖励假</span>
@@ -100,7 +100,7 @@
                   min="2"
                   max="10"
                   step="1"
-                  class="w-16 px-2 py-1 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-16 px-2 py-1 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
                   aria-label="婴儿总数"
                 />
                 <span class="text-xs text-muted-foreground flex-shrink-0">婴</span>
@@ -123,7 +123,7 @@
               min="0"
               step="100"
               placeholder="如 15000"
-              class="flex-1 min-w-0 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 min-w-0 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <span class="text-xs text-muted-foreground flex-shrink-0">元 / 月</span>
           </div>

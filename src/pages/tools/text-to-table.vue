@@ -35,7 +35,7 @@
         </div>
         <textarea
           v-model="inputText"
-          class="w-full h-80 px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="w-full h-80 px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="输入文本，每行一条记录，字段用分隔符分开..."
           @input="convert"
         ></textarea>
@@ -82,7 +82,7 @@
       </div>
       <textarea
         v-model="outputText"
-        class="w-full h-48 px-4 py-3 bg-muted border border-border rounded-lg resize-none font-mono text-sm"
+        class="w-full h-48 px-4 py-3 bg-muted border border-border border-border rounded-lg resize-none font-mono text-sm"
         readonly
       ></textarea>
       <div class="mt-4 flex gap-2">
@@ -110,7 +110,7 @@
             <input
               v-model="customDelimiter"
               type="text"
-              class="w-24 px-2 py-1 bg-muted border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-24 px-2 py-1 bg-muted border border-border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="自定义"
               @input="delimiter = customDelimiter; convert()"
             >

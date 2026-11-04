@@ -24,7 +24,7 @@
         </h2>
         <textarea
           v-model="jsonA"
-          class="w-full h-64 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full h-64 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="{&#10;  &quot;name&quot;: &quot;默认配置&quot;,&#10;  &quot;database&quot;: { &quot;host&quot;: &quot;localhost&quot;, &quot;port&quot;: 3306 }&#10;}"
           spellcheck="false"
         ></textarea>
@@ -39,7 +39,7 @@
         </h2>
         <textarea
           v-model="jsonB"
-          class="w-full h-64 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full h-64 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="{&#10;  &quot;database&quot;: { &quot;host&quot;: &quot;prod.example.com&quot;, &quot;pool&quot;: 10 },&#10;  &quot;debug&quot;: false&#10;}"
           spellcheck="false"
         ></textarea>
@@ -176,7 +176,7 @@
             v-if="mergedText"
             :value="mergedText"
             readonly
-            class="w-full h-80 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+            class="w-full h-80 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
             spellcheck="false"
           ></textarea>
           <div v-else-if="parseErrors.length" class="py-12 text-center">

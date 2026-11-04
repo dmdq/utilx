@@ -100,7 +100,7 @@
                   v-model="watermarkText"
                   type="text"
                   placeholder="输入水印文字"
-                  class="mt-2 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -112,14 +112,14 @@
                     type="number"
                     min="12"
                     max="200"
-                    class="mt-1 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="mt-1 w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
                 <div>
                   <label class="text-sm font-medium">字体</label>
                   <select
                     v-model="textSettings.fontFamily"
-                    class="mt-1 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="mt-1 w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="Arial">Arial</option>
                     <option value="Helvetica">Helvetica</option>

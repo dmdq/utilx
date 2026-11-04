@@ -25,7 +25,7 @@
                 type="number"
                 min="1"
                 max="100"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">次</span>
             </div>
@@ -34,7 +34,7 @@
           <!-- 硬币类型 -->
           <div>
             <label class="text-sm font-medium mb-2 block">硬币类型</label>
-            <select v-model="coinType" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="coinType" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="heads-tails">正面/反面</option>
               <option value="custom">自定义</option>
             </select>
@@ -48,13 +48,13 @@
                 v-model="customOptions[0]"
                 type="text"
                 placeholder="选项1"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <input
                 v-model="customOptions[1]"
                 type="text"
                 placeholder="选项2"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
           </div>

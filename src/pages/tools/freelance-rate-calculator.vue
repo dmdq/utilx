@@ -46,7 +46,7 @@
               type="number"
               min="0"
               step="10000"
-              class="w-full pl-8 pr-4 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full pl-8 pr-4 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 300000"
             />
             <input
@@ -55,7 +55,7 @@
               type="number"
               min="0"
               step="1000"
-              class="w-full pl-8 pr-4 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full pl-8 pr-4 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 25000"
             />
           </div>
@@ -70,7 +70,7 @@
               min="1"
               max="80"
               step="1"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <p class="text-xs text-muted-foreground mt-1.5">扣掉沟通、行政、摸鱼，默认 30</p>
           </div>
@@ -82,7 +82,7 @@
               min="1"
               max="52"
               step="1"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <p class="text-xs text-muted-foreground mt-1.5">扣休假与空档，默认 46</p>
           </div>
@@ -110,7 +110,7 @@
               type="number"
               min="0"
               step="5000"
-              class="w-full pl-8 pr-4 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full pl-8 pr-4 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 50000"
             />
           </div>

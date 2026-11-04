@@ -48,7 +48,7 @@
             v-model="form.name"
             type="text"
             placeholder="如：我的生日 / 期末考试"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
         </div>
 
@@ -58,7 +58,7 @@
             <input
               v-model="form.date"
               type="date"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
           </div>
           <div>
@@ -66,13 +66,13 @@
             <input
               v-model="form.time"
               type="time"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
           </div>
         </div>
 
         <label class="flex items-center gap-2 text-sm text-foreground">
-          <input v-model="form.repeatYearly" type="checkbox" class="w-4 h-4 rounded border-border">
+          <input v-model="form.repeatYearly" type="checkbox" class="w-4 h-4 rounded border border-border">
           每年重复
           <span class="text-xs text-muted-foreground">（公历每年同月同日，自动滚动到下一次）</span>
         </label>

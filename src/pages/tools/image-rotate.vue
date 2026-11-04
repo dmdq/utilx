@@ -82,7 +82,7 @@
                 type="number"
                 min="0"
                 max="360"
-                class="flex-1 p-2 border rounded-lg text-sm"
+                class="flex-1 p-2 border border-border rounded-lg text-sm"
               >
               <button @click="applyCustomAngle" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90">
                 应用

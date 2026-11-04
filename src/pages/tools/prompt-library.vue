@@ -40,9 +40,9 @@
             <Plus class="w-4 h-4 mr-1.5 text-primary" /> 添加自定义提示词
           </h2>
           <input v-model="newTitle" type="text" placeholder="名称"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           <textarea v-model="newContent" rows="4" placeholder="内容，可用 {变量} 占位，例如：帮我润色这段{内容}，语气更{语气}"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"></textarea>
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"></textarea>
           <div class="flex gap-2">
             <button @click="addPrompt" :disabled="!newTitle.trim() || !newContent.trim()"
               class="flex-1 bg-primary text-primary-foreground py-2 rounded-lg text-sm font-medium hover:bg-primary/90 disabled:bg-muted disabled:text-muted-foreground transition-all">
@@ -91,7 +91,7 @@
                 v-model="varValues[prompt.id + '-' + v]"
                 type="text"
                 :placeholder="'填写 ' + v"
-                class="flex-1 px-2.5 py-1.5 bg-background border border-input rounded text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 px-2.5 py-1.5 bg-background border border-border border-input rounded text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <button @click="copyFilled(prompt)"

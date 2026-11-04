@@ -51,7 +51,7 @@
           <select
             id="chord-quality"
             v-model="selectedQuality"
-            class="w-full px-3 py-2.5 rounded-md border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2.5 rounded-md border border-border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="q in QUALITIES" :key="q.id" :value="q.id">{{ q.label }}</option>
           </select>

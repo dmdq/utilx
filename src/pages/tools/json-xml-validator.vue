@@ -61,7 +61,7 @@
             </div>
           </div>
         </div>
-        <div v-else class="p-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-500">
+        <div v-else class="p-4 bg-gray-100 dark:bg-gray-700 rounded-lg text-muted-foreground">
           请输入{{ format.toUpperCase() }}数据进行验证
         </div>
 

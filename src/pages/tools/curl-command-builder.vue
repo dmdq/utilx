@@ -57,7 +57,7 @@
             <select
               id="ccb-method"
               v-model="method"
-              class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+              class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
             >
               <option v-for="m in METHOD_OPTIONS" :key="m" :value="m">{{ m }}</option>
             </select>
@@ -70,7 +70,7 @@
               type="text"
               placeholder="https://api.example.com/v1/orders"
               @blur="urlTouched = true"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
             >
             <p v-if="urlError" class="text-xs text-red-500 mt-1">{{ urlError }}</p>
           </div>
@@ -93,13 +93,13 @@
                 v-model="h.key"
                 type="text"
                 placeholder="Header 名称"
-                class="w-2/5 min-w-0 px-2.5 py-1.5 bg-background border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
+                class="w-2/5 min-w-0 px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
               >
               <input
                 v-model="h.value"
                 type="text"
                 placeholder="值"
-                class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
+                class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
               >
               <button
                 @click="removeHeader(i)"
@@ -144,7 +144,7 @@
               v-model="jsonBody"
               rows="6"
               placeholder='{"name":"示例字段","count":2}'
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
             ></textarea>
             <p v-if="jsonError" class="text-xs text-amber-600 flex items-start gap-1.5 mt-1.5">
               <TriangleAlert class="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
@@ -160,13 +160,13 @@
                 v-model="p.key"
                 type="text"
                 placeholder="字段名"
-                class="w-2/5 min-w-0 px-2.5 py-1.5 bg-background border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
+                class="w-2/5 min-w-0 px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
               >
               <input
                 v-model="p.value"
                 type="text"
                 :placeholder="bodyMode === 'multipart' ? '值；文件路径以 @ 开头，如 @/path/a.pdf' : '值（&、空格、中文自动编码）'"
-                class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
+                class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
               >
               <button
                 @click="removeBodyPair(i)"
@@ -206,13 +206,13 @@
                 v-model="p.key"
                 type="text"
                 placeholder="参数名"
-                class="w-2/5 min-w-0 px-2.5 py-1.5 bg-background border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
+                class="w-2/5 min-w-0 px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
               >
               <input
                 v-model="p.value"
                 type="text"
                 placeholder="值"
-                class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
+                class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-xs font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-primary"
               >
               <button
                 @click="removeQueryPair(i)"

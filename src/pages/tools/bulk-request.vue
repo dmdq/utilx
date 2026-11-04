@@ -334,7 +334,7 @@ const relatedTools = [
               <label class="text-xs text-muted-foreground mb-1 block">HTTP方法</label>
               <select
                 v-model="singleRequest.method"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
               >
                 <option v-for="method in httpMethods" :key="method" :value="method">
                   {{ method }}
@@ -346,7 +346,7 @@ const relatedTools = [
               <input
                 v-model="singleRequest.url"
                 type="text"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                 placeholder="https://api.example.com/endpoint"
               />
             </div>
@@ -354,7 +354,7 @@ const relatedTools = [
               <label class="text-xs text-muted-foreground mb-1 block">Headers (可选)</label>
               <textarea
                 v-model="singleRequest.headers"
-                class="w-full h-20 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm font-mono resize-none"
+                class="w-full h-20 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm font-mono resize-none"
                 placeholder="Content-Type: application/json&#10;Authorization: Bearer token"
               ></textarea>
             </div>
@@ -362,7 +362,7 @@ const relatedTools = [
               <label class="text-xs text-muted-foreground mb-1 block">Body (可选)</label>
               <textarea
                 v-model="singleRequest.body"
-                class="w-full h-20 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm font-mono resize-none"
+                class="w-full h-20 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm font-mono resize-none"
                 placeholder='{"key": "value"}'
               ></textarea>
             </div>

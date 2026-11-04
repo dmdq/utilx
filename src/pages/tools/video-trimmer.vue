@@ -83,7 +83,7 @@
                   step="0.1"
                   :disabled="exporting"
                   @change="onCommitStart"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground font-mono disabled:opacity-50"
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono disabled:opacity-50"
                 />
               </label>
               <label class="block">
@@ -96,7 +96,7 @@
                   step="0.1"
                   :disabled="exporting"
                   @change="onCommitEnd"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground font-mono disabled:opacity-50"
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono disabled:opacity-50"
                 />
               </label>
             </div>

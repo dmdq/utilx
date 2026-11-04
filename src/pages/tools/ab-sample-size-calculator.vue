@@ -34,7 +34,7 @@
             min="0.1"
             max="99"
             step="0.1"
-            class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
           <p class="text-xs text-muted-foreground mt-1">对照组当前的转化率，允许 0.1–99，如 5 表示 5%</p>
         </div>
@@ -65,7 +65,7 @@
             type="number"
             min="0.01"
             step="0.5"
-            class="w-full mt-2 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-2 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
           <p class="text-xs text-muted-foreground mt-1">{{ mdeHint }}</p>
         </div>
@@ -76,7 +76,7 @@
             <select
               id="ab-alpha"
               v-model.number="alpha"
-              class="w-full mt-1.5 px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full mt-1.5 px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <option :value="0.1">0.10（较宽松）</option>
               <option :value="0.05">0.05（常用）</option>
@@ -88,7 +88,7 @@
             <select
               id="ab-power"
               v-model.number="power"
-              class="w-full mt-1.5 px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full mt-1.5 px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <option :value="0.8">0.80（默认）</option>
               <option :value="0.9">0.90</option>
@@ -179,7 +179,7 @@
                 type="number"
                 min="0"
                 step="1000"
-                class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
             </div>
             <div>
@@ -191,7 +191,7 @@
                 min="1"
                 max="100"
                 step="1"
-                class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
               <p class="text-xs text-muted-foreground mt-1">50/50 分流时每组各得 50% 流量</p>
             </div>

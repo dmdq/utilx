@@ -63,7 +63,7 @@
                 type="number"
                 min="5" max="120" step="1"
                 :disabled="running"
-                class="w-full h-10 px-2 bg-background border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
+                class="w-full h-10 px-2 bg-background border border-border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
                 @change="applyCustomField('workMin')"
               />
             </div>
@@ -75,7 +75,7 @@
                 type="number"
                 min="5" max="60" step="1"
                 :disabled="running"
-                class="w-full h-10 px-2 bg-background border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
+                class="w-full h-10 px-2 bg-background border border-border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
                 @change="applyCustomField('restMin')"
               />
             </div>
@@ -87,7 +87,7 @@
                 type="number"
                 min="1" max="50" step="1"
                 :disabled="running || custom.infinite"
-                class="w-full h-10 px-2 bg-background border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
+                class="w-full h-10 px-2 bg-background border border-border border-border rounded-lg text-sm font-bold text-foreground font-mono text-center disabled:opacity-50"
                 @change="applyCustomField('cycles')"
               />
             </div>

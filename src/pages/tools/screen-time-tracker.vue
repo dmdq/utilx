@@ -18,7 +18,7 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium mb-2 block">设备类型</label>
-              <select v-model="entry.device" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="entry.device" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option value="phone">手机</option>
                 <option value="tablet">平板</option>
                 <option value="computer">电脑</option>
@@ -35,12 +35,12 @@
                 <button @click="entry.duration = 120" :class="['p-2 rounded text-sm', entry.duration === 120 ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80']">2小时</button>
                 <button @click="entry.duration = 180" :class="['p-2 rounded text-sm', entry.duration === 180 ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80']">3小时</button>
               </div>
-              <input v-model.number="entry.duration" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="自定义时长">
+              <input v-model.number="entry.duration" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="自定义时长">
             </div>
 
             <div>
               <label class="text-sm font-medium mb-2 block">用途分类</label>
-              <select v-model="entry.category" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="entry.category" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option value="work">工作/学习</option>
                 <option value="social">社交娱乐</option>
                 <option value="game">游戏</option>

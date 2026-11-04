@@ -140,7 +140,7 @@ onMounted(() => {
           <input
             v-model="searchQuery"
             type="text"
-            class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+            class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
             placeholder="搜索笔记..."
           />
           <button
@@ -202,7 +202,7 @@ onMounted(() => {
               :value="activeNote.title"
               @input="updateNote('title', $event.target.value)"
               type="text"
-              class="w-full px-4 py-2 text-xl font-semibold bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 text-xl font-semibold bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="笔记标题"
             />
           </div>
@@ -254,7 +254,7 @@ onMounted(() => {
             <textarea
               :value="activeNote.content"
               @input="updateNote('content', $event.target.value)"
-              class="w-full h-[500px] px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none"
+              class="w-full h-[500px] px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none"
               placeholder="开始输入内容，支持 Markdown 语法..."
             ></textarea>
             <div class="absolute bottom-3 right-3 text-xs text-muted-foreground">

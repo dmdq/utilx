@@ -24,19 +24,19 @@
               <div class="grid grid-cols-2 gap-3">
                 <div>
                   <label class="text-xs text-muted-foreground">X偏移</label>
-                  <input v-model.number="layer.x" type="number" class="w-full px-2 py-1 text-sm bg-card border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                  <input v-model.number="layer.x" type="number" class="w-full px-2 py-1 text-sm bg-card border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary">
                 </div>
                 <div>
                   <label class="text-xs text-muted-foreground">Y偏移</label>
-                  <input v-model.number="layer.y" type="number" class="w-full px-2 py-1 text-sm bg-card border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                  <input v-model.number="layer.y" type="number" class="w-full px-2 py-1 text-sm bg-card border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary">
                 </div>
                 <div>
                   <label class="text-xs text-muted-foreground">模糊半径</label>
-                  <input v-model.number="layer.blur" type="number" class="w-full px-2 py-1 text-sm bg-card border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                  <input v-model.number="layer.blur" type="number" class="w-full px-2 py-1 text-sm bg-card border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary">
                 </div>
                 <div>
                   <label class="text-xs text-muted-foreground">颜色</label>
-                  <input v-model="layer.color" type="color" class="w-full h-8 rounded border border-border cursor-pointer">
+                  <input v-model="layer.color" type="color" class="w-full h-8 rounded border border-border border-border cursor-pointer">
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@
 
         <div class="bg-card border border-border rounded-lg p-6 flex-1 flex flex-col">
           <div class="mb-4">
-            <input v-model="previewText" type="text" class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="输入预览文字">
+            <input v-model="previewText" type="text" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="输入预览文字">
           </div>
 
           <div class="p-8 bg-muted rounded-lg min-h-[150px] flex items-center justify-center flex-1">

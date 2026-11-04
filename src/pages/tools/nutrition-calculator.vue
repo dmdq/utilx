@@ -15,7 +15,7 @@
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block text-sm font-medium mb-2">性别</label>
-                <select v-model="userInfo.gender" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="userInfo.gender" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="male">男性</option>
                   <option value="female">女性</option>
                 </select>
@@ -27,7 +27,7 @@
                   type="number"
                   min="1"
                   max="120"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="30"
                 />
               </div>
@@ -39,7 +39,7 @@
                   min="100"
                   max="250"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="170"
                 />
               </div>
@@ -51,7 +51,7 @@
                   min="20"
                   max="300"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="65"
                 />
               </div>
@@ -59,7 +59,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">活动水平</label>
-              <select v-model="userInfo.activityLevel" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="userInfo.activityLevel" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="sedentary">久坐（很少运动）</option>
                 <option value="light">轻度活动（每周1-3次）</option>
                 <option value="moderate">中度活动（每周3-5次）</option>
@@ -76,7 +76,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">健身目标</label>
-              <select v-model="fitnessGoal.goal" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="fitnessGoal.goal" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="maintain">维持体重</option>
                 <option value="lose-fat">减脂</option>
                 <option value="gain-muscle">增肌</option>
@@ -94,14 +94,14 @@
                 min="-5"
                 max="5"
                 step="0.5"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="1"
               />
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">饮食偏好</label>
-              <select v-model="fitnessGoal.dietPreference" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="fitnessGoal.dietPreference" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="balanced">均衡饮食</option>
                 <option value="low-carb">低碳水化合物</option>
                 <option value="high-protein">高蛋白</option>

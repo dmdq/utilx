@@ -19,7 +19,7 @@
           <!-- 语言选择 -->
           <div>
             <label class="text-sm font-medium mb-2 block">语言类型</label>
-            <select v-model="selectedLanguage" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="selectedLanguage" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option v-for="lang in languages" :key="lang.code" :value="lang.code">
                 {{ lang.name }}
               </option>
@@ -35,7 +35,7 @@
                 type="number"
                 min="1"
                 max="100"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">个</span>
             </div>
@@ -44,7 +44,7 @@
           <!-- 昵称格式 -->
           <div>
             <label class="text-sm font-medium mb-2 block">昵称格式</label>
-            <select v-model="nameFormat" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="nameFormat" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="simple">简洁格式</option>
               <option value="full">完整格式</option>
               <option value="creative">创意格式</option>
@@ -295,12 +295,12 @@
 
     <!-- 导入模态框 -->
     <div v-if="showImportModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4">
+      <div class="bg-card rounded-2xl p-8 max-w-lg w-full mx-4">
         <h3 class="text-xl font-semibold mb-4">导入姓名库</h3>
 
         <div class="mb-6">
-          <label class="block text-sm font-medium text-gray-700 mb-2">选择语言类型</label>
-          <select v-model="importLanguage" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+          <label class="block text-sm font-medium text-foreground mb-2">选择语言类型</label>
+          <select v-model="importLanguage" class="w-full border border-border border-border rounded-lg px-3 py-2">
             <option v-for="lang in languages" :key="lang.code" :value="lang.code">
               {{ lang.name }}
             </option>
@@ -308,15 +308,15 @@
         </div>
 
         <div class="mb-6">
-          <label class="block text-sm font-medium text-gray-700 mb-2">上传文件</label>
+          <label class="block text-sm font-medium text-foreground mb-2">上传文件</label>
           <div
-            class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 transition-colors"
+            class="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-blue-500 transition-colors"
             @drop="handleFileDrop"
             @dragover.prevent
             @dragenter.prevent
           >
-            <Upload class="w-12 h-12 mx-auto mb-3 text-gray-400" />
-            <p class="text-gray-600 mb-2">拖拽文件到此处或点击选择</p>
+            <Upload class="w-12 h-12 mx-auto mb-3 text-muted-foreground" />
+            <p class="text-muted-foreground mb-2">拖拽文件到此处或点击选择</p>
             <input
               type="file"
               @change="handleFileSelect"
@@ -330,14 +330,14 @@
             >
               选择文件
             </button>
-            <p class="text-xs text-gray-500 mt-2">支持 .txt 和 .csv 文件，每行一个姓名</p>
+            <p class="text-xs text-muted-foreground mt-2">支持 .txt 和 .csv 文件，每行一个姓名</p>
           </div>
         </div>
 
         <div v-if="importPreview.length > 0" class="mb-6">
-          <label class="block text-sm font-medium text-gray-700 mb-2">预览 (前5个)</label>
-          <div class="bg-gray-50 rounded-lg p-3 max-h-32 overflow-y-auto">
-            <div v-for="(item, index) in importPreview.slice(0, 5)" :key="index" class="text-sm text-gray-700">
+          <label class="block text-sm font-medium text-foreground mb-2">预览 (前5个)</label>
+          <div class="bg-muted/50 rounded-lg p-3 max-h-32 overflow-y-auto">
+            <div v-for="(item, index) in importPreview.slice(0, 5)" :key="index" class="text-sm text-foreground">
               {{ item }}
             </div>
           </div>
@@ -353,7 +353,7 @@
           </button>
           <button
             @click="cancelImport"
-            class="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded-lg font-medium hover:bg-gray-200 transition-all"
+            class="flex-1 bg-muted text-foreground py-2 px-4 rounded-lg font-medium hover:bg-muted transition-all"
           >
             取消
           </button>

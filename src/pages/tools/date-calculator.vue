@@ -23,7 +23,7 @@
               <input
                 v-model="baseDate"
                 type="date"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @change="calculateDate"
               />
               <button
@@ -73,7 +73,7 @@
                     type="number"
                     min="0"
                     placeholder="0"
-                    class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
+                    class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
                     @input="calculateDate"
                   />
                 </div>
@@ -84,7 +84,7 @@
                     type="number"
                     min="0"
                     placeholder="0"
-                    class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
+                    class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
                     @input="calculateDate"
                   />
                 </div>
@@ -98,7 +98,7 @@
                     type="number"
                     min="0"
                     placeholder="0"
-                    class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
+                    class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
                     @input="calculateDate"
                   />
                 </div>
@@ -109,7 +109,7 @@
                     type="number"
                     min="0"
                     placeholder="0"
-                    class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
+                    class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
                     @input="calculateDate"
                   />
                 </div>
@@ -120,7 +120,7 @@
                     type="number"
                     min="0"
                     placeholder="0"
-                    class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
+                    class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
                     @input="calculateDate"
                   />
                 </div>
@@ -172,7 +172,7 @@
               <input
                 v-model="rangeStart"
                 type="date"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @change="calculateRange"
               />
             </div>
@@ -181,7 +181,7 @@
               <input
                 v-model="rangeEnd"
                 type="date"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @change="calculateRange"
               />
             </div>
@@ -211,7 +211,7 @@
               <input
                 v-model="targetDate"
                 type="date"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @change="calculateDifference"
               />
               <button
@@ -251,7 +251,7 @@
               <input
                 v-model="holidayDate"
                 type="date"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @change="checkHoliday"
               />
             </div>

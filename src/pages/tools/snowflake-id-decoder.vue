@@ -27,7 +27,7 @@
           <select
             v-model="presetKey"
             @change="applyPreset"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="p in epochPresets" :key="p.key" :value="p.key">{{ p.label }}</option>
           </select>
@@ -35,7 +35,7 @@
           <input
             v-model="epochInput"
             type="text"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如 1288834974657 或 2010-01-01T00:00:00+08:00"
           />
           <p v-if="epochInfo.ok" class="text-xs text-green-600 dark:text-green-400 mt-1.5">
@@ -48,19 +48,19 @@
           <div class="grid grid-cols-4 gap-3">
             <div>
               <label class="block text-xs text-muted-foreground mb-1">时间戳位</label>
-              <input v-model.number="tsBits" type="number" min="1" max="62" class="w-full px-2 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="tsBits" type="number" min="1" max="62" class="w-full px-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-xs text-muted-foreground mb-1">数据中心</label>
-              <input v-model.number="dcBits" type="number" min="0" max="30" class="w-full px-2 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="dcBits" type="number" min="0" max="30" class="w-full px-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-xs text-muted-foreground mb-1">机器号</label>
-              <input v-model.number="workerBits" type="number" min="0" max="30" class="w-full px-2 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="workerBits" type="number" min="0" max="30" class="w-full px-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-xs text-muted-foreground mb-1">序列号</label>
-              <input v-model.number="seqBits" type="number" min="0" max="30" class="w-full px-2 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="seqBits" type="number" min="0" max="30" class="w-full px-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
           </div>
           <p :class="bitSum === 64 ? 'text-xs text-muted-foreground mt-2' : 'text-xs text-red-600 dark:text-red-400 mt-2'">
@@ -79,7 +79,7 @@
         </h2>
         <textarea
           v-model="idsText"
-          class="w-full h-80 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full h-80 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="每行一个 64 位整数雪花 ID，例如：&#10;1068438253888016384&#10;7096078192489758720&#10;也可以故意粘贴 -123 或超长数字，观察异常提示"
           spellcheck="false"
         ></textarea>

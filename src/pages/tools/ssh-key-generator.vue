@@ -25,7 +25,7 @@
 
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">密钥算法</label>
-          <select v-model="selectedAlgorithm" class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground">
+          <select v-model="selectedAlgorithm" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground">
             <option value="RSA-2048">RSA 2048位 (传统选择)</option>
             <option value="RSA-3072">RSA 3072位 (更高安全性)</option>
             <option value="RSA-4096">RSA 4096位 (最高安全性)</option>
@@ -38,7 +38,7 @@
           <input
             v-model="keyComment"
             type="text"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground"
             placeholder="user@example.com 或 Key描述"
           >
         </div>
@@ -49,7 +49,7 @@
             <input
               v-model="passphrase"
               :type="showPassphrase ? 'text' : 'password'"
-              class="w-full px-4 py-2 pr-20 border border-border rounded-lg bg-muted text-foreground"
+              class="w-full px-4 py-2 pr-20 border border-border border-border rounded-lg bg-muted text-foreground"
               placeholder="留空则无密码保护"
             >
             <button

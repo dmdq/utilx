@@ -38,7 +38,7 @@
                 min="5"
                 max="50"
                 step="1"
-                class="w-full px-2 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -50,7 +50,7 @@
                 min="-2"
                 max="15"
                 step="0.5"
-                class="w-full px-2 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -62,7 +62,7 @@
                 min="0"
                 max="15"
                 step="0.1"
-                class="w-full px-2 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>
@@ -82,7 +82,7 @@
                 min="0"
                 step="10"
                 placeholder="如 300"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div class="grid grid-cols-2 gap-3">
@@ -95,7 +95,7 @@
                   min="0"
                   max="100"
                   step="1"
-                  class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
               <div>
@@ -107,7 +107,7 @@
                   min="0"
                   max="15"
                   step="0.1"
-                  class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
             </div>
@@ -121,7 +121,7 @@
                   min="1"
                   max="50"
                   step="1"
-                  class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
               <div>
@@ -132,7 +132,7 @@
                   type="number"
                   min="0"
                   step="100"
-                  class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
             </div>
@@ -146,7 +146,7 @@
                   min="0"
                   max="5"
                   step="0.1"
-                  class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
               <div>
@@ -158,7 +158,7 @@
                   min="0"
                   max="20"
                   step="0.5"
-                  class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
             </div>
@@ -171,7 +171,7 @@
                 min="-5"
                 max="10"
                 step="0.5"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <p class="text-[10px] text-muted-foreground mt-1">范围 −5 ~ 10;契税 + 中介等一次性税费默认按房价 2% 估</p>
             </div>
@@ -194,7 +194,7 @@
                 min="0"
                 step="500"
                 placeholder="如 6000"
-                class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -206,7 +206,7 @@
                 min="-10"
                 max="30"
                 step="0.5"
-                class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>

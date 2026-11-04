@@ -193,7 +193,7 @@
                   v-model="bokehColor"
                   type="text"
                   @input="updatePreview"
-                  class="flex-1 p-2 border rounded text-sm font-mono"
+                  class="flex-1 p-2 border border-border rounded text-sm font-mono"
                 >
               </div>
             </div>

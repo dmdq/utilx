@@ -34,7 +34,7 @@
                   v-model="directives['default-src'].custom"
                   type="text"
                   placeholder="自定义源"
-                  class="w-full px-3 py-2 border rounded text-sm"
+                  class="w-full px-3 py-2 border border-border rounded text-sm"
                 >
               </div>
             </div>
@@ -62,7 +62,7 @@
                   v-model="directives['script-src'].custom"
                   type="text"
                   placeholder="例如: https://cdn.example.com"
-                  class="w-full px-3 py-2 border rounded text-sm"
+                  class="w-full px-3 py-2 border border-border rounded text-sm"
                 >
               </div>
             </div>
@@ -86,7 +86,7 @@
                   v-model="directives['style-src'].custom"
                   type="text"
                   placeholder="自定义源"
-                  class="w-full px-3 py-2 border rounded text-sm"
+                  class="w-full px-3 py-2 border border-border rounded text-sm"
                 >
               </div>
             </div>
@@ -114,7 +114,7 @@
                   v-model="directives['img-src'].custom"
                   type="text"
                   placeholder="自定义源"
-                  class="w-full px-3 py-2 border rounded text-sm"
+                  class="w-full px-3 py-2 border border-border rounded text-sm"
                 >
               </div>
             </div>
@@ -134,7 +134,7 @@
                   v-model="directives['connect-src'].custom"
                   type="text"
                   placeholder="例如: https://api.example.com wss://example.com"
-                  class="w-full px-3 py-2 border rounded text-sm"
+                  class="w-full px-3 py-2 border border-border rounded text-sm"
                 >
               </div>
             </div>
@@ -158,7 +158,7 @@
                   v-model="directives['font-src'].custom"
                   type="text"
                   placeholder="例如: https://fonts.gstatic.com"
-                  class="w-full px-3 py-2 border rounded text-sm"
+                  class="w-full px-3 py-2 border border-border rounded text-sm"
                 >
               </div>
             </div>
@@ -182,7 +182,7 @@
                   v-model="directives['frame-src'].custom"
                   type="text"
                   placeholder="允许的iframe来源"
-                  class="w-full px-3 py-2 border rounded text-sm"
+                  class="w-full px-3 py-2 border border-border rounded text-sm"
                 >
               </div>
             </div>
@@ -202,7 +202,7 @@
                   v-model="directives['media-src'].custom"
                   type="text"
                   placeholder="媒体资源来源"
-                  class="w-full px-3 py-2 border rounded text-sm"
+                  class="w-full px-3 py-2 border border-border rounded text-sm"
                 >
               </div>
             </div>

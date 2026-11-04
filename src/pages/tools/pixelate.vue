@@ -133,7 +133,7 @@
 
             <div>
               <label class="text-xs text-muted-foreground mb-1 block">色调调整</label>
-              <select v-model="colorTone" @change="updatePreview" class="w-full p-2 border rounded-lg text-sm">
+              <select v-model="colorTone" @change="updatePreview" class="w-full p-2 border border-border rounded-lg text-sm">
                 <option value="original">原始</option>
                 <option value="grayscale">灰度</option>
                 <option value="sepia">棕褐色</option>

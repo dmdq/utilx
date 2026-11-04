@@ -19,7 +19,7 @@
           <!-- 牌堆类型 -->
           <div>
             <label class="text-sm font-medium mb-2 block">牌堆类型</label>
-            <select v-model="deckType" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="deckType" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="standard">标准52张牌</option>
               <option value="with-jokers">54张牌（含大小王）</option>
               <option value="single-suit">同花色13张</option>
@@ -37,7 +37,7 @@
                 type="number"
                 min="1"
                 max="10"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">张</span>
             </div>
@@ -46,7 +46,7 @@
           <!-- 抽牌方式 -->
           <div>
             <label class="text-sm font-medium mb-2 block">抽牌方式</label>
-            <select v-model="drawMode" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="drawMode" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="with-replacement">有放回抽牌</option>
               <option value="without-replacement">无放回抽牌</option>
             </select>
@@ -165,10 +165,7 @@
               <div
                 v-for="card in result.cards"
                 :key="card.id"
-                :class="[
-                  'w-16 h-24 rounded-lg border-2 flex flex-col items-center justify-center text-lg font-bold transform hover:scale-110 transition-transform',
-                  card.suit === '♥' || card.suit === '♦' ? 'bg-red-50 border-red-300 text-red-600' : 'bg-gray-50 border-gray-300 text-gray-800'
-                ]"
+                :class="[ 'w-16 h-24 rounded-lg border-2 flex flex-col items-center justify-center text-lg font-bold transform hover:scale-110 transition-transform', card.suit === '♥' || card.suit === '♦' ? 'bg-red-50 border-red-300 text-red-600' : 'bg-gray-50 border-border text-gray-800' ]"
               >
                 <div class="text-sm">{{ card.rank }}</div>
                 <div class="text-2xl">{{ card.suit }}</div>

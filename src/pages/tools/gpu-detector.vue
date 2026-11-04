@@ -109,7 +109,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">显卡型号</label>
               <select
                 v-model="selectedGpuKey"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <option
                   v-for="opt in gpuOptions"
@@ -136,7 +136,7 @@
                   type="number"
                   min="2"
                   max="512"
-                  class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
               <div class="grid grid-cols-6 gap-1.5 mt-2">

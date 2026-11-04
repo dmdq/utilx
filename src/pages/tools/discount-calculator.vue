@@ -21,7 +21,7 @@
               type="number"
               step="0.01"
               min="0"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="输入原价"
             >
           </div>
@@ -34,7 +34,7 @@
               step="0.01"
               min="0"
               max="100"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="输入折扣率，如 20 表示 8 折"
             >
           </div>
@@ -47,7 +47,7 @@
               step="0.1"
               min="0.1"
               max="10"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="如 8 表示 8 折，会自动转换折扣率"
               @input="convertDecimalToPercent"
             >
@@ -61,7 +61,7 @@
               type="number"
               step="0.01"
               min="0"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="额外的减免金额"
             >
           </div>

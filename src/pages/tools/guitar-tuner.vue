@@ -80,7 +80,7 @@
               max="460"
               step="1"
               @change="a4 = clampA4(a4)"
-              class="flex-1 h-9 px-2.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono"
+              class="flex-1 h-9 px-2.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono"
             />
             <button
               @click="a4 = A4_DEFAULT"

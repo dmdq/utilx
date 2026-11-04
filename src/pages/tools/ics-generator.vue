@@ -26,17 +26,17 @@
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">标题 <span class="text-destructive">*</span></label>
             <input v-model="form.title" type="text" placeholder="例如：项目周会"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">地点（可选）</label>
             <input v-model="form.location" type="text" placeholder="会议室 / 线上链接"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">描述（可选）</label>
             <textarea v-model="form.description" rows="2"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"></textarea>
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"></textarea>
           </div>
 
           <label class="flex items-center justify-between cursor-pointer">
@@ -55,12 +55,12 @@
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">开始{{ form.allDay ? '日期' : '时间' }}</label>
               <input :type="form.allDay ? 'date' : 'datetime-local'" v-model="form.start"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">结束{{ form.allDay ? '日期' : '时间' }}</label>
               <input :type="form.allDay ? 'date' : 'datetime-local'" v-model="form.end"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
           </div>
 
@@ -81,12 +81,12 @@
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">重复间隔</label>
               <input v-model.number="form.repeatInterval" type="number" min="1"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">重复次数</label>
               <input v-model.number="form.repeatCount" type="number" min="1" max="999"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
           </div>
 

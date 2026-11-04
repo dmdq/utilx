@@ -104,7 +104,7 @@
                 type="number"
                 min="1"
                 :max="pageCount"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="从第几页"
               />
               <input
@@ -112,7 +112,7 @@
                 type="number"
                 min="1"
                 :max="pageCount"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="到第几页"
               />
               <p class="col-span-2 text-xs text-muted-foreground">将在第 {{ clampedSpan.start }} 页至第 {{ clampedSpan.end }} 页之间提取（共 {{ clampedSpan.count }} 页）</p>
@@ -122,7 +122,7 @@
               <input
                 v-model="customExpr"
                 type="text"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="如：1,3,5-8 或 2-10"
               />
               <p

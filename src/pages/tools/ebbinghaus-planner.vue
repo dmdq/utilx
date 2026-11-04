@@ -22,7 +22,7 @@
             <input
               v-model="startDate"
               type="date"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
             >
             <p class="text-xs text-muted-foreground mt-1">所有条目默认从这一天开始学习，复习节点按此日期顺推</p>
           </div>
@@ -48,7 +48,7 @@
                 <input
                   v-model="entry.name"
                   type="text"
-                  class="flex-1 px-3 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                  class="flex-1 px-3 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                   placeholder="如：List 1 单词 / 第3章公式"
                 >
                 <button
@@ -170,7 +170,7 @@
                         <input
                           type="checkbox"
                           :checked="!!checkedMap[item.key]"
-                          class="w-4 h-4 rounded border-border accent-primary"
+                          class="w-4 h-4 rounded border border-border accent-primary"
                           @change="toggleCheck(item.key)"
                         >
                         <span :class="checkedMap[item.key] ? 'line-through text-muted-foreground' : 'text-foreground'">

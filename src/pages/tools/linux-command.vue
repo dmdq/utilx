@@ -42,7 +42,7 @@
           <div v-if="selectedCategory === 'file'" class="space-y-4">
             <div>
               <label class="text-sm font-medium">操作类型</label>
-              <select v-model="config.fileOperation" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.fileOperation" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="find">查找文件</option>
                 <option value="copy">复制文件</option>
                 <option value="move">移动文件</option>
@@ -61,7 +61,7 @@
                   v-model="config.findPath"
                   type="text"
                   placeholder="/home/user"
-                  class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
                 />
               </div>
               <div>
@@ -70,7 +70,7 @@
                   v-model="config.fileName"
                   type="text"
                   placeholder="*.txt"
-                  class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
                 />
               </div>
               <div class="flex items-center gap-3">
@@ -92,7 +92,7 @@
                   v-model="config.sourcePath"
                   type="text"
                   placeholder="/path/to/source"
-                  class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
                 />
               </div>
               <div>
@@ -101,7 +101,7 @@
                   v-model="config.targetPath"
                   type="text"
                   placeholder="/path/to/destination"
-                  class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
                 />
               </div>
               <div v-if="config.fileOperation === 'copy'" class="flex items-center gap-3">
@@ -123,7 +123,7 @@
                   v-model="config.chmodPath"
                   type="text"
                   placeholder="/path/to/file"
-                  class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
                 />
               </div>
               <div>
@@ -133,21 +133,21 @@
                     v-model="config.ownerPermission"
                     type="text"
                     placeholder="7"
-                    class="px-3 py-2 border rounded-md text-sm text-center"
+                    class="px-3 py-2 border border-border rounded-md text-sm text-center"
                     maxlength="1"
                   />
                   <input
                     v-model="config.groupPermission"
                     type="text"
                     placeholder="5"
-                    class="px-3 py-2 border rounded-md text-sm text-center"
+                    class="px-3 py-2 border border-border rounded-md text-sm text-center"
                     maxlength="1"
                   />
                   <input
                     v-model="config.otherPermission"
                     type="text"
                     placeholder="5"
-                    class="px-3 py-2 border rounded-md text-sm text-center"
+                    class="px-3 py-2 border border-border rounded-md text-sm text-center"
                     maxlength="1"
                   />
                 </div>
@@ -164,7 +164,7 @@
           <div v-if="selectedCategory === 'system'" class="space-y-4">
             <div>
               <label class="text-sm font-medium">操作类型</label>
-              <select v-model="config.systemOperation" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.systemOperation" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="ps">查看进程</option>
                 <option value="kill">终止进程</option>
                 <option value="service">服务管理</option>
@@ -200,7 +200,7 @@
                   v-model="config.processFilter"
                   type="text"
                   placeholder="nginx"
-                  class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
                 />
               </div>
             </div>
@@ -213,12 +213,12 @@
                   v-model="config.serviceName"
                   type="text"
                   placeholder="nginx"
-                  class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
                 />
               </div>
               <div>
                 <label class="text-sm font-medium">操作</label>
-                <select v-model="config.serviceAction" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+                <select v-model="config.serviceAction" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                   <option value="start">启动</option>
                   <option value="stop">停止</option>
                   <option value="restart">重启</option>
@@ -234,7 +234,7 @@
           <div v-if="selectedCategory === 'network'" class="space-y-4">
             <div>
               <label class="text-sm font-medium">操作类型</label>
-              <select v-model="config.networkOperation" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.networkOperation" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="ping">Ping 测试</option>
                 <option value="netstat">网络状态</option>
                 <option value="ss">Socket 统计</option>
@@ -252,7 +252,7 @@
                   v-model="config.pingTarget"
                   type="text"
                   placeholder="google.com"
-                  class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
                 />
               </div>
               <div>
@@ -261,7 +261,7 @@
                   v-model="config.pingCount"
                   type="number"
                   placeholder="4"
-                  class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
                 />
               </div>
             </div>
@@ -274,12 +274,12 @@
                   v-model="config.curlUrl"
                   type="text"
                   placeholder="https://api.example.com/data"
-                  class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
                 />
               </div>
               <div>
                 <label class="text-sm font-medium">请求方法</label>
-                <select v-model="config.curlMethod" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+                <select v-model="config.curlMethod" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                   <option value="GET">GET</option>
                   <option value="POST">POST</option>
                   <option value="PUT">PUT</option>
@@ -291,7 +291,7 @@
                 <textarea
                   v-model="config.curlHeaders"
                   placeholder="Content-Type: application/json&#10;Authorization: Bearer token"
-                  class="mt-2 w-full px-3 py-2 border rounded-md text-sm h-20 resize-none"
+                  class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm h-20 resize-none"
                 ></textarea>
               </div>
             </div>

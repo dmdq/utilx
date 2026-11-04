@@ -23,7 +23,7 @@
               <input
                 v-model="sourceDate"
                 type="date"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @change="convertTime"
               />
             </div>
@@ -34,7 +34,7 @@
                 v-model="sourceTime"
                 type="time"
                 step="1"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @input="convertTime"
               />
             </div>
@@ -45,7 +45,7 @@
               <select
                 v-model="sourceTimezone"
                 @change="convertTime"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
               >
                 <option value="">选择时区</option>
                 <optgroup
@@ -92,7 +92,7 @@
             <select
               v-model="targetTimezone"
               @change="convertTime"
-              class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+              class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
             >
               <option value="">选择时区</option>
               <optgroup
@@ -184,7 +184,7 @@
               </div>
               <select
                 @change="addTimezone($event.target.value)"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
               >
                 <option value="">添加参会者时区</option>
                 <option

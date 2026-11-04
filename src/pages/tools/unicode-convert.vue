@@ -40,14 +40,14 @@
         <textarea
           v-model="inputText"
           placeholder="请输入要转换的文本、Unicode 码点或转义序列..."
-          class="w-full h-48 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-48 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
 
         <!-- 转换选项 -->
         <div class="flex flex-wrap gap-3">
           <div class="flex items-center gap-2">
             <label class="text-sm font-medium">输入格式:</label>
-            <select v-model="inputFormat" class="px-3 py-1 border rounded-md text-sm">
+            <select v-model="inputFormat" class="px-3 py-1 border border-border rounded-md text-sm">
               <option value="text">普通文本</option>
               <option value="decimal">十进制码点</option>
               <option value="hexadecimal">十六进制码点</option>
@@ -63,7 +63,7 @@
               v-model="separator"
               type="text"
               placeholder="空格、逗号等"
-              class="w-32 px-3 py-1 border rounded-md text-sm"
+              class="w-32 px-3 py-1 border border-border rounded-md text-sm"
             />
           </div>
         </div>

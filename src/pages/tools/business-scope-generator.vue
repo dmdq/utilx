@@ -40,7 +40,7 @@
             v-model="searchQuery"
             type="text"
             placeholder="搜索条目关键词，如「销售」「培训」「运输」"
-            class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
         </div>
 
@@ -83,7 +83,7 @@
                 :key="item.text"
                 class="flex items-start gap-2 py-1 cursor-pointer group/item"
               >
-                <input type="checkbox" :checked="!!checked[item.text]" @change="toggleItem(item)" class="w-4 h-4 mt-0.5 rounded border-border accent-primary flex-shrink-0" />
+                <input type="checkbox" :checked="!!checked[item.text]" @change="toggleItem(item)" class="w-4 h-4 mt-0.5 rounded border border-border accent-primary flex-shrink-0" />
                 <span class="text-sm text-foreground leading-snug">{{ item.text }}</span>
               </label>
             </div>
@@ -95,7 +95,7 @@
                 :key="item.text"
                 class="flex items-start gap-2 py-1 cursor-pointer"
               >
-                <input type="checkbox" :checked="!!checked[item.text]" @change="toggleItem(item)" class="w-4 h-4 mt-0.5 rounded border-border accent-amber-500 flex-shrink-0" />
+                <input type="checkbox" :checked="!!checked[item.text]" @change="toggleItem(item)" class="w-4 h-4 mt-0.5 rounded border border-border accent-amber-500 flex-shrink-0" />
                 <span class="text-sm text-foreground leading-snug">
                   {{ item.text }}
                   <span v-if="item.license" class="block text-xs text-amber-600 dark:text-amber-400 mt-0.5">{{ item.license }}</span>
@@ -120,7 +120,7 @@
             v-model="customText"
             rows="4"
             placeholder="例如：&#10;新能源汽车废旧动力蓄电池回收及梯次利用（不含危险废物经营）&#10;宠物食品及用品零售"
-            class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 resize-y"
+            class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 resize-y"
           ></textarea>
           <div v-if="customLineStates.length" class="mt-2 space-y-1">
             <p

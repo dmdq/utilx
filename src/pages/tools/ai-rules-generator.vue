@@ -47,7 +47,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">命名风格</label>
               <select
                 v-model="options.naming"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <option value="camelCase">camelCase 小驼峰</option>
                 <option value="PascalCase">PascalCase 大驼峰</option>
@@ -59,7 +59,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">注释语言</label>
               <select
                 v-model="options.commentLang"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <option value="中文">中文</option>
                 <option value="英文">英文</option>
@@ -69,7 +69,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">错误处理风格</label>
               <select
                 v-model="options.errorHandling"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <option value="try-catch 快速失败">try-catch 快速失败</option>
                 <option value="Result/Option 模式">Result/Option 模式</option>
@@ -97,7 +97,7 @@
               v-model="options.projectNotes"
               rows="4"
               spellcheck="false"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="例如：src/api 只放请求封装；src/components 按功能域分目录；改动数据库结构必须同步 migrations"
             ></textarea>
           </div>
@@ -109,7 +109,7 @@
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             <label v-for="b in behaviorChoices" :key="b.key" class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-              <input type="checkbox" v-model="options[b.key]" class="w-4 h-4 rounded border-border accent-primary" />
+              <input type="checkbox" v-model="options[b.key]" class="w-4 h-4 rounded border border-border accent-primary" />
               {{ b.label }}
             </label>
           </div>

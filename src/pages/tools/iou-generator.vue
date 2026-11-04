@@ -32,7 +32,7 @@
             <input
               v-model="lenderName"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 李四"
             />
           </div>
@@ -41,7 +41,7 @@
             <input
               v-model="borrowerName"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 张三（借款人本人）"
             />
           </div>
@@ -50,7 +50,7 @@
             <input
               v-model="lenderId"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="写明身份更规范"
             />
           </div>
@@ -59,7 +59,7 @@
             <input
               v-model="borrowerId"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="建议填写，便于确定主体"
             />
           </div>
@@ -70,7 +70,7 @@
               type="number"
               min="0"
               step="0.01"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 50000"
             />
           </div>
@@ -79,7 +79,7 @@
             <input
               v-model="place"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 北京市朝阳区"
             />
           </div>
@@ -102,7 +102,7 @@
             <input
               v-model="loanDate"
               type="date"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -112,7 +112,7 @@
             <input
               v-model="repayDate"
               type="date"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
         </div>
@@ -128,7 +128,7 @@
           <input
             v-model="purpose"
             type="text"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如 资金周转"
           />
         </div>
@@ -145,7 +145,7 @@
               type="number"
               min="0"
               step="0.01"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 10（留空 = 无息借款）"
             />
             <p class="text-xs text-muted-foreground mt-1.5 flex items-start gap-1">
@@ -157,7 +157,7 @@
             <label class="block text-sm font-medium text-foreground mb-2">逾期利率</label>
             <select
               v-model="overdueType"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option value="none">不约定逾期利率</option>
               <option value="annual">按年利率计逾期利息</option>
@@ -169,7 +169,7 @@
               type="number"
               min="0"
               step="0.01"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm mt-2 focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm mt-2 focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="逾期年利率 %，如 14"
             />
           </div>
@@ -218,7 +218,7 @@
               <input
                 v-model="guarantorName"
                 type="text"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="如 王五"
               />
             </div>
@@ -227,7 +227,7 @@
               <input
                 v-model="guarantorId"
                 type="text"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="选填"
               />
             </div>
@@ -243,7 +243,7 @@
           <textarea
             v-model="extraTerms"
             rows="3"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如：&#10;借款人承诺按时足额还款&#10;因本借款发生争议，双方协商解决"
           ></textarea>
         </div>

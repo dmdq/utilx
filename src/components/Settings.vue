@@ -1,18 +1,13 @@
 <template>
   <div class="settings-container h-screen flex flex-col">
     <!-- Tab Navigation -->
-    <div class="border-b border-gray-200">
+    <div class="border-b border-border">
       <nav class="flex space-x-8 px-6" aria-label="Tabs">
         <button
           v-for="tab in tabs"
           :key="tab.key"
           @click="activeTab = tab.key"
-          :class="[
-            'py-4 px-1 border-b-2 font-medium text-sm transition-colors',
-            activeTab === tab.key
-              ? 'border-blue-500 text-blue-600'
-              : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-          ]"
+          :class="[ 'py-4 px-1 border-b-2 font-medium text-sm transition-colors', activeTab === tab.key ? 'border-blue-500 text-blue-600' : 'border-transparent text-muted-foreground hover:text-foreground hover:border-gray-300' ]"
         >
           {{ tab.label }}
         </button>
@@ -26,10 +21,10 @@
         <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">主题</label>
+              <label class="block text-sm font-medium text-foreground mb-2">主题</label>
               <select
                 v-model="userSettings.theme"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                class="w-full px-3 py-2 border border-border border-border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="auto">自动</option>
                 <option value="light">亮色</option>
@@ -38,10 +33,10 @@
             </div>
 
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">语言</label>
+              <label class="block text-sm font-medium text-foreground mb-2">语言</label>
               <select
                 v-model="userSettings.language"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                class="w-full px-3 py-2 border border-border border-border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="zh-CN">简体中文</option>
                 <option value="en-US">English</option>
@@ -50,56 +45,56 @@
           </div>
 
           <div class="border-t pt-4">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">应用设置</h3>
+            <h3 class="text-lg font-medium text-foreground mb-4">应用设置</h3>
             <div class="space-y-3">
               <label class="flex items-center">
                 <input
                   type="checkbox"
                   v-model="userSettings.auto_start"
-                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border border-border rounded"
                 >
-                <span class="ml-2 text-sm text-gray-700">开机启动</span>
+                <span class="ml-2 text-sm text-foreground">开机启动</span>
               </label>
 
               <label class="flex items-center">
                 <input
                   type="checkbox"
                   v-model="userSettings.minimize_to_tray"
-                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border border-border rounded"
                 >
-                <span class="ml-2 text-sm text-gray-700">最小化到托盘</span>
+                <span class="ml-2 text-sm text-foreground">最小化到托盘</span>
               </label>
 
               <label class="flex items-center">
                 <input
                   type="checkbox"
                   v-model="userSettings.show_notifications"
-                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border border-border rounded"
                 >
-                <span class="ml-2 text-sm text-gray-700">显示通知</span>
+                <span class="ml-2 text-sm text-foreground">显示通知</span>
               </label>
             </div>
           </div>
 
           <div class="border-t pt-4">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">窗口设置</h3>
+            <h3 class="text-lg font-medium text-foreground mb-4">窗口设置</h3>
             <div class="space-y-3">
               <label class="flex items-center">
                 <input
                   type="checkbox"
                   v-model="userSettings.window_settings.remember_size"
-                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border border-border rounded"
                 >
-                <span class="ml-2 text-sm text-gray-700">记住窗口大小</span>
+                <span class="ml-2 text-sm text-foreground">记住窗口大小</span>
               </label>
 
               <label class="flex items-center">
                 <input
                   type="checkbox"
                   v-model="userSettings.window_settings.remember_position"
-                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border border-border rounded"
                 >
-                <span class="ml-2 text-sm text-gray-700">记住窗口位置</span>
+                <span class="ml-2 text-sm text-foreground">记住窗口位置</span>
               </label>
             </div>
           </div>
@@ -115,14 +110,14 @@
                 <input
                   type="checkbox"
                   v-model="updateConfig.auto_check_enabled"
-                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  class="h-4 w-4 text-blue-600 focus:ring-blue-500 border border-border rounded"
                 >
-                <span class="ml-2 text-sm text-gray-700">自动检查更新</span>
+                <span class="ml-2 text-sm text-foreground">自动检查更新</span>
               </label>
             </div>
 
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">检查间隔</label>
+              <label class="block text-sm font-medium text-foreground mb-2">检查间隔</label>
               <div class="flex items-center space-x-2">
                 <input
                   type="number"
@@ -130,9 +125,9 @@
                   :min="1"
                   :max="168"
                   :disabled="!updateConfig.auto_check_enabled"
-                  class="w-24 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:text-gray-500"
+                  class="w-24 px-3 py-2 border border-border border-border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 disabled:bg-muted disabled:text-muted-foreground"
                 >
-                <span class="text-sm text-gray-500">小时</span>
+                <span class="text-sm text-muted-foreground">小时</span>
               </div>
             </div>
           </div>
@@ -142,27 +137,27 @@
               <input
                 type="checkbox"
                 v-model="updateConfig.auto_download_hotfix"
-                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border border-border rounded"
               >
-              <span class="ml-2 text-sm text-gray-700">自动下载热更新</span>
+              <span class="ml-2 text-sm text-foreground">自动下载热更新</span>
             </label>
 
             <label class="flex items-center">
               <input
                 type="checkbox"
                 v-model="updateConfig.auto_install_hotfix"
-                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border border-border rounded"
               >
-              <span class="ml-2 text-sm text-gray-700">自动安装热更新</span>
+              <span class="ml-2 text-sm text-foreground">自动安装热更新</span>
             </label>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">发布频道</label>
+              <label class="block text-sm font-medium text-foreground mb-2">发布频道</label>
               <select
                 v-model="updateConfig.release_channel"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                class="w-full px-3 py-2 border border-border border-border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="stable">稳定版</option>
                 <option value="beta">测试版</option>
@@ -171,12 +166,12 @@
             </div>
 
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2">更新服务器</label>
+              <label class="block text-sm font-medium text-foreground mb-2">更新服务器</label>
               <input
                 type="text"
                 v-model="updateConfig.update_server"
                 placeholder="https://updates.util.cn"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                class="w-full px-3 py-2 border border-border border-border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               >
             </div>
           </div>
@@ -193,7 +188,7 @@
 
               <button
                 @click="viewUpdateHistory"
-                class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                class="inline-flex items-center px-4 py-2 border border-border text-sm font-medium rounded-md shadow-sm text-foreground bg-card hover:bg-muted/50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 <History class="w-4 h-4 mr-2" />
                 更新历史
@@ -207,11 +202,11 @@
       <div v-show="activeTab === 'tools'" class="space-y-6">
         <div class="space-y-6">
           <!-- 端口检查器 -->
-          <div class="border border-gray-200 rounded-lg p-4">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">端口检查器</h3>
+          <div class="border border-border rounded-lg p-4">
+            <h3 class="text-lg font-medium text-foreground mb-4">端口检查器</h3>
             <div class="space-y-4">
               <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">默认端口</label>
+                <label class="block text-sm font-medium text-foreground mb-2">默认端口</label>
                 <div class="flex flex-wrap gap-2">
                   <span
                     v-for="(port, index) in toolsConfig.port_checker.default_ports"
@@ -228,7 +223,7 @@
                   </span>
                   <button
                     @click="toolsConfig.port_checker.default_ports.push(8080)"
-                    class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200"
+                    class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-muted text-foreground hover:bg-muted"
                   >
                     + 添加端口
                   </button>
@@ -236,7 +231,7 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">超时时间</label>
+                <label class="block text-sm font-medium text-foreground mb-2">超时时间</label>
                 <div class="flex items-center space-x-2">
                   <input
                     type="number"
@@ -244,20 +239,20 @@
                     :min="1000"
                     :max="30000"
                     :step="1000"
-                    class="w-24 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                    class="w-24 px-3 py-2 border border-border border-border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                   >
-                  <span class="text-sm text-gray-500">毫秒</span>
+                  <span class="text-sm text-muted-foreground">毫秒</span>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- WHOIS 查询 -->
-          <div class="border border-gray-200 rounded-lg p-4">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">WHOIS 查询</h3>
+          <div class="border border-border rounded-lg p-4">
+            <h3 class="text-lg font-medium text-foreground mb-4">WHOIS 查询</h3>
             <div class="space-y-4">
               <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">默认服务器</label>
+                <label class="block text-sm font-medium text-foreground mb-2">默认服务器</label>
                 <div class="flex flex-wrap gap-2">
                   <span
                     v-for="(server, index) in toolsConfig.whois_lookup.default_servers"
@@ -274,7 +269,7 @@
                   </span>
                   <button
                     @click="toolsConfig.whois_lookup.default_servers.push('whois.example.com')"
-                    class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200"
+                    class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-muted text-foreground hover:bg-muted"
                   >
                     + 添加服务器
                   </button>
@@ -282,7 +277,7 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">超时时间</label>
+                <label class="block text-sm font-medium text-foreground mb-2">超时时间</label>
                 <div class="flex items-center space-x-2">
                   <input
                     type="number"
@@ -290,20 +285,20 @@
                     :min="5000"
                     :max="60000"
                     :step="1000"
-                    class="w-24 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                    class="w-24 px-3 py-2 border border-border border-border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                   >
-                  <span class="text-sm text-gray-500">毫秒</span>
+                  <span class="text-sm text-muted-foreground">毫秒</span>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- 二维码生成器 -->
-          <div class="border border-gray-200 rounded-lg p-4">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">二维码生成器</h3>
+          <div class="border border-border rounded-lg p-4">
+            <h3 class="text-lg font-medium text-foreground mb-4">二维码生成器</h3>
             <div class="space-y-4">
               <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+                <label class="block text-sm font-medium text-foreground mb-2">
                   默认尺寸: {{ toolsConfig.qr_code.default_size }}px
                 </label>
                 <input
@@ -317,10 +312,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">纠错级别</label>
+                <label class="block text-sm font-medium text-foreground mb-2">纠错级别</label>
                 <select
                   v-model="toolsConfig.qr_code.error_correction"
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  class="w-full px-3 py-2 border border-border border-border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="L">低 (L)</option>
                   <option value="M">中 (M)</option>
@@ -330,10 +325,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">默认格式</label>
+                <label class="block text-sm font-medium text-foreground mb-2">默认格式</label>
                 <select
                   v-model="toolsConfig.qr_code.default_format"
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  class="w-full px-3 py-2 border border-border border-border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="png">PNG</option>
                   <option value="jpeg">JPEG</option>
@@ -349,9 +344,9 @@
       <div v-show="activeTab === 'config'" class="space-y-6">
         <div class="space-y-6">
           <!-- 配置备份 -->
-          <div class="bg-white border border-gray-200 rounded-lg p-4">
+          <div class="bg-card border border-border rounded-lg p-4">
             <div class="flex justify-between items-center mb-4">
-              <h3 class="text-lg font-medium text-gray-900">配置备份</h3>
+              <h3 class="text-lg font-medium text-foreground">配置备份</h3>
               <button
                 @click="createBackup"
                 class="inline-flex items-center px-3 py-1 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -365,9 +360,9 @@
               <div
                 v-for="backup in configBackups"
                 :key="backup"
-                class="flex justify-between items-center p-3 border border-gray-200 rounded-md"
+                class="flex justify-between items-center p-3 border border-border rounded-md"
               >
-                <span class="text-sm font-medium text-gray-900">{{ backup }}</span>
+                <span class="text-sm font-medium text-foreground">{{ backup }}</span>
                 <div class="flex space-x-2">
                   <button
                     @click="restoreBackup(backup)"
@@ -384,14 +379,14 @@
                 </div>
               </div>
             </div>
-            <div v-else class="text-center py-8 text-gray-500">
+            <div v-else class="text-center py-8 text-muted-foreground">
               暂无备份
             </div>
           </div>
 
           <!-- 配置导入导出 -->
-          <div class="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">配置导入导出</h3>
+          <div class="bg-card border border-border rounded-lg p-4">
+            <h3 class="text-lg font-medium text-foreground mb-4">配置导入导出</h3>
             <div class="flex flex-wrap gap-3">
               <button
                 @click="exportConfig"
@@ -420,8 +415,8 @@
           </div>
 
           <!-- 缓存管理 -->
-          <div class="bg-white border border-gray-200 rounded-lg p-4">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">缓存管理</h3>
+          <div class="bg-card border border-border rounded-lg p-4">
+            <h3 class="text-lg font-medium text-foreground mb-4">缓存管理</h3>
             <div class="flex flex-wrap gap-3">
               <button
                 @click="clearCache"
@@ -433,7 +428,7 @@
 
               <button
                 @click="openConfigDir"
-                class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                class="inline-flex items-center px-4 py-2 border border-border text-sm font-medium rounded-md text-foreground bg-card hover:bg-muted/50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 <Folder class="w-4 h-4 mr-2" />
                 打开配置目录
@@ -448,27 +443,27 @@
         <div class="text-center space-y-4">
           <div class="app-info">
             <img src="/icon.png" alt="Logo" class="w-16 h-16 mx-auto" />
-            <h2 class="text-2xl font-bold text-gray-900">有条工具</h2>
-            <p class="text-gray-600">开发者效率工具箱</p>
+            <h2 class="text-2xl font-bold text-foreground">有条工具</h2>
+            <p class="text-muted-foreground">开发者效率工具箱</p>
           </div>
 
-          <div class="bg-gray-50 rounded-lg p-6 max-w-md mx-auto">
+          <div class="bg-muted/50 rounded-lg p-6 max-w-md mx-auto">
             <dl class="space-y-2">
               <div class="flex justify-between">
-                <dt class="text-sm font-medium text-gray-600">版本</dt>
-                <dd class="text-sm text-gray-900">{{ appInfo.version }}</dd>
+                <dt class="text-sm font-medium text-muted-foreground">版本</dt>
+                <dd class="text-sm text-foreground">{{ appInfo.version }}</dd>
               </div>
               <div class="flex justify-between">
-                <dt class="text-sm font-medium text-gray-600">构建时间</dt>
-                <dd class="text-sm text-gray-900">{{ appInfo.build_time }}</dd>
+                <dt class="text-sm font-medium text-muted-foreground">构建时间</dt>
+                <dd class="text-sm text-foreground">{{ appInfo.build_time }}</dd>
               </div>
               <div class="flex justify-between">
-                <dt class="text-sm font-medium text-gray-600">Git 提交</dt>
-                <dd class="text-sm text-gray-900 font-mono">{{ appInfo.git_commit.substring(0, 8) }}</dd>
+                <dt class="text-sm font-medium text-muted-foreground">Git 提交</dt>
+                <dd class="text-sm text-foreground font-mono">{{ appInfo.git_commit.substring(0, 8) }}</dd>
               </div>
               <div class="flex justify-between">
-                <dt class="text-sm font-medium text-gray-600">Rust 版本</dt>
-                <dd class="text-sm text-gray-900">{{ appInfo.rust_version }}</dd>
+                <dt class="text-sm font-medium text-muted-foreground">Rust 版本</dt>
+                <dd class="text-sm text-foreground">{{ appInfo.rust_version }}</dd>
               </div>
             </dl>
           </div>
@@ -482,7 +477,7 @@
             </button>
             <button
               @click="openGitHub"
-              class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              class="inline-flex items-center px-4 py-2 border border-border text-sm font-medium rounded-md text-foreground bg-card hover:bg-muted/50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
               GitHub
             </button>
@@ -499,7 +494,7 @@
     </div>
 
     <!-- 底部操作按钮 -->
-    <div class="settings-footer border-t border-gray-200 bg-gray-50 p-4">
+    <div class="settings-footer border-t border-border bg-muted/50 p-4">
       <div class="flex space-x-3">
         <button
           @click="saveSettings"
@@ -514,7 +509,7 @@
         </button>
         <button
           @click="resetSettings"
-          class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          class="inline-flex items-center px-4 py-2 border border-border text-sm font-medium rounded-md text-foreground bg-card hover:bg-muted/50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
         >
           重置设置
         </button>

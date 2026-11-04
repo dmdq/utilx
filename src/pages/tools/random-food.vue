@@ -62,7 +62,7 @@
           <!-- 用餐时段 -->
           <div>
             <label class="text-sm font-medium mb-2 block">用餐时段</label>
-            <select v-model="mealTime" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="mealTime" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="breakfast">早餐</option>
               <option value="lunch">午餐</option>
               <option value="dinner">晚餐</option>
@@ -74,7 +74,7 @@
           <!-- 价格范围 -->
           <div>
             <label class="text-sm font-medium mb-2 block">价格范围</label>
-            <select v-model="priceRange" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="priceRange" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="low">经济实惠(￥20以下)</option>
               <option value="medium">中等消费(￥20-50)</option>
               <option value="high">高档消费(￥50以上)</option>
@@ -164,7 +164,7 @@
               <div
                 v-for="food in result.foods"
                 :key="food.name"
-                class="bg-white rounded-lg p-4 border border-border hover:shadow-md transition-shadow"
+                class="bg-card rounded-lg p-4 border border-border hover:shadow-md transition-shadow"
               >
                 <div class="flex items-start justify-between mb-2">
                   <h3 class="font-semibold text-lg">{{ food.name }}</h3>
@@ -246,7 +246,7 @@
               <span
                 v-for="example in category.examples"
                 :key="example"
-                class="px-2 py-1 bg-white rounded text-xs"
+                class="px-2 py-1 bg-card rounded text-xs"
               >
                 {{ example }}
               </span>

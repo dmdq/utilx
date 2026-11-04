@@ -37,7 +37,7 @@
             v-model="origInput"
             type="text"
             placeholder="例如 205/55R16 或 225/45R17 91V"
-            class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
           <p v-if="origError" class="text-xs text-red-500 mt-1.5 leading-relaxed">
             无法解析：请用「断面宽/扁平比R轮辋」格式，如 225/45R17；轻卡斜交胎可写 750-20
@@ -50,7 +50,7 @@
             v-model="newInput"
             type="text"
             placeholder="例如 225/45R17"
-            class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
           <p v-if="newError" class="text-xs text-red-500 mt-1.5 leading-relaxed">
             无法解析：请用「断面宽/扁平比R轮辋」格式，如 225/45R17；轻卡斜交胎可写 750-20

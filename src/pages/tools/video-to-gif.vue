@@ -100,7 +100,7 @@
                 min="0"
                 :max="durationMax"
                 step="0.1"
-                class="w-24 px-2 py-1.5 bg-background border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-24 px-2 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <span class="text-xs text-muted-foreground">至</span>
               <input
@@ -110,7 +110,7 @@
                 min="0"
                 :max="durationMax"
                 step="0.1"
-                class="w-24 px-2 py-1.5 bg-background border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-24 px-2 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <span class="text-xs text-muted-foreground ml-auto">{{ frameCount }} 帧 · 片段 {{ (endTime - startTime).toFixed(1) }}s</span>
             </div>

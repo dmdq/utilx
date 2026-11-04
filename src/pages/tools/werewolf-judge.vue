@@ -58,7 +58,7 @@
           type="number"
           min="4"
           max="20"
-          class="w-20 px-3 py-2 bg-background border border-input rounded-lg text-sm text-foreground text-center focus:outline-none focus:ring-2 focus:ring-ring"
+          class="w-20 px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground text-center focus:outline-none focus:ring-2 focus:ring-ring"
         />
         <span class="text-sm text-foreground">板子总座位 <span class="font-bold text-primary">{{ boardTotal }}</span>，狼人阵营 <span class="font-bold">{{ wolfTotal }}</span></span>
         <button
@@ -199,7 +199,7 @@
               min="0.5"
               max="30"
               step="0.5"
-              class="w-24 px-3 py-2 bg-background border border-input rounded-lg text-sm text-foreground text-center focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-24 px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground text-center focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <button
               @click="applyMinutes"

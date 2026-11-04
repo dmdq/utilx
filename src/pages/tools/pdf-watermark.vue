@@ -70,7 +70,7 @@
               v-model="watermarkText"
               type="text"
               maxlength="60"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="仅供内部查阅"
             />
             <p v-if="hasCJK" class="text-xs text-amber-600 dark:text-amber-400 mt-1.5 flex items-center gap-1">
@@ -93,7 +93,7 @@
               <input
                 v-model="colorHex"
                 type="color"
-                class="w-8 h-8 rounded-lg cursor-pointer border border-border bg-transparent p-0.5"
+                class="w-8 h-8 rounded-lg cursor-pointer border border-border border-border bg-transparent p-0.5"
                 title="自定义颜色"
               />
             </div>
@@ -114,7 +114,7 @@
                 type="number"
                 min="8"
                 max="120"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -125,7 +125,7 @@
                 min="-90"
                 max="90"
                 step="15"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>
@@ -139,7 +139,7 @@
                 min="40"
                 max="600"
                 step="10"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -150,7 +150,7 @@
                 min="40"
                 max="600"
                 step="10"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>
@@ -174,7 +174,7 @@
                 v-model.number="rangeFrom"
                 type="number"
                 min="1"
-                class="flex-1 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="起始页"
               />
               <span class="text-muted-foreground text-sm">至</span>
@@ -182,7 +182,7 @@
                 v-model.number="rangeTo"
                 type="number"
                 min="1"
-                class="flex-1 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="结束页"
               />
             </div>

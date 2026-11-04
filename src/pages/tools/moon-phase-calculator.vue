@@ -31,7 +31,7 @@
             id="moon-phase-date"
             v-model="dateStr"
             type="date"
-            class="w-full px-4 py-2.5 bg-background border border-border rounded-lg text-foreground"
+            class="w-full px-4 py-2.5 bg-background border border-border border-border rounded-lg text-foreground"
             @change="onDateChange"
             @input="onDateChange"
           />
@@ -76,13 +76,13 @@
           <div class="bg-slate-900 rounded-xl p-6 flex flex-col sm:flex-row items-center gap-6">
             <div class="flex-shrink-0" v-html="curMoon.svg"></div>
             <div class="text-center sm:text-left space-y-2">
-              <p class="text-xs text-slate-400">{{ formatDateCn(queryDate) }} · 月相示意</p>
+              <p class="text-xs text-muted-foreground">{{ formatDateCn(queryDate) }} · 月相示意</p>
               <p class="text-3xl font-bold text-white">{{ curMoon.name }}</p>
               <div class="flex flex-wrap justify-center sm:justify-start gap-x-6 gap-y-1 text-sm">
-                <span class="text-slate-300">月龄 <b class="text-amber-300 font-mono">{{ curMoon.age.toFixed(1) }}</b> 天</span>
-                <span class="text-slate-300">照度 <b class="text-amber-300 font-mono">{{ curMoon.illumText }}</b></span>
+                <span class="text-muted-foreground">月龄 <b class="text-amber-300 font-mono">{{ curMoon.age.toFixed(1) }}</b> 天</span>
+                <span class="text-muted-foreground">照度 <b class="text-amber-300 font-mono">{{ curMoon.illumText }}</b></span>
               </div>
-              <p class="text-xs text-slate-400">月龄 = 距上次新月的天数；照度为可见圆盘被点亮面积的近似百分比。</p>
+              <p class="text-xs text-muted-foreground">月龄 = 距上次新月的天数；照度为可见圆盘被点亮面积的近似百分比。</p>
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@
           </div>
           <div class="bg-card border border-border rounded-lg p-5 space-y-2">
             <p class="text-sm font-medium text-muted-foreground flex items-center">
-              <Moon class="w-4 h-4 mr-1.5 text-slate-400" /> 下一个新月（朔）
+              <Moon class="w-4 h-4 mr-1.5 text-muted-foreground" /> 下一个新月（朔）
             </p>
             <p class="text-xl font-bold text-foreground">{{ nextNew ? formatDateCn(nextNew.dateStr) : '—' }}</p>
             <p class="text-xs text-muted-foreground">还有 {{ nextNew ? nextNew.daysAway : '—' }} 天 · 新月前后多为大潮、夜钓无月光</p>

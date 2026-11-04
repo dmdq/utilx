@@ -30,7 +30,7 @@
           </label>
           <select
             v-model="industry"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm mb-4 focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm mb-4 focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="ind in industries" :key="ind.id" :value="ind.id">{{ ind.name }}</option>
           </select>

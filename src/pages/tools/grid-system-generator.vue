@@ -15,7 +15,7 @@
         <div class="space-y-4 mb-6">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">列数</label>
-            <select v-model.number="columns" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model.number="columns" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
               <option :value="12">12列</option>
               <option :value="16">16列</option>
               <option :value="24">24列</option>
@@ -24,12 +24,12 @@
 
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">间距 (px)</label>
-            <input v-model.number="gap" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="16">
+            <input v-model.number="gap" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="16">
           </div>
 
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">边距 (px)</label>
-            <input v-model.number="padding" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="20">
+            <input v-model.number="padding" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="20">
           </div>
         </div>
 

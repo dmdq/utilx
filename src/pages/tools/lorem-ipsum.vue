@@ -33,7 +33,7 @@
               min="1"
               max="10"
               placeholder="请输入段落数 (1-10)"
-              class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
           <div>
@@ -44,14 +44,14 @@
               min="10"
               max="200"
               placeholder="请输入每段单词数 (10-200)"
-              class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
           <div>
             <label class="text-sm font-medium mb-2 block">输出格式</label>
             <select
               v-model="outputFormat"
-              class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="plainText">纯文本</option>
               <option value="html">HTML</option>

@@ -59,7 +59,7 @@
               v-model="swaggerUrl"
               type="url"
               placeholder="https://api.example.com/swagger.json"
-              class="w-full px-3 py-2 border rounded-md text-sm"
+              class="w-full px-3 py-2 border border-border rounded-md text-sm"
             />
             <button
               @click="loadFromUrl"
@@ -93,7 +93,7 @@
           <textarea
             v-model="documentContent"
             placeholder="粘贴 JSON/YAML 格式的 Swagger 文档..."
-            class="w-full h-64 px-3 py-2 border rounded-md font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-64 px-3 py-2 border border-border rounded-md font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
           <button
             @click="parseDocument"
@@ -197,7 +197,7 @@
                   v-model="testUrl"
                   type="text"
                   readonly
-                  class="flex-1 px-3 py-2 border rounded-md bg-muted font-mono text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded-md bg-muted font-mono text-sm"
                 />
                 <button
                   @click="sendRequest"
@@ -223,7 +223,7 @@
                     v-model="param.value"
                     type="text"
                     :placeholder="param.example || '输入值'"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
               </div>
@@ -243,7 +243,7 @@
                     v-model="param.value"
                     type="text"
                     :placeholder="param.example || param.description || '输入值'"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                   <span class="text-xs text-muted-foreground">{{ param.type }}</span>
                 </div>
@@ -257,7 +257,7 @@
                 <textarea
                   v-model="requestBodyContent"
                   placeholder='{"key": "value"}'
-                  class="w-full h-32 px-3 py-2 border rounded-md font-mono text-sm resize-none"
+                  class="w-full h-32 px-3 py-2 border border-border rounded-md font-mono text-sm resize-none"
                 ></textarea>
               </div>
             </div>

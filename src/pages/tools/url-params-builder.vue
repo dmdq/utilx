@@ -38,7 +38,7 @@
           </div>
         </div>
 
-        <div v-if="params.length === 0" class="text-center py-8 text-gray-400">
+        <div v-if="params.length === 0" class="text-center py-8 text-muted-foreground">
           点击"添加"按钮添加查询参数
         </div>
 
@@ -136,23 +136,23 @@
         <div>
           <h3 class="font-medium mb-2">分页参数</h3>
           <div class="space-y-1">
-            <button @click="addQuickParam('page', '1')" class="block w-full text-left px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded">page - 页码</button>
-            <button @click="addQuickParam('limit', '20')" class="block w-full text-left px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded">limit - 每页数量</button>
-            <button @click="addQuickParam('offset', '0')" class="block w-full text-left px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded">offset - 偏移量</button>
+            <button @click="addQuickParam('page', '1')" class="block w-full text-left px-2 py-1 hover:bg-muted dark:hover:bg-gray-700 rounded">page - 页码</button>
+            <button @click="addQuickParam('limit', '20')" class="block w-full text-left px-2 py-1 hover:bg-muted dark:hover:bg-gray-700 rounded">limit - 每页数量</button>
+            <button @click="addQuickParam('offset', '0')" class="block w-full text-left px-2 py-1 hover:bg-muted dark:hover:bg-gray-700 rounded">offset - 偏移量</button>
           </div>
         </div>
         <div>
           <h3 class="font-medium mb-2">排序参数</h3>
           <div class="space-y-1">
-            <button @click="addQuickParam('sort', 'created_at')" class="block w-full text-left px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded">sort - 排序字段</button>
-            <button @click="addQuickParam('order', 'desc')" class="block w-full text-left px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded">order - 排序方向</button>
+            <button @click="addQuickParam('sort', 'created_at')" class="block w-full text-left px-2 py-1 hover:bg-muted dark:hover:bg-gray-700 rounded">sort - 排序字段</button>
+            <button @click="addQuickParam('order', 'desc')" class="block w-full text-left px-2 py-1 hover:bg-muted dark:hover:bg-gray-700 rounded">order - 排序方向</button>
           </div>
         </div>
         <div>
           <h3 class="font-medium mb-2">筛选参数</h3>
           <div class="space-y-1">
-            <button @click="addQuickParam('search', 'keyword')" class="block w-full text-left px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded">search - 搜索关键词</button>
-            <button @click="addQuickParam('filter', 'status')" class="block w-full text-left px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded">filter - 筛选条件</button>
+            <button @click="addQuickParam('search', 'keyword')" class="block w-full text-left px-2 py-1 hover:bg-muted dark:hover:bg-gray-700 rounded">search - 搜索关键词</button>
+            <button @click="addQuickParam('filter', 'status')" class="block w-full text-left px-2 py-1 hover:bg-muted dark:hover:bg-gray-700 rounded">filter - 筛选条件</button>
           </div>
         </div>
       </div>

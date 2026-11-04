@@ -57,7 +57,7 @@
                 v-model="inputData"
                 @input="calculateCRC"
                 :placeholder="inputFormat === 'text' ? '输入要计算CRC的文本内容...' : '输入十六进制数据，如: 48656c6c6f'"
-                class="mt-2 w-full h-32 p-3 border rounded-md resize-none font-mono text-sm"
+                class="mt-2 w-full h-32 p-3 border border-border rounded-md resize-none font-mono text-sm"
               ></textarea>
               <div class="mt-2 text-xs text-muted-foreground">
                 <span>字符数: {{ inputData.length }}</span>
@@ -96,7 +96,7 @@
             <!-- CRC算法选择 -->
             <div>
               <label class="text-sm font-medium">算法类型</label>
-              <select v-model="selectedAlgorithm" @change="calculateCRC" class="mt-2 w-full px-3 py-2 border rounded-md">
+              <select v-model="selectedAlgorithm" @change="calculateCRC" class="mt-2 w-full px-3 py-2 border border-border rounded-md">
                 <option v-for="algo in algorithms" :key="algo.name" :value="algo.name">
                   {{algo.name}} - {{algo.description}}
                 </option>
@@ -112,7 +112,7 @@
                     v-model="customParams.polynomial"
                     type="text"
                     placeholder="如: 1021"
-                    class="mt-1 w-full px-3 py-2 border rounded-md font-mono text-sm"
+                    class="mt-1 w-full px-3 py-2 border border-border rounded-md font-mono text-sm"
                     @input="calculateCRC"
                   >
                 </div>
@@ -122,7 +122,7 @@
                     v-model="customParams.initValue"
                     type="text"
                     placeholder="如: FFFF"
-                    class="mt-1 w-full px-3 py-2 border rounded-md font-mono text-sm"
+                    class="mt-1 w-full px-3 py-2 border border-border rounded-md font-mono text-sm"
                     @input="calculateCRC"
                   >
                 </div>
@@ -132,7 +132,7 @@
                     v-model="customParams.xorOut"
                     type="text"
                     placeholder="如: 0000"
-                    class="mt-1 w-full px-3 py-2 border rounded-md font-mono text-sm"
+                    class="mt-1 w-full px-3 py-2 border border-border rounded-md font-mono text-sm"
                     @input="calculateCRC"
                   >
                 </div>

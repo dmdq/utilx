@@ -29,7 +29,7 @@
           <input
             v-model="serverName"
             type="text"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如 filesystem"
           >
         </div>
@@ -53,7 +53,7 @@
             <input
               v-model="command"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 npx / uvx / node / python"
             >
           </div>
@@ -63,7 +63,7 @@
               v-model="argsText"
               rows="4"
               spellcheck="false"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="-y&#10;@modelcontextprotocol/server-filesystem&#10;/tmp"
             ></textarea>
           </div>
@@ -73,7 +73,7 @@
               v-model="envText"
               rows="3"
               spellcheck="false"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="API_KEY=sk-xxx&#10;NODE_ENV=production"
             ></textarea>
           </div>
@@ -85,7 +85,7 @@
             <input
               v-model="url"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="https://example.com/mcp"
             >
           </div>
@@ -95,7 +95,7 @@
               v-model="headersText"
               rows="3"
               spellcheck="false"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="Authorization: Bearer sk-xxx"
             ></textarea>
           </div>
@@ -113,7 +113,7 @@
                 v-model="selectedClients"
                 type="checkbox"
                 :value="key"
-                class="mt-0.5 w-4 h-4 rounded border-border"
+                class="mt-0.5 w-4 h-4 rounded border border-border"
               >
               <span>
                 <span class="text-sm font-medium text-foreground">{{ meta.label }}</span>

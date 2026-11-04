@@ -56,7 +56,7 @@
                 type="number"
                 min="0"
                 max="20"
-                class="w-12 text-center px-1 py-1 bg-background border border-input rounded-md text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-12 text-center px-1 py-1 bg-background border border-border border-input rounded-md text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <button
                 @click="changeCount(faces, 1)"
@@ -77,7 +77,7 @@
             <input
               v-model.number="modifier"
               type="number"
-              class="flex-1 px-3 py-2.5 bg-background border border-input rounded-lg text-sm text-foreground text-center focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-sm text-foreground text-center focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <button
               @click="modifier = Math.min(99, safeModifier + 1)"
@@ -180,7 +180,7 @@
               type="number"
               min="3"
               max="30"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -190,7 +190,7 @@
               type="number"
               min="-10"
               max="20"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -200,7 +200,7 @@
               type="number"
               min="1"
               max="40"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
         </div>
@@ -277,7 +277,7 @@
               type="number"
               min="1"
               max="100"
-              class="flex-1 px-3 py-2.5 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <button
               @click="rollCoc"

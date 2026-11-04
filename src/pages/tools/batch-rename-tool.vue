@@ -100,8 +100,8 @@
           <div class="space-y-2">
             <p class="text-sm font-medium text-foreground">1. 查找替换 <span class="text-xs text-muted-foreground font-normal">（字面量）</span></p>
             <div class="grid grid-cols-2 gap-2">
-              <input v-model="rules.find" type="text" placeholder="查找内容" class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
-              <input v-model="rules.replace" type="text" placeholder="替换为（留空即删除）" class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+              <input v-model="rules.find" type="text" placeholder="查找内容" class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+              <input v-model="rules.replace" type="text" placeholder="替换为（留空即删除）" class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
             </div>
             <label class="flex items-center gap-2 text-xs text-muted-foreground cursor-pointer">
               <input v-model="rules.caseSensitive" type="checkbox" class="accent-primary" /> 区分大小写
@@ -113,11 +113,11 @@
             <p class="text-sm font-medium text-foreground">2. 正则替换 <span class="text-xs text-muted-foreground font-normal">（替换串支持 $1 捕获组）</span></p>
             <div class="flex items-center gap-1.5">
               <span class="text-muted-foreground text-sm font-mono">/</span>
-              <input v-model="rules.pattern" type="text" placeholder="pattern，如 S1E(\d)" class="flex-1 min-w-0 px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+              <input v-model="rules.pattern" type="text" placeholder="pattern，如 S1E(\d)" class="flex-1 min-w-0 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
               <span class="text-muted-foreground text-sm font-mono">/</span>
-              <input v-model="rules.flags" type="text" placeholder="g" class="w-16 px-2 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+              <input v-model="rules.flags" type="text" placeholder="g" class="w-16 px-2 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
             </div>
-            <input v-model="rules.regexRepl" type="text" placeholder="替换为，如 S01E$1（$1 表示第 1 个捕获组）" class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+            <input v-model="rules.regexRepl" type="text" placeholder="替换为，如 S01E$1（$1 表示第 1 个捕获组）" class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
             <p v-if="!regexState.ok" class="text-xs text-red-600 flex items-start gap-1.5">
               <TriangleAlert class="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
               <span>正则无效：{{ regexState.error }}（该规则暂不应用，修正后自动恢复）</span>
@@ -128,8 +128,8 @@
           <div class="space-y-2">
             <p class="text-sm font-medium text-foreground">3. 前缀 / 后缀 <span class="text-xs text-muted-foreground font-normal">（自动加在扩展名之前）</span></p>
             <div class="grid grid-cols-2 gap-2">
-              <input v-model="rules.prefix" type="text" placeholder="前缀，如 2024_" class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
-              <input v-model="rules.suffix" type="text" placeholder="后缀，如 _备份" class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+              <input v-model="rules.prefix" type="text" placeholder="前缀，如 2024_" class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+              <input v-model="rules.suffix" type="text" placeholder="后缀，如 _备份" class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
             </div>
             <p class="text-[10px] text-muted-foreground leading-relaxed">示例：archive.tar.gz 加后缀 _bak → archive.tar_bak.gz（多重点名取最后一个点作为扩展名口径）。</p>
           </div>
@@ -137,19 +137,19 @@
           <!-- 规则 4：序号模板 -->
           <div class="space-y-2">
             <p class="text-sm font-medium text-foreground">4. 序号模板</p>
-            <input v-model="rules.seqTemplate" type="text" placeholder="如 {name}_{n} 或 V{n}_{date}" class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+            <input v-model="rules.seqTemplate" type="text" placeholder="如 {name}_{n} 或 V{n}_{date}" class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
             <div class="grid grid-cols-3 gap-2">
               <label class="text-xs text-muted-foreground space-y-1">
                 <span class="block">起始</span>
-                <input v-model.number="rules.seqStart" type="number" min="0" class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+                <input v-model.number="rules.seqStart" type="number" min="0" class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
               </label>
               <label class="text-xs text-muted-foreground space-y-1">
                 <span class="block">步进</span>
-                <input v-model.number="rules.seqStep" type="number" min="1" class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+                <input v-model.number="rules.seqStep" type="number" min="1" class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
               </label>
               <label class="text-xs text-muted-foreground space-y-1">
                 <span class="block">位宽（1-6）</span>
-                <input v-model.number="rules.seqWidth" type="number" min="1" max="6" class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+                <input v-model.number="rules.seqWidth" type="number" min="1" max="6" class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
               </label>
             </div>
             <p class="text-[10px] text-muted-foreground leading-relaxed">{n}=按列表顺序的序号（按位宽补零）；{name}=主名（进入本规则时的文件主名，未启用其他规则时即原名）；{date}=文件修改日期 YYYYMMDD。模板会替换整个主名（扩展名保留），不想丢弃旧名请引用 {name}，如 {name}_{n}。</p>
@@ -158,7 +158,7 @@
           <!-- 规则 5：大小写 -->
           <div class="space-y-2">
             <p class="text-sm font-medium text-foreground">5. 大小写转换 <span class="text-xs text-muted-foreground font-normal">（仅文件主名，不改扩展名）</span></p>
-            <select v-model="rules.caseMode" class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary">
+            <select v-model="rules.caseMode" class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary">
               <option value="none">不改变</option>
               <option value="lower">全部小写</option>
               <option value="upper">全部大写</option>

@@ -13,15 +13,15 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">行驶里程 (公里)</label>
-            <input v-model.number="distance" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted" placeholder="如 500">
+            <input v-model.number="distance" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted" placeholder="如 500">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">消耗燃油 (升)</label>
-            <input v-model.number="fuel" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted" placeholder="如 40">
+            <input v-model.number="fuel" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted" placeholder="如 40">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">油价 (元/升)</label>
-            <input v-model.number="price" type="number" step="0.01" class="w-full px-4 py-2 border border-border rounded bg-muted" placeholder="如 8.5">
+            <input v-model.number="price" type="number" step="0.01" class="w-full px-4 py-2 border border-border border-border rounded bg-muted" placeholder="如 8.5">
           </div>
         </div>
       </div>

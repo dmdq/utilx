@@ -51,17 +51,17 @@
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">年份</label>
             <input v-model="year" type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">版权人 / 组织</label>
             <input v-model="holder" type="text" placeholder="你的名字或组织名"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">项目名（徽章用）</label>
             <input v-model="project" type="text" placeholder="my-project"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
         </div>
       </div>

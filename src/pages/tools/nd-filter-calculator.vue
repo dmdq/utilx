@@ -39,7 +39,7 @@
             >{{ c.label }}</button>
           </div>
           <div class="flex items-center gap-2">
-            <input id="nd-base" v-model.number="baseInput" type="number" step="0.001" min="0" class="flex-1 px-2 py-1.5 bg-muted/50 border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+            <input id="nd-base" v-model.number="baseInput" type="number" step="0.001" min="0" class="flex-1 px-2 py-1.5 bg-muted/50 border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             <div class="flex rounded-lg border border-border overflow-hidden">
               <button
                 v-for="u in SHUTTER_UNITS"
@@ -60,11 +60,11 @@
         <!-- ND 档位 -->
         <div>
           <label for="nd-select" class="block text-sm font-medium text-foreground mb-1.5">ND 减光镜档位（1 档 = 进光量减半 = 快门 ×2）</label>
-          <select id="nd-select" v-model="ndChoice" class="w-full px-3 py-2 bg-muted/50 border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+          <select id="nd-select" v-model="ndChoice" class="w-full px-3 py-2 bg-muted/50 border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
             <option v-for="o in ND_OPTIONS" :key="o.id" :value="o.id">{{ o.label }}</option>
           </select>
           <div v-if="isCustomStops" class="flex items-center gap-2 mt-2">
-            <input v-model.number="customStops" type="number" step="0.1" min="0" max="15.6" class="w-28 px-2 py-1.5 bg-muted/50 border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+            <input v-model.number="customStops" type="number" step="0.1" min="0" max="15.6" class="w-28 px-2 py-1.5 bg-muted/50 border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             <span class="text-xs text-muted-foreground">档（0 ~ 15.6）</span>
           </div>
           <p class="text-[11px] text-muted-foreground mt-2 leading-relaxed">
@@ -142,7 +142,7 @@
           <div>
             <label for="nd-target" class="block text-sm font-medium text-foreground mb-1.5">目标新快门（想要的画面效果时长）</label>
             <div class="flex items-center gap-2">
-              <input id="nd-target" v-model.number="targetInput" type="number" step="1" min="0" class="flex-1 px-2 py-1.5 bg-muted/50 border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              <input id="nd-target" v-model.number="targetInput" type="number" step="1" min="0" class="flex-1 px-2 py-1.5 bg-muted/50 border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
               <div class="flex rounded-lg border border-border overflow-hidden">
                 <button
                   v-for="u in SHUTTER_UNITS"

@@ -71,7 +71,7 @@
               v-model="password"
               type="password"
               autocomplete="off"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="输入该 PDF 的打开密码"
               @keyup.enter="removePassword"
             />

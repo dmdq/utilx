@@ -18,7 +18,7 @@
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">搜索城市或时区</label>
           <div class="relative">
-            <input v-model="searchQuery" type="text" class="w-full px-4 py-2 pl-10 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="输入城市名称">
+            <input v-model="searchQuery" type="text" class="w-full px-4 py-2 pl-10 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="输入城市名称">
             <Search class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
           </div>
         </div>

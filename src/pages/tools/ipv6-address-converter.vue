@@ -15,7 +15,7 @@
           </div>
         </div>
 
-        <textarea v-model="inputText" placeholder="2001:0db8:85a3:0000:0000:8a2e:0370:7334" class="w-full h-40 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm bg-card"></textarea>
+        <textarea v-model="inputText" placeholder="2001:0db8:85a3:0000:0000:8a2e:0370:7334" class="w-full h-40 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm bg-card"></textarea>
 
         <div class="bg-muted p-4 rounded-lg">
           <h3 class="font-medium text-sm mb-2">转换选项</h3>
@@ -27,7 +27,7 @@
         <div v-if="selectedOption === 'prefix'" class="bg-muted p-4 rounded-lg">
           <h3 class="font-medium text-sm mb-2">前缀长度 (CIDR)</h3>
           <div class="flex gap-2 items-center">
-            <input v-model.number="prefixLength" type="number" min="1" max="128" placeholder="例如: 64" class="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+            <input v-model.number="prefixLength" type="number" min="1" max="128" placeholder="例如: 64" class="flex-1 px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
             <span class="text-sm text-muted-foreground">/</span>
           </div>
         </div>

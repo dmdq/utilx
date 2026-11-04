@@ -41,7 +41,7 @@
             <label class="text-xs text-muted-foreground">输入格式:</label>
             <select
               v-model="inputFormat"
-              class="text-xs bg-muted border border-border rounded px-2 py-1"
+              class="text-xs bg-muted border border-border border-border rounded px-2 py-1"
             >
               <option value="yaml">YAML</option>
               <option value="json">JSON</option>
@@ -51,7 +51,7 @@
             <label class="text-xs text-muted-foreground">输出格式:</label>
             <select
               v-model="outputFormat"
-              class="text-xs bg-muted border border-border rounded px-2 py-1"
+              class="text-xs bg-muted border border-border border-border rounded px-2 py-1"
             >
               <option value="json">JSON</option>
               <option value="yaml">YAML</option>
@@ -60,7 +60,7 @@
         </div>
         <textarea
           v-model="inputData"
-          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           :placeholder="inputFormat === 'yaml' ? '在此输入YAML数据...' : '在此输入JSON数据...'"
           @keydown.ctrl.enter="convert"
           @keydown.meta.enter="convert"

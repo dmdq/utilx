@@ -36,7 +36,7 @@
             id="entriesInput"
             v-model="entriesText"
             rows="9"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="每行一条，格式：昵称 或 昵称: 评论内容&#10;例如：&#10;小明&#10;阿花: 转发抽奖冲！&#10;阿花: 已关注一键三连"
           ></textarea>
           <p class="text-xs text-muted-foreground mt-1.5">同一昵称的多条评论会合并为一位参与者，评论条数作为加权依据。</p>
@@ -67,7 +67,7 @@
               type="number"
               min="1"
               max="100"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <label class="flex items-center gap-2 mt-5 cursor-pointer" for="weightedToggle">
@@ -75,7 +75,7 @@
               id="weightedToggle"
               v-model="weighted"
               type="checkbox"
-              class="w-4 h-4 rounded border-border"
+              class="w-4 h-4 rounded border border-border"
             />
             <span class="text-sm text-foreground">评论越多概率越大</span>
           </label>

@@ -32,7 +32,7 @@
             type="number"
             min="0"
             step="0.1"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如 30"
           >
         </div>
@@ -44,7 +44,7 @@
               type="number"
               min="0"
               step="0.1"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 1.5"
             >
           </div>
@@ -55,7 +55,7 @@
               type="number"
               min="0"
               step="1"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 90"
             >
           </div>
@@ -86,7 +86,7 @@
             type="number"
             min="0"
             step="0.5"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如 25"
           >
           <div class="flex flex-wrap gap-2 mt-2">
@@ -110,7 +110,7 @@
             type="number"
             min="0"
             step="1"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如 100"
           >
         </div>
@@ -141,7 +141,7 @@
             min="0"
             max="200"
             step="1"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如 90"
           >
         </div>
@@ -153,7 +153,7 @@
               type="number"
               min="1"
               max="99"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
           </div>
           <div>
@@ -163,7 +163,7 @@
               type="number"
               min="1"
               max="99"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
           </div>
         </div>
@@ -171,7 +171,7 @@
           <label class="block text-sm font-medium mb-1 text-foreground">轮径预设（含外胎近似）</label>
           <select
             v-model="rimPreset"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option value="custom">自定义轮径</option>
             <option v-for="r in rimPresets" :key="r.name" :value="r.name">{{ r.name }}</option>
@@ -184,7 +184,7 @@
             :disabled="rimPreset !== 'custom'"
             type="number"
             min="100"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-60"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-60"
           >
           <p class="text-xs text-muted-foreground mt-1">轮周长 = π × 轮外径 mm ÷ 1000 ≈ {{ circumference.toFixed(3) }} m</p>
         </div>

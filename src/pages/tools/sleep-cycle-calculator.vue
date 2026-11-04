@@ -41,7 +41,7 @@
               <input
                 v-model="bedtimeInput"
                 type="time"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
               >
             </div>
 
@@ -52,7 +52,7 @@
                 type="number"
                 min="0"
                 max="60"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="默认15分钟"
               >
               <p class="text-xs text-muted-foreground mt-1">从躺下到真正入睡的时间</p>
@@ -77,7 +77,7 @@
               <input
                 v-model="wakeupInput"
                 type="time"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
               >
             </div>
 
@@ -88,7 +88,7 @@
                 type="number"
                 min="0"
                 max="60"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="默认15分钟"
               >
             </div>
@@ -271,7 +271,7 @@
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <VolumeX class="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
+              <VolumeX class="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
                 <p class="font-medium">安静环境</p>
                 <p class="text-muted-foreground">使用耳塞或白噪音机减少干扰</p>
@@ -291,7 +291,7 @@
                 v-model.number="actualSleep"
                 type="number"
                 step="0.5"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="例如: 6"
               >
             </div>

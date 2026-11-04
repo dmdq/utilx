@@ -74,7 +74,7 @@
         <!-- 水印设置 -->
         <div class="space-y-3 pt-1">
           <div class="flex items-center gap-2">
-            <input v-model="watermarkEnabled" type="checkbox" id="wmEnabled" class="w-4 h-4 rounded border-border" />
+            <input v-model="watermarkEnabled" type="checkbox" id="wmEnabled" class="w-4 h-4 rounded border border-border" />
             <label for="wmEnabled" class="text-sm text-foreground">添加斜向淡色用途水印（推荐）</label>
           </div>
           <div v-if="watermarkEnabled">
@@ -83,7 +83,7 @@
               v-model="watermarkText"
               type="text"
               maxlength="30"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如：仅供办理XX业务使用，他用无效"
             />
             <p class="text-xs text-muted-foreground mt-1.5">写明用途与「他用无效」可降低复印件被冒用的风险</p>
@@ -122,12 +122,12 @@
             <!-- 人像面（上半） -->
             <div class="card-slot" :style="slotStyle(0)">
               <img v-if="portraitUrl" :src="portraitUrl" alt="人像面" class="absolute inset-0 w-full h-full object-cover" />
-              <div v-else class="absolute inset-0 flex items-center justify-center text-xs text-neutral-400">待上传人像面</div>
+              <div v-else class="absolute inset-0 flex items-center justify-center text-xs text-muted-foreground">待上传人像面</div>
             </div>
             <!-- 国徽面（下半） -->
             <div class="card-slot" :style="slotStyle(1)">
               <img v-if="emblemUrl" :src="emblemUrl" alt="国徽面" class="absolute inset-0 w-full h-full object-cover" />
-              <div v-else class="absolute inset-0 flex items-center justify-center text-xs text-neutral-400">待上传国徽面</div>
+              <div v-else class="absolute inset-0 flex items-center justify-center text-xs text-muted-foreground">待上传国徽面</div>
             </div>
             <!-- 水印 -->
             <div v-if="watermarkEnabled && watermarkText" class="watermark-layer">{{ watermarkText }}</div>

@@ -73,7 +73,7 @@
               <textarea
                 v-model="textLayers[selectedLayer].text"
                 @input="updatePreview"
-                class="w-full p-2 border rounded-lg text-sm"
+                class="w-full p-2 border border-border rounded-lg text-sm"
                 rows="2"
                 placeholder="输入文字..."
               ></textarea>
@@ -82,7 +82,7 @@
             <!-- 字体选择 -->
             <div>
               <label class="text-xs text-muted-foreground mb-1 block">字体</label>
-              <select v-model="textLayers[selectedLayer].fontFamily" @change="updatePreview" class="w-full p-2 border rounded-lg text-sm">
+              <select v-model="textLayers[selectedLayer].fontFamily" @change="updatePreview" class="w-full p-2 border border-border rounded-lg text-sm">
                 <option value="Arial">Arial</option>
                 <option value="Helvetica">Helvetica</option>
                 <option value="Times New Roman">Times New Roman</option>
@@ -124,7 +124,7 @@
                   v-model="textLayers[selectedLayer].color"
                   type="text"
                   @input="updatePreview"
-                  class="flex-1 p-2 border rounded-lg text-sm font-mono"
+                  class="flex-1 p-2 border border-border rounded-lg text-sm font-mono"
                 >
               </div>
             </div>

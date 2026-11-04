@@ -87,7 +87,7 @@
               v-model.number="splitByLines"
               type="number"
               min="1"
-              class="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+              class="w-full px-4 py-2 border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
               placeholder="输入行数"
             />
           </div>
@@ -101,12 +101,12 @@
                 v-model.number="splitBySize"
                 type="number"
                 min="1"
-                class="flex-1 px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+                class="flex-1 px-4 py-2 border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
                 placeholder="输入大小"
               />
               <select
                 v-model="sizeUnit"
-                class="px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+                class="px-4 py-2 border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background"
               >
                 <option value="MB">MB</option>
                 <option value="KB">KB</option>
@@ -159,7 +159,7 @@
         </h2>
         <textarea
           v-model="fileContent"
-          class="w-full h-64 px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm resize-none"
+          class="w-full h-64 px-4 py-3 border border-border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm resize-none"
           placeholder="粘贴或输入要拆分的文本内容..."
         ></textarea>
       </div>

@@ -37,7 +37,7 @@
                 v-model="inputValue"
                 type="text"
                 placeholder="例如: 8.8.8.8 或 google.com"
-                class="w-full px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                class="w-full px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                 @keyup.enter="handleQuery"
               />
               <p class="mt-2 text-xs text-muted-foreground flex items-center gap-1">
@@ -68,7 +68,7 @@
                 <input
                   v-model="options.detailed"
                   type="checkbox"
-                  class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+                  class="w-4 h-4 text-primary border border-border rounded focus:ring-primary"
                 />
                 <span class="text-foreground">显示详细信息</span>
               </label>
@@ -76,7 +76,7 @@
                 <input
                   v-model="options.security"
                   type="checkbox"
-                  class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+                  class="w-4 h-4 text-primary border border-border rounded focus:ring-primary"
                 />
                 <span class="text-foreground">安全评估（威胁情报）</span>
               </label>

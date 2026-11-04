@@ -91,7 +91,7 @@
                   v-model="prize.text"
                   type="text"
                   placeholder="奖项名称"
-                  class="flex-1 px-2 py-1 bg-background border border-border rounded text-sm"
+                  class="flex-1 px-2 py-1 bg-background border border-border border-border rounded text-sm"
                   @input="updateWheel"
                 >
                 <button
@@ -108,7 +108,7 @@
                   type="number"
                   min="1"
                   max="100"
-                  class="w-16 px-2 py-1 bg-background border border-border rounded text-sm"
+                  class="w-16 px-2 py-1 bg-background border border-border border-border rounded text-sm"
                   @input="updateWheel"
                 >
                 <span class="text-xs text-muted-foreground ml-2">

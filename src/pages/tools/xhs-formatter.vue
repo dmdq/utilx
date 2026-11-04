@@ -30,7 +30,7 @@
             ref="draftRef"
             v-model="draft"
             rows="8"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="在此粘贴或输入笔记草稿，空行或换行会被识别为段落分隔"
           ></textarea>
         </div>
@@ -70,7 +70,7 @@
               v-model="prefixEnabled"
               type="checkbox"
               id="prefixToggle"
-              class="w-4 h-4 rounded border-border"
+              class="w-4 h-4 rounded border border-border"
             />
             <label for="prefixToggle" class="text-sm text-foreground">段首自动加符号</label>
             <div class="flex gap-1 ml-2">
@@ -92,14 +92,14 @@
               v-model="tagsEnabled"
               type="checkbox"
               id="tagsToggle"
-              class="w-4 h-4 rounded border-border"
+              class="w-4 h-4 rounded border border-border"
             />
             <label for="tagsToggle" class="text-sm text-foreground">自动附加话题标签</label>
           </div>
           <input
             v-model="tagInput"
             type="text"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="输入关键词，用逗号或空格分隔，如：穿搭, 通勤, 秋冬"
           />
           <div v-if="tagList.length" class="flex flex-wrap gap-1.5">

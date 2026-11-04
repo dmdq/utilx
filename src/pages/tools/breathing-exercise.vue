@@ -43,15 +43,15 @@
         <div v-if="mode === 'custom'" class="grid grid-cols-3 gap-2">
           <div>
             <label class="block text-xs font-medium text-foreground mb-1">吸气（秒）</label>
-            <input v-model.number="customInhale" type="number" min="1" max="12" class="w-full px-2 py-2 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model.number="customInhale" type="number" min="1" max="12" class="w-full px-2 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-xs font-medium text-foreground mb-1">屏息（秒）</label>
-            <input v-model.number="customHold" type="number" min="0" max="12" class="w-full px-2 py-2 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model.number="customHold" type="number" min="0" max="12" class="w-full px-2 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-xs font-medium text-foreground mb-1">呼气（秒）</label>
-            <input v-model.number="customExhale" type="number" min="1" max="15" class="w-full px-2 py-2 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model.number="customExhale" type="number" min="1" max="15" class="w-full px-2 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
         </div>
 

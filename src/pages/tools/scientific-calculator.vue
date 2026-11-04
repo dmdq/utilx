@@ -201,14 +201,14 @@
                   v-model.number="angleConversion.degrees"
                   @input="convertAngle('deg')"
                   type="number"
-                  class="px-3 py-2 border rounded"
+                  class="px-3 py-2 border border-border rounded"
                   placeholder="度"
                 />
                 <input
                   v-model.number="angleConversion.radians"
                   @input="convertAngle('rad')"
                   type="number"
-                  class="px-3 py-2 border rounded"
+                  class="px-3 py-2 border border-border rounded"
                   placeholder="弧度"
                 />
               </div>
@@ -220,14 +220,14 @@
                   v-model.number="tempConversion.celsius"
                   @input="convertTemp('c')"
                   type="number"
-                  class="px-3 py-2 border rounded"
+                  class="px-3 py-2 border border-border rounded"
                   placeholder="°C"
                 />
                 <input
                   v-model.number="tempConversion.fahrenheit"
                   @input="convertTemp('f')"
                   type="number"
-                  class="px-3 py-2 border rounded"
+                  class="px-3 py-2 border border-border rounded"
                   placeholder="°F"
                 />
               </div>

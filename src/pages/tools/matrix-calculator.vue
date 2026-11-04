@@ -13,13 +13,13 @@
           <div class="flex items-center justify-between mb-4">
             <h3 class="text-lg font-semibold">矩阵 A</h3>
             <div class="flex gap-2">
-              <select v-model="matrixARows" @change="updateMatrixSize('A')" class="px-2 py-1 border rounded text-sm">
+              <select v-model="matrixARows" @change="updateMatrixSize('A')" class="px-2 py-1 border border-border rounded text-sm">
                 <option value="2">2行</option>
                 <option value="3">3行</option>
                 <option value="4">4行</option>
                 <option value="5">5行</option>
               </select>
-              <select v-model="matrixACols" @change="updateMatrixSize('A')" class="px-2 py-1 border rounded text-sm">
+              <select v-model="matrixACols" @change="updateMatrixSize('A')" class="px-2 py-1 border border-border rounded text-sm">
                 <option value="2">2列</option>
                 <option value="3">3列</option>
                 <option value="4">4列</option>
@@ -63,13 +63,13 @@
           <div class="flex items-center justify-between mb-4">
             <h3 class="text-lg font-semibold">矩阵 B</h3>
             <div class="flex gap-2">
-              <select v-model="matrixBRows" @change="updateMatrixSize('B')" class="px-2 py-1 border rounded text-sm">
+              <select v-model="matrixBRows" @change="updateMatrixSize('B')" class="px-2 py-1 border border-border rounded text-sm">
                 <option value="2">2行</option>
                 <option value="3">3行</option>
                 <option value="4">4行</option>
                 <option value="5">5行</option>
               </select>
-              <select v-model="matrixBCols" @change="updateMatrixSize('B')" class="px-2 py-1 border rounded text-sm">
+              <select v-model="matrixBCols" @change="updateMatrixSize('B')" class="px-2 py-1 border border-border rounded text-sm">
                 <option value="2">2列</option>
                 <option value="3">3列</option>
                 <option value="4">4列</option>

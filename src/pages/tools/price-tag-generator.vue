@@ -39,14 +39,14 @@
               v-model="draft.name"
               @keyup.enter="addProduct"
               type="text"
-              class="col-span-2 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="col-span-2 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="品名（必填，如 农夫山泉 饮用天然水）"
             />
             <input
               v-model="draft.spec"
               @keyup.enter="addProduct"
               type="text"
-              class="px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="规格（选填，如 550ml×24）"
             />
             <input
@@ -55,14 +55,14 @@
               type="number"
               min="0"
               step="0.01"
-              class="px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="价格（元）"
             />
             <input
               v-model="draft.barcode"
               @keyup.enter="addProduct"
               type="text"
-              class="col-span-2 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="col-span-2 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="条码号（选填：EAN-13/EAN-8 或 Code128 内容）"
             />
             <button
@@ -83,7 +83,7 @@
                   v-model="p.name"
                   @input="schedulePersist"
                   type="text"
-                  class="flex-1 min-w-0 px-2 py-1.5 bg-background border border-input rounded text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="flex-1 min-w-0 px-2 py-1.5 bg-background border border-border border-input rounded text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="品名"
                 />
                 <button
@@ -100,7 +100,7 @@
                   v-model="p.spec"
                   @input="schedulePersist"
                   type="text"
-                  class="min-w-0 px-2 py-1.5 bg-background border border-input rounded text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="min-w-0 px-2 py-1.5 bg-background border border-border border-input rounded text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="规格"
                 />
                 <input
@@ -109,14 +109,14 @@
                   type="number"
                   min="0"
                   step="0.01"
-                  class="min-w-0 px-2 py-1.5 bg-background border border-input rounded text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="min-w-0 px-2 py-1.5 bg-background border border-border border-input rounded text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="价格"
                 />
                 <input
                   v-model="p.barcode"
                   @input="onBarcodeInput"
                   type="text"
-                  class="min-w-0 px-2 py-1.5 bg-background border border-input rounded text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="min-w-0 px-2 py-1.5 bg-background border border-border border-input rounded text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="条码号"
                 />
               </div>
@@ -173,7 +173,7 @@
                   type="number"
                   min="20"
                   max="100"
-                  class="w-full px-2 py-1.5 bg-background border border-input rounded text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2 py-1.5 bg-background border border-border border-input rounded text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
               <div>
@@ -184,7 +184,7 @@
                   type="number"
                   min="20"
                   max="100"
-                  class="w-full px-2 py-1.5 bg-background border border-input rounded text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2 py-1.5 bg-background border border-border border-input rounded text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
             </div>

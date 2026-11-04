@@ -29,7 +29,7 @@
             rows="4"
             maxlength="120"
             placeholder="每行一句，可多行&#10;例如：&#10;欢迎回家&#10;一路辛苦了"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           />
           <p class="text-xs text-muted-foreground">共 {{ lineCount }} 行 {{ totalChars }} 字 · 循环时长约 {{ duration }} 秒</p>
         </div>
@@ -49,10 +49,10 @@
                 :title="c"
                 @click="setFg(c)"
               />
-              <input v-model="fgColor" type="color" class="w-9 h-7 rounded cursor-pointer bg-background border border-input" title="自定义字色" />
+              <input v-model="fgColor" type="color" class="w-9 h-7 rounded cursor-pointer bg-background border border-border border-input" title="自定义字色" />
             </div>
             <label class="flex items-center gap-2 mt-2.5 text-sm text-foreground">
-              <input v-model="rainbow" type="checkbox" class="w-4 h-4 rounded border-border accent-primary" />
+              <input v-model="rainbow" type="checkbox" class="w-4 h-4 rounded border border-border accent-primary" />
               彩虹逐字配色（应援色轮播）
             </label>
           </div>
@@ -67,7 +67,7 @@
                 :title="c"
                 @click="bgColor = c"
               />
-              <input v-model="bgColor" type="color" class="w-9 h-7 rounded cursor-pointer bg-background border border-input" title="自定义背景" />
+              <input v-model="bgColor" type="color" class="w-9 h-7 rounded cursor-pointer bg-background border border-border border-input" title="自定义背景" />
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@
           </div>
 
           <label class="flex items-center gap-2 text-sm text-foreground">
-            <input v-model="blink" type="checkbox" class="w-4 h-4 rounded border-border accent-primary" />
+            <input v-model="blink" type="checkbox" class="w-4 h-4 rounded border border-border accent-primary" />
             闪烁效果（配合静止或滚动都有效果）
           </label>
         </div>

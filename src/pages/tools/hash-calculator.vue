@@ -37,7 +37,7 @@
               <label class="block text-sm font-medium mb-2">输入文本</label>
               <textarea
                 v-model="inputText"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 rows="6"
                 placeholder="请输入要计算哈希值的文本..."
                 @input="calculateHashes"
@@ -246,7 +246,7 @@
               <input
                 v-model="targetHash"
                 type="text"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                 placeholder="输入要比较的哈希值..."
               />
             </div>

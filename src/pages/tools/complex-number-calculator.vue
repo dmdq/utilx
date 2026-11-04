@@ -18,7 +18,7 @@
               v-model.number="complexA.real"
               type="number"
               step="0.01"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
               placeholder="实部 a"
             >
             <span class="text-muted-foreground">+</span>
@@ -26,7 +26,7 @@
               v-model.number="complexA.imag"
               type="number"
               step="0.01"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
               placeholder="虚部 b"
             >
             <span class="text-muted-foreground">i</span>
@@ -43,7 +43,7 @@
               v-model.number="complexB.real"
               type="number"
               step="0.01"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
               placeholder="实部 c"
             >
             <span class="text-muted-foreground">+</span>
@@ -51,7 +51,7 @@
               v-model.number="complexB.imag"
               type="number"
               step="0.01"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
               placeholder="虚部 d"
             >
             <span class="text-muted-foreground">i</span>

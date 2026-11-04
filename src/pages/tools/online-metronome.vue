@@ -39,7 +39,7 @@
               min="30"
               max="240"
               step="1"
-              class="w-24 h-10 px-3 bg-background border border-border rounded-lg text-lg font-bold text-foreground font-mono text-center"
+              class="w-24 h-10 px-3 bg-background border border-border border-border rounded-lg text-lg font-bold text-foreground font-mono text-center"
               @change="bpm = clampBpm(bpm)"
             />
             <input
@@ -74,7 +74,7 @@
           <select
             id="time-sig"
             v-model="timeSig"
-            class="w-full h-10 px-2.5 bg-background border border-border rounded-lg text-sm text-foreground"
+            class="w-full h-10 px-2.5 bg-background border border-border border-border rounded-lg text-sm text-foreground"
           >
             <option v-for="ts in TIME_SIGS" :key="ts.value" :value="ts.value">{{ ts.label }}</option>
           </select>
@@ -105,7 +105,7 @@
           <select
             id="sound-type"
             v-model="soundType"
-            class="w-full h-10 px-2.5 bg-background border border-border rounded-lg text-sm text-foreground"
+            class="w-full h-10 px-2.5 bg-background border border-border border-border rounded-lg text-sm text-foreground"
           >
             <option v-for="st in SOUND_TYPES" :key="st.value" :value="st.value">{{ st.label }}</option>
           </select>

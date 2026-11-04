@@ -15,7 +15,7 @@
           <div class="grid grid-cols-2 gap-4 mb-4">
             <div>
               <label class="block text-sm font-medium mb-2">测试类型</label>
-              <select v-model="testType" @change="onTestTypeChange" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="testType" @change="onTestTypeChange" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="function">函数性能</option>
                 <option value="algorithm">算法对比</option>
                 <option value="memory">内存使用</option>
@@ -25,7 +25,7 @@
             </div>
             <div>
               <label class="block text-sm font-medium mb-2">预设测试</label>
-              <select v-model="selectedPreset" @change="loadPreset" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="selectedPreset" @change="loadPreset" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="">选择预设...</option>
                 <option value="sorting">排序算法对比</option>
                 <option value="array-methods">数组方法性能</option>
@@ -70,7 +70,7 @@
                 type="number"
                 min="100"
                 max="10000000"
-                class="w-full px-2 py-1 border rounded text-sm"
+                class="w-full px-2 py-1 border border-border rounded text-sm"
               >
             </div>
             <div>
@@ -80,7 +80,7 @@
                 type="number"
                 min="0"
                 max="1000"
-                class="w-full px-2 py-1 border rounded text-sm"
+                class="w-full px-2 py-1 border border-border rounded text-sm"
               >
             </div>
             <div>
@@ -90,7 +90,7 @@
                 type="number"
                 min="10"
                 max="100000"
-                class="w-full px-2 py-1 border rounded text-sm"
+                class="w-full px-2 py-1 border border-border rounded text-sm"
               >
             </div>
           </div>
@@ -116,7 +116,7 @@
               <label class="block text-sm font-medium mb-1">测试函数</label>
               <textarea
                 v-model="testCode.function"
-                class="w-full h-32 p-3 font-mono text-sm border rounded-md resize-none"
+                class="w-full h-32 p-3 font-mono text-sm border border-border rounded-md resize-none"
                 placeholder="function testFunction(data) {
   // 在这里编写要测试的代码
   return data.map(x => x * 2);
@@ -131,7 +131,7 @@
               <label class="block text-sm font-medium mb-1">算法 1</label>
               <textarea
                 v-model="testCode.algorithm1"
-                class="w-full h-32 p-3 font-mono text-sm border rounded-md resize-none"
+                class="w-full h-32 p-3 font-mono text-sm border border-border rounded-md resize-none"
                 placeholder="function algorithm1(arr) {
   // 算法1实现
   for (let i = 0; i < arr.length; i++) {
@@ -149,7 +149,7 @@
               <label class="block text-sm font-medium mb-1">算法 2</label>
               <textarea
                 v-model="testCode.algorithm2"
-                class="w-full h-32 p-3 font-mono text-sm border rounded-md resize-none"
+                class="w-full h-32 p-3 font-mono text-sm border border-border rounded-md resize-none"
                 placeholder="function algorithm2(arr) {
   // 算法2实现
   return arr.sort((a, b) => a - b);
@@ -164,7 +164,7 @@
               <label class="block text-sm font-medium mb-1">内存测试代码</label>
               <textarea
                 v-model="testCode.memory"
-                class="w-full h-32 p-3 font-mono text-sm border rounded-md resize-none"
+                class="w-full h-32 p-3 font-mono text-sm border border-border rounded-md resize-none"
                 placeholder="function memoryTest(size) {
   // 创建大量数据来测试内存使用
   const arrays = [];
@@ -183,7 +183,7 @@
               <label class="block text-sm font-medium mb-1">DOM操作代码</label>
               <textarea
                 v-model="testCode.rendering"
-                class="w-full h-32 p-3 font-mono text-sm border rounded-md resize-none"
+                class="w-full h-32 p-3 font-mono text-sm border border-border rounded-md resize-none"
                 placeholder="function renderingTest() {
   const container = document.getElementById('test-container');
   // DOM操作测试代码
@@ -195,7 +195,7 @@
 }"
               ></textarea>
             </div>
-            <div id="test-container" class="border rounded p-2 h-32 overflow-auto bg-gray-50"></div>
+            <div id="test-container" class="border rounded p-2 h-32 overflow-auto bg-muted/50"></div>
           </div>
 
           <!-- 异步操作测试 -->
@@ -204,7 +204,7 @@
               <label class="block text-sm font-medium mb-1">异步操作代码</label>
               <textarea
                 v-model="testCode.async"
-                class="w-full h-32 p-3 font-mono text-sm border rounded-md resize-none"
+                class="w-full h-32 p-3 font-mono text-sm border border-border rounded-md resize-none"
                 placeholder="async function asyncTest() {
   // 异步操作测试代码
   const promises = [];
@@ -349,7 +349,7 @@
               </div>
               <div class="text-center p-2 bg-green-50 rounded">
                 <div class="font-medium">性能建议</div>
-                <div class="text-xs text-gray-600 mt-1">{{ benchmarkResults.rendering.suggestion }}</div>
+                <div class="text-xs text-muted-foreground mt-1">{{ benchmarkResults.rendering.suggestion }}</div>
               </div>
             </div>
           </div>

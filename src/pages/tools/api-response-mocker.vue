@@ -18,7 +18,7 @@
               <label class="block text-sm font-medium mb-2">输入JSON Schema</label>
               <textarea
                 v-model="schemaInput"
-                class="w-full h-64 px-3 py-2 font-mono text-sm border rounded-md"
+                class="w-full h-64 px-3 py-2 font-mono text-sm border border-border rounded-md"
                 placeholder='{
   "type": "object",
   "properties": {
@@ -69,7 +69,7 @@
                 type="number"
                 min="1"
                 max="100"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
                 @input="generateMockData"
               />
             </div>
@@ -78,7 +78,7 @@
               <label class="block text-sm font-medium mb-2">数组对象策略</label>
               <select
                 v-model="config.arrayStrategy"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
                 @change="generateMockData"
               >
                 <option value="random">随机数量（1-5）</option>
@@ -174,7 +174,7 @@
           <div class="relative">
             <textarea
               v-model="mockDataOutput"
-              class="w-full h-96 px-3 py-2 font-mono text-sm border rounded-md"
+              class="w-full h-96 px-3 py-2 font-mono text-sm border border-border rounded-md"
               readonly
             ></textarea>
             <div

@@ -63,7 +63,7 @@
                   min="0"
                   step="1"
                   placeholder="500"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -76,7 +76,7 @@
                   min="0"
                   step="1"
                   placeholder="300"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -89,7 +89,7 @@
                   min="0"
                   step="1"
                   placeholder="1000"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -102,7 +102,7 @@
                   min="0"
                   step="1"
                   placeholder="600"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
             </div>
@@ -122,7 +122,7 @@
                   min="0"
                   step="1"
                   placeholder="2000"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -135,7 +135,7 @@
                   min="0"
                   step="1"
                   placeholder="1200"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -148,7 +148,7 @@
                   min="0"
                   step="1"
                   placeholder="200"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
 
@@ -161,7 +161,7 @@
                   min="0"
                   step="1"
                   placeholder="400"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
             </div>
@@ -176,7 +176,7 @@
               <select
                 v-model="selectedIndustry"
                 @change="updateIndustryAverages"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option v-for="industry in industries" :key="industry.id" :value="industry.id">
                   {{ industry.name }}
@@ -239,7 +239,7 @@
                   <span class="text-sm font-medium">{{ ratio.name }}</span>
                   <span class="text-sm text-muted-foreground">{{ ratio.value }}{{ ratio.unit }}</span>
                 </div>
-                <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="w-full bg-muted rounded-full h-2">
                   <div
                     class="h-2 rounded-full transition-all duration-300"
                     :class="getRatioBarColor(ratio)"

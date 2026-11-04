@@ -40,7 +40,7 @@
                 v-model="h.name"
                 type="text"
                 placeholder="姓名"
-                class="flex-1 min-w-0 px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 min-w-0 px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 :class="rowErrorClass(i)"
               />
               <input
@@ -50,7 +50,7 @@
                 max="100"
                 step="0.1"
                 placeholder="%"
-                class="w-20 px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-20 px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
                 :class="rowErrorClass(i)"
               />
               <span class="text-xs text-muted-foreground flex-shrink-0 w-3">%</span>
@@ -89,7 +89,7 @@
               min="0"
               max="30"
               step="1"
-              class="w-24 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-24 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <span class="text-xs text-muted-foreground">%</span>
           </div>
@@ -118,7 +118,7 @@
                   v-model="r.name"
                   type="text"
                   placeholder="轮次名，如：天使轮"
-                  class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 />
                 <button
                   @click="removeRound(i)"
@@ -137,14 +137,14 @@
                   max="60"
                   step="0.5"
                   placeholder="0-60"
-                  class="w-20 px-2.5 py-1.5 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-20 px-2.5 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
                 />
                 <span class="text-xs text-muted-foreground flex-shrink-0">%</span>
                 <input
                   v-model="r.amount"
                   type="text"
                   placeholder="融资额（选填，仅记录）"
-                  class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
             </div>

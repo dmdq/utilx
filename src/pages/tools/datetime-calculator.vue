@@ -18,7 +18,7 @@
                 <input
                   v-model="startDate"
                   type="date"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                 />
               </div>
               <div>
@@ -26,7 +26,7 @@
                 <input
                   v-model="endDate"
                   type="date"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                 />
               </div>
             </div>
@@ -69,7 +69,7 @@
               <input
                 v-model="baseDate"
                 type="date"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
               />
             </div>
 
@@ -79,7 +79,7 @@
                 <input
                   v-model.number="dateOffset.years"
                   type="number"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="0"
                 />
               </div>
@@ -88,7 +88,7 @@
                 <input
                   v-model.number="dateOffset.months"
                   type="number"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="0"
                 />
               </div>
@@ -97,13 +97,13 @@
                 <input
                   v-model.number="dateOffset.days"
                   type="number"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="0"
                 />
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">操作</label>
-                <select v-model="dateOffset.operation" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="dateOffset.operation" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="add">加</option>
                   <option value="subtract">减</option>
                 </select>
@@ -131,7 +131,7 @@
                 <input
                   v-model="workdayCalc.startDate"
                   type="date"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                 />
               </div>
               <div>
@@ -139,7 +139,7 @@
                 <input
                   v-model.number="workdayCalc.days"
                   type="number"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="10"
                 />
               </div>
@@ -159,7 +159,7 @@
                 <label class="block text-sm font-medium">节假日列表 (YYYY-MM-DD)</label>
                 <textarea
                   v-model="workdayCalc.holidays"
-                  class="w-full px-3 py-2 border rounded-lg text-sm"
+                  class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                   rows="3"
                   placeholder="2024-01-01&#10;2024-02-10&#10;2024-04-05"
                 ></textarea>
@@ -191,14 +191,14 @@
               <input
                 v-model="timezoneCalc.time"
                 type="datetime-local"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
               />
             </div>
 
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block text-sm font-medium mb-2">源时区</label>
-                <select v-model="timezoneCalc.fromTimezone" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="timezoneCalc.fromTimezone" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="UTC">UTC</option>
                   <option value="Asia/Shanghai">北京时间 (UTC+8)</option>
                   <option value="America/New_York">纽约 (UTC-5/-4)</option>
@@ -210,7 +210,7 @@
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">目标时区</label>
-                <select v-model="timezoneCalc.toTimezone" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="timezoneCalc.toTimezone" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="UTC">UTC</option>
                   <option value="Asia/Shanghai">北京时间 (UTC+8)</option>
                   <option value="America/New_York">纽约 (UTC-5/-4)</option>
@@ -244,7 +244,7 @@
                 <input
                   v-model.number="timestampCalc.timestamp"
                   type="number"
-                  class="flex-1 px-3 py-2 border rounded-lg"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg"
                   placeholder="输入时间戳"
                 />
                 <button @click="getCurrentTimestamp" class="px-3 py-1 bg-secondary text-secondary-foreground rounded text-sm hover:bg-secondary/80">
@@ -269,7 +269,7 @@
               <input
                 v-model="timestampCalc.dateInput"
                 type="datetime-local"
-                class="w-full px-3 py-2 border rounded-lg mb-2"
+                class="w-full px-3 py-2 border border-border rounded-lg mb-2"
               />
               <button @click="convertToTimestamp" class="w-full px-3 py-1 bg-accent text-accent-foreground rounded text-sm hover:bg-accent/80">
                 转换为时间戳
@@ -290,7 +290,7 @@
               <input
                 v-model="relativeCalc.targetDate"
                 type="datetime-local"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
               />
             </div>
 
@@ -318,7 +318,7 @@
               <label class="block text-sm font-medium mb-2">日期列表 (每行一个)</label>
               <textarea
                 v-model="batchDates.dates"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 rows="4"
                 placeholder="2024-01-01&#10;2024-02-14&#10;2024-12-25"
               ></textarea>

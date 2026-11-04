@@ -53,7 +53,7 @@
         </h2>
         <textarea
           v-model="inputText"
-          class="w-full h-96 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full h-96 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="粘贴完整的 Java 异常堆栈，例如：&#10;java.lang.NullPointerException: xxx is null&#10;&#9;at com.example.service.UserService.getUser(UserService.java:45)&#10;&#9;at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#10;Caused by: java.lang.IllegalStateException: ..."
           spellcheck="false"
         ></textarea>

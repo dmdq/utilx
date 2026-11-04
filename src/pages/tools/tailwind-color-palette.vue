@@ -12,12 +12,12 @@
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">选择基准颜色</label>
           <div class="flex gap-4 items-center">
-            <input v-model="baseColor" type="color" class="w-full h-12 rounded cursor-pointer border border-border">
+            <input v-model="baseColor" type="color" class="w-full h-12 rounded cursor-pointer border border-border border-border">
             <input
               v-model="baseColor"
               type="text"
               maxlength="7"
-              class="flex-1 px-3 py-2 border border-border rounded-lg bg-muted uppercase font-mono text-foreground"
+              class="flex-1 px-3 py-2 border border-border border-border rounded-lg bg-muted uppercase font-mono text-foreground"
               placeholder="#3B82F6"
             >
           </div>

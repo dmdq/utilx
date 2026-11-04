@@ -47,7 +47,7 @@
               type="text"
               maxlength="18"
               placeholder="例如：110101199003077758"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               spellcheck="false"
             />
           </div>
@@ -57,7 +57,7 @@
             <label class="block text-sm font-medium text-foreground mb-2">批量输入（每行一个号码）</label>
             <textarea
               v-model="batchText"
-              class="w-full h-40 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-40 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="每行一个身份证号，例如：&#10;110101199003077758&#10;44030119950101001X"
               spellcheck="false"
             ></textarea>

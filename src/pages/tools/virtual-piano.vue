@@ -38,7 +38,7 @@
           <select
             id="timbre-select"
             v-model="timbre"
-            class="w-full h-10 px-2.5 bg-background border border-border rounded-lg text-sm text-foreground"
+            class="w-full h-10 px-2.5 bg-background border border-border border-border rounded-lg text-sm text-foreground"
           >
             <option v-for="t in TIMBRES" :key="t.value" :value="t.value">{{ t.label }}</option>
           </select>
@@ -200,7 +200,7 @@
               >
                 <span
                   v-if="keyLetters[k.midi]"
-                  class="px-1.5 py-0.5 rounded bg-zinc-200/80 text-[10px] font-bold text-zinc-700 leading-none"
+                  class="px-1.5 py-0.5 rounded bg-zinc-200/80 text-[10px] font-bold text-foreground leading-none"
                 >{{ keyLetters[k.midi] }}</span>
                 <span class="text-[9px] sm:text-[10px] font-medium leading-none">{{ midiNameOf(k.midi) }}</span>
               </button>

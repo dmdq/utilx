@@ -55,7 +55,7 @@
                     v-model="newOrigin"
                     @keyup.enter="addOrigin"
                     placeholder="输入源地址，如 https://example.com"
-                    class="flex-1 px-3 py-2 border rounded-lg text-sm font-mono"
+                    class="flex-1 px-3 py-2 border border-border rounded-lg text-sm font-mono"
                   >
                   <button
                     @click="addOrigin"
@@ -108,7 +108,7 @@
                     v-model="newHeader"
                     @keyup.enter="addHeader"
                     placeholder="输入请求头名称"
-                    class="flex-1 px-3 py-2 border rounded-lg text-sm font-mono"
+                    class="flex-1 px-3 py-2 border border-border rounded-lg text-sm font-mono"
                   >
                   <button
                     @click="addHeader"
@@ -145,7 +145,7 @@
                     v-model="newExposeHeader"
                     @keyup.enter="addExposeHeader"
                     placeholder="输入响应头名称"
-                    class="flex-1 px-3 py-2 border rounded-lg text-sm font-mono"
+                    class="flex-1 px-3 py-2 border border-border rounded-lg text-sm font-mono"
                   >
                   <button
                     @click="addExposeHeader"
@@ -179,7 +179,7 @@
                     type="number"
                     min="0"
                     placeholder="秒数"
-                    class="flex-1 px-3 py-2 border rounded-lg text-sm"
+                    class="flex-1 px-3 py-2 border border-border rounded-lg text-sm"
                   >
                   <span class="text-sm text-muted-foreground self-center">秒 (预检请求缓存)</span>
                 </div>
@@ -198,7 +198,7 @@
               <Code class="w-5 h-5 text-purple-500" />
               配置代码
             </h2>
-            <select v-model="selectedServer" class="px-3 py-1 border rounded text-sm">
+            <select v-model="selectedServer" class="px-3 py-1 border border-border rounded text-sm">
               <option value="nginx">Nginx</option>
               <option value="apache">Apache</option>
               <option value="nodejs">Node.js</option>

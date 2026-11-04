@@ -23,7 +23,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">截图模式</label>
               <select
                 v-model="captureMode"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               >
                 <option value="viewport">可视区域</option>
                 <option value="fullpage">整页截图</option>
@@ -53,7 +53,7 @@
                 v-model="targetUrl"
                 type="url"
                 placeholder="https://example.com"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               />
               <p class="mt-1 text-xs text-muted-foreground">
                 注：由于浏览器安全限制，此功能需要使用后端API或浏览器扩展
@@ -68,7 +68,7 @@
                   v-model="elementSelector"
                   type="text"
                   placeholder="#element-id 或 .class-name"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                 />
                 <button
                   @click="selectElement"
@@ -85,7 +85,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">输出格式</label>
               <select
                 v-model="outputFormat"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               >
                 <option value="png">PNG</option>
                 <option value="jpeg">JPEG</option>
@@ -124,7 +124,7 @@
                   <input
                     v-model="includeScrollbar"
                     type="checkbox"
-                    class="mr-2 rounded border-border text-primary focus:ring-primary bg-background"
+                    class="mr-2 rounded border border-border text-primary focus:ring-primary bg-background"
                   />
                   <span class="text-sm text-foreground">包含滚动条</span>
                 </label>
@@ -133,7 +133,7 @@
                   <input
                     v-model="captureShadow"
                     type="checkbox"
-                    class="mr-2 rounded border-border text-primary focus:ring-primary bg-background"
+                    class="mr-2 rounded border border-border text-primary focus:ring-primary bg-background"
                   />
                   <span class="text-sm text-foreground">捕获元素阴影</span>
                 </label>
@@ -142,7 +142,7 @@
                   <input
                     v-model="autoSave"
                     type="checkbox"
-                    class="mr-2 rounded border-border text-primary focus:ring-primary bg-background"
+                    class="mr-2 rounded border border-border text-primary focus:ring-primary bg-background"
                   />
                   <span class="text-sm text-foreground">自动保存截图</span>
                 </label>
@@ -151,7 +151,7 @@
                   <input
                     v-model="copyToClipboard"
                     type="checkbox"
-                    class="mr-2 rounded border-border text-primary focus:ring-primary bg-background"
+                    class="mr-2 rounded border border-border text-primary focus:ring-primary bg-background"
                   />
                   <span class="text-sm text-foreground">复制到剪贴板</span>
                 </label>

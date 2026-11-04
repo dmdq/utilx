@@ -32,9 +32,9 @@
           </div>
           <div v-for="(t, i) in dealTiers" :key="i" class="flex items-center gap-2 mb-2">
             <span class="text-sm text-muted-foreground">满</span>
-            <input v-model.number="t.full" type="number" min="0" step="1" class="w-24 px-2 py-1.5 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model.number="t.full" type="number" min="0" step="1" class="w-24 px-2 py-1.5 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
             <span class="text-sm text-muted-foreground">减</span>
-            <input v-model.number="t.off" type="number" min="0" step="1" class="w-24 px-2 py-1.5 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model.number="t.off" type="number" min="0" step="1" class="w-24 px-2 py-1.5 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
             <button @click="removeTier(i)" :disabled="dealTiers.length <= 1" class="p-1.5 text-muted-foreground hover:text-red-500 transition disabled:opacity-30 disabled:cursor-not-allowed" title="删除该档位">
               <Trash2 class="w-4 h-4" />
             </button>
@@ -52,8 +52,8 @@
             </button>
           </div>
           <div v-for="(it, i) in cartItems" :key="i" class="flex items-center gap-2 mb-2">
-            <input v-model="it.name" type="text" placeholder="菜品名称" class="flex-1 px-2 py-1.5 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-            <input v-model.number="it.price" type="number" min="0" step="0.1" placeholder="单价" class="w-24 px-2 py-1.5 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model="it.name" type="text" placeholder="菜品名称" class="flex-1 px-2 py-1.5 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model.number="it.price" type="number" min="0" step="0.1" placeholder="单价" class="w-24 px-2 py-1.5 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
             <button @click="removeCartItem(i)" :disabled="cartItems.length <= 1" class="p-1.5 text-muted-foreground hover:text-red-500 transition disabled:opacity-30 disabled:cursor-not-allowed" title="删除">
               <Trash2 class="w-4 h-4" />
             </button>
@@ -72,8 +72,8 @@
             </button>
           </div>
           <div v-for="(it, i) in addItems" :key="i" class="flex items-center gap-2 mb-2">
-            <input v-model="it.name" type="text" placeholder="菜品名称" class="flex-1 px-2 py-1.5 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-            <input v-model.number="it.price" type="number" min="0" step="0.1" placeholder="单价" class="w-24 px-2 py-1.5 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model="it.name" type="text" placeholder="菜品名称" class="flex-1 px-2 py-1.5 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model.number="it.price" type="number" min="0" step="0.1" placeholder="单价" class="w-24 px-2 py-1.5 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
             <button @click="removeAddItem(i)" :disabled="addItems.length <= 1" class="p-1.5 text-muted-foreground hover:text-red-500 transition disabled:opacity-30 disabled:cursor-not-allowed" title="删除">
               <Trash2 class="w-4 h-4" />
             </button>
@@ -84,7 +84,7 @@
         <!-- 配送费 -->
         <div>
           <label class="block text-sm font-medium text-foreground mb-2">配送费（元，可选）</label>
-          <input v-model.number="deliveryFee" type="number" min="0" step="0.5" class="w-40 px-3 py-2 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+          <input v-model.number="deliveryFee" type="number" min="0" step="0.5" class="w-40 px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
           <p class="text-xs text-muted-foreground mt-1.5">凑单与直接下单都按同一配送费对比</p>
         </div>
       </div>

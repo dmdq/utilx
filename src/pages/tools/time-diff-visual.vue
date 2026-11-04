@@ -21,7 +21,7 @@
           <input
             v-model="startTime"
             type="datetime-local"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
             @change="calculateDiff"
           >
         </div>
@@ -32,7 +32,7 @@
           <input
             v-model="endTime"
             type="datetime-local"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
             @change="calculateDiff"
           >
         </div>
@@ -86,7 +86,7 @@
           <div class="flex gap-2">
             <select
               v-model="relativeTime.value"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
             >
               <option value="1">1</option>
               <option value="2">2</option>
@@ -99,7 +99,7 @@
             </select>
             <select
               v-model="relativeTime.unit"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
             >
               <option value="min">分钟</option>
               <option value="h">小时</option>
@@ -110,7 +110,7 @@
             </select>
             <select
               v-model="relativeTime.direction"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
             >
               <option value="after">之后</option>
               <option value="before">之前</option>

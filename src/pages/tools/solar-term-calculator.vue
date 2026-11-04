@@ -19,7 +19,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">选择年份</label>
           <select
             v-model="selectedYear"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
             @change="calculateSolarTerms"
           >
             <option v-for="y in years" :key="y" :value="y">{{ y }}年</option>

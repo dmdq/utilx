@@ -16,7 +16,7 @@
         </div>
 
         <div class="flex gap-2">
-          <input v-model="inputText" placeholder="#FF5733 或 rgb(255, 87, 51)" class="flex-1 p-3 border rounded-lg font-mono text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+          <input v-model="inputText" placeholder="#FF5733 或 rgb(255, 87, 51)" class="flex-1 p-3 border border-border rounded-lg font-mono text-sm focus:outline-none focus:ring-2 focus:ring-primary">
           <div class="w-16 h-12 rounded-lg border" :style="{ backgroundColor: previewColor }"></div>
         </div>
 

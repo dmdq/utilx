@@ -20,13 +20,13 @@
                   type="number"
                   min="18"
                   max="100"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="30"
                 />
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">性别</label>
-                <select v-model="basicInfo.gender" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="basicInfo.gender" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="male">男性</option>
                   <option value="female">女性</option>
                 </select>
@@ -41,7 +41,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">蔬菜水果摄入</label>
-              <select v-model="lifestyle.fruitsVegetables" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.fruitsVegetables" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="rare">很少吃（每周少于3次）</option>
                 <option value="sometimes">偶尔吃（每周3-5次）</option>
                 <option value="daily">每天吃（1-2份）</option>
@@ -51,7 +51,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">加工食品摄入</label>
-              <select v-model="lifestyle.processedFood" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.processedFood" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="never">从不吃</option>
                 <option value="rare">很少吃（每周1-2次）</option>
                 <option value="sometimes">偶尔吃（每周3-4次）</option>
@@ -61,7 +61,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">含糖饮料</label>
-              <select v-model="lifestyle.sugaryDrinks" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.sugaryDrinks" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="never">从不喝</option>
                 <option value="rare">很少喝（每周1-2杯）</option>
                 <option value="sometimes">偶尔喝（每周3-4杯）</option>
@@ -72,7 +72,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">饮食规律</label>
-              <select v-model="lifestyle.regularMeals" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.regularMeals" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="irregular">很不规律</option>
                 <option value="somewhat">不太规律</option>
                 <option value="regular">比较规律</option>
@@ -88,7 +88,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">每周运动天数</label>
-              <select v-model="lifestyle.exerciseDays" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.exerciseDays" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="none">从不运动</option>
                 <option value="1-2">1-2天</option>
                 <option value="3-4">3-4天</option>
@@ -99,7 +99,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">每次运动时长</label>
-              <select v-model="lifestyle.exerciseDuration" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.exerciseDuration" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="none">不运动</option>
                 <option value="short">少于30分钟</option>
                 <option value="moderate">30-60分钟</option>
@@ -109,7 +109,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">日常活动量</label>
-              <select v-model="lifestyle.dailyActivity" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.dailyActivity" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="sedentary">久坐（很少活动）</option>
                 <option value="light">轻度活动（经常走动）</option>
                 <option value="moderate">中度活动（工作需要站立或走动）</option>
@@ -125,7 +125,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">睡眠时长</label>
-              <select v-model="lifestyle.sleepHours" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.sleepHours" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="less-5">少于5小时</option>
                 <option value="5-6">5-6小时</option>
                 <option value="7-8">7-8小时</option>
@@ -135,7 +135,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">睡眠质量</label>
-              <select v-model="lifestyle.sleepQuality" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.sleepQuality" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="poor">很差（经常失眠）</option>
                 <option value="fair">一般（偶尔失眠）</option>
                 <option value="good">良好（很少失眠）</option>
@@ -145,7 +145,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">压力水平</label>
-              <select v-model="lifestyle.stressLevel" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.stressLevel" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="very-high">极高压力</option>
                 <option value="high">高压力</option>
                 <option value="moderate">中等压力</option>
@@ -156,7 +156,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">吸烟状况</label>
-              <select v-model="lifestyle.smoking" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.smoking" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="never">从不吸烟</option>
                 <option value="quit">已戒烟</option>
                 <option value="occasional">偶尔吸烟</option>
@@ -167,7 +167,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">饮酒状况</label>
-              <select v-model="lifestyle.alcohol" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="lifestyle.alcohol" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="never">从不喝酒</option>
                 <option value="rare">偶尔喝（每月1-2次）</option>
                 <option value="moderate">适量喝（每周1-3次）</option>

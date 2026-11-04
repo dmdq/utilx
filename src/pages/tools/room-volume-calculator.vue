@@ -37,23 +37,23 @@
             <div>
               <label class="block text-sm font-medium text-foreground mb-1.5" for="rvc-length">长（m）</label>
               <input id="rvc-length" v-model="lengthInput" type="text" inputmode="decimal" placeholder="如 4"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-1.5" for="rvc-width">宽（m）</label>
               <input id="rvc-width" v-model="widthInput" type="text" inputmode="decimal" placeholder="如 3.8"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-1.5" for="rvc-height">层高（m）</label>
               <input id="rvc-height" v-model="heightInput" type="text" inputmode="decimal" placeholder="如 2.86"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </div>
           </div>
           <div>
             <label class="block text-xs text-muted-foreground mb-1.5" for="rvc-name">房间名称（选填，标注在示意图上）</label>
             <input id="rvc-name" v-model="roomNameInput" type="text" maxlength="12" placeholder="如 主卧"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <p class="text-[11px] text-muted-foreground leading-relaxed">内净尺寸为准（不含抹灰）；异形房间按矩形分块各算一遍再相加。</p>
         </div>
@@ -69,17 +69,17 @@
               <div>
                 <label class="block text-xs text-muted-foreground mb-1.5" for="rvc-door-count">扇数</label>
                 <input id="rvc-door-count" v-model="doorCountInput" type="text" inputmode="numeric" placeholder="如 1"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
               </div>
               <div>
                 <label class="block text-xs text-muted-foreground mb-1.5" for="rvc-door-w">宽（m）</label>
                 <input id="rvc-door-w" v-model="doorWInput" type="text" inputmode="decimal" placeholder="0.9"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
               </div>
               <div>
                 <label class="block text-xs text-muted-foreground mb-1.5" for="rvc-door-h">高（m）</label>
                 <input id="rvc-door-h" v-model="doorHInput" type="text" inputmode="decimal" placeholder="2.05"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
               </div>
             </div>
           </div>
@@ -89,17 +89,17 @@
               <div>
                 <label class="block text-xs text-muted-foreground mb-1.5" for="rvc-win-count">扇数</label>
                 <input id="rvc-win-count" v-model="winCountInput" type="text" inputmode="numeric" placeholder="如 1"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
               </div>
               <div>
                 <label class="block text-xs text-muted-foreground mb-1.5" for="rvc-win-w">宽（m）</label>
                 <input id="rvc-win-w" v-model="winWInput" type="text" inputmode="decimal" placeholder="1.5"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
               </div>
               <div>
                 <label class="block text-xs text-muted-foreground mb-1.5" for="rvc-win-h">高（m）</label>
                 <input id="rvc-win-h" v-model="winHInput" type="text" inputmode="decimal" placeholder="1.4"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
               </div>
             </div>
           </div>
@@ -118,14 +118,14 @@
             <div>
               <label class="block text-xs text-muted-foreground mb-1.5" for="rvc-coats">涂刷遍数</label>
               <select id="rvc-coats" v-model="coatsSelect"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
                 <option v-for="c in COAT_OPTIONS" :key="c.value" :value="c.value">{{ c.label }}</option>
               </select>
             </div>
             <div>
               <label class="block text-xs text-muted-foreground mb-1.5" for="rvc-spread">覆盖率（㎡/L·遍）</label>
               <input id="rvc-spread" v-model="spreadInput" type="text" inputmode="decimal" placeholder="默认 12"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </div>
           </div>
           <p class="text-[11px] text-muted-foreground leading-relaxed">

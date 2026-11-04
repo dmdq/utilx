@@ -47,7 +47,7 @@
                 max="10000"
                 step="1"
                 placeholder="100"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
               <div class="mt-1 text-xs text-muted-foreground">
                 约人民币 {{ formatCurrency(loanAmount * 10000) }}
@@ -65,7 +65,7 @@
                   min="1"
                   max="30"
                   placeholder="30"
-                  class="flex-1 px-3 py-2 border rounded-md"
+                  class="flex-1 px-3 py-2 border border-border rounded-md"
                 >
                 <span class="px-3 py-2 bg-muted rounded-md">年</span>
               </div>
@@ -86,7 +86,7 @@
                   max="20"
                   step="0.01"
                   placeholder="4.9"
-                  class="flex-1 px-3 py-2 border rounded-md"
+                  class="flex-1 px-3 py-2 border border-border rounded-md"
                 >
                 <span class="px-3 py-2 bg-muted rounded-md">%</span>
               </div>

@@ -41,7 +41,7 @@
               v-model="form.role"
               rows="3"
               spellcheck="false"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="你是一位资深前端工程师，擅长 Vue 与 TypeScript"
             ></textarea>
             <p class="text-xs text-muted-foreground mt-1.5 flex items-start gap-1">
@@ -57,7 +57,7 @@
               v-model="form.context"
               rows="3"
               spellcheck="false"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="项目是一个内部知识库问答机器人，受众是没有技术背景的客服同学，回答会被直接复制进工单"
             ></textarea>
             <p class="text-xs text-muted-foreground mt-1.5 flex items-start gap-1">
@@ -73,7 +73,7 @@
               v-model="form.constraints"
               rows="3"
               spellcheck="false"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="只分析代码，不负责业务逻辑设计&#10;不确定时明确说明，不要编造 API"
             ></textarea>
             <p class="text-xs text-muted-foreground mt-1.5 flex items-start gap-1">
@@ -94,7 +94,7 @@
               id="spb-format"
               v-model="form.outputFormat"
               @change="onOutputFormatChange"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option value="">未选择（省略此段）</option>
               <option v-for="opt in formatOptions" :key="opt.value" :value="opt.value">{{ opt.label }}</option>
@@ -108,7 +108,7 @@
               v-model="form.outputTemplate"
               rows="4"
               spellcheck="false"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder='{"answer": "..."}'
             ></textarea>
             <p
@@ -131,7 +131,7 @@
               v-model="form.outputTemplate"
               rows="3"
               spellcheck="false"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="例如：输出两列 Markdown 表格，列为「文件」和「问题」，按严重程度从高到低排序"
             ></textarea>
           </div>
@@ -147,7 +147,7 @@
             <select
               id="spb-tone"
               v-model="form.tone"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option value="">未选择（省略此段）</option>
               <option value="professional">专业严谨</option>
@@ -163,7 +163,7 @@
               v-model="form.toneCustom"
               rows="2"
               spellcheck="false"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="例如：像结对编程的同事一样，直接指出问题但不绕弯子"
             ></textarea>
           </div>
@@ -240,14 +240,14 @@
               v-model="pair.q"
               rows="2"
               spellcheck="false"
-              class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="用户输入示例（Q），如：这段函数有什么问题？"
             ></textarea>
             <textarea
               v-model="pair.a"
               rows="3"
               spellcheck="false"
-              class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="期望回答示例（A），写清格式与要点"
             ></textarea>
           </div>

@@ -4,7 +4,7 @@
     <section class="pt-4 pb-10">
       <p class="text-[11px] tracking-[0.2em] text-muted-foreground/70 mb-5">独立 / 本地计算 / 开源</p>
       <h1 class="text-display sm:text-display-lg lg:text-[3.25rem] lg:leading-[1.08] font-semibold text-foreground mb-5">
-        {{ tools.length }} 个小工具，<span class="text-primary">把具体问题算清楚</span>
+        {{ tools.length }} 款计算器与换算工具，<span class="text-primary">把具体问题算清楚</span>
       </h1>
       <p class="text-base sm:text-lg text-muted-foreground max-w-3xl leading-relaxed mb-9">
         不注册、不上传、打开即用。从 JSON 格式化到混凝土配合比，都在浏览器里算完。

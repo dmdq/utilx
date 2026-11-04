@@ -117,7 +117,7 @@
         <div v-if="sourceLabel">
           <canvas ref="waveCanvas" class="w-full h-32 bg-muted rounded-lg block" />
           <div class="flex justify-between text-xs text-muted-foreground mt-1.5">
-            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-slate-400 inline-block" />原始波形</span>
+            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-muted inline-block" />原始波形</span>
             <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-emerald-500 inline-block" />处理后波形</span>
           </div>
         </div>

@@ -95,7 +95,7 @@
           <!-- 尺寸设置 -->
           <div>
             <label class="text-xs text-muted-foreground mb-1 block">输出尺寸</label>
-            <select v-model="outputSize" @change="updatePreview" class="w-full p-2 border rounded text-sm">
+            <select v-model="outputSize" @change="updatePreview" class="w-full p-2 border border-border rounded text-sm">
               <option value="original">原始尺寸</option>
               <option value="800">最大 800px</option>
               <option value="600">最大 600px</option>
@@ -109,7 +109,7 @@
           <!-- 循环次数 -->
           <div>
             <label class="text-xs text-muted-foreground mb-1 block">循环次数</label>
-            <select v-model="loopCount" class="w-full p-2 border rounded text-sm">
+            <select v-model="loopCount" class="w-full p-2 border border-border rounded text-sm">
               <option value="0">无限循环</option>
               <option value="1">播放1次</option>
               <option value="3">播放3次</option>

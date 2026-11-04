@@ -135,7 +135,7 @@
                 min="0"
                 max="1"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
               />
             </div>
             <div>
@@ -146,7 +146,7 @@
                 min="0"
                 max="1"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
               />
             </div>
             <div>
@@ -157,7 +157,7 @@
                 min="0"
                 max="1"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
               />
             </div>
             <div>
@@ -168,7 +168,7 @@
                 min="0"
                 max="1"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
               />
             </div>
           </div>

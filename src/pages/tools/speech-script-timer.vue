@@ -46,7 +46,7 @@
               type="number"
               min="0"
               step="10"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="例如 520"
             />
           </div>
@@ -58,7 +58,7 @@
             <textarea
               v-model="scriptText"
               rows="6"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="粘贴口播稿原文，中文按字符计数，连续英文/数字按词计数；标点用于停顿加权"
             ></textarea>
           </div>
@@ -74,7 +74,7 @@
                 type="number"
                 min="0"
                 step="1"
-                class="flex-1 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="分"
               />
               <span class="text-muted-foreground text-sm">分</span>
@@ -84,7 +84,7 @@
                 min="0"
                 max="59"
                 step="1"
-                class="flex-1 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="秒"
               />
               <span class="text-muted-foreground text-sm">秒</span>
@@ -111,7 +111,7 @@
               min="100"
               max="500"
               step="10"
-              class="flex-1 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <span class="text-muted-foreground text-sm whitespace-nowrap">字 / 分钟</span>
           </div>
@@ -124,7 +124,7 @@
             v-model="pauseEnabled"
             type="checkbox"
             id="pauseToggle"
-            class="w-4 h-4 rounded border-border"
+            class="w-4 h-4 rounded border border-border"
           />
           <label for="pauseToggle" class="text-sm text-foreground">启用停顿加权（句号/问号/感叹号 +0.6 秒，逗号/顿号 +0.3 秒）</label>
         </div>
@@ -216,7 +216,7 @@
           min="5"
           max="600"
           step="5"
-          class="w-28 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+          class="w-28 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
         />
         <span class="text-sm text-muted-foreground">秒 / 段 → 建议切成</span>
         <span class="text-sm font-bold text-primary">{{ segments.length }} 段</span>

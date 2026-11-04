@@ -23,11 +23,11 @@
               <div class="grid grid-cols-2 gap-2">
                 <div>
                   <label class="text-xs text-muted-foreground mb-1 block">开始时间</label>
-                  <input v-model="period.start" type="time" class="w-full px-2 py-1 border rounded text-sm">
+                  <input v-model="period.start" type="time" class="w-full px-2 py-1 border border-border rounded text-sm">
                 </div>
                 <div>
                   <label class="text-xs text-muted-foreground mb-1 block">结束时间</label>
-                  <input v-model="period.end" type="time" class="w-full px-2 py-1 border rounded text-sm">
+                  <input v-model="period.end" type="time" class="w-full px-2 py-1 border border-border rounded text-sm">
                 </div>
               </div>
             </div>
@@ -50,12 +50,12 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium mb-2 block">工作日久坐时长（小时）</label>
-              <input v-model.number="workdaySitting" type="number" step="0.5" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="例如: 8">
+              <input v-model.number="workdaySitting" type="number" step="0.5" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="例如: 8">
             </div>
 
             <div>
               <label class="text-sm font-medium mb-2 block">休息日久坐时长（小时）</label>
-              <input v-model.number="weekendSitting" type="number" step="0.5" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="例如: 6">
+              <input v-model.number="weekendSitting" type="number" step="0.5" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="例如: 6">
             </div>
 
             <button @click="quickCalculate" class="w-full px-4 py-3 bg-muted rounded-lg text-sm">

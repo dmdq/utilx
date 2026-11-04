@@ -46,7 +46,7 @@
                 v-model="h.alias"
                 type="text"
                 spellcheck="false"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="如 prod-web"
               >
             </div>
@@ -56,7 +56,7 @@
                 v-model="h.hostName"
                 type="text"
                 spellcheck="false"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="如 203.0.113.10"
               >
             </div>
@@ -66,7 +66,7 @@
                 v-model="h.user"
                 type="text"
                 spellcheck="false"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="如 deploy"
               >
             </div>
@@ -77,7 +77,7 @@
                 type="text"
                 inputmode="numeric"
                 spellcheck="false"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="22"
               >
             </div>
@@ -87,7 +87,7 @@
                 v-model="h.identityFile"
                 type="text"
                 spellcheck="false"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="~/.ssh/id_ed25519"
               >
             </div>
@@ -97,7 +97,7 @@
                 v-model="h.proxyJump"
                 type="text"
                 spellcheck="false"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="引用上方某条目的别名"
               >
             </div>
@@ -105,15 +105,15 @@
 
           <div class="flex flex-wrap gap-4 pt-1">
             <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-              <input v-model="h.forwardAgent" type="checkbox" class="w-4 h-4 rounded border-border" >
+              <input v-model="h.forwardAgent" type="checkbox" class="w-4 h-4 rounded border border-border" >
               智能转发 ForwardAgent
             </label>
             <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-              <input v-model="h.keepAlive" type="checkbox" class="w-4 h-4 rounded border-border" >
+              <input v-model="h.keepAlive" type="checkbox" class="w-4 h-4 rounded border border-border" >
               保活 ServerAliveInterval
             </label>
             <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-              <input v-model="h.compression" type="checkbox" class="w-4 h-4 rounded border-border" >
+              <input v-model="h.compression" type="checkbox" class="w-4 h-4 rounded border border-border" >
               压缩 Compression
             </label>
           </div>

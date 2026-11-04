@@ -61,7 +61,7 @@
         <textarea
           v-model="inputText"
           placeholder="请输入要计算哈希的文本..."
-          class="w-full h-64 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-64 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
         <div class="text-sm text-muted-foreground">
           字符数：{{ inputText.length }} | 大小：{{ formatBytes(inputText.length) }}

@@ -50,7 +50,7 @@
                   v-model="searchText"
                   @keyup.enter="performReplace"
                   placeholder="请输入要查找的内容..."
-                  class="w-full p-3 pr-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full p-3 pr-10 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <button
                   v-if="searchText"
@@ -68,7 +68,7 @@
                 v-model="replaceText"
                 @keyup.enter="performReplace"
                 placeholder="请输入替换内容..."
-                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
           </div>
@@ -143,7 +143,7 @@
           <textarea
             v-model="inputText"
             placeholder="请输入要处理的文本..."
-            class="w-full h-64 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-64 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
 
           <div class="text-sm text-muted-foreground">

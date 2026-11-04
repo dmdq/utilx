@@ -47,7 +47,7 @@
 
             <div>
               <label class="text-xs text-muted-foreground mb-1 block">识别语言</label>
-              <select v-model="selectedLanguage" class="w-full p-2 border rounded text-sm">
+              <select v-model="selectedLanguage" class="w-full p-2 border border-border rounded text-sm">
                 <option value="eng">英语 (English)</option>
                 <option value="chi_sim">简体中文</option>
                 <option value="chi_tra">繁体中文</option>
@@ -68,7 +68,7 @@
 
             <div>
               <label class="text-xs text-muted-foreground mb-1 block">页面分割模式</label>
-              <select v-model="pageSegMode" class="w-full p-2 border rounded text-sm">
+              <select v-model="pageSegMode" class="w-full p-2 border border-border rounded text-sm">
                 <option value="3">自动</option>
                 <option value="6">单列文本</option>
                 <option value="5">垂直对齐文本</option>
@@ -129,7 +129,7 @@
 
             <textarea
               v-model="ocrResult"
-              class="w-full p-3 border rounded-lg text-sm min-h-[300px] font-mono"
+              class="w-full p-3 border border-border rounded-lg text-sm min-h-[300px] font-mono"
               placeholder="识别结果将显示在这里..."
             ></textarea>
           </div>

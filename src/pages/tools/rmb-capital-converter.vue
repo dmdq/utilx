@@ -25,7 +25,7 @@
                 max="999999999999.99"
                 step="0.01"
                 placeholder="请输入金额，如：123.45"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
               <div class="mt-2 text-xs text-muted-foreground">
                 支持范围：0 - 999,999,999,999.99
@@ -151,7 +151,7 @@
                 @input="batchConvert"
                 placeholder="123.45&#10;6789&#10;10000.50"
                 rows="6"
-                class="w-full p-3 border rounded-md resize-none font-mono text-sm"
+                class="w-full p-3 border border-border rounded-md resize-none font-mono text-sm"
               ></textarea>
             </div>
 
@@ -198,7 +198,7 @@
                 @input="validateAmount"
                 type="text"
                 placeholder="如：人民币壹仟贰佰叁拾肆元伍角陆分"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 

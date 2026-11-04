@@ -20,7 +20,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">学年</label>
           <select
             v-model="academicYear"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
             @change="calculateSemesters"
           >
             <option v-for="year in academicYears" :key="year" :value="year">
@@ -34,7 +34,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">学校类型</label>
           <select
             v-model="schoolType"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted"
             @change="calculateSemesters"
           >
             <option value="university">大学 (两学期制)</option>

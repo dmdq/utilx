@@ -34,7 +34,7 @@
         <!-- 画幅 -->
         <div>
           <label for="dof-sensor" class="block text-sm font-medium text-foreground mb-1.5">画幅（决定弥散圈 c 默认值）</label>
-          <select id="dof-sensor" v-model="sensorId" class="w-full px-3 py-2 bg-muted/50 border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+          <select id="dof-sensor" v-model="sensorId" class="w-full px-3 py-2 bg-muted/50 border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
             <option v-for="s in SENSORS" :key="s.id" :value="s.id">{{ s.name }}（{{ s.width }}×{{ s.height }}mm · c={{ s.c.toFixed(3) }}）</option>
           </select>
           <label class="flex items-center gap-2 text-xs text-muted-foreground mt-2 cursor-pointer select-none">
@@ -42,7 +42,7 @@
             自定义弥散圈 c
           </label>
           <div v-if="cCustomEnabled" class="flex items-center gap-2 mt-2">
-            <input v-model.number="cCustom" type="number" step="0.001" min="0.005" max="0.1" class="w-28 px-2 py-1.5 bg-muted/50 border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+            <input v-model.number="cCustom" type="number" step="0.001" min="0.005" max="0.1" class="w-28 px-2 py-1.5 bg-muted/50 border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             <span class="text-xs text-muted-foreground">mm（常用 0.005 ~ 0.1）</span>
           </div>
           <p class="text-[11px] text-muted-foreground mt-2 leading-relaxed">
@@ -66,7 +66,7 @@
             </button>
           </div>
           <div class="flex items-center gap-2">
-            <input id="dof-focal" v-model.number="focalInput" type="number" step="1" min="4" max="800" class="w-28 px-2 py-1.5 bg-muted/50 border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+            <input id="dof-focal" v-model.number="focalInput" type="number" step="1" min="4" max="800" class="w-28 px-2 py-1.5 bg-muted/50 border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             <span class="text-xs text-muted-foreground">mm（4 ~ 800 可自定义）</span>
           </div>
         </div>
@@ -74,12 +74,12 @@
         <!-- 光圈 -->
         <div>
           <label for="dof-aperture" class="block text-sm font-medium text-foreground mb-1.5">光圈 f 档</label>
-          <select id="dof-aperture" v-model="apertureChoice" class="w-full px-3 py-2 bg-muted/50 border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+          <select id="dof-aperture" v-model="apertureChoice" class="w-full px-3 py-2 bg-muted/50 border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
             <option v-for="a in APERTURE_CHOICES" :key="a" :value="String(a)">f/{{ a }}</option>
             <option value="__custom">自定义…</option>
           </select>
           <div v-if="apertureChoice === '__custom'" class="flex items-center gap-2 mt-2">
-            <input v-model.number="apertureCustom" type="number" step="0.1" min="1" max="64" class="w-28 px-2 py-1.5 bg-muted/50 border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+            <input v-model.number="apertureCustom" type="number" step="0.1" min="1" max="64" class="w-28 px-2 py-1.5 bg-muted/50 border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             <span class="text-xs text-muted-foreground">f/（1 ~ 64）</span>
           </div>
         </div>
@@ -88,7 +88,7 @@
         <div>
           <label for="dof-dist" class="block text-sm font-medium text-foreground mb-1.5">对焦距离（对焦点）</label>
           <div class="flex items-center gap-2">
-            <input id="dof-dist" v-model.number="distInput" type="number" step="0.01" min="0" class="flex-1 px-2 py-1.5 bg-muted/50 border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+            <input id="dof-dist" v-model.number="distInput" type="number" step="0.01" min="0" class="flex-1 px-2 py-1.5 bg-muted/50 border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             <div class="flex rounded-lg border border-border overflow-hidden">
               <button type="button" @click="distUnit = 'm'" class="px-3 py-1.5 text-xs font-medium" :class="distUnit === 'm' ? 'bg-primary text-primary-foreground' : 'bg-muted/50 text-muted-foreground'">m</button>
               <button type="button" @click="distUnit = 'cm'" class="px-3 py-1.5 text-xs font-medium" :class="distUnit === 'cm' ? 'bg-primary text-primary-foreground' : 'bg-muted/50 text-muted-foreground'">cm</button>

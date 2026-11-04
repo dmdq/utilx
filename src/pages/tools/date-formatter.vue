@@ -17,12 +17,12 @@
 
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">日期</label>
-          <input v-model="dateInput" type="date" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+          <input v-model="dateInput" type="date" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
         </div>
 
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">时间</label>
-          <input v-model="timeInput" type="time" step="1" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+          <input v-model="timeInput" type="time" step="1" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
         </div>
 
         <div class="mb-4">
@@ -36,7 +36,7 @@
 
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">时区</label>
-          <select v-model="selectedTimezone" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+          <select v-model="selectedTimezone" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
             <option value="local">本地时区</option>
             <option value="UTC">UTC (协调世界时)</option>
             <option value="Asia/Shanghai">中国 (UTC+8)</option>
@@ -77,7 +77,7 @@
           <div class="p-4 bg-gray-100 dark:bg-gray-900 rounded-lg">
             <div class="flex items-center justify-between mb-2">
               <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Unix时间戳</span>
-              <button @click="copyText(unixTimestamp)" class="text-gray-500 hover:text-gray-700" title="复制">
+              <button @click="copyText(unixTimestamp)" class="text-muted-foreground hover:text-foreground" title="复制">
                 <Copy class="w-4 h-4" />
               </button>
             </div>

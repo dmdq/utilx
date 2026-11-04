@@ -23,7 +23,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">HTTP方法</label>
               <select
                 v-model="request.method"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               >
                 <option v-for="method in httpMethods" :key="method" :value="method">
                   {{ method }}
@@ -38,7 +38,7 @@
                 v-model="request.url"
                 type="url"
                 placeholder="https://api.example.com/endpoint"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               />
             </div>
 
@@ -47,7 +47,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">快速示例</label>
               <select
                 @change="loadExample"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               >
                 <option value="">选择示例...</option>
                 <option value="jsonplaceholder">JSONPlaceholder API</option>
@@ -94,13 +94,13 @@
                 v-model="header.key"
                 type="text"
                 placeholder="名称"
-                class="flex-1 px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground"
+                class="flex-1 px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground"
               />
               <input
                 v-model="header.value"
                 type="text"
                 placeholder="值"
-                class="flex-1 px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground"
+                class="flex-1 px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground"
               />
               <button
                 @click="removeHeader(index)"
@@ -121,7 +121,7 @@
             </h2>
             <select
               v-model="bodyType"
-              class="text-sm px-3 py-1 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+              class="text-sm px-3 py-1 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
             >
               <option value="json">JSON</option>
               <option value="form">表单</option>
@@ -142,7 +142,7 @@
             <textarea
               v-model="request.body"
               placeholder='{"key": "value"}'
-              class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm text-foreground"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm text-foreground"
               rows="8"
             ></textarea>
           </div>
@@ -158,13 +158,13 @@
                 v-model="field.key"
                 type="text"
                 placeholder="字段名"
-                class="flex-1 px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground"
+                class="flex-1 px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground"
               />
               <input
                 v-model="field.value"
                 type="text"
                 placeholder="字段值"
-                class="flex-1 px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground"
+                class="flex-1 px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm text-foreground"
               />
               <button
                 @click="removeFormField(index)"
@@ -186,7 +186,7 @@
             v-else
             v-model="request.body"
             placeholder="原始请求体"
-            class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm text-foreground"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm text-foreground"
             rows="8"
           ></textarea>
         </div>

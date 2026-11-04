@@ -17,7 +17,7 @@
               <input
                 v-model="domainInput"
                 type="text"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="example.com 或 https://example.com"
                 @keyup.enter="checkSSL"
               />
@@ -136,7 +136,7 @@
                 type="number"
                 min="1"
                 max="65535"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="输入端口号"
               />
             </div>

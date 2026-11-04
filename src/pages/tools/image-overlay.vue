@@ -73,7 +73,7 @@
             <!-- 混合模式 -->
             <div>
               <label class="text-xs text-muted-foreground mb-1 block">混合模式</label>
-              <select v-model="layers[selectedLayer].blendMode" @change="updatePreview" class="w-full p-2 border rounded-lg text-sm">
+              <select v-model="layers[selectedLayer].blendMode" @change="updatePreview" class="w-full p-2 border border-border rounded-lg text-sm">
                 <option value="source-over">正常 (Normal)</option>
                 <option value="multiply">正片叠底 (Multiply)</option>
                 <option value="screen">滤色 (Screen)</option>
@@ -188,7 +188,7 @@
             <div v-if="useGradient" class="space-y-3">
               <div>
                 <label class="text-xs text-muted-foreground mb-1 block">渐变方向</label>
-                <select v-model="gradientDirection" @change="updatePreview" class="w-full p-2 border rounded-lg text-sm">
+                <select v-model="gradientDirection" @change="updatePreview" class="w-full p-2 border border-border rounded-lg text-sm">
                   <option value="to-right">从左到右</option>
                   <option value="to-left">从右到左</option>
                   <option value="to-bottom">从上到下</option>
@@ -217,7 +217,7 @@
                     v-model="gradientEnd"
                     type="text"
                     @input="updatePreview"
-                    class="flex-1 p-2 border rounded text-sm font-mono"
+                    class="flex-1 p-2 border border-border rounded text-sm font-mono"
                   >
                 </div>
               </div>

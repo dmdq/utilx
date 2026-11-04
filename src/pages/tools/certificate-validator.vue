@@ -22,7 +22,7 @@
                   v-model="websiteUrl"
                   type="url"
                   placeholder="https://example.com"
-                  class="flex-1 px-4 py-3 border rounded-lg font-mono text-sm"
+                  class="flex-1 px-4 py-3 border border-border rounded-lg font-mono text-sm"
                   @keyup.enter="validateCertificate"
                 >
                 <button

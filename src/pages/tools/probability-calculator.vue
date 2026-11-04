@@ -19,7 +19,7 @@
                   v-model.number="basicProbability.favorable"
                   type="number"
                   min="0"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="3"
                 />
               </div>
@@ -29,7 +29,7 @@
                   v-model.number="basicProbability.total"
                   type="number"
                   min="1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="6"
                 />
               </div>
@@ -57,7 +57,7 @@
                 v-model.number="permutation.n"
                 type="number"
                 min="0"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="5"
               />
             </div>
@@ -68,7 +68,7 @@
                 v-model.number="permutation.r"
                 type="number"
                 min="0"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="3"
               />
             </div>
@@ -107,7 +107,7 @@
                   min="0"
                   max="1"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="0.6"
                 />
               </div>
@@ -119,7 +119,7 @@
                   min="0"
                   max="1"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="0.8"
                 />
               </div>
@@ -158,7 +158,7 @@
                   min="0"
                   max="1"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="0.9"
                 />
               </div>
@@ -170,7 +170,7 @@
                   min="0"
                   max="1"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="0.3"
                 />
               </div>
@@ -182,7 +182,7 @@
                   min="0"
                   max="1"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="0.4"
                 />
               </div>
@@ -210,7 +210,7 @@
                   v-model.number="binomial.n"
                   type="number"
                   min="1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="10"
                 />
               </div>
@@ -222,7 +222,7 @@
                   min="0"
                   max="1"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="0.5"
                 />
               </div>
@@ -232,7 +232,7 @@
                   v-model.number="binomial.k"
                   type="number"
                   min="0"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="5"
                 />
               </div>
@@ -263,7 +263,7 @@
                   v-model.number="normal.mean"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="0"
                 />
               </div>
@@ -274,7 +274,7 @@
                   type="number"
                   min="0.01"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="1"
                 />
               </div>
@@ -286,7 +286,7 @@
                 v-model.number="normal.x"
                 type="number"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="1.96"
               />
             </div>

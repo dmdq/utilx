@@ -33,7 +33,7 @@
               type="number"
               min="0"
               step="1000"
-              class="w-full pl-8 pr-4 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full pl-8 pr-4 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 20000"
             />
           </div>
@@ -60,7 +60,7 @@
                   type="number"
                   min="0"
                   step="1000"
-                  class="w-full pl-7 pr-2 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full pl-7 pr-2 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="下限"
                 />
               </div>
@@ -71,7 +71,7 @@
                   type="number"
                   min="0"
                   step="1000"
-                  class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="上限"
                 />
                 <div v-else class="w-full px-2.5 py-2 bg-muted/50 border border-border rounded-lg text-xs text-muted-foreground text-center">以上不限</div>
@@ -83,7 +83,7 @@
                   min="0"
                   max="100"
                   step="0.1"
-                  class="w-full px-2.5 py-2 pr-6 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2.5 py-2 pr-6 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 />
                 <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs text-muted-foreground">%</span>
               </div>
@@ -110,7 +110,7 @@
               type="number"
               min="0"
               step="500"
-              class="w-full pl-8 pr-4 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full pl-8 pr-4 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 5000"
             />
           </div>

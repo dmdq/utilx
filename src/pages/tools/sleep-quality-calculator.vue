@@ -20,7 +20,7 @@
                   type="number"
                   min="1"
                   max="100"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="30"
                 />
               </div>
@@ -29,7 +29,7 @@
                 <input
                   v-model="sleepInfo.bedtime"
                   type="time"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                 />
               </div>
               <div>
@@ -37,7 +37,7 @@
                 <input
                   v-model="sleepInfo.wakeTime"
                   type="time"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                 />
               </div>
               <div>
@@ -48,7 +48,7 @@
                   min="0"
                   max="24"
                   step="0.5"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="7.5"
                 />
               </div>
@@ -84,7 +84,7 @@
                 type="number"
                 min="0"
                 max="120"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="15"
               />
               <div class="text-xs text-muted-foreground mt-1">
@@ -99,7 +99,7 @@
                 type="number"
                 min="0"
                 max="20"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="1"
               />
             </div>
@@ -111,7 +111,7 @@
                 type="number"
                 min="0"
                 max="300"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="10"
               />
               <div class="text-xs text-muted-foreground mt-1">
@@ -122,7 +122,7 @@
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block text-sm font-medium mb-2">是否午睡</label>
-                <select v-model="sleepInfo.nap" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="sleepInfo.nap" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="no">不午睡</option>
                   <option value="short">短午睡(≤30分钟)</option>
                   <option value="long">长午睡(>30分钟)</option>
@@ -135,7 +135,7 @@
                   type="number"
                   min="5"
                   max="180"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="30"
                 />
               </div>

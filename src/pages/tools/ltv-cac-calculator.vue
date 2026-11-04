@@ -34,7 +34,7 @@
             type="number"
             min="0.01"
             step="1"
-            class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
           <p class="text-xs text-muted-foreground mt-1">每月从单个客户获得的平均收入：订阅月费或月均客单价，如 99</p>
         </div>
@@ -48,7 +48,7 @@
             min="1"
             max="100"
             step="1"
-            class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
           <p class="text-xs text-muted-foreground mt-1">服务单个客户的毛利占比：纯软件可按 100，含服务 / 硬件成本按实际填，如 80</p>
         </div>
@@ -85,7 +85,7 @@
             min="1"
             max="120"
             step="1"
-            class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
           <p class="text-xs text-muted-foreground mt-1">客户平均停留在付费状态多少个月（1–120），凭历史数据或经验估计</p>
         </div>
@@ -98,7 +98,7 @@
             min="0.5"
             max="50"
             step="0.1"
-            class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
           <p class="text-xs text-muted-foreground mt-1">{{ churnHint }}</p>
         </div>
@@ -112,7 +112,7 @@
             min="0"
             step="10"
             placeholder="如 600"
-            class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
           <p class="text-xs text-muted-foreground mt-1">广告 + 市场 + 销售人力与佣金，摊到单个新客户身上的总成本</p>
         </div>
@@ -128,7 +128,7 @@
             min="1"
             step="1"
             placeholder="如 50"
-            class="w-full mt-1.5 px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full mt-1.5 px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
           <p class="text-xs text-muted-foreground mt-1">用于估算月度获客支出（CAC × 月新增）的烧钱视角</p>
         </div>

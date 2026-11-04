@@ -29,7 +29,7 @@
                   <input
                     v-model="hexValue"
                     maxlength="7"
-                    class="flex-1 px-3 py-2 border border-border rounded-lg bg-muted text-foreground font-mono uppercase"
+                    class="flex-1 px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground font-mono uppercase"
                     @input="updateFromHex"
                   >
                   <button @click="copyHex" class="px-3 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">复制</button>
@@ -97,11 +97,11 @@
             <label class="block text-sm font-medium text-foreground mb-1">RGB</label>
             <div class="flex gap-2 items-center">
               <span class="text-red-500 font-bold">R</span>
-              <input v-model.number="rgb.r" type="number" min="0" max="255" class="w-20 px-2 py-2 border border-border rounded bg-muted text-foreground" @input="updateFromRgb">
+              <input v-model.number="rgb.r" type="number" min="0" max="255" class="w-20 px-2 py-2 border border-border border-border rounded bg-muted text-foreground" @input="updateFromRgb">
               <span class="text-green-500 font-bold">G</span>
-              <input v-model.number="rgb.g" type="number" min="0" max="255" class="w-20 px-2 py-2 border border-border rounded bg-muted text-foreground" @input="updateFromRgb">
+              <input v-model.number="rgb.g" type="number" min="0" max="255" class="w-20 px-2 py-2 border border-border border-border rounded bg-muted text-foreground" @input="updateFromRgb">
               <span class="text-blue-500 font-bold">B</span>
-              <input v-model.number="rgb.b" type="number" min="0" max="255" class="w-20 px-2 py-2 border border-border rounded bg-muted text-foreground" @input="updateFromRgb">
+              <input v-model.number="rgb.b" type="number" min="0" max="255" class="w-20 px-2 py-2 border border-border border-border rounded bg-muted text-foreground" @input="updateFromRgb">
             </div>
             <div class="mt-2 font-mono text-sm text-muted-foreground">
               rgb({{ rgb.r }}, {{ rgb.g }}, {{ rgb.b }})
@@ -112,11 +112,11 @@
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">HSL</label>
             <div class="flex gap-2 items-center">
-              <input v-model.number="hsl.h" type="number" min="0" max="360" class="w-20 px-2 py-2 border border-border rounded bg-muted text-foreground" @input="updateFromHsl">
+              <input v-model.number="hsl.h" type="number" min="0" max="360" class="w-20 px-2 py-2 border border-border border-border rounded bg-muted text-foreground" @input="updateFromHsl">
               <span>°</span>
-              <input v-model.number="hsl.s" type="number" min="0" max="100" class="w-20 px-2 py-2 border border-border rounded bg-muted text-foreground" @input="updateFromHsl">
+              <input v-model.number="hsl.s" type="number" min="0" max="100" class="w-20 px-2 py-2 border border-border border-border rounded bg-muted text-foreground" @input="updateFromHsl">
               <span>%</span>
-              <input v-model.number="hsl.l" type="number" min="0" max="100" class="w-20 px-2 py-2 border border-border rounded bg-muted text-foreground" @input="updateFromHsl">
+              <input v-model.number="hsl.l" type="number" min="0" max="100" class="w-20 px-2 py-2 border border-border border-border rounded bg-muted text-foreground" @input="updateFromHsl">
               <span>%</span>
             </div>
             <div class="mt-2 font-mono text-sm text-muted-foreground">
@@ -128,11 +128,11 @@
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">HSV</label>
             <div class="flex gap-2 items-center">
-              <input v-model.number="hsv.h" type="number" min="0" max="360" class="w-20 px-2 py-2 border border-border rounded bg-muted text-foreground" @input="updateFromHsv">
+              <input v-model.number="hsv.h" type="number" min="0" max="360" class="w-20 px-2 py-2 border border-border border-border rounded bg-muted text-foreground" @input="updateFromHsv">
               <span>°</span>
-              <input v-model.number="hsv.s" type="number" min="0" max="100" class="w-20 px-2 py-2 border border-border rounded bg-muted text-foreground" @input="updateFromHsv">
+              <input v-model.number="hsv.s" type="number" min="0" max="100" class="w-20 px-2 py-2 border border-border border-border rounded bg-muted text-foreground" @input="updateFromHsv">
               <span>%</span>
-              <input v-model.number="hsv.v" type="number" min="0" max="100" class="w-20 px-2 py-2 border border-border rounded bg-muted text-foreground" @input="updateFromHsv">
+              <input v-model.number="hsv.v" type="number" min="0" max="100" class="w-20 px-2 py-2 border border-border border-border rounded bg-muted text-foreground" @input="updateFromHsv">
               <span>%</span>
             </div>
             <div class="mt-2 font-mono text-sm text-muted-foreground">

@@ -27,7 +27,7 @@
         <textarea
           v-model="jwtToken"
           placeholder="请输入JWT Token..."
-          class="w-full h-48 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-48 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div class="text-sm text-muted-foreground">
           Token长度：{{ jwtToken.length }}

@@ -32,7 +32,7 @@
             id="barcode-format"
             v-model="format"
             @change="onFormatChange"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="f in FORMATS" :key="f.id" :value="f.id">{{ f.label }}</option>
           </select>
@@ -48,7 +48,7 @@
             type="text"
             :placeholder="inputPlaceholder"
             spellcheck="false"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
           <p
             class="mt-2 text-xs leading-relaxed p-2.5 rounded border flex items-start gap-1.5"
@@ -95,11 +95,11 @@
           <div class="grid grid-cols-2 gap-3">
             <div>
               <p class="text-xs text-muted-foreground mb-1">条色</p>
-              <input v-model="style.lineColor" type="color" class="w-full h-9 px-1 bg-background border border-border rounded-lg cursor-pointer" />
+              <input v-model="style.lineColor" type="color" class="w-full h-9 px-1 bg-background border border-border border-border rounded-lg cursor-pointer" />
             </div>
             <div>
               <p class="text-xs text-muted-foreground mb-1">背景色</p>
-              <input v-model="style.bgColor" type="color" class="w-full h-9 px-1 bg-background border border-border rounded-lg cursor-pointer" />
+              <input v-model="style.bgColor" type="color" class="w-full h-9 px-1 bg-background border border-border border-border rounded-lg cursor-pointer" />
             </div>
           </div>
         </div>
@@ -208,7 +208,7 @@
           v-model="batchText"
           rows="6"
           spellcheck="false"
-          class="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+          class="w-full px-3 py-2.5 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           placeholder="每行一个条形码内容，最多 200 行，空行自动忽略、首尾空格自动去除&#10;例如：&#10;590123412345&#10;692020288888&#10;UTIL-2026-A"
         ></textarea>
 

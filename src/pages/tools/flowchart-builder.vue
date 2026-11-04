@@ -198,7 +198,7 @@
               <input
                 v-model="selectedNode.label"
                 type="text"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="节点标签"
               />
             </div>

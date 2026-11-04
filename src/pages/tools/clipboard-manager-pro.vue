@@ -58,7 +58,7 @@
               <input
                 v-model="newCategoryName"
                 placeholder="分类名称"
-                class="flex-1 px-2 py-1 text-sm border rounded"
+                class="flex-1 px-2 py-1 text-sm border border-border rounded"
                 @keyup.enter="addCategory"
               >
               <input
@@ -108,7 +108,7 @@
                 @input="filterItems"
                 type="text"
                 placeholder="搜索剪贴板内容..."
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 
@@ -117,7 +117,7 @@
               <select
                 v-model="selectedCategory"
                 @change="filterItems"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
                 <option value="">全部分类</option>
                 <option v-for="category in categories" :key="category.id" :value="category.id">
@@ -131,7 +131,7 @@
               <select
                 v-model="selectedType"
                 @change="filterItems"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
                 <option value="">全部类型</option>
                 <option value="text">文本</option>
@@ -147,7 +147,7 @@
               <select
                 v-model="timeRange"
                 @change="filterItems"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
                 <option value="">全部时间</option>
                 <option value="today">今天</option>
@@ -179,7 +179,7 @@
                 type="number"
                 min="10"
                 max="1000"
-                class="w-20 px-2 py-1 border rounded text-sm"
+                class="w-20 px-2 py-1 border border-border rounded text-sm"
               >
             </div>
 
@@ -320,7 +320,7 @@
             <input
               v-model="editingItem.title"
               type="text"
-              class="w-full px-3 py-2 border rounded-md"
+              class="w-full px-3 py-2 border border-border rounded-md"
             >
           </div>
 
@@ -328,7 +328,7 @@
             <label class="block text-sm font-medium text-foreground mb-1">内容</label>
             <textarea
               v-model="editingItem.content"
-              class="w-full px-3 py-2 border border-border rounded-md resize-none bg-background"
+              class="w-full px-3 py-2 border border-border border-border rounded-md resize-none bg-background"
               rows="8"
             ></textarea>
           </div>
@@ -336,7 +336,7 @@
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">分类</label>
-              <select v-model="editingItem.category" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="editingItem.category" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="">无分类</option>
                 <option v-for="category in categories" :key="category.id" :value="category.id">
                   {{ category.name }}
@@ -349,7 +349,7 @@
               <input
                 v-model="editingItem.tags"
                 placeholder="用逗号分隔"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
           </div>

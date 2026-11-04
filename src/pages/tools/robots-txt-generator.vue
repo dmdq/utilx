@@ -29,7 +29,7 @@
           <select
             v-model="presetId"
             @change="loadPreset(presetId)"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="tpl in presetTemplates" :key="tpl.id" :value="tpl.id">{{ tpl.label }}</option>
           </select>
@@ -81,7 +81,7 @@
               <span class="text-xs text-muted-foreground block mb-1">User-agent</span>
               <select
                 v-model="group.uaType"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
                 <option v-for="opt in uaOptions" :key="opt.value" :value="opt.value">{{ opt.label }}</option>
               </select>
@@ -92,7 +92,7 @@
               v-model="group.customUa"
               type="text"
               placeholder="输入爬虫名称，例如 GPTBot"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
 
             <label class="block">
@@ -104,7 +104,7 @@
                 max="30"
                 step="1"
                 placeholder="不设置则不输出该行"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </label>
             <p class="text-xs text-muted-foreground flex items-start gap-1.5">
@@ -131,7 +131,7 @@
                     v-model="rule.path"
                     type="text"
                     placeholder="/path/to/block"
-                    class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                    class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
                     :class="validatePath(rule.path) === 'invalid' ? 'border-red-500/60' : 'border-border'"
                   />
                   <span v-if="hasWildcard(rule.path)" class="px-1.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-medium flex-shrink-0">通配符</span>
@@ -172,7 +172,7 @@
             v-model="sitemapsText"
             rows="4"
             placeholder="https://www.example.com/sitemap.xml（每行一个）"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           ></textarea>
           <ul v-if="invalidSitemaps.length" class="space-y-1">
             <li v-for="bad in invalidSitemaps" :key="bad.line" class="text-xs text-red-500 flex items-start gap-1.5">

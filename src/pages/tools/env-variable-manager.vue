@@ -72,7 +72,7 @@
               <input
                 v-model="currentEnvironmentData.name"
                 @blur="updateEnvironmentInfo"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
             <div>
@@ -80,7 +80,7 @@
               <textarea
                 v-model="currentEnvironmentData.description"
                 @blur="updateEnvironmentInfo"
-                class="w-full px-3 py-2 border rounded-md resize-none h-20"
+                class="w-full px-3 py-2 border border-border rounded-md resize-none h-20"
                 placeholder="描述此环境的用途..."
               ></textarea>
             </div>
@@ -136,7 +136,7 @@
               <input
                 v-model="searchQuery"
                 placeholder="搜索变量..."
-                class="px-3 py-1 border rounded text-sm"
+                class="px-3 py-1 border border-border rounded text-sm"
               >
               <button
                 @click="addVariable"
@@ -223,7 +223,7 @@
                     <select
                       v-model="variable.type"
                       @change="saveToStorage"
-                      class="text-sm border rounded px-2 py-1"
+                      class="text-sm border border-border rounded px-2 py-1"
                     >
                       <option value="string">字符串</option>
                       <option value="number">数字</option>
@@ -286,7 +286,7 @@
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium mb-2">导出格式</label>
-              <select v-model="exportFormat" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="exportFormat" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="env">.env</option>
                 <option value="json">JSON</option>
                 <option value="yaml">YAML</option>
@@ -374,7 +374,7 @@
             <label class="block text-sm font-medium mb-1">变量名</label>
             <input
               v-model="editingVariable.name"
-              class="w-full px-3 py-2 border rounded-md"
+              class="w-full px-3 py-2 border border-border rounded-md"
               placeholder="VARIABLE_NAME"
             >
           </div>
@@ -382,7 +382,7 @@
             <label class="block text-sm font-medium mb-1">变量值</label>
             <textarea
               v-model="editingVariable.value"
-              class="w-full px-3 py-2 border rounded-md resize-none h-24"
+              class="w-full px-3 py-2 border border-border rounded-md resize-none h-24"
               placeholder="变量值..."
             ></textarea>
           </div>
@@ -390,13 +390,13 @@
             <label class="block text-sm font-medium mb-1">描述</label>
             <input
               v-model="editingVariable.description"
-              class="w-full px-3 py-2 border rounded-md"
+              class="w-full px-3 py-2 border border-border rounded-md"
               placeholder="变量描述..."
             >
           </div>
           <div>
             <label class="block text-sm font-medium mb-1">类型</label>
-            <select v-model="editingVariable.type" class="w-full px-3 py-2 border rounded-md">
+            <select v-model="editingVariable.type" class="w-full px-3 py-2 border border-border rounded-md">
               <option value="string">字符串</option>
               <option value="number">数字</option>
               <option value="boolean">布尔值</option>

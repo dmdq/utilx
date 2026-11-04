@@ -39,7 +39,7 @@
             v-model="form.title"
             type="text"
             placeholder="例如：Meta 标签生成器 - 在线网页 SEO 标签工具"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <div class="flex items-start justify-between gap-3 mt-1.5">
             <p class="text-xs leading-relaxed flex items-start gap-1 min-w-0" :class="STATUS_TEXT_CLASS[titleStatus.level]">
@@ -58,7 +58,7 @@
             v-model="form.description"
             rows="3"
             placeholder="写清页面能解决什么问题、适合谁用，理想区间 120-165 字"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           ></textarea>
           <div class="flex items-start justify-between gap-3 mt-1.5">
             <p class="text-xs leading-relaxed flex items-start gap-1 min-w-0" :class="STATUS_TEXT_CLASS[descStatus.level]">
@@ -77,7 +77,7 @@
             v-model="form.canonical"
             type="text"
             placeholder="https://www.example.com/page"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <div class="flex items-start justify-between gap-3 mt-1.5">
             <p class="text-xs leading-relaxed flex items-start gap-1 min-w-0" :class="STATUS_TEXT_CLASS[canonicalStatus.level]">
@@ -94,7 +94,7 @@
           <select
             id="mt-robots"
             v-model="form.robots"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="r in ROBOTS_CHOICES" :key="r.value" :value="r.value">{{ r.label }}</option>
           </select>
@@ -109,7 +109,7 @@
             v-model="form.keywords"
             type="text"
             placeholder="关键词1, 关键词2, 关键词3"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <div class="flex items-center justify-between gap-3 mt-1.5">
             <p class="text-xs text-muted-foreground min-w-0">主流搜索引擎已忽略此标签，仅存档用</p>
@@ -125,7 +125,7 @@
             v-model="form.author"
             type="text"
             placeholder="页面作者或机构名"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <div class="flex items-center justify-end mt-1.5">
             <span class="text-xs font-mono tabular-nums" :class="form.author.trim() ? 'text-primary' : 'text-muted-foreground'">{{ charCount(form.author) }} 字</span>
@@ -139,7 +139,7 @@
             id="mt-viewport"
             v-model="form.viewport"
             type="text"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <div class="flex items-center justify-between gap-3 mt-1.5">
             <p class="text-xs text-muted-foreground min-w-0">移动端自适应必需，一般保持默认即可</p>
@@ -173,7 +173,7 @@
             disabled
             :value="form.title"
             placeholder="与上方 title 保持一致"
-            class="w-full px-3 py-2 bg-muted/50 border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
+            class="w-full px-3 py-2 bg-muted/50 border border-border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
           />
           <input
             v-else
@@ -181,7 +181,7 @@
             v-model="form.ogTitle"
             type="text"
             placeholder="独立填写 og:title，留空则整行省略"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <div class="flex items-center justify-end mt-1.5">
             <span v-if="!form.ogTitleSync" class="text-xs font-mono tabular-nums" :class="form.ogTitle.trim() ? 'text-primary' : 'text-muted-foreground'">{{ charCount(form.ogTitle) }} 字</span>
@@ -197,7 +197,7 @@
             disabled
             :value="form.description"
             placeholder="自动同步 description"
-            class="w-full px-3 py-2 bg-muted/50 border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
+            class="w-full px-3 py-2 bg-muted/50 border border-border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
           />
           <p class="text-xs text-muted-foreground mt-1.5">固定同步上方 description，留空则整行省略</p>
         </div>
@@ -210,7 +210,7 @@
             v-model="form.ogImage"
             type="text"
             placeholder="https://www.example.com/cover.png"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <div class="flex items-start justify-between gap-3 mt-1.5">
             <p class="text-xs leading-relaxed flex items-start gap-1 min-w-0" :class="STATUS_TEXT_CLASS[ogImageStatus.level]">
@@ -230,7 +230,7 @@
             disabled
             :value="form.canonical"
             placeholder="自动同步 canonical"
-            class="w-full px-3 py-2 bg-muted/50 border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
+            class="w-full px-3 py-2 bg-muted/50 border border-border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
           />
           <p class="text-xs text-muted-foreground mt-1.5">固定同步上方 Canonical URL，留空则整行省略</p>
         </div>
@@ -241,7 +241,7 @@
           <select
             id="mt-ogtype"
             v-model="form.ogType"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="t in OG_TYPE_CHOICES" :key="t.value" :value="t.value">{{ t.label }}</option>
           </select>
@@ -258,7 +258,7 @@
           <select
             id="mt-twcard"
             v-model="form.twitterCard"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="c in TWITTER_CARD_CHOICES" :key="c.value" :value="c.value">{{ c.label }}</option>
           </select>
@@ -280,7 +280,7 @@
             disabled
             :value="effOgTitle"
             placeholder="复用 og:title"
-            class="w-full px-3 py-2 bg-muted/50 border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
+            class="w-full px-3 py-2 bg-muted/50 border border-border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
           />
           <input
             v-else
@@ -288,7 +288,7 @@
             v-model="form.twTitle"
             type="text"
             placeholder="独立填写 twitter:title，留空则整行省略"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <div class="flex items-center justify-end mt-1.5">
             <span v-if="!form.twTitleUseOg" class="text-xs font-mono tabular-nums" :class="form.twTitle.trim() ? 'text-primary' : 'text-muted-foreground'">{{ charCount(form.twTitle) }} 字</span>
@@ -310,7 +310,7 @@
             disabled
             :value="form.description"
             placeholder="复用 og:description"
-            class="w-full px-3 py-2 bg-muted/50 border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
+            class="w-full px-3 py-2 bg-muted/50 border border-border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
           />
           <textarea
             v-else
@@ -318,7 +318,7 @@
             v-model="form.twDesc"
             rows="2"
             placeholder="独立填写 twitter:description，留空则整行省略"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           ></textarea>
           <div class="flex items-center justify-end mt-1.5">
             <span v-if="!form.twDescUseOg" class="text-xs font-mono tabular-nums" :class="form.twDesc.trim() ? 'text-primary' : 'text-muted-foreground'">{{ charCount(form.twDesc) }} 字</span>
@@ -340,7 +340,7 @@
             disabled
             :value="form.ogImage"
             placeholder="复用 og:image"
-            class="w-full px-3 py-2 bg-muted/50 border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
+            class="w-full px-3 py-2 bg-muted/50 border border-border border-input rounded-lg text-foreground text-sm opacity-70 cursor-not-allowed"
           />
           <input
             v-else
@@ -348,7 +348,7 @@
             v-model="form.twImage"
             type="text"
             placeholder="https://www.example.com/twitter-cover.png"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <div class="flex items-center justify-end mt-1.5">
             <span v-if="!form.twImageUseOg" class="text-xs font-mono tabular-nums" :class="form.twImage.trim() ? 'text-primary' : 'text-muted-foreground'">{{ charCount(form.twImage) }} 字符</span>

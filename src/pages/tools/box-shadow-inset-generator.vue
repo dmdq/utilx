@@ -43,7 +43,7 @@
 
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">颜色</label>
-              <input v-model="color" type="color" class="w-full h-10 rounded cursor-pointer border border-border">
+              <input v-model="color" type="color" class="w-full h-10 rounded cursor-pointer border border-border border-border">
             </div>
 
             <div>

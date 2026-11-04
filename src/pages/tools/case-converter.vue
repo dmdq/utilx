@@ -58,7 +58,7 @@
             v-model="inputText"
             @input="handleInput"
             placeholder="请输入要转换的文本..."
-            class="w-full h-64 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-64 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
 
           <div class="text-sm text-muted-foreground">

@@ -31,7 +31,7 @@
               rows="4"
               maxlength="200"
               placeholder="例如：天地玄黄宇宙洪荒"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             />
             <p class="text-xs text-muted-foreground mt-1">当前 {{ charCount }} 个字 · 每页 {{ cellsPerPage }} 格</p>
           </div>
@@ -54,15 +54,15 @@
           <div class="grid grid-cols-3 gap-2">
             <div>
               <label class="block text-xs font-medium text-foreground mb-1">每行格数</label>
-              <input v-model.number="cols" type="number" min="1" max="20" class="w-full px-2 py-1.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="cols" type="number" min="1" max="20" class="w-full px-2 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-xs font-medium text-foreground mb-1">行数</label>
-              <input v-model.number="rows" type="number" min="1" max="20" class="w-full px-2 py-1.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="rows" type="number" min="1" max="20" class="w-full px-2 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-xs font-medium text-foreground mb-1">页数</label>
-              <input v-model.number="pages" type="number" min="1" max="20" class="w-full px-2 py-1.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="pages" type="number" min="1" max="20" class="w-full px-2 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
           </div>
           <p v-if="!fitsA4Flag" class="text-xs text-amber-600 dark:text-amber-500 bg-amber-500/10 rounded-lg p-2 leading-relaxed">
@@ -89,7 +89,7 @@
               <label class="text-sm font-medium text-foreground">显示拼音</label>
               <p class="text-xs text-muted-foreground">田字格上方加拼音行</p>
             </div>
-            <input v-model="showPinyin" type="checkbox" class="w-4 h-4 rounded border-border accent-primary" />
+            <input v-model="showPinyin" type="checkbox" class="w-4 h-4 rounded border border-border accent-primary" />
           </div>
           <div v-if="showPinyin && gridType !== 'english' && missingList.length" class="text-xs text-amber-600 dark:text-amber-500 bg-amber-500/10 rounded-lg p-2 leading-relaxed flex items-start gap-1.5">
             <AlertTriangle class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />

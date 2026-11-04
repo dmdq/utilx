@@ -17,7 +17,7 @@
           <label class="text-sm font-medium mb-2 block">哈希算法</label>
           <select
             v-model="hashAlgorithm"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="SHA-1">HMAC-SHA1 (160位)</option>
             <option value="SHA-256">HMAC-SHA256 (256位) - 推荐</option>
@@ -33,7 +33,7 @@
           <label class="text-sm font-medium mb-2 block">输出格式</label>
           <select
             v-model="outputFormat"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="hex">十六进制 (Hex)</option>
             <option value="base64">Base64</option>
@@ -68,7 +68,7 @@
         <textarea
           v-model="secretKey"
           placeholder="请输入HMAC密钥..."
-          class="w-full h-32 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-32 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div class="text-sm text-muted-foreground">
           密钥长度：{{ secretKey.length }} 字符
@@ -105,7 +105,7 @@
         <textarea
           v-model="message"
           placeholder="请输入要计算HMAC的消息..."
-          class="w-full h-32 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-32 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
         <div class="text-sm text-muted-foreground">
           消息长度：{{ message.length }} 字符
@@ -213,7 +213,7 @@
           <textarea
             v-model="batchMessages"
             placeholder="输入多条消息，每行一条..."
-            class="w-full h-32 p-3 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-32 p-3 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
         </div>
         <button

@@ -29,7 +29,7 @@
         </div>
         <div class="mb-3">
           <label class="text-xs text-muted-foreground">输入编码格式</label>
-          <select v-model="inputEncoding" class="w-full px-3 py-2 bg-muted border border-border rounded text-sm mt-1">
+          <select v-model="inputEncoding" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-sm mt-1">
             <option value="utf8">UTF-8 文本</option>
             <option value="base16">Base16 (Hex)</option>
             <option value="base32">Base32</option>
@@ -40,7 +40,7 @@
         </div>
         <textarea
           v-model="inputText"
-          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="输入要转换的内容..."
           @input="convert"
         ></textarea>
@@ -64,7 +64,7 @@
         </div>
         <div class="mb-3">
           <label class="text-xs text-muted-foreground">输出编码格式</label>
-          <select v-model="outputEncoding" class="w-full px-3 py-2 bg-muted border border-border rounded text-sm mt-1">
+          <select v-model="outputEncoding" class="w-full px-3 py-2 bg-muted border border-border border-border rounded text-sm mt-1">
             <option value="utf8">UTF-8 文本</option>
             <option value="base16">Base16 (Hex)</option>
             <option value="base32">Base32</option>

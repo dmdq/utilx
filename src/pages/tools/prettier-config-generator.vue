@@ -34,7 +34,7 @@
               id="pw-preset"
               v-model="presetKey"
               @change="applyPreset"
-              class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <option v-for="p in PRESETS" :key="p.key" :value="p.key">{{ p.label }}</option>
             </select>
@@ -73,13 +73,13 @@
               <select
                 id="pw-tab-width"
                 v-model.number="opts.tabWidth"
-                class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
                 <option v-for="n in [1, 2, 3, 4, 8]" :key="n" :value="n">{{ n }} 空格</option>
               </select>
             </div>
             <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-              <input v-model="opts.useTabs" type="checkbox" class="w-4 h-4 rounded border-border">
+              <input v-model="opts.useTabs" type="checkbox" class="w-4 h-4 rounded border border-border">
               <span>useTabs 用 Tab 缩进代替空格</span>
               <span class="ml-auto text-[10px] text-muted-foreground bg-muted px-1.5 py-0.5 rounded">默认 false</span>
             </label>
@@ -89,12 +89,12 @@
           <div class="border-t border-border pt-4 space-y-3">
             <p class="text-xs font-semibold text-muted-foreground">代码风格</p>
             <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-              <input v-model="opts.semi" type="checkbox" class="w-4 h-4 rounded border-border">
+              <input v-model="opts.semi" type="checkbox" class="w-4 h-4 rounded border border-border">
               <span>semi 语句结尾加分号</span>
               <span class="ml-auto text-[10px] text-muted-foreground bg-muted px-1.5 py-0.5 rounded">默认 true</span>
             </label>
             <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-              <input v-model="opts.singleQuote" type="checkbox" class="w-4 h-4 rounded border-border">
+              <input v-model="opts.singleQuote" type="checkbox" class="w-4 h-4 rounded border border-border">
               <span>singleQuote 字符串用单引号</span>
               <span class="ml-auto text-[10px] text-muted-foreground bg-muted px-1.5 py-0.5 rounded">默认 false</span>
             </label>
@@ -106,7 +106,7 @@
               <select
                 id="pw-quote-props"
                 v-model="opts.quoteProps"
-                class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
                 <option value="as-needed">as-needed（需要时才加引号）</option>
                 <option value="consistent">consistent（有需要就全部加）</option>
@@ -121,7 +121,7 @@
               <select
                 id="pw-trailing-comma"
                 v-model="opts.trailingComma"
-                class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
                 <option value="all">all（v3 默认，函数参数也补）</option>
                 <option value="es5">es5（v2 默认，仅 ES5 结构）</option>
@@ -134,12 +134,12 @@
           <div class="border-t border-border pt-4 space-y-3">
             <p class="text-xs font-semibold text-muted-foreground">括号与箭头</p>
             <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-              <input v-model="opts.bracketSpacing" type="checkbox" class="w-4 h-4 rounded border-border">
+              <input v-model="opts.bracketSpacing" type="checkbox" class="w-4 h-4 rounded border border-border">
               <span>bracketSpacing 对象字面量内保留空格</span>
               <span class="ml-auto text-[10px] text-muted-foreground bg-muted px-1.5 py-0.5 rounded">默认 true</span>
             </label>
             <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-              <input v-model="opts.bracketSameLine" type="checkbox" class="w-4 h-4 rounded border-border">
+              <input v-model="opts.bracketSameLine" type="checkbox" class="w-4 h-4 rounded border border-border">
               <span>bracketSameLine 多行 HTML 标签「&gt;」不换行</span>
               <span class="ml-auto text-[10px] text-muted-foreground bg-muted px-1.5 py-0.5 rounded">默认 false</span>
             </label>
@@ -151,7 +151,7 @@
               <select
                 id="pw-arrow-parens"
                 v-model="opts.arrowParens"
-                class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
                 <option value="always">always（始终加括号）</option>
                 <option value="avoid">avoid（单参数省略括号）</option>
@@ -170,7 +170,7 @@
               <select
                 id="pw-prose-wrap"
                 v-model="opts.proseWrap"
-                class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
                 <option value="preserve">preserve（保持原样）</option>
                 <option value="always">always（按 printWidth 折行）</option>
@@ -185,7 +185,7 @@
               <select
                 id="pw-eol"
                 v-model="opts.endOfLine"
-                class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
                 <option value="lf">lf（默认，推荐）</option>
                 <option value="crlf">crlf（Windows）</option>
@@ -205,7 +205,7 @@
               <select
                 id="pw-hws"
                 v-model="opts.htmlWhitespaceSensitivity"
-                class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
                 <option value="css">css（按 CSS display 决定）</option>
                 <option value="strict">strict（严格保留空白）</option>
@@ -238,7 +238,7 @@
             <select
               v-model="mode"
               aria-label="选择配置模式"
-              class="px-2.5 py-1.5 bg-background border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <option value="minimal">精简（只含非默认项）</option>
               <option value="full">完整（显式全部键）</option>
@@ -277,7 +277,7 @@
               <Play class="w-5 h-5 mr-2 text-primary" /> 安装与格式化命令
             </h2>
             <label class="flex items-center gap-2 text-xs text-muted-foreground cursor-pointer">
-              <input v-model="hasPrettierDep" type="checkbox" class="w-3.5 h-3.5 rounded border-border">
+              <input v-model="hasPrettierDep" type="checkbox" class="w-3.5 h-3.5 rounded border border-border">
               项目里已装过 prettier（跳过安装）
             </label>
           </div>

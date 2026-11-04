@@ -43,7 +43,7 @@
             <label class="text-sm font-medium">分钟 (0-59)</label>
             <div class="mt-2 space-y-2">
               <div class="flex gap-2">
-                <select v-model="config.minuteType" class="flex-1 px-3 py-2 border rounded-md text-sm">
+                <select v-model="config.minuteType" class="flex-1 px-3 py-2 border border-border rounded-md text-sm">
                   <option value="*">每分钟</option>
                   <option value="specific">指定分钟</option>
                   <option value="range">范围</option>
@@ -77,7 +77,7 @@
                   min="0"
                   max="59"
                   placeholder="0"
-                  class="w-20 px-2 py-1 border rounded text-sm"
+                  class="w-20 px-2 py-1 border border-border rounded text-sm"
                 />
                 <span>到</span>
                 <input
@@ -86,7 +86,7 @@
                   min="0"
                   max="59"
                   placeholder="59"
-                  class="w-20 px-2 py-1 border rounded text-sm"
+                  class="w-20 px-2 py-1 border border-border rounded text-sm"
                 />
               </div>
 
@@ -98,7 +98,7 @@
                   type="number"
                   min="1"
                   max="60"
-                  class="w-20 px-2 py-1 border rounded text-sm"
+                  class="w-20 px-2 py-1 border border-border rounded text-sm"
                 />
                 <span>分钟</span>
               </div>
@@ -109,7 +109,7 @@
                   v-model="config.minuteList"
                   type="text"
                   placeholder="0,15,30,45"
-                  class="flex-1 px-2 py-1 border rounded text-sm"
+                  class="flex-1 px-2 py-1 border border-border rounded text-sm"
                 />
               </div>
             </div>
@@ -120,7 +120,7 @@
             <label class="text-sm font-medium">小时 (0-23)</label>
             <div class="mt-2 space-y-2">
               <div class="flex gap-2">
-                <select v-model="config.hourType" class="flex-1 px-3 py-2 border rounded-md text-sm">
+                <select v-model="config.hourType" class="flex-1 px-3 py-2 border border-border rounded-md text-sm">
                   <option value="*">每小时</option>
                   <option value="specific">指定小时</option>
                   <option value="range">范围</option>
@@ -152,7 +152,7 @@
           <div class="mb-4">
             <label class="text-sm font-medium">日期 (1-31)</label>
             <div class="mt-2">
-              <select v-model="config.dayType" class="w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.dayType" class="w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="*">每天</option>
                 <option value="specific">指定日期</option>
                 <option value="last">最后一天</option>
@@ -164,7 +164,7 @@
           <div class="mb-4">
             <label class="text-sm font-medium">月份 (1-12)</label>
             <div class="mt-2">
-              <select v-model="config.monthType" class="w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.monthType" class="w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="*">每月</option>
                 <option value="specific">指定月份</option>
               </select>
@@ -201,7 +201,7 @@
               <textarea
                 v-model="config.command"
                 placeholder="/usr/bin/php /var/www/html/cron.php"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm h-24 resize-none"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm h-24 resize-none"
               ></textarea>
             </div>
             <div class="flex items-center gap-3">
@@ -218,7 +218,7 @@
                 v-model="config.logPath"
                 type="text"
                 placeholder="/var/log/cron.log"
-                class="w-full px-3 py-2 border rounded-md text-sm"
+                class="w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
           </div>

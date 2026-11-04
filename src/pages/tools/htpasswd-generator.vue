@@ -30,7 +30,7 @@
             <input
               v-model="username"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="admin"
               autocomplete="off"
             />
@@ -42,7 +42,7 @@
               <input
                 v-model="password"
                 :type="showPassword ? 'text' : 'password'"
-                class="w-full px-3 py-2.5 pr-10 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 pr-10 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="输入密码"
                 autocomplete="new-password"
               />

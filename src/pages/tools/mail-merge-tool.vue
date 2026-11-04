@@ -32,7 +32,7 @@
             ref="templateRef"
             v-model="template"
             rows="7"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             :placeholder="templatePlaceholder"
           ></textarea>
           <div v-if="parsedHeaders.length">
@@ -66,7 +66,7 @@
           <textarea
             v-model="csvText"
             rows="9"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             :placeholder="csvPlaceholder"
           ></textarea>
           <p class="text-xs text-muted-foreground leading-relaxed">

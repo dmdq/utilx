@@ -17,7 +17,7 @@
               <input
                 v-model.number="monthlyAmount"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入每月定投金额"
                 @input="calculateSIP"
               />
@@ -29,7 +29,7 @@
                 v-model.number="investmentYears"
                 type="number"
                 step="0.5"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入定投期限"
                 @input="calculateSIP"
               />
@@ -41,7 +41,7 @@
                 v-model.number="expectedReturn"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入预期年化收益率"
                 @input="calculateSIP"
               />
@@ -92,7 +92,7 @@
             <input
               v-model.number="periodicAmount"
               type="number"
-              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="请输入定投金额"
               @input="calculateSIP"
             />
@@ -109,7 +109,7 @@
                 v-model.number="managementFee"
                 type="number"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入管理费率"
                 @input="calculateSIP"
               />
@@ -121,7 +121,7 @@
                 v-model.number="purchaseFee"
                 type="number"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入申购费率"
                 @input="calculateSIP"
               />
@@ -145,7 +145,7 @@
                 v-model.number="inflationRate"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入通胀率"
                 @input="calculateSIP"
               />
@@ -242,8 +242,8 @@
         <!-- 收益增长图表 -->
         <div class="bg-card rounded-lg p-6 border">
           <h3 class="text-lg font-semibold mb-4">收益增长趋势</h3>
-          <div class="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
-            <div class="text-center text-gray-500">
+          <div class="h-64 bg-muted/50 rounded-lg flex items-center justify-center">
+            <div class="text-center text-muted-foreground">
               <TrendingUp class="w-12 h-12 mx-auto mb-2" />
               <p class="text-sm">图表功能开发中</p>
               <p class="text-xs">将显示定投收益增长曲线</p>

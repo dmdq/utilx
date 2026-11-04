@@ -35,7 +35,7 @@
               type="number"
               min="2"
               max="30"
-              class="flex-1 text-center px-4 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 text-center px-4 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <button
               @click="people = Math.min(30, people + 1)"
@@ -59,7 +59,7 @@
         </div>
 
         <label class="flex items-center gap-2 text-sm text-foreground">
-          <input v-model="hasElderlyKids" type="checkbox" id="hasElderlyKids" class="w-4 h-4 rounded border-border" />
+          <input v-model="hasElderlyKids" type="checkbox" id="hasElderlyKids" class="w-4 h-4 rounded border border-border" />
           有老人或小孩（加 1 道蒸菜/软烂素菜）
         </label>
 

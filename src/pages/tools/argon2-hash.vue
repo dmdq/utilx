@@ -31,7 +31,7 @@
         <textarea
           v-model="inputText"
           placeholder="请输入要哈希的密码..."
-          class="w-full h-32 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono"
+          class="w-full h-32 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono"
         ></textarea>
 
         <!-- 参数配置 -->
@@ -177,7 +177,7 @@
             <textarea
               v-model="salt"
               placeholder="留空则自动生成随机盐值..."
-              class="w-full h-20 p-3 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+              class="w-full h-20 p-3 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
             ></textarea>
           </div>
 
@@ -306,7 +306,7 @@
                 v-model="verifyPassword"
                 type="password"
                 placeholder="输入原始密码..."
-                class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
               >
             </div>
             <div>
@@ -314,7 +314,7 @@
               <textarea
                 v-model="verifyHash"
                 placeholder="输入PHC格式的哈希值 ($argon2id$...)..."
-                class="w-full h-24 p-3 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full h-24 p-3 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
               ></textarea>
             </div>
             <div v-if="verifyResult" class="p-3 rounded-lg" :class="verifyResult.valid ? 'bg-green-500/10 text-green-500' : 'bg-red-500/10 text-red-500'">

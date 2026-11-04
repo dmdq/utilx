@@ -17,7 +17,7 @@
                 v-model.number="propertyPrice"
                 type="number"
                 step="1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入房产价格"
                 @input="calculateYield"
               />
@@ -28,7 +28,7 @@
               <input
                 v-model.number="monthlyRent"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入月租金"
                 @input="calculateYield"
               />
@@ -40,7 +40,7 @@
                 v-model.number="downPaymentRatio"
                 type="number"
                 step="1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入首付比例"
                 @input="calculateYield"
               />
@@ -52,7 +52,7 @@
                 v-model.number="loanRate"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入贷款利率"
                 @input="calculateYield"
               />
@@ -63,7 +63,7 @@
               <input
                 v-model.number="loanTerm"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入贷款期限"
                 @input="calculateYield"
               />
@@ -79,7 +79,7 @@
               <input
                 v-model.number="propertyFee"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入物业费"
                 @input="calculateYield"
               />
@@ -90,7 +90,7 @@
               <input
                 v-model.number="maintenanceFee"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入年维修费"
                 @input="calculateYield"
               />
@@ -101,7 +101,7 @@
               <input
                 v-model.number="propertyTax"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入年房产税"
                 @input="calculateYield"
               />
@@ -113,7 +113,7 @@
                 v-model.number="vacancyRate"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入空置率"
                 @input="calculateYield"
               />

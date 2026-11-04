@@ -33,7 +33,7 @@
               v-model="role"
               type="text"
               maxlength="20"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如：运营 / 前端工程师"
             />
           </div>
@@ -43,7 +43,7 @@
               v-model="project"
               type="text"
               maxlength="30"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如：会员体系改版"
             />
           </div>
@@ -70,7 +70,7 @@
           <textarea
             v-model="done"
             rows="4"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="每行一条，如：&#10;完成活动页开发与联调&#10;输出竞品分析报告初稿"
           ></textarea>
         </div>
@@ -80,7 +80,7 @@
           <textarea
             v-model="metrics"
             rows="3"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="每行一条，如：&#10;新增用户 1200&#10;页面转化率 3.2%"
           ></textarea>
         </div>
@@ -90,7 +90,7 @@
           <textarea
             v-model="issues"
             rows="3"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="每行一条，如：接口文档缺失，需后端补充"
           ></textarea>
         </div>
@@ -100,7 +100,7 @@
           <textarea
             v-model="nextPlan"
             rows="3"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="每行一条，如：完成灰度发布并观测数据"
           ></textarea>
         </div>

@@ -51,7 +51,7 @@
 
           <textarea
             v-model="inputData"
-            class="w-full h-48 p-3 font-mono text-sm border rounded-md resize-none"
+            class="w-full h-48 p-3 font-mono text-sm border border-border rounded-md resize-none"
             :placeholder="getPlaceholder()"
           ></textarea>
 
@@ -112,12 +112,12 @@
                   <input
                     v-model="rule.pattern"
                     placeholder="正则表达式"
-                    class="w-full px-2 py-1 text-sm border rounded"
+                    class="w-full px-2 py-1 text-sm border border-border rounded"
                   >
                 </div>
                 <div>
                   <label class="block text-xs font-medium mb-1">方法</label>
-                  <select v-model="rule.method" class="w-full px-2 py-1 text-sm border rounded">
+                  <select v-model="rule.method" class="w-full px-2 py-1 text-sm border border-border rounded">
                     <option value="mask">遮蔽</option>
                     <option value="replace">替换</option>
                     <option value="hash">哈希</option>
@@ -133,7 +133,7 @@
                     v-model.number="rule.keepStart"
                     type="number"
                     min="0"
-                    class="w-full px-2 py-1 text-sm border rounded"
+                    class="w-full px-2 py-1 text-sm border border-border rounded"
                   >
                 </div>
                 <div>
@@ -142,7 +142,7 @@
                     v-model.number="rule.keepEnd"
                     type="number"
                     min="0"
-                    class="w-full px-2 py-1 text-sm border rounded"
+                    class="w-full px-2 py-1 text-sm border border-border rounded"
                   >
                 </div>
               </div>
@@ -152,7 +152,7 @@
                 <input
                   v-model="rule.replacement"
                   placeholder="替换成的文本"
-                  class="w-full px-2 py-1 text-sm border rounded"
+                  class="w-full px-2 py-1 text-sm border border-border rounded"
                 >
               </div>
 
@@ -162,7 +162,7 @@
                   <input
                     v-model="rule.testInput"
                     placeholder="测试输入"
-                    class="flex-1 px-2 py-1 text-sm border rounded"
+                    class="flex-1 px-2 py-1 text-sm border border-border rounded"
                   >
                   <div class="px-2 py-1 bg-muted rounded text-sm min-w-0 flex-1 truncate">
                     {{ testRule(rule) }}
@@ -204,7 +204,7 @@
                 v-model="options.maskingKey"
                 type="password"
                 placeholder="密钥用于一致性脱敏"
-                class="w-full px-3 py-2 border rounded"
+                class="w-full px-3 py-2 border border-border rounded"
               >
             </div>
 
@@ -214,7 +214,7 @@
                 v-model="options.maskChar"
                 maxlength="1"
                 placeholder="默认: *"
-                class="w-full px-3 py-2 border rounded"
+                class="w-full px-3 py-2 border border-border rounded"
               >
             </div>
           </div>
@@ -297,7 +297,7 @@
           <div class="grid grid-cols-2 gap-4">
             <div>
               <h4 class="text-sm font-medium mb-2">原始数据示例</h4>
-              <div class="border rounded-md p-3 bg-gray-50 max-h-32 overflow-y-auto">
+              <div class="border rounded-md p-3 bg-muted/50 max-h-32 overflow-y-auto">
                 <pre class="text-xs">{{ getSampleOriginalData() }}</pre>
               </div>
             </div>

@@ -20,7 +20,7 @@
             <select
               v-model="selectedLanguage"
               @change="handleLanguageChange"
-              class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="">自动检测</option>
               <option value="javascript">JavaScript</option>
@@ -50,7 +50,7 @@
             <div class="flex gap-2">
               <select
                 v-model="indentType"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="spaces">空格</option>
                 <option value="tabs">制表符</option>
@@ -60,7 +60,7 @@
                 type="number"
                 min="1"
                 max="8"
-                class="w-20 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-20 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 :disabled="indentType === 'tabs'"
               />
             </div>
@@ -131,7 +131,7 @@
             <textarea
               v-model="inputCode"
               placeholder="请输入要格式化的代码..."
-              class="w-full h-96 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+              class="w-full h-96 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
             ></textarea>
 
             <!-- 语言标签 -->

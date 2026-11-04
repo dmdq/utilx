@@ -65,13 +65,13 @@
             <label class="block text-sm font-medium text-foreground mb-2">代码语言</label>
             <select
               v-model="pasteLang"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring mb-3"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring mb-3"
             >
               <option v-for="(lang, key) in LANGS" :key="key" :value="key">{{ lang.name }}</option>
             </select>
             <textarea
               v-model="pasteText"
-              class="w-full h-64 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-64 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="粘贴代码内容，统计将按所选语言的注释规则进行"
               spellcheck="false"
             ></textarea>

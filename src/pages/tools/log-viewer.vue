@@ -28,7 +28,7 @@
         <div class="relative">
           <textarea
             v-model="logText"
-            class="w-full h-[20rem] px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-[20rem] px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴多行程序日志，例如：&#10;2026-11-03 12:00:00.123 ERROR [main] c.a.OrderService - createOrder failed&#10;java.lang.NullPointerException: order is null&#10;&#9;at com.a.OrderService.run(OrderService.java:42)"
             spellcheck="false"
             @dragover="onDragOver"
@@ -124,7 +124,7 @@
           <input
             v-model="filterInput"
             type="text"
-            class="flex-1 min-w-[14rem] px-3 py-1.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            class="flex-1 min-w-[14rem] px-3 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="关键词（不区分大小写）或 /正则/，如 /timeout\d*/i"
             spellcheck="false"
           />

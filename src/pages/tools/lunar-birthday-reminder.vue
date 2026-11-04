@@ -51,17 +51,17 @@
         <div v-if="mode === 'solar'" class="grid grid-cols-3 gap-3">
           <div>
             <label class="block text-sm font-medium mb-1 text-foreground">年（1900-2100）</label>
-            <input v-model.number="solarYear" type="number" min="1900" max="2100" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+            <input v-model.number="solarYear" type="number" min="1900" max="2100" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
           </div>
           <div>
             <label class="block text-sm font-medium mb-1 text-foreground">月</label>
-            <select v-model.number="solarMonth" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+            <select v-model.number="solarMonth" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
               <option v-for="m in 12" :key="m" :value="m">{{ m }}月</option>
             </select>
           </div>
           <div>
             <label class="block text-sm font-medium mb-1 text-foreground">日</label>
-            <select v-model.number="solarDay" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+            <select v-model.number="solarDay" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
               <option v-for="d in solarDayLimit" :key="d" :value="d">{{ d }}日</option>
             </select>
           </div>
@@ -72,17 +72,17 @@
           <div class="grid grid-cols-3 gap-3">
             <div>
               <label class="block text-sm font-medium mb-1 text-foreground">农历年（1900-2100）</label>
-              <input v-model.number="lunarYear" type="number" min="1900" max="2100" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+              <input v-model.number="lunarYear" type="number" min="1900" max="2100" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
             </div>
             <div>
               <label class="block text-sm font-medium mb-1 text-foreground">月</label>
-              <select v-model.number="lunarMonth" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+              <select v-model.number="lunarMonth" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
                 <option v-for="m in 12" :key="m" :value="m">{{ monthLabel(m) }}</option>
               </select>
             </div>
             <div>
               <label class="block text-sm font-medium mb-1 text-foreground">日</label>
-              <select v-model.number="lunarDay" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+              <select v-model.number="lunarDay" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
                 <option v-for="d in lunarDayLimit" :key="d" :value="d">{{ lunarDayName(d) }}</option>
               </select>
             </div>
@@ -91,7 +91,7 @@
             <input
               v-model="lunarIsLeap"
               type="checkbox"
-              class="w-4 h-4 rounded border-border"
+              class="w-4 h-4 rounded border border-border"
               :disabled="yearLeapMonth !== lunarMonth"
             >
             生日在闰月

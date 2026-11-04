@@ -36,7 +36,7 @@
                   v-model="regexPattern"
                   type="text"
                   placeholder="输入正则表达式"
-                  class="w-full pl-8 pr-8 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                  class="w-full pl-8 pr-8 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                   @input="testRegex"
                 />
                 <span class="absolute right-3 top-2.5 text-muted-foreground font-mono text-sm">/</span>
@@ -51,7 +51,7 @@
                   <input
                     v-model="flags.g"
                     type="checkbox"
-                    class="mr-2 rounded border-border text-primary focus:ring-primary"
+                    class="mr-2 rounded border border-border text-primary focus:ring-primary"
                     @change="testRegex"
                   />
                   <span class="text-sm text-foreground">
@@ -63,7 +63,7 @@
                   <input
                     v-model="flags.i"
                     type="checkbox"
-                    class="mr-2 rounded border-border text-primary focus:ring-primary"
+                    class="mr-2 rounded border border-border text-primary focus:ring-primary"
                     @change="testRegex"
                   />
                   <span class="text-sm text-foreground">
@@ -75,7 +75,7 @@
                   <input
                     v-model="flags.m"
                     type="checkbox"
-                    class="mr-2 rounded border-border text-primary focus:ring-primary"
+                    class="mr-2 rounded border border-border text-primary focus:ring-primary"
                     @change="testRegex"
                   />
                   <span class="text-sm text-foreground">
@@ -130,7 +130,7 @@
           <textarea
             v-model="testText"
             placeholder="输入要测试的文本..."
-            class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none"
+            class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none"
             rows="8"
             @input="testRegex"
           ></textarea>

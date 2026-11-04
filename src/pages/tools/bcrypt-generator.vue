@@ -22,7 +22,7 @@
                 <input
                   v-model="password"
                   :type="showPassword ? 'text' : 'password'"
-                  class="w-full px-4 py-3 border rounded-lg pr-20 font-mono text-sm"
+                  class="w-full px-4 py-3 border border-border rounded-lg pr-20 font-mono text-sm"
                   placeholder="输入要哈希的密码..."
                   @input="generateHash"
                 >
@@ -149,7 +149,7 @@
               <input
                 v-model="verifyPassword"
                 type="password"
-                class="w-full px-4 py-3 border rounded-lg font-mono text-sm"
+                class="w-full px-4 py-3 border border-border rounded-lg font-mono text-sm"
                 placeholder="输入要验证的密码..."
               >
             </div>
@@ -158,7 +158,7 @@
               <label class="text-sm font-medium mb-2 block">BCrypt哈希</label>
               <textarea
                 v-model="verifyHash"
-                class="w-full px-4 py-3 border rounded-lg font-mono text-xs min-h-[80px]"
+                class="w-full px-4 py-3 border border-border rounded-lg font-mono text-xs min-h-[80px]"
                 placeholder="粘贴BCrypt哈希值..."
               ></textarea>
             </div>
@@ -196,7 +196,7 @@
               <label class="text-sm font-medium mb-2 block">哈希值 1</label>
               <input
                 v-model="compareHash1"
-                class="w-full px-4 py-2 border rounded-lg font-mono text-xs"
+                class="w-full px-4 py-2 border border-border rounded-lg font-mono text-xs"
                 placeholder="粘贴第一个哈希..."
               >
             </div>
@@ -205,7 +205,7 @@
               <label class="text-sm font-medium mb-2 block">哈希值 2</label>
               <input
                 v-model="compareHash2"
-                class="w-full px-4 py-2 border rounded-lg font-mono text-xs"
+                class="w-full px-4 py-2 border border-border rounded-lg font-mono text-xs"
                 placeholder="粘贴第二个哈希..."
               >
             </div>

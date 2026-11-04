@@ -15,7 +15,7 @@
           <div class="grid grid-cols-3 gap-4">
             <div>
               <label class="block text-sm font-medium mb-2">输出格式</label>
-              <select v-model="outputFormat" @change="updateOutputFormat" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="outputFormat" @change="updateOutputFormat" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="json">JSON</option>
                 <option value="csv">CSV</option>
                 <option value="sql">SQL</option>
@@ -32,12 +32,12 @@
                 min="1"
                 max="10000"
                 @change="generateData"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
             <div>
               <label class="block text-sm font-medium mb-2">数据类型模板</label>
-              <select v-model="selectedTemplate" @change="loadTemplate" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="selectedTemplate" @change="loadTemplate" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="">选择模板...</option>
                 <option value="users">用户数据</option>
                 <option value="products">商品数据</option>
@@ -72,12 +72,12 @@
                   v-model="field.name"
                   @input="generateData"
                   placeholder="字段名"
-                  class="px-2 py-1 border rounded text-sm"
+                  class="px-2 py-1 border border-border rounded text-sm"
                 >
                 <select
                   v-model="field.type"
                   @change="onFieldTypeChange(index)"
-                  class="px-2 py-1 border rounded text-sm"
+                  class="px-2 py-1 border border-border rounded text-sm"
                 >
                   <option value="string">文本</option>
                   <option value="number">数字</option>
@@ -98,7 +98,7 @@
                   v-model="field.pattern"
                   @input="generateData"
                   placeholder="模式/选项 (可选)"
-                  class="px-2 py-1 border rounded text-sm"
+                  class="px-2 py-1 border border-border rounded text-sm"
                 >
                 <button
                   @click="removeField(index)"
@@ -114,9 +114,9 @@
                   v-model="field.options"
                   @input="generateData"
                   placeholder="选项1,选项2,选项3"
-                  class="px-2 py-1 border rounded text-sm"
+                  class="px-2 py-1 border border-border rounded text-sm"
                 >
-                <select v-model="field.selectType" @change="generateData" class="px-2 py-1 border rounded text-sm">
+                <select v-model="field.selectType" @change="generateData" class="px-2 py-1 border border-border rounded text-sm">
                   <option value="random">随机选择</option>
                   <option value="sequential">顺序选择</option>
                 </select>
@@ -128,16 +128,16 @@
                   @input="generateData"
                   type="number"
                   placeholder="最小值"
-                  class="px-2 py-1 border rounded text-sm"
+                  class="px-2 py-1 border border-border rounded text-sm"
                 >
                 <input
                   v-model.number="field.max"
                   @input="generateData"
                   type="number"
                   placeholder="最大值"
-                  class="px-2 py-1 border rounded text-sm"
+                  class="px-2 py-1 border border-border rounded text-sm"
                 >
-                <select v-model="field.decimals" @change="generateData" class="px-2 py-1 border rounded text-sm">
+                <select v-model="field.decimals" @change="generateData" class="px-2 py-1 border border-border rounded text-sm">
                   <option :value="0">整数</option>
                   <option :value="1">1位小数</option>
                   <option :value="2">2位小数</option>
@@ -151,16 +151,16 @@
                   @input="generateData"
                   type="number"
                   placeholder="最小长度"
-                  class="px-2 py-1 border rounded text-sm"
+                  class="px-2 py-1 border border-border rounded text-sm"
                 >
                 <input
                   v-model.number="field.maxLength"
                   @input="generateData"
                   type="number"
                   placeholder="最大长度"
-                  class="px-2 py-1 border rounded text-sm"
+                  class="px-2 py-1 border border-border rounded text-sm"
                 >
-                <select v-model="field.stringType" @change="generateData" class="px-2 py-1 border rounded text-sm">
+                <select v-model="field.stringType" @change="generateData" class="px-2 py-1 border border-border rounded text-sm">
                   <option value="random">随机字符</option>
                   <option value="words">随机单词</option>
                   <option value="sentences">随机句子</option>
@@ -240,7 +240,7 @@
           <div class="space-y-3">
             <div>
               <label class="block text-sm font-medium mb-1">唯一性约束</label>
-              <select v-model="constraints.unique" @change="generateData" class="w-full px-2 py-1 border rounded text-sm">
+              <select v-model="constraints.unique" @change="generateData" class="w-full px-2 py-1 border border-border rounded text-sm">
                 <option value="">无约束</option>
                 <option v-for="field in fields" :key="field.name" :value="field.name">
                   {{ field.name }} 唯一
@@ -261,7 +261,7 @@
             </div>
             <div>
               <label class="block text-sm font-medium mb-1">本地化</label>
-              <select v-model="constraints.locale" @change="generateData" class="w-full px-2 py-1 border rounded text-sm">
+              <select v-model="constraints.locale" @change="generateData" class="w-full px-2 py-1 border border-border rounded text-sm">
                 <option value="zh-CN">中文</option>
                 <option value="en-US">英文</option>
                 <option value="ja-JP">日文</option>
@@ -281,20 +281,20 @@
               class="p-2 border rounded"
             >
               <div class="grid grid-cols-2 gap-2 mb-2">
-                <select v-model="rule.from" @change="generateData" class="px-2 py-1 border rounded text-sm">
+                <select v-model="rule.from" @change="generateData" class="px-2 py-1 border border-border rounded text-sm">
                   <option value="">源字段</option>
                   <option v-for="field in fields" :key="field.name" :value="field.name">
                     {{ field.name }}
                   </option>
                 </select>
-                <select v-model="rule.to" @change="generateData" class="px-2 py-1 border rounded text-sm">
+                <select v-model="rule.to" @change="generateData" class="px-2 py-1 border border-border rounded text-sm">
                   <option value="">目标字段</option>
                   <option v-for="field in fields" :key="field.name" :value="field.name">
                     {{ field.name }}
                   </option>
                 </select>
               </div>
-              <select v-model="rule.type" @change="generateData" class="w-full px-2 py-1 border rounded text-sm">
+              <select v-model="rule.type" @change="generateData" class="w-full px-2 py-1 border border-border rounded text-sm">
                 <option value="equal">相等</option>
                 <option value="pattern">模式匹配</option>
                 <option value="conditional">条件关联</option>

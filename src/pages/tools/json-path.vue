@@ -44,7 +44,7 @@
               v-model="jsonInput"
               @input="validateJSON"
               placeholder="请输入 JSON 数据..."
-              class="w-full h-96 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+              class="w-full h-96 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
               :class="{ 'border-red-500': jsonError }"
             ></textarea>
 
@@ -82,7 +82,7 @@
                 v-model="jsonPath"
                 @keyup.enter="executeQuery"
                 placeholder="例如: $.store.book[*].author"
-                class="w-full p-3 pr-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono"
+                class="w-full p-3 pr-10 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono"
               />
               <button
                 v-if="jsonPath"

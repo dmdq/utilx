@@ -23,7 +23,7 @@
           <input
             v-model="solarDate"
             type="date"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
             @change="solarToLunar"
           >
         </div>
@@ -90,7 +90,7 @@
         <!-- 年份选择 -->
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">农历年份</label>
-          <select v-model="lunarInput.year" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+          <select v-model="lunarInput.year" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
             <option v-for="y in lunarYears" :key="y" :value="y">{{ y }}年 ({{ getZodiac(y) }})</option>
           </select>
         </div>
@@ -99,11 +99,11 @@
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">农历月份</label>
           <div class="flex gap-2">
-            <select v-model="lunarInput.isLeap" class="px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="lunarInput.isLeap" class="px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
               <option :value="false">平月</option>
               <option :value="true">闰月</option>
             </select>
-            <select v-model="lunarInput.month" class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="lunarInput.month" class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
               <option v-for="m in 12" :key="m" :value="m">{{ m }}月</option>
             </select>
           </div>
@@ -112,7 +112,7 @@
         <!-- 日期选择 -->
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">农历日期</label>
-          <select v-model="lunarInput.day" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+          <select v-model="lunarInput.day" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
             <option v-for="d in 30" :key="d" :value="d">{{ getLunarDayName(d) }}</option>
           </select>
         </div>

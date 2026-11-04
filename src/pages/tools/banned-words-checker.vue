@@ -25,7 +25,7 @@
         <textarea
           v-model="inputText"
           rows="10"
-          class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="粘贴商品详情、直播话术、推广文案等文本，例如：全网最低价，国家级品质，彻底根除脱发"
         ></textarea>
         <div class="flex items-center justify-between text-xs text-muted-foreground">
@@ -43,7 +43,7 @@
           <textarea
             v-model="customInput"
             rows="4"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="例如行业黑话、平台敏感词等，每行一个"
           ></textarea>
           <p v-if="customWords.length" class="text-xs text-muted-foreground mt-1">已追加 {{ customWords.length }} 个自定义词</p>

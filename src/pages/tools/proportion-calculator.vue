@@ -14,19 +14,19 @@
         <div class="grid grid-cols-4 gap-4 mb-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">a</label>
-            <input v-model.number="a" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="a">
+            <input v-model.number="a" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="a">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">b</label>
-            <input v-model.number="b" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="b">
+            <input v-model.number="b" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="b">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">c</label>
-            <input v-model.number="c" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="c">
+            <input v-model.number="c" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="c">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">d</label>
-            <input v-model.number="d" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="d">
+            <input v-model.number="d" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="d">
           </div>
         </div>
         <button @click="calculateProportion" class="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium">计算未知数</button>
@@ -42,11 +42,11 @@
         <div class="flex gap-4 mb-4">
           <div class="flex-1">
             <label class="block text-sm font-medium text-foreground mb-1">原值</label>
-            <input v-model.number="originalValue" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="原值">
+            <input v-model.number="originalValue" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="原值">
           </div>
           <div class="w-32">
             <label class="block text-sm font-medium text-foreground mb-1">缩放倍数</label>
-            <input v-model.number="scale" type="number" step="0.01" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="倍数">
+            <input v-model.number="scale" type="number" step="0.01" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="倍数">
           </div>
           <div class="flex items-end">
             <button @click="scaledValue = originalValue * scale" class="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium">计算</button>

@@ -54,7 +54,7 @@
                   class="w-full h-24 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg"
                   :style="{ boxShadow: boxShadowCSS }"
                 ></div>
-                <p class="text-xs text-center mt-2 text-gray-400">深色背景</p>
+                <p class="text-xs text-center mt-2 text-muted-foreground">深色背景</p>
               </div>
             </div>
           </div>
@@ -184,7 +184,7 @@
                 <input
                   type="text"
                   v-model="boxShadow.color"
-                  class="flex-1 px-3 py-2 border rounded-lg"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg"
                   placeholder="#000000"
                 />
               </div>
@@ -281,7 +281,7 @@
                 <input
                   type="text"
                   v-model="textShadow.color"
-                  class="flex-1 px-3 py-2 border rounded-lg"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg"
                   placeholder="#000000"
                 />
               </div>

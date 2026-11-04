@@ -59,7 +59,7 @@
             <select
               v-model="row.type"
               @change="resetRowValues(row)"
-              class="px-2 py-1.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="px-2 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option v-for="(cfg, key) in typeFields" :key="key" :value="key">{{ cfg.label }}</option>
             </select>
@@ -77,7 +77,7 @@
               <input
                 v-model="row.values[f.key]"
                 type="text"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 :placeholder="f.placeholder"
               />
             </div>

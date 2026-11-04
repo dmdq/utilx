@@ -66,7 +66,7 @@
                 type="number"
                 step="10"
                 min="0"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 1100"
               >
             </div>
@@ -78,7 +78,7 @@
                 step="0.5"
                 min="0"
                 max="24"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 8"
               >
             </div>
@@ -91,7 +91,7 @@
               type="number"
               step="0.1"
               min="0"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="如 1.2"
             >
             <p class="text-xs text-muted-foreground mt-1">冰箱等间歇工作电器可直接填能效标签上的日耗电量</p>
@@ -105,7 +105,7 @@
                 type="number"
                 step="0.01"
                 min="0"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 0.55"
               >
             </div>

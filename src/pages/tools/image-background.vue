@@ -94,7 +94,7 @@
                 <input
                   v-model="settings.backgroundColor"
                   type="text"
-                  class="flex-1 p-2 border rounded-lg text-sm font-mono"
+                  class="flex-1 p-2 border border-border rounded-lg text-sm font-mono"
                   @input="applySettings"
                 >
               </div>
@@ -174,7 +174,7 @@
                 <input
                   v-model="settings.targetColor"
                   type="text"
-                  class="flex-1 p-2 border rounded-lg text-sm font-mono"
+                  class="flex-1 p-2 border border-border rounded-lg text-sm font-mono"
                   @input="applySettings"
                 >
               </div>

@@ -19,7 +19,7 @@
           <!-- 分队模式 -->
           <div>
             <label class="text-sm font-medium mb-2 block">分队模式</label>
-            <select v-model="teamMode" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="teamMode" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="by-count">按队伍数量分队</option>
               <option value="by-size">按每队人数分队</option>
             </select>
@@ -34,7 +34,7 @@
                 type="number"
                 min="2"
                 max="20"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">队</span>
             </div>
@@ -49,7 +49,7 @@
                 type="number"
                 min="1"
                 max="50"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">人</span>
             </div>
@@ -58,7 +58,7 @@
           <!-- 分组方式 -->
           <div>
             <label class="text-sm font-medium mb-2 block">分组方式</label>
-            <select v-model="groupMethod" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="groupMethod" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="random">完全随机</option>
               <option value="balanced">平衡分组</option>
               <option value="custom">自定义分组</option>
@@ -72,7 +72,7 @@
           <textarea
             v-model="membersInput"
             placeholder="输入人员名单，每行一个...&#10;例如：&#10;张三&#10;李四&#10;王五"
-            class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary h-32 resize-none"
+            class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary h-32 resize-none"
           ></textarea>
           <div class="mt-2 text-sm text-muted-foreground">
             当前 {{ members.length }} 人
@@ -218,7 +218,7 @@
               <div
                 v-for="(member, memberIndex) in team.members"
                 :key="memberIndex"
-                class="flex items-center gap-2 p-2 bg-white rounded border"
+                class="flex items-center gap-2 p-2 bg-card rounded border"
               >
                 <span class="text-lg">{{ getTeamEmoji(memberIndex) }}</span>
                 <span class="font-medium">{{ member }}</span>

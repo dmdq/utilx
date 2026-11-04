@@ -104,7 +104,7 @@
             <div class="flex justify-between"><span>数字</span><span class="text-blue-600">count: 42</span></div>
             <div class="flex justify-between"><span>布尔</span><span class="text-orange-600">enabled: true</span></div>
             <div class="flex justify-between"><span>数组</span><span class="text-purple-600">items: [1, 2, 3]</span></div>
-            <div class="flex justify-between"><span>null</span><span class="text-gray-600">empty: null</span></div>
+            <div class="flex justify-between"><span>null</span><span class="text-muted-foreground">empty: null</span></div>
           </div>
         </div>
       </div>

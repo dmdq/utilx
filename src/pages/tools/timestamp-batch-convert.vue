@@ -26,7 +26,7 @@
 
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">输入时间戳 (每行一个)</label>
-          <textarea v-model="inputText" rows="12" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm" placeholder="输入Unix时间戳，每行一个..."></textarea>
+          <textarea v-model="inputText" rows="12" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm" placeholder="输入Unix时间戳，每行一个..."></textarea>
           <div class="flex justify-between mt-2">
             <span class="text-sm text-muted-foreground">已输入: {{ lineCount }} 行</span>
             <div class="flex gap-2">
@@ -39,7 +39,7 @@
 
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">输出格式</label>
-          <select v-model="outputFormat" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+          <select v-model="outputFormat" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
             <option value="iso8601">ISO 8601 (YYYY-MM-DD HH:mm:ss)</option>
             <option value="ymd">年-月-日 时:分:秒</option>
             <option value="mdy">月/日/年 时:分:秒 AM/PM</option>

@@ -15,7 +15,7 @@
           </div>
         </div>
 
-        <textarea v-model="inputText" placeholder="请输入需要编码的内容..." class="w-full h-64 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"></textarea>
+        <textarea v-model="inputText" placeholder="请输入需要编码的内容..." class="w-full h-64 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"></textarea>
 
         <div class="bg-muted p-4 rounded-lg">
           <h3 class="font-medium text-sm mb-2">UUEncode 说明</h3>

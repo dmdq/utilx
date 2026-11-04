@@ -23,7 +23,7 @@
           </div>
           <textarea
             v-model="rawHeaders"
-            class="w-full h-64 px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none"
+            class="w-full h-64 px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none"
             placeholder="粘贴Headers数据，每行一个，格式：HeaderName: Value&#10;Content-Type: application/json&#10;Authorization: Bearer token123"
           ></textarea>
           <div class="flex gap-2 mt-3">
@@ -50,7 +50,7 @@
             <input
               v-model="searchQuery"
               type="text"
-              class="flex-1 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+              class="flex-1 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
               placeholder="搜索Headers..."
             />
           </div>

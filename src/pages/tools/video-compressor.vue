@@ -110,7 +110,7 @@
               type="checkbox"
               id="compressMute"
               :disabled="recording"
-              class="w-4 h-4 rounded border-border"
+              class="w-4 h-4 rounded border border-border"
             />
             <label for="compressMute" class="text-sm text-foreground">静音输出（去掉音轨可再省约 16% 体积）</label>
           </div>

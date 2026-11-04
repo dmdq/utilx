@@ -25,7 +25,7 @@
         <textarea
           v-model="inputText"
           placeholder="请输入要哈希的密码..."
-          class="w-full h-32 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono"
+          class="w-full h-32 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono"
         ></textarea>
 
         <!-- 参数配置 -->
@@ -154,7 +154,7 @@
             <textarea
               v-model="salt"
               placeholder="留空则自动生成随机盐值..."
-              class="w-full h-20 p-3 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+              class="w-full h-20 p-3 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
             ></textarea>
           </div>
 
@@ -183,7 +183,7 @@
           <div class="flex items-center gap-2">
             <select
               v-model="outputFormat"
-              class="px-3 py-1 text-sm border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="px-3 py-1 text-sm border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="hex">Hex格式</option>
               <option value="base64">Base64格式</option>
@@ -271,7 +271,7 @@
                 v-model="verifyPassword"
                 type="password"
                 placeholder="输入原始密码..."
-                class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
               >
             </div>
             <div>
@@ -279,7 +279,7 @@
               <input
                 v-model="verifyHash"
                 placeholder="输入存储的哈希值..."
-                class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
               >
             </div>
             <div>
@@ -287,7 +287,7 @@
               <input
                 v-model="verifySalt"
                 placeholder="输入盐值..."
-                class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
               >
             </div>
             <div v-if="verifyResult" class="p-3 rounded-lg" :class="verifyResult.valid ? 'bg-green-500/10 text-green-500' : 'bg-red-500/10 text-red-500'">

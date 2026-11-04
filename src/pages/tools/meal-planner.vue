@@ -18,7 +18,7 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium mb-2 block">主要目标</label>
-              <select v-model="goal" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="goal" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option value="balanced">均衡饮食</option>
                 <option value="muscle">增肌</option>
                 <option value="fatloss">减脂</option>
@@ -31,14 +31,14 @@
               <input
                 v-model.number="calories"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="例如: 2000"
               >
             </div>
 
             <div>
               <label class="text-sm font-medium mb-2 block">餐数安排</label>
-              <select v-model="mealsPerDay" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="mealsPerDay" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option :value="3">一日三餐</option>
                 <option :value="4">三餐+加餐</option>
                 <option :value="5">三餐+两顿加餐</option>
@@ -71,7 +71,7 @@
               <label class="text-sm font-medium mb-2 block">排除食材</label>
               <textarea
                 v-model="excludedFoods"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 rows="3"
                 placeholder="用逗号分隔，例如: 花生, 海鲜"
               ></textarea>

@@ -52,7 +52,7 @@
                 type="number"
                 step="0.1"
                 min="0"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 4"
               >
             </div>
@@ -63,7 +63,7 @@
                 type="number"
                 step="0.1"
                 min="0"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 3"
               >
             </div>
@@ -76,7 +76,7 @@
               type="number"
               step="0.1"
               min="0"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="如 14"
             >
           </div>
@@ -89,7 +89,7 @@
                 type="number"
                 step="0.05"
                 min="0"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 2.8"
               >
             </div>
@@ -100,7 +100,7 @@
                 type="number"
                 step="0.1"
                 min="0"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 4"
               >
               <p class="text-xs text-muted-foreground mt-1">门窗面积将按墙高折算为墙面长度扣除</p>
@@ -139,7 +139,7 @@
                 type="number"
                 step="0.01"
                 min="0.1"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 0.53"
               >
             </div>
@@ -150,7 +150,7 @@
                 type="number"
                 step="0.1"
                 min="0.1"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 10"
               >
             </div>

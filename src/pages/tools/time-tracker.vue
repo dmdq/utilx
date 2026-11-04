@@ -22,7 +22,7 @@
               v-model="currentTask.name"
               type="text"
               :disabled="isRunning"
-              class="w-full px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+              class="w-full px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
               :class="{ 'bg-muted/50': isRunning }"
               placeholder="输入任务名称..."
             />
@@ -32,7 +32,7 @@
             <select
               v-model="currentTask.category"
               :disabled="isRunning"
-              class="w-full px-4 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               :class="{ 'bg-muted/50': isRunning }"
             >
               <option v-for="cat in taskCategories" :key="cat.value" :value="cat.value">
@@ -101,7 +101,7 @@
                 v-model.number="pomodoroWorkTime"
                 type="number"
                 :disabled="pomodoroIsRunning"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                 min="1"
                 max="60"
               />
@@ -112,7 +112,7 @@
                 v-model.number="pomodoroBreakTime"
                 type="number"
                 :disabled="pomodoroIsRunning"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
                 min="1"
                 max="30"
               />

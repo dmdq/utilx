@@ -66,7 +66,7 @@
           <!-- 尺寸调整 -->
           <div>
             <label class="text-xs text-muted-foreground mb-1 block">调整尺寸</label>
-            <select v-model="settings.sizeMode" class="w-full p-2 border rounded text-sm">
+            <select v-model="settings.sizeMode" class="w-full p-2 border border-border rounded text-sm">
               <option value="original">保持原始尺寸</option>
               <option value="max-width">限制最大宽度</option>
               <option value="max-height">限制最大高度</option>
@@ -78,11 +78,11 @@
             <div v-if="settings.sizeMode !== 'original'" class="grid grid-cols-2 gap-2 mt-2">
               <div>
                 <label class="text-xs text-muted-foreground mb-1 block">宽度 (px)</label>
-                <input v-model.number="settings.width" type="number" min="1" class="w-full p-2 border rounded text-sm">
+                <input v-model.number="settings.width" type="number" min="1" class="w-full p-2 border border-border rounded text-sm">
               </div>
               <div>
                 <label class="text-xs text-muted-foreground mb-1 block">高度 (px)</label>
-                <input v-model.number="settings.height" type="number" min="1" class="w-full p-2 border rounded text-sm">
+                <input v-model.number="settings.height" type="number" min="1" class="w-full p-2 border border-border rounded text-sm">
               </div>
             </div>
 
@@ -97,7 +97,7 @@
           <!-- 格式转换 -->
           <div>
             <label class="text-xs text-muted-foreground mb-1 block">输出格式</label>
-            <select v-model="settings.format" class="w-full p-2 border rounded text-sm">
+            <select v-model="settings.format" class="w-full p-2 border border-border rounded text-sm">
               <option value="original">保持原始格式</option>
               <option value="jpeg">JPEG</option>
               <option value="png">PNG</option>
@@ -138,7 +138,7 @@
           <!-- 文件命名 -->
           <div>
             <label class="text-xs text-muted-foreground mb-1 block">文件命名</label>
-            <select v-model="settings.naming" class="w-full p-2 border rounded text-sm">
+            <select v-model="settings.naming" class="w-full p-2 border border-border rounded text-sm">
               <option value="original">保持原文件名</option>
               <option value="suffix">添加后缀</option>
               <option value="prefix">添加前缀</option>
@@ -146,15 +146,15 @@
             </select>
 
             <div v-if="settings.naming === 'suffix'" class="mt-2">
-              <input v-model="settings.suffix" type="text" placeholder="_processed" class="w-full p-2 border rounded text-sm">
+              <input v-model="settings.suffix" type="text" placeholder="_processed" class="w-full p-2 border border-border rounded text-sm">
             </div>
 
             <div v-if="settings.naming === 'prefix'" class="mt-2">
-              <input v-model="settings.prefix" type="text" placeholder="processed_" class="w-full p-2 border rounded text-sm">
+              <input v-model="settings.prefix" type="text" placeholder="processed_" class="w-full p-2 border border-border rounded text-sm">
             </div>
 
             <div v-if="settings.naming === 'number'" class="mt-2">
-              <input v-model.number="settings.startNumber" type="number" min="1" placeholder="1" class="w-full p-2 border rounded text-sm">
+              <input v-model.number="settings.startNumber" type="number" min="1" placeholder="1" class="w-full p-2 border border-border rounded text-sm">
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@
             <div>
               <textarea
                 v-model="inputContent"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                 rows="8"
                 placeholder="请输入要检测的内容..."
                 @input="detectSQLInjection"
@@ -86,7 +86,7 @@
               <select
                 v-model="detectionConfig.databaseType"
                 @change="detectSQLInjection"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="mysql">MySQL</option>
                 <option value="postgresql">PostgreSQL</option>
@@ -176,7 +176,7 @@
               <label class="block text-sm font-medium mb-2">HTTP方法</label>
               <select
                 v-model="requestSimulator.method"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="GET">GET</option>
                 <option value="POST">POST</option>
@@ -193,13 +193,13 @@
                     v-model="requestSimulator.paramKey"
                     type="text"
                     placeholder="参数名"
-                    class="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="flex-1 px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                   <input
                     v-model="requestSimulator.paramValue"
                     type="text"
                     placeholder="参数值"
-                    class="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="flex-1 px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
                 <button

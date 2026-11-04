@@ -53,7 +53,7 @@
               step="0.1"
               min="0.5"
               max="100"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="如 10"
             >
             <p class="text-xs text-muted-foreground mt-1">减重期建议以兽医确认的理想体重（而非当前体重）计算</p>
@@ -88,7 +88,7 @@
               step="0.1"
               min="3"
               max="4.5"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="如 3.5"
             >
             <p class="text-xs text-muted-foreground mt-1">常见干粮约 3.5-4.0 kcal/g，请以包装袋上的代谢能标注为准</p>

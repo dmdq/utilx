@@ -18,13 +18,13 @@
                 v-model="targetUrl"
                 type="url"
                 placeholder="https://api.example.com/data"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
               >
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">请求方法</label>
-              <select v-model="httpMethod" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <select v-model="httpMethod" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
                 <option value="GET">GET</option>
                 <option value="POST">POST</option>
                 <option value="PUT">PUT</option>
@@ -38,7 +38,7 @@
               <textarea
                 v-model="customHeaders"
                 placeholder='Authorization: Bearer token&#10;X-Custom-Header: value'
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm h-24"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm h-24"
               ></textarea>
             </div>
 
@@ -47,7 +47,7 @@
               <textarea
                 v-model="requestBody"
                 placeholder='{"key": "value"}'
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm h-24"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm h-24"
               ></textarea>
             </div>
 
@@ -134,7 +134,7 @@
               <input
                 v-model="corsConfig.allowedOrigins"
                 placeholder="https://example.com, https://app.example.com"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-sm"
               >
               <p class="text-xs text-muted-foreground mt-1">使用 * 允许所有源（不推荐生产环境）</p>
             </div>
@@ -144,7 +144,7 @@
               <input
                 v-model="corsConfig.allowedMethods"
                 placeholder="GET, POST, PUT, DELETE, OPTIONS"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-sm"
               >
             </div>
 
@@ -153,7 +153,7 @@
               <input
                 v-model="corsConfig.allowedHeaders"
                 placeholder="Content-Type, Authorization"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-sm"
               >
             </div>
 
@@ -162,7 +162,7 @@
               <input
                 v-model="corsConfig.exposedHeaders"
                 placeholder="X-Custom-Header"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-sm"
               >
             </div>
 
@@ -173,7 +173,7 @@
               </label>
               <div>
                 <label class="block text-sm font-medium mb-1">预检缓存(秒)</label>
-                <input v-model.number="corsConfig.maxAge" type="number" class="w-full px-3 py-1 border rounded text-sm bg-background">
+                <input v-model.number="corsConfig.maxAge" type="number" class="w-full px-3 py-1 border border-border rounded text-sm bg-background">
               </div>
             </div>
           </div>

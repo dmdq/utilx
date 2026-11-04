@@ -23,7 +23,7 @@
               <input
                 v-model="birthDate"
                 type="datetime-local"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @input="calculateAge"
               />
             </div>
@@ -142,7 +142,7 @@
                 min="1"
                 max="150"
                 placeholder="输入年龄"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @input="calculateTargetDate"
               />
             </div>

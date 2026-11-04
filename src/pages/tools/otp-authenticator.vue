@@ -22,7 +22,7 @@
                 <input
                   v-model="totpSecret"
                   :type="showTotpSecret ? 'text' : 'password'"
-                  class="w-full px-4 py-3 border rounded-lg pr-20 font-mono text-sm"
+                  class="w-full px-4 py-3 border border-border rounded-lg pr-20 font-mono text-sm"
                   placeholder="输入Base32格式的密钥..."
                 >
                 <div class="absolute right-2 top-1/2 -translate-y-1/2 flex gap-1">
@@ -49,7 +49,7 @@
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="text-sm font-medium mb-2 block">哈希算法</label>
-                <select v-model="totpAlgorithm" class="w-full px-4 py-2 border rounded-lg text-sm">
+                <select v-model="totpAlgorithm" class="w-full px-4 py-2 border border-border rounded-lg text-sm">
                   <option value="SHA1">SHA1</option>
                   <option value="SHA256">SHA256</option>
                   <option value="SHA512">SHA512</option>
@@ -57,7 +57,7 @@
               </div>
               <div>
                 <label class="text-sm font-medium mb-2 block">数字位数</label>
-                <select v-model="totpDigits" class="w-full px-4 py-2 border rounded-lg text-sm">
+                <select v-model="totpDigits" class="w-full px-4 py-2 border border-border rounded-lg text-sm">
                   <option :value="6">6位数字</option>
                   <option :value="8">8位数字</option>
                 </select>
@@ -67,7 +67,7 @@
             <!-- 时间步长 -->
             <div>
               <label class="text-sm font-medium mb-2 block">时间步长 (秒)</label>
-              <select v-model="totpPeriod" class="w-full px-4 py-2 border rounded-lg text-sm">
+              <select v-model="totpPeriod" class="w-full px-4 py-2 border border-border rounded-lg text-sm">
                 <option :value="30">30秒 (标准)</option>
                 <option :value="60">60秒</option>
               </select>
@@ -132,7 +132,7 @@
               <label class="text-sm font-medium mb-2 block">服务名称</label>
               <input
                 v-model="qrService"
-                class="w-full px-4 py-2 border rounded-lg text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg text-sm"
                 placeholder="例如: Google, GitHub, Amazon..."
               >
             </div>
@@ -141,7 +141,7 @@
               <label class="text-sm font-medium mb-2 block">账户名称</label>
               <input
                 v-model="qrAccount"
-                class="w-full px-4 py-2 border rounded-lg text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg text-sm"
                 placeholder="例如: user@example.com"
               >
             </div>
@@ -150,7 +150,7 @@
               <label class="text-sm font-medium mb-2 block">密钥</label>
               <input
                 v-model="totpSecret"
-                class="w-full px-4 py-2 border rounded-lg font-mono text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg font-mono text-sm"
                 placeholder="输入或生成密钥..."
               >
             </div>
@@ -188,7 +188,7 @@
               <input
                 v-model="verifySecret"
                 type="password"
-                class="w-full px-4 py-3 border rounded-lg font-mono text-sm"
+                class="w-full px-4 py-3 border border-border rounded-lg font-mono text-sm"
                 placeholder="输入用于验证的密钥..."
               >
             </div>
@@ -199,7 +199,7 @@
                 v-model="verifyCode"
                 type="text"
                 maxlength="8"
-                class="w-full px-4 py-3 border rounded-lg font-mono text-center text-xl tracking-widest"
+                class="w-full px-4 py-3 border border-border rounded-lg font-mono text-center text-xl tracking-widest"
                 placeholder="输入6或8位代码"
               >
             </div>
@@ -239,7 +239,7 @@
                 <input
                   v-model="hotpSecret"
                   :type="showHotpSecret ? 'text' : 'password'"
-                  class="w-full px-4 py-3 border rounded-lg pr-10 font-mono text-sm"
+                  class="w-full px-4 py-3 border border-border rounded-lg pr-10 font-mono text-sm"
                   placeholder="输入Base32格式密钥..."
                 >
                 <button
@@ -259,7 +259,7 @@
                   v-model.number="hotpCounter"
                   type="number"
                   min="0"
-                  class="flex-1 px-4 py-2 border rounded-lg font-mono text-sm"
+                  class="flex-1 px-4 py-2 border border-border rounded-lg font-mono text-sm"
                 >
                 <button
                   @click="hotpCounter++"
@@ -273,7 +273,7 @@
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="text-sm font-medium mb-2 block">算法</label>
-                <select v-model="hotpAlgorithm" class="w-full px-4 py-2 border rounded-lg text-sm">
+                <select v-model="hotpAlgorithm" class="w-full px-4 py-2 border border-border rounded-lg text-sm">
                   <option value="SHA1">SHA1</option>
                   <option value="SHA256">SHA256</option>
                   <option value="SHA512">SHA512</option>
@@ -281,7 +281,7 @@
               </div>
               <div>
                 <label class="text-sm font-medium mb-2 block">位数</label>
-                <select v-model="hotpDigits" class="w-full px-4 py-2 border rounded-lg text-sm">
+                <select v-model="hotpDigits" class="w-full px-4 py-2 border border-border rounded-lg text-sm">
                   <option :value="6">6位</option>
                   <option :value="8">8位</option>
                 </select>

@@ -121,7 +121,7 @@
                     type="number"
                     min="16"
                     max="1024"
-                    class="w-20 px-2 py-1 border rounded text-sm"
+                    class="w-20 px-2 py-1 border border-border rounded text-sm"
                     @input="generateIcons"
                   />
                   <span class="text-xs text-muted-foreground">×</span>
@@ -130,7 +130,7 @@
                     type="number"
                     min="16"
                     max="1024"
-                    class="w-20 px-2 py-1 border rounded text-sm"
+                    class="w-20 px-2 py-1 border border-border rounded text-sm"
                     @input="generateIcons"
                   />
                   <button

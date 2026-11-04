@@ -15,7 +15,7 @@
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block text-sm font-medium mb-2">性别</label>
-                <select v-model="basicInfo.gender" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="basicInfo.gender" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="male">男性</option>
                   <option value="female">女性</option>
                 </select>
@@ -27,7 +27,7 @@
                   type="number"
                   min="10"
                   max="100"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="30"
                 />
               </div>
@@ -39,7 +39,7 @@
                   min="100"
                   max="250"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="170"
                 />
               </div>
@@ -51,7 +51,7 @@
                   min="20"
                   max="300"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="70"
                 />
               </div>
@@ -59,7 +59,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">身体骨架类型</label>
-              <select v-model="bodyFrameType" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="bodyFrameType" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="small">小骨架</option>
                 <option value="medium">中等骨架</option>
                 <option value="large">大骨架</option>
@@ -87,7 +87,7 @@
                   min="10"
                   max="25"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="16"
                 />
               </div>
@@ -251,7 +251,7 @@
               <div class="text-sm font-medium mb-2">BMI体重分布图</div>
               <div class="relative h-8 bg-gradient-to-r from-blue-200 via-green-200 to-yellow-200 rounded-lg">
                 <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="text-xs text-gray-700">
+                  <div class="text-xs text-foreground">
                     <span>偏瘦</span>
                     <span class="mx-8">正常</span>
                     <span class="mx-8">超重</span>

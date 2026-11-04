@@ -59,7 +59,7 @@
             <textarea
               v-model="rawData"
               @input="processData"
-              class="w-full h-64 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+              class="w-full h-64 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
               :placeholder="dataType === 'csv' ? csvPlaceholder : jsonPlaceholder"
             ></textarea>
             <div class="mt-2 text-sm text-muted-foreground">
@@ -78,7 +78,7 @@
                 <label class="text-sm text-muted-foreground mb-1 block">行字段（分类）</label>
                 <select
                   v-model="pivotConfig.rowField"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option value="">请选择</option>
                   <option v-for="field in fields" :key="field" :value="field">{{ field }}</option>
@@ -88,7 +88,7 @@
                 <label class="text-sm text-muted-foreground mb-1 block">列字段（可选）</label>
                 <select
                   v-model="pivotConfig.columnField"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option value="">不设置</option>
                   <option v-for="field in fields" :key="field" :value="field">{{ field }}</option>
@@ -98,7 +98,7 @@
                 <label class="text-sm text-muted-foreground mb-1 block">值字段（数值）</label>
                 <select
                   v-model="pivotConfig.valueField"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option value="">请选择</option>
                   <option v-for="field in fields" :key="field" :value="field">{{ field }}</option>
@@ -108,7 +108,7 @@
                 <label class="text-sm text-muted-foreground mb-1 block">聚合方式</label>
                 <select
                   v-model="pivotConfig.aggregation"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option value="sum">求和</option>
                   <option value="count">计数</option>

@@ -91,7 +91,7 @@
                 min="1"
                 max="120"
                 placeholder="请输入年龄"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
               <div class="mt-1 text-xs text-muted-foreground">
                 年龄范围：1-120岁
@@ -111,7 +111,7 @@
                   min="50"
                   max="250"
                   placeholder="170"
-                  class="flex-1 px-3 py-2 border rounded-md"
+                  class="flex-1 px-3 py-2 border border-border rounded-md"
                 >
                 <span class="px-3 py-2 bg-muted rounded-md">cm</span>
               </div>
@@ -124,7 +124,7 @@
                     min="1"
                     max="8"
                     placeholder="5"
-                    class="flex-1 px-3 py-2 border rounded-md"
+                    class="flex-1 px-3 py-2 border border-border rounded-md"
                   >
                   <span class="px-3 py-2 bg-muted rounded-md">ft</span>
                 </div>
@@ -136,7 +136,7 @@
                     min="0"
                     max="11"
                     placeholder="8"
-                    class="flex-1 px-3 py-2 border rounded-md"
+                    class="flex-1 px-3 py-2 border border-border rounded-md"
                   >
                   <span class="px-3 py-2 bg-muted rounded-md">in</span>
                 </div>
@@ -156,7 +156,7 @@
                   :min="unitSystem === 'metric' ? 20 : 44"
                   :max="unitSystem === 'metric' ? 200 : 440"
                   :placeholder="unitSystem === 'metric' ? '70' : '154'"
-                  class="flex-1 px-3 py-2 border rounded-md"
+                  class="flex-1 px-3 py-2 border border-border rounded-md"
                 >
                 <span class="px-3 py-2 bg-muted rounded-md">
                   {{ unitSystem === 'metric' ? 'kg' : 'lbs' }}
@@ -185,7 +185,7 @@
             <div class="relative">
               <div class="h-4 bg-gradient-to-r from-blue-400 via-green-400 via-yellow-400 via-orange-400 to-red-400 rounded-full"></div>
               <div
-                class="absolute top-1/2 transform -translate-y-1/2 w-6 h-6 bg-white border-4 border-gray-800 rounded-full shadow-lg"
+                class="absolute top-1/2 transform -translate-y-1/2 w-6 h-6 bg-white border-4 border-border rounded-full shadow-lg"
                 :style="{ left: `${getBMIPosition(bmiResult.value)}%` }"
               ></div>
             </div>

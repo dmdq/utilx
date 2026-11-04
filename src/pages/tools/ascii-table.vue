@@ -18,12 +18,12 @@
             v-model="searchQuery"
             type="text"
             placeholder="输入字符、十进制或十六进制..."
-            class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
         <div>
           <label class="text-sm font-medium mb-2 block">字符分类</label>
-          <select v-model="selectedCategory" class="px-3 py-2 border rounded-md min-w-[150px]">
+          <select v-model="selectedCategory" class="px-3 py-2 border border-border rounded-md min-w-[150px]">
             <option value="all">全部</option>
             <option value="control">控制字符</option>
             <option value="printable">可打印字符</option>
@@ -55,7 +55,7 @@
               type="number"
               min="0"
               max="127"
-              class="w-full px-3 py-1.5 border rounded-md text-sm"
+              class="w-full px-3 py-1.5 border border-border rounded-md text-sm"
             />
           </div>
           <div class="flex-1">
@@ -65,7 +65,7 @@
               @input="findCharByHex"
               type="text"
               placeholder="0-7F"
-              class="w-full px-3 py-1.5 border rounded-md text-sm font-mono"
+              class="w-full px-3 py-1.5 border border-border rounded-md text-sm font-mono"
             />
           </div>
           <div class="flex-1">
@@ -75,7 +75,7 @@
               @input="findCharByOctal"
               type="text"
               placeholder="0-177"
-              class="w-full px-3 py-1.5 border rounded-md text-sm font-mono"
+              class="w-full px-3 py-1.5 border border-border rounded-md text-sm font-mono"
             />
           </div>
           <div class="flex-1">
@@ -85,7 +85,7 @@
               @input="findCharByBinary"
               type="text"
               placeholder="7位二进制"
-              class="w-full px-3 py-1.5 border rounded-md text-sm font-mono"
+              class="w-full px-3 py-1.5 border border-border rounded-md text-sm font-mono"
             />
           </div>
         </div>

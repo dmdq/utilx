@@ -52,7 +52,7 @@
           <textarea
             v-model="svgCode"
             @input="updatePreview"
-            class="w-full h-96 p-3 font-mono text-sm border rounded-md resize-none"
+            class="w-full h-96 p-3 font-mono text-sm border border-border rounded-md resize-none"
             placeholder="输入SVG代码..."
           ></textarea>
 
@@ -79,7 +79,7 @@
                 >
                 <select
                   v-model="canvasSettings.bgColor"
-                  class="flex-1 px-2 py-1 border rounded text-sm"
+                  class="flex-1 px-2 py-1 border border-border rounded text-sm"
                 >
                   <option value="transparent">透明背景</option>
                   <option value="#ffffff">白色</option>
@@ -98,13 +98,13 @@
                   v-model.number="canvasSettings.width"
                   type="number"
                   placeholder="400"
-                  class="flex-1 px-2 py-1 border rounded text-sm"
+                  class="flex-1 px-2 py-1 border border-border rounded text-sm"
                 >
                 <input
                   v-model.number="canvasSettings.height"
                   type="number"
                   placeholder="400"
-                  class="flex-1 px-2 py-1 border rounded text-sm"
+                  class="flex-1 px-2 py-1 border border-border rounded text-sm"
                 >
               </div>
             </div>
@@ -255,7 +255,7 @@
           <div class="grid grid-cols-2 gap-4 mb-4">
             <div>
               <label class="block text-sm font-medium mb-2">导出格式</label>
-              <select v-model="exportFormat" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="exportFormat" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="svg">SVG 矢量图</option>
                 <option value="png">PNG 位图</option>
                 <option value="jpeg">JPEG 位图</option>
@@ -266,7 +266,7 @@
 
             <div v-if="['png', 'jpeg', 'webp'].includes(exportFormat)">
               <label class="block text-sm font-medium mb-2">导出尺寸</label>
-              <select v-model="exportSize" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="exportSize" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="1x">原始大小 (1x)</option>
                 <option value="2x">2倍大小 (2x)</option>
                 <option value="4x">4倍大小 (4x)</option>
@@ -281,13 +281,13 @@
                   v-model.number="customWidth"
                   type="number"
                   placeholder="宽度"
-                  class="flex-1 px-2 py-1 border rounded text-sm"
+                  class="flex-1 px-2 py-1 border border-border rounded text-sm"
                 >
                 <input
                   v-model.number="customHeight"
                   type="number"
                   placeholder="高度"
-                  class="flex-1 px-2 py-1 border rounded text-sm"
+                  class="flex-1 px-2 py-1 border border-border rounded text-sm"
                 >
               </div>
             </div>

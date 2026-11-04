@@ -49,7 +49,7 @@
 
           <textarea
             v-model="inputText"
-            class="w-full h-48 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-48 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴 CSV 数据，例如：&#10;name,age,city&#10;张三,28,北京&#10;李四,32,上海"
             spellcheck="false"
             @input="convert"
@@ -159,7 +159,7 @@
               v-if="outputText"
               :value="outputText"
               readonly
-              class="w-full h-96 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+              class="w-full h-96 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
             <div v-else-if="parseError" class="py-16 text-center">

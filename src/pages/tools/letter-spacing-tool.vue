@@ -18,7 +18,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">字间距 (em)</label>
-              <input v-model.number="letterSpacing" type="number" min="-0.1" max="0.5" step="0.005" class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <input v-model.number="letterSpacing" type="number" min="-0.1" max="0.5" step="0.005" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             </div>
 
             <div>
@@ -33,12 +33,12 @@
 
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">字号 (px)</label>
-              <input v-model.number="fontSize" type="number" min="12" max="72" class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <input v-model.number="fontSize" type="number" min="12" max="72" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             </div>
 
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">文本</label>
-              <textarea v-model="sampleText" rows="3" class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"></textarea>
+              <textarea v-model="sampleText" rows="3" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"></textarea>
             </div>
           </div>
         </div>

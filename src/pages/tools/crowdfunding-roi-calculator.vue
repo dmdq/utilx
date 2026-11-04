@@ -16,7 +16,7 @@
               <input
                 v-model.number="investmentAmount"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入投资金额"
                 @input="calculateROI"
               />
@@ -28,7 +28,7 @@
                 v-model.number="expectedReturn"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入预期年化收益率"
                 @input="calculateROI"
               />
@@ -40,7 +40,7 @@
                 v-model.number="investmentPeriod"
                 type="number"
                 step="0.5"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入投资期限"
                 @input="calculateROI"
               />
@@ -55,7 +55,7 @@
               <label class="block text-sm font-medium mb-2">风险等级</label>
               <select
                 v-model="riskLevel"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 @change="calculateROI"
               >
                 <option value="low">低风险</option>
@@ -70,7 +70,7 @@
                 v-model.number="failureProbability"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入失败概率"
                 @input="calculateROI"
               />
@@ -82,7 +82,7 @@
                 v-model.number="platformFee"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入平台手续费"
                 @input="calculateROI"
               />

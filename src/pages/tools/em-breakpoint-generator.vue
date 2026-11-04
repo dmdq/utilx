@@ -16,12 +16,12 @@
         <div class="bg-card border border-border rounded-lg p-6 space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">基准字号 (px)</label>
-            <input v-model.number="baseFontSize" type="number" min="12" max="20" class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary">
+            <input v-model.number="baseFontSize" type="number" min="12" max="20" class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary">
             <p class="text-xs text-muted-foreground mt-1">通常浏览器默认为 16px</p>
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">断点 (px)</label>
-            <textarea v-model="breakpointsInput" rows="6" class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none" placeholder="每行一个像素值"></textarea>
+            <textarea v-model="breakpointsInput" rows="6" class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none" placeholder="每行一个像素值"></textarea>
             <p class="text-xs text-muted-foreground mt-1">每行输入一个像素值，如：320、576、768</p>
           </div>
           <div class="flex gap-2">

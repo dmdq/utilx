@@ -115,7 +115,7 @@
         <template v-if="sourceLabel">
           <div class="space-y-3">
             <label class="flex items-center gap-2 text-sm text-foreground">
-              <input v-model="hpEnabled" type="checkbox" class="w-4 h-4 rounded border-border" />
+              <input v-model="hpEnabled" type="checkbox" class="w-4 h-4 rounded border border-border" />
               高通滤波去隆隆声
             </label>
             <div v-if="hpEnabled">
@@ -126,7 +126,7 @@
 
           <div class="space-y-3">
             <label class="flex items-center gap-2 text-sm text-foreground">
-              <input v-model="lpEnabled" type="checkbox" class="w-4 h-4 rounded border-border" />
+              <input v-model="lpEnabled" type="checkbox" class="w-4 h-4 rounded border border-border" />
               低通滤波去高频嘶声
             </label>
             <div v-if="lpEnabled">
@@ -159,7 +159,7 @@
           </div>
 
           <label class="flex items-center gap-2 text-sm text-foreground">
-            <input v-model="gateEnabled" type="checkbox" class="w-4 h-4 rounded border-border" />
+            <input v-model="gateEnabled" type="checkbox" class="w-4 h-4 rounded border border-border" />
             噪声门（压低低于底噪 2.5 倍的段落）
           </label>
 
@@ -184,7 +184,7 @@
         <div v-if="sourceLabel">
           <canvas ref="waveCanvas" class="w-full h-36 bg-muted rounded-lg block"></canvas>
           <div class="flex justify-between text-xs text-muted-foreground mt-1.5">
-            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-slate-400 inline-block"></span>原始波形</span>
+            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-muted inline-block"></span>原始波形</span>
             <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-emerald-500 inline-block"></span>降噪后波形</span>
           </div>
         </div>

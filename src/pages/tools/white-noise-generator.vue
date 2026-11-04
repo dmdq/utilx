@@ -68,7 +68,7 @@
           <select
             id="wn-timer"
             v-model.number="timerMinutes"
-            class="w-full h-10 px-2.5 bg-background border border-border rounded-lg text-sm text-foreground"
+            class="w-full h-10 px-2.5 bg-background border border-border border-border rounded-lg text-sm text-foreground"
           >
             <option v-for="opt in TIMER_OPTIONS" :key="opt.minutes" :value="opt.minutes">{{ opt.label }}</option>
           </select>

@@ -23,7 +23,7 @@
             v-model="input"
             type="text"
             placeholder="10.0.0.5 / 172.16.3.8 / 192.168.1.100 / fd00::1234"
-            class="flex-1 px-4 py-3 bg-background border border-input rounded-lg text-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="flex-1 px-4 py-3 bg-background border border-border border-input rounded-lg text-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             spellcheck="false"
           />
           <div class="flex gap-2 flex-wrap">

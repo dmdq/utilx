@@ -71,7 +71,7 @@
                 <input
                   v-model="settings.borderColor"
                   type="text"
-                  class="flex-1 p-2 border rounded-lg text-sm font-mono"
+                  class="flex-1 p-2 border border-border rounded-lg text-sm font-mono"
                   @input="applySettings"
                 >
               </div>
@@ -80,7 +80,7 @@
             <!-- 边框样式 -->
             <div>
               <label class="text-sm mb-1 block">边框样式</label>
-              <select v-model="settings.borderStyle" class="w-full p-2 border rounded-lg text-sm" @change="applySettings">
+              <select v-model="settings.borderStyle" class="w-full p-2 border border-border rounded-lg text-sm" @change="applySettings">
                 <option value="solid">实线 (Solid)</option>
                 <option value="dashed">虚线 (Dashed)</option>
                 <option value="dotted">点线 (Dotted)</option>
@@ -197,7 +197,7 @@
                   <input
                     v-model="settings.shadowColor"
                     type="text"
-                    class="flex-1 p-1 border rounded text-sm font-mono"
+                    class="flex-1 p-1 border border-border rounded text-sm font-mono"
                     @input="applySettings"
                   >
                 </div>
@@ -239,7 +239,7 @@
                 <input
                   v-model="settings.backgroundColor"
                   type="text"
-                  class="flex-1 p-1 border rounded text-sm font-mono"
+                  class="flex-1 p-1 border border-border rounded text-sm font-mono"
                   @input="applySettings"
                 >
               </div>

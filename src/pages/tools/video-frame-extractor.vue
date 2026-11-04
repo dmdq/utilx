@@ -103,7 +103,7 @@
               min="1"
               max="200"
               step="1"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <p class="text-xs text-muted-foreground mt-1.5">默认 9 帧适合挑封面；帧数越多覆盖越细，建议不超过 100 帧</p>
           </div>
@@ -125,7 +125,7 @@
               type="number"
               min="0.5"
               step="0.5"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <p class="text-xs text-muted-foreground mt-1.5">每隔设定秒数抓一帧，从 0s 开始，末帧不超过视频时长</p>
           </div>

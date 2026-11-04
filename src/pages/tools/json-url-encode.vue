@@ -18,7 +18,7 @@
         <textarea
           v-model="inputText"
           placeholder='{"key": "value", "name": "张三"}'
-          class="w-full h-64 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-64 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
 
         <div class="bg-muted p-4 rounded-lg">

@@ -49,7 +49,7 @@
               type="text"
               maxlength="20"
               placeholder="如：客厅龟背竹"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
           </div>
 
@@ -76,14 +76,14 @@
                 min="1"
                 max="60"
                 step="1"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-1.5">光照标签</label>
               <select
                 v-model="formSun"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
                 <option v-for="s in SUN_OPTIONS" :key="s" :value="s">{{ s }}</option>
               </select>
@@ -97,7 +97,7 @@
               type="text"
               :maxlength="NOTE_MAX"
               placeholder="如：自来水晾一晚 / 冬天减半"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
           </div>
 
@@ -306,7 +306,7 @@
             v-model="editForm.name"
             type="text"
             maxlength="20"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
         </div>
 
@@ -333,14 +333,14 @@
               min="1"
               max="60"
               step="1"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1.5">光照标签</label>
             <select
               v-model="editForm.sun"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <option v-for="s in SUN_OPTIONS" :key="s" :value="s">{{ s }}</option>
             </select>
@@ -352,7 +352,7 @@
           <input
             v-model="editForm.lastWatered"
             type="date"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
           <p class="text-[10px] text-muted-foreground mt-1">补记实际日期（如忘了打卡），下次到期会按它重算。</p>
         </div>
@@ -363,7 +363,7 @@
             v-model="editForm.note"
             type="text"
             :maxlength="NOTE_MAX"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
         </div>
 

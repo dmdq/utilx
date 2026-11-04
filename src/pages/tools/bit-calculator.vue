@@ -14,7 +14,7 @@
           </div>
 
           <div class="space-y-2">
-            <input v-model.number="operandA" type="number" placeholder="输入数字" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <input v-model.number="operandA" type="number" placeholder="输入数字" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             <div class="bg-muted p-3 rounded-lg">
               <p class="text-xs text-muted-foreground mb-1">二进制:</p>
               <p class="font-mono text-sm">{{ operandA !== null ? toBinary(operandA) : '-' }}</p>
@@ -33,7 +33,7 @@
           </div>
 
           <div class="space-y-2">
-            <input v-model.number="operandB" type="number" placeholder="输入数字" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <input v-model.number="operandB" type="number" placeholder="输入数字" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             <div class="bg-muted p-3 rounded-lg">
               <p class="text-xs text-muted-foreground mb-1">二进制:</p>
               <p class="font-mono text-sm">{{ operandB !== null ? toBinary(operandB) : '-' }}</p>

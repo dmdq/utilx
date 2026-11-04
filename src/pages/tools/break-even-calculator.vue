@@ -32,7 +32,7 @@
             type="number"
             min="0"
             step="500"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">房租 + 工资 + 水电底耗等每月不管卖多少都要付的合计</p>
         </div>
@@ -44,7 +44,7 @@
             type="number"
             min="0"
             step="1"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">按实际成交均价填，常打折就按折后价</p>
         </div>
@@ -56,7 +56,7 @@
             type="number"
             min="0"
             step="0.1"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">进货/材料 + 包装 + 平台扣点，卖一件才发生的钱，需小于单价</p>
         </div>
@@ -68,7 +68,7 @@
             type="number"
             min="0"
             step="1000"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">留空或填 0 即只算保本；大于 0 时测算达成目标所需销量</p>
         </div>
@@ -80,7 +80,7 @@
             type="number"
             min="0"
             step="10"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">填写后显示安全边际分析</p>
         </div>

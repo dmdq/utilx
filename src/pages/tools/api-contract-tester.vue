@@ -16,7 +16,7 @@
           <div class="grid grid-cols-2 gap-4 mb-4">
             <div>
               <label class="block text-sm font-medium mb-2">请求方法</label>
-              <select v-model="requestConfig.method" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="requestConfig.method" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="GET">GET</option>
                 <option value="POST">POST</option>
                 <option value="PUT">PUT</option>
@@ -28,7 +28,7 @@
             </div>
             <div>
               <label class="block text-sm font-medium mb-2">内容类型</label>
-              <select v-model="requestConfig.contentType" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="requestConfig.contentType" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="application/json">application/json</option>
                 <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
                 <option value="multipart/form-data">multipart/form-data</option>
@@ -44,7 +44,7 @@
               v-model="requestConfig.url"
               type="text"
               placeholder="https://api.example.com/users"
-              class="w-full px-3 py-2 border rounded-md"
+              class="w-full px-3 py-2 border border-border rounded-md"
             >
           </div>
 
@@ -74,7 +74,7 @@
         <!-- 认证配置 -->
         <div class="bg-card rounded-lg p-4">
           <h3 class="text-lg font-semibold mb-3">认证方式</h3>
-          <select v-model="authType" @change="onAuthTypeChange" class="w-full px-3 py-2 border rounded-md mb-3">
+          <select v-model="authType" @change="onAuthTypeChange" class="w-full px-3 py-2 border border-border rounded-md mb-3">
             <option value="none">无认证</option>
             <option value="bearer">Bearer Token</option>
             <option value="basic">Basic Auth</option>
@@ -88,7 +88,7 @@
               v-model="auth.bearer.token"
               type="text"
               placeholder="输入Bearer Token"
-              class="w-full px-3 py-2 border rounded-md"
+              class="w-full px-3 py-2 border border-border rounded-md"
             >
           </div>
 
@@ -98,13 +98,13 @@
               v-model="auth.basic.username"
               type="text"
               placeholder="用户名"
-              class="px-3 py-2 border rounded-md"
+              class="px-3 py-2 border border-border rounded-md"
             >
             <input
               v-model="auth.basic.password"
               type="password"
               placeholder="密码"
-              class="px-3 py-2 border rounded-md"
+              class="px-3 py-2 border border-border rounded-md"
             >
           </div>
 
@@ -114,15 +114,15 @@
               v-model="auth.apiKey.key"
               type="text"
               placeholder="Key名称"
-              class="w-full px-3 py-2 border rounded-md"
+              class="w-full px-3 py-2 border border-border rounded-md"
             >
             <input
               v-model="auth.apiKey.value"
               type="text"
               placeholder="API Key值"
-              class="w-full px-3 py-2 border rounded-md"
+              class="w-full px-3 py-2 border border-border rounded-md"
             >
-            <select v-model="auth.apiKey.location" class="w-full px-3 py-2 border rounded-md">
+            <select v-model="auth.apiKey.location" class="w-full px-3 py-2 border border-border rounded-md">
               <option value="header">Header</option>
               <option value="query">Query Parameter</option>
             </select>
@@ -134,19 +134,19 @@
               v-model="auth.oauth2.clientId"
               type="text"
               placeholder="Client ID"
-              class="w-full px-3 py-2 border rounded-md"
+              class="w-full px-3 py-2 border border-border rounded-md"
             >
             <input
               v-model="auth.oauth2.clientSecret"
               type="password"
               placeholder="Client Secret"
-              class="w-full px-3 py-2 border rounded-md"
+              class="w-full px-3 py-2 border border-border rounded-md"
             >
             <input
               v-model="auth.oauth2.tokenUrl"
               type="text"
               placeholder="Token URL"
-              class="w-full px-3 py-2 border rounded-md"
+              class="w-full px-3 py-2 border border-border rounded-md"
             >
           </div>
         </div>
@@ -172,12 +172,12 @@
               <input
                 v-model="header.key"
                 placeholder="名称"
-                class="flex-1 px-2 py-1 border rounded text-sm"
+                class="flex-1 px-2 py-1 border border-border rounded text-sm"
               >
               <input
                 v-model="header.value"
                 placeholder="值"
-                class="flex-1 px-2 py-1 border rounded text-sm"
+                class="flex-1 px-2 py-1 border border-border rounded text-sm"
               >
               <button
                 @click="removeHeader(index)"
@@ -193,7 +193,7 @@
         <div v-if="['POST', 'PUT', 'PATCH'].includes(requestConfig.method)" class="bg-card rounded-lg p-4">
           <h3 class="text-lg font-semibold mb-3">请求体</h3>
           <div class="mb-2">
-            <select v-model="bodyType" @change="onBodyTypeChange" class="px-3 py-2 border rounded-md text-sm">
+            <select v-model="bodyType" @change="onBodyTypeChange" class="px-3 py-2 border border-border rounded-md text-sm">
               <option value="json">JSON</option>
               <option value="form">Form Data</option>
               <option value="raw">Raw</option>
@@ -204,7 +204,7 @@
           <div v-if="bodyType === 'json'">
             <textarea
               v-model="requestConfig.body"
-              class="w-full h-48 p-3 font-mono text-sm border rounded-md resize-none"
+              class="w-full h-48 p-3 font-mono text-sm border border-border rounded-md resize-none"
               placeholder='{"key": "value"}'
             ></textarea>
           </div>
@@ -218,12 +218,12 @@
               <input
                 v-model="field.key"
                 placeholder="字段名"
-                class="flex-1 px-2 py-1 border rounded text-sm"
+                class="flex-1 px-2 py-1 border border-border rounded text-sm"
               >
               <input
                 v-model="field.value"
                 placeholder="字段值"
-                class="flex-1 px-2 py-1 border rounded text-sm"
+                class="flex-1 px-2 py-1 border border-border rounded text-sm"
               >
               <button
                 @click="removeFormField(index)"
@@ -243,7 +243,7 @@
           <div v-else-if="bodyType === 'raw'">
             <textarea
               v-model="requestConfig.body"
-              class="w-full h-48 p-3 font-mono text-sm border rounded-md resize-none"
+              class="w-full h-48 p-3 font-mono text-sm border border-border rounded-md resize-none"
               placeholder="原始请求体内容"
             ></textarea>
           </div>
@@ -252,7 +252,7 @@
             <input
               type="file"
               @change="handleFileUpload"
-              class="w-full px-3 py-2 border rounded-md text-sm"
+              class="w-full px-3 py-2 border border-border rounded-md text-sm"
             >
           </div>
         </div>
@@ -285,7 +285,7 @@
             <!-- 响应头 -->
             <div>
               <h4 class="font-medium text-sm mb-2">响应头</h4>
-              <div class="max-h-32 overflow-auto bg-gray-50 p-2 rounded text-xs">
+              <div class="max-h-32 overflow-auto bg-muted/50 p-2 rounded text-xs">
                 <div v-for="(value, key) in response.headers" :key="key" class="mb-1">
                   <strong>{{ key }}:</strong> {{ value }}
                 </div>
@@ -296,7 +296,7 @@
             <div>
               <h4 class="font-medium text-sm mb-2">响应体</h4>
               <div class="max-h-64 overflow-auto">
-                <pre class="bg-gray-50 p-3 rounded text-sm overflow-x-auto"><code>{{ formatResponse(response.data) }}</code></pre>
+                <pre class="bg-muted/50 p-3 rounded text-sm overflow-x-auto"><code>{{ formatResponse(response.data) }}</code></pre>
               </div>
             </div>
           </div>
@@ -310,7 +310,7 @@
               <label class="block text-sm font-medium mb-2">验证规则</label>
               <textarea
                 v-model="contractRules"
-                class="w-full h-32 p-3 font-mono text-sm border rounded-md resize-none"
+                class="w-full h-32 p-3 font-mono text-sm border border-border rounded-md resize-none"
                 placeholder="status: 200
 headers:
   content-type: application/json
@@ -367,7 +367,7 @@ body:
                 type="number"
                 min="1"
                 max="100"
-                class="w-full px-2 py-1 border rounded text-sm"
+                class="w-full px-2 py-1 border border-border rounded text-sm"
               >
             </div>
             <div>
@@ -377,7 +377,7 @@ body:
                 type="number"
                 min="1"
                 max="60"
-                class="w-full px-2 py-1 border rounded text-sm"
+                class="w-full px-2 py-1 border border-border rounded text-sm"
               >
             </div>
             <div>
@@ -387,7 +387,7 @@ body:
                 type="number"
                 min="0"
                 max="1000"
-                class="w-full px-2 py-1 border rounded text-sm"
+                class="w-full px-2 py-1 border border-border rounded text-sm"
               >
             </div>
           </div>

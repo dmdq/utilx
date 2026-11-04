@@ -41,7 +41,7 @@
                 type="number"
                 min="18"
                 max="100"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="输入年龄"
               >
             </div>
@@ -49,11 +49,11 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">身高 (cm)</label>
-                <input v-model.number="height" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="身高">
+                <input v-model.number="height" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="身高">
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">体重 (kg)</label>
-                <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="体重">
+                <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="体重">
               </div>
             </div>
 
@@ -62,7 +62,7 @@
               <input
                 v-model.number="restingHR"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="早晨静坐状态下测量"
               >
             </div>
@@ -76,7 +76,7 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium mb-2 block">每周运动频率</label>
-              <select v-model="exerciseFrequency" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="exerciseFrequency" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option :value="0">几乎不运动</option>
                 <option :value="1">1-2次/周</option>
                 <option :value="2">3-4次/周</option>
@@ -87,7 +87,7 @@
 
             <div>
               <label class="text-sm font-medium mb-2 block">每次运动时长</label>
-              <select v-model="exerciseDuration" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="exerciseDuration" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option :value="0">&lt;15分钟</option>
                 <option :value="1">15-30分钟</option>
                 <option :value="2">30-60分钟</option>
@@ -97,7 +97,7 @@
 
             <div>
               <label class="text-sm font-medium mb-2 block">运动强度</label>
-              <select v-model="exerciseIntensity" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="exerciseIntensity" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option :value="0">低强度（散步）</option>
                 <option :value="1">中低强度（快走）</option>
                 <option :value="2">中强度（慢跑）</option>
@@ -108,7 +108,7 @@
 
             <div>
               <label class="text-sm font-medium mb-2 block">吸烟情况</label>
-              <select v-model="smoking" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="smoking" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option :value="0">不吸烟</option>
                 <option :value="1">已戒烟</option>
                 <option :value="2">偶尔吸烟</option>
@@ -265,7 +265,7 @@
                 v-model.number="targetAge"
                 type="number"
                 :max="age"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="例如: 比实际年龄小5岁"
               >
             </div>

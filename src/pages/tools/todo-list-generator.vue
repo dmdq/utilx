@@ -35,7 +35,7 @@
           v-model="newTask"
           @keyup.enter="addTask"
           type="text"
-          class="flex-1 px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+          class="flex-1 px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
           placeholder="输入新任务，按回车添加..."
         />
         <button
@@ -82,7 +82,7 @@
         </div>
         <select
           v-model="sortBy"
-          class="px-4 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+          class="px-4 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
         >
           <option value="priority">按优先级</option>
           <option value="date">按时间</option>
@@ -132,7 +132,7 @@
             <select
               :value="task.priority"
               @change="updatePriority(task.id, $event.target.value)"
-              class="px-2 py-1 text-sm bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="px-2 py-1 text-sm bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="low">🟢 低</option>
               <option value="medium">🟡 中</option>
@@ -142,7 +142,7 @@
             <select
               :value="task.category"
               @change="updateCategory(task.id, $event.target.value)"
-              class="px-2 py-1 text-sm bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="px-2 py-1 text-sm bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="default">默认</option>
               <option value="工作">工作</option>

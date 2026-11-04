@@ -51,25 +51,25 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">性别</label>
-                <select v-model="gender" class="w-full px-3 py-2 border rounded-lg text-sm">
+                <select v-model="gender" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                   <option value="male">男性</option>
                   <option value="female">女性</option>
                 </select>
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">年龄</label>
-                <input v-model.number="age" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="岁">
+                <input v-model.number="age" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="岁">
               </div>
             </div>
 
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">静息心率 (bpm)</label>
-                <input v-model.number="restingHR" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="早晨测量">
+                <input v-model.number="restingHR" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="早晨测量">
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">最大心率 (bpm)</label>
-                <input v-model.number="maxHR" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="220-年龄">
+                <input v-model.number="maxHR" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="220-年龄">
               </div>
             </div>
 
@@ -92,32 +92,32 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">性别</label>
-                <select v-model="gender" class="w-full px-3 py-2 border rounded-lg text-sm">
+                <select v-model="gender" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                   <option value="male">男性</option>
                   <option value="female">女性</option>
                 </select>
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">年龄</label>
-                <input v-model.number="age" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="岁">
+                <input v-model.number="age" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="岁">
               </div>
             </div>
 
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">体重 (kg)</label>
-                <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="体重">
+                <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="体重">
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">完成时间 (分钟)</label>
-                <input v-model.number="walkTime" type="number" step="0.1" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="例如: 12.5">
+                <input v-model.number="walkTime" type="number" step="0.1" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="例如: 12.5">
               </div>
             </div>
 
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">步行后心率 (bpm)</label>
-                <input v-model.number="exerciseHR" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="立即测量">
+                <input v-model.number="exerciseHR" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="立即测量">
               </div>
             </div>
 
@@ -139,7 +139,7 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium mb-1 block">性别</label>
-              <select v-model="gender" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="gender" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option value="male">男性</option>
                 <option value="female">女性</option>
               </select>
@@ -147,7 +147,7 @@
 
             <div>
               <label class="text-sm font-medium mb-1 block">12分钟跑的距离 (米)</label>
-              <input v-model.number="distance" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="例如: 2400">
+              <input v-model.number="distance" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="例如: 2400">
             </div>
 
             <div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded text-sm">
@@ -168,7 +168,7 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium mb-1 block">性别</label>
-              <select v-model="gender" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="gender" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option value="male">男性</option>
                 <option value="female">女性</option>
               </select>
@@ -176,12 +176,12 @@
 
             <div>
               <label class="text-sm font-medium mb-1 block">达到的等级</label>
-              <input v-model.number="beepLevel" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="例如: 10">
+              <input v-model.number="beepLevel" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="例如: 10">
             </div>
 
             <div>
               <label class="text-sm font-medium mb-1 block">该等级的往返次数</label>
-              <input v-model.number="beepShuttle" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="例如: 5">
+              <input v-model.number="beepShuttle" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="例如: 5">
             </div>
 
             <div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded text-sm">

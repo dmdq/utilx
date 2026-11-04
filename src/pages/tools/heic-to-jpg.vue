@@ -98,7 +98,7 @@
 
         <div>
           <label class="block text-sm font-medium text-foreground mb-2">最长边限制</label>
-          <select v-model.number="maxEdge" class="w-full px-3 py-2.5 bg-muted border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+          <select v-model.number="maxEdge" class="w-full px-3 py-2.5 bg-muted border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
             <option :value="0">不缩放（保留原始分辨率）</option>
             <option :value="1024">最长边 1024 px</option>
             <option :value="1536">最长边 1536 px</option>

@@ -35,7 +35,7 @@
         </div>
         <textarea
           v-model="originalText"
-          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="输入原始文本..."
           @input="compareTexts"
         ></textarea>
@@ -65,7 +65,7 @@
         </div>
         <textarea
           v-model="modifiedText"
-          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="输入修改后的文本..."
           @input="compareTexts"
         ></textarea>

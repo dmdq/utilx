@@ -93,7 +93,7 @@
             </button>
           </div>
           <div v-if="framePreset === 'custom'" class="flex items-center gap-2">
-            <input v-model="customFrame" type="color" class="w-10 h-8 rounded border border-border bg-muted cursor-pointer" />
+            <input v-model="customFrame" type="color" class="w-10 h-8 rounded border border-border border-border bg-muted cursor-pointer" />
             <span class="text-xs text-muted-foreground font-mono">{{ customFrame }}</span>
           </div>
         </div>
@@ -150,7 +150,7 @@
               min="480"
               max="3200"
               step="10"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <p class="text-xs text-muted-foreground mt-1">常用：1080（社媒）/ 1242（App Store）</p>
           </div>

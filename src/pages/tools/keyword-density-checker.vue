@@ -35,7 +35,7 @@
             v-model="inputText"
             rows="12"
             placeholder="粘贴要分析的文章全文，支持中英文混排……"
-            class="w-full h-64 px-3 py-2.5 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40 resize-y"
+            class="w-full h-64 px-3 py-2.5 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40 resize-y"
           ></textarea>
           <p v-if="isTruncated" class="mt-1.5 text-xs text-amber-600 flex items-start gap-1">
             <TriangleAlert class="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
@@ -50,7 +50,7 @@
             v-model="targetInput"
             type="text"
             placeholder="如：关键词密度,词频统计"
-            class="mt-1.5 w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="mt-1.5 w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
           <p class="mt-1 text-xs text-muted-foreground">多个词用逗号、顿号或分号分隔（最多 20 个）；英文短语可含空格，按整词匹配。</p>
         </div>

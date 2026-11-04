@@ -46,7 +46,7 @@
                 v-model="config.image"
                 type="text"
                 placeholder="nginx:latest"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
@@ -55,7 +55,7 @@
                 v-model="config.containerName"
                 type="text"
                 placeholder="my-container"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
@@ -66,14 +66,14 @@
                     v-model="port.host"
                     type="text"
                     placeholder="8080"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                   <span>:</span>
                   <input
                     v-model="port.container"
                     type="text"
                     placeholder="80"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                   <button
                     @click="removePort(index)"
@@ -98,14 +98,14 @@
                     v-model="volume.host"
                     type="text"
                     placeholder="/host/path"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                   <span>:</span>
                   <input
                     v-model="volume.container"
                     type="text"
                     placeholder="/container/path"
-                    class="flex-1 px-2 py-1 border rounded text-sm"
+                    class="flex-1 px-2 py-1 border border-border rounded text-sm"
                   />
                   <button
                     @click="removeVolume(index)"
@@ -127,7 +127,7 @@
               <textarea
                 v-model="config.environment"
                 placeholder="KEY=value&#10;DEBUG=true"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm h-20 resize-none"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm h-20 resize-none"
               ></textarea>
             </div>
             <div class="flex items-center gap-3">
@@ -158,7 +158,7 @@
                 v-model="config.imageName"
                 type="text"
                 placeholder="my-app:1.0.0"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
@@ -167,7 +167,7 @@
                 v-model="config.dockerfilePath"
                 type="text"
                 placeholder="./Dockerfile"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
@@ -176,7 +176,7 @@
                 v-model="config.context"
                 type="text"
                 placeholder="."
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
@@ -184,7 +184,7 @@
               <textarea
                 v-model="config.buildArgs"
                 placeholder="VERSION=1.0.0&#10;ENV=production"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm h-20 resize-none"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm h-20 resize-none"
               ></textarea>
             </div>
             <div class="flex items-center gap-3">
@@ -206,12 +206,12 @@
                 v-model="config.networkName"
                 type="text"
                 placeholder="my-network"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
               <label class="text-sm font-medium">驱动类型</label>
-              <select v-model="config.driver" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.driver" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="bridge">Bridge</option>
                 <option value="host">Host</option>
                 <option value="overlay">Overlay</option>
@@ -225,7 +225,7 @@
                 v-model="config.subnet"
                 type="text"
                 placeholder="172.20.0.0/16"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
           </div>
@@ -238,12 +238,12 @@
                 v-model="config.composeFile"
                 type="text"
                 placeholder="docker-compose.yml"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
               <label class="text-sm font-medium">操作</label>
-              <select v-model="config.composeAction" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.composeAction" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="up">启动服务</option>
                 <option value="down">停止并删除</option>
                 <option value="start">启动</option>
@@ -259,7 +259,7 @@
                 v-model="config.services"
                 type="text"
                 placeholder="web db"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div class="flex items-center gap-3">

@@ -28,7 +28,7 @@
             v-model="ddlText"
             rows="18"
             spellcheck="false"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring leading-relaxed"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring leading-relaxed"
             placeholder="CREATE TABLE users (...)&#10;CREATE TABLE orders (...)"
           ></textarea>
           <div class="flex flex-wrap gap-2">

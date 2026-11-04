@@ -26,18 +26,18 @@
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">名称</label>
             <input v-model="form.name" type="text" placeholder="例如：视频会员 / AI 助手"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div class="grid grid-cols-2 gap-3">
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">价格（元）</label>
               <input v-model.number="form.price" type="number" min="0" step="0.1"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">周期</label>
               <select v-model="form.cycle"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
                 <option value="month">每月</option>
                 <option value="year">每年</option>
                 <option value="week">每周</option>
@@ -47,7 +47,7 @@
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">下次扣费日期</label>
             <input v-model="form.nextDate" type="date"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">分类</label>

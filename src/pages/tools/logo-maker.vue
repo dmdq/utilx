@@ -51,7 +51,7 @@
                 <input
                   type="text"
                   v-model="selectedShape.fill"
-                  class="flex-1 px-3 py-2 border rounded-lg"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg"
                 />
               </div>
             </div>
@@ -70,7 +70,7 @@
                   v-model.number="selectedShape.strokeWidth"
                   min="0"
                   max="20"
-                  class="w-20 px-3 py-2 border rounded-lg"
+                  class="w-20 px-3 py-2 border border-border rounded-lg"
                   placeholder="宽度"
                 />
               </div>
@@ -161,13 +161,13 @@
               <input
                 type="text"
                 v-model="selectedShape.text"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
               />
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">字体</label>
-              <select v-model="selectedShape.fontFamily" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="selectedShape.fontFamily" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="Arial">Arial</option>
                 <option value="Helvetica">Helvetica</option>
                 <option value="Times New Roman">Times New Roman</option>
@@ -239,7 +239,7 @@
                 ref="svgCanvas"
                 :width="canvasSize"
                 :height="canvasSize"
-                class="border-2 border-gray-200 rounded-lg bg-white"
+                class="border-2 border-border rounded-lg bg-white"
                 @click="handleCanvasClick"
               >
                 <!-- 网格背景 -->
@@ -385,7 +385,7 @@
                 <input
                   type="text"
                   v-model="backgroundColor"
-                  class="flex-1 px-3 py-2 border rounded-lg"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg"
                 />
               </div>
             </div>
@@ -400,10 +400,10 @@
                     v-model.number="canvasSize"
                     min="100"
                     max="800"
-                    class="w-full px-3 py-2 border rounded-lg"
+                    class="w-full px-3 py-2 border border-border rounded-lg"
                   />
                 </div>
-                <select v-model="presetSize" @change="applyPresetSize" class="w-full px-3 py-2 border rounded-lg">
+                <select v-model="presetSize" @change="applyPresetSize" class="w-full px-3 py-2 border border-border rounded-lg">
                   <option value="">自定义</option>
                   <option value="200">200×200</option>
                   <option value="400">400×400</option>
@@ -423,7 +423,7 @@
               <input
                 type="text"
                 v-model="exportFileName"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="my-logo"
               />
             </div>

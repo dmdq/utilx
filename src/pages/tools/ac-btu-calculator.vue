@@ -43,7 +43,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 15"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </div>
             <div>
@@ -54,7 +54,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="默认 2.8"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </div>
           </div>
@@ -158,7 +158,7 @@
                 v-model="hoursInput"
                 type="text"
                 inputmode="decimal"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </div>
             <div>
@@ -168,7 +168,7 @@
                 v-model="priceInput"
                 type="text"
                 inputmode="decimal"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </div>
           </div>
@@ -177,7 +177,7 @@
             <select
               id="ac-eer"
               v-model="eerSelect"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <option v-for="e in EER_DEFS" :key="e.value" :value="e.value">{{ e.value }}（{{ e.label }}）</option>
             </select>
@@ -305,7 +305,7 @@
               <select
                 id="ac-model"
                 v-model="reverseModelSel"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
                 <option v-for="m in MODELS" :key="m.id" :value="m.id">{{ m.name }}（{{ m.ratedW }} W）</option>
               </select>

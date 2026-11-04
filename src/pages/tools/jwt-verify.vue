@@ -30,7 +30,7 @@
         <textarea
           v-model="jwtToken"
           placeholder="请输入JWT Token，例如：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-          class="w-full h-32 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-32 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div v-if="jwtStructure" class="text-sm text-muted-foreground">
           <span>结构：{{ jwtStructure.header }} . {{ jwtStructure.payload }} . {{ jwtStructure.signature }}</span>
@@ -46,7 +46,7 @@
           <label class="text-sm font-medium mb-2 block">签名验证方式</label>
           <select
             v-model="verifyMethod"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="none">仅解析，不验证签名</option>
             <option value="secret">使用密钥验证</option>
@@ -61,7 +61,7 @@
             v-model="secretKey"
             type="password"
             placeholder="输入用于验证的密钥"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
           <div class="mt-2 text-xs text-muted-foreground">
             HS256/HS384/HS512算法使用
@@ -74,7 +74,7 @@
           <textarea
             v-model="publicKey"
             placeholder="输入PEM格式的公钥"
-            class="w-full h-24 p-3 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+            class="w-full h-24 p-3 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
           ></textarea>
           <div class="mt-2 text-xs text-muted-foreground">
             RS256/RS384/RS512、ES256/ES384/ES512、PS256/PS384/PS512算法使用
@@ -239,7 +239,7 @@
               type="number"
               min="0"
               max="300"
-              class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
             <div class="mt-1 text-xs text-muted-foreground">
               用于解决服务器时间不同步问题，通常设置为60秒
@@ -251,7 +251,7 @@
               v-model="requiredClaims"
               type="text"
               placeholder="例如：iss,aud,sub"
-              class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
             <div class="mt-1 text-xs text-muted-foreground">
               用逗号分隔的声明列表，验证这些声明是否存在
@@ -268,13 +268,13 @@
                 v-model="claim.name"
                 type="text"
                 placeholder="声明名称"
-                class="flex-1 px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
               >
               <input
                 v-model="claim.value"
                 type="text"
                 placeholder="期望值"
-                class="flex-1 px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
               >
               <button
                 @click="removeCustomClaim(index)"

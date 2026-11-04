@@ -40,7 +40,7 @@
 
           <textarea
             v-model="inputText"
-            class="w-full h-36 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-36 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="或直接粘贴字幕内容..."
             spellcheck="false"
             @input="parseInput"
@@ -71,7 +71,7 @@
             <label class="block text-sm font-medium text-foreground mb-2">时间平移（秒）</label>
             <div class="flex items-center gap-2">
               <button @click="shiftSec -= 0.5" class="bg-muted hover:bg-muted/80 text-muted-foreground px-3 py-2 rounded text-sm">−0.5s</button>
-              <input v-model.number="shiftSec" type="number" step="0.1" class="flex-1 px-3 py-2 bg-background border border-input rounded-lg text-sm text-center" />
+              <input v-model.number="shiftSec" type="number" step="0.1" class="flex-1 px-3 py-2 bg-background border border-border border-input rounded-lg text-sm text-center" />
               <button @click="shiftSec += 0.5" class="bg-muted hover:bg-muted/80 text-muted-foreground px-3 py-2 rounded text-sm">+0.5s</button>
             </div>
             <p class="text-xs text-muted-foreground mt-1.5">正数整体延后（字幕比声音快时用），负数整体提前。</p>
@@ -125,7 +125,7 @@
           </div>
           <div class="p-6">
             <textarea v-if="outputText" :value="outputText" readonly
-              class="w-full h-[420px] px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-xs font-mono focus:outline-none resize-y" spellcheck="false"></textarea>
+              class="w-full h-[420px] px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-xs font-mono focus:outline-none resize-y" spellcheck="false"></textarea>
             <div v-else class="py-20 text-center">
               <Film class="w-10 h-10 mx-auto mb-3 text-muted-foreground/50" />
               <p class="text-sm text-muted-foreground">输入字幕内容后，这里显示转换结果</p>

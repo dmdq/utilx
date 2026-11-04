@@ -36,7 +36,7 @@
             <input
               v-model="secretKey"
               type="text"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted text-foreground font-mono text-sm"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground font-mono text-sm"
               placeholder="Base32编码的密钥"
             >
             <button
@@ -51,7 +51,7 @@
 
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">密码位数: {{ digits }} 位</label>
-          <select v-model="digits" class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground">
+          <select v-model="digits" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground">
             <option :value="6">6 位 (最常用)</option>
             <option :value="7">7 位</option>
             <option :value="8">8 位</option>
@@ -77,7 +77,7 @@
               v-model.number="hotpCounter"
               type="number"
               min="0"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted text-foreground"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground"
             >
             <button
               @click="hotpCounter++"

@@ -17,7 +17,7 @@
           <label class="text-sm font-medium mb-2 block">密钥长度</label>
           <select
             v-model="keySize"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="128">AES-128 (128位)</option>
             <option value="192">AES-192 (192位)</option>
@@ -28,7 +28,7 @@
           <label class="text-sm font-medium mb-2 block">工作模式</label>
           <select
             v-model="mode"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="CBC">CBC (密码块链接)</option>
             <option value="ECB">ECB (电子密码本)</option>
@@ -42,7 +42,7 @@
           <label class="text-sm font-medium mb-2 block">填充方式</label>
           <select
             v-model="padding"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             :disabled="mode === 'CTR' || mode === 'GCM'"
           >
             <option value="PKCS7">PKCS7</option>
@@ -56,7 +56,7 @@
           <label class="text-sm font-medium mb-2 block">输入格式</label>
           <select
             v-model="inputFormat"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="base64">Base64</option>
             <option value="hex">Hex</option>
@@ -80,7 +80,7 @@
               v-model="secretKey"
               type="password"
               :placeholder="`输入${keySize}位密钥`"
-              class="flex-1 px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="flex-1 px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
             <button
               @click="clearKey"
@@ -106,7 +106,7 @@
               v-model="iv"
               type="password"
               placeholder="输入16字节初始向量"
-              class="flex-1 px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="flex-1 px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
             <button
               @click="clearIV"
@@ -155,7 +155,7 @@
         <textarea
           v-model="encryptedData"
           :placeholder="`请输入要解密的${inputFormat}格式数据...`"
-          class="w-full h-64 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-64 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div class="text-sm text-muted-foreground">
           数据长度：{{ encryptedData.length }}
@@ -187,7 +187,7 @@
           v-model="decryptedData"
           placeholder="解密结果将显示在这里..."
           readonly
-          class="w-full h-64 p-4 border border-border rounded-lg bg-muted/50 resize-none"
+          class="w-full h-64 p-4 border border-border border-border rounded-lg bg-muted/50 resize-none"
         ></textarea>
         <div class="text-sm text-muted-foreground">
           长度：{{ decryptedData.length }}

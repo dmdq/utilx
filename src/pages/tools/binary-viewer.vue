@@ -14,7 +14,7 @@
         </div>
       </div>
 
-      <textarea v-model="inputText" placeholder="请输入要查看的文本内容..." class="w-full h-48 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"></textarea>
+      <textarea v-model="inputText" placeholder="请输入要查看的文本内容..." class="w-full h-48 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"></textarea>
     </div>
 
     <div v-if="bytesView.length > 0" class="space-y-4">

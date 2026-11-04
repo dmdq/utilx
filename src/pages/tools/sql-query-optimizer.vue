@@ -16,7 +16,7 @@
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium mb-2">数据库类型</label>
-              <select v-model="databaseType" @change="analyzeQuery" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="databaseType" @change="analyzeQuery" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="mysql">MySQL</option>
                 <option value="postgresql">PostgreSQL</option>
                 <option value="sqlite">SQLite</option>
@@ -26,7 +26,7 @@
             </div>
             <div>
               <label class="block text-sm font-medium mb-2">表大小估计</label>
-              <select v-model="tableSize" @change="analyzeQuery" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="tableSize" @change="analyzeQuery" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="small">小表 (< 1万行)</option>
                 <option value="medium">中表 (1万-100万行)</option>
                 <option value="large">大表 (> 100万行)</option>
@@ -41,7 +41,7 @@
               <input
                 v-model.number="customTableRows"
                 type="number"
-                class="w-full px-2 py-1 border rounded text-sm"
+                class="w-full px-2 py-1 border border-border rounded text-sm"
                 placeholder="1000000"
               >
             </div>
@@ -50,7 +50,7 @@
               <input
                 v-model.number="customIndexCount"
                 type="number"
-                class="w-full px-2 py-1 border rounded text-sm"
+                class="w-full px-2 py-1 border border-border rounded text-sm"
                 placeholder="5"
               >
             </div>
@@ -86,7 +86,7 @@
           <textarea
             v-model="sqlQuery"
             @input="analyzeQuery"
-            class="w-full h-64 p-3 font-mono text-sm border rounded-md resize-none"
+            class="w-full h-64 p-3 font-mono text-sm border border-border rounded-md resize-none"
             placeholder="输入SQL查询语句，例如:
 SELECT * FROM users WHERE age > 18 ORDER BY name"
           ></textarea>
@@ -141,7 +141,7 @@ SELECT * FROM users WHERE age > 18 ORDER BY name"
           <div class="space-y-2">
             <div class="flex justify-between items-center">
               <span class="text-sm">索引使用率</span>
-              <div class="w-32 bg-gray-200 rounded-full h-2">
+              <div class="w-32 bg-muted rounded-full h-2">
                 <div
                   class="bg-green-500 h-2 rounded-full"
                   :style="{ width: analysisResults.indexUsage + '%' }"

@@ -37,7 +37,7 @@
               <textarea
                 v-model="publicKey"
                 readonly
-                class="w-full px-3 py-2 border border-border rounded bg-card text-xs font-mono text-foreground"
+                class="w-full px-3 py-2 border border-border border-border rounded bg-card text-xs font-mono text-foreground"
                 rows="3"
                 placeholder="点击生成密钥对后显示公钥"
               ></textarea>
@@ -47,7 +47,7 @@
               <textarea
                 v-model="privateKey"
                 readonly
-                class="w-full px-3 py-2 border border-border rounded bg-card text-xs font-mono text-foreground"
+                class="w-full px-3 py-2 border border-border border-border rounded bg-card text-xs font-mono text-foreground"
                 rows="3"
                 placeholder="点击生成密钥对后显示私钥"
               ></textarea>
@@ -60,7 +60,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">要加密/解密的文本</label>
           <textarea
             v-model="inputText"
-            class="w-full px-4 py-3 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+            class="w-full px-4 py-3 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
             rows="6"
             placeholder="输入要加密或解密的文本..."
           ></textarea>

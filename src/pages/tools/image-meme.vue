@@ -63,7 +63,7 @@
               v-model="topText.text"
               @input="updatePreview"
               type="text"
-              class="w-full p-2 border rounded-lg text-sm mb-2"
+              class="w-full p-2 border border-border rounded-lg text-sm mb-2"
               placeholder="输入顶部文字..."
             >
             <div class="flex gap-2">
@@ -77,7 +77,7 @@
                 v-model="topText.color"
                 type="text"
                 @input="updatePreview"
-                class="flex-1 p-2 border rounded text-sm font-mono"
+                class="flex-1 p-2 border border-border rounded text-sm font-mono"
               >
             </div>
           </div>
@@ -95,7 +95,7 @@
               v-model="bottomText.text"
               @input="updatePreview"
               type="text"
-              class="w-full p-2 border rounded-lg text-sm mb-2"
+              class="w-full p-2 border border-border rounded-lg text-sm mb-2"
               placeholder="输入底部文字..."
             >
             <div class="flex gap-2">
@@ -109,7 +109,7 @@
                 v-model="bottomText.color"
                 type="text"
                 @input="updatePreview"
-                class="flex-1 p-2 border rounded text-sm font-mono"
+                class="flex-1 p-2 border border-border rounded text-sm font-mono"
               >
             </div>
           </div>
@@ -133,7 +133,7 @@
           <!-- 字体选择 -->
           <div class="bg-muted p-4 rounded-lg">
             <label class="text-xs text-muted-foreground mb-1 block">字体</label>
-            <select v-model="fontFamily" @change="updatePreview" class="w-full p-2 border rounded text-sm">
+            <select v-model="fontFamily" @change="updatePreview" class="w-full p-2 border border-border rounded text-sm">
               <option value="Impact">Impact (推荐)</option>
               <option value="Arial Black">Arial Black</option>
               <option value="Comic Sans MS">Comic Sans MS</option>
@@ -162,7 +162,7 @@
                 v-model="strokeColor"
                 type="text"
                 @input="updatePreview"
-                class="flex-1 p-2 border rounded text-sm font-mono"
+                class="flex-1 p-2 border border-border rounded text-sm font-mono"
               >
             </div>
           </div>

@@ -17,7 +17,7 @@
           <label class="text-sm font-medium mb-2 block">密钥长度</label>
           <select
             v-model="keySize"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="1024">1024 位（不推荐）</option>
             <option value="2048">2048 位（推荐）</option>
@@ -32,7 +32,7 @@
           <label class="text-sm font-medium mb-2 block">密钥格式</label>
           <select
             v-model="keyFormat"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="PEM">PEM (文本格式)</option>
             <option value="DER">DER (二进制格式)</option>
@@ -42,7 +42,7 @@
           <label class="text-sm font-medium mb-2 block">密钥类型</label>
           <select
             v-model="keyType"
-            class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="RSA">RSA</option>
             <option value="RSA-OAEP">RSA-OAEP</option>
@@ -58,7 +58,7 @@
             <input
               type="checkbox"
               v-model="includeExponent"
-              class="rounded border-border"
+              class="rounded border border-border"
             >
             <span class="text-sm">自定义指数</span>
           </label>
@@ -66,7 +66,7 @@
             <input
               type="checkbox"
               v-model="includePassphrase"
-              class="rounded border-border"
+              class="rounded border border-border"
             >
             <span class="text-sm">私钥密码保护</span>
           </label>
@@ -80,7 +80,7 @@
           v-model.number="publicExponent"
           type="number"
           placeholder="65537"
-          class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
         >
       </div>
 
@@ -91,7 +91,7 @@
           v-model="passphrase"
           type="password"
           placeholder="输入密码保护私钥"
-          class="w-full px-3 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full px-3 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
         >
       </div>
     </div>

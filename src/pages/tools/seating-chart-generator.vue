@@ -33,7 +33,7 @@
             v-model="rosterText"
             @change="applyLayout"
             rows="9"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="每行一名学生，可在名字后加数字成绩&#10;张三 95&#10;李四&#10;王五 88.5"
           ></textarea>
           <p class="text-xs text-muted-foreground">每行一名；「名字 数字」会被识别为成绩，用于按成绩蛇形排座；空行自动忽略。</p>
@@ -51,7 +51,7 @@
               v-model="className"
               @change="persist"
               type="text"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
           </div>
 
@@ -64,7 +64,7 @@
                 type="number"
                 min="1"
                 max="12"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               >
             </div>
             <div>
@@ -76,7 +76,7 @@
                 min="1"
                 max="12"
                 :disabled="colMode === 'auto'"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-50"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-50"
               >
               <p class="text-xs text-muted-foreground mt-1">当前每排 {{ colCount }} 座</p>
             </div>

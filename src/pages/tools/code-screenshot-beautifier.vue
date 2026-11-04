@@ -30,7 +30,7 @@
             v-model="code"
             rows="12"
             spellcheck="false"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="粘贴你的代码..."
           ></textarea>
         </div>
@@ -40,7 +40,7 @@
             <label class="block text-sm font-medium text-foreground mb-2">语言（影响高亮规则）</label>
             <select
               v-model="language"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option v-for="(meta, key) in LANG_META" :key="key" :value="key">{{ meta.label }}</option>
             </select>
@@ -50,7 +50,7 @@
             <input
               v-model="fileName"
               type="text"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如 main.js"
             />
           </div>
@@ -80,7 +80,7 @@
             v-model="showControls"
             type="checkbox"
             id="windowControls"
-            class="w-4 h-4 rounded border-border"
+            class="w-4 h-4 rounded border border-border"
           >
           <label for="windowControls" class="text-sm text-foreground">显示 macOS 窗口控件（三圆点标题栏）</label>
         </div>

@@ -52,7 +52,7 @@
                 type="number"
                 min="4"
                 max="32"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">字符</span>
             </div>
@@ -67,7 +67,7 @@
                 type="number"
                 min="1"
                 max="10"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">个</span>
             </div>
@@ -116,7 +116,7 @@
         <!-- 记忆词配置 -->
         <div v-if="selectedMode === 'mnemonic'" class="mt-6">
           <label class="text-sm font-medium mb-2 block">记忆词主题</label>
-          <select v-model="mnemonicTheme" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+          <select v-model="mnemonicTheme" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             <option value="animals">动物</option>
             <option value="fruits">水果</option>
             <option value="colors">颜色</option>
@@ -222,7 +222,7 @@
               <div
                 v-for="(password, passwordIndex) in result.passwords"
                 :key="passwordIndex"
-                class="bg-white border border-border rounded-lg p-3"
+                class="bg-card border border-border rounded-lg p-3"
               >
                 <div class="flex items-center justify-between mb-2">
                   <span class="text-sm font-medium text-muted-foreground">密码 {{ passwordIndex + 1 }}</span>

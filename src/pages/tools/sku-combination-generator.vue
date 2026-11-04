@@ -42,7 +42,7 @@
                 v-model="group.name"
                 type="text"
                 maxlength="12"
-                class="flex-1 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="如：颜色"
               />
               <button
@@ -59,7 +59,7 @@
               <input
                 v-model="group.values"
                 type="text"
-                class="flex-1 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="逗号分隔，如：红色,黑色"
               />
             </div>
@@ -75,7 +75,7 @@
         <div class="border-t border-border pt-4 space-y-3">
           <p class="text-sm font-medium text-foreground">批量填充</p>
           <div class="grid grid-cols-[1fr_auto] gap-2 items-center">
-            <input v-model.number="batchPrice" type="number" min="0" step="0.01" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="统一价格（元）" />
+            <input v-model.number="batchPrice" type="number" min="0" step="0.01" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="统一价格（元）" />
             <button
               @click="applyBatchPrice"
               :disabled="rows.length === 0"
@@ -85,7 +85,7 @@
             </button>
           </div>
           <div class="grid grid-cols-[1fr_auto] gap-2 items-center">
-            <input v-model.number="batchStock" type="number" min="0" step="1" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="统一库存（件）" />
+            <input v-model.number="batchStock" type="number" min="0" step="1" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="统一库存（件）" />
             <button
               @click="applyBatchStock"
               :disabled="rows.length === 0"
@@ -138,10 +138,10 @@
               <tr v-for="row in rows" :key="row.key" class="border-t border-border/60">
                 <td v-for="(v, vi) in row.values" :key="vi" class="px-3 py-2 text-foreground whitespace-nowrap">{{ v }}</td>
                 <td class="px-2 py-1.5">
-                  <input v-model.number="row.price" type="number" min="0" step="0.01" class="w-24 px-2 py-1.5 bg-background border border-input rounded-md text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="0.00" />
+                  <input v-model.number="row.price" type="number" min="0" step="0.01" class="w-24 px-2 py-1.5 bg-background border border-border border-input rounded-md text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="0.00" />
                 </td>
                 <td class="px-2 py-1.5">
-                  <input v-model.number="row.stock" type="number" min="0" step="1" class="w-24 px-2 py-1.5 bg-background border border-input rounded-md text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="0" />
+                  <input v-model.number="row.stock" type="number" min="0" step="1" class="w-24 px-2 py-1.5 bg-background border border-border border-input rounded-md text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="0" />
                 </td>
               </tr>
             </tbody>

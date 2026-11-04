@@ -41,7 +41,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">完整日志（可含多组 Preparing / Parameters）</label>
           <textarea
             v-model="logText"
-            class="w-full h-64 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-64 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴 MyBatis 日志，例如：&#10;Preparing: INSERT INTO t(name, age, born) VALUES (?, ?, ?)&#10;Parameters: 张三(String), 25(Integer), 2024-05-01 08:30:00(Timestamp)"
             spellcheck="false"
           ></textarea>
@@ -53,7 +53,7 @@
             <label class="block text-sm font-medium text-foreground mb-2">Preparing 行</label>
             <textarea
               v-model="preparingText"
-              class="w-full h-28 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-28 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="INSERT INTO t(name, age, born) VALUES (?, ?, ?)&#10;（带 Preparing: 前缀也可以）"
               spellcheck="false"
             ></textarea>
@@ -62,7 +62,7 @@
             <label class="block text-sm font-medium text-foreground mb-2">Parameters 行</label>
             <textarea
               v-model="parametersText"
-              class="w-full h-28 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-28 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="张三(String), 25(Integer), 2024-05-01 08:30:00(Timestamp)&#10;（带 Parameters: 前缀也可以）"
               spellcheck="false"
             ></textarea>

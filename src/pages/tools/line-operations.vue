@@ -191,7 +191,7 @@
           <textarea
             v-model="inputText"
             placeholder="请输入要处理的文本，每行一个条目..."
-            class="w-full h-64 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+            class="w-full h-64 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
           ></textarea>
 
           <div class="text-sm text-muted-foreground">
@@ -315,7 +315,7 @@
         <div class="space-y-4">
           <div>
             <label class="text-sm font-medium mb-2 block">过滤模式</label>
-            <select v-model="filterMode" class="w-full p-2 border rounded">
+            <select v-model="filterMode" class="w-full p-2 border border-border rounded">
               <option value="include">包含</option>
               <option value="exclude">不包含</option>
               <option value="startsWith">开头是</option>
@@ -330,7 +330,7 @@
               v-model="filterContent"
               type="text"
               placeholder="请输入过滤内容..."
-              class="w-full p-2 border rounded"
+              class="w-full p-2 border border-border rounded"
             />
           </div>
 

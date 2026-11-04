@@ -107,14 +107,14 @@
               <label class="text-sm font-medium text-foreground flex items-center">
                 <Palette class="w-4 h-4 mr-1.5 text-primary" /> 上层颜色
               </label>
-              <input v-model="topColor" type="color" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+              <input v-model="topColor" type="color" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
             </div>
 
             <div class="flex items-center justify-between">
               <label class="text-sm font-medium text-foreground flex items-center">
                 <Palette class="w-4 h-4 mr-1.5 text-primary" /> 下层颜色
               </label>
-              <input v-model="bottomColor" type="color" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+              <input v-model="bottomColor" type="color" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
             </div>
           </div>
         </div>
@@ -182,7 +182,7 @@
             <textarea
               :value="svgCode"
               readonly
-              class="w-full h-80 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+              class="w-full h-80 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
           </div>

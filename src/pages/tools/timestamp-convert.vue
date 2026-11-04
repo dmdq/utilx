@@ -30,7 +30,7 @@
               v-model="timestampSeconds"
               type="number"
               placeholder="输入10位时间戳"
-              class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               @input="updateTimestampFromSeconds"
             />
           </div>
@@ -41,7 +41,7 @@
               v-model="timestampMilliseconds"
               type="number"
               placeholder="输入13位时间戳"
-              class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               @input="updateTimestampFromMilliseconds"
             />
           </div>
@@ -98,7 +98,7 @@
               <input
                 v-model="selectedDateTime"
                 type="datetime-local"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @input="updateTimestampFromDateTime"
               />
             </div>
@@ -184,7 +184,7 @@
           <textarea
             v-model="batchTimestamps"
             placeholder="输入多个时间戳，每行一个&#10;例如：&#10;1609459200&#10;1609545600"
-            class="w-full h-40 p-3 border rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+            class="w-full h-40 p-3 border border-border rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
           ></textarea>
           <button
             @click="convertBatchTimestamps"

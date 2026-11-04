@@ -76,15 +76,15 @@
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <label class="text-sm text-foreground">关闭态轨道色</label>
-              <input v-model="cfg.offColor" type="color" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+              <input v-model="cfg.offColor" type="color" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
             </div>
             <div class="flex items-center justify-between">
               <label class="text-sm text-foreground">开启态轨道色</label>
-              <input v-model="cfg.onColor" type="color" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+              <input v-model="cfg.onColor" type="color" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
             </div>
             <div class="flex items-center justify-between">
               <label class="text-sm text-foreground">圆点颜色</label>
-              <input v-model="cfg.knobColor" type="color" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+              <input v-model="cfg.knobColor" type="color" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
             </div>
 
             <label class="flex items-center justify-between cursor-pointer">
@@ -199,7 +199,7 @@
               <textarea
                 :value="htmlCode"
                 readonly
-                class="w-full h-36 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+                class="w-full h-36 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
                 spellcheck="false"
               ></textarea>
             </div>
@@ -216,7 +216,7 @@
               <textarea
                 :value="cssCode"
                 readonly
-                class="w-full h-96 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+                class="w-full h-96 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
                 spellcheck="false"
               ></textarea>
             </div>

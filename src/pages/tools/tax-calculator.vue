@@ -61,7 +61,7 @@
               min="0"
               step="100"
               placeholder="10000"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
@@ -74,7 +74,7 @@
               min="0"
               step="100"
               placeholder="5000"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
@@ -87,7 +87,7 @@
               min="0"
               step="100"
               placeholder="5000"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
@@ -102,7 +102,7 @@
                   type="number"
                   min="0"
                   step="1000"
-                  class="w-32 px-2 py-1 bg-muted border border-border rounded"
+                  class="w-32 px-2 py-1 bg-muted border border-border border-border rounded"
                 />
               </div>
               <div class="flex items-center justify-between">
@@ -113,7 +113,7 @@
                   type="number"
                   min="0"
                   step="400"
-                  class="w-32 px-2 py-1 bg-muted border border-border rounded"
+                  class="w-32 px-2 py-1 bg-muted border border-border border-border rounded"
                 />
               </div>
               <div class="flex items-center justify-between">
@@ -124,7 +124,7 @@
                   type="number"
                   min="0"
                   step="1000"
-                  class="w-32 px-2 py-1 bg-muted border border-border rounded"
+                  class="w-32 px-2 py-1 bg-muted border border-border border-border rounded"
                 />
               </div>
               <div class="flex items-center justify-between">
@@ -135,7 +135,7 @@
                   type="number"
                   min="0"
                   step="1500"
-                  class="w-32 px-2 py-1 bg-muted border border-border rounded"
+                  class="w-32 px-2 py-1 bg-muted border border-border border-border rounded"
                 />
               </div>
               <div class="flex items-center justify-between">
@@ -146,7 +146,7 @@
                   type="number"
                   min="0"
                   step="2000"
-                  class="w-32 px-2 py-1 bg-muted border border-border rounded"
+                  class="w-32 px-2 py-1 bg-muted border border-border border-border rounded"
                 />
               </div>
             </div>
@@ -160,7 +160,7 @@
             <select
               v-model="vatData.type"
               @change="calculateTax"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="general">一般纳税人 (13%)</option>
               <option value="small">小规模纳税人 (3%)</option>
@@ -179,7 +179,7 @@
               min="0"
               step="100"
               placeholder="100000"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
@@ -192,7 +192,7 @@
               min="0"
               step="100"
               placeholder="0"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
         </div>
@@ -208,7 +208,7 @@
               min="0"
               step="1000"
               placeholder="1000000"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
@@ -221,7 +221,7 @@
               min="0"
               step="1000"
               placeholder="600000"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
@@ -230,7 +230,7 @@
             <select
               v-model="corporateData.type"
               @change="calculateTax"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="general">一般企业 (25%)</option>
               <option value="small">小型微利企业 (20%)</option>

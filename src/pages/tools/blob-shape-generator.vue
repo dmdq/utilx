@@ -55,7 +55,7 @@
               <label class="text-sm font-medium text-foreground flex items-center">
                 <Palette class="w-4 h-4 mr-1.5 text-primary" /> 填充颜色
               </label>
-              <input v-model="fillColor" type="color" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+              <input v-model="fillColor" type="color" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
             </div>
 
             <label class="flex items-center justify-between cursor-pointer">
@@ -75,7 +75,7 @@
 
             <div v-if="useGradient" class="flex items-center justify-between">
               <label class="text-sm font-medium text-foreground">渐变结束色</label>
-              <input v-model="gradientColor" type="color" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+              <input v-model="gradientColor" type="color" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@
             <textarea
               :value="currentCode"
               readonly
-              class="w-full h-72 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+              class="w-full h-72 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
             <p class="text-xs text-muted-foreground mt-2">

@@ -47,7 +47,7 @@
 
           <textarea
             v-model="inputText"
-            class="w-full h-56 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-56 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴完整的 SVG 代码（以 <svg> 开头）"
             spellcheck="false"
           ></textarea>
@@ -195,7 +195,7 @@
               v-if="viewText"
               :value="viewText"
               readonly
-              class="w-full h-72 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-xs font-mono focus:outline-none resize-y"
+              class="w-full h-72 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-xs font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
             <div v-else-if="parseError" class="py-12 text-center">

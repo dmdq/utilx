@@ -45,12 +45,12 @@
                 @input="userEdited = true"
                 type="text"
                 inputmode="decimal"
-                class="flex-1 min-w-0 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 min-w-0 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 :placeholder="valuePlaceholder"
               />
               <select
                 v-model="unit"
-                class="w-28 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-28 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <option v-for="u in UNITS" :key="u.id" :value="u.id">{{ u.label }}</option>
               </select>
@@ -62,7 +62,7 @@
             <label class="block text-sm font-medium text-foreground mb-1.5">模型比例</label>
             <select
               v-model="scaleSel"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option v-for="s in SCALES" :key="s.denom" :value="String(s.denom)">{{ s.label }}</option>
               <option value="custom">自定义 1:X…</option>
@@ -74,7 +74,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 64"
-                class="flex-1 min-w-0 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 min-w-0 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <CheckCircle v-if="activeDenom" class="w-4 h-4 text-green-500 flex-shrink-0" />
             </div>
@@ -84,7 +84,7 @@
           <div v-else class="grid grid-cols-2 gap-2">
             <div>
               <label class="block text-sm font-medium text-foreground mb-1.5">现有比例</label>
-              <select v-model="srcSel" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+              <select v-model="srcSel" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
                 <option v-for="s in SCALES" :key="s.denom" :value="String(s.denom)">{{ s.label }}</option>
                 <option value="custom">自定义…</option>
               </select>
@@ -94,12 +94,12 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="1 : X 的分母 X"
-                class="mt-2 w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="mt-2 w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-1.5">目标比例</label>
-              <select v-model="tgtSel" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+              <select v-model="tgtSel" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
                 <option v-for="s in SCALES" :key="s.denom" :value="String(s.denom)">{{ s.label }}</option>
                 <option value="custom">自定义…</option>
               </select>
@@ -109,7 +109,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="1 : X 的分母 X"
-                class="mt-2 w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="mt-2 w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>
@@ -282,7 +282,7 @@
                 v-model="railGauge"
                 type="text"
                 inputmode="decimal"
-                class="w-28 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-28 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="1435"
               />
             </div>

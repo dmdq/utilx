@@ -93,14 +93,14 @@
             <input
               v-model="pickedHex"
               type="color"
-              class="w-12 h-9 cursor-pointer bg-transparent border border-input rounded-lg p-0.5"
+              class="w-12 h-9 cursor-pointer bg-transparent border border-border border-input rounded-lg p-0.5"
               title="手动选择背景色"
               @input="onManualPick"
             />
             <input
               v-model="pickedHex"
               type="text"
-              class="flex-1 min-w-0 px-2.5 py-2 bg-background border border-input rounded-lg text-sm font-mono uppercase"
+              class="flex-1 min-w-0 px-2.5 py-2 bg-background border border-border border-input rounded-lg text-sm font-mono uppercase"
               @change="onManualPick"
             />
           </div>
@@ -116,13 +116,13 @@
             <input
               v-model="replaceHex"
               type="color"
-              class="w-12 h-9 cursor-pointer bg-transparent border border-input rounded-lg p-0.5"
+              class="w-12 h-9 cursor-pointer bg-transparent border border-border border-input rounded-lg p-0.5"
               title="选择替换颜色"
             />
             <input
               v-model="replaceHex"
               type="text"
-              class="flex-1 min-w-0 px-2.5 py-2 bg-background border border-input rounded-lg text-sm font-mono uppercase"
+              class="flex-1 min-w-0 px-2.5 py-2 bg-background border border-border border-input rounded-lg text-sm font-mono uppercase"
             />
           </div>
 

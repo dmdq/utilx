@@ -30,7 +30,7 @@
           >
           <button @click="clearAll" class="px-4 py-2 bg-gray-200 dark:bg-gray-600 rounded-lg">清空</button>
         </div>
-        <p class="mt-2 text-sm text-gray-500">支持图片、字体、PDF等文件，建议小于1MB</p>
+        <p class="mt-2 text-sm text-muted-foreground">支持图片、字体、PDF等文件，建议小于1MB</p>
       </div>
 
       <!-- 输出格式 -->
@@ -70,9 +70,9 @@
         <h2 class="text-xl font-semibold mb-4">预览</h2>
         <div v-if="previewUrl" class="border border-gray-300 dark:border-gray-600 rounded-lg p-4 flex items-center justify-center min-h-40 bg-gray-50 dark:bg-gray-900">
           <img v-if="isImage" :src="previewUrl" class="max-w-full max-h-64" alt="预览">
-          <div v-else class="text-gray-500">文件类型不支持预览</div>
+          <div v-else class="text-muted-foreground">文件类型不支持预览</div>
         </div>
-        <div v-else class="border border-gray-300 dark:border-gray-600 rounded-lg p-4 min-h-40 bg-gray-50 dark:bg-gray-900 flex items-center justify-center text-gray-400">
+        <div v-else class="border border-gray-300 dark:border-gray-600 rounded-lg p-4 min-h-40 bg-gray-50 dark:bg-gray-900 flex items-center justify-center text-muted-foreground">
           {{ mode === 'encode' ? '选择文件后预览' : '输入Base64后预览' }}
         </div>
 
@@ -107,7 +107,7 @@
           class="w-full h-64 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 resize-none font-mono text-sm"
           placeholder="Base64结果将显示在这里..."
         ></textarea>
-        <div class="mt-2 text-sm text-gray-500">{{ outputResult?.length || 0 }} 字符</div>
+        <div class="mt-2 text-sm text-muted-foreground">{{ outputResult?.length || 0 }} 字符</div>
       </div>
     </div>
 

@@ -33,7 +33,7 @@
           <textarea
             v-model="pathData"
             @input="updateSVG"
-            class="w-full h-48 p-3 font-mono text-sm border rounded-md resize-none"
+            class="w-full h-48 p-3 font-mono text-sm border border-border rounded-md resize-none"
             placeholder="输入SVG path数据，如: M 10 10 L 100 100 L 200 50 Z"
           ></textarea>
 
@@ -120,7 +120,7 @@
               </div>
               <div>
                 <label class="block text-sm font-medium mb-2">线条端点</label>
-                <select v-model="pathParams.strokeLinecap" class="w-full px-3 py-2 border rounded-md">
+                <select v-model="pathParams.strokeLinecap" class="w-full px-3 py-2 border border-border rounded-md">
                   <option value="butt">butt</option>
                   <option value="round">round</option>
                   <option value="square">square</option>

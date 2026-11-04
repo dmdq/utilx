@@ -19,7 +19,7 @@
           <!-- 骰子面数 -->
           <div>
             <label class="text-sm font-medium mb-2 block">骰子面数</label>
-            <select v-model="diceSides" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="diceSides" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="4">4面骰子 (D4)</option>
               <option value="6">6面骰子 (D6)</option>
               <option value="8">8面骰子 (D8)</option>
@@ -39,7 +39,7 @@
                 type="number"
                 min="1"
                 max="20"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">个</span>
             </div>
@@ -52,7 +52,7 @@
               <input
                 v-model.number="modifier"
                 type="number"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">+/-</span>
             </div>

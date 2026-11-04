@@ -17,7 +17,7 @@
               type="text"
               placeholder="example.com"
               @keyup.enter="verifyDNSSEC"
-              class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+              class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
             >
 
             <div class="flex gap-2">

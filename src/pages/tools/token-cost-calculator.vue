@@ -25,7 +25,7 @@
           </h2>
           <textarea
             v-model="inputText"
-            class="w-full h-44 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-44 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴要估算的文本，例如一段 Prompt、一篇文章或一次对话的完整内容..."
             spellcheck="false"
           ></textarea>
@@ -58,14 +58,14 @@
             v-model.number="dailyCalls"
             type="number"
             min="0"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <label class="block text-sm text-foreground mb-2 mt-4">每次输出 Token（估算）</label>
           <input
             v-model.number="outputTokens"
             type="number"
             min="0"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-3">月成本按 30 天计算：输入 Token = 单次估算 × 次数。</p>
         </div>
@@ -101,13 +101,13 @@
                   </td>
                   <td class="py-2.5 pr-3">
                     <template v-if="editPrices">
-                      <input v-model.number="m.input" type="number" step="0.01" class="w-20 px-2 py-1 bg-background border border-input rounded text-xs" />
+                      <input v-model.number="m.input" type="number" step="0.01" class="w-20 px-2 py-1 bg-background border border-border border-input rounded text-xs" />
                     </template>
                     <template v-else><span class="text-muted-foreground">{{ m.currency }}{{ m.input }}</span></template>
                   </td>
                   <td class="py-2.5 pr-3">
                     <template v-if="editPrices">
-                      <input v-model.number="m.output" type="number" step="0.01" class="w-20 px-2 py-1 bg-background border border-input rounded text-xs" />
+                      <input v-model.number="m.output" type="number" step="0.01" class="w-20 px-2 py-1 bg-background border border-border border-input rounded text-xs" />
                     </template>
                     <template v-else><span class="text-muted-foreground">{{ m.currency }}{{ m.output }}</span></template>
                   </td>
@@ -130,15 +130,15 @@
           <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
             <div>
               <label class="block text-xs text-muted-foreground mb-1.5">整机功耗 (W)</label>
-              <input v-model.number="powerW" type="number" min="5" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm" />
+              <input v-model.number="powerW" type="number" min="5" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm" />
             </div>
             <div>
               <label class="block text-xs text-muted-foreground mb-1.5">电价 (元/度)</label>
-              <input v-model.number="electricityPrice" type="number" step="0.01" min="0" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm" />
+              <input v-model.number="electricityPrice" type="number" step="0.01" min="0" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm" />
             </div>
             <div>
               <label class="block text-xs text-muted-foreground mb-1.5">生成速度 (Token/s)</label>
-              <input v-model.number="tokensPerSec" type="number" min="1" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm" />
+              <input v-model.number="tokensPerSec" type="number" min="1" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm" />
             </div>
             <div class="bg-primary/10 rounded-lg p-3 text-center">
               <p class="text-lg font-bold text-primary">{{ localCostPer1M }}</p>

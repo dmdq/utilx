@@ -16,7 +16,7 @@
               <input
                 v-model.number="childAge"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入子女年龄"
                 @input="calculateSavings"
               />
@@ -26,7 +26,7 @@
               <label class="block text-sm font-medium mb-2">教育阶段</label>
               <select
                 v-model="educationStage"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 @change="updateEducationCost"
               >
                 <option value="kindergarten">幼儿园</option>
@@ -44,7 +44,7 @@
               <input
                 v-model.number="currentAnnualCost"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入当前年教育费用"
                 @input="calculateSavings"
               />
@@ -55,7 +55,7 @@
               <input
                 v-model.number="educationYears"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入教育年限"
                 @input="calculateSavings"
               />
@@ -72,7 +72,7 @@
                 v-model.number="educationInflation"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入教育通胀率"
                 @input="calculateSavings"
               />
@@ -84,7 +84,7 @@
                 v-model.number="investmentReturn"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入预期投资收益率"
                 @input="calculateSavings"
               />
@@ -95,7 +95,7 @@
               <input
                 v-model.number="existingSavings"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入已有教育储蓄"
                 @input="calculateSavings"
               />

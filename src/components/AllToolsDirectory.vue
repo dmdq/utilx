@@ -77,8 +77,8 @@
     </div>
 
     <!--
-      分页使用真实路径 /all/page/N（而不是 ?page=N），
-      每一页都会被 nuxt generate 预渲染为 all/page/N/index.html，nginx 直接命中。
+      分页使用真实目录路径 /all/page/N/（而不是 ?page=N），
+      每一页都会被 nuxt generate 预渲染为 all/page/N/index.html，nginx 目录索引直接命中。
     -->
     <nav v-if="totalPages > 1" class="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 mt-10" aria-label="全部工具分页">
       <NuxtLink

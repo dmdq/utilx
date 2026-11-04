@@ -41,12 +41,12 @@
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">贷款总额（万元）</label>
               <input v-model.number="loanWan" type="number" min="1" step="1"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">年利率（%）</label>
               <input v-model.number="ratePct" type="number" min="0.1" step="0.01"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
           </div>
 
@@ -59,12 +59,12 @@
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">已还期数</label>
               <input v-model.number="paidMonths" type="number" min="0" :max="loanYears * 12 - 1"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">提前还款（万元）</label>
               <input v-model.number="prepayWan" type="number" min="0" step="1"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
           </div>
 

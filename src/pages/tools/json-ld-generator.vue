@@ -55,11 +55,11 @@
               v-model="row.q"
               type="text"
               placeholder="问题，例如：如何申请退款？"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <textarea
               v-model="row.a"
-              class="w-full h-20 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-20 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="答案内容"
             ></textarea>
           </div>
@@ -74,13 +74,13 @@
               v-model="row.name"
               type="text"
               :placeholder="'第 ' + (ri + 1) + ' 级名称，例如：首页 / 分类 / 详情'"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <input
               v-model="row.url"
               type="text"
               placeholder="对应链接 URL"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
         </div>
@@ -93,7 +93,7 @@
               v-model="article.headline"
               type="text"
               placeholder="文章标题"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -102,7 +102,7 @@
               v-model="article.image"
               type="text"
               placeholder="https://example.com/cover.jpg"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -111,7 +111,7 @@
               v-model="article.author"
               type="text"
               placeholder="作者姓名"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div class="grid grid-cols-2 gap-3">
@@ -120,7 +120,7 @@
               <input
                 v-model="article.datePublished"
                 type="date"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -128,7 +128,7 @@
               <input
                 v-model="article.dateModified"
                 type="date"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>
@@ -138,7 +138,7 @@
               v-model="article.publisher"
               type="text"
               placeholder="网站或机构名称"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
         </div>
@@ -151,7 +151,7 @@
               v-model="product.name"
               type="text"
               placeholder="商品名称"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -160,14 +160,14 @@
               v-model="product.image"
               type="text"
               placeholder="https://example.com/product.jpg"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">描述 description</label>
             <textarea
               v-model="product.description"
-              class="w-full h-20 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-20 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="商品简介"
             ></textarea>
           </div>
@@ -177,7 +177,7 @@
               v-model="product.brand"
               type="text"
               placeholder="品牌名称"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div class="grid grid-cols-2 gap-3">
@@ -189,7 +189,7 @@
                 step="0.01"
                 min="0"
                 placeholder="99.00"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -198,7 +198,7 @@
                 type="text"
                 value="CNY"
                 disabled
-                class="w-full px-3 py-2 bg-muted border border-input rounded-lg text-muted-foreground text-sm"
+                class="w-full px-3 py-2 bg-muted border border-border border-input rounded-lg text-muted-foreground text-sm"
               />
             </div>
           </div>
@@ -224,7 +224,7 @@
               v-model="org.name"
               type="text"
               placeholder="公司或组织名称"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -233,7 +233,7 @@
               v-model="org.url"
               type="text"
               placeholder="https://example.com"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -242,7 +242,7 @@
               v-model="org.logo"
               type="text"
               placeholder="https://example.com/logo.png"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div class="grid grid-cols-2 gap-3">
@@ -252,7 +252,7 @@
                 v-model="org.contactType"
                 type="text"
                 placeholder="customer service"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -261,7 +261,7 @@
                 v-model="org.telephone"
                 type="text"
                 placeholder="+86-400-000-0000"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>

@@ -44,7 +44,7 @@
               <input
                 v-model="form.date"
                 type="date"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -55,7 +55,7 @@
                 min="0"
                 step="0.01"
                 placeholder="0.00"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>
@@ -79,7 +79,7 @@
               v-model="form.note"
               type="text"
               placeholder="例如：午餐 / 打车 / 工资到账"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               @keyup.enter="addEntry"
             />
           </div>
@@ -161,7 +161,7 @@
             <h2 class="text-lg font-semibold text-foreground">收支流水</h2>
             <select
               v-model="monthFilter"
-              class="px-3 py-1.5 bg-background border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+              class="px-3 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option value="all">全部月份</option>
               <option v-for="m in monthOptions" :key="m" :value="m">{{ m }}</option>

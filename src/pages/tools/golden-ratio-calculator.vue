@@ -24,7 +24,7 @@
                   v-model.number="baseSize"
                   type="number"
                   min="1"
-                  class="flex-1 px-4 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="flex-1 px-4 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   @input="calculate"
                 >
                 <button @click="calculate" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">计算</button>

@@ -25,7 +25,7 @@
         </h2>
         <textarea
           v-model="rawInput"
-          class="w-full h-32 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full h-32 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="postgres://user:pass@host:5432/db?sslmode=require&#10;jdbc:mysql://localhost:3306/test?useSSL=false&#10;jdbc:oracle:thin:@host:1521:sid&#10;redis://:pass@host:6379/0"
           spellcheck="false"
         ></textarea>
@@ -75,7 +75,7 @@
               <input
                 v-model="fields.scheme"
                 type="text"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -83,7 +83,7 @@
               <input
                 v-model="fields.host"
                 type="text"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -92,7 +92,7 @@
                 v-model="fields.port"
                 type="text"
                 :placeholder="defaultPortHint"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -100,7 +100,7 @@
               <input
                 v-model="fields.database"
                 type="text"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div v-if="fields.kind !== 'jdbc-oracle'">
@@ -108,7 +108,7 @@
               <input
                 v-model="fields.user"
                 type="text"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div v-if="fields.kind !== 'jdbc-oracle'">
@@ -117,7 +117,7 @@
                 <input
                   v-model="fields.password"
                   :type="showPassword ? 'text' : 'password'"
-                  class="w-full px-3 py-2 pr-10 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-3 py-2 pr-10 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 />
                 <button
                   type="button"
@@ -149,14 +149,14 @@
                   v-model="p.k"
                   type="text"
                   placeholder="键"
-                  class="flex-1 px-2.5 py-1.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="flex-1 px-2.5 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 />
                 <span class="text-muted-foreground text-xs">=</span>
                 <input
                   v-model="p.v"
                   type="text"
                   placeholder="值"
-                  class="flex-1 px-2.5 py-1.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="flex-1 px-2.5 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 />
                 <button
                   @click="removeParam(pi)"
@@ -185,7 +185,7 @@
             </div>
             <pre class="w-full bg-muted/30 border border-border rounded-lg p-3 text-xs font-mono whitespace-pre-wrap break-all text-foreground">{{ generated || '填写主机后自动生成连接串' }}</pre>
             <label class="flex items-center gap-2 mt-2 cursor-pointer">
-              <input v-model="copyWithPassword" type="checkbox" class="w-4 h-4 rounded border-border" />
+              <input v-model="copyWithPassword" type="checkbox" class="w-4 h-4 rounded border border-border" />
               <span class="text-xs text-muted-foreground">复制时包含密码（不勾选则密码位留空）</span>
             </label>
           </div>

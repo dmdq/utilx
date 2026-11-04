@@ -22,7 +22,7 @@
             <textarea
               v-model="nameList"
               placeholder="请输入姓名，每行一个&#10;例如：&#10;张三&#10;李四&#10;王五"
-              class="w-full h-48 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+              class="w-full h-48 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
             ></textarea>
             <div class="mt-2 flex justify-between text-sm text-muted-foreground">
               <span>共 {{ nameCount }} 个姓名</span>
@@ -40,7 +40,7 @@
             <!-- 抽取模式 -->
             <div>
               <label class="text-sm font-medium mb-2 block">抽取模式</label>
-              <select v-model="pickMode" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <select v-model="pickMode" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
                 <option value="single">随机抽取单个</option>
                 <option value="multiple">批量抽取</option>
                 <option value="lottery">抽奖模式</option>
@@ -57,7 +57,7 @@
                   type="number"
                   :min="1"
                   :max="nameCount"
-                  class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <span class="px-3 py-2 bg-muted rounded-lg text-sm">个</span>
               </div>
@@ -72,7 +72,7 @@
                     v-model="prizeName"
                     type="text"
                     placeholder="奖项名称（如：一等奖）"
-                    class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
                 <div class="flex gap-2">
@@ -81,7 +81,7 @@
                     type="number"
                     :min="1"
                     placeholder="中奖人数"
-                    class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
               </div>
@@ -95,7 +95,7 @@
                   <input
                     v-model="allowRepeat"
                     type="checkbox"
-                    class="rounded border-border"
+                    class="rounded border border-border"
                   />
                   <span class="text-sm">允许重复抽取</span>
                 </label>
@@ -103,7 +103,7 @@
                   <input
                     v-model="enableWeight"
                     type="checkbox"
-                    class="rounded border-border"
+                    class="rounded border border-border"
                   />
                   <span class="text-sm">启用权重模式（抽取过的姓名概率降低）</span>
                 </label>
@@ -113,7 +113,7 @@
             <!-- 动画效果 -->
             <div>
               <label class="text-sm font-medium mb-2 block">动画效果</label>
-              <select v-model="animationStyle" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <select v-model="animationStyle" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
                 <option value="none">无动画</option>
                 <option value="spin">旋转动画</option>
                 <option value="fade">淡入淡出</option>

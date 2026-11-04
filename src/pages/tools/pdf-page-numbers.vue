@@ -72,7 +72,7 @@
                 type="number"
                 min="1"
                 :max="pageCount || 999"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <p class="text-xs text-muted-foreground mt-1.5">从第几页开始加页码</p>
             </div>
@@ -82,7 +82,7 @@
                 v-model.number="startNumberInput"
                 type="number"
                 min="0"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 :placeholder="`默认同起始页码（${effectiveStartPage}）`"
               />
               <p class="text-xs text-muted-foreground mt-1.5">第一个加页码的页面显示的数字</p>
@@ -127,7 +127,7 @@
                 type="number"
                 min="6"
                 max="36"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -137,7 +137,7 @@
                 type="number"
                 min="8"
                 max="100"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>

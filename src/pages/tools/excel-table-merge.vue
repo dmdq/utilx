@@ -30,7 +30,7 @@
         </label>
         <div v-if="table1">
           <label class="block text-sm font-medium text-foreground mb-2">关键列（表1）</label>
-          <select v-model.number="key1" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+          <select v-model.number="key1" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
             <option v-for="(h, i) in table1.headers" :key="i" :value="i">{{ h }}</option>
           </select>
           <p class="text-xs text-muted-foreground mt-1.5">共 {{ table1.totalRows }} 行数据，{{ table1.headers.length }} 列</p>
@@ -49,7 +49,7 @@
         </label>
         <div v-if="table2">
           <label class="block text-sm font-medium text-foreground mb-2">关键列（表2）</label>
-          <select v-model.number="key2" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+          <select v-model.number="key2" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
             <option v-for="(h, i) in table2.headers" :key="i" :value="i">{{ h }}</option>
           </select>
           <p class="text-xs text-muted-foreground mt-1.5">共 {{ table2.totalRows }} 行数据，{{ table2.headers.length }} 列</p>
@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="flex items-center gap-2">
-          <input v-model="keepSingleKey" type="checkbox" id="keepKeyChk" class="w-4 h-4 rounded border-border" />
+          <input v-model="keepSingleKey" type="checkbox" id="keepKeyChk" class="w-4 h-4 rounded border border-border" />
           <label for="keepKeyChk" class="text-sm text-foreground">关键列只保留一份</label>
         </div>
         <button

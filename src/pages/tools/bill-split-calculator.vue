@@ -30,7 +30,7 @@
               v-model="newPerson"
               type="text"
               placeholder="输入姓名，如：张三"
-              class="flex-1 min-w-0 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 min-w-0 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               @keyup.enter="addPerson"
             />
             <button
@@ -82,7 +82,7 @@
               v-model="form.desc"
               type="text"
               placeholder="例如：晚餐 / 打车 / 门票"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div class="grid grid-cols-2 gap-3">
@@ -93,14 +93,14 @@
                 type="number"
                 min="0"
                 step="0.01"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">付款人</label>
               <select
                 v-model="form.payer"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <option value="" disabled>请选择</option>
                 <option v-for="p in people" :key="p" :value="p">{{ p }}</option>

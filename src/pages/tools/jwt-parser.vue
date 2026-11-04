@@ -16,7 +16,7 @@
               <label class="block text-sm font-medium mb-2">输入JWT令牌</label>
               <textarea
                 v-model="jwtInput"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                 rows="4"
                 placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
                 @input="parseJWT"
@@ -81,7 +81,7 @@
               <input
                 v-model="verificationSecret"
                 type="password"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                 placeholder="输入HMAC密钥或公钥..."
               />
             </div>
@@ -90,7 +90,7 @@
               <label class="block text-sm font-medium mb-2">算法</label>
               <select
                 v-model="selectedAlgorithm"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="HS256">HS256 (HMAC-SHA256)</option>
                 <option value="HS384">HS384 (HMAC-SHA384)</option>
@@ -121,7 +121,7 @@
               <label class="block text-sm font-medium mb-2">Payload (JSON)</label>
               <textarea
                 v-model="generatorPayload"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                 rows="3"
                 placeholder='{"userId": 123, "role": "admin"}'
               ></textarea>
@@ -134,11 +134,11 @@
                   v-model.number="generatorExpire"
                   type="number"
                   min="1"
-                  class="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <select
                   v-model="generatorExpireUnit"
-                  class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option value="minutes">分钟</option>
                   <option value="hours">小时</option>

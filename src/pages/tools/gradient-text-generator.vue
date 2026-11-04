@@ -13,15 +13,15 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">文字</label>
-            <input v-model="text" type="text" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground" placeholder="输入文字">
+            <input v-model="text" type="text" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground" placeholder="输入文字">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">渐变起始色</label>
-            <input v-model="color1" type="color" class="w-full h-10 rounded cursor-pointer border border-border">
+            <input v-model="color1" type="color" class="w-full h-10 rounded cursor-pointer border border-border border-border">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">渐变结束色</label>
-            <input v-model="color2" type="color" class="w-full h-10 rounded cursor-pointer border border-border">
+            <input v-model="color2" type="color" class="w-full h-10 rounded cursor-pointer border border-border border-border">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">角度 (deg)</label>

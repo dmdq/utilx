@@ -73,7 +73,7 @@
                 type="number"
                 step="1"
                 min="0"
-                class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="岁"
               >
               <span class="text-muted-foreground">岁</span>
@@ -83,7 +83,7 @@
                 step="1"
                 min="0"
                 max="11"
-                class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="月"
               >
               <span class="text-muted-foreground">个月</span>
@@ -119,7 +119,7 @@
               type="number"
               step="1"
               min="0"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="如 40"
             >
             <p class="text-xs text-muted-foreground mt-1">按左侧选择的宠物类型与体型反推</p>

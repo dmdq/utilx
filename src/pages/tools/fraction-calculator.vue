@@ -19,14 +19,14 @@
                 <input
                   v-model.number="fractionA.numerator"
                   type="number"
-                  class="w-24 px-3 py-2 border rounded-lg text-center"
+                  class="w-24 px-3 py-2 border border-border rounded-lg text-center"
                   placeholder="分子"
                 />
                 <div class="text-2xl font-semibold">/</div>
                 <input
                   v-model.number="fractionA.denominator"
                   type="number"
-                  class="w-24 px-3 py-2 border rounded-lg text-center"
+                  class="w-24 px-3 py-2 border border-border rounded-lg text-center"
                   placeholder="分母"
                 />
                 <button @click="simplifyFraction('A')" class="px-3 py-1 bg-secondary text-secondary-foreground rounded text-sm hover:bg-secondary/80">
@@ -42,14 +42,14 @@
                 <input
                   v-model.number="fractionB.numerator"
                   type="number"
-                  class="w-24 px-3 py-2 border rounded-lg text-center"
+                  class="w-24 px-3 py-2 border border-border rounded-lg text-center"
                   placeholder="分子"
                 />
                 <div class="text-2xl font-semibold">/</div>
                 <input
                   v-model.number="fractionB.denominator"
                   type="number"
-                  class="w-24 px-3 py-2 border rounded-lg text-center"
+                  class="w-24 px-3 py-2 border border-border rounded-lg text-center"
                   placeholder="分母"
                 />
                 <button @click="simplifyFraction('B')" class="px-3 py-1 bg-secondary text-secondary-foreground rounded text-sm hover:bg-secondary/80">
@@ -120,20 +120,20 @@
                 <input
                   v-model.number="mixedNumber.whole"
                   type="number"
-                  class="w-20 px-3 py-2 border rounded-lg text-center"
+                  class="w-20 px-3 py-2 border border-border rounded-lg text-center"
                   placeholder="整数"
                 />
                 <input
                   v-model.number="mixedNumber.numerator"
                   type="number"
-                  class="w-20 px-3 py-2 border rounded-lg text-center"
+                  class="w-20 px-3 py-2 border border-border rounded-lg text-center"
                   placeholder="分子"
                 />
                 <div class="text-xl font-semibold">/</div>
                 <input
                   v-model.number="mixedNumber.denominator"
                   type="number"
-                  class="w-20 px-3 py-2 border rounded-lg text-center"
+                  class="w-20 px-3 py-2 border border-border rounded-lg text-center"
                   placeholder="分母"
                 />
                 <button @click="mixedToImproper" class="px-3 py-1 bg-primary text-primary-foreground rounded text-sm hover:bg-primary/90">
@@ -175,7 +175,7 @@
                 v-model="decimalInput"
                 type="number"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="输入小数，如: 0.75"
               />
             </div>
@@ -228,7 +228,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">分析分数</label>
-              <select v-model="selectedFractionForAnalysis" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="selectedFractionForAnalysis" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="A">分数 A</option>
                 <option value="B">分数 B</option>
                 <option value="result">计算结果</option>

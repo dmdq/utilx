@@ -40,7 +40,7 @@
             type="month"
             min="1940-01"
             max="2069-12"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground leading-relaxed mt-1.5 flex items-start gap-1">
             <Info class="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />

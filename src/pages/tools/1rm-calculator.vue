@@ -18,7 +18,7 @@
             <!-- 动作选择 -->
             <div>
               <label class="text-sm font-medium mb-2 block">训练动作</label>
-              <select v-model="exercise" class="w-full px-4 py-3 border rounded-lg text-sm">
+              <select v-model="exercise" class="w-full px-4 py-3 border border-border rounded-lg text-sm">
                 <option value="bench-press">卧推 (Bench Press)</option>
                 <option value="squat">深蹲 (Squat)</option>
                 <option value="deadlift">硬拉 (Deadlift)</option>
@@ -37,11 +37,11 @@
                   type="number"
                   step="0.5"
                   min="1"
-                  class="flex-1 px-4 py-3 border rounded-lg font-mono text-sm"
+                  class="flex-1 px-4 py-3 border border-border rounded-lg font-mono text-sm"
                   placeholder="输入重量"
                   @input="calculate1RM"
                 >
-                <select v-model="weightUnit" class="px-4 py-2 border rounded-lg text-sm">
+                <select v-model="weightUnit" class="px-4 py-2 border border-border rounded-lg text-sm">
                   <option value="kg">kg</option>
                   <option value="lb">lb</option>
                 </select>
@@ -56,7 +56,7 @@
                 type="number"
                 min="1"
                 max="20"
-                class="w-full px-4 py-3 border rounded-lg font-mono text-sm"
+                class="w-full px-4 py-3 border border-border rounded-lg font-mono text-sm"
                 placeholder="输入重复次数"
                 @input="calculate1RM"
               >

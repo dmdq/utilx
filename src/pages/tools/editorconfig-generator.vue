@@ -52,7 +52,7 @@
             <select
               id="ec-charset"
               v-model="opts.charset"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
             >
               <option value="utf-8">utf-8（推荐）</option>
               <option value="utf-8-bom">utf-8-bom</option>
@@ -68,7 +68,7 @@
             <select
               id="ec-eol"
               v-model="opts.endOfLine"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
             >
               <option value="lf">lf（Unix / macOS / Git 默认）</option>
               <option value="crlf">crlf（Windows）</option>
@@ -110,7 +110,7 @@
                 id="ec-preset"
                 v-model="presetId"
                 @change="handlePresetChange"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
               >
                 <option value="">选择语言预设…</option>
                 <option v-for="p in INDENT_PRESETS" :key="p.id" :value="p.id">{{ p.name }}</option>
@@ -130,7 +130,7 @@
               <select
                 id="ec-style"
                 v-model="opts.indentStyle"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
               >
                 <option value="space">空格 space</option>
                 <option value="tab">Tab</option>
@@ -141,7 +141,7 @@
               <select
                 id="ec-size"
                 v-model="opts.indentSize"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
               >
                 <option value="2">2</option>
                 <option value="4">4</option>
@@ -164,7 +164,7 @@
             <select
               id="ec-maxline"
               v-model="opts.maxLineLength"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
             >
               <option value="off">不设置</option>
               <option value="80">80</option>
@@ -195,7 +195,7 @@
                 v-model="sec.glob"
                 type="text"
                 placeholder="如 *.{py,rb}、src/** 或 Makefile"
-                class="flex-1 min-w-0 px-2 py-1.5 bg-background border border-border rounded text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                class="flex-1 min-w-0 px-2 py-1.5 bg-background border border-border border-border rounded text-xs font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
               />
               <span class="text-xs text-muted-foreground font-mono flex-shrink-0">]</span>
               <button
@@ -227,7 +227,7 @@
                 <label class="block text-[10px] text-muted-foreground mb-1">{{ field.label }}</label>
                 <select
                   v-model="sec.overrides[field.key]"
-                  class="w-full px-1.5 py-1 bg-background border border-border rounded text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                  class="w-full px-1.5 py-1 bg-background border border-border border-border rounded text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
                 >
                   <option value="inherit">跟随通用区</option>
                   <option v-for="choice in field.choices" :key="choice.value" :value="choice.value">{{ choice.label }}</option>

@@ -16,7 +16,7 @@
               <input
                 v-model.number="arbitrageAmount"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入套利金额"
                 @input="calculateArbitrage"
               />
@@ -27,7 +27,7 @@
                 <label class="block text-sm font-medium mb-2">货币对A</label>
                 <select
                   v-model="currencyPairA"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   @change="calculateArbitrage"
                 >
                   <option value="EURUSD">EUR/USD</option>
@@ -42,7 +42,7 @@
                   v-model.number="rateA"
                   type="number"
                   step="0.0001"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="请输入买入汇率"
                   @input="calculateArbitrage"
                 />
@@ -54,7 +54,7 @@
                 <label class="block text-sm font-medium mb-2">货币对B</label>
                 <select
                   v-model="currencyPairB"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   @change="calculateArbitrage"
                 >
                   <option value="EURUSD">EUR/USD</option>
@@ -69,7 +69,7 @@
                   v-model.number="rateB"
                   type="number"
                   step="0.0001"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="请输入卖出汇率"
                   @input="calculateArbitrage"
                 />
@@ -88,7 +88,7 @@
                   v-model.number="spread"
                   type="number"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="请输入点差"
                   @input="calculateArbitrage"
                 />
@@ -99,7 +99,7 @@
                   v-model.number="commission"
                   type="number"
                   step="0.001"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="请输入手续费"
                   @input="calculateArbitrage"
                 />
@@ -112,7 +112,7 @@
                 v-model.number="swapFee"
                 type="number"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入过夜利息"
                 @input="calculateArbitrage"
               />
@@ -123,7 +123,7 @@
               <input
                 v-model.number="holdingDays"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入持仓时间"
                 @input="calculateArbitrage"
               />

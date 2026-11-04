@@ -38,7 +38,7 @@
                 <input
                   v-model="selectedTypes[t.key]"
                   type="checkbox"
-                  class="w-4 h-4 rounded border-border accent-primary"
+                  class="w-4 h-4 rounded border border-border accent-primary"
                 >
                 {{ t.label }}
               </label>
@@ -72,7 +72,7 @@
               min="5"
               max="200"
               step="5"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
             >
           </div>
 
@@ -81,7 +81,7 @@
               v-model="twoStepEnabled"
               type="checkbox"
               id="twoStep"
-              class="w-4 h-4 rounded border-border accent-primary"
+              class="w-4 h-4 rounded border border-border accent-primary"
             >
             <label for="twoStep" class="text-sm text-foreground">含括号两步运算（约 1/3 题量）</label>
           </div>
@@ -91,7 +91,7 @@
               v-model="showAnswers"
               type="checkbox"
               id="showAnswers"
-              class="w-4 h-4 rounded border-border accent-primary"
+              class="w-4 h-4 rounded border border-border accent-primary"
             >
             <label for="showAnswers" class="text-sm text-foreground">附带答案页</label>
           </div>

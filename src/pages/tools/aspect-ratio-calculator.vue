@@ -17,11 +17,11 @@
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">宽度</label>
-              <input v-model.number="inputWidth" type="number" class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary" @input="calculateHeight">
+              <input v-model.number="inputWidth" type="number" class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary" @input="calculateHeight">
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">高度</label>
-              <input v-model.number="inputHeight" type="number" class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary" @input="calculateWidth">
+              <input v-model.number="inputHeight" type="number" class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary" @input="calculateWidth">
             </div>
           </div>
 
@@ -29,10 +29,10 @@
             <label class="block text-sm font-medium text-foreground mb-1">宽高比</label>
             <div class="grid grid-cols-2 gap-4">
               <div>
-                <input v-model.number="ratioWidth" type="number" class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary" @input="updateRatio">
+                <input v-model.number="ratioWidth" type="number" class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary" @input="updateRatio">
               </div>
               <div>
-                <input v-model.number="ratioHeight" type="number" class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary" @input="updateRatio">
+                <input v-model.number="ratioHeight" type="number" class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary" @input="updateRatio">
               </div>
             </div>
           </div>

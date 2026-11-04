@@ -36,7 +36,7 @@
               <select
                 v-model="conversionData.fromCurrency"
                 @change="convertCurrency"
-                class="w-24 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-24 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option v-for="currency in popularCurrencies" :key="currency.code" :value="currency.code">
                   {{ currency.code }}
@@ -49,7 +49,7 @@
                 min="0"
                 step="0.01"
                 placeholder="100"
-                class="flex-1 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
             <p class="text-xs text-muted-foreground mt-1">{{ getCurrencyName(conversionData.fromCurrency) }}</p>
@@ -72,7 +72,7 @@
               <select
                 v-model="conversionData.toCurrency"
                 @change="convertCurrency"
-                class="w-24 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-24 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option v-for="currency in popularCurrencies" :key="currency.code" :value="currency.code">
                   {{ currency.code }}
@@ -104,7 +104,7 @@
                 v-model="historicalData.date"
                 type="date"
                 :max="new Date().toISOString().split('T')[0]"
-                class="px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                class="px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
               />
               <button
                 @click="queryHistoricalRate"

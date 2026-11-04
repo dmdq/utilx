@@ -52,7 +52,7 @@
           <textarea
             v-model="inputData"
             @input="parseData"
-            class="w-full h-48 p-3 bg-muted border border-border rounded-lg resize-none font-mono text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-48 p-3 bg-muted border border-border border-border rounded-lg resize-none font-mono text-sm focus:outline-none focus:ring-2 focus:ring-primary"
             :placeholder="inputFormat === 'json' ? '[1, 2, 3, 4, 5]' : '1, 2, 3, 4, 5'"
           ></textarea>
 
@@ -68,7 +68,7 @@
           <!-- 采样方法 -->
           <div class="mb-4">
             <label class="block text-xs text-muted-foreground mb-2">采样方法</label>
-            <select v-model="samplingConfig.method" @change="updateSampling" class="w-full px-3 py-2 bg-muted border border-border rounded-md text-sm">
+            <select v-model="samplingConfig.method" @change="updateSampling" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-md text-sm">
               <option value="random">随机采样</option>
               <option value="systematic">系统采样</option>
               <option value="stratified">分层采样</option>
@@ -87,7 +87,7 @@
                   :min="1"
                   :max="parsedData.length"
                   @input="updateSampling"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-md text-sm"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-md text-sm"
                   placeholder="数量"
                 >
               </div>
@@ -99,7 +99,7 @@
                   :max="100"
                   :step="0.1"
                   @input="updateSamplePercent"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-md text-sm"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-md text-sm"
                   placeholder="百分比"
                 >
               </div>
@@ -113,7 +113,7 @@
           <div class="space-y-3" v-if="samplingConfig.method === 'stratified'">
             <div>
               <label class="block text-xs text-muted-foreground mb-2">分层字段</label>
-              <select v-model="samplingConfig.strataField" @change="updateSampling" class="w-full px-3 py-2 bg-muted border border-border rounded-md text-sm">
+              <select v-model="samplingConfig.strataField" @change="updateSampling" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-md text-sm">
                 <option value="">自动检测</option>
                 <option v-for="field in dataFields" :key="field" :value="field">{{ field }}</option>
               </select>
@@ -128,7 +128,7 @@
                 type="number"
                 :min="1"
                 @change="updateSampling"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-md text-sm"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-md text-sm"
               >
             </div>
           </div>
@@ -140,7 +140,7 @@
               v-model.number="samplingConfig.seed"
               type="number"
               @change="updateSampling"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-md text-sm"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-md text-sm"
               placeholder="固定随机种子以获得可重现结果"
             >
           </div>
@@ -160,7 +160,7 @@
                   type="number"
                   :min="1"
                   placeholder="桶数量"
-                  class="px-3 py-2 bg-muted border border-border rounded-md text-sm"
+                  class="px-3 py-2 bg-muted border border-border border-border rounded-md text-sm"
                 >
                 <button
                   @click="createBuckets"
@@ -174,7 +174,7 @@
             <!-- 数据分组 -->
             <div>
               <label class="block text-xs text-muted-foreground mb-2">数据分组</label>
-              <select v-model="groupConfig.field" class="w-full px-3 py-2 bg-muted border border-border rounded-md mb-2 text-sm">
+              <select v-model="groupConfig.field" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-md mb-2 text-sm">
                 <option value="">选择分组字段</option>
                 <option v-for="field in dataFields" :key="field" :value="field">{{ field }}</option>
               </select>
@@ -241,7 +241,7 @@
           <label class="text-sm font-medium text-foreground mb-3 block">数据分布</label>
           <div class="mb-4">
             <label class="block text-xs text-muted-foreground mb-2">选择字段</label>
-            <select v-model="chartField" class="w-full px-3 py-2 bg-muted border border-border rounded-md text-sm">
+            <select v-model="chartField" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-md text-sm">
               <option value="">选择字段进行分析</option>
               <option v-for="field in numericFields" :key="field" :value="field">{{ field }}</option>
             </select>

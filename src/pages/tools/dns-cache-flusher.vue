@@ -157,7 +157,7 @@
               v-model="testDomain"
               type="text"
               placeholder="example.com"
-              class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+              class="flex-1 px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
             >
             <button @click="testDNS" :disabled="testingDNS" class="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50">
               {{ testingDNS ? '查询中...' : '查询DNS' }}
@@ -201,7 +201,7 @@
               v-model="ttlDomain"
               type="text"
               placeholder="example.com"
-              class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+              class="flex-1 px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
             >
             <button @click="queryTTL" :disabled="queryingTTL" class="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50">
               {{ queryingTTL ? '查询中...' : '查询TTL' }}

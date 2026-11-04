@@ -27,7 +27,7 @@
                     v-model="searchMode"
                     type="radio"
                     value="extension"
-                    class="mr-2 border-border text-primary focus:ring-primary bg-background"
+                    class="mr-2 border border-border text-primary focus:ring-primary bg-background"
                   />
                   <span class="text-sm text-foreground">按扩展名</span>
                 </label>
@@ -36,7 +36,7 @@
                     v-model="searchMode"
                     type="radio"
                     value="mime"
-                    class="mr-2 border-border text-primary focus:ring-primary bg-background"
+                    class="mr-2 border border-border text-primary focus:ring-primary bg-background"
                   />
                   <span class="text-sm text-foreground">按 MIME 类型</span>
                 </label>
@@ -52,7 +52,7 @@
                 v-model="searchQuery"
                 type="text"
                 :placeholder="searchMode === 'extension' ? '例如: pdf, jpg, json' : '例如: application/json'"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                 @keyup.enter="search"
               />
             </div>
@@ -62,7 +62,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">快速选择</label>
               <select
                 @change="quickSelect"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               >
                 <option value="">选择常见类型...</option>
                 <optgroup label="文档">

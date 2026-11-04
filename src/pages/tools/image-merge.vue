@@ -68,7 +68,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">布局方式</label>
               <select
                 v-model="layoutMode"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               >
                 <option value="horizontal">水平排列</option>
                 <option value="vertical">垂直排列</option>
@@ -112,12 +112,12 @@
                 <input
                   v-model="backgroundColor"
                   type="color"
-                  class="h-10 w-20 border border-border rounded-md cursor-pointer bg-background"
+                  class="h-10 w-20 border border-border border-border rounded-md cursor-pointer bg-background"
                 />
                 <input
                   v-model="backgroundColor"
                   type="text"
-                  class="flex-1 px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                  class="flex-1 px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                   placeholder="#FFFFFF"
                 />
               </div>
@@ -152,7 +152,7 @@
                     v-model="sizeMode"
                     type="radio"
                     value="auto"
-                    class="mr-2 rounded border-border text-primary focus:ring-primary bg-background"
+                    class="mr-2 rounded border border-border text-primary focus:ring-primary bg-background"
                   />
                   <span class="text-sm text-foreground">自动计算</span>
                 </label>
@@ -161,7 +161,7 @@
                     v-model="sizeMode"
                     type="radio"
                     value="custom"
-                    class="mr-2 rounded border-border text-primary focus:ring-primary bg-background"
+                    class="mr-2 rounded border border-border text-primary focus:ring-primary bg-background"
                   />
                   <span class="text-sm text-foreground">自定义尺寸</span>
                 </label>
@@ -174,7 +174,7 @@
                     v-model.number="outputWidth"
                     type="number"
                     min="100"
-                    class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                    class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                     placeholder="宽度"
                   />
                 </div>
@@ -184,7 +184,7 @@
                     v-model.number="outputHeight"
                     type="number"
                     min="100"
-                    class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                    class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                     placeholder="高度"
                   />
                 </div>
@@ -196,7 +196,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">输出格式</label>
               <select
                 v-model="outputFormat"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               >
                 <option value="png">PNG</option>
                 <option value="jpeg">JPEG</option>

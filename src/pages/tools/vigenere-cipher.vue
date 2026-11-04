@@ -29,7 +29,7 @@
         </div>
         <textarea
           v-model="inputText"
-          class="w-full h-40 px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="w-full h-40 px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="输入需要加密或解密的文本..."
           @input="process"
         ></textarea>
@@ -50,7 +50,7 @@
         </div>
         <textarea
           v-model="outputText"
-          class="w-full h-40 px-4 py-3 bg-muted border border-border rounded-lg resize-none font-mono text-sm"
+          class="w-full h-40 px-4 py-3 bg-muted border border-border border-border rounded-lg resize-none font-mono text-sm"
           readonly
         ></textarea>
       </div>
@@ -66,7 +66,7 @@
           <input
             v-model="key"
             type="text"
-            class="w-full px-4 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono uppercase"
+            class="w-full px-4 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono uppercase"
             placeholder="输入密钥，例如: KEY"
             @input="process"
           >

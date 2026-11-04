@@ -62,7 +62,7 @@
                 v-model="config.domain"
                 type="text"
                 placeholder="example.com"
-                class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -76,7 +76,7 @@
                   v-model="config.apiKey"
                   :type="showApiKey ? 'text' : 'password'"
                   placeholder="your API key"
-                  class="w-full px-4 py-2 pr-10 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-4 py-2 pr-10 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <button
                   type="button"
@@ -99,7 +99,7 @@
                   v-model="config.apiSecret"
                   :type="showApiSecret ? 'text' : 'password'"
                   placeholder="your API secret"
-                  class="w-full px-4 py-2 pr-10 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-4 py-2 pr-10 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <button
                   type="button"
@@ -147,7 +147,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">记录类型</label>
               <select
                 v-model="newRecord.type"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="A">A (IPv4地址)</option>
                 <option value="AAAA">AAAA (IPv6地址)</option>
@@ -166,7 +166,7 @@
                 v-model="newRecord.name"
                 type="text"
                 placeholder="@ 或子域名"
-                class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <p class="text-xs text-muted-foreground mt-1">使用 @ 表示根域名</p>
             </div>
@@ -178,7 +178,7 @@
                 v-model="newRecord.data"
                 type="text"
                 placeholder="例如: 192.168.1.1"
-                class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -187,7 +187,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">TTL (秒)</label>
               <select
                 v-model="newRecord.ttl"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option :value="600">10分钟 (600)</option>
                 <option :value="1800">30分钟 (1800)</option>
@@ -207,7 +207,7 @@
                 min="0"
                 max="65535"
                 placeholder="10"
-                class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -220,7 +220,7 @@
                 min="0"
                 max="65535"
                 placeholder="443"
-                class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -231,7 +231,7 @@
                 v-model="newRecord.protocol"
                 type="text"
                 placeholder="_tcp"
-                class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -242,7 +242,7 @@
                 v-model="newRecord.service"
                 type="text"
                 placeholder="_https"
-                class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -255,7 +255,7 @@
                 min="0"
                 max="65535"
                 placeholder="5"
-                class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -350,7 +350,7 @@
                             <label class="block text-xs text-muted-foreground mb-1">类型</label>
                             <select
                               v-model="editRecord.type"
-                              class="w-full px-3 py-2 bg-background border border-border rounded-md text-sm"
+                              class="w-full px-3 py-2 bg-background border border-border border-border rounded-md text-sm"
                             >
                               <option value="A">A</option>
                               <option value="AAAA">AAAA</option>
@@ -368,7 +368,7 @@
                             <input
                               v-model="editRecord.name"
                               type="text"
-                              class="w-full px-3 py-2 bg-background border border-border rounded-md text-sm"
+                              class="w-full px-3 py-2 bg-background border border-border border-border rounded-md text-sm"
                             />
                           </div>
 
@@ -378,7 +378,7 @@
                             <input
                               v-model="editRecord.data"
                               type="text"
-                              class="w-full px-3 py-2 bg-background border border-border rounded-md text-sm"
+                              class="w-full px-3 py-2 bg-background border border-border border-border rounded-md text-sm"
                             />
                           </div>
 
@@ -387,7 +387,7 @@
                             <label class="block text-xs text-muted-foreground mb-1">TTL</label>
                             <select
                               v-model="editRecord.ttl"
-                              class="w-full px-3 py-2 bg-background border border-border rounded-md text-sm"
+                              class="w-full px-3 py-2 bg-background border border-border border-border rounded-md text-sm"
                             >
                               <option :value="600">600</option>
                               <option :value="1800">1800</option>
@@ -407,7 +407,7 @@
                               v-model.number="editRecord.priority"
                               type="number"
                               min="0"
-                              class="w-full px-3 py-2 bg-background border border-border rounded-md text-sm"
+                              class="w-full px-3 py-2 bg-background border border-border border-border rounded-md text-sm"
                             />
                           </div>
                         </div>
@@ -420,7 +420,7 @@
                               v-model.number="editRecord.port"
                               type="number"
                               min="0"
-                              class="w-full px-3 py-2 bg-background border border-border rounded-md text-sm"
+                              class="w-full px-3 py-2 bg-background border border-border border-border rounded-md text-sm"
                             />
                           </div>
                           <div>
@@ -429,7 +429,7 @@
                               v-model.number="editRecord.weight"
                               type="number"
                               min="0"
-                              class="w-full px-3 py-2 bg-background border border-border rounded-md text-sm"
+                              class="w-full px-3 py-2 bg-background border border-border border-border rounded-md text-sm"
                             />
                           </div>
                         </div>

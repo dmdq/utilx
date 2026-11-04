@@ -36,7 +36,7 @@
               <input
                 v-model="quoteNo"
                 type="text"
-                class="flex-1 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="如 QT20261029001"
               />
               <button
@@ -54,7 +54,7 @@
               <input
                 v-model="quoteDate"
                 type="date"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -62,7 +62,7 @@
               <input
                 v-model="validUntil"
                 type="date"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>
@@ -78,7 +78,7 @@
             <input
               v-model="seller[field.key]"
               type="text"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               :placeholder="field.placeholder"
             />
           </div>
@@ -94,7 +94,7 @@
             <input
               v-model="buyer[field.key]"
               type="text"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               :placeholder="field.placeholder"
             />
           </div>
@@ -132,19 +132,19 @@
                 <input
                   v-model="item.name"
                   type="text"
-                  class="px-2 py-1.5 bg-background border border-input rounded-md text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="px-2 py-1.5 bg-background border border-border border-input rounded-md text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="如 工业风机"
                 />
                 <input
                   v-model="item.spec"
                   type="text"
-                  class="px-2 py-1.5 bg-background border border-input rounded-md text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="px-2 py-1.5 bg-background border border-border border-input rounded-md text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="如 HT-200"
                 />
                 <input
                   v-model="item.unit"
                   type="text"
-                  class="px-2 py-1.5 bg-background border border-input rounded-md text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="px-2 py-1.5 bg-background border border-border border-input rounded-md text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
                   placeholder="台"
                 />
                 <input
@@ -152,7 +152,7 @@
                   type="number"
                   min="0"
                   step="1"
-                  class="px-2 py-1.5 bg-background border border-input rounded-md text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="px-2 py-1.5 bg-background border border-border border-input rounded-md text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
                   :class="qtyInputClass(item.qty)"
                   placeholder="1"
                 />
@@ -161,7 +161,7 @@
                   type="number"
                   min="0"
                   step="0.01"
-                  class="px-2 py-1.5 bg-background border border-input rounded-md text-foreground text-xs text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="px-2 py-1.5 bg-background border border-border border-input rounded-md text-foreground text-xs text-right focus:outline-none focus:ring-2 focus:ring-ring"
                   :class="priceInputClass(item.price)"
                   placeholder="0.00"
                 />
@@ -199,7 +199,7 @@
                 type="number"
                 min="0"
                 step="0.01"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 :class="discountIsValid(discount) ? '' : 'border-red-500 focus:ring-red-500/40'"
               />
             </div>
@@ -211,7 +211,7 @@
                 min="0"
                 max="13"
                 step="0.5"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 :class="taxRateIsValid(taxRate) ? '' : 'border-red-500 focus:ring-red-500/40'"
               />
             </div>
@@ -228,7 +228,7 @@
           <textarea
             v-model="terms"
             rows="6"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-ring"
           ></textarea>
         </div>
 

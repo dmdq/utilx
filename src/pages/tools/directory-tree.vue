@@ -59,7 +59,7 @@
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">排除目录（逗号分隔）</label>
             <input v-model="excludeInput" type="text" placeholder="node_modules, .git, dist"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <label class="flex items-center justify-between cursor-pointer">
             <span class="text-sm text-foreground">显示文件（关闭则只列目录）</span>

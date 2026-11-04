@@ -43,14 +43,14 @@
           <textarea
             v-if="mode === 'env2json'"
             v-model="envText"
-            class="w-full h-64 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-64 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="DB_HOST=localhost&#10;DB_PORT=3306&#10;# 注释行&#10;export API_KEY=&quot;abc&quot;&#10;MESSAGE=&quot;第一行\n第二行&quot;"
             spellcheck="false"
           ></textarea>
           <textarea
             v-else
             v-model="jsonText"
-            class="w-full h-64 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-64 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="{&#10;  &quot;dbHost&quot;: &quot;localhost&quot;,&#10;  &quot;retries&quot;: 3,&#10;  &quot;debug&quot;: true&#10;}"
             spellcheck="false"
           ></textarea>
@@ -137,7 +137,7 @@
               v-if="activeOutput"
               :value="activeOutput"
               readonly
-              class="w-full h-80 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+              class="w-full h-80 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
             <div v-else class="py-16 text-center">

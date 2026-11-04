@@ -22,7 +22,7 @@
             <input
               v-model="startDate"
               type="date"
-              class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
@@ -32,7 +32,7 @@
             <input
               v-model="endDate"
               type="date"
-              class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
@@ -45,7 +45,7 @@
                 type="number"
                 min="1"
                 max="50"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">个</span>
             </div>
@@ -54,7 +54,7 @@
           <!-- 日期格式 -->
           <div>
             <label class="text-sm font-medium mb-2 block">日期格式</label>
-            <select v-model="dateFormat" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="dateFormat" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="YYYY-MM-DD">2024-01-01</option>
               <option value="MM/DD/YYYY">01/01/2024</option>
               <option value="DD/MM/YYYY">01/01/2024</option>
@@ -154,7 +154,7 @@
               <div
                 v-for="(date, dateIndex) in result.dates"
                 :key="dateIndex"
-                class="bg-white border border-border rounded-lg p-3 text-center"
+                class="bg-card border border-border rounded-lg p-3 text-center"
               >
                 <div class="text-lg font-mono font-medium">{{ formatDate(date) }}</div>
                 <div class="text-xs text-muted-foreground mt-1">{{ getWeekday(date) }}</div>

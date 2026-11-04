@@ -41,7 +41,7 @@
           <textarea
             v-model="text"
             rows="8"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴需要朗读的文案，例如短视频口播稿、新闻快讯、文章段落……"
           ></textarea>
           <div class="flex justify-between text-xs text-muted-foreground mt-1.5">
@@ -119,7 +119,7 @@
           </div>
           <select
             v-model="selectedVoiceName"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="v in sortedVoices" :key="v.name" :value="v.name">
               {{ voiceLabel(v) }}

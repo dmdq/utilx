@@ -22,7 +22,7 @@
             <!-- 服务器内存 -->
             <div>
               <label class="text-sm font-medium mb-2 block">服务器内存</label>
-              <select v-model="recommendation.serverMemory" class="w-full px-3 py-2 border rounded-md text-sm bg-background">
+              <select v-model="recommendation.serverMemory" class="w-full px-3 py-2 border border-border rounded-md text-sm bg-background">
                 <option value="1">1 GB</option>
                 <option value="2">2 GB</option>
                 <option value="4">4 GB</option>
@@ -37,7 +37,7 @@
             <!-- CPU 核心数 -->
             <div>
               <label class="text-sm font-medium mb-2 block">CPU 核心数</label>
-              <select v-model="recommendation.cpuCores" class="w-full px-3 py-2 border rounded-md text-sm bg-background">
+              <select v-model="recommendation.cpuCores" class="w-full px-3 py-2 border border-border rounded-md text-sm bg-background">
                 <option value="2">2 核</option>
                 <option value="4">4 核</option>
                 <option value="8">8 核</option>
@@ -50,7 +50,7 @@
             <!-- Java 版本 -->
             <div>
               <label class="text-sm font-medium mb-2 block">Java 版本</label>
-              <select v-model="recommendation.javaVersion" class="w-full px-3 py-2 border rounded-md text-sm bg-background">
+              <select v-model="recommendation.javaVersion" class="w-full px-3 py-2 border border-border rounded-md text-sm bg-background">
                 <option value="8">Java 8</option>
                 <option value="11">Java 11</option>
                 <option value="17">Java 17 (LTS)</option>
@@ -62,7 +62,7 @@
             <!-- 应用场景 -->
             <div>
               <label class="text-sm font-medium mb-2 block">应用场景</label>
-              <select v-model="recommendation.scenario" class="w-full px-3 py-2 border rounded-md text-sm bg-background">
+              <select v-model="recommendation.scenario" class="w-full px-3 py-2 border border-border rounded-md text-sm bg-background">
                 <option value="microservice">微服务</option>
                 <option value="web">Web 应用</option>
                 <option value="batch">批处理任务</option>
@@ -175,7 +175,7 @@
                   type="number"
                   min="64"
                   max="1024"
-                  class="flex-1 px-3 py-2 border rounded-md text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded-md text-sm"
                 />
                 <span class="flex items-center text-sm text-muted-foreground">M</span>
               </div>
@@ -189,7 +189,7 @@
                   type="number"
                   min="64"
                   max="2048"
-                  class="flex-1 px-3 py-2 border rounded-md text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded-md text-sm"
                 />
                 <span class="flex items-center text-sm text-muted-foreground">M</span>
               </div>
@@ -205,7 +205,7 @@
                   min="256"
                   max="4096"
                   step="128"
-                  class="flex-1 px-3 py-2 border rounded-md text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded-md text-sm"
                 />
                 <span class="flex items-center text-sm text-muted-foreground">K</span>
               </div>
@@ -222,7 +222,7 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium">GC 算法选择</label>
-              <select v-model="config.gcAlgorithm" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.gcAlgorithm" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="G1">G1 GC (推荐, Java 9+)</option>
                 <option value="Parallel">Parallel GC (吞吐量优先)</option>
                 <option value="CMS">CMS GC (低延迟, 已废弃)</option>
@@ -253,7 +253,7 @@
                 v-model="config.gcLogFile"
                 type="text"
                 placeholder="/logs/gc.log"
-                class="w-48 px-2 py-1 border rounded text-sm"
+                class="w-48 px-2 py-1 border border-border rounded text-sm"
               />
             </div>
           </div>
@@ -304,7 +304,7 @@
 
             <div>
               <label class="text-sm font-medium">编译器模式</label>
-              <select v-model="config.compilerMode" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.compilerMode" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="mixed">混合模式 (C1 + C2)</option>
                 <option value="c1">仅 C1 (快速编译)</option>
                 <option value="c2">仅 C2 (深度优化)</option>
@@ -326,13 +326,13 @@
                 v-model="config.timezone"
                 type="text"
                 placeholder="Asia/Shanghai"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
 
             <div>
               <label class="text-sm font-medium">文件编码 (-Dfile.encoding)</label>
-              <select v-model="config.fileEncoding" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.fileEncoding" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="UTF-8">UTF-8</option>
                 <option value="GBK">GBK</option>
                 <option value="ISO-8859-1">ISO-8859-1</option>
@@ -344,7 +344,7 @@
               <textarea
                 v-model="config.customArgs"
                 placeholder="-XX:+UseLargePages&#10;-XX:ParallelGCThreads=8"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm h-20 resize-none"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm h-20 resize-none"
               ></textarea>
             </div>
 
@@ -353,7 +353,7 @@
               <textarea
                 v-model="config.javaAgents"
                 placeholder="-javaagent:/path/to/agent.jar&#10;-javaagent:/path/to/skywalking-agent.jar"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm h-20 resize-none"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm h-20 resize-none"
               ></textarea>
             </div>
           </div>

@@ -17,12 +17,12 @@
 
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">数值</label>
-          <input v-model="inputValue" type="number" step="any" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="输入数值" @input="convert">
+          <input v-model="inputValue" type="number" step="any" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" placeholder="输入数值" @input="convert">
         </div>
 
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">从</label>
-          <select v-model="inputUnit" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" @change="convert">
+          <select v-model="inputUnit" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" @change="convert">
             <option value="ms">毫秒</option>
             <option value="s">秒</option>
             <option value="min">分钟</option>
@@ -36,7 +36,7 @@
 
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">到</label>
-          <select v-model="outputUnit" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" @change="convert">
+          <select v-model="outputUnit" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" @change="convert">
             <option value="ms">毫秒</option>
             <option value="s">秒</option>
             <option value="min">分钟</option>

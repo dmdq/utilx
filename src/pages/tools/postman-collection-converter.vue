@@ -56,7 +56,7 @@
         <div v-for="(req, index) in requests" :key="index" class="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded">
           <span class="px-2 py-1 text-xs font-medium rounded" :class="getMethodColor(req.method)">{{ req.method }}</span>
           <span class="flex-1 font-mono text-sm truncate">{{ req.name || req.url }}</span>
-          <span class="text-xs text-gray-500 truncate max-w-xs">{{ req.url }}</span>
+          <span class="text-xs text-muted-foreground truncate max-w-xs">{{ req.url }}</span>
         </div>
       </div>
     </div>

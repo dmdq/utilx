@@ -62,7 +62,7 @@
             step="any"
             min="0"
             inputmode="decimal"
-            class="w-full px-3 py-2.5 rounded-lg border border-border bg-background text-foreground text-lg font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2.5 rounded-lg border border-border border-border bg-background text-foreground text-lg font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
             :placeholder="direction === 'ppm2mg' ? '例如 0.08' : '例如 30'"
           />
         </div>
@@ -73,7 +73,7 @@
           <select
             v-model="gasId"
             @change="recordCurrent"
-            class="w-full px-3 py-2 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="g in GASES" :key="g.id" :value="g.id">{{ g.name }}（{{ g.formula }}，M={{ g.m }} g/mol）</option>
           </select>
@@ -87,7 +87,7 @@
               step="any"
               min="0"
               inputmode="decimal"
-              class="w-full px-3 py-2 rounded-lg border border-border bg-background text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
               placeholder="混合气 / 其他气体才需要填"
             />
           </div>

@@ -29,22 +29,22 @@
             <!-- 文本/网址输入 -->
             <div v-if="qrType === 'text' || qrType === 'url'">
               <label class="text-sm font-medium mb-2 block">{{ qrType === 'text' ? '文本内容' : '网址' }}</label>
-              <textarea v-model="textContent" class="w-full px-3 py-2 border rounded-lg text-sm" rows="4" :placeholder="qrType === 'url' ? 'https://example.com' : '请输入文本内容'"></textarea>
+              <textarea v-model="textContent" class="w-full px-3 py-2 border border-border rounded-lg text-sm" rows="4" :placeholder="qrType === 'url' ? 'https://example.com' : '请输入文本内容'"></textarea>
             </div>
 
             <!-- WiFi输入 -->
             <div v-if="qrType === 'wifi'" class="space-y-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">SSID（网络名称）</label>
-                <input v-model="wifi.ssid" type="text" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="WiFi名称">
+                <input v-model="wifi.ssid" type="text" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="WiFi名称">
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">密码</label>
-                <input v-model="wifi.password" type="text" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="WiFi密码">
+                <input v-model="wifi.password" type="text" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="WiFi密码">
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">加密类型</label>
-                <select v-model="wifi.security" class="w-full px-3 py-2 border rounded-lg text-sm">
+                <select v-model="wifi.security" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                   <option value="WPA">WPA/WPA2</option>
                   <option value="WEP">WEP</option>
                   <option value="nopass">无密码</option>
@@ -56,15 +56,15 @@
             <div v-if="qrType === 'email'" class="space-y-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">邮箱地址</label>
-                <input v-model="email.address" type="email" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="example@mail.com">
+                <input v-model="email.address" type="email" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="example@mail.com">
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">主题</label>
-                <input v-model="email.subject" type="text" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="邮件主题">
+                <input v-model="email.subject" type="text" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="邮件主题">
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">内容</label>
-                <textarea v-model="email.body" class="w-full px-3 py-2 border rounded-lg text-sm" rows="3" placeholder="邮件内容"></textarea>
+                <textarea v-model="email.body" class="w-full px-3 py-2 border border-border rounded-lg text-sm" rows="3" placeholder="邮件内容"></textarea>
               </div>
             </div>
 

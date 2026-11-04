@@ -15,22 +15,22 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">计数器名称</label>
-            <input v-model="counterName" type="text" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="my-counter">
+            <input v-model="counterName" type="text" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="my-counter">
           </div>
 
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">起始值</label>
-            <input v-model="startValue" type="number" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+            <input v-model="startValue" type="number" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
           </div>
 
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">增量</label>
-            <input v-model="increment" type="number" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+            <input v-model="increment" type="number" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
           </div>
 
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">编号样式</label>
-            <select v-model="listStyle" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="listStyle" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="decimal">数字 (1, 2, 3...)</option>
               <option value="decimal-leading-zero">带零数字 (01, 02...)</option>
               <option value="lower-alpha">小写字母 (a, b, c...)</option>
@@ -43,12 +43,12 @@
 
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">前缀</label>
-            <input v-model="prefix" type="text" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="例如: 第、Section ">
+            <input v-model="prefix" type="text" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="例如: 第、Section ">
           </div>
 
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">后缀</label>
-            <input v-model="suffix" type="text" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="例如: 、. - ">
+            <input v-model="suffix" type="text" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="例如: 、. - ">
           </div>
         </div>
       </div>

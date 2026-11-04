@@ -272,7 +272,7 @@
                   :value="JSON.stringify(exifData, null, 2)"
                   readonly
                   rows="10"
-                  class="w-full px-3 py-2 border rounded-md bg-background font-mono text-xs resize-none"
+                  class="w-full px-3 py-2 border border-border rounded-md bg-background font-mono text-xs resize-none"
                 ></textarea>
               </div>
             </div>

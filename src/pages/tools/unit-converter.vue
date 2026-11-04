@@ -49,12 +49,12 @@
                   type="number"
                   step="any"
                   placeholder="输入数值"
-                  class="flex-1 px-3 py-2 border rounded-md"
+                  class="flex-1 px-3 py-2 border border-border rounded-md"
                 >
                 <select
                   v-model="fromUnit"
                   @change="convertFromUnit"
-                  class="px-3 py-2 border rounded-md min-w-32"
+                  class="px-3 py-2 border border-border rounded-md min-w-32"
                 >
                   <option v-for="unit in currentUnits" :key="unit.value" :value="unit.value">
                     {{ unit.name }}
@@ -84,12 +84,12 @@
                   type="number"
                   step="any"
                   placeholder="转换结果"
-                  class="flex-1 px-3 py-2 border rounded-md"
+                  class="flex-1 px-3 py-2 border border-border rounded-md"
                 >
                 <select
                   v-model="toUnit"
                   @change="convertFromUnit"
-                  class="px-3 py-2 border rounded-md min-w-32"
+                  class="px-3 py-2 border border-border rounded-md min-w-32"
                 >
                   <option v-for="unit in currentUnits" :key="unit.value" :value="unit.value">
                     {{ unit.name }}
@@ -173,7 +173,7 @@
             @input="batchConvert"
             placeholder="100&#10;200&#10;300"
             rows="6"
-            class="w-full p-3 border rounded-md resize-none font-mono text-sm"
+            class="w-full p-3 border border-border rounded-md resize-none font-mono text-sm"
           ></textarea>
           <div class="mt-2 text-xs text-muted-foreground">
             共 {{ batchLines }} 行数据

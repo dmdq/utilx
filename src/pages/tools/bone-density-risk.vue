@@ -36,12 +36,12 @@
 
             <div>
               <label class="text-sm font-medium mb-2 block">年龄</label>
-              <input v-model.number="age" type="number" min="18" max="100" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="输入年龄">
+              <input v-model.number="age" type="number" min="18" max="100" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="输入年龄">
             </div>
 
             <div>
               <label class="text-sm font-medium mb-2 block">体重 (kg)</label>
-              <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="输入体重">
+              <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="输入体重">
             </div>
           </div>
         </div>

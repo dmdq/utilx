@@ -56,22 +56,22 @@
             <label class="block">
               <span class="text-[10px] text-muted-foreground">内长 m</span>
               <input v-model="tL" @input="selectedId = 'custom'" type="number" min="0" step="0.01" placeholder="4.2"
-                class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
             <label class="block">
               <span class="text-[10px] text-muted-foreground">内宽 m</span>
               <input v-model="tW" @input="selectedId = 'custom'" type="number" min="0" step="0.01" placeholder="2.0"
-                class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
             <label class="block">
               <span class="text-[10px] text-muted-foreground">内高 m</span>
               <input v-model="tH" @input="selectedId = 'custom'" type="number" min="0" step="0.01" placeholder="2.1"
-                class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
             <label class="block">
               <span class="text-[10px] text-muted-foreground">载重 kg</span>
               <input v-model="tLimit" @input="selectedId = 'custom'" type="number" min="0" step="50" placeholder="2000"
-                class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
           </div>
         </div>
@@ -85,22 +85,22 @@
             <label class="block">
               <span class="text-[10px] text-muted-foreground">长 cm</span>
               <input v-model="bL" type="number" min="0" step="1" placeholder="60"
-                class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
             <label class="block">
               <span class="text-[10px] text-muted-foreground">宽 cm</span>
               <input v-model="bW" type="number" min="0" step="1" placeholder="40"
-                class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
             <label class="block">
               <span class="text-[10px] text-muted-foreground">高 cm</span>
               <input v-model="bH" type="number" min="0" step="1" placeholder="40"
-                class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
             <label class="block">
               <span class="text-[10px] text-muted-foreground">单件毛重 kg（选填）</span>
               <input v-model="bKg" type="number" min="0" step="0.1" placeholder="10"
-                class="w-full px-2 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
+                class="w-full px-2 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
           </div>
         </div>

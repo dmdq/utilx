@@ -41,7 +41,7 @@
               type="text"
               inputmode="decimal"
               placeholder="如 18250（日销 50 件 × 365）"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
             <p class="text-[11px] text-muted-foreground mt-1">没有年数就按月销 × 12 或日销 × 365 折算；促销冲量月份建议剔除。</p>
           </div>
@@ -54,7 +54,7 @@
               type="text"
               inputmode="decimal"
               placeholder="如 200（下单+物流+清关+质检）"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
             <p class="text-[11px] text-muted-foreground mt-1">每下单一律发生、与订多少无关的固定开销：采购人工、运费门槛、报关查验、到货质检。</p>
           </div>
@@ -82,7 +82,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 8（仓储+资金+损耗摊销到每件）"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </div>
 
@@ -96,7 +96,7 @@
                     type="text"
                     inputmode="decimal"
                     placeholder="如 10"
-                    class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                    class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
                   />
                 </div>
                 <div>
@@ -107,7 +107,7 @@
                     type="text"
                     inputmode="decimal"
                     placeholder="如 25"
-                    class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                    class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
                   />
                 </div>
               </div>
@@ -126,7 +126,7 @@
               type="text"
               inputmode="decimal"
               placeholder="如 2000——用于算「拍量多花的钱」"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
             <p class="text-[11px] text-muted-foreground mt-1">填上实际下单习惯，结果区会给出比最优节奏一年多花、每次多花多少——这是说服老板改节奏的关键数字。</p>
           </div>

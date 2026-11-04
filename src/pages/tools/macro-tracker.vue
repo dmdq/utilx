@@ -21,7 +21,7 @@
               <input
                 v-model.number="targetCalories"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="例如: 2000"
               >
             </div>
@@ -107,7 +107,7 @@
           <h2 class="text-lg font-semibold mb-4">添加食物</h2>
 
           <div class="space-y-4">
-            <input v-model="foodSearch" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="搜索食物...">
+            <input v-model="foodSearch" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="搜索食物...">
 
             <div v-if="foodSearch" class="space-y-2 max-h-48 overflow-y-auto">
               <div
@@ -127,13 +127,13 @@
             </div>
 
             <div class="grid grid-cols-3 gap-2">
-              <input v-model="customFoodName" class="px-3 py-2 border rounded text-sm" placeholder="食物名称">
-              <input v-model.number="customFoodProtein" class="px-3 py-2 border rounded text-sm" placeholder="蛋白质(g)">
-              <input v-model.number="customFoodCarbs" class="px-3 py-2 border rounded text-sm" placeholder="碳水(g)">
+              <input v-model="customFoodName" class="px-3 py-2 border border-border rounded text-sm" placeholder="食物名称">
+              <input v-model.number="customFoodProtein" class="px-3 py-2 border border-border rounded text-sm" placeholder="蛋白质(g)">
+              <input v-model.number="customFoodCarbs" class="px-3 py-2 border border-border rounded text-sm" placeholder="碳水(g)">
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <input v-model.number="customFoodFat" class="px-3 py-2 border rounded text-sm" placeholder="脂肪(g)">
-              <input v-model.number="customFoodAmount" class="px-3 py-2 border rounded text-sm" placeholder="份量(g)">
+              <input v-model.number="customFoodFat" class="px-3 py-2 border border-border rounded text-sm" placeholder="脂肪(g)">
+              <input v-model.number="customFoodAmount" class="px-3 py-2 border border-border rounded text-sm" placeholder="份量(g)">
             </div>
             <button @click="addCustomFood" class="w-full px-4 py-2 bg-muted rounded text-sm">添加自定义食物</button>
           </div>

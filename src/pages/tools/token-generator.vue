@@ -33,7 +33,7 @@
               <label class="block text-sm font-medium mb-2">算法</label>
               <select
                 v-model="jwtConfig.algorithm"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="HS256">HS256 (HMAC-SHA256)</option>
                 <option value="HS384">HS384 (HMAC-SHA384)</option>
@@ -49,7 +49,7 @@
               <input
                 v-model="jwtConfig.secret"
                 type="password"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="输入签名密钥"
               />
             </div>
@@ -61,11 +61,11 @@
                   v-model.number="jwtConfig.expireTime"
                   type="number"
                   min="1"
-                  class="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="flex-1 px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <select
                   v-model="jwtConfig.expireUnit"
-                  class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option value="minutes">分钟</option>
                   <option value="hours">小时</option>
@@ -78,7 +78,7 @@
               <label class="block text-sm font-medium mb-2">Payload (JSON)</label>
               <textarea
                 v-model="jwtConfig.payload"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                 rows="4"
                 placeholder='{"userId": 123, "role": "admin"}'
               ></textarea>
@@ -94,7 +94,7 @@
               <label class="block text-sm font-medium mb-2">前缀</label>
               <select
                 v-model="apiTokenConfig.prefix"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="">无前缀</option>
                 <option value="Bearer ">Bearer</option>
@@ -122,7 +122,7 @@
                   type="number"
                   min="16"
                   max="128"
-                  class="w-16 px-2 py-1 border rounded-lg text-center"
+                  class="w-16 px-2 py-1 border border-border rounded-lg text-center"
                 />
               </div>
             </div>
@@ -183,7 +183,7 @@
                   min="32"
                   max="256"
                   step="32"
-                  class="w-16 px-2 py-1 border rounded-lg text-center"
+                  class="w-16 px-2 py-1 border border-border rounded-lg text-center"
                 />
               </div>
             </div>
@@ -302,7 +302,7 @@
                 type="number"
                 min="1"
                 max="100"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 

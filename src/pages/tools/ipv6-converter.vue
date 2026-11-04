@@ -23,7 +23,7 @@
             v-model="input"
             type="text"
             placeholder="2001:db8::8a2e:370:7334 或 ::ffff:192.168.1.1"
-            class="flex-1 px-4 py-3 bg-background border border-input rounded-lg text-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="flex-1 px-4 py-3 bg-background border border-border border-input rounded-lg text-foreground font-mono text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             spellcheck="false"
           />
           <button

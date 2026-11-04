@@ -17,31 +17,31 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">性别</label>
-                <select v-model="gender" class="w-full px-3 py-2 border rounded-lg text-sm">
+                <select v-model="gender" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                   <option value="male">男性</option>
                   <option value="female">女性</option>
                 </select>
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">年龄</label>
-                <input v-model.number="age" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="岁">
+                <input v-model.number="age" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="岁">
               </div>
             </div>
 
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">体重 (kg)</label>
-                <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="体重">
+                <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="体重">
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">身高 (cm)</label>
-                <input v-model.number="height" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="身高">
+                <input v-model.number="height" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="身高">
               </div>
             </div>
 
             <div>
               <label class="text-sm font-medium mb-1 block">活动水平</label>
-              <select v-model="activity" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="activity" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option value="1.2">久坐少动</option>
                 <option value="1.375">轻度活动</option>
                 <option value="1.55">中度活动</option>
@@ -52,7 +52,7 @@
 
             <div>
               <label class="text-sm font-medium mb-1 block">目标</label>
-              <select v-model="goal" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="goal" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option value="lose">减重 (-500大卡/天)</option>
                 <option value="maintain">维持体重</option>
                 <option value="gain">增重 (+300大卡/天)</option>
@@ -93,7 +93,7 @@
           <h2 class="text-lg font-semibold mb-4">添加食物</h2>
 
           <div class="space-y-4">
-            <input v-model="foodSearch" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="搜索食物...">
+            <input v-model="foodSearch" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="搜索食物...">
 
             <div v-if="foodSearch" class="space-y-2 max-h-48 overflow-y-auto">
               <div
@@ -108,8 +108,8 @@
             </div>
 
             <div class="grid grid-cols-2 gap-2">
-              <input v-model.number="customFoodName" class="px-3 py-2 border rounded text-sm" placeholder="食物名称">
-              <input v-model.number="customFoodCalories" class="px-3 py-2 border rounded text-sm" placeholder="热量">
+              <input v-model.number="customFoodName" class="px-3 py-2 border border-border rounded text-sm" placeholder="食物名称">
+              <input v-model.number="customFoodCalories" class="px-3 py-2 border border-border rounded text-sm" placeholder="热量">
             </div>
             <button @click="addCustomFood" class="w-full px-4 py-2 bg-muted rounded text-sm">添加自定义食物</button>
           </div>

@@ -25,7 +25,7 @@
                 v-model="targetHost"
                 type="text"
                 placeholder="example.com 或 192.168.1.1"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 :disabled="scanning"
               />
             </div>
@@ -35,7 +35,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">扫描类型</label>
               <select
                 v-model="scanType"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 :disabled="scanning"
               >
                 <option value="common">常见端口</option>
@@ -55,7 +55,7 @@
                 v-model="customPorts"
                 type="text"
                 placeholder="80,443,8080"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 :disabled="scanning"
               />
               <p class="text-xs text-muted-foreground">多个端口用逗号分隔</p>
@@ -70,7 +70,7 @@
                   min="1"
                   max="65535"
                   placeholder="起始端口"
-                  class="flex-1 px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="flex-1 px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   :disabled="scanning"
                 />
                 <input
@@ -79,7 +79,7 @@
                   min="1"
                   max="65535"
                   placeholder="结束端口"
-                  class="flex-1 px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="flex-1 px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   :disabled="scanning"
                 />
               </div>
@@ -98,7 +98,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">快速示例</label>
               <select
                 @change="loadExample"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 :disabled="scanning"
               >
                 <option value="">选择示例...</option>
@@ -223,7 +223,7 @@
               <div class="flex items-center space-x-2">
                 <select
                   v-model="filterStatus"
-                  class="px-3 py-1 text-sm bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="px-3 py-1 text-sm bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option value="all">全部</option>
                   <option value="open">仅开放</option>

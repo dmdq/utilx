@@ -40,14 +40,14 @@
         <textarea
           v-model="inputText"
           placeholder="请输入要转换的文本或摩尔斯电码..."
-          class="w-full h-48 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-48 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
 
         <!-- 转换选项 -->
         <div class="flex flex-wrap gap-4">
           <div class="flex items-center gap-2">
             <label class="text-sm font-medium">输入类型:</label>
-            <select v-model="inputType" class="px-3 py-1.5 border rounded-md text-sm">
+            <select v-model="inputType" class="px-3 py-1.5 border border-border rounded-md text-sm">
               <option value="text">文本</option>
               <option value="morse">摩尔斯电码</option>
               <option value="auto">自动检测</option>
@@ -56,7 +56,7 @@
 
           <div class="flex items-center gap-2">
             <label class="text-sm font-medium">分隔符:</label>
-            <select v-model="separator" class="px-3 py-1.5 border rounded-md text-sm">
+            <select v-model="separator" class="px-3 py-1.5 border border-border rounded-md text-sm">
               <option value="space">空格</option>
               <option value="slash">斜杠</option>
               <option value="pipe">竖线</option>
@@ -66,7 +66,7 @@
 
           <div class="flex items-center gap-2">
             <label class="text-sm font-medium">大小写:</label>
-            <select v-model="caseType" class="px-3 py-1.5 border rounded-md text-sm">
+            <select v-model="caseType" class="px-3 py-1.5 border border-border rounded-md text-sm">
               <option value="upper">大写</option>
               <option value="lower">小写</option>
               <option value="preserve">保持原样</option>

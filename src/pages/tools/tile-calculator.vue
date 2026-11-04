@@ -52,7 +52,7 @@
                 type="number"
                 step="0.1"
                 min="0"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 5"
               >
             </div>
@@ -63,7 +63,7 @@
                 type="number"
                 step="0.1"
                 min="0"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 4"
               >
             </div>
@@ -76,7 +76,7 @@
               type="number"
               step="0.1"
               min="0"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="如 20"
             >
           </div>
@@ -113,7 +113,7 @@
                 type="number"
                 step="1"
                 min="1"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 800"
               >
             </div>
@@ -124,7 +124,7 @@
                 type="number"
                 step="1"
                 min="1"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 800"
               >
             </div>
@@ -153,7 +153,7 @@
               step="1"
               min="0"
               max="50"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="自定义损耗率"
             >
           </div>
@@ -166,7 +166,7 @@
                 type="number"
                 step="1"
                 min="0"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 3"
               >
             </div>
@@ -177,7 +177,7 @@
                 type="number"
                 step="0.01"
                 min="0"
-                class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如 25"
               >
             </div>

@@ -15,16 +15,16 @@
           <div class="grid grid-cols-2 gap-2">
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">首项 a₁</label>
-              <input v-model.number="ap.a1" type="number" class="w-full px-3 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+              <input v-model.number="ap.a1" type="number" class="w-full px-3 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">公差 d</label>
-              <input v-model.number="ap.d" type="number" class="w-full px-3 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+              <input v-model.number="ap.d" type="number" class="w-full px-3 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
             </div>
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">项数 n</label>
-            <input v-model.number="ap.n" type="number" class="w-full px-3 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+            <input v-model.number="ap.n" type="number" class="w-full px-3 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
           </div>
           <button @click="calculateArithmetic" class="w-full px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium">计算</button>
         </div>
@@ -37,16 +37,16 @@
           <div class="grid grid-cols-2 gap-2">
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">首项 a₁</label>
-              <input v-model.number="gp.a1" type="number" class="w-full px-3 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+              <input v-model.number="gp.a1" type="number" class="w-full px-3 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">公比 q</label>
-              <input v-model.number="gp.q" type="number" step="0.01" class="w-full px-3 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+              <input v-model.number="gp.q" type="number" step="0.01" class="w-full px-3 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
             </div>
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">项数 n</label>
-            <input v-model.number="gp.n" type="number" class="w-full px-3 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+            <input v-model.number="gp.n" type="number" class="w-full px-3 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
           </div>
           <button @click="calculateGeometric" class="w-full px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium">计算</button>
         </div>

@@ -37,15 +37,15 @@
           <div class="grid grid-cols-3 gap-2">
             <label class="block">
               <span class="text-[10px] text-muted-foreground">长</span>
-              <input v-model="lengthIn" type="number" min="0.1" max="100" step="0.1" class="w-full px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              <input v-model="lengthIn" type="number" min="0.1" max="100" step="0.1" class="w-full px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
             <label class="block">
               <span class="text-[10px] text-muted-foreground">宽</span>
-              <input v-model="widthIn" type="number" min="0.1" max="100" step="0.1" class="w-full px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              <input v-model="widthIn" type="number" min="0.1" max="100" step="0.1" class="w-full px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
             <label class="block">
               <span class="text-[10px] text-muted-foreground">高</span>
-              <input v-model="heightIn" type="number" min="0.1" max="100" step="0.1" class="w-full px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              <input v-model="heightIn" type="number" min="0.1" max="100" step="0.1" class="w-full px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
             </label>
           </div>
           <div v-if="geometry" class="grid grid-cols-2 gap-2 text-center mt-2.5">
@@ -95,11 +95,11 @@
           <p class="text-[10px] text-muted-foreground mb-2">吸声系数表为 500 Hz 实测均值（典型产品），逐条填「材料 + 面积」</p>
           <div class="space-y-2">
             <div v-for="(row, idx) in materialRows" :key="row.key" class="flex items-center gap-1.5">
-              <select v-model="row.id" class="flex-1 min-w-0 px-2 py-1.5 bg-background border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+              <select v-model="row.id" class="flex-1 min-w-0 px-2 py-1.5 bg-background border border-border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
                 <option value="" disabled>选择材料</option>
                 <option v-for="mat in MATERIALS" :key="mat.id" :value="mat.id">{{ mat.name }}（α {{ mat.alpha.toFixed(2) }}）</option>
               </select>
-              <input v-model="row.area" type="number" min="0" step="0.5" placeholder="面积" class="w-[72px] px-2 py-1.5 bg-background border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              <input v-model="row.area" type="number" min="0" step="0.5" placeholder="面积" class="w-[72px] px-2 py-1.5 bg-background border border-border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
               <span class="text-[10px] text-muted-foreground flex-shrink-0">m²</span>
               <button @click="removeRow(idx)" class="px-1.5 py-1 text-[10px] border border-border rounded text-muted-foreground hover:text-red-500 hover:border-red-500/40 flex-shrink-0">删</button>
             </div>
@@ -114,7 +114,7 @@
         <!-- 频率场景 -->
         <div>
           <p class="text-sm font-medium text-foreground mb-2">频率场景（口径提示）</p>
-          <select v-model="freq" class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+          <select v-model="freq" class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
             <option v-for="f in FREQ_OPTIONS" :key="f.value" :value="f.value">{{ f.label }}</option>
           </select>
           <div v-if="isLowFreq" class="flex items-start gap-1.5 text-xs text-amber-600 bg-amber-500/10 border border-amber-500/20 rounded-lg p-2.5 mt-2 leading-relaxed">
@@ -143,7 +143,7 @@
         <!-- 目标场景 -->
         <div>
           <p class="text-sm font-medium text-foreground mb-2">目标 RT60 场景</p>
-          <select v-model="scenarioId" class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+          <select v-model="scenarioId" class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
             <option v-for="sc in RT_SCENARIOS" :key="sc.id" :value="sc.id">{{ sc.name }}（{{ sc.min }}–{{ sc.max }}s）</option>
           </select>
         </div>
@@ -234,7 +234,7 @@
           </h2>
           <div class="flex items-center gap-2 flex-wrap">
             <span class="text-xs text-muted-foreground">选定板材：</span>
-            <select v-model="boardId" class="px-2.5 py-1.5 bg-background border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
+            <select v-model="boardId" class="px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
               <option v-for="b in BOARD_OPTIONS" :key="b.id" :value="b.id">{{ b.name }}（α {{ b.alpha.toFixed(2) }}）</option>
             </select>
             <span class="text-[10px] text-muted-foreground">按 {{ scenario.name }} 目标区间 {{ scenario.min }}–{{ scenario.max }}s 反推</span>

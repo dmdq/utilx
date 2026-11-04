@@ -77,7 +77,7 @@
               <input
                 type="text"
                 v-model="stop.color"
-                class="flex-1 px-3 py-2 border rounded-lg"
+                class="flex-1 px-3 py-2 border border-border rounded-lg"
                 placeholder="#000000"
               />
               <input
@@ -85,7 +85,7 @@
                 v-model.number="stop.position"
                 min="0"
                 max="100"
-                class="w-20 px-3 py-2 border rounded-lg"
+                class="w-20 px-3 py-2 border border-border rounded-lg"
               />
               <span class="text-sm text-muted-foreground">%</span>
               <button
@@ -120,7 +120,7 @@
                   v-model.number="angle"
                   min="0"
                   max="360"
-                  class="w-20 px-3 py-2 border rounded-lg"
+                  class="w-20 px-3 py-2 border border-border rounded-lg"
                 />
                 <span class="text-sm">°</span>
               </div>
@@ -162,7 +162,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">位置</label>
-              <select v-model="radialPosition" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="radialPosition" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="center">中心</option>
                 <option value="top">顶部</option>
                 <option value="bottom">底部</option>
@@ -193,7 +193,7 @@
                   v-model.number="conicStart"
                   min="0"
                   max="360"
-                  class="w-20 px-3 py-2 border rounded-lg"
+                  class="w-20 px-3 py-2 border border-border rounded-lg"
                 />
                 <span class="text-sm">°</span>
               </div>
@@ -201,7 +201,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">位置</label>
-              <select v-model="conicPosition" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="conicPosition" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="center">中心</option>
                 <option value="top left">左上</option>
                 <option value="top right">右上</option>

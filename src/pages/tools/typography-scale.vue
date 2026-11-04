@@ -18,12 +18,12 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">基准字号 (px)</label>
-              <input v-model.number="baseSize" type="number" min="8" max="32" class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <input v-model.number="baseSize" type="number" min="8" max="32" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             </div>
 
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">比例类型</label>
-              <select v-model="scaleType" class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <select v-model="scaleType" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
                 <option value="majorThird">大三度 (1.250)</option>
                 <option value="minorThird">小三度 (1.200)</option>
                 <option value="perfectFourth">完全四度 (1.333)</option>
@@ -35,7 +35,7 @@
 
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">层级数量</label>
-              <input v-model.number="levels" type="number" min="4" max="10" class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <input v-model.number="levels" type="number" min="4" max="10" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             </div>
           </div>
         </div>

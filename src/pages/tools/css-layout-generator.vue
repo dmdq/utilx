@@ -38,7 +38,7 @@
             <!-- 方向 -->
             <div>
               <label class="block text-sm font-medium mb-2">flex-direction</label>
-              <select v-model="flexConfig.direction" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="flexConfig.direction" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="row">row (横向)</option>
                 <option value="row-reverse">row-reverse (横向反向)</option>
                 <option value="column">column (纵向)</option>
@@ -49,7 +49,7 @@
             <!-- 换行 -->
             <div>
               <label class="block text-sm font-medium mb-2">flex-wrap</label>
-              <select v-model="flexConfig.wrap" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="flexConfig.wrap" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="nowrap">nowrap (不换行)</option>
                 <option value="wrap">wrap (换行)</option>
                 <option value="wrap-reverse">wrap-reverse (反向换行)</option>
@@ -59,7 +59,7 @@
             <!-- 主轴对齐 -->
             <div>
               <label class="block text-sm font-medium mb-2">justify-content</label>
-              <select v-model="flexConfig.justifyContent" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="flexConfig.justifyContent" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="flex-start">flex-start (起点对齐)</option>
                 <option value="flex-end">flex-end (终点对齐)</option>
                 <option value="center">center (居中)</option>
@@ -72,7 +72,7 @@
             <!-- 交叉轴对齐 -->
             <div>
               <label class="block text-sm font-medium mb-2">align-items</label>
-              <select v-model="flexConfig.alignItems" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="flexConfig.alignItems" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="stretch">stretch (拉伸)</option>
                 <option value="flex-start">flex-start (起点对齐)</option>
                 <option value="flex-end">flex-end (终点对齐)</option>
@@ -94,7 +94,7 @@
               <input
                 v-model="gridConfig.columns"
                 placeholder="如: 1fr 2fr 1fr 或 repeat(3, 1fr)"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 
@@ -104,7 +104,7 @@
               <input
                 v-model="gridConfig.rows"
                 placeholder="如: 100px auto 1fr"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 
@@ -115,12 +115,12 @@
                 <input
                   v-model="gridConfig.gapX"
                   placeholder="列间距"
-                  class="px-3 py-2 border rounded-md"
+                  class="px-3 py-2 border border-border rounded-md"
                 >
                 <input
                   v-model="gridConfig.gapY"
                   placeholder="行间距"
-                  class="px-3 py-2 border rounded-md"
+                  class="px-3 py-2 border border-border rounded-md"
                 >
               </div>
             </div>

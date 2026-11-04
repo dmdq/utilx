@@ -135,7 +135,7 @@
                 type="number"
                 min="1"
                 :max="pageCount || 1"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="起始页"
               />
               <input
@@ -143,7 +143,7 @@
                 type="number"
                 min="1"
                 :max="pageCount || 1"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="结束页"
               />
               <p class="col-span-2 text-xs text-muted-foreground">将在第 {{ clampedRange.start }} 页至第 {{ clampedRange.end }} 页之间导出</p>

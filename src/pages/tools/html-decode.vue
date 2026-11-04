@@ -40,7 +40,7 @@
         <textarea
           v-model="inputText"
           placeholder="请输入要解码的 HTML 编码文本..."
-          class="w-full h-64 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-64 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
 
         <!-- 解码选项 -->

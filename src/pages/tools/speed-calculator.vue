@@ -39,10 +39,10 @@
                 type="number"
                 step="0.01"
                 min="0"
-                class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+                class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
                 placeholder="输入距离"
               >
-              <select v-model="distanceUnit" class="px-3 py-2 border border-border rounded-lg bg-muted">
+              <select v-model="distanceUnit" class="px-3 py-2 border border-border border-border rounded-lg bg-muted">
                 <option value="km">公里</option>
                 <option value="m">米</option>
                 <option value="mile">英里</option>
@@ -59,7 +59,7 @@
                   v-model.number="hours"
                   type="number"
                   min="0"
-                  class="w-full px-3 py-2 border border-border rounded-lg bg-muted"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted"
                   placeholder="时"
                 >
                 <span class="text-xs text-muted-foreground">小时</span>
@@ -70,7 +70,7 @@
                   type="number"
                   min="0"
                   max="59"
-                  class="w-full px-3 py-2 border border-border rounded-lg bg-muted"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted"
                   placeholder="分"
                 >
                 <span class="text-xs text-muted-foreground">分钟</span>
@@ -81,7 +81,7 @@
                   type="number"
                   min="0"
                   max="59"
-                  class="w-full px-3 py-2 border border-border rounded-lg bg-muted"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted"
                   placeholder="秒"
                 >
                 <span class="text-xs text-muted-foreground">秒</span>
@@ -142,10 +142,10 @@
                 type="number"
                 step="0.01"
                 min="0"
-                class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+                class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
                 placeholder="输入距离"
               >
-              <select v-model="distanceUnit" class="px-3 py-2 border border-border rounded-lg bg-muted">
+              <select v-model="distanceUnit" class="px-3 py-2 border border-border border-border rounded-lg bg-muted">
                 <option value="km">公里</option>
                 <option value="m">米</option>
                 <option value="mile">英里</option>
@@ -162,10 +162,10 @@
                 type="number"
                 step="0.01"
                 min="0"
-                class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+                class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
                 placeholder="输入速度"
               >
-              <select v-model="speedUnit" class="px-3 py-2 border border-border rounded-lg bg-muted">
+              <select v-model="speedUnit" class="px-3 py-2 border border-border border-border rounded-lg bg-muted">
                 <option value="kmh">km/h</option>
                 <option value="ms">m/s</option>
                 <option value="mph">mph</option>
@@ -219,10 +219,10 @@
                 type="number"
                 step="0.01"
                 min="0"
-                class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted"
+                class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted"
                 placeholder="输入速度"
               >
-              <select v-model="speedUnit" class="px-3 py-2 border border-border rounded-lg bg-muted">
+              <select v-model="speedUnit" class="px-3 py-2 border border-border border-border rounded-lg bg-muted">
                 <option value="kmh">km/h</option>
                 <option value="ms">m/s</option>
                 <option value="mph">mph</option>
@@ -239,7 +239,7 @@
                   v-model.number="hours"
                   type="number"
                   min="0"
-                  class="w-full px-3 py-2 border border-border rounded-lg bg-muted"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted"
                   placeholder="时"
                 >
                 <span class="text-xs text-muted-foreground">小时</span>
@@ -250,7 +250,7 @@
                   type="number"
                   min="0"
                   max="59"
-                  class="w-full px-3 py-2 border border-border rounded-lg bg-muted"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted"
                   placeholder="分"
                 >
                 <span class="text-xs text-muted-foreground">分钟</span>
@@ -261,7 +261,7 @@
                   type="number"
                   min="0"
                   max="59"
-                  class="w-full px-3 py-2 border border-border rounded-lg bg-muted"
+                  class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted"
                   placeholder="秒"
                 >
                 <span class="text-xs text-muted-foreground">秒</span>

@@ -38,7 +38,7 @@
             v-model="searchQuery"
             type="text"
             placeholder='如 M8 / 8毫米 / 1/2" / G1/2'
-            class="w-full pl-3 pr-14 py-2 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full pl-3 pr-14 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
           <button
             v-if="searchQuery"
@@ -77,7 +77,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 20"
-                class="w-full px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </div>
             <div>
@@ -87,7 +87,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 1.25"
-                class="w-full px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </div>
           </div>
@@ -107,7 +107,7 @@
               type="text"
               inputmode="decimal"
               placeholder="螺栓头/螺母对边 mm，如 14"
-              class="flex-1 px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="flex-1 px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
           </div>
           <div v-if="afCandidates.length" class="space-y-1.5">

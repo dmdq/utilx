@@ -33,7 +33,7 @@
           <textarea
             v-model="code"
             @input="analyzeComplexity"
-            class="w-full h-64 p-3 font-mono text-sm border rounded-md resize-none"
+            class="w-full h-64 p-3 font-mono text-sm border border-border rounded-md resize-none"
             placeholder="输入算法代码，例如:
 function linearSearch(arr, target) {
   for (let i = 0; i < arr.length; i++) {
@@ -54,7 +54,7 @@ function linearSearch(arr, target) {
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium mb-2">算法类型</label>
-              <select v-model="algorithmType" @change="analyzeComplexity" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="algorithmType" @change="analyzeComplexity" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="search">搜索算法</option>
                 <option value="sort">排序算法</option>
                 <option value="recursive">递归算法</option>
@@ -74,13 +74,13 @@ function linearSearch(arr, target) {
                   v-model="inputSize.n"
                   type="number"
                   placeholder="n"
-                  class="flex-1 px-2 py-1 border rounded text-sm"
+                  class="flex-1 px-2 py-1 border border-border rounded text-sm"
                 >
                 <input
                   v-model="inputSize.m"
                   type="number"
                   placeholder="m"
-                  class="flex-1 px-2 py-1 border rounded text-sm"
+                  class="flex-1 px-2 py-1 border border-border rounded text-sm"
                 >
               </div>
             </div>
@@ -92,7 +92,7 @@ function linearSearch(arr, target) {
               <input
                 v-model="inputVariables"
                 placeholder="变量名,用逗号分隔 (如: n, m, arr)"
-                class="w-full px-3 py-2 border rounded-md text-sm"
+                class="w-full px-3 py-2 border border-border rounded-md text-sm"
                 @input="analyzeComplexity"
               >
             </div>

@@ -52,9 +52,9 @@
                   type="number"
                   min="1"
                   max="4096"
-                  class="flex-1 px-4 py-2 border rounded-lg font-mono text-sm"
+                  class="flex-1 px-4 py-2 border border-border rounded-lg font-mono text-sm"
                 >
-                <select v-model="bytesFormat" class="px-4 py-2 border rounded-lg text-sm">
+                <select v-model="bytesFormat" class="px-4 py-2 border border-border rounded-lg text-sm">
                   <option value="hex">十六进制</option>
                   <option value="base64">Base64</option>
                   <option value="base64url">Base64URL</option>
@@ -72,7 +72,7 @@
                   <input
                     v-model.number="minValue"
                     type="number"
-                    class="w-full px-4 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-4 py-2 border border-border rounded-lg font-mono text-sm"
                   >
                 </div>
                 <div>
@@ -80,7 +80,7 @@
                   <input
                     v-model.number="maxValue"
                     type="number"
-                    class="w-full px-4 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-4 py-2 border border-border rounded-lg font-mono text-sm"
                   >
                 </div>
               </div>
@@ -97,7 +97,7 @@
                     type="number"
                     min="4"
                     max="128"
-                    class="w-full px-4 py-2 border rounded-lg font-mono text-sm"
+                    class="w-full px-4 py-2 border border-border rounded-lg font-mono text-sm"
                   >
                 </div>
               </div>
@@ -174,7 +174,7 @@
                 type="number"
                 min="1"
                 max="100"
-                class="w-full px-4 py-2 border rounded-lg font-mono text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg font-mono text-sm"
               >
             </div>
 

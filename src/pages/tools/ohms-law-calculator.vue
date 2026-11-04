@@ -97,7 +97,7 @@
                     autocomplete="off"
                     spellcheck="false"
                     :placeholder="q.placeholder"
-                    class="w-full px-2.5 py-2 rounded-md border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="w-full px-2.5 py-2 rounded-md border border-border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                   <p
                     class="text-[10px] font-mono leading-tight"
@@ -156,7 +156,7 @@
                 step="0.1"
                 min="0"
                 placeholder="可自定义，如 3.3 / 48"
-                class="w-full px-3 py-2 rounded-md border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 rounded-md border border-border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               >
             </div>
 
@@ -164,7 +164,7 @@
               <label class="block text-sm font-medium mb-2 text-foreground">LED 颜色（决定正向压降 Vf）</label>
               <select
                 v-model="ledColor"
-                class="w-full px-3 py-2 rounded-md border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 rounded-md border border-border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option v-for="c in ledColorDefs" :key="c.id" :value="c.id">
                   {{ c.name }}（典型 Vf {{ c.vf }} V）
@@ -182,7 +182,7 @@
                 min="1"
                 max="30"
                 placeholder="默认 20"
-                class="w-full px-3 py-2 rounded-md border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 rounded-md border border-border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               >
               <p class="text-xs text-muted-foreground mt-1">普通 3mm / 5mm 指示 LED 常用 5-20 mA，建议区间 1-30 mA</p>
             </div>

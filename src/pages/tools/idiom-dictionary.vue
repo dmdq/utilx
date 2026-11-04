@@ -41,7 +41,7 @@
       <input
         v-model="searchKeyword"
         type="text"
-        class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+        class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
         placeholder="输入成语、字或拼音，如：守株待兔 / 兔 / shou zhu"
       />
       <p class="text-xs text-muted-foreground mt-2">
@@ -89,7 +89,7 @@
         <input
           v-model="chainInput"
           type="text"
-          class="flex-1 min-w-[200px] px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+          class="flex-1 min-w-[200px] px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           placeholder="输入一个库内成语作为起点，如：一心一意"
         />
         <button @click="startChainFromInput" class="px-4 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-all">开始接龙</button>
@@ -193,7 +193,7 @@
           <input
             v-model="challengeInput"
             type="text"
-            class="flex-1 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="flex-1 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="输入你的答案"
             @keyup.enter="submitChallenge"
           />

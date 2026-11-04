@@ -39,7 +39,7 @@
         <textarea
           v-model="inputText"
           rows="8"
-          class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground font-mono text-sm mb-3"
+          class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground font-mono text-sm mb-3"
           :placeholder="inputPlaceholder"
           @input="calculateHash"
         ></textarea>

@@ -41,7 +41,7 @@
           <textarea
             v-model="inputText"
             placeholder="请输入要转换的文本或十六进制数据..."
-            class="w-full h-48 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-48 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
 
           <!-- 字符统计 -->
@@ -57,7 +57,7 @@
         <div class="flex flex-wrap gap-4">
           <div class="flex items-center gap-2">
             <label class="text-sm font-medium">输入类型:</label>
-            <select v-model="inputType" class="px-3 py-1.5 border rounded-md text-sm">
+            <select v-model="inputType" class="px-3 py-1.5 border border-border rounded-md text-sm">
               <option value="text">文本</option>
               <option value="hex">十六进制</option>
               <option value="auto">自动检测</option>
@@ -66,7 +66,7 @@
 
           <div class="flex items-center gap-2">
             <label class="text-sm font-medium">编码格式:</label>
-            <select v-model="encoding" class="px-3 py-1.5 border rounded-md text-sm">
+            <select v-model="encoding" class="px-3 py-1.5 border border-border rounded-md text-sm">
               <option value="utf-8">UTF-8</option>
               <option value="utf-16">UTF-16</option>
               <option value="utf-16le">UTF-16LE</option>
@@ -77,7 +77,7 @@
 
           <div class="flex items-center gap-2">
             <label class="text-sm font-medium">分隔符:</label>
-            <select v-model="separator" class="px-3 py-1.5 border rounded-md text-sm">
+            <select v-model="separator" class="px-3 py-1.5 border border-border rounded-md text-sm">
               <option value="none">无</option>
               <option value="space">空格</option>
               <option value="comma">逗号</option>
@@ -89,7 +89,7 @@
 
           <div class="flex items-center gap-2">
             <label class="text-sm font-medium">大小写:</label>
-            <select v-model="hexCase" class="px-3 py-1.5 border rounded-md text-sm">
+            <select v-model="hexCase" class="px-3 py-1.5 border border-border rounded-md text-sm">
               <option value="upper">大写 (A-F)</option>
               <option value="lower">小写 (a-f)</option>
             </select>

@@ -12,7 +12,7 @@
           <div class="flex items-center justify-between mb-6">
             <h2 class="text-xl font-semibold">速度测试</h2>
             <div class="flex items-center gap-2">
-              <select v-model="selectedServer" class="px-3 py-2 border rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+              <select v-model="selectedServer" class="px-3 py-2 border border-border rounded-lg bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary">
                 <option value="auto">自动选择服务器</option>
                 <option v-for="server in servers" :key="server.id" :value="server.id">{{ server.name }} ({{ server.location }})</option>
               </select>

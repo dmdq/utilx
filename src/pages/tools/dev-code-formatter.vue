@@ -78,7 +78,7 @@
           placeholder="粘贴代码..."
           @input="format"
         ></textarea>
-        <div class="mt-2 text-sm text-gray-500">{{ inputCode.length }} 字符 · {{ inputCode.split('\n').length }} 行</div>
+        <div class="mt-2 text-sm text-muted-foreground">{{ inputCode.length }} 字符 · {{ inputCode.split('\n').length }} 行</div>
       </div>
 
       <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
@@ -91,7 +91,7 @@
           readonly
           class="w-full h-80 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 resize-none font-mono text-sm"
         ></textarea>
-        <div class="mt-2 text-sm text-gray-500">{{ outputCode.length }} 字符 · {{ outputCode.split('\n').length }} 行</div>
+        <div class="mt-2 text-sm text-muted-foreground">{{ outputCode.length }} 字符 · {{ outputCode.split('\n').length }} 行</div>
       </div>
     </div>
 

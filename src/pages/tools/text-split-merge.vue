@@ -37,7 +37,7 @@
 
       <textarea
         v-model="inputText"
-        class="w-full h-48 p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+        class="w-full h-48 p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
         placeholder="在此输入需要处理的文本..."
         @input="process"
       ></textarea>
@@ -78,7 +78,7 @@
           <select
             v-if="currentMode === 'split-char'"
             v-model="splitOptions.by"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground"
             @change="process"
           >
             <option value="char">按字符分割</option>
@@ -90,7 +90,7 @@
             <input
               v-model="splitOptions.customDelimiter"
               type="text"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted font-mono text-foreground"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted font-mono text-foreground"
               placeholder="输入分隔符"
               @input="process"
             >
@@ -113,7 +113,7 @@
               v-model.number="splitOptions.chunkSize"
               type="number"
               min="1"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground"
               @input="process"
             >
           </div>
@@ -132,7 +132,7 @@
             <input
               v-model="mergeOptions.delimiter"
               type="text"
-              class="flex-1 px-4 py-2 border border-border rounded-lg bg-muted font-mono text-foreground"
+              class="flex-1 px-4 py-2 border border-border border-border rounded-lg bg-muted font-mono text-foreground"
               placeholder="输入分隔符"
               @input="process"
             >
@@ -166,7 +166,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">提取类型</label>
           <select
             v-model="extractOptions.type"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground"
             @change="process"
           >
             <option value="lines">指定行</option>
@@ -183,7 +183,7 @@
             v-model="extractOptions.lines"
             type="text"
             placeholder="例如: 1,3,5-10"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground"
             @input="process"
           >
           <input
@@ -191,7 +191,7 @@
             v-model="extractOptions.range"
             type="text"
             placeholder="例如: 5-10"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground"
             @input="process"
           >
           <input
@@ -199,7 +199,7 @@
             v-model="extractOptions.pattern"
             type="text"
             placeholder="正则表达式"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted font-mono text-foreground"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted font-mono text-foreground"
             @input="process"
           >
           <input
@@ -207,7 +207,7 @@
             v-model="extractOptions.contains"
             type="text"
             placeholder="包含的文本"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground"
             @input="process"
           >
         </div>
@@ -255,7 +255,7 @@
       <textarea
         v-else
         v-model="outputText"
-        class="w-full h-64 p-4 bg-muted border border-border rounded-lg font-mono text-sm resize-none"
+        class="w-full h-64 p-4 bg-muted border border-border border-border rounded-lg font-mono text-sm resize-none"
         readonly
       ></textarea>
 

@@ -41,7 +41,7 @@
             <label class="text-xs text-muted-foreground">缩进:</label>
             <select 
               v-model="indentSize" 
-              class="text-xs bg-muted border border-border rounded px-2 py-1"
+              class="text-xs bg-muted border border-border border-border rounded px-2 py-1"
             >
               <option value="2">2空格</option>
               <option value="4">4空格</option>
@@ -58,7 +58,7 @@
         </div>
         <textarea
           v-model="inputJSON"
-          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="在此输入JSON数据..."
           @keydown.ctrl.enter="formatJSON"
           @keydown.meta.enter="formatJSON"

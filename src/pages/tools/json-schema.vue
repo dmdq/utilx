@@ -19,7 +19,7 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium">Schema 版本</label>
-              <select v-model="schemaVersion" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="schemaVersion" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="draft-07">Draft 07</option>
                 <option value="draft-06">Draft 06</option>
                 <option value="draft-04">Draft 04</option>
@@ -33,7 +33,7 @@
                 v-model="schemaTitle"
                 type="text"
                 placeholder="User Schema"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
@@ -42,7 +42,7 @@
                 v-model="schemaDescription"
                 type="text"
                 placeholder="用户数据结构定义"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div class="flex items-center gap-3">
@@ -105,7 +105,7 @@
           <textarea
             v-model="jsonInput"
             placeholder="输入 JSON 数据..."
-            class="w-full h-80 px-4 py-3 border rounded-md font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-80 px-4 py-3 border border-border rounded-md font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
         </div>
       </div>

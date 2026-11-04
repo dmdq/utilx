@@ -40,7 +40,7 @@
               type="text"
               maxlength="40"
               placeholder="任务名称"
-              class="h-8 flex-1 min-w-0 px-2 bg-background border border-input rounded-md text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="h-8 flex-1 min-w-0 px-2 bg-background border border-border border-input rounded-md text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <button
               @click="removeTask(index)"
@@ -56,7 +56,7 @@
               <input
                 v-model="task.start"
                 type="date"
-                class="w-full h-8 px-2 bg-background border border-input rounded-md text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full h-8 px-2 bg-background border border-border border-input rounded-md text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </label>
             <label class="block">
@@ -64,7 +64,7 @@
               <input
                 v-model="task.end"
                 type="date"
-                class="w-full h-8 px-2 bg-background border border-input rounded-md text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full h-8 px-2 bg-background border border-border border-input rounded-md text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </label>
           </div>

@@ -73,7 +73,7 @@
               v-model="docTitle"
               type="text"
               maxlength="40"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="2026年10月工资条"
             />
           </div>
@@ -84,7 +84,7 @@
               v-model="nameColumn"
               type="text"
               maxlength="20"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="姓名"
             />
             <p class="text-xs text-muted-foreground mt-1.5">
@@ -109,7 +109,7 @@
           </div>
 
           <div class="flex items-start gap-2">
-            <input v-model="watermarkOn" type="checkbox" id="watermarkOn" class="w-4 h-4 mt-0.5 rounded border-border" />
+            <input v-model="watermarkOn" type="checkbox" id="watermarkOn" class="w-4 h-4 mt-0.5 rounded border border-border" />
             <label for="watermarkOn" class="text-sm text-foreground">
               水印保护
               <span class="block text-xs text-muted-foreground mt-0.5">每页平铺该员工姓名淡色水印，降低工资条被转发滥用的风险（pdf-lib 暂不支持打开密码，已提供水印保护作为替代）</span>

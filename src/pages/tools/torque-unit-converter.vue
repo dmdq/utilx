@@ -45,7 +45,7 @@
             min="0"
             step="any"
             placeholder="输入数值，如 100"
-            class="w-full px-3 py-2.5 rounded-lg border border-border bg-background text-foreground text-lg font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2.5 rounded-lg border border-border border-border bg-background text-foreground text-lg font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
           <p class="text-[10px] text-muted-foreground mt-1.5 flex items-start gap-1.5">
             <TriangleAlert class="w-3 h-3 text-amber-500 flex-shrink-0 mt-0.5" />
@@ -161,19 +161,19 @@
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <label class="block">
               <span class="text-xs text-muted-foreground">螺纹规格</span>
-              <select v-model="boltSpec" class="mt-1 w-full px-3 py-2 rounded-lg border border-border bg-background text-foreground text-sm">
+              <select v-model="boltSpec" class="mt-1 w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-foreground text-sm">
                 <option v-for="s in BOLT_SPECS" :key="s.id" :value="s.id">{{ s.id }}（As {{ s.As }} mm²）</option>
               </select>
             </label>
             <label class="block">
               <span class="text-xs text-muted-foreground">强度等级</span>
-              <select v-model="boltGrade" class="mt-1 w-full px-3 py-2 rounded-lg border border-border bg-background text-foreground text-sm">
+              <select v-model="boltGrade" class="mt-1 w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-foreground text-sm">
                 <option v-for="g in STRENGTH_GRADES" :key="g.id" :value="g.id">{{ g.id }} 级（屈服 {{ g.yieldMpa }} MPa）</option>
               </select>
             </label>
             <label class="block">
               <span class="text-xs text-muted-foreground">摩擦状态</span>
-              <select v-model="boltFriction" class="mt-1 w-full px-3 py-2 rounded-lg border border-border bg-background text-foreground text-sm">
+              <select v-model="boltFriction" class="mt-1 w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-foreground text-sm">
                 <option v-for="f in FRICTION_OPTIONS" :key="f.id" :value="f.id">{{ f.label }}</option>
               </select>
             </label>

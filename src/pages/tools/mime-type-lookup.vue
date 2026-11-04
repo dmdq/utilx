@@ -30,7 +30,7 @@
     <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-6">
       <h2 class="text-xl font-semibold mb-4">
         {{ searchQuery ? '搜索结果' : '常用MIME类型' }}
-        <span v-if="filteredTypes.length > 0" class="ml-2 text-sm font-normal text-gray-500">({{ filteredTypes.length }})</span>
+        <span v-if="filteredTypes.length > 0" class="ml-2 text-sm font-normal text-muted-foreground">({{ filteredTypes.length }})</span>
       </h2>
 
       <div class="overflow-x-auto">
@@ -44,7 +44,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="type in filteredTypes.slice(0, 50)" :key="type.extension" class="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700">
+            <tr v-for="type in filteredTypes.slice(0, 50)" :key="type.extension" class="border-t border-gray-200 dark:border-gray-700 hover:bg-muted/50 dark:hover:bg-gray-700">
               <td class="px-4 py-3">
                 <code class="text-blue-600">{{ type.extension }}</code>
               </td>
@@ -58,7 +58,7 @@
         </table>
       </div>
 
-      <div v-if="filteredTypes.length === 0" class="text-center py-8 text-gray-400">
+      <div v-if="filteredTypes.length === 0" class="text-center py-8 text-muted-foreground">
         未找到匹配的MIME类型
       </div>
     </div>
@@ -129,7 +129,7 @@
           </div>
         </div>
         <div>
-          <h3 class="font-medium mb-2 text-gray-600">字体</h3>
+          <h3 class="font-medium mb-2 text-muted-foreground">字体</h3>
           <div class="space-y-1">
             <div class="flex justify-between"><code>.ttf</code><span>font/ttf</span></div>
             <div class="flex justify-between"><code>.otf</code><span>font/otf</span></div>

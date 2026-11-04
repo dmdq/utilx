@@ -64,7 +64,7 @@
           <textarea
             v-model="xmlInput"
             placeholder="输入 XML 数据..."
-            class="w-full h-80 px-4 py-3 border rounded-md font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-80 px-4 py-3 border border-border rounded-md font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
 
           <!-- 配置选项 -->
@@ -75,7 +75,7 @@
                 v-model="options.rootClassName"
                 type="text"
                 placeholder="RootModel"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div class="flex items-center gap-3">

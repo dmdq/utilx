@@ -39,7 +39,7 @@
             id="rosterInput"
             v-model="rosterText"
             rows="12"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="每行一位，格式：姓名 或 姓名,职位&#10;例如：&#10;张三&#10;李四,总经理&#10;王芳，人力资源总监"
           ></textarea>
           <p class="text-xs text-muted-foreground mt-1.5 leading-relaxed">

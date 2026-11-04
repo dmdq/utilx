@@ -41,7 +41,7 @@
             <input
               v-model="groups[i]"
               type="text"
-              class="flex-1 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               :placeholder="groupPlaceholder"
             />
             <button
@@ -63,18 +63,18 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">字数上限</label>
-            <input v-model.number="limit" type="number" min="1" max="60" step="1" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model.number="limit" type="number" min="1" max="60" step="1" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             <p class="text-xs text-muted-foreground mt-1">淘系标题上限 30 字</p>
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">组间连接符</label>
-            <input v-model="connector" type="text" maxlength="4" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="默认直接连接" />
+            <input v-model="connector" type="text" maxlength="4" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="默认直接连接" />
             <p class="text-xs text-muted-foreground mt-1">如空格或「/」，留空为直接拼接</p>
           </div>
         </div>
 
         <div class="flex items-center gap-2">
-          <input v-model="shuffleEnabled" type="checkbox" id="shuffle" class="w-4 h-4 rounded border-border" />
+          <input v-model="shuffleEnabled" type="checkbox" id="shuffle" class="w-4 h-4 rounded border border-border" />
           <label for="shuffle" class="text-sm text-foreground">生成后随机打乱顺序</label>
         </div>
 

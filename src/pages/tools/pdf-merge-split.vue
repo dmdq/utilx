@@ -131,7 +131,7 @@
               <input
                 v-model="pageRange"
                 type="text"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="例如：1-3, 5, 8-10"
               />
               <p class="text-xs text-muted-foreground mt-1.5">
@@ -146,7 +146,7 @@
                 type="number"
                 min="1"
                 :max="totalPages"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <p class="text-xs text-muted-foreground mt-1.5">
                 共 {{ totalPages }} 页，将拆为 {{ Math.ceil(totalPages / (chunkSize || 1)) }} 个文件

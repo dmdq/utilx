@@ -1,5 +1,9 @@
-/* 在 Tailwind 加载前立即应用深色主题，防止闪烁 */
+/* UA 表单控件/滚动条跟随主题：浅色 light、深色 dark（修复浅色模式下 input/textarea/select 发暗的色差） */
 :root {
+  color-scheme: light;
+}
+
+.dark {
   color-scheme: dark;
 }
 

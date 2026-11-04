@@ -27,7 +27,7 @@
                 v-model="domain"
                 type="text"
                 placeholder="例如: google.com"
-                class="w-full px-4 py-2 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-4 py-2 bg-background border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                 @keyup.enter="queryWhois"
               />
               <p class="mt-1 text-xs text-muted-foreground">
@@ -96,7 +96,7 @@
           <textarea
             v-model="batchDomains"
             placeholder="每行一个域名，最多支持10个域名&#10;example.com&#10;test.org&#10;demo.net"
-            class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground resize-none"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground resize-none"
             rows="4"
           ></textarea>
 

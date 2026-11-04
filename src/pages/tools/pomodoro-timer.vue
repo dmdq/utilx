@@ -62,12 +62,12 @@
             <div>
               <label class="block text-xs text-muted-foreground mb-1.5">专注时长（分钟）</label>
               <input v-model.number="workMin" type="number" min="1" max="120" :disabled="running"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm disabled:opacity-50" />
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm disabled:opacity-50" />
             </div>
             <div>
               <label class="block text-xs text-muted-foreground mb-1.5">休息时长（分钟）</label>
               <input v-model.number="breakMin" type="number" min="1" max="60" :disabled="running"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm disabled:opacity-50" />
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm disabled:opacity-50" />
             </div>
           </div>
         </div>

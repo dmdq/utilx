@@ -45,7 +45,7 @@
             id="membersInput"
             v-model="membersText"
             rows="8"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="每行一位成员，如：&#10;张三&#10;李四&#10;王五"
           ></textarea>
         </div>
@@ -57,7 +57,7 @@
               id="startDate"
               v-model="startDate"
               type="date"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -66,7 +66,7 @@
               id="endDate"
               v-model="endDate"
               type="date"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
         </div>
@@ -116,8 +116,8 @@
         <template v-if="roster.rows.length">
           <!-- 打印时显示的表头 -->
           <div class="print-only text-center mb-4">
-            <h2 class="text-xl font-bold text-neutral-900">值班安排表</h2>
-            <p class="text-xs text-neutral-500 mt-1">{{ startDate || '—' }} 至 {{ endDate || '—' }} · {{ currentModeLabel }}</p>
+            <h2 class="text-xl font-bold text-foreground">值班安排表</h2>
+            <p class="text-xs text-muted-foreground mt-1">{{ startDate || '—' }} 至 {{ endDate || '—' }} · {{ currentModeLabel }}</p>
           </div>
 
           <div class="overflow-x-auto">

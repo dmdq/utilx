@@ -20,9 +20,9 @@
               v-model="testPattern"
               type="text"
               placeholder="输入正则表达式，如：\d{3}-\d{4}-\d{4}"
-              class="flex-1 px-3 py-2 border rounded-md text-sm font-mono"
+              class="flex-1 px-3 py-2 border border-border rounded-md text-sm font-mono"
             />
-            <select v-model="testFlags" class="px-3 py-2 border rounded-md text-sm">
+            <select v-model="testFlags" class="px-3 py-2 border border-border rounded-md text-sm">
               <option value="">无标志</option>
               <option value="g">全局 (g)</option>
               <option value="i">忽略大小写 (i)</option>
@@ -36,7 +36,7 @@
           <textarea
             v-model="testText"
             placeholder="输入要测试的文本..."
-            class="mt-2 w-full px-3 py-2 border rounded-md text-sm h-32 resize-none"
+            class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm h-32 resize-none"
           ></textarea>
         </div>
         <div>

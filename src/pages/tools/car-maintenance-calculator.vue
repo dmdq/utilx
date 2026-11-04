@@ -27,17 +27,17 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">上次保养里程（km）</label>
-            <input v-model.number="lastMileage" type="number" min="0" step="500" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model.number="lastMileage" type="number" min="0" step="500" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">上次保养日期</label>
-            <input v-model="lastDate" type="date" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model="lastDate" type="date" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
         </div>
 
         <div>
           <label class="block text-sm font-medium text-foreground mb-2">年均行驶里程（km）</label>
-          <input v-model.number="annualMileage" type="number" min="0" step="1000" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+          <input v-model.number="annualMileage" type="number" min="0" step="1000" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           <p class="text-xs text-muted-foreground mt-1.5">用于把里程间隔换算成时间（按每年 365 天折算日里程）</p>
         </div>
 
@@ -58,7 +58,7 @@
         </div>
 
         <div class="flex items-center gap-2">
-          <input v-model="turbo" type="checkbox" id="turboChk" class="w-4 h-4 rounded border-border" />
+          <input v-model="turbo" type="checkbox" id="turboChk" class="w-4 h-4 rounded border border-border" />
           <label for="turboChk" class="text-sm text-foreground">涡轮增压发动机（火花塞间隔减半）</label>
         </div>
 

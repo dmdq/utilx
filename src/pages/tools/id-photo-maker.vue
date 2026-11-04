@@ -104,7 +104,7 @@
               v-model="targetColor"
               type="color"
               title="自定义底色"
-              class="h-9 w-12 cursor-pointer rounded border border-input bg-background p-1"
+              class="h-9 w-12 cursor-pointer rounded border border-border border-input bg-background p-1"
             />
           </div>
           <p class="text-xs text-muted-foreground mb-1.5">当前目标：<span class="text-foreground font-medium">{{ colorDisplayName }}</span><span class="font-mono ml-1">{{ targetColor.toUpperCase() }}</span></p>
@@ -211,7 +211,7 @@
                 :style="{ left: slot.x + 'mm', top: slot.y + 'mm', width: slot.w + 'mm', height: slot.h + 'mm' }"
               >
                 <img v-if="previewDataUrl" :src="previewDataUrl" alt="排版证件照" class="absolute inset-0 w-full h-full" />
-                <span v-else class="absolute inset-0 flex items-center justify-center text-[10px] text-neutral-400">{{ i + 1 }}</span>
+                <span v-else class="absolute inset-0 flex items-center justify-center text-[10px] text-muted-foreground">{{ i + 1 }}</span>
               </div>
             </div>
           </div>

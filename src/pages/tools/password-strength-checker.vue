@@ -18,7 +18,7 @@
                 <input
                   v-model="password"
                   :type="showPassword ? 'text' : 'password'"
-                  class="w-full px-3 py-2 pr-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 pr-10 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="请输入密码..."
                   @input="analyzePassword"
                 />
@@ -116,7 +116,7 @@
               <label class="block text-sm font-medium mb-2">输入多个密码（每行一个）</label>
               <textarea
                 v-model="batchPasswords"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 rows="6"
                 placeholder="密码1&#10;密码2&#10;密码3"
               ></textarea>

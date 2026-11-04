@@ -26,7 +26,7 @@
           </h2>
           <textarea
             v-model="inputText"
-            class="w-full h-64 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-64 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴 .properties 或 INI 配置，例如：&#10;# 数据库配置&#10;[database]&#10;host=127.0.0.1&#10;port=3306&#10;&#10;[server]&#10;port : 8080"
             spellcheck="false"
           ></textarea>
@@ -179,7 +179,7 @@
               v-if="outputText"
               :value="outputText"
               readonly
-              class="w-full h-96 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+              class="w-full h-96 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
             <div v-else class="py-16 text-center">

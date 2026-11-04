@@ -47,7 +47,7 @@
           <!-- 语言选择 -->
           <div>
             <label class="text-sm font-medium mb-2 block">语言选择</label>
-            <select v-model="selectedLanguage" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="selectedLanguage" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="chinese">中文</option>
               <option value="english">English</option>
               <option value="mixed">混合</option>
@@ -63,7 +63,7 @@
                 type="number"
                 min="1"
                 max="10"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">条</span>
             </div>
@@ -72,7 +72,7 @@
           <!-- 排序方式 -->
           <div>
             <label class="text-sm font-medium mb-2 block">排序方式</label>
-            <select v-model="sortBy" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="sortBy" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="random">随机</option>
               <option value="latest">最新</option>
               <option value="popular">热门</option>

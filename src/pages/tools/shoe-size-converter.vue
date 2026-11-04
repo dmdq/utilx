@@ -115,7 +115,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">已知尺码制式</label>
               <select
                 v-model="inputSystem"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <option v-for="opt in systemOptions" :key="opt.key" :value="opt.key">{{ opt.label }}</option>
               </select>
@@ -127,7 +127,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 25 / 40 / 8.5 / 250"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>

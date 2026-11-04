@@ -64,7 +64,7 @@
               <input
                 v-model.number="age"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入年龄"
                 @input="calculatePremium"
               />
@@ -76,7 +76,7 @@
                 v-model.number="carValue"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入车辆价值"
                 @input="calculatePremium"
               />
@@ -88,7 +88,7 @@
                 v-model.number="coverage"
                 type="number"
                 step="1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入保额"
                 @input="calculatePremium"
               />
@@ -98,7 +98,7 @@
               <label class="block text-sm font-medium mb-2">保险期限（年）</label>
               <select
                 v-model.number="period"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 @change="calculatePremium"
               >
                 <option value="1">1年</option>
@@ -114,7 +114,7 @@
               <label class="block text-sm font-medium mb-2">性别</label>
               <select
                 v-model="gender"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 @change="calculatePremium"
               >
                 <option value="male">男</option>
@@ -175,7 +175,7 @@
               <input
                 v-model.number="deductible"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入免赔额"
                 @input="calculatePremium"
               />

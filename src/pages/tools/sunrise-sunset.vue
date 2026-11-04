@@ -33,7 +33,7 @@
                 step="0.0001"
                 min="-90"
                 max="90"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm"
                 placeholder="如 39.9042"
               />
             </div>
@@ -45,7 +45,7 @@
                 step="0.0001"
                 min="-180"
                 max="180"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm"
                 placeholder="如 116.4074"
               />
             </div>
@@ -58,7 +58,7 @@
             <input
               v-model="dateStr"
               type="date"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-sm"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-sm"
             />
           </div>
 

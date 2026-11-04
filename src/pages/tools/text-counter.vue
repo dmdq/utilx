@@ -35,7 +35,7 @@
           v-model="inputText"
           @input="updateStatistics"
           placeholder="请输入或粘贴要统计的文本..."
-          class="w-full h-64 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-64 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
       </div>
 

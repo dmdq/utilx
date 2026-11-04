@@ -81,7 +81,7 @@
                   type="number"
                   min="0"
                   step="1000"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   @input="calculateSingleInvestment"
                 />
               </div>
@@ -93,7 +93,7 @@
                   min="0"
                   max="100"
                   step="0.1"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   @input="calculateSingleInvestment"
                 />
               </div>
@@ -105,7 +105,7 @@
                   min="0.1"
                   max="50"
                   step="0.5"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   @input="calculateSingleInvestment"
                 />
               </div>
@@ -113,7 +113,7 @@
                 <label class="block text-sm font-medium mb-2">计息方式</label>
                 <select
                   v-model="singleInvestment.compoundType"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   @change="calculateSingleInvestment"
                 >
                   <option value="simple">单利</option>
@@ -137,7 +137,7 @@
                   type="number"
                   min="0"
                   step="100"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   @input="calculateRegularInvestment"
                 />
               </div>
@@ -149,7 +149,7 @@
                   min="0"
                   max="100"
                   step="0.1"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   @input="calculateRegularInvestment"
                 />
               </div>
@@ -161,7 +161,7 @@
                   min="0.1"
                   max="50"
                   step="0.5"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   @input="calculateRegularInvestment"
                 />
               </div>
@@ -169,7 +169,7 @@
                 <label class="block text-sm font-medium mb-2">定投频率</label>
                 <select
                   v-model="regularInvestment.frequency"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   @change="calculateRegularInvestment"
                 >
                   <option value="monthly">每月</option>
@@ -193,7 +193,7 @@
                   <input
                     v-model="item.name"
                     type="text"
-                    class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
                 <div>
@@ -203,7 +203,7 @@
                     type="number"
                     min="0"
                     step="1000"
-                    class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                     @input="calculatePortfolio"
                   />
                 </div>
@@ -215,7 +215,7 @@
                     min="0"
                     max="100"
                     step="0.1"
-                    class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                     @input="calculatePortfolio"
                   />
                 </div>
@@ -223,7 +223,7 @@
                   <label class="block text-sm font-medium mb-2">风险等级</label>
                   <select
                     v-model="item.risk"
-                    class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="low">低风险</option>
                     <option value="medium">中风险</option>

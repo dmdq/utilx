@@ -31,7 +31,7 @@
             type="number"
             min="200"
             max="2000"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
 
@@ -97,7 +97,7 @@
             @input="onPxInput"
             type="number"
             step="0.5"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="输入 px 值，rpx 自动联动"
           />
         </div>
@@ -118,7 +118,7 @@
             @input="onRpxInput"
             type="number"
             step="0.5"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="输入 rpx 值，px 自动联动"
           />
         </div>
@@ -161,7 +161,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">粘贴样式代码</label>
           <textarea
             v-model="batchInput"
-            class="w-full h-36 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-36 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="width: 32px; height: 16rpx; font-size: 0px;"
             spellcheck="false"
           ></textarea>

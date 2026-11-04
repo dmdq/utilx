@@ -85,7 +85,7 @@
               <label class="text-sm font-medium">输出格式</label>
               <select
                 v-model="outputFormat"
-                class="w-full mt-2 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full mt-2 px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 @change="updateCompressedImages"
               >
                 <option value="original">保持原格式</option>
@@ -206,7 +206,7 @@
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
                     <button
                       @click="downloadOriginal(currentImage)"
-                      class="px-4 py-2 bg-white text-black rounded-md hover:bg-gray-100 transition-colors"
+                      class="px-4 py-2 bg-white text-black rounded-md hover:bg-muted transition-colors"
                     >
                       下载原图
                     </button>
@@ -233,7 +233,7 @@
                   >
                     <button
                       @click="downloadCompressed(currentImage)"
-                      class="px-4 py-2 bg-white text-black rounded-md hover:bg-gray-100 transition-colors"
+                      class="px-4 py-2 bg-white text-black rounded-md hover:bg-muted transition-colors"
                     >
                       下载压缩图
                     </button>

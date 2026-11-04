@@ -35,7 +35,7 @@
         </div>
         <textarea
           v-model="inputJSON"
-          class="flex-1 w-full min-h-[400px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[400px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="在此输入JSON数据..."
           @input="convert"
         ></textarea>
@@ -79,7 +79,7 @@
           <input
             type="text"
             v-model="config.interfaceName"
-            class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
             placeholder="根接口名称"
           />
         </div>
@@ -87,7 +87,7 @@
           <label class="text-sm font-medium text-foreground">输出格式</label>
           <select
             v-model="config.outputFormat"
-            class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="interface">Interface</option>
             <option value="type">Type Alias</option>
@@ -98,7 +98,7 @@
           <label class="text-sm font-medium text-foreground">命名规则</label>
           <select
             v-model="config.namingConvention"
-            class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="pascal">PascalCase</option>
             <option value="camel">camelCase</option>

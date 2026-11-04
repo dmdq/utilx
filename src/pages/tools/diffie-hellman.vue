@@ -75,7 +75,7 @@
             <textarea
               v-model="aliceReceivedPublicKey"
               placeholder="粘贴Bob的公钥..."
-              class="w-full h-20 p-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+              class="w-full h-20 p-3 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
             ></textarea>
           </div>
 
@@ -154,7 +154,7 @@
             <textarea
               v-model="bobReceivedPublicKey"
               placeholder="粘贴Alice的公钥..."
-              class="w-full h-20 p-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+              class="w-full h-20 p-3 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
             ></textarea>
           </div>
 
@@ -214,7 +214,7 @@
             <select
               v-model="selectedAlgorithm"
               @change="onAlgorithmChange"
-              class="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="ECDH-P256">ECDH P-256 (secp256r1)</option>
               <option value="ECDH-P384">ECDH P-384 (secp384r1)</option>
@@ -231,7 +231,7 @@
               min="16"
               max="64"
               step="16"
-              class="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
           </div>
         </div>

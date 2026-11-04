@@ -24,7 +24,7 @@
                 min="1"
                 max="3999999"
                 placeholder="请输入1-3999999之间的数字"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
               <div class="mt-2 text-xs text-muted-foreground">
                 支持范围：1 - 3,999,999
@@ -115,7 +115,7 @@
                 @input="convertToArabic"
                 type="text"
                 placeholder="请输入罗马数字，如：XIX, MMXXIII"
-                class="w-full px-3 py-2 border rounded-md font-mono uppercase"
+                class="w-full px-3 py-2 border border-border rounded-md font-mono uppercase"
               >
               <div class="mt-2 text-xs text-muted-foreground">
                 请使用大写字母：I, V, X, L, C, D, M
@@ -170,7 +170,7 @@
                 @input="validateRoman"
                 type="text"
                 placeholder="输入要验证的罗马数字"
-                class="w-full px-3 py-2 border rounded-md font-mono"
+                class="w-full px-3 py-2 border border-border rounded-md font-mono"
               >
             </div>
 

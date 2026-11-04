@@ -26,7 +26,7 @@
           </h2>
           <textarea
             v-model="inputText"
-            class="w-full h-56 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-56 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="a1b2c3d feat: 支持导出 PDF&#10;e4f5a6b fix(api): 修复分页参数越界&#10;9f8e7d6 feat(ui)!: 重构侧边栏交互&#10;Merge branch 'dev'"
             spellcheck="false"
           ></textarea>
@@ -40,7 +40,7 @@
                   v-model="version"
                   type="text"
                   placeholder="1.4.0"
-                  class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
               <div>
@@ -48,7 +48,7 @@
                 <input
                   v-model="date"
                   type="date"
-                  class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
             </div>
@@ -58,7 +58,7 @@
                 v-model="repoLink"
                 type="text"
                 placeholder="https://github.com/user/repo"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <label class="flex items-center justify-between cursor-pointer bg-muted/30 rounded-lg px-3 py-2.5">

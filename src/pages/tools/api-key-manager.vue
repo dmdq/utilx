@@ -17,7 +17,7 @@
               <input
                 v-model="newKey.service"
                 type="text"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="如：GitHub、Google、AWS等"
               />
             </div>
@@ -28,7 +28,7 @@
                 <input
                   v-model="newKey.key"
                   :type="showNewKey ? 'text' : 'password'"
-                  class="w-full px-3 py-2 pr-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                  class="w-full px-3 py-2 pr-10 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                   placeholder="输入或生成API密钥"
                 />
                 <button
@@ -45,7 +45,7 @@
               <label class="block text-sm font-medium mb-2">密钥类型</label>
               <select
                 v-model="newKey.type"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="api-key">API Key</option>
                 <option value="secret-key">Secret Key</option>
@@ -60,7 +60,7 @@
               <label class="block text-sm font-medium mb-2">描述（可选）</label>
               <textarea
                 v-model="newKey.description"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 rows="2"
                 placeholder="密钥用途说明..."
               ></textarea>
@@ -186,7 +186,7 @@
                   type="number"
                   min="16"
                   max="128"
-                  class="w-16 px-2 py-1 border rounded-lg text-center"
+                  class="w-16 px-2 py-1 border border-border rounded-lg text-center"
                 />
               </div>
             </div>
@@ -265,7 +265,7 @@
               <label class="block text-sm font-medium mb-2">输入密钥进行检查</label>
               <textarea
                 v-model="securityCheck.key"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                 rows="3"
                 placeholder="输入要检查的密钥..."
                 @input="checkSecurity"

@@ -33,7 +33,7 @@
             <div v-if="inputMode === 'text'">
               <textarea
                 v-model="inputText"
-                class="w-full px-4 py-3 border rounded-lg font-mono text-sm min-h-[300px]"
+                class="w-full px-4 py-3 border border-border rounded-lg font-mono text-sm min-h-[300px]"
                 placeholder="粘贴代码或文本内容..."
               ></textarea>
             </div>

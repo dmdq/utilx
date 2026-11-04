@@ -50,7 +50,7 @@
         </div>
         <textarea
           v-model="inputData"
-          class="flex-1 w-full min-h-[400px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[400px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           :placeholder="`在此输入${convertDirection === 'json-to-php' ? 'JSON' : 'PHP Array'}数据...`"
           @keydown.ctrl.enter="convert"
           @keydown.meta.enter="convert"
@@ -96,7 +96,7 @@
           <label class="text-sm font-medium text-foreground">数组语法</label>
           <select
             v-model="phpOptions.arraySyntax"
-            class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="short">短数组语法 [] (PHP 5.4+)</option>
             <option value="long">长数组语法 array()</option>
@@ -106,7 +106,7 @@
           <label class="text-sm font-medium text-foreground">缩进大小</label>
           <select
             v-model="phpOptions.indentSize"
-            class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="2">2 空格</option>
             <option value="4">4 空格</option>
@@ -117,7 +117,7 @@
           <label class="text-sm font-medium text-foreground">字符串引号</label>
           <select
             v-model="phpOptions.quoteStyle"
-            class="w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="single">单引号 '</option>
             <option value="double">双引号 "</option>

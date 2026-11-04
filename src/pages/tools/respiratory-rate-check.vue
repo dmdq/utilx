@@ -38,7 +38,7 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium mb-2 block">测量时长</label>
-              <select v-model="duration" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="duration" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option :value="15">15秒</option>
                 <option :value="30">30秒</option>
                 <option :value="60">60秒（推荐）</option>
@@ -98,7 +98,7 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium mb-2 block">观察时长</label>
-              <select v-model="manualDuration" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="manualDuration" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option :value="15">15秒</option>
                 <option :value="30">30秒</option>
                 <option :value="60">60秒</option>
@@ -110,7 +110,7 @@
               <input
                 v-model.number="manualBreaths"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="在此时间内记录的呼吸次数"
               >
             </div>

@@ -47,12 +47,12 @@
             v-model="macInput"
             type="text"
             placeholder="如 00:1A:2B:3C:4D:5E / 00-1A-2B-3C-4D-5E / 001A2B3C4D5E"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <textarea
             v-else
             v-model="batchInput"
-            class="w-full h-32 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-32 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="每行一个 MAC 地址，例如：&#10;00:03:93:11:22:33&#10;F0-18-98-AA-BB-CC&#10;E465B8998877"
             spellcheck="false"
           ></textarea>
@@ -172,7 +172,7 @@
                 v-model="tableSearch"
                 type="text"
                 placeholder="搜索内置厂商表（如 Apple、华为、Espressif）"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div class="overflow-x-auto max-h-[420px] overflow-y-auto">

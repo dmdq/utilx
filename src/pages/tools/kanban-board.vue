@@ -19,7 +19,7 @@
             <input
               v-model="newItem.title"
               type="text"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="任务标题"
               @keyup.enter="addItem"
             />
@@ -28,14 +28,14 @@
             <input
               v-model="newItem.description"
               type="text"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="描述（可选）"
             />
           </div>
           <div class="md:col-span-2">
             <select
               v-model="newItem.priority"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="low">低优先级</option>
               <option value="medium">中优先级</option>
@@ -45,7 +45,7 @@
           <div class="md:col-span-2">
             <select
               v-model="newItem.column"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="todo">待办</option>
               <option value="doing">进行中</option>

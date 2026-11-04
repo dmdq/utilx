@@ -41,7 +41,7 @@
               type="text"
               inputmode="decimal"
               placeholder="如 100（近 30~90 天日均，剔除大促）"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
             <p class="text-[11px] text-muted-foreground mt-1">取日常动销均值即可；直播 / 活动脉冲量请剔除后单独排计划，不要混进 d̄。</p>
           </div>
@@ -54,7 +54,7 @@
               type="text"
               inputmode="decimal"
               placeholder="如 25（日销 75~125 飘动就约 25）"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
             <p class="text-[11px] text-muted-foreground mt-1">Excel 里 STDEV(日销量列) 直接得到；没有历史数据时可按「日均 × 0.2~0.3」粗估。</p>
           </div>
@@ -80,7 +80,7 @@
               type="text"
               inputmode="decimal"
               placeholder="如 7（下单到到货天数）"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
             <div v-show="leadMode === 'variable'" class="mt-3 space-y-1">
               <label class="block text-sm font-medium text-foreground mb-1.5" for="rop-sigmal">提前期标准差 σL（天）</label>
@@ -90,7 +90,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 3（供应商到货 7±3 天就填 3）"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
               <p class="text-[11px] text-muted-foreground leading-relaxed">
                 进阶展开：交期忽早忽晚也要备保险。σL 填 0 时复合公式自动退化为固定提前期的 Z×σd×√L。
@@ -103,7 +103,7 @@
             <select
               id="rop-level"
               v-model="serviceKey"
-              class="w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <option v-for="lv in SERVICE_LEVELS" :key="lv.key" :value="lv.key">{{ lv.label }}（Z = {{ lv.z }}）</option>
               <option :value="CUSTOM_KEY">自定义 Z</option>
@@ -116,7 +116,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 2.05（对应约 98% 服务水平）"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
               <p class="text-[11px] text-muted-foreground">填 Z 后缺货概率由标准正态累积分布反推显示。</p>
             </div>
@@ -131,7 +131,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 700"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </div>
             <div>
@@ -142,7 +142,7 @@
                 type="text"
                 inputmode="decimal"
                 placeholder="如 10"
-                class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               />
             </div>
           </div>

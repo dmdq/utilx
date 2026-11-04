@@ -31,7 +31,7 @@
             <input
               v-model="contestName"
               type="text"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如：校园演讲比赛决赛"
             >
           </div>
@@ -44,7 +44,7 @@
               min="3"
               max="15"
               step="1"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
             <p v-if="judgeCountSafe < 3" class="text-xs text-amber-600 dark:text-amber-400 mt-1">
               评委少于 3 位时将自动不去极值，直接取全部有效分平均。
@@ -60,7 +60,7 @@
                 min="0"
                 max="5"
                 step="1"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               >
             </div>
             <div>
@@ -71,7 +71,7 @@
                 min="0"
                 max="5"
                 step="1"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               >
             </div>
           </div>
@@ -112,7 +112,7 @@
               <input
                 v-model="c.name"
                 type="text"
-                class="flex-1 min-w-0 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 min-w-0 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 :placeholder="`选手${i + 1}`"
               >
               <button
@@ -185,7 +185,7 @@
                       step="0.1"
                       min="0"
                       max="100"
-                      class="w-full px-1.5 py-1.5 bg-background text-center text-foreground text-sm rounded border border-transparent hover:border-input focus:border-primary focus:outline-none focus:ring-1 focus:ring-ring"
+                      class="w-full px-1.5 py-1.5 bg-background text-center text-foreground text-sm rounded border border-border border-transparent hover:border-input focus:border-primary focus:outline-none focus:ring-1 focus:ring-ring"
                       placeholder="-"
                     >
                   </td>

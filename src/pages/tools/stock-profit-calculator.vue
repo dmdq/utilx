@@ -19,7 +19,7 @@
                   v-model.number="buyPrice"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="请输入买入价格"
                   @input="calculateProfit"
                 />
@@ -29,7 +29,7 @@
                 <input
                   v-model.number="buyQuantity"
                   type="number"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="请输入买入数量"
                   @input="calculateProfit"
                 />
@@ -43,7 +43,7 @@
                   v-model.number="sellPrice"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="请输入卖出价格"
                   @input="calculateProfit"
                 />
@@ -53,7 +53,7 @@
                 <input
                   v-model.number="sellQuantity"
                   type="number"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="请输入卖出数量"
                   @input="calculateProfit"
                 />
@@ -72,7 +72,7 @@
                 v-model.number="commissionRate"
                 type="number"
                 step="0.001"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入佣金费率"
                 @input="calculateProfit"
               />
@@ -84,7 +84,7 @@
                 v-model.number="minCommission"
                 type="number"
                 step="0.01"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入最低佣金"
                 @input="calculateProfit"
               />
@@ -97,7 +97,7 @@
                   v-model.number="stampTax"
                   type="number"
                   step="0.001"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="请输入印花税"
                   @input="calculateProfit"
                 />
@@ -108,7 +108,7 @@
                   v-model.number="transferFee"
                   type="number"
                   step="0.001"
-                  class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="请输入过户费"
                   @input="calculateProfit"
                 />
@@ -125,7 +125,7 @@
               <label class="block text-sm font-medium mb-2">持股期限</label>
               <select
                 v-model="holdingPeriod"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 @change="calculateProfit"
               >
                 <option value="">请选择持股期限</option>
@@ -140,7 +140,7 @@
                 v-model.number="incomeTaxRate"
                 type="number"
                 step="0.1"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="请输入个人所得税率"
                 @input="calculateProfit"
               />

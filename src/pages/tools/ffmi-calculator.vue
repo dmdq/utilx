@@ -37,11 +37,11 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">身高 (cm)</label>
-                <input v-model.number="height" type="number" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="身高">
+                <input v-model.number="height" type="number" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="身高">
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">体重 (kg)</label>
-                <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="体重">
+                <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="体重">
               </div>
             </div>
 
@@ -53,7 +53,7 @@
                 step="0.1"
                 min="0"
                 max="50"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="输入体脂率"
               >
               <p class="text-xs text-muted-foreground mt-1">可使用体脂率计算器获得准确值</p>

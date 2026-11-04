@@ -26,7 +26,7 @@
                 v-model="baseColor"
                 type="text"
                 maxlength="7"
-                class="flex-1 px-3 py-2 border border-border rounded-lg bg-muted uppercase font-mono text-foreground"
+                class="flex-1 px-3 py-2 border border-border border-border rounded-lg bg-muted uppercase font-mono text-foreground"
                 placeholder="#000000"
               >
               <button @click="randomColor" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90">随机</button>

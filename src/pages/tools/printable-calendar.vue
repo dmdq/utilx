@@ -46,19 +46,19 @@
         <div class="space-y-2.5 pt-1">
           <label class="flex items-center justify-between gap-3 text-sm text-foreground cursor-pointer">
             <span>显示农历<span class="text-xs text-muted-foreground ml-1">（1900-2100）</span></span>
-            <input v-model="showLunar" type="checkbox" class="w-4 h-4 rounded border-border flex-shrink-0">
+            <input v-model="showLunar" type="checkbox" class="w-4 h-4 rounded border border-border flex-shrink-0">
           </label>
           <label class="flex items-center justify-between gap-3 text-sm text-foreground cursor-pointer">
             <span>显示节气<span class="text-xs text-muted-foreground ml-1">（精确到天）</span></span>
-            <input v-model="showTerm" type="checkbox" class="w-4 h-4 rounded border-border flex-shrink-0">
+            <input v-model="showTerm" type="checkbox" class="w-4 h-4 rounded border border-border flex-shrink-0">
           </label>
           <label class="flex items-center justify-between gap-3 text-sm text-foreground cursor-pointer">
             <span>今日高亮</span>
-            <input v-model="showToday" type="checkbox" class="w-4 h-4 rounded border-border flex-shrink-0">
+            <input v-model="showToday" type="checkbox" class="w-4 h-4 rounded border border-border flex-shrink-0">
           </label>
           <label class="flex items-center justify-between gap-3 text-sm text-foreground cursor-pointer">
             <span>备注栏<span class="text-xs text-muted-foreground ml-1">（加大行高、加宽周末列）</span></span>
-            <input v-model="noteSpace" type="checkbox" class="w-4 h-4 rounded border-border flex-shrink-0">
+            <input v-model="noteSpace" type="checkbox" class="w-4 h-4 rounded border border-border flex-shrink-0">
           </label>
         </div>
 
@@ -118,7 +118,7 @@
               type="number"
               min="1900"
               max="2100"
-              class="w-24 px-2.5 py-1.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-24 px-2.5 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               aria-label="跳转到指定年份（1900-2100）"
               @change="applyYearJump"
             >

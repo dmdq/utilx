@@ -27,7 +27,7 @@
 
         <textarea
           v-model="jsonInput"
-          class="w-full min-h-[280px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-y font-mono text-sm"
+          class="w-full min-h-[280px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-y font-mono text-sm"
           placeholder='在此粘贴 JSON 数据，例如 {"user_name": "张三", "age": 28}'
           spellcheck="false"
         ></textarea>
@@ -78,7 +78,7 @@
               id="go-package-name"
               type="text"
               v-model="packageName"
-              class="mt-1 w-full px-3 py-2 bg-muted border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary text-sm font-mono"
+              class="mt-1 w-full px-3 py-2 bg-muted border border-border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary text-sm font-mono"
               placeholder="main（留空则不输出 package 行）"
             />
           </div>

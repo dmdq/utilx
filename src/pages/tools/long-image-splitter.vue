@@ -108,7 +108,7 @@
             type="number"
             min="200"
             step="10"
-            class="w-full mt-2 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full mt-2 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             @change="process"
           />
           <p class="text-xs text-muted-foreground mt-1.5">1080 适合一屏看全，1350 适合朋友圈 3:4 展示；尾段过短会自动并入上一条</p>

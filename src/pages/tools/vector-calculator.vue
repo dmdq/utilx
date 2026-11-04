@@ -33,11 +33,11 @@
           <h2 class="text-xl font-semibold text-foreground mb-4">向量 A</h2>
           <div class="flex gap-2 items-center">
             <span class="text-muted-foreground">(</span>
-            <input v-model.number="vectorA.x" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border rounded bg-muted" placeholder="x">
+            <input v-model.number="vectorA.x" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border border-border rounded bg-muted" placeholder="x">
             <span v-if="dimension === 3" class="text-muted-foreground">,</span>
-            <input v-if="dimension === 3" v-model.number="vectorA.y" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border rounded bg-muted" placeholder="y">
+            <input v-if="dimension === 3" v-model.number="vectorA.y" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border border-border rounded bg-muted" placeholder="y">
             <span class="text-muted-foreground">,</span>
-            <input v-model.number="vectorA.z" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border rounded bg-muted" placeholder="z">
+            <input v-model.number="vectorA.z" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border border-border rounded bg-muted" placeholder="z">
             <span class="text-muted-foreground">)</span>
           </div>
           <p class="text-sm text-primary mt-2">|A| = {{ magnitudeA.toFixed(4) }}</p>
@@ -47,11 +47,11 @@
           <h2 class="text-xl font-semibold text-foreground mb-4">向量 B</h2>
           <div class="flex gap-2 items-center">
             <span class="text-muted-foreground">(</span>
-            <input v-model.number="vectorB.x" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border rounded bg-muted" placeholder="x">
+            <input v-model.number="vectorB.x" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border border-border rounded bg-muted" placeholder="x">
             <span v-if="dimension === 3" class="text-muted-foreground">,</span>
-            <input v-if="dimension === 3" v-model.number="vectorB.y" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border rounded bg-muted" placeholder="y">
+            <input v-if="dimension === 3" v-model.number="vectorB.y" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border border-border rounded bg-muted" placeholder="y">
             <span class="text-muted-foreground">,</span>
-            <input v-model.number="vectorB.z" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border rounded bg-muted" placeholder="z">
+            <input v-model.number="vectorB.z" type="number" step="0.01" class="flex-1 px-3 py-2 border border-border border-border rounded bg-muted" placeholder="z">
             <span class="text-muted-foreground">)</span>
           </div>
           <p class="text-sm text-primary mt-2">|B| = {{ magnitudeB.toFixed(4) }}</p>

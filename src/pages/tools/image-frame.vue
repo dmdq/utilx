@@ -110,7 +110,7 @@
                   v-model="frameColor"
                   type="text"
                   @input="updatePreview"
-                  class="flex-1 p-2 border rounded text-sm font-mono"
+                  class="flex-1 p-2 border border-border rounded text-sm font-mono"
                 >
               </div>
             </div>
@@ -140,7 +140,7 @@
             </label>
 
             <div v-if="addTexture">
-              <select v-model="textureType" @change="updatePreview" class="w-full p-2 border rounded text-sm">
+              <select v-model="textureType" @change="updatePreview" class="w-full p-2 border border-border rounded text-sm">
                 <option value="wood">木纹</option>
                 <option value="paper">纸质</option>
                 <option value="metal">金属</option>
@@ -160,7 +160,7 @@
             </label>
 
             <div v-if="addCorner">
-              <select v-model="cornerStyle" @change="updatePreview" class="w-full p-2 border rounded text-sm">
+              <select v-model="cornerStyle" @change="updatePreview" class="w-full p-2 border border-border rounded text-sm">
                 <option value="ornate">华丽</option>
                 <option value="simple">简约</option>
                 <option value="rounded">圆角</option>
@@ -203,7 +203,7 @@
                 v-model="watermarkText"
                 @input="updatePreview"
                 type="text"
-                class="w-full p-2 border rounded text-sm"
+                class="w-full p-2 border border-border rounded text-sm"
                 placeholder="输入水印文字..."
               >
               <div class="flex gap-2">
@@ -217,7 +217,7 @@
                   v-model="watermarkColor"
                   type="text"
                   @input="updatePreview"
-                  class="flex-1 p-2 border rounded text-sm font-mono"
+                  class="flex-1 p-2 border border-border rounded text-sm font-mono"
                 >
               </div>
               <div>

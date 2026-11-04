@@ -88,7 +88,7 @@
                 min="1"
                 max="31"
                 placeholder="1-31"
-                class="w-20 px-3 py-2 border rounded-md text-sm"
+                class="w-20 px-3 py-2 border border-border rounded-md text-sm"
               />
               <span class="text-sm text-muted-foreground self-center">号</span>
             </div>
@@ -144,9 +144,9 @@
                 type="number"
                 min="1"
                 max="60"
-                class="w-20 px-3 py-2 border rounded-md text-sm"
+                class="w-20 px-3 py-2 border border-border rounded-md text-sm"
               />
-              <select v-model="config.intervalUnit" class="px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.intervalUnit" class="px-3 py-2 border border-border rounded-md text-sm">
                 <option value="minute">分钟</option>
                 <option value="hour">小时</option>
                 <option value="day">天</option>

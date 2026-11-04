@@ -35,7 +35,7 @@
         </div>
         <textarea
           v-model="inputText"
-          class="w-full h-80 px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="w-full h-80 px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="输入需要调整缩进的代码或文本..."
           @input="process"
         ></textarea>
@@ -56,7 +56,7 @@
         </div>
         <textarea
           v-model="outputText"
-          class="w-full h-80 px-4 py-3 bg-muted border border-border rounded-lg resize-none font-mono text-sm"
+          class="w-full h-80 px-4 py-3 bg-muted border border-border border-border rounded-lg resize-none font-mono text-sm"
           readonly
         ></textarea>
       </div>
@@ -130,7 +130,7 @@
           type="number"
           min="0"
           max="20"
-          class="w-24 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-24 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
           @input="operation === 'add' ? process() : null"
         >
         <span class="ml-2 text-sm text-muted-foreground">级别（用于添加/移除缩进）</span>

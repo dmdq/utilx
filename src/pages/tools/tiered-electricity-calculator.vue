@@ -37,7 +37,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">省份 / 档位方案</label>
           <select
             v-model="province"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="name in provinceNames" :key="name" :value="name">{{ name }}</option>
             <option value="自定义">自定义模式（手填档位与电价）</option>
@@ -53,23 +53,23 @@
           <div class="grid grid-cols-2 gap-3">
             <div>
               <label class="block text-xs font-medium text-foreground mb-1.5">一档上限（度）</label>
-              <input v-model.number="cTier1End" type="number" min="1" step="1" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="cTier1End" type="number" min="1" step="1" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-xs font-medium text-foreground mb-1.5">一档单价（元/度）</label>
-              <input v-model.number="cTier1Price" type="number" min="0" step="0.0001" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="cTier1Price" type="number" min="0" step="0.0001" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-xs font-medium text-foreground mb-1.5">二档上限（度）</label>
-              <input v-model.number="cTier2End" type="number" min="1" step="1" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="cTier2End" type="number" min="1" step="1" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-xs font-medium text-foreground mb-1.5">二档单价（元/度）</label>
-              <input v-model.number="cTier2Price" type="number" min="0" step="0.0001" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="cTier2Price" type="number" min="0" step="0.0001" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
             <div>
               <label class="block text-xs font-medium text-foreground mb-1.5">三档单价（元/度）</label>
-              <input v-model.number="cTier3Price" type="number" min="0" step="0.0001" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              <input v-model.number="cTier3Price" type="number" min="0" step="0.0001" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </div>
           </div>
           <p v-if="customInvalid" class="text-xs text-red-500">一档上限需小于二档上限，且单价不小于 0</p>
@@ -82,14 +82,14 @@
             type="number"
             min="0"
             step="1"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如 350"
           />
         </div>
 
         <!-- 峰谷开关（简化口径：仍按平段计算） -->
         <div class="flex items-start gap-2">
-          <input v-model="peakValley" type="checkbox" id="peakValley" class="w-4 h-4 mt-0.5 rounded border-border" />
+          <input v-model="peakValley" type="checkbox" id="peakValley" class="w-4 h-4 mt-0.5 rounded border border-border" />
           <label for="peakValley" class="text-sm text-foreground">我家用的是峰谷分时电价</label>
         </div>
         <div v-if="peakValley" class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-3">

@@ -23,7 +23,7 @@
           <input
             v-model="singleYear"
             type="number"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
             placeholder="例如: 2024"
             @input="checkSingleYear"
           >
@@ -111,7 +111,7 @@
             <input
               v-model="batchStart"
               type="number"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="开始年份"
             >
           </div>
@@ -120,7 +120,7 @@
             <input
               v-model="batchEnd"
               type="number"
-              class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+              class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="结束年份"
             >
           </div>

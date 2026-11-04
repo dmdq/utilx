@@ -32,13 +32,13 @@
             <input
               v-model.number="gridW"
               type="number" min="1" max="9999" step="1"
-              class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               aria-label="图案宽度格数"
             />
             <input
               v-model.number="gridH"
               type="number" min="1" max="9999" step="1"
-              class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               aria-label="图案高度格数"
             />
           </div>
@@ -49,7 +49,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">布规格（count = 每英寸格数）</label>
           <select
             v-model.number="clothCount"
-            class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="c in CLOTHS" :key="c.count" :value="c.count">{{ c.label }}（1 格约 {{ c.cellMm }}mm）</option>
           </select>
@@ -71,7 +71,7 @@
           <input
             v-model.number="marginCm"
             type="number" min="0" max="15" step="0.5"
-            class="w-full px-3 py-2 rounded-lg border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 rounded-lg border border-border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
           <p class="text-xs text-muted-foreground mt-1">四周各留的空白布边，用于上绷夹持与装裱覆胶，默认 5cm</p>
         </div>

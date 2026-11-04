@@ -26,7 +26,7 @@
           </h2>
           <textarea
             v-model="ddlText"
-            class="w-full h-72 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-72 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴 CREATE TABLE 建表语句（多张表用分号分隔），例如：&#10;CREATE TABLE `users` (&#10;  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '用户ID',&#10;  `name` VARCHAR(50) NOT NULL DEFAULT 'abc' COMMENT '用户名',&#10;  PRIMARY KEY (`id`)&#10;) ENGINE=InnoDB COMMENT='用户表';"
             spellcheck="false"
           ></textarea>

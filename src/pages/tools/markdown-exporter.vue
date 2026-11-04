@@ -49,7 +49,7 @@
 
           <textarea
             v-model="mdText"
-            class="w-full h-96 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-96 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴 Markdown 内容，例如：&#10;&#10;# 标题&#10;&#10;正文段落，支持 **加粗**、`行内代码`。&#10;&#10;```js&#10;console.log('代码块')&#10;```"
             spellcheck="false"
           ></textarea>
@@ -158,7 +158,7 @@
               v-if="exportedText"
               :value="exportedText"
               readonly
-              class="w-full h-44 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-xs font-mono focus:outline-none resize-y"
+              class="w-full h-44 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-xs font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
             <div v-else class="h-44 flex flex-col items-center justify-center border border-dashed border-border rounded-lg">

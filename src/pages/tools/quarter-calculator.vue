@@ -17,7 +17,7 @@
 
         <div class="mb-4">
           <label class="block text-sm font-medium text-foreground mb-2">日期</label>
-          <input v-model="dateInput" type="date" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" @change="calculate">
+          <input v-model="dateInput" type="date" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" @change="calculate">
         </div>
 
         <div class="mb-4">
@@ -32,13 +32,13 @@
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">年份</label>
-            <select v-model="selectedYear" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" @change="calculateByYearQuarter">
+            <select v-model="selectedYear" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" @change="calculateByYearQuarter">
               <option v-for="y in years" :key="y" :value="y">{{ y }}</option>
             </select>
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">季度</label>
-            <select v-model="selectedQuarter" class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" @change="calculateByYearQuarter">
+            <select v-model="selectedQuarter" class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary" @change="calculateByYearQuarter">
               <option :value="1">第一季度 (Q1)</option>
               <option :value="2">第二季度 (Q2)</option>
               <option :value="3">第三季度 (Q3)</option>

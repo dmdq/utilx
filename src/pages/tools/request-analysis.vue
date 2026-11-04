@@ -50,7 +50,7 @@
                     v-model="inputMode"
                     type="radio"
                     value="raw"
-                    class="mr-2 border-border text-primary focus:ring-primary"
+                    class="mr-2 border border-border text-primary focus:ring-primary"
                   />
                   <span class="text-sm text-foreground">原始请求</span>
                 </label>
@@ -59,7 +59,7 @@
                     v-model="inputMode"
                     type="radio"
                     value="url"
-                    class="mr-2 border-border text-primary focus:ring-primary"
+                    class="mr-2 border border-border text-primary focus:ring-primary"
                   />
                   <span class="text-sm text-foreground">URL 请求</span>
                 </label>
@@ -72,7 +72,7 @@
               <textarea
                 v-model="rawRequest"
                 placeholder="GET /api/users?page=1&limit=10 HTTP/1.1&#10;Host: api.example.com&#10;User-Agent: Mozilla/5.0&#10;Authorization: Bearer token123&#10;Content-Type: application/json"
-                class="flex-1 w-full p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+                class="flex-1 w-full p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
                 @input="parseRequest"
               ></textarea>
             </div>
@@ -83,7 +83,7 @@
                 <label class="block text-sm font-medium text-foreground mb-2">请求方法</label>
                 <select
                   v-model="urlRequest.method"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option value="GET">GET</option>
                   <option value="POST">POST</option>
@@ -100,7 +100,7 @@
                   v-model="urlRequest.url"
                   type="text"
                   placeholder="https://api.example.com/users?page=1&limit=10"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   @input="parseRequest"
                 />
               </div>
@@ -109,7 +109,7 @@
                 <textarea
                   v-model="urlRequest.headers"
                   placeholder="Content-Type: application/json&#10;Authorization: Bearer token123"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                   rows="4"
                   @input="parseRequest"
                 ></textarea>
@@ -119,7 +119,7 @@
                 <textarea
                   v-model="urlRequest.body"
                   placeholder="请求体内容"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                   rows="4"
                   @input="parseRequest"
                 ></textarea>
@@ -131,7 +131,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">快速示例</label>
               <select
                 @change="loadExample"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="">选择示例...</option>
                 <option value="get">GET 请求示例</option>

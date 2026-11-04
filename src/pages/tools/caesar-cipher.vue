@@ -35,7 +35,7 @@
         </div>
         <textarea
           v-model="inputText"
-          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="输入需要加密或解密的文本..."
           @input="process"
         ></textarea>
@@ -56,7 +56,7 @@
         </div>
         <textarea
           v-model="outputText"
-          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border rounded-lg focus:outline-none resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none resize-none font-mono text-sm"
           readonly
         ></textarea>
       </div>
@@ -73,7 +73,7 @@
             type="number"
             min="1"
             max="25"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted text-foreground"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted text-foreground"
             @input="process"
           >
           <div class="flex gap-1 mt-2 flex-wrap">

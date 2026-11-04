@@ -25,7 +25,7 @@
                 <input
                   v-model="hexColor"
                   type="color"
-                  class="w-full h-20 rounded-lg cursor-pointer border"
+                  class="w-full h-20 rounded-lg cursor-pointer border border-border"
                   @input="updateColorFromHex"
                 />
               </div>
@@ -50,7 +50,7 @@
                     type="number"
                     min="0"
                     max="255"
-                    class="w-16 px-2 py-1 border rounded text-sm"
+                    class="w-16 px-2 py-1 border border-border rounded text-sm"
                     @input="updateColorFromRGB"
                   />
                 </div>
@@ -69,7 +69,7 @@
                     type="number"
                     min="0"
                     max="255"
-                    class="w-16 px-2 py-1 border rounded text-sm"
+                    class="w-16 px-2 py-1 border border-border rounded text-sm"
                     @input="updateColorFromRGB"
                   />
                 </div>
@@ -88,7 +88,7 @@
                     type="number"
                     min="0"
                     max="255"
-                    class="w-16 px-2 py-1 border rounded text-sm"
+                    class="w-16 px-2 py-1 border border-border rounded text-sm"
                     @input="updateColorFromRGB"
                   />
                 </div>
@@ -114,7 +114,7 @@
                     type="number"
                     min="0"
                     max="360"
-                    class="w-16 px-2 py-1 border rounded text-sm"
+                    class="w-16 px-2 py-1 border border-border rounded text-sm"
                     @input="updateColorFromHSL"
                   />
                 </div>
@@ -133,7 +133,7 @@
                     type="number"
                     min="0"
                     max="100"
-                    class="w-16 px-2 py-1 border rounded text-sm"
+                    class="w-16 px-2 py-1 border border-border rounded text-sm"
                     @input="updateColorFromHSL"
                   />
                 </div>
@@ -152,7 +152,7 @@
                     type="number"
                     min="0"
                     max="100"
-                    class="w-16 px-2 py-1 border rounded text-sm"
+                    class="w-16 px-2 py-1 border border-border rounded text-sm"
                     @input="updateColorFromHSL"
                   />
                 </div>
@@ -220,7 +220,7 @@
                 <input
                   v-model="hexColor"
                   type="text"
-                  class="flex-1 px-3 py-2 border rounded-md font-mono"
+                  class="flex-1 px-3 py-2 border border-border rounded-md font-mono"
                   @input="updateColorFromHex"
                 />
                 <button
@@ -240,7 +240,7 @@
                   :value="`rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`"
                   type="text"
                   readonly
-                  class="flex-1 px-3 py-2 border rounded-md font-mono bg-muted"
+                  class="flex-1 px-3 py-2 border border-border rounded-md font-mono bg-muted"
                 />
                 <button
                   @click="copyValue(`rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`)"
@@ -260,7 +260,7 @@
                     :value="`rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${rgba.a})`"
                     type="text"
                     readonly
-                    class="flex-1 px-3 py-2 border rounded-md font-mono bg-muted"
+                    class="flex-1 px-3 py-2 border border-border rounded-md font-mono bg-muted"
                   />
                   <input
                     v-model.number="rgba.a"
@@ -268,7 +268,7 @@
                     min="0"
                     max="1"
                     step="0.1"
-                    class="w-16 px-2 py-1 border rounded text-sm"
+                    class="w-16 px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <button
@@ -288,7 +288,7 @@
                   :value="`hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`"
                   type="text"
                   readonly
-                  class="flex-1 px-3 py-2 border rounded-md font-mono bg-muted"
+                  class="flex-1 px-3 py-2 border border-border rounded-md font-mono bg-muted"
                 />
                 <button
                   @click="copyValue(`hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`)"
@@ -307,7 +307,7 @@
                   :value="`hsv(${hsv.h}, ${hsv.s}%, ${hsv.v}%)`"
                   type="text"
                   readonly
-                  class="flex-1 px-3 py-2 border rounded-md font-mono bg-muted"
+                  class="flex-1 px-3 py-2 border border-border rounded-md font-mono bg-muted"
                 />
                 <button
                   @click="copyValue(`hsv(${hsv.h}, ${hsv.s}%, ${hsv.v}%)`)"
@@ -326,7 +326,7 @@
                   :value="`cmyk(${cmyk.c}, ${cmyk.m}, ${cmyk.y}, ${cmyk.k})`"
                   type="text"
                   readonly
-                  class="flex-1 px-3 py-2 border rounded-md font-mono bg-muted"
+                  class="flex-1 px-3 py-2 border border-border rounded-md font-mono bg-muted"
                 />
                 <button
                   @click="copyValue(`cmyk(${cmyk.c}, ${cmyk.m}, ${cmyk.y}, ${cmyk.k})`)"
@@ -448,7 +448,7 @@
                   :value="gradientCSS"
                   readonly
                   rows="3"
-                  class="flex-1 px-3 py-2 border rounded-md font-mono text-sm bg-muted resize-none"
+                  class="flex-1 px-3 py-2 border border-border rounded-md font-mono text-sm bg-muted resize-none"
                 ></textarea>
                 <button
                   @click="copyValue(gradientCSS)"

@@ -22,7 +22,7 @@
                 <input
                   v-model="password"
                   :type="showPassword ? 'text' : 'password'"
-                  class="w-full px-4 py-3 border rounded-lg pr-20 font-mono text-sm"
+                  class="w-full px-4 py-3 border border-border rounded-lg pr-20 font-mono text-sm"
                   placeholder="输入要哈希的密码..."
                   @input="generateHash"
                 >
@@ -140,7 +140,7 @@
                 min="16"
                 max="64"
                 @input="generateHash"
-                class="w-full px-4 py-2 border rounded-lg font-mono text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg font-mono text-sm"
               >
               <p class="text-xs text-muted-foreground mt-1">建议值：32字节（256位）</p>
             </div>
@@ -235,7 +235,7 @@
               <input
                 v-model="verifyPassword"
                 type="password"
-                class="w-full px-4 py-3 border rounded-lg font-mono text-sm"
+                class="w-full px-4 py-3 border border-border rounded-lg font-mono text-sm"
                 placeholder="输入要验证的密码..."
               >
             </div>
@@ -244,7 +244,7 @@
               <label class="text-sm font-medium mb-2 block">Argon2哈希</label>
               <textarea
                 v-model="verifyHash"
-                class="w-full px-4 py-3 border rounded-lg font-mono text-xs min-h-[80px]"
+                class="w-full px-4 py-3 border border-border rounded-lg font-mono text-xs min-h-[80px]"
                 placeholder="粘贴Argon2哈希值..."
               ></textarea>
             </div>

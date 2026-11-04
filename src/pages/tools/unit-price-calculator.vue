@@ -14,15 +14,15 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">价格</label>
-            <input v-model.number="productA.price" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+            <input v-model.number="productA.price" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">数量/重量</label>
-            <input v-model.number="productA.quantity" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+            <input v-model.number="productA.quantity" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">单位</label>
-            <select v-model="productA.unit" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="productA.unit" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="个">个</option>
               <option value="g">克</option>
               <option value="kg">公斤</option>
@@ -44,15 +44,15 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">价格</label>
-            <input v-model.number="productB.price" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+            <input v-model.number="productB.price" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">数量/重量</label>
-            <input v-model.number="productB.quantity" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+            <input v-model.number="productB.quantity" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">单位</label>
-            <select v-model="productB.unit" class="w-full px-4 py-2 border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="productB.unit" class="w-full px-4 py-2 border border-border border-border rounded bg-muted focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="个">个</option>
               <option value="g">克</option>
               <option value="kg">公斤</option>

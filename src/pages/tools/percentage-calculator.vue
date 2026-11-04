@@ -23,7 +23,7 @@
                 type="number"
                 step="any"
                 placeholder="输入数值"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 
@@ -36,7 +36,7 @@
                   type="number"
                   step="any"
                   placeholder="输入百分比"
-                  class="flex-1 px-3 py-2 border rounded-md"
+                  class="flex-1 px-3 py-2 border border-border rounded-md"
                 >
                 <span class="px-3 py-2 bg-muted rounded-md">%</span>
               </div>
@@ -69,7 +69,7 @@
                 type="number"
                 step="any"
                 placeholder="输入原始数值"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 
@@ -82,7 +82,7 @@
                   type="number"
                   step="any"
                   placeholder="输入百分比"
-                  class="flex-1 px-3 py-2 border rounded-md"
+                  class="flex-1 px-3 py-2 border border-border rounded-md"
                 >
                 <span class="px-3 py-2 bg-muted rounded-md">%</span>
               </div>
@@ -143,7 +143,7 @@
                 type="number"
                 step="any"
                 placeholder="输入部分数值"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 
@@ -155,7 +155,7 @@
                 type="number"
                 step="any"
                 placeholder="输入整体数值"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 
@@ -197,7 +197,7 @@
                 type="number"
                 step="any"
                 placeholder="输入第一个数值"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 
@@ -209,7 +209,7 @@
                 type="number"
                 step="any"
                 placeholder="输入第二个数值"
-                class="w-full px-3 py-2 border rounded-md"
+                class="w-full px-3 py-2 border border-border rounded-md"
               >
             </div>
 
@@ -259,7 +259,7 @@
                 type="number"
                 step="any"
                 placeholder="0.00"
-                class="w-full px-3 py-2 border rounded-md text-sm"
+                class="w-full px-3 py-2 border border-border rounded-md text-sm"
               >
             </div>
             <div>
@@ -271,7 +271,7 @@
                   type="number"
                   step="any"
                   placeholder="15"
-                  class="flex-1 px-3 py-2 border rounded-md text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded-md text-sm"
                 >
                 <span class="px-3 py-2 bg-muted rounded-md text-sm">%</span>
               </div>
@@ -295,7 +295,7 @@
                 type="number"
                 step="any"
                 placeholder="0.00"
-                class="w-full px-3 py-2 border rounded-md text-sm"
+                class="w-full px-3 py-2 border border-border rounded-md text-sm"
               >
             </div>
             <div>
@@ -307,7 +307,7 @@
                   type="number"
                   step="any"
                   placeholder="20"
-                  class="flex-1 px-3 py-2 border rounded-md text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded-md text-sm"
                 >
                 <span class="px-3 py-2 bg-muted rounded-md text-sm">%</span>
               </div>
@@ -331,7 +331,7 @@
                 type="number"
                 step="any"
                 placeholder="0.00"
-                class="w-full px-3 py-2 border rounded-md text-sm"
+                class="w-full px-3 py-2 border border-border rounded-md text-sm"
               >
             </div>
             <div>
@@ -343,7 +343,7 @@
                   type="number"
                   step="any"
                   placeholder="13"
-                  class="flex-1 px-3 py-2 border rounded-md text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded-md text-sm"
                 >
                 <span class="px-3 py-2 bg-muted rounded-md text-sm">%</span>
               </div>

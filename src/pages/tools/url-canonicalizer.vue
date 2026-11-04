@@ -15,7 +15,7 @@
           </div>
         </div>
 
-        <textarea v-model="inputText" placeholder="https://example.com/path?utm_source=google&utm_medium=cpc&amp;campaign=spring" class="w-full h-40 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm bg-card"></textarea>
+        <textarea v-model="inputText" placeholder="https://example.com/path?utm_source=google&utm_medium=cpc&amp;campaign=spring" class="w-full h-40 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm bg-card"></textarea>
 
         <div class="bg-muted p-4 rounded-lg">
           <h3 class="font-medium text-sm mb-3">标准化选项</h3>
@@ -128,7 +128,7 @@
     <div class="mt-8 bg-card border rounded-lg p-6">
       <h3 class="text-lg font-semibold mb-4">批量处理</h3>
       <div class="space-y-4">
-        <textarea v-model="bulkInput" placeholder="每行一个 URL，批量标准化多个链接&#10;https://example.com/page1?utm_source=google&#10;https://example.com/page2?fbclid=abc123" class="w-full h-32 p-4 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm bg-card"></textarea>
+        <textarea v-model="bulkInput" placeholder="每行一个 URL，批量标准化多个链接&#10;https://example.com/page1?utm_source=google&#10;https://example.com/page2?fbclid=abc123" class="w-full h-32 p-4 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm bg-card"></textarea>
         <div class="flex gap-2">
           <button @click="bulkCanonicalize" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity">批量标准化</button>
           <button v-if="bulkResults.length > 0" @click="copyBulkResults" class="px-4 py-2 bg-muted hover:bg-muted/80 rounded-lg transition-colors">

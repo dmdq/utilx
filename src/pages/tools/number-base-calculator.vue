@@ -34,7 +34,7 @@
               <textarea
                 v-model="inputNumber"
                 @input="convertFromInput"
-                class="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg font-mono text-sm"
                 rows="4"
                 :placeholder="`输入${bases.find(b => b.value === inputBase)?.name}数字`"
               ></textarea>
@@ -105,7 +105,7 @@
                   type="number"
                   min="1"
                   max="64"
-                  class="flex-1 px-3 py-2 border rounded text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded text-sm"
                   placeholder="位数"
                 />
                 <button @click="bitwiseShift('left')" class="px-3 py-2 bg-secondary text-secondary-foreground rounded text-sm hover:bg-secondary/80">
@@ -126,7 +126,7 @@
                   min="8"
                   max="64"
                   step="8"
-                  class="flex-1 px-3 py-2 border rounded text-sm"
+                  class="flex-1 px-3 py-2 border border-border rounded text-sm"
                   placeholder="位宽 (8, 16, 32, 64)"
                 />
                 <button @click="calculateTwosComplement" class="px-3 py-2 bg-secondary text-secondary-foreground rounded text-sm hover:bg-secondary/80">
@@ -174,7 +174,7 @@
               <textarea
                 v-model="asciiInput.text"
                 @input="convertTextToAscii"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 rows="3"
                 placeholder="输入文本"
               ></textarea>

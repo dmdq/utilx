@@ -88,7 +88,7 @@
             </div>
           </div>
           <label class="flex items-center gap-2 text-xs text-foreground cursor-pointer">
-            <input v-model="centerSquare" type="checkbox" class="w-4 h-4 rounded border-border accent-primary" />
+            <input v-model="centerSquare" type="checkbox" class="w-4 h-4 rounded border border-border accent-primary" />
             先居中裁方再切（建议，适合非方形原图）
           </label>
           <div>
@@ -99,7 +99,7 @@
               min="64"
               max="1024"
               step="16"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <p class="text-xs text-muted-foreground mt-1">微信头像建议 512；最大 1024</p>
           </div>

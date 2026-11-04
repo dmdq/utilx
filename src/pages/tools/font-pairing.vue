@@ -19,7 +19,7 @@
                 v-model="headingSearchQuery"
                 @input="filterHeadingFonts"
                 placeholder="搜索标题字体..."
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
               />
             </div>
             <div class="h-48 overflow-y-auto border rounded-lg p-3">
@@ -53,7 +53,7 @@
                 v-model="bodySearchQuery"
                 @input="filterBodyFonts"
                 placeholder="搜索正文字体..."
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
               />
             </div>
             <div class="h-48 overflow-y-auto border rounded-lg p-3">
@@ -114,7 +114,7 @@
               <input
                 type="text"
                 v-model="previewHeading"
-                class="w-full px-3 py-2 border rounded-lg mb-3"
+                class="w-full px-3 py-2 border border-border rounded-lg mb-3"
                 placeholder="输入标题文本"
               />
               <h1
@@ -130,7 +130,7 @@
               <label class="block text-sm font-medium mb-2">正文预览</label>
               <textarea
                 v-model="previewBody"
-                class="w-full px-3 py-2 border rounded-lg mb-3 h-24 resize-none"
+                class="w-full px-3 py-2 border border-border rounded-lg mb-3 h-24 resize-none"
                 placeholder="输入正文文本"
               ></textarea>
               <p
@@ -173,7 +173,7 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="block text-xs font-medium mb-1">字重</label>
-                <select v-model="headingFontWeight" class="w-full px-2 py-1 border rounded text-sm">
+                <select v-model="headingFontWeight" class="w-full px-2 py-1 border border-border rounded text-sm">
                   <option value="100">Thin</option>
                   <option value="300">Light</option>
                   <option value="400">Normal</option>
@@ -205,7 +205,7 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="block text-xs font-medium mb-1">字重</label>
-                <select v-model="bodyFontWeight" class="w-full px-2 py-1 border rounded text-sm">
+                <select v-model="bodyFontWeight" class="w-full px-2 py-1 border border-border rounded text-sm">
                   <option value="100">Thin</option>
                   <option value="300">Light</option>
                   <option value="400">Normal</option>
@@ -216,7 +216,7 @@
               </div>
               <div>
                 <label class="block text-xs font-medium mb-1">行高</label>
-                <select v-model="bodyLineHeight" class="w-full px-2 py-1 border rounded text-sm">
+                <select v-model="bodyLineHeight" class="w-full px-2 py-1 border border-border rounded text-sm">
                   <option value="1">1.0</option>
                   <option value="1.25">1.25</option>
                   <option value="1.5">1.5</option>
@@ -238,7 +238,7 @@
                 {{ getContrastText(headingReadability) }}
               </span>
             </div>
-            <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="w-full bg-muted rounded-full h-2">
               <div
                 class="h-2 rounded-full transition-all"
                 :class="getContrastBarClass(headingReadability)"
@@ -252,7 +252,7 @@
                 {{ getContrastText(bodyReadability) }}
               </span>
             </div>
-            <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="w-full bg-muted rounded-full h-2">
               <div
                 class="h-2 rounded-full transition-all"
                 :class="getContrastBarClass(bodyReadability)"

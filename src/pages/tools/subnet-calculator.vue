@@ -27,7 +27,7 @@
                     v-model="inputMode"
                     type="radio"
                     value="cidr"
-                    class="mr-2 border-border text-primary focus:ring-primary"
+                    class="mr-2 border border-border text-primary focus:ring-primary"
                   />
                   <span class="text-sm text-foreground">CIDR 表示法</span>
                 </label>
@@ -36,7 +36,7 @@
                     v-model="inputMode"
                     type="radio"
                     value="mask"
-                    class="mr-2 border-border text-primary focus:ring-primary"
+                    class="mr-2 border border-border text-primary focus:ring-primary"
                   />
                   <span class="text-sm text-foreground">IP + 子网掩码</span>
                 </label>
@@ -50,7 +50,7 @@
                 v-model="cidrInput"
                 type="text"
                 placeholder="192.168.1.0/24"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 @input="calculateFromCIDR"
               />
               <p class="mt-1 text-xs text-muted-foreground">例如: 192.168.1.0/24</p>
@@ -64,7 +64,7 @@
                   v-model="ipInput"
                   type="text"
                   placeholder="192.168.1.0"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div>
@@ -74,11 +74,11 @@
                     v-model="maskInput"
                     type="text"
                     placeholder="255.255.255.0"
-                    class="flex-1 px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="flex-1 px-3 py-2 bg-muted border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                   <select
                     v-model="maskInput"
-                    class="px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="px-3 py-2 bg-muted border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   >
                     <option value="">选择...</option>
                     <option v-for="(mask, prefix) in commonMasks" :key="prefix" :value="mask">
@@ -100,7 +100,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">快速示例</label>
               <select
                 @change="loadExample"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="">选择示例...</option>
                 <option value="home">家庭网络 (192.168.1.0/24)</option>
@@ -129,7 +129,7 @@
                   type="number"
                   min="2"
                   max="256"
-                  class="flex-1 px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="flex-1 px-3 py-2 bg-muted border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <span class="py-2 text-sm text-muted-foreground">个子网</span>
               </div>
@@ -177,7 +177,7 @@
                 v-model.number="vlsmHosts"
                 type="number"
                 placeholder="主机数量"
-                class="flex-1 px-3 py-2 bg-muted border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                class="flex-1 px-3 py-2 bg-muted border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm"
               />
               <button
                 @click="addVLSMSubnet"

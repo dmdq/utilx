@@ -39,7 +39,7 @@
             <select
               id="chunk-strategy"
               v-model="strategy"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg text-sm text-foreground"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg text-sm text-foreground"
             >
               <option value="recursive">递归切分 recursive（推荐）</option>
               <option value="fixed">固定长度 fixed（硬切）</option>
@@ -53,7 +53,7 @@
             <select
               id="chunk-max-level"
               v-model.number="maxLevel"
-              class="w-full px-3 py-2 bg-muted border border-border rounded-lg text-sm text-foreground"
+              class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg text-sm text-foreground"
             >
               <option :value="1">仅按 H1 切大段</option>
               <option :value="2">按 H1-H2 切大段</option>
@@ -72,7 +72,7 @@
                 min="100"
                 max="2000"
                 step="10"
-                class="w-24 px-2 py-1 bg-muted border border-border rounded-md text-sm text-right font-mono text-foreground"
+                class="w-24 px-2 py-1 bg-muted border border-border border-border rounded-md text-sm text-right font-mono text-foreground"
                 @change="clampChunkSize"
               >
             </div>
@@ -91,7 +91,7 @@
                 min="0"
                 :max="overlapLimit"
                 step="5"
-                class="w-24 px-2 py-1 bg-muted border border-border rounded-md text-sm text-right font-mono text-foreground"
+                class="w-24 px-2 py-1 bg-muted border border-border border-border rounded-md text-sm text-right font-mono text-foreground"
                 @change="clampOverlap"
               >
             </div>
@@ -154,7 +154,7 @@
             rows="14"
             spellcheck="false"
             placeholder="粘贴需要分块的文档（支持 Markdown / 纯文本 / 中英文混合），或点击下方「载入示例文档」快速体验……"
-            class="w-full px-3 py-2.5 bg-muted/40 border border-border rounded-lg text-sm font-mono leading-relaxed text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40 resize-y"
+            class="w-full px-3 py-2.5 bg-muted/40 border border-border border-border rounded-lg text-sm font-mono leading-relaxed text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40 resize-y"
           ></textarea>
           <p
             v-if="inputTruncated"

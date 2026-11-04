@@ -19,7 +19,7 @@
                   v-model.number="financialData.revenue"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="1000"
                 />
               </div>
@@ -29,7 +29,7 @@
                   v-model.number="financialData.cost"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="600"
                 />
               </div>
@@ -39,7 +39,7 @@
                   v-model.number="financialData.netProfit"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="120"
                 />
               </div>
@@ -49,7 +49,7 @@
                   v-model.number="financialData.totalAssets"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="2000"
                 />
               </div>
@@ -59,7 +59,7 @@
                   v-model.number="financialData.totalLiabilities"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="1200"
                 />
               </div>
@@ -69,7 +69,7 @@
                   v-model.number="financialData.equity"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="800"
                 />
               </div>
@@ -82,7 +82,7 @@
                   v-model.number="financialData.currentAssets"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="800"
                 />
               </div>
@@ -92,7 +92,7 @@
                   v-model.number="financialData.currentLiabilities"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="400"
                 />
               </div>
@@ -102,7 +102,7 @@
                   v-model.number="financialData.inventory"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="200"
                 />
               </div>
@@ -112,7 +112,7 @@
                   v-model.number="financialData.receivables"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="150"
                 />
               </div>
@@ -130,7 +130,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">选择行业</label>
-              <select v-model="selectedIndustry" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="selectedIndustry" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="manufacturing">制造业</option>
                 <option value="technology">科技行业</option>
                 <option value="retail">零售业</option>

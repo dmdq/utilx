@@ -20,7 +20,7 @@
           </h3>
           <textarea
             v-model="scriptText"
-            class="w-full h-48 px-3 py-2 text-sm bg-background border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            class="w-full h-48 px-3 py-2 text-sm bg-background border border-border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             placeholder="在此输入你的提词内容...&#10;&#10;支持实时编辑，开始滚动后将自动隐藏编辑器。&#10;&#10;快捷键：&#10;空格键 - 暂停/继续&#10;ESC - 退出全屏&#10;↑/↓ - 调整速度"
           ></textarea>
           <div class="flex gap-2 mt-3">

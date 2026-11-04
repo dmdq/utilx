@@ -36,7 +36,7 @@
           <input
             v-model="ssid"
             type="text"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="例如：Home-WiFi"
             @input="generate"
           />
@@ -49,7 +49,7 @@
               v-model="password"
               :type="showPassword ? 'text' : 'password'"
               :disabled="encryption === 'nopass'"
-              class="w-full px-3 py-2.5 pr-11 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-50 disabled:cursor-not-allowed"
+              class="w-full px-3 py-2.5 pr-11 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-50 disabled:cursor-not-allowed"
               placeholder="无加密时可留空"
               @input="generate"
             />

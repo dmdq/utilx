@@ -45,7 +45,7 @@
         </h2>
         <textarea
           v-model="logText"
-          class="w-full h-[28rem] px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+          class="w-full h-[28rem] px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-xs font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
           placeholder="粘贴多行 Nginx access.log，例如：&#10;192.168.1.10 - - [10/Oct/2023:13:55:36 +0800] &quot;GET /index.html HTTP/1.1&quot; 200 612 &quot;-&quot; &quot;Mozilla/5.0 ...&quot;"
           spellcheck="false"
         ></textarea>

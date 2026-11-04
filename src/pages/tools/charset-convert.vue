@@ -16,7 +16,7 @@
         <!-- 输入编码选择 -->
         <div class="bg-card   rounded-lg p-6">
           <h2 class="text-lg font-semibold mb-4">源编码格式</h2>
-          <select v-model="sourceEncoding" class="w-full px-3 py-2 border rounded-md text-sm">
+          <select v-model="sourceEncoding" class="w-full px-3 py-2 border border-border rounded-md text-sm">
             <option value="utf-8">UTF-8</option>
             <option value="gbk">GBK</option>
             <option value="gb2312">GB2312</option>
@@ -53,7 +53,7 @@
           <textarea
             v-model="inputText"
             placeholder="输入要转换的文本..."
-            class="w-full h-80 px-4 py-3 border rounded-md text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-80 px-4 py-3 border border-border rounded-md text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
 
           <!-- 文件上传 -->
@@ -89,7 +89,7 @@
         <div class="bg-card   rounded-lg p-6">
           <h2 class="text-lg font-semibold mb-4">目标编码格式</h2>
           <div class="flex gap-2">
-            <select v-model="targetEncoding" class="flex-1 px-3 py-2 border rounded-md text-sm">
+            <select v-model="targetEncoding" class="flex-1 px-3 py-2 border border-border rounded-md text-sm">
               <option value="utf-8">UTF-8</option>
               <option value="gbk">GBK</option>
               <option value="gb2312">GB2312</option>

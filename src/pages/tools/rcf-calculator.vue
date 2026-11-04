@@ -61,7 +61,7 @@
             type="number"
             step="10"
             min="0"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
             placeholder="例如 12000"
           />
         </div>
@@ -75,7 +75,7 @@
             type="number"
             step="100"
             min="0"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
             placeholder="例如 10000"
           />
         </div>
@@ -89,7 +89,7 @@
             @input="onRadiusInput($event.target.value)"
             type="number"
             step="0.1"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
             placeholder="例如 4.8"
           />
         </div>
@@ -101,7 +101,7 @@
             id="rcf-preset-select"
             v-model="presetSel"
             @change="applyPresetChoice"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option value="">— 选择后自动填入半径 —</option>
             <option v-for="p in ROTOR_PRESETS" :key="p.id" :value="p.id">{{ p.name }} ≈ {{ p.radiusCm }} cm</option>

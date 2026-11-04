@@ -45,7 +45,7 @@
               v-model="initials"
               type="text"
               maxlength="2"
-              class="w-full p-2 border rounded-lg text-sm"
+              class="w-full p-2 border border-border rounded-lg text-sm"
               placeholder="最多2个字符"
               @input="updatePreview"
             >
@@ -70,7 +70,7 @@
 
           <div>
             <label class="text-xs text-muted-foreground mb-1 block">图案样式</label>
-            <select v-model="patternStyle" @change="updatePreview" class="w-full p-2 border rounded text-sm">
+            <select v-model="patternStyle" @change="updatePreview" class="w-full p-2 border border-border rounded text-sm">
               <option value="circles">圆形</option>
               <option value="squares">方形</option>
               <option value="triangles">三角形</option>
@@ -101,7 +101,7 @@
 
           <div>
             <label class="text-xs text-muted-foreground mb-1 block">渐变方向</label>
-            <select v-model="gradientDirection" @change="updatePreview" class="w-full p-2 border rounded text-sm">
+            <select v-model="gradientDirection" @change="updatePreview" class="w-full p-2 border border-border rounded text-sm">
               <option value="diagonal">对角线</option>
               <option value="horizontal">水平</option>
               <option value="vertical">垂直</option>
@@ -128,7 +128,7 @@
                   v-model="primaryColor"
                   type="text"
                   @input="updatePreview"
-                  class="flex-1 p-2 border rounded text-sm font-mono"
+                  class="flex-1 p-2 border border-border rounded text-sm font-mono"
                 >
               </div>
             </div>
@@ -145,7 +145,7 @@
                   v-model="secondaryColor"
                   type="text"
                   @input="updatePreview"
-                  class="flex-1 p-2 border rounded text-sm font-mono"
+                  class="flex-1 p-2 border border-border rounded text-sm font-mono"
                 >
               </div>
             </div>
@@ -164,7 +164,7 @@
                 v-model="textColor"
                 type="text"
                 @input="updatePreview"
-                class="flex-1 p-2 border rounded text-sm font-mono"
+                class="flex-1 p-2 border border-border rounded text-sm font-mono"
               >
             </div>
           </div>

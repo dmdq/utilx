@@ -19,7 +19,7 @@
                 type="text"
                 placeholder="2001:db8::/32"
                 @input="calculateRange"
-                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono"
+                class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono"
               >
             </div>
 
@@ -95,7 +95,7 @@
                 v-model="slaac.prefix"
                 type="text"
                 placeholder="2001:db8::/64"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm"
               >
             </div>
 
@@ -106,7 +106,7 @@
                 type="text"
                 placeholder="00:11:22:33:44:55"
                 @input="generateSLAAC"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm"
               >
             </div>
 
@@ -129,7 +129,7 @@
                 type="text"
                 placeholder="00:11:22:33:44:55"
                 @input="convertEUI64"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm"
               >
             </div>
 
@@ -157,7 +157,7 @@
                 v-model="subnetting.parentPrefix"
                 type="text"
                 placeholder="2001:db8::/48"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm"
               >
             </div>
 
@@ -169,7 +169,7 @@
                 min="49"
                 max="128"
                 placeholder="64"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
               >
             </div>
 
@@ -181,7 +181,7 @@
                 min="1"
                 max="65536"
                 placeholder="4"
-                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+                class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
               >
             </div>
 

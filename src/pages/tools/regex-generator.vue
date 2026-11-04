@@ -24,7 +24,7 @@
               <select
                 v-model="config.mode"
                 @change="updateRegex"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="exact">精确匹配</option>
                 <option value="contains">包含匹配</option>
@@ -129,7 +129,7 @@
                 type="text"
                 placeholder="输入自定义字符"
                 @input="updateRegex"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
           </div>
@@ -148,7 +148,7 @@
               <select
                 v-model="config.quantifier.type"
                 @change="updateRegex"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="exact">精确次数</option>
                 <option value="atleast">至少n次</option>
@@ -167,7 +167,7 @@
                 type="number"
                 min="1"
                 @input="updateRegex"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -179,7 +179,7 @@
                 type="number"
                 min="0"
                 @input="updateRegex"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -193,7 +193,7 @@
                     type="number"
                     min="0"
                     @input="updateRegex"
-                    class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
                 <div class="flex-1">
@@ -203,7 +203,7 @@
                     type="number"
                     min="0"
                     @input="updateRegex"
-                    class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
               </div>
@@ -326,7 +326,7 @@
               <textarea
                 v-model="testText"
                 placeholder="输入要测试的文本..."
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                 rows="4"
                 @input="runTest"
               ></textarea>

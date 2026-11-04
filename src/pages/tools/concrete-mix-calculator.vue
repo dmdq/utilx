@@ -51,20 +51,20 @@
           <div v-show="mode === 'dim'" class="grid grid-cols-3 gap-2">
             <label class="block">
               <span class="text-xs text-muted-foreground">长 (m)</span>
-              <input v-model="len" type="number" min="0" step="0.01" class="mt-1 w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground" placeholder="10" />
+              <input v-model="len" type="number" min="0" step="0.01" class="mt-1 w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground" placeholder="10" />
             </label>
             <label class="block">
               <span class="text-xs text-muted-foreground">宽 (m)</span>
-              <input v-model="width" type="number" min="0" step="0.01" class="mt-1 w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground" placeholder="4" />
+              <input v-model="width" type="number" min="0" step="0.01" class="mt-1 w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground" placeholder="4" />
             </label>
             <label class="block">
               <span class="text-xs text-muted-foreground">厚 (m)</span>
-              <input v-model="thick" type="number" min="0" step="0.01" class="mt-1 w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground" placeholder="0.12" />
+              <input v-model="thick" type="number" min="0" step="0.01" class="mt-1 w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground" placeholder="0.12" />
             </label>
           </div>
           <label v-show="mode === 'vol'" class="block">
             <span class="text-xs text-muted-foreground">方量 (m³)</span>
-            <input v-model="volInput" type="number" min="0" step="0.001" class="mt-1 w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground" placeholder="1.5" />
+            <input v-model="volInput" type="number" min="0" step="0.001" class="mt-1 w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground" placeholder="1.5" />
           </label>
 
           <div class="mt-3 bg-primary/10 rounded-lg p-3 text-center">
@@ -76,7 +76,7 @@
         <!-- 强度等级 -->
         <label class="block">
           <span class="text-sm font-medium text-foreground">强度等级</span>
-          <select v-model="grade" class="mt-1 w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground">
+          <select v-model="grade" class="mt-1 w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground">
             <option v-for="g in gradeOptions" :key="g" :value="g">{{ g }}</option>
           </select>
           <span class="block text-[11px] text-muted-foreground mt-1">{{ gradeHint }}</span>
@@ -207,23 +207,23 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
               <label class="block">
                 <span class="text-[11px] text-muted-foreground">商砼方价 (元/m³)</span>
-                <input v-model="readyPrice" type="number" min="0" step="10" class="mt-1 w-full px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground" />
+                <input v-model="readyPrice" type="number" min="0" step="10" class="mt-1 w-full px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground" />
               </label>
               <label class="block">
                 <span class="text-[11px] text-muted-foreground">自拌人工折算 (元/m³)</span>
-                <input v-model="laborPrice" type="number" min="0" step="5" class="mt-1 w-full px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground" />
+                <input v-model="laborPrice" type="number" min="0" step="5" class="mt-1 w-full px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground" />
               </label>
               <label class="block">
                 <span class="text-[11px] text-muted-foreground">水泥 (元/袋)</span>
-                <input v-model="cementBagPrice" type="number" min="0" step="1" class="mt-1 w-full px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground" />
+                <input v-model="cementBagPrice" type="number" min="0" step="1" class="mt-1 w-full px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground" />
               </label>
               <label class="block">
                 <span class="text-[11px] text-muted-foreground">砂 (元/吨)</span>
-                <input v-model="sandTonPrice" type="number" min="0" step="5" class="mt-1 w-full px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground" />
+                <input v-model="sandTonPrice" type="number" min="0" step="5" class="mt-1 w-full px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground" />
               </label>
               <label class="block">
                 <span class="text-[11px] text-muted-foreground">石子 (元/吨)</span>
-                <input v-model="stoneTonPrice" type="number" min="0" step="5" class="mt-1 w-full px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm text-foreground" />
+                <input v-model="stoneTonPrice" type="number" min="0" step="5" class="mt-1 w-full px-2.5 py-1.5 bg-background border border-border border-border rounded-lg text-sm text-foreground" />
               </label>
             </div>
             <div class="grid grid-cols-2 gap-2 text-center">
@@ -255,11 +255,11 @@
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 items-end">
         <label class="block">
           <span class="text-xs text-muted-foreground">一车商砼方量 (m³)</span>
-          <input v-model="truckVol" type="number" min="0" step="0.5" class="mt-1 w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground" />
+          <input v-model="truckVol" type="number" min="0" step="0.5" class="mt-1 w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground" />
         </label>
         <label class="block">
           <span class="text-xs text-muted-foreground">地面面积 (㎡)</span>
-          <input v-model="floorArea" type="number" min="0" step="1" class="mt-1 w-full px-2.5 py-2 bg-background border border-border rounded-lg text-sm text-foreground" />
+          <input v-model="floorArea" type="number" min="0" step="1" class="mt-1 w-full px-2.5 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground" />
         </label>
         <div class="bg-primary/10 rounded-lg p-3 text-center">
           <p class="text-xs text-muted-foreground mb-1">可浇筑厚度</p>

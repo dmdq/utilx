@@ -124,7 +124,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">选择签名页码</label>
               <select
                 v-model.number="pageSelect"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <option v-for="t in thumbs" :key="t.pageNo" :value="t.pageNo">第 {{ t.pageNo }} 页</option>
               </select>

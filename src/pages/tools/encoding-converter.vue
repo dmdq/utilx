@@ -15,7 +15,7 @@
             <div>
               <textarea
                 v-model="inputText"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                 rows="8"
                 placeholder="请输入要转换的文本..."
                 @input="convertText"
@@ -86,7 +86,7 @@
               <select
                 v-model="selectedEncoding"
                 @change="convertText"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="utf-8">UTF-8</option>
                 <option value="gbk">GBK</option>

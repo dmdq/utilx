@@ -35,7 +35,7 @@
             min="0"
             step="10000"
             placeholder="如 3000000"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">≈ {{ formatMoney(cashNum) }}</p>
         </div>
@@ -50,7 +50,7 @@
             min="0"
             step="10000"
             placeholder="如 450000"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">≈ {{ formatMoney(expenseNum) }}</p>
         </div>
@@ -65,7 +65,7 @@
             min="0"
             step="10000"
             placeholder="如 150000"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">≈ {{ formatMoney(revenueNum) }}</p>
         </div>
@@ -100,7 +100,7 @@
                   min="-20"
                   max="20"
                   step="0.5"
-                  class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
                 />
                 <p class="text-[10px] text-muted-foreground mt-1">范围 -20 ~ 20，超出自动夹紧</p>
               </div>
@@ -113,7 +113,7 @@
                   min="-20"
                   max="50"
                   step="0.5"
-                  class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+                  class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
                 />
                 <p class="text-[10px] text-muted-foreground mt-1">范围 -20 ~ 50，超出自动夹紧</p>
               </div>

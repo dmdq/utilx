@@ -28,7 +28,7 @@
             <input
               v-model="query"
               type="text"
-              class="w-full pl-9 pr-8 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full pl-9 pr-8 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="搜索中文名/符号/序数，如 铁、Fe、26"
             />
             <button

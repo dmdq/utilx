@@ -26,7 +26,7 @@
           </h2>
           <textarea
             v-model="regexInput"
-            class="w-full h-28 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-28 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="/(a+)+$/ 或裸写：^(a|aa)+$"
             spellcheck="false"
           ></textarea>

@@ -11,7 +11,7 @@
       <div class="mb-4">
         <div class="flex items-center gap-2">
           <Search class="w-4 h-4 text-muted-foreground" />
-          <input v-model="searchQuery" type="text" placeholder="搜索图标..." class="flex-1 px-4 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+          <input v-model="searchQuery" type="text" placeholder="搜索图标..." class="flex-1 px-4 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
         </div>
       </div>
 

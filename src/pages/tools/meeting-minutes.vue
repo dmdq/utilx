@@ -22,7 +22,7 @@
               <input
                 v-model="meeting.title"
                 type="text"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="输入会议标题"
               />
             </div>
@@ -32,7 +32,7 @@
                 <input
                   v-model="meeting.date"
                   type="date"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div>
@@ -40,7 +40,7 @@
                 <input
                   v-model="meeting.time"
                   type="time"
-                  class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
             </div>
@@ -49,7 +49,7 @@
               <input
                 v-model="meeting.location"
                 type="text"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="输入会议地点"
               />
             </div>
@@ -67,7 +67,7 @@
               v-model="newAttendee"
               @keyup.enter="addAttendee"
               type="text"
-              class="flex-1 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="flex-1 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="输入姓名"
             />
             <button
@@ -106,7 +106,7 @@
               v-model="newAgendaItem"
               @keyup.enter="addAgendaItem"
               type="text"
-              class="flex-1 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="flex-1 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="输入议程项"
             />
             <button
@@ -157,23 +157,23 @@
             <input
               v-model="newActionItem.task"
               type="text"
-              class="col-span-2 px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="col-span-2 px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="任务描述"
             />
             <input
               v-model="newActionItem.assignee"
               type="text"
-              class="px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="负责人"
             />
             <input
               v-model="newActionItem.dueDate"
               type="date"
-              class="px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <select
               v-model="newActionItem.priority"
-              class="px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              class="px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="low">低优先级</option>
               <option value="medium">中优先级</option>
@@ -240,7 +240,7 @@
           </h2>
           <textarea
             v-model="meeting.notes"
-            class="w-full h-64 px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+            class="w-full h-64 px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
             placeholder="记录会议讨论要点..."
           ></textarea>
         </div>

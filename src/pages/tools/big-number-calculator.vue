@@ -13,11 +13,11 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">数字 A</label>
-            <input v-model="numA" type="text" class="w-full px-4 py-2 border border-border rounded bg-muted" placeholder="输入大整数">
+            <input v-model="numA" type="text" class="w-full px-4 py-2 border border-border border-border rounded bg-muted" placeholder="输入大整数">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">数字 B</label>
-            <input v-model="numB" type="text" class="w-full px-4 py-2 border border-border rounded bg-muted" placeholder="输入大整数">
+            <input v-model="numB" type="text" class="w-full px-4 py-2 border border-border border-border rounded bg-muted" placeholder="输入大整数">
           </div>
           <div class="flex gap-2">
             <button @click="calculateBigNumber('+')" class="flex-1 px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">加</button>
@@ -37,7 +37,7 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">阶乘 n!</label>
-            <input v-model.number="factorialN" type="number" min="0" max="500" class="w-full px-4 py-2 border border-border rounded bg-muted">
+            <input v-model.number="factorialN" type="number" min="0" max="500" class="w-full px-4 py-2 border border-border border-border rounded bg-muted">
           </div>
           <button @click="calculateFactorial" class="w-full px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">计算阶乘</button>
           <div v-if="factorialResult" class="p-4 bg-purple-500/10 rounded-lg">

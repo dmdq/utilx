@@ -147,7 +147,7 @@
         <div v-if="fileInfo">
           <canvas ref="waveCanvas" class="w-full h-36 bg-muted rounded-lg block"></canvas>
           <div class="flex justify-between text-xs text-muted-foreground mt-1.5">
-            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-slate-400 inline-block"></span>原始波形</span>
+            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-muted inline-block"></span>原始波形</span>
             <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-emerald-500 inline-block"></span>处理后波形</span>
           </div>
         </div>
@@ -157,7 +157,7 @@
 
         <template v-if="processedBuffer">
           <label class="flex items-center gap-2 text-sm text-foreground">
-            <input v-model="alsoMp3" type="checkbox" class="w-4 h-4 rounded border-border" />
+            <input v-model="alsoMp3" type="checkbox" class="w-4 h-4 rounded border border-border" />
             同时导出 MP3（192kbps，编码稍慢）
           </label>
           <button

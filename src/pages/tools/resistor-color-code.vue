@@ -68,7 +68,7 @@
                 <i class="w-5 h-5 flex-shrink-0 rounded-full inline-block border border-black/20" :style="{ backgroundColor: colorHex(f[def.key]) }"></i>
                 <select
                   v-model="f[def.key]"
-                  class="flex-1 min-w-0 px-2.5 py-1.5 rounded-md border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="flex-1 min-w-0 px-2.5 py-1.5 rounded-md border border-border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option v-for="opt in def.options" :key="opt.id" :value="opt.id">{{ opt.label }}</option>
                 </select>
@@ -98,7 +98,7 @@
                 autocomplete="off"
                 spellcheck="false"
                 placeholder="支持 4k7 / 4.7k / 4700 / 4.7kΩ / 4M7 / 0R47"
-                class="w-full px-3 py-2 rounded-md border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 rounded-md border border-border border-border bg-background text-sm font-mono text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               >
               <p class="text-[10px] font-mono mt-1 leading-tight" :class="reverseParsed.error && reverseParsed.error !== '待输入' ? 'text-red-500' : 'text-muted-foreground'">
                 {{ reverseParsed.ohms === null
@@ -113,7 +113,7 @@
                 <i class="w-5 h-5 flex-shrink-0 rounded-full inline-block border border-black/20" :style="{ backgroundColor: colorHex(rTol) }"></i>
                 <select
                   v-model="rTol"
-                  class="flex-1 min-w-0 px-2.5 py-1.5 rounded-md border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="flex-1 min-w-0 px-2.5 py-1.5 rounded-md border border-border border-border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <option v-for="opt in rTolOptions" :key="opt.id" :value="opt.id">{{ opt.label }}</option>
                 </select>

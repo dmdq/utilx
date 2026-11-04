@@ -28,7 +28,7 @@
             v-model="searchQuery"
             type="text"
             placeholder="输入端口号或服务名（如 3306 / mysql）"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
           />
 
           <div class="mt-4">
@@ -74,7 +74,7 @@
               min="0"
               max="65535"
               placeholder="输入端口号"
-              class="flex-1 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
               @keyup.enter="jumpToPort"
             />
             <button

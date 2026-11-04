@@ -32,7 +32,7 @@
             <select
               v-model="scene"
               @change="applyScenePreset"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <option v-for="p in SCENE_PRESETS" :key="p.id" :value="p.id">{{ p.name }}</option>
             </select>
@@ -40,37 +40,37 @@
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">主标题（大字）</label>
             <input v-model="form.title" type="text" maxlength="30" placeholder="周年庆大促"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">副标题</label>
             <input v-model="form.subtitle" type="text" maxlength="40" placeholder="全场 5 折起 · 一年仅一次"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div v-for="hf in highlightFields" :key="hf.key">
             <label class="text-xs font-medium text-muted-foreground mb-1 block">{{ hf.label }}（≤{{ HIGHLIGHT_MAX_LEN }} 字，自动加 • 前缀）</label>
             <input v-model="form[hf.key]" type="text" :maxlength="HIGHLIGHT_MAX_LEN" :placeholder="hf.placeholder"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">时间</label>
             <input v-model="form.time" type="text" maxlength="30" placeholder="11 月 8 日 - 11 月 11 日"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">地点</label>
             <input v-model="form.place" type="text" maxlength="40" placeholder="幸福广场 1 号店 · 全楼层"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">行动语（海报底部号召语）</label>
             <input v-model="form.cta" type="text" maxlength="16" placeholder="扫码咨询 / 扫码报名"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">联系方式（选填）</label>
             <input v-model="form.contact" type="text" maxlength="40" placeholder="电话 138 0000 0000"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40" />
           </div>
         </div>
 
@@ -150,7 +150,7 @@
           <div>
             <label class="text-xs font-medium text-muted-foreground mb-1 block">粘贴链接 / 文本，生成后贴在海报右下角</label>
             <input v-model="qrText" type="text" maxlength="300" placeholder="https://example.com 或任意文本"
-              class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
               @keyup.enter="generateQr" />
           </div>
           <div class="flex items-center gap-2">

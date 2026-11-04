@@ -30,7 +30,7 @@
               <input
                 v-model="wfName"
                 type="text"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="CI"
               >
             </div>
@@ -40,7 +40,7 @@
                 v-model="wfFile"
                 type="text"
                 spellcheck="false"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="ci.yml"
               >
             </div>
@@ -69,7 +69,7 @@
               v-model="pushBranches"
               type="text"
               spellcheck="false"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="main, develop"
             >
           </div>
@@ -79,7 +79,7 @@
               v-model="prBranches"
               type="text"
               spellcheck="false"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="main"
             >
           </div>
@@ -89,7 +89,7 @@
               v-model="tagPattern"
               type="text"
               spellcheck="false"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="v*"
             >
           </div>
@@ -99,12 +99,12 @@
               v-model="cronExpr"
               type="text"
               spellcheck="false"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="0 2 * * *"
             >
           </div>
           <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-            <input v-model="allowDispatch" type="checkbox" class="w-4 h-4 rounded border-border" >
+            <input v-model="allowDispatch" type="checkbox" class="w-4 h-4 rounded border border-border" >
             附加 workflow_dispatch（允许在网页手动触发）
           </label>
         </div>
@@ -128,7 +128,7 @@
               v-model="languageVersion"
               type="text"
               spellcheck="false"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             >
           </div>
         </div>
@@ -143,7 +143,7 @@
               :key="s.key"
               class="flex items-center gap-2 p-2.5 border border-border rounded-lg cursor-pointer hover:bg-muted/50 transition-colors text-sm text-foreground"
             >
-              <input v-model="steps[s.key]" type="checkbox" class="w-4 h-4 rounded border-border" >
+              <input v-model="steps[s.key]" type="checkbox" class="w-4 h-4 rounded border border-border" >
               {{ s.label }}
             </label>
           </div>
@@ -153,7 +153,7 @@
               v-model="testCmd"
               type="text"
               spellcheck="false"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             >
           </div>
         </div>

@@ -28,7 +28,7 @@
             v-model="searchQuery"
             type="text"
             placeholder="输入状态码（如 404）或关键词（如 超时、redirect）"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
           />
 
           <div class="mt-4">

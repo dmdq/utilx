@@ -71,7 +71,7 @@
         </div>
         <textarea
           v-model="inputMarkdown"
-          class="flex-1 w-full min-h-[400px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[400px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="在此输入Markdown文本..."
           @keydown.ctrl.enter="convert"
           @keydown.meta.enter="convert"

@@ -33,7 +33,7 @@
               v-model="scheduleTitle"
               @change="persist()"
               type="text"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="如：三(2)班 课程表"
             >
           </div>
@@ -77,7 +77,7 @@
                 v-model="row.label"
                 @change="persist()"
                 type="text"
-                class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
+                class="flex-1 min-w-0 px-2.5 py-1.5 bg-background border border-border border-input rounded-lg text-foreground text-xs focus:outline-none focus:ring-2 focus:ring-ring"
               >
               <button
                 @click="moveRow(i, -1)"
@@ -143,7 +143,7 @@
               v-model="newSubject"
               @keyup.enter="addSubject"
               type="text"
-              class="flex-1 min-w-0 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 min-w-0 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="新科目名，如：信息科技"
             >
             <button

@@ -16,7 +16,7 @@
         <div class="bg-card border border-border rounded-lg p-6 space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">内容</label>
-            <textarea v-model="content" rows="3" class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none" placeholder="输入URL或文本..."></textarea>
+            <textarea v-model="content" rows="3" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none" placeholder="输入URL或文本..."></textarea>
             <p class="text-xs text-muted-foreground mt-1">支持网址、文本、联系方式等多种内容</p>
           </div>
 
@@ -24,15 +24,15 @@
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">前景色</label>
               <div class="flex items-center gap-2">
-                <input v-model="foregroundColor" type="color" class="w-12 h-10 rounded cursor-pointer border border-border">
-                <input v-model="foregroundColor" type="text" class="flex-1 px-3 py-2 bg-muted border border-border rounded-lg text-sm" placeholder="#000000">
+                <input v-model="foregroundColor" type="color" class="w-12 h-10 rounded cursor-pointer border border-border border-border">
+                <input v-model="foregroundColor" type="text" class="flex-1 px-3 py-2 bg-muted border border-border border-border rounded-lg text-sm" placeholder="#000000">
               </div>
             </div>
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">背景色</label>
               <div class="flex items-center gap-2">
-                <input v-model="backgroundColor" type="color" class="w-12 h-10 rounded cursor-pointer border border-border">
-                <input v-model="backgroundColor" type="text" class="flex-1 px-3 py-2 bg-muted border border-border rounded-lg text-sm" placeholder="#FFFFFF">
+                <input v-model="backgroundColor" type="color" class="w-12 h-10 rounded cursor-pointer border border-border border-border">
+                <input v-model="backgroundColor" type="text" class="flex-1 px-3 py-2 bg-muted border border-border border-border rounded-lg text-sm" placeholder="#FFFFFF">
               </div>
             </div>
           </div>

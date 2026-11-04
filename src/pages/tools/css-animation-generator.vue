@@ -17,7 +17,7 @@
               <input
                 type="text"
                 v-model="animationName"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 placeholder="myAnimation"
               />
             </div>
@@ -93,7 +93,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">动画方向</label>
-              <select v-model="direction" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="direction" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="normal">正常</option>
                 <option value="reverse">反向</option>
                 <option value="alternate">交替</option>
@@ -128,7 +128,7 @@
                     v-model.number="keyframe.position"
                     min="0"
                     max="100"
-                    class="w-16 px-2 py-1 border rounded text-sm"
+                    class="w-16 px-2 py-1 border border-border rounded text-sm"
                   />
                   <span class="text-sm">%</span>
                 </div>
@@ -147,7 +147,7 @@
                   <input
                     type="number"
                     v-model.number="keyframe.transform.translateX"
-                    class="w-full px-2 py-1 border rounded text-sm"
+                    class="w-full px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div>
@@ -155,7 +155,7 @@
                   <input
                     type="number"
                     v-model.number="keyframe.transform.translateY"
-                    class="w-full px-2 py-1 border rounded text-sm"
+                    class="w-full px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div>
@@ -165,7 +165,7 @@
                     v-model.number="keyframe.transform.scale"
                     min="0"
                     step="0.1"
-                    class="w-full px-2 py-1 border rounded text-sm"
+                    class="w-full px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div>
@@ -173,7 +173,7 @@
                   <input
                     type="number"
                     v-model.number="keyframe.transform.rotate"
-                    class="w-full px-2 py-1 border rounded text-sm"
+                    class="w-full px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div>
@@ -184,7 +184,7 @@
                     min="0"
                     max="1"
                     step="0.1"
-                    class="w-full px-2 py-1 border rounded text-sm"
+                    class="w-full px-2 py-1 border border-border rounded text-sm"
                   />
                 </div>
                 <div>
@@ -192,7 +192,7 @@
                   <input
                     type="color"
                     v-model="keyframe.backgroundColor"
-                    class="w-full h-8 border rounded cursor-pointer"
+                    class="w-full h-8 border border-border rounded cursor-pointer"
                   />
                 </div>
               </div>

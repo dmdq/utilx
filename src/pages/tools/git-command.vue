@@ -46,7 +46,7 @@
                 v-model="config.repoName"
                 type="text"
                 placeholder="my-project"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div class="flex items-center gap-3">
@@ -68,7 +68,7 @@
                 v-model="config.repoUrl"
                 type="text"
                 placeholder="https://github.com/user/repo.git"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
@@ -77,7 +77,7 @@
                 v-model="config.targetDir"
                 type="text"
                 placeholder="my-project"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div class="flex items-center gap-3">
@@ -98,12 +98,12 @@
               <textarea
                 v-model="config.commitMessage"
                 placeholder="Fix bug in user authentication"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm h-24 resize-none"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm h-24 resize-none"
               ></textarea>
             </div>
             <div>
               <label class="text-sm font-medium">添加的文件</label>
-              <select v-model="config.addOption" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.addOption" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="all">添加所有更改 (git add .)</option>
                 <option value="staged">仅暂存的文件</option>
                 <option value="specific">指定文件</option>
@@ -114,7 +114,7 @@
                 v-model="config.specificFiles"
                 type="text"
                 placeholder="file1.js file2.css"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div class="flex items-center gap-3">
@@ -132,7 +132,7 @@
           <div v-if="selectedCategory === 'branch'" class="space-y-4">
             <div>
               <label class="text-sm font-medium">操作</label>
-              <select v-model="config.branchAction" class="mt-2 w-full px-3 py-2 border rounded-md text-sm">
+              <select v-model="config.branchAction" class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm">
                 <option value="create">创建新分支</option>
                 <option value="switch">切换分支</option>
                 <option value="create-switch">创建并切换</option>
@@ -146,7 +146,7 @@
                 v-model="config.branchName"
                 type="text"
                 placeholder="feature/new-feature"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div v-if="config.branchAction === 'delete'" class="flex items-center gap-3">
@@ -168,7 +168,7 @@
                 v-model="config.remote"
                 type="text"
                 placeholder="origin"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
@@ -177,7 +177,7 @@
                 v-model="config.branch"
                 type="text"
                 placeholder="main"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div class="flex items-center gap-3">
@@ -208,7 +208,7 @@
                 v-model="config.remote"
                 type="text"
                 placeholder="origin"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div>
@@ -217,7 +217,7 @@
                 v-model="config.branch"
                 type="text"
                 placeholder="main"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div class="flex items-center gap-3">
@@ -239,7 +239,7 @@
                 v-model="config.sourceBranch"
                 type="text"
                 placeholder="feature-branch"
-                class="mt-2 w-full px-3 py-2 border rounded-md text-sm"
+                class="mt-2 w-full px-3 py-2 border border-border rounded-md text-sm"
               />
             </div>
             <div class="flex items-center gap-3">

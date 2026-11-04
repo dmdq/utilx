@@ -48,7 +48,7 @@
           <textarea
             v-model="essayText"
             rows="8"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             placeholder="粘贴作文正文，中文按字符、英文按单词计数……"
           ></textarea>
           <button
@@ -64,7 +64,7 @@
             type="number"
             min="0"
             step="1"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
 
@@ -72,7 +72,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">稿纸规格</label>
           <select
             v-model="paperSpec"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option value="400">400 格 / 页（20 × 20）</option>
             <option value="300">300 格 / 页（20 × 15）</option>
@@ -88,7 +88,7 @@
                 min="1"
                 max="40"
                 step="1"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -99,7 +99,7 @@
                 min="1"
                 max="40"
                 step="1"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>
@@ -123,16 +123,16 @@
             type="number"
             min="0"
             step="50"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
 
         <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer">
-          <input v-model="countPunctuation" type="checkbox" class="w-4 h-4 rounded border-border" />
+          <input v-model="countPunctuation" type="checkbox" class="w-4 h-4 rounded border border-border" />
           标点占格计入字数（考试惯例：计入）
         </label>
         <label class="flex items-center gap-2 text-sm text-foreground cursor-pointer no-print">
-          <input v-model="markFilled" type="checkbox" class="w-4 h-4 rounded border-border" />
+          <input v-model="markFilled" type="checkbox" class="w-4 h-4 rounded border border-border" />
           方格纸预览中标记已填字
         </label>
 

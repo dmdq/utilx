@@ -39,7 +39,7 @@
 
           <textarea
             v-model="inputText"
-            class="w-full h-40 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+            class="w-full h-40 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
             :placeholder="mode === 'encode' ? '输入要编码的文本（支持中文）' : '粘贴 Base85/Ascii85 编码文本'"
             spellcheck="false"
           ></textarea>
@@ -125,7 +125,7 @@
               v-if="outputText && !errorMsg"
               :value="outputText"
               readonly
-              class="w-full h-80 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+              class="w-full h-80 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
             <div v-else-if="errorMsg" class="py-16 text-center">

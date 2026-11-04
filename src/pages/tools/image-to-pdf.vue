@@ -110,7 +110,7 @@
             <!-- 页面大小 -->
             <div>
               <label class="text-sm font-medium">页面大小</label>
-              <select v-model="pdfSettings.pageSize" class="mt-2 w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+              <select v-model="pdfSettings.pageSize" class="mt-2 w-full px-3 py-2 border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
                 <option value="a4">A4 (210 x 297 mm)</option>
                 <option value="a3">A3 (297 x 420 mm)</option>
                 <option value="letter">Letter (8.5 x 11 in)</option>

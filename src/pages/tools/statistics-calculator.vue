@@ -28,7 +28,7 @@
               <textarea
                 v-model="rawData"
                 @input="parseData"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 rows="6"
                 placeholder="例如: 23, 45, 67, 89, 12, 34, 56, 78, 90, 43"
               ></textarea>
@@ -42,7 +42,7 @@
                 v-model.number="newDataPoint"
                 type="number"
                 step="0.01"
-                class="flex-1 px-3 py-1 border rounded text-sm"
+                class="flex-1 px-3 py-1 border border-border rounded text-sm"
                 placeholder="输入单个数值"
               />
             </div>
@@ -158,7 +158,7 @@
                 type="number"
                 min="3"
                 max="20"
-                class="w-16 px-2 py-1 border rounded text-sm"
+                class="w-16 px-2 py-1 border border-border rounded text-sm"
                 placeholder="组数"
               />
               <button @click="updateFrequency" class="px-3 py-1 bg-primary text-primary-foreground rounded text-sm hover:bg-primary/90">
@@ -236,7 +236,7 @@
               <label class="block text-sm font-medium mb-2">X变量数据</label>
               <textarea
                 v-model="xData"
-                class="w-full px-3 py-2 border rounded-lg"
+                class="w-full px-3 py-2 border border-border rounded-lg"
                 rows="3"
                 placeholder="输入X变量的数值，用逗号分隔"
               ></textarea>
@@ -273,10 +273,10 @@
                   v-model.number="hypothesisTest.testValue"
                   type="number"
                   step="0.01"
-                  class="px-3 py-1 border rounded text-sm"
+                  class="px-3 py-1 border border-border rounded text-sm"
                   placeholder="检验值"
                 />
-                <select v-model="hypothesisTest.type" class="px-3 py-1 border rounded text-sm">
+                <select v-model="hypothesisTest.type" class="px-3 py-1 border border-border rounded text-sm">
                   <option value="two-tailed">双尾检验</option>
                   <option value="left-tailed">左尾检验</option>
                   <option value="right-tailed">右尾检验</option>

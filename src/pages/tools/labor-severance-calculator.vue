@@ -35,7 +35,7 @@
               <input
                 v-model="startDate"
                 type="date"
-                class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div>
@@ -43,7 +43,7 @@
               <input
                 v-model="endDate"
                 type="date"
-                class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>
@@ -63,7 +63,7 @@
               min="0"
               step="1"
               placeholder="如 18000"
-              class="flex-1 min-w-0 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 min-w-0 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <span class="text-xs text-muted-foreground flex-shrink-0">元 / 月</span>
           </div>
@@ -80,7 +80,7 @@
             <select
               v-model="citySelected"
               @change="onCityChange"
-              class="flex-shrink-0 px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-shrink-0 px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               aria-label="城市速选"
             >
               <option v-for="c in CITY_PRESETS" :key="c.name" :value="c.name">{{ c.name }}</option>
@@ -90,7 +90,7 @@
               type="number"
               min="0"
               step="100"
-              class="flex-1 min-w-0 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 min-w-0 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <span class="text-xs text-muted-foreground flex-shrink-0">元</span>
           </div>
@@ -108,7 +108,7 @@
           <label class="block text-sm font-medium text-foreground mb-2">解除情形</label>
           <select
             v-model="scenarioId"
-            class="w-full px-2.5 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-2.5 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="s in SCENARIOS" :key="s.id" :value="s.id">{{ s.label }} → {{ s.short }}</option>
           </select>

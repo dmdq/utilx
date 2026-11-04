@@ -18,12 +18,12 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">字号 (px)</label>
-              <input v-model.number="fontSize" type="number" min="8" max="72" class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <input v-model.number="fontSize" type="number" min="8" max="72" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             </div>
 
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">行高比例</label>
-              <input v-model.number="lineHeightRatio" type="number" min="1" max="3" step="0.05" class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary mb-2">
+              <input v-model.number="lineHeightRatio" type="number" min="1" max="3" step="0.05" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary mb-2">
               <div class="grid grid-cols-4 gap-2">
                 <button @click="lineHeightRatio = 1.2" class="px-2 py-1 text-sm bg-muted hover:bg-muted/80 rounded text-foreground transition-colors">1.2</button>
                 <button @click="lineHeightRatio = 1.4" class="px-2 py-1 text-sm bg-muted hover:bg-muted/80 rounded text-foreground transition-colors">1.4</button>
@@ -34,7 +34,7 @@
 
             <div>
               <label class="block text-sm font-medium text-foreground mb-1">基准网格 (px)</label>
-              <input v-model.number="baseGrid" type="number" min="4" max="16" step="2" class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+              <input v-model.number="baseGrid" type="number" min="4" max="16" step="2" class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
             </div>
 
             <!-- 计算结果 -->

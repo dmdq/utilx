@@ -46,7 +46,7 @@
               <input
                 v-model="cfg.text"
                 type="text"
-                class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 placeholder="按钮文字"
               />
             </div>
@@ -124,11 +124,11 @@
               <div class="grid grid-cols-2 gap-4">
                 <div class="flex items-center justify-between">
                   <label class="text-sm text-foreground">{{ cfg.fillType === 'gradient' ? '起始色' : '颜色' }}</label>
-                  <input v-model="cfg.color1" type="color" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+                  <input v-model="cfg.color1" type="color" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
                 </div>
                 <div v-if="cfg.fillType === 'gradient'" class="flex items-center justify-between">
                   <label class="text-sm text-foreground">结束色</label>
-                  <input v-model="cfg.color2" type="color" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+                  <input v-model="cfg.color2" type="color" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
                 </div>
               </div>
               <div v-if="cfg.fillType === 'gradient'" class="mt-3">
@@ -157,13 +157,13 @@
               </div>
               <div class="flex items-center justify-between">
                 <label class="text-sm text-foreground">边框颜色</label>
-                <input v-model="cfg.borderColor" type="color" :disabled="cfg.borderWidth === 0" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer disabled:opacity-40" />
+                <input v-model="cfg.borderColor" type="color" :disabled="cfg.borderWidth === 0" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer disabled:opacity-40" />
               </div>
             </div>
 
             <div class="flex items-center justify-between">
               <label class="text-sm text-foreground">文字颜色</label>
-              <input v-model="cfg.textColor" type="color" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+              <input v-model="cfg.textColor" type="color" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
             </div>
           </div>
         </div>
@@ -217,7 +217,7 @@
             </div>
             <div class="flex items-center justify-between">
               <label class="text-sm text-muted-foreground">颜色</label>
-              <input v-model="cfg.shadowColor" type="color" class="h-9 w-16 rounded border border-border bg-transparent cursor-pointer" />
+              <input v-model="cfg.shadowColor" type="color" class="h-9 w-16 rounded border border-border border-border bg-transparent cursor-pointer" />
             </div>
             <div>
               <div class="flex justify-between mb-2">
@@ -326,7 +326,7 @@
             <textarea
               :value="cssCode"
               readonly
-              class="w-full h-96 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
+              class="w-full h-96 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm font-mono focus:outline-none resize-y"
               spellcheck="false"
             ></textarea>
           </div>

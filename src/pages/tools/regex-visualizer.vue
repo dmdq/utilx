@@ -42,7 +42,7 @@
             v-model="patternInput"
             rows="2"
             spellcheck="false"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="如 ^(\d{4})-(\d{2})$ 或 /1[3-9]\d{9}/"
           ></textarea>
           <p class="text-xs text-muted-foreground mt-1">若整体被 /.../ 包裹会自动剥离分隔符与标志位（如 /abc/i 按 abc 解析）</p>
@@ -66,7 +66,7 @@
             v-model="testStr"
             rows="3"
             spellcheck="false"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="输入用于实测匹配的文本"
           ></textarea>
         </div>

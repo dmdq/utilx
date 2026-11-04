@@ -25,7 +25,7 @@
                   v-model="cronExpression"
                   type="text"
                   placeholder="* * * * *"
-                  class="flex-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono"
+                  class="flex-1 px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono"
                   @input="parseCronExpression"
                 />
                 <button
@@ -74,7 +74,7 @@
           <div class="space-y-3">
             <div>
               <label class="text-sm font-medium">分钟</label>
-              <select v-model="cronFields.minute" @change="buildExpression" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="cronFields.minute" @change="buildExpression" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="*">每分钟</option>
                 <option value="0">0分</option>
                 <option value="15">15分</option>
@@ -84,7 +84,7 @@
             </div>
             <div>
               <label class="text-sm font-medium">小时</label>
-              <select v-model="cronFields.hour" @change="buildExpression" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="cronFields.hour" @change="buildExpression" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="*">每小时</option>
                 <option value="0">0点</option>
                 <option value="6">6点</option>
@@ -95,7 +95,7 @@
             </div>
             <div>
               <label class="text-sm font-medium">日期</label>
-              <select v-model="cronFields.day" @change="buildExpression" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="cronFields.day" @change="buildExpression" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="*">每天</option>
                 <option value="1">1号</option>
                 <option value="15">15号</option>
@@ -104,7 +104,7 @@
             </div>
             <div>
               <label class="text-sm font-medium">月份</label>
-              <select v-model="cronFields.month" @change="buildExpression" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="cronFields.month" @change="buildExpression" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="*">每月</option>
                 <option value="1">一月</option>
                 <option value="4">四月</option>
@@ -114,7 +114,7 @@
             </div>
             <div>
               <label class="text-sm font-medium">星期</label>
-              <select v-model="cronFields.weekday" @change="buildExpression" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="cronFields.weekday" @change="buildExpression" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="*">每天</option>
                 <option value="1">周一</option>
                 <option value="2">周二</option>

@@ -69,7 +69,7 @@
                   step="0.1"
                   min="30"
                   max="200"
-                  class="w-full px-4 py-3 border rounded-lg font-mono text-sm pr-16"
+                  class="w-full px-4 py-3 border border-border rounded-lg font-mono text-sm pr-16"
                   placeholder="输入腰围"
                   @input="calculateWHR"
                 >
@@ -88,7 +88,7 @@
                   step="0.1"
                   min="50"
                   max="250"
-                  class="w-full px-4 py-3 border rounded-lg font-mono text-sm pr-16"
+                  class="w-full px-4 py-3 border border-border rounded-lg font-mono text-sm pr-16"
                   placeholder="输入臀围"
                   @input="calculateWHR"
                 >

@@ -96,7 +96,7 @@
             <!-- 负载等级 -->
             <div>
               <label class="text-sm font-medium mb-2 block">渲染负载</label>
-              <select v-model="loadLevel" @change="updateLoad" :disabled="isRunning" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="loadLevel" @change="updateLoad" :disabled="isRunning" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option value="light">轻度（简单动画）</option>
                 <option value="medium">中度（标准动画）</option>
                 <option value="heavy">重度（复杂渲染）</option>
@@ -166,28 +166,28 @@
           <div class="space-y-2">
             <div class="flex items-center gap-2">
               <span class="text-xs w-12">60+</span>
-              <div class="flex-1 h-4 bg-gray-200 rounded overflow-hidden">
+              <div class="flex-1 h-4 bg-muted rounded overflow-hidden">
                 <div class="h-full bg-green-500" :style="{ width: (fpsDistribution.high / totalFrames * 100) + '%' }"></div>
               </div>
               <span class="text-xs w-8 text-right">{{ fpsDistribution.high }}</span>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-xs w-12">45-59</span>
-              <div class="flex-1 h-4 bg-gray-200 rounded overflow-hidden">
+              <div class="flex-1 h-4 bg-muted rounded overflow-hidden">
                 <div class="h-full bg-blue-500" :style="{ width: (fpsDistribution.medium / totalFrames * 100) + '%' }"></div>
               </div>
               <span class="text-xs w-8 text-right">{{ fpsDistribution.medium }}</span>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-xs w-12">30-44</span>
-              <div class="flex-1 h-4 bg-gray-200 rounded overflow-hidden">
+              <div class="flex-1 h-4 bg-muted rounded overflow-hidden">
                 <div class="h-full bg-yellow-500" :style="{ width: (fpsDistribution.low / totalFrames * 100) + '%' }"></div>
               </div>
               <span class="text-xs w-8 text-right">{{ fpsDistribution.low }}</span>
             </div>
             <div class="flex items-center gap-2">
               <span class="text-xs w-12">&lt;30</span>
-              <div class="flex-1 h-4 bg-gray-200 rounded overflow-hidden">
+              <div class="flex-1 h-4 bg-muted rounded overflow-hidden">
                 <div class="h-full bg-red-500" :style="{ width: (fpsDistribution.poor / totalFrames * 100) + '%' }"></div>
               </div>
               <span class="text-xs w-8 text-right">{{ fpsDistribution.poor }}</span>

@@ -41,7 +41,7 @@
             id="tpl-select"
             :value="selectedId"
             @change="onSelectChange"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="t in TEMPLATES" :key="t.id" :value="t.id">{{ t.name }}</option>
           </select>
@@ -59,7 +59,7 @@
             v-if="def.options"
             :id="'param-' + def.key"
             v-model="values[def.key]"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <option v-for="opt in def.options" :key="opt.value" :value="opt.value">{{ opt.label }}</option>
           </select>
@@ -69,7 +69,7 @@
             v-model="values[def.key]"
             type="text"
             :placeholder="def.ph"
-            class="w-full px-3 py-2 bg-background border rounded-lg text-sm font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2"
+            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2"
             :class="staticErrors[def.key] ? 'border-red-500/60 focus:ring-red-500/30' : 'border-border focus:ring-primary/40'"
           />
           <p v-if="staticErrors[def.key]" class="text-xs text-red-500">{{ staticErrors[def.key] }}</p>
@@ -98,7 +98,7 @@
                 v-model="g[f.key]"
                 type="text"
                 :placeholder="f.ph"
-                class="w-full px-2.5 py-1.5 bg-background border rounded-lg text-sm font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2"
+                class="w-full px-2.5 py-1.5 bg-background border border-border rounded-lg text-sm font-mono text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2"
                 :class="groupErrors[gi][f.key] ? 'border-red-500/60 focus:ring-red-500/30' : 'border-border focus:ring-primary/40'"
               />
               <p v-if="groupErrors[gi][f.key]" class="text-xs text-red-500">{{ groupErrors[gi][f.key] }}</p>

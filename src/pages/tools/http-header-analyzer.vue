@@ -39,7 +39,7 @@
                   v-model="urlInput"
                   type="url"
                   placeholder="https://example.com"
-                  class="flex-1 px-4 py-3 border rounded-lg font-mono text-sm"
+                  class="flex-1 px-4 py-3 border border-border rounded-lg font-mono text-sm"
                 >
                 <button
                   @click="fetchHeaders"
@@ -59,7 +59,7 @@
               <label class="text-sm font-medium mb-2 block">HTTP响应头</label>
               <textarea
                 v-model="headersInput"
-                class="w-full px-4 py-3 border rounded-lg font-mono text-xs min-h-[200px]"
+                class="w-full px-4 py-3 border border-border rounded-lg font-mono text-xs min-h-[200px]"
                 placeholder="粘贴HTTP响应头，例如：
 Content-Type: text/html; charset=utf-8
 Content-Security-Policy: default-src 'self'

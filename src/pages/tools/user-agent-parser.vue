@@ -24,7 +24,7 @@
               <textarea
                 v-model="userAgent"
                 placeholder="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm text-foreground"
                 rows="4"
                 @input="parseUserAgent"
               ></textarea>
@@ -35,7 +35,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">快速示例</label>
               <select
                 @change="loadExample"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               >
                 <option value="">选择示例...</option>
                 <option value="chrome-windows">Chrome on Windows</option>
@@ -74,7 +74,7 @@
               <input
                 v-model="parseOptions.detailed"
                 type="checkbox"
-                class="rounded border-border text-primary focus:ring-primary bg-background"
+                class="rounded border border-border text-primary focus:ring-primary bg-background"
               />
               <span class="ml-2 text-sm text-foreground">显示详细信息</span>
             </label>
@@ -82,7 +82,7 @@
               <input
                 v-model="parseOptions.showHints"
                 type="checkbox"
-                class="rounded border-border text-primary focus:ring-primary bg-background"
+                class="rounded border border-border text-primary focus:ring-primary bg-background"
               />
               <span class="ml-2 text-sm text-foreground">显示提示信息</span>
             </label>
@@ -90,7 +90,7 @@
               <input
                 v-model="parseOptions.showSecurity"
                 type="checkbox"
-                class="rounded border-border text-primary focus:ring-primary bg-background"
+                class="rounded border border-border text-primary focus:ring-primary bg-background"
               />
               <span class="ml-2 text-sm text-foreground">显示安全信息</span>
             </label>

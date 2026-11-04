@@ -41,7 +41,7 @@
             <label class="text-xs text-muted-foreground">分隔符:</label>
             <select
               v-model="delimiter"
-              class="text-xs bg-muted border border-border rounded px-2 py-1"
+              class="text-xs bg-muted border border-border border-border rounded px-2 py-1"
             >
               <option value=",">逗号 (,)</option>
               <option value=";">分号 (;)</option>
@@ -60,7 +60,7 @@
         </div>
         <textarea
           v-model="inputCSV"
-          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
+          class="flex-1 w-full min-h-[300px] p-4 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none font-mono text-sm"
           placeholder="在此输入CSV数据..."
           @keydown.ctrl.enter="formatCSV"
           @keydown.meta.enter="formatCSV"

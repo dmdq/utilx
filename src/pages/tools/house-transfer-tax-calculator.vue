@@ -37,7 +37,7 @@
               min="1"
               step="1"
               placeholder="200"
-              class="w-full px-3 py-2 bg-background text-foreground border border-border rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background text-foreground border border-border border-border rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
             <span class="px-3 py-2 bg-muted border border-l-0 border-border rounded-r-md text-sm text-muted-foreground">万</span>
           </div>
@@ -58,7 +58,7 @@
               max="1000"
               step="1"
               placeholder="89"
-              class="w-full px-3 py-2 bg-background text-foreground border border-border rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+              class="w-full px-3 py-2 bg-background text-foreground border border-border border-border rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
             <span class="px-3 py-2 bg-muted border border-l-0 border-border rounded-r-md text-sm text-muted-foreground">㎡</span>
           </div>
@@ -93,7 +93,7 @@
                 v-model="buyDate"
                 type="date"
                 :max="todayIso"
-                class="flex-1 px-3 py-2 bg-background text-foreground border border-border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="flex-1 px-3 py-2 bg-background text-foreground border border-border border-border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
             </div>
             <p class="mt-1.5 text-xs flex items-start gap-1" :class="dateFuture ? 'text-amber-600' : 'text-muted-foreground'">
@@ -170,7 +170,7 @@
                 min="0"
                 step="1"
                 placeholder="如 150"
-                class="w-full px-3 py-2 bg-background text-foreground border border-border rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                class="w-full px-3 py-2 bg-background text-foreground border border-border border-border rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
               <span class="px-3 py-2 bg-muted border border-l-0 border-border rounded-r-md text-sm text-muted-foreground">万</span>
             </div>

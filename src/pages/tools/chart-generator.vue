@@ -106,7 +106,7 @@
               <input
                 v-model="chartTitle"
                 type="text"
-                class="w-full px-3 py-2 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="输入图表标题"
               />
             </div>
@@ -182,7 +182,7 @@
         <textarea
           v-model="rawData"
           @input="parseData"
-          class="w-full h-48 px-4 py-3 bg-muted border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-48 px-4 py-3 bg-muted border border-border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
           placeholder="输入数据，格式：类别,数值（每行一条）"
         ></textarea>
         <button

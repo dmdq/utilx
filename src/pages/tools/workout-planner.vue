@@ -19,14 +19,14 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">性别</label>
-                <select v-model="gender" class="w-full px-3 py-2 border rounded-lg text-sm">
+                <select v-model="gender" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                   <option value="male">男性</option>
                   <option value="female">女性</option>
                 </select>
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">年龄</label>
-                <input v-model.number="age" type="number" min="10" max="80" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="岁">
+                <input v-model.number="age" type="number" min="10" max="80" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="岁">
               </div>
             </div>
 

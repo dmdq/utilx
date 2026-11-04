@@ -35,7 +35,7 @@
             min="0"
             step="1000"
             placeholder="如 100000"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">一次性投入的起始金额，≥ 0</p>
         </div>
@@ -51,7 +51,7 @@
             max="30"
             step="0.1"
             placeholder="如 6"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5 flex items-start gap-1">
             <Info class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-primary" />
@@ -65,7 +65,7 @@
           <select
             id="ci-freq"
             v-model.number="compoundFreq"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option :value="1">每年（n=1）</option>
             <option :value="2">每半年（n=2）</option>
@@ -90,7 +90,7 @@
             max="80"
             step="1"
             placeholder="如 10"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">滚存年数，范围 1 ~ 80</p>
         </div>
@@ -107,7 +107,7 @@
               min="0"
               step="500"
               placeholder="如 2000"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
           <div>
@@ -115,7 +115,7 @@
             <select
               id="ci-contrib-freq"
               v-model="contribFreq"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option value="month">每月追加</option>
               <option value="year">每年追加</option>
@@ -149,7 +149,7 @@
             max="10"
             step="0.1"
             placeholder="如 2"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">填 0 或留空则不折算；范围 0 ~ 10</p>
         </div>

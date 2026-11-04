@@ -16,7 +16,7 @@
               v-model="url"
               type="url"
               placeholder="https://example.com/article"
-              class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+              class="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background"
               @keyup.enter="validateOG"
             >
 
@@ -84,13 +84,13 @@
                 <div v-if="ogData.tags.image" class="aspect-video bg-gray-200 dark:bg-gray-700">
                   <img :src="ogData.tags.image" class="w-full h-full object-cover" @error="imageError = true">
                 </div>
-                <div v-else class="aspect-video bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-400">
+                <div v-else class="aspect-video bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-muted-foreground">
                   无图片
                 </div>
                 <div class="p-3 bg-gray-50 dark:bg-gray-900">
-                  <p class="text-xs text-gray-500 uppercase truncate">{{ ogData.tags.site_name || url }}</p>
+                  <p class="text-xs text-muted-foreground uppercase truncate">{{ ogData.tags.site_name || url }}</p>
                   <p class="font-medium text-sm mt-1 line-clamp-2">{{ ogData.tags.title || '无标题' }}</p>
-                  <p class="text-xs text-gray-500 mt-1 line-clamp-2">{{ ogData.tags.description || '无描述' }}</p>
+                  <p class="text-xs text-muted-foreground mt-1 line-clamp-2">{{ ogData.tags.description || '无描述' }}</p>
                 </div>
               </div>
             </div>
@@ -104,13 +104,13 @@
                 <div v-if="ogData.tags['twitter:image'] || ogData.tags.image" class="aspect-video bg-gray-200 dark:bg-gray-700">
                   <img :src="ogData.tags['twitter:image'] || ogData.tags.image" class="w-full h-full object-cover" @error="imageError = true">
                 </div>
-                <div v-else class="aspect-video bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-400">
+                <div v-else class="aspect-video bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-muted-foreground">
                   无图片
                 </div>
                 <div class="p-3 bg-gray-50 dark:bg-gray-900">
                   <p class="font-medium text-sm mt-1 line-clamp-2">{{ ogData.tags['twitter:title'] || ogData.tags.title || '无标题' }}</p>
-                  <p class="text-xs text-gray-500 mt-1 line-clamp-2">{{ ogData.tags['twitter:description'] || ogData.tags.description || '无描述' }}</p>
-                  <p class="text-xs text-gray-400 mt-1 truncate">{{ getDomain(url) }}</p>
+                  <p class="text-xs text-muted-foreground mt-1 line-clamp-2">{{ ogData.tags['twitter:description'] || ogData.tags.description || '无描述' }}</p>
+                  <p class="text-xs text-muted-foreground mt-1 truncate">{{ getDomain(url) }}</p>
                 </div>
               </div>
             </div>
@@ -124,13 +124,13 @@
                 <div v-if="ogData.tags.image" class="aspect-video bg-gray-200 dark:bg-gray-700">
                   <img :src="ogData.tags.image" class="w-full h-full object-cover" @error="imageError = true">
                 </div>
-                <div v-else class="aspect-video bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-400">
+                <div v-else class="aspect-video bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-muted-foreground">
                   无图片
                 </div>
                 <div class="p-3 bg-gray-50 dark:bg-gray-900">
-                  <p class="text-xs text-gray-500 uppercase truncate">{{ ogData.tags.site_name || url }}</p>
+                  <p class="text-xs text-muted-foreground uppercase truncate">{{ ogData.tags.site_name || url }}</p>
                   <p class="font-medium text-sm mt-1 line-clamp-2">{{ ogData.tags.title || '无标题' }}</p>
-                  <p class="text-xs text-gray-500 mt-1 line-clamp-2">{{ ogData.tags.description || '无描述' }}</p>
+                  <p class="text-xs text-muted-foreground mt-1 line-clamp-2">{{ ogData.tags.description || '无描述' }}</p>
                 </div>
               </div>
             </div>

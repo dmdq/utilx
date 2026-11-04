@@ -13,26 +13,26 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">性别</label>
-            <select v-model="gender" class="w-full px-4 py-2 border border-border rounded bg-muted">
+            <select v-model="gender" class="w-full px-4 py-2 border border-border border-border rounded bg-muted">
               <option value="male">男</option>
               <option value="female">女</option>
             </select>
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">年龄</label>
-            <input v-model.number="age" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted">
+            <input v-model.number="age" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">身高 (cm)</label>
-            <input v-model.number="height" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted">
+            <input v-model.number="height" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">体重 (kg)</label>
-            <input v-model.number="weight" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted">
+            <input v-model.number="weight" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">活动水平</label>
-            <select v-model="activity" class="w-full px-4 py-2 border border-border rounded bg-muted">
+            <select v-model="activity" class="w-full px-4 py-2 border border-border border-border rounded bg-muted">
               <option value="1.2">久坐不动</option>
               <option value="1.375">轻度活动 (1-3天/周)</option>
               <option value="1.55">中度活动 (3-5天/周)</option>

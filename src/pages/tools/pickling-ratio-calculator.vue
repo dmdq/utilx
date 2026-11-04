@@ -30,7 +30,7 @@
             type="number"
             min="0"
             step="0.1"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="例如 2 表示 2kg"
           />
         </div>
@@ -97,15 +97,15 @@
             <label class="block text-sm font-medium text-foreground mb-2">比例 醋 : 糖 : 酱油</label>
             <div class="grid grid-cols-3 gap-2">
               <div>
-                <input v-model.number="ratioVinegar" type="number" min="0" step="0.5" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
+                <input v-model.number="ratioVinegar" type="number" min="0" step="0.5" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
                 <p class="text-xs text-muted-foreground text-center mt-1">醋</p>
               </div>
               <div>
-                <input v-model.number="ratioSugar" type="number" min="0" step="0.5" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
+                <input v-model.number="ratioSugar" type="number" min="0" step="0.5" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
                 <p class="text-xs text-muted-foreground text-center mt-1">糖</p>
               </div>
               <div>
-                <input v-model.number="ratioSoy" type="number" min="0" step="0.5" class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
+                <input v-model.number="ratioSoy" type="number" min="0" step="0.5" class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring" />
                 <p class="text-xs text-muted-foreground text-center mt-1">酱油</p>
               </div>
             </div>

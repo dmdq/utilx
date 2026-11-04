@@ -59,7 +59,7 @@
               type="text"
               inputmode="tel"
               placeholder="如 138 0013 8000 / +86 138-0013-8000"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <p
               v-if="singleInput.trim()"
@@ -90,7 +90,7 @@
           <div v-else class="space-y-3">
             <textarea
               v-model="batchInput"
-              class="w-full h-36 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-36 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="每行一个手机号，例如：&#10;13800138000&#10;186-0101-2345&#10;+86 13305311234"
               spellcheck="false"
             ></textarea>

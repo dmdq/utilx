@@ -11,11 +11,11 @@
       <div class="mb-4">
         <label class="block text-sm font-medium text-foreground mb-2">输入颜色值</label>
         <div class="flex gap-4 items-center">
-          <input v-model="hexColor" type="color" class="w-20 h-10 rounded cursor-pointer border border-border">
+          <input v-model="hexColor" type="color" class="w-20 h-10 rounded cursor-pointer border border-border border-border">
           <input
             v-model="hexColor"
             maxlength="7"
-            class="flex-1 px-3 py-2 border border-border rounded-lg bg-muted uppercase font-mono text-foreground"
+            class="flex-1 px-3 py-2 border border-border border-border rounded-lg bg-muted uppercase font-mono text-foreground"
             placeholder="#000000"
           >
         </div>

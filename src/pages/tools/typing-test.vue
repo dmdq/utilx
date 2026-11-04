@@ -209,7 +209,7 @@
                 autocorrect="off"
                 spellcheck="false"
                 placeholder="点击「开始测试」后在此输入，支持中文输入法组词"
-                class="w-full px-4 py-3 bg-background border border-input rounded-lg text-foreground text-base placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-60"
+                class="w-full px-4 py-3 bg-background border border-border border-input rounded-lg text-foreground text-base placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-60"
                 @paste.prevent
               />
               <p class="text-xs text-muted-foreground mt-2 flex items-start gap-1.5">

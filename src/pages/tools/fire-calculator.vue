@@ -36,7 +36,7 @@
             max="120"
             step="1"
             placeholder="如 30"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
 
@@ -50,7 +50,7 @@
             min="0"
             step="0.5"
             placeholder="如 12"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">全家庭口径：房贷 / 房租、吃喝、教育、医疗自付等都算进去</p>
         </div>
@@ -64,7 +64,7 @@
             type="number"
             step="0.5"
             placeholder="如 12"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">年储蓄 = 税后年收入 − 年支出，可为负（入不敷出）</p>
         </div>
@@ -79,7 +79,7 @@
             min="0"
             step="1"
             placeholder="如 20"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5">指可长期投资的金融资产，不含自住房与应急现金</p>
         </div>
@@ -94,7 +94,7 @@
             min="0"
             max="15"
             step="0.5"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5 flex items-start gap-1">
             <Info class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-primary" />
@@ -108,7 +108,7 @@
           <select
             id="fire-withdrawal"
             v-model.number="withdrawalInput"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option :value="4">4%（经典 FIRE）</option>
             <option :value="3.5">3.5%（保守）</option>
@@ -131,7 +131,7 @@
             min="-30"
             max="30"
             step="5"
-            class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-right focus:outline-none focus:ring-2 focus:ring-ring"
           />
           <p class="text-xs text-muted-foreground mt-1.5 flex items-start gap-1">
             <TrendingDown class="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-primary" />

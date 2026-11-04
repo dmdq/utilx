@@ -31,7 +31,7 @@
           >
             <select
               v-model="row.key"
-              class="flex-1 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="flex-1 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option
                 v-for="item in CAFFEINE_ITEMS"
@@ -44,7 +44,7 @@
               type="number"
               min="0"
               step="0.5"
-              class="w-20 px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-20 px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm text-center focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <button
               @click="removeRow(idx)"
@@ -65,7 +65,7 @@
 
         <div class="space-y-2 pt-2 border-t border-border">
           <label class="flex items-center gap-2 text-sm text-foreground">
-            <input v-model="pregnancyMode" type="checkbox" id="pregnancyMode" class="w-4 h-4 rounded border-border" />
+            <input v-model="pregnancyMode" type="checkbox" id="pregnancyMode" class="w-4 h-4 rounded border border-border" />
             按孕期建议口径（上限 200mg）
           </label>
           <div>
@@ -73,7 +73,7 @@
             <input
               v-model="nowTime"
               type="time"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
           </div>
         </div>

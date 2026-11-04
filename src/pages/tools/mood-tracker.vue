@@ -93,7 +93,7 @@
             :maxlength="NOTE_MAX"
             rows="3"
             placeholder="今天想记下什么？比如：加班到很晚，但晚饭很好吃（可不填）"
-            class="w-full px-3 py-2 bg-background border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40 resize-none"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-lg text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/40 resize-none"
           ></textarea>
         </div>
 

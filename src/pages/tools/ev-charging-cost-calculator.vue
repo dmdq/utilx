@@ -37,11 +37,11 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">电池容量（kWh）</label>
-            <input v-model.number="battery" type="number" min="0" step="0.5" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="如 60" />
+            <input v-model.number="battery" type="number" min="0" step="0.5" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="如 60" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">实际续航（km）</label>
-            <input v-model.number="range" type="number" min="0" step="10" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="按真实表显，如 450" />
+            <input v-model.number="range" type="number" min="0" step="10" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="按真实表显，如 450" />
           </div>
         </div>
 
@@ -64,7 +64,7 @@
               class="py-2 rounded-lg text-xs font-medium transition-all"
             >{{ opt.label }}</button>
           </div>
-          <input v-if="priceMode === 'custom'" v-model.number="customPrice" type="number" min="0" step="0.01" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="输入电价，如 0.55" />
+          <input v-if="priceMode === 'custom'" v-model.number="customPrice" type="number" min="0" step="0.01" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="输入电价，如 0.55" />
           <p v-else class="text-xs text-muted-foreground mt-1">{{ activePriceLabel }}</p>
         </div>
 
@@ -81,7 +81,7 @@
             <Fuel class="w-5 h-5 mr-2 text-primary" /> 油车对比（可选）
           </h2>
           <label class="flex items-center gap-2 text-sm text-foreground">
-            <input v-model="compareIce" type="checkbox" class="w-4 h-4 rounded border-border" />
+            <input v-model="compareIce" type="checkbox" class="w-4 h-4 rounded border border-border" />
             启用对比
           </label>
         </div>
@@ -89,17 +89,17 @@
         <div v-if="compareIce" class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">油耗（L/100km）</label>
-            <input v-model.number="fuelConsumption" type="number" min="0" step="0.1" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model.number="fuelConsumption" type="number" min="0" step="0.1" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">油价（元/L）</label>
-            <input v-model.number="fuelPrice" type="number" min="0" step="0.01" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input v-model.number="fuelPrice" type="number" min="0" step="0.01" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </div>
         </div>
 
         <div>
           <label class="block text-sm font-medium text-foreground mb-2">年行驶里程（km）</label>
-          <input v-model.number="annualKm" type="number" min="0" step="1000" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+          <input v-model.number="annualKm" type="number" min="0" step="1000" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           <p class="text-xs text-muted-foreground mt-1">默认 20000 公里，可按实际情况修改</p>
         </div>
 

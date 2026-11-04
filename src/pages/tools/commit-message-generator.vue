@@ -31,7 +31,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">类型 type</label>
               <select
                 v-model="form.type"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               >
                 <option v-for="t in commitTypes" :key="t.value" :value="t.value">{{ t.value }}（{{ t.desc }}）</option>
               </select>
@@ -42,7 +42,7 @@
                 v-model="form.scope"
                 type="text"
                 placeholder="例如：api、ui、parser"
-                class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
           </div>
@@ -92,7 +92,7 @@
               v-model="form.subject"
               type="text"
               placeholder="祈使句、小写开头、结尾不加句号"
-              class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <p class="text-xs text-muted-foreground mt-1.5">结尾句号会自动去除；超过 50 字符会标红提示</p>
           </div>
@@ -102,7 +102,7 @@
             <label class="block text-sm font-medium text-foreground mb-2">详细说明 body（可选）</label>
             <textarea
               v-model="form.body"
-              class="w-full h-24 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-24 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="解释做了什么、为什么这么做（what & why），建议每行不超过 72 字符"
             ></textarea>
           </div>
@@ -112,7 +112,7 @@
             <label class="block text-sm font-medium text-foreground mb-2">脚注 footer（可选）</label>
             <textarea
               v-model="form.footer"
-              class="w-full h-20 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-20 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="Closes #123&#10;BREAKING CHANGE: 配置项 x 改名为 y"
             ></textarea>
             <p class="text-xs text-muted-foreground mt-1.5">每行一条；关闭 issue 用 Closes #123，破坏性变更说明用 BREAKING CHANGE: 前缀</p>

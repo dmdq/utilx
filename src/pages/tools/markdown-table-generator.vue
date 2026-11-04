@@ -133,7 +133,7 @@ const renderedTable = computed(() => {
 
   let html = '<table class="w-full border-collapse"><thead><tr>'
   headers.forEach((h, i) => {
-    html += `<th class="border border-gray-300 px-4 py-2 text-${aligns[i] || 'left'}">${h}</th>`
+    html += `<th class="border border-border px-4 py-2 text-${aligns[i] || 'left'}">${h}</th>`
   })
   html += '</tr></thead><tbody>'
 
@@ -141,7 +141,7 @@ const renderedTable = computed(() => {
     const cells = lines[i].split('|').filter(c => c.trim()).map(c => c.trim())
     html += '<tr>'
     cells.forEach((cell, ci) => {
-      html += `<td class="border border-gray-300 px-4 py-2 text-${aligns[ci] || 'left'}">${cell}</td>`
+      html += `<td class="border border-border px-4 py-2 text-${aligns[ci] || 'left'}">${cell}</td>`
     })
     html += '</tr>'
   }

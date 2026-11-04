@@ -15,7 +15,7 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">遮罩类型</label>
-            <select v-model="maskType" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="maskType" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="linear">线性渐变</option>
               <option value="radial">径向渐变</option>
               <option value="conic">锥形渐变</option>
@@ -35,7 +35,7 @@
           <div v-if="maskType === 'radial'" class="space-y-3">
             <div>
               <label class="block text-sm font-medium text-foreground mb-2">位置</label>
-              <select v-model="radialPos" class="w-full px-3 py-2 border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+              <select v-model="radialPos" class="w-full px-3 py-2 border border-border border-border rounded-lg bg-muted text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
                 <option value="center">中心</option>
                 <option value="top">顶部</option>
                 <option value="bottom">底部</option>

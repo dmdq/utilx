@@ -28,7 +28,7 @@
                 v-model="wsUrl"
                 type="text"
                 placeholder="wss://echo.websocket.org"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 :disabled="isConnected"
               />
             </div>
@@ -40,7 +40,7 @@
                 v-model="protocol"
                 type="text"
                 placeholder="chat"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 :disabled="isConnected"
               />
             </div>
@@ -50,7 +50,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">快速示例</label>
               <select
                 @change="loadExample"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 :disabled="isConnected"
               >
                 <option value="">选择示例...</option>
@@ -95,7 +95,7 @@
               <label class="block text-sm font-medium text-foreground mb-2">消息类型</label>
               <select
                 v-model="messageType"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="text">文本</option>
                 <option value="json">JSON</option>
@@ -109,7 +109,7 @@
               <textarea
                 v-model="messageContent"
                 :placeholder="getMessagePlaceholder()"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm resize-none"
                 rows="4"
               ></textarea>
             </div>

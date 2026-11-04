@@ -42,13 +42,13 @@
             <label class="block text-sm font-medium text-foreground mb-2">载体文本（隐藏信息将嵌入其中）</label>
             <textarea
               v-model="carrier"
-              class="w-full h-28 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-28 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="输入一段正常展示的文本，例如：今天的会议纪要已发邮件。"
             ></textarea>
             <label class="block text-sm font-medium text-foreground mb-2 mt-3">隐藏消息（需要秘密携带的内容）</label>
             <textarea
               v-model="secret"
-              class="w-full h-20 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-20 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               placeholder="输入要隐藏的消息，支持中文，例如：来自张三"
             ></textarea>
           </template>
@@ -58,7 +58,7 @@
             <label class="block text-sm font-medium text-foreground mb-2">待分析文本</label>
             <textarea
               v-model="analysisInput"
-              class="w-full h-40 px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              class="w-full h-40 px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm font-mono placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
               :placeholder="mode === 'decode' ? '粘贴含零宽字符的文本，提取其中的隐藏消息' : '粘贴任意文本进行零宽字符检测或清理'"
               spellcheck="false"
             ></textarea>
@@ -108,7 +108,7 @@
               v-if="embedOutput"
               :value="embedOutput"
               readonly
-              class="w-full h-48 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm focus:outline-none resize-y"
+              class="w-full h-48 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm focus:outline-none resize-y"
             ></textarea>
             <div v-else class="py-16 text-center">
               <EyeOff class="w-10 h-10 mx-auto mb-3 text-muted-foreground/50" />
@@ -215,7 +215,7 @@
               v-if="analysisInput"
               :value="cleanedText"
               readonly
-              class="w-full h-40 px-3 py-2.5 bg-muted/30 border border-border rounded-lg text-foreground text-sm focus:outline-none resize-y"
+              class="w-full h-40 px-3 py-2.5 bg-muted/30 border border-border border-border rounded-lg text-foreground text-sm focus:outline-none resize-y"
             ></textarea>
             <div v-else class="py-16 text-center">
               <XCircle class="w-10 h-10 mx-auto mb-3 text-muted-foreground/50" />

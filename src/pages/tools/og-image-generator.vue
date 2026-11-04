@@ -38,7 +38,7 @@
               v-model="siteName"
               type="text"
               maxlength="30"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="例如：有条工具"
             />
           </div>
@@ -48,7 +48,7 @@
               v-model="pageTitle"
               type="text"
               maxlength="80"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="例如：发现 1000+ 免费在线实用工具"
             />
           </div>
@@ -58,7 +58,7 @@
               v-model="subtitle"
               type="text"
               maxlength="60"
-              class="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              class="w-full px-3 py-2 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               placeholder="一句话卖点补充"
             />
           </div>

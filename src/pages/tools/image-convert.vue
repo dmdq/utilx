@@ -229,7 +229,7 @@
                         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded flex items-center justify-center">
                           <button
                             @click="downloadImage(image)"
-                            class="p-2 bg-white text-black rounded-md hover:bg-gray-100 transition-colors"
+                            class="p-2 bg-white text-black rounded-md hover:bg-muted transition-colors"
                           >
                             <Download class="w-4 h-4" />
                           </button>

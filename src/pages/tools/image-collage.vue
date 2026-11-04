@@ -61,7 +61,7 @@
         <!-- 布局模式 -->
         <div class="bg-muted p-4 rounded-lg space-y-4">
           <h3 class="font-medium text-sm mb-2">布局模式</h3>
-          <select v-model="layoutMode" @change="updatePreview" class="w-full p-2 border rounded text-sm">
+          <select v-model="layoutMode" @change="updatePreview" class="w-full p-2 border border-border rounded text-sm">
             <option value="grid-2x2">2x2 网格</option>
             <option value="grid-3x3">3x3 网格</option>
             <option value="grid-4x4">4x4 网格</option>
@@ -115,7 +115,7 @@
                 v-model="backgroundColor"
                 type="text"
                 @input="updatePreview"
-                class="flex-1 p-2 border rounded text-sm font-mono"
+                class="flex-1 p-2 border border-border rounded text-sm font-mono"
               >
             </div>
           </div>
@@ -123,7 +123,7 @@
           <!-- 宽高比 -->
           <div>
             <label class="text-xs text-muted-foreground mb-1 block">输出比例</label>
-            <select v-model="aspectRatio" @change="updatePreview" class="w-full p-2 border rounded text-sm">
+            <select v-model="aspectRatio" @change="updatePreview" class="w-full p-2 border border-border rounded text-sm">
               <option value="1:1">1:1 (正方形)</option>
               <option value="4:3">4:3 (标准)</option>
               <option value="16:9">16:9 (宽屏)</option>

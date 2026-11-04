@@ -37,7 +37,7 @@
                   v-model.number="linearEquation.a"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="1"
                 />
               </div>
@@ -47,7 +47,7 @@
                   v-model.number="linearEquation.b"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="-5"
                 />
               </div>
@@ -74,7 +74,7 @@
                   v-model.number="quadraticEquation.a"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="1"
                 />
               </div>
@@ -84,7 +84,7 @@
                   v-model.number="quadraticEquation.b"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="-3"
                 />
               </div>
@@ -94,7 +94,7 @@
                   v-model.number="quadraticEquation.c"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="2"
                 />
               </div>
@@ -135,27 +135,27 @@
             <div class="grid grid-cols-3 gap-4">
               <div>
                 <label class="block text-sm font-medium mb-1">a₁</label>
-                <input v-model.number="systemEquation.a1" type="number" step="0.01" class="w-full px-2 py-1 border rounded" placeholder="2">
+                <input v-model.number="systemEquation.a1" type="number" step="0.01" class="w-full px-2 py-1 border border-border rounded" placeholder="2">
               </div>
               <div>
                 <label class="block text-sm font-medium mb-1">b₁</label>
-                <input v-model.number="systemEquation.b1" type="number" step="0.01" class="w-full px-2 py-1 border rounded" placeholder="3">
+                <input v-model.number="systemEquation.b1" type="number" step="0.01" class="w-full px-2 py-1 border border-border rounded" placeholder="3">
               </div>
               <div>
                 <label class="block text-sm font-medium mb-1">c₁</label>
-                <input v-model.number="systemEquation.c1" type="number" step="0.01" class="w-full px-2 py-1 border rounded" placeholder="7">
+                <input v-model.number="systemEquation.c1" type="number" step="0.01" class="w-full px-2 py-1 border border-border rounded" placeholder="7">
               </div>
               <div>
                 <label class="block text-sm font-medium mb-1">a₂</label>
-                <input v-model.number="systemEquation.a2" type="number" step="0.01" class="w-full px-2 py-1 border rounded" placeholder="1">
+                <input v-model.number="systemEquation.a2" type="number" step="0.01" class="w-full px-2 py-1 border border-border rounded" placeholder="1">
               </div>
               <div>
                 <label class="block text-sm font-medium mb-1">b₂</label>
-                <input v-model.number="systemEquation.b2" type="number" step="0.01" class="w-full px-2 py-1 border rounded" placeholder="-1">
+                <input v-model.number="systemEquation.b2" type="number" step="0.01" class="w-full px-2 py-1 border border-border rounded" placeholder="-1">
               </div>
               <div>
                 <label class="block text-sm font-medium mb-1">c₂</label>
-                <input v-model.number="systemEquation.c2" type="number" step="0.01" class="w-full px-2 py-1 border rounded" placeholder="1">
+                <input v-model.number="systemEquation.c2" type="number" step="0.01" class="w-full px-2 py-1 border border-border rounded" placeholder="1">
               </div>
             </div>
 
@@ -214,7 +214,7 @@
               <label class="block text-sm font-medium mb-2">牛顿迭代法</label>
               <textarea
                 v-model="newtonFunction"
-                class="w-full px-3 py-2 border rounded-lg text-sm font-mono"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm font-mono"
                 rows="3"
                 placeholder="输入函数，如: x^3 - 2x - 5"
               ></textarea>
@@ -227,7 +227,7 @@
                   v-model.number="newtonInitial"
                   type="number"
                   step="0.01"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="2"
                 />
               </div>
@@ -238,7 +238,7 @@
                   type="number"
                   min="1"
                   max="100"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="10"
                 />
               </div>

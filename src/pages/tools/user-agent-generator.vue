@@ -41,19 +41,19 @@
       <!-- UA信息解析 -->
       <div v-if="uaInfo" class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
         <div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded text-center">
-          <div class="text-gray-500">浏览器</div>
+          <div class="text-muted-foreground">浏览器</div>
           <div class="font-medium">{{ uaInfo.browser }}</div>
         </div>
         <div class="p-3 bg-green-50 dark:bg-green-900/20 rounded text-center">
-          <div class="text-gray-500">版本</div>
+          <div class="text-muted-foreground">版本</div>
           <div class="font-medium">{{ uaInfo.version }}</div>
         </div>
         <div class="p-3 bg-orange-50 dark:bg-orange-900/20 rounded text-center">
-          <div class="text-gray-500">操作系统</div>
+          <div class="text-muted-foreground">操作系统</div>
           <div class="font-medium">{{ uaInfo.os }}</div>
         </div>
         <div class="p-3 bg-purple-50 dark:bg-purple-900/20 rounded text-center">
-          <div class="text-gray-500">设备</div>
+          <div class="text-muted-foreground">设备</div>
           <div class="font-medium">{{ uaInfo.device }}</div>
         </div>
       </div>
@@ -70,7 +70,7 @@
           class="p-4 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer hover:border-blue-500 transition-colors"
         >
           <div class="font-medium mb-1">{{ template.name }}</div>
-          <div class="text-xs text-gray-500 truncate font-mono">{{ template.ua.substring(0, 60) }}...</div>
+          <div class="text-xs text-muted-foreground truncate font-mono">{{ template.ua.substring(0, 60) }}...</div>
         </div>
       </div>
     </div>
@@ -88,9 +88,9 @@
       </div>
       <div v-if="customUAInfo" class="p-4 bg-gray-50 dark:bg-gray-700 rounded text-sm">
         <div class="grid grid-cols-3 gap-4">
-          <div><span class="text-gray-500">浏览器:</span> {{ customUAInfo.browser }}</div>
-          <div><span class="text-gray-500">版本:</span> {{ customUAInfo.version }}</div>
-          <div><span class="text-gray-500">系统:</span> {{ customUAInfo.os }}</div>
+          <div><span class="text-muted-foreground">浏览器:</span> {{ customUAInfo.browser }}</div>
+          <div><span class="text-muted-foreground">版本:</span> {{ customUAInfo.version }}</div>
+          <div><span class="text-muted-foreground">系统:</span> {{ customUAInfo.os }}</div>
         </div>
       </div>
     </div>

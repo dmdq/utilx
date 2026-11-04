@@ -46,7 +46,7 @@
                 <input
                   v-model="encryptKey"
                   :type="showEncryptKey ? 'text' : 'password'"
-                  class="w-full px-4 py-3 border rounded-lg pr-20 font-mono text-sm"
+                  class="w-full px-4 py-3 border border-border rounded-lg pr-20 font-mono text-sm"
                   placeholder="输入32位十六进制密钥或生成新密钥"
                 >
                 <div class="absolute right-2 top-1/2 -translate-y-1/2 flex gap-1">
@@ -83,7 +83,7 @@
               <label class="text-sm font-medium mb-2 block">明文内容</label>
               <textarea
                 v-model="plaintext"
-                class="w-full px-4 py-3 border rounded-lg text-sm min-h-[120px]"
+                class="w-full px-4 py-3 border border-border rounded-lg text-sm min-h-[120px]"
                 placeholder="输入要加密的内容..."
               ></textarea>
             </div>
@@ -158,7 +158,7 @@
                 <input
                   v-model="decryptKey"
                   :type="showDecryptKey ? 'text' : 'password'"
-                  class="w-full px-4 py-3 border rounded-lg pr-10 font-mono text-sm"
+                  class="w-full px-4 py-3 border border-border rounded-lg pr-10 font-mono text-sm"
                   placeholder="输入32位十六进制密钥"
                 >
                 <button
@@ -176,7 +176,7 @@
               <label class="text-sm font-medium mb-2 block">加密数据 (Base64)</label>
               <textarea
                 v-model="ciphertext"
-                class="w-full px-4 py-3 border rounded-lg text-sm font-mono text-xs min-h-[120px]"
+                class="w-full px-4 py-3 border border-border rounded-lg text-sm font-mono text-xs min-h-[120px]"
                 placeholder="粘贴Base64格式的加密数据..."
               ></textarea>
             </div>

@@ -51,7 +51,7 @@
             type="number"
             min="1"
             max="20"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
 
@@ -60,7 +60,7 @@
             <input
               v-model="selfDrive"
               type="checkbox"
-              class="w-4 h-4 rounded border-border accent-primary"
+              class="w-4 h-4 rounded border border-border accent-primary"
             />
             <span class="text-sm text-foreground">自驾车营<span class="text-xs text-muted-foreground ml-1">（可带大件）</span></span>
           </label>
@@ -68,7 +68,7 @@
             <input
               v-model="hasKids"
               type="checkbox"
-              class="w-4 h-4 rounded border-border accent-primary"
+              class="w-4 h-4 rounded border border-border accent-primary"
             />
             <span class="text-sm text-foreground">带小孩<span class="text-xs text-muted-foreground ml-1">（追加儿童用品）</span></span>
           </label>
@@ -117,7 +117,7 @@
               :style="{ width: progressPercent + '%' }"
             ></div>
           </div>
-          <div class="print-only text-sm text-neutral-600">装车进度：{{ checkedCount }} / {{ totalItems }} 件</div>
+          <div class="print-only text-sm text-muted-foreground">装车进度：{{ checkedCount }} / {{ totalItems }} 件</div>
           <p class="text-xs text-muted-foreground mt-2 no-print flex items-center gap-1.5">
             <Save class="w-3.5 h-3.5" /> 勾选状态自动保存在本机浏览器；{{ conditionSummary }}
           </p>
@@ -125,8 +125,8 @@
 
         <!-- 打印表头 -->
         <div class="print-only text-center mb-2">
-          <h2 class="text-xl font-bold text-neutral-900">露营装备清单</h2>
-          <p class="text-xs text-neutral-500 mt-1">{{ conditionSummary }}</p>
+          <h2 class="text-xl font-bold text-foreground">露营装备清单</h2>
+          <p class="text-xs text-muted-foreground mt-1">{{ conditionSummary }}</p>
         </div>
 
         <!-- 分类清单 -->
@@ -150,7 +150,7 @@
               >
                 <input
                   type="checkbox"
-                  class="w-4 h-4 mt-0.5 rounded border-border accent-primary flex-shrink-0"
+                  class="w-4 h-4 mt-0.5 rounded border border-border accent-primary flex-shrink-0"
                   :checked="isChecked(item.id)"
                   @change="toggleItem(item.id)"
                 />

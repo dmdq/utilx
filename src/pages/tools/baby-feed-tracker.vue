@@ -115,7 +115,7 @@
             min="0"
             step="10"
             placeholder="例如 120"
-            class="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-lg font-bold text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            class="w-full px-3 py-2.5 bg-background border border-border border-border rounded-lg text-lg font-bold text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
           />
           <div class="grid grid-cols-3 gap-2">
             <button

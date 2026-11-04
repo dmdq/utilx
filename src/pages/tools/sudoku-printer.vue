@@ -30,7 +30,7 @@
           <select
             id="sudoku-difficulty"
             v-model="difficulty"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <option v-for="d in difficultyOptions" :key="d.key" :value="d.key">{{ d.label }}（挖去 {{ d.holes }} 格）</option>
           </select>
@@ -57,7 +57,7 @@
             id="sudoku-seed"
             v-model="seedInput"
             type="text"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
             placeholder="留空则随机，如 2026 或 my-class-a"
           />
           <p class="text-xs text-muted-foreground mt-1.5 leading-relaxed">

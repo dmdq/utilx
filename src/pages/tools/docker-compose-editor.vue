@@ -15,7 +15,7 @@
           <div class="grid grid-cols-2 gap-4 mb-4">
             <div>
               <label class="block text-sm font-medium mb-2">Compose 版本</label>
-              <select v-model="composeVersion" @change="updateVersion" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="composeVersion" @change="updateVersion" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="3.8">3.8 (最新推荐)</option>
                 <option value="3.7">3.7</option>
                 <option value="3.6">3.6</option>
@@ -27,7 +27,7 @@
             </div>
             <div>
               <label class="block text-sm font-medium mb-2">快速模板</label>
-              <select v-model="selectedTemplate" @change="loadTemplate" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="selectedTemplate" @change="loadTemplate" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="">选择模板...</option>
                 <option value="web-app">Web 应用 (Nginx + Node.js)</option>
                 <option value="database">数据库服务</option>
@@ -80,7 +80,7 @@
             v-model="composeContent"
             @input="onInputChange"
             @blur="validateCompose"
-            class="w-full h-96 p-3 font-mono text-sm border rounded-md resize-none"
+            class="w-full h-96 p-3 font-mono text-sm border border-border rounded-md resize-none"
             placeholder="version: '3.8'
 services:
   web:
@@ -152,7 +152,7 @@ services:
         <!-- 服务拓扑图 -->
         <div class="bg-card rounded-lg p-4">
           <h3 class="text-lg font-semibold mb-3">服务拓扑</h3>
-          <div class="border rounded bg-gray-50" style="height: 300px; position: relative;">
+          <div class="border rounded bg-muted/50" style="height: 300px; position: relative;">
             <canvas ref="topologyCanvas" class="w-full h-full"></canvas>
             <div v-if="services.length === 0" class="absolute inset-0 flex items-center justify-center text-muted-foreground">
               定义服务后将显示拓扑图
@@ -173,13 +173,13 @@ services:
                 v-model="env.key"
                 @input="updateEnvFile"
                 placeholder="变量名"
-                class="flex-1 px-2 py-1 border rounded text-sm"
+                class="flex-1 px-2 py-1 border border-border rounded text-sm"
               >
               <input
                 v-model="env.value"
                 @input="updateEnvFile"
                 placeholder="变量值"
-                class="flex-1 px-2 py-1 border rounded text-sm"
+                class="flex-1 px-2 py-1 border border-border rounded text-sm"
               >
               <button
                 @click="removeEnvVar(index)"
@@ -264,15 +264,15 @@ services:
         <div class="space-y-4">
           <div>
             <h4 class="font-medium mb-2">启动命令</h4>
-            <pre class="bg-gray-100 p-3 rounded text-sm overflow-x-auto"><code>{{ dockerCommands.up }}</code></pre>
+            <pre class="bg-muted p-3 rounded text-sm overflow-x-auto"><code>{{ dockerCommands.up }}</code></pre>
           </div>
           <div>
             <h4 class="font-medium mb-2">停止命令</h4>
-            <pre class="bg-gray-100 p-3 rounded text-sm overflow-x-auto"><code>{{ dockerCommands.down }}</code></pre>
+            <pre class="bg-muted p-3 rounded text-sm overflow-x-auto"><code>{{ dockerCommands.down }}</code></pre>
           </div>
           <div>
             <h4 class="font-medium mb-2">查看日志</h4>
-            <pre class="bg-gray-100 p-3 rounded text-sm overflow-x-auto"><code>{{ dockerCommands.logs }}</code></pre>
+            <pre class="bg-muted p-3 rounded text-sm overflow-x-auto"><code>{{ dockerCommands.logs }}</code></pre>
           </div>
         </div>
         <div class="flex justify-end gap-2 mt-4">

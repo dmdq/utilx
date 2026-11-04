@@ -14,7 +14,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">图形类型</label>
-              <select v-model="selectedShape" @change="resetCalculations" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="selectedShape" @change="resetCalculations" class="w-full px-3 py-2 border border-border rounded-lg">
                 <optgroup label="2D图形">
                   <option value="rectangle">矩形</option>
                   <option value="circle">圆形</option>
@@ -49,7 +49,7 @@
                       v-model.number="shapeParams.length"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="10"
                     />
                   </div>
@@ -59,7 +59,7 @@
                       v-model.number="shapeParams.width"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="5"
                     />
                   </div>
@@ -74,7 +74,7 @@
                     v-model.number="shapeParams.radius"
                     type="number"
                     step="0.01"
-                    class="w-full px-3 py-2 border rounded-lg"
+                    class="w-full px-3 py-2 border border-border rounded-lg"
                     placeholder="5"
                   />
                 </div>
@@ -89,7 +89,7 @@
                       v-model.number="shapeParams.sideA"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="3"
                     />
                   </div>
@@ -99,7 +99,7 @@
                       v-model.number="shapeParams.sideB"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="4"
                     />
                   </div>
@@ -109,7 +109,7 @@
                       v-model.number="shapeParams.sideC"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="5"
                     />
                   </div>
@@ -124,7 +124,7 @@
                     v-model.number="shapeParams.side"
                     type="number"
                     step="0.01"
-                    class="w-full px-3 py-2 border rounded-lg"
+                    class="w-full px-3 py-2 border border-border rounded-lg"
                     placeholder="5"
                   />
                 </div>
@@ -139,7 +139,7 @@
                       v-model.number="shapeParams.semiMajor"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="8"
                     />
                   </div>
@@ -149,7 +149,7 @@
                       v-model.number="shapeParams.semiMinor"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="5"
                     />
                   </div>
@@ -166,7 +166,7 @@
                       type="number"
                       min="3"
                       max="20"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="6"
                     />
                   </div>
@@ -176,7 +176,7 @@
                       v-model.number="shapeParams.sideLength"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="4"
                     />
                   </div>
@@ -194,7 +194,7 @@
                     v-model.number="shapeParams.edge"
                     type="number"
                     step="0.01"
-                    class="w-full px-3 py-2 border rounded-lg"
+                    class="w-full px-3 py-2 border border-border rounded-lg"
                     placeholder="5"
                   />
                 </div>
@@ -208,7 +208,7 @@
                     v-model.number="shapeParams.radius"
                     type="number"
                     step="0.01"
-                    class="w-full px-3 py-2 border rounded-lg"
+                    class="w-full px-3 py-2 border border-border rounded-lg"
                     placeholder="5"
                   />
                 </div>
@@ -223,7 +223,7 @@
                       v-model.number="shapeParams.radius"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="3"
                     />
                   </div>
@@ -233,7 +233,7 @@
                       v-model.number="shapeParams.height"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="10"
                     />
                   </div>
@@ -249,7 +249,7 @@
                       v-model.number="shapeParams.radius"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="3"
                     />
                   </div>
@@ -259,7 +259,7 @@
                       v-model.number="shapeParams.height"
                       type="number"
                       step="0.01"
-                      class="w-full px-3 py-2 border rounded-lg"
+                      class="w-full px-3 py-2 border border-border rounded-lg"
                       placeholder="8"
                     />
                   </div>
@@ -394,7 +394,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">当前单位</label>
-              <select v-model="unitConversion.fromUnit" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="unitConversion.fromUnit" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="mm">毫米 (mm)</option>
                 <option value="cm">厘米 (cm)</option>
                 <option value="m">米 (m)</option>
@@ -406,7 +406,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">目标单位</label>
-              <select v-model="unitConversion.toUnit" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="unitConversion.toUnit" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="mm">毫米 (mm)</option>
                 <option value="cm">厘米 (cm)</option>
                 <option value="m">米 (m)</option>

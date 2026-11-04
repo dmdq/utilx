@@ -81,7 +81,7 @@
             inputmode="numeric"
             maxlength="6"
             placeholder="如 755"
-            class="mt-1.5 w-full px-3 py-2 font-mono text-lg rounded-lg border bg-background focus:outline-none focus:ring-2 transition"
+            class="mt-1.5 w-full px-3 py-2 font-mono text-lg rounded-lg border border-border bg-background focus:outline-none focus:ring-2 transition"
             :class="octalError ? 'border-red-500 focus:ring-red-500/30 text-red-600' : 'border-border focus:ring-primary/30'"
             @input="handleOctalInput"
           />
@@ -100,7 +100,7 @@
             type="text"
             maxlength="12"
             placeholder="如 rwxr-xr-x 或 drwxr-xr-x"
-            class="mt-1.5 w-full px-3 py-2 font-mono text-lg rounded-lg border bg-background focus:outline-none focus:ring-2 transition"
+            class="mt-1.5 w-full px-3 py-2 font-mono text-lg rounded-lg border border-border bg-background focus:outline-none focus:ring-2 transition"
             :class="symbolicError ? 'border-red-500 focus:ring-red-500/30 text-red-600' : 'border-border focus:ring-primary/30'"
             @input="handleSymbolicInput"
           />

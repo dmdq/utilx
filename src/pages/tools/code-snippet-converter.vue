@@ -15,7 +15,7 @@
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium mb-2">源语言</label>
-              <select v-model="sourceLanguage" @change="convertCode" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="sourceLanguage" @change="convertCode" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="javascript">JavaScript</option>
                 <option value="typescript">TypeScript</option>
                 <option value="python">Python</option>
@@ -35,7 +35,7 @@
             </div>
             <div>
               <label class="block text-sm font-medium mb-2">目标语言</label>
-              <select v-model="targetLanguage" @change="convertCode" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="targetLanguage" @change="convertCode" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="javascript">JavaScript</option>
                 <option value="typescript">TypeScript</option>
                 <option value="python">Python</option>
@@ -94,7 +94,7 @@
           <textarea
             v-model="sourceCode"
             @input="convertCode"
-            class="w-full h-64 p-3 font-mono text-sm border rounded-md resize-none"
+            class="w-full h-64 p-3 font-mono text-sm border border-border rounded-md resize-none"
             :placeholder="getSourcePlaceholder()"
           ></textarea>
 
@@ -149,7 +149,7 @@
             </div>
 
             <!-- 转换代码 -->
-            <pre class="p-3 bg-gray-50 rounded-md text-sm overflow-x-auto max-h-96 overflow-y-auto"><code>{{ convertedCode }}</code></pre>
+            <pre class="p-3 bg-muted/50 rounded-md text-sm overflow-x-auto max-h-96 overflow-y-auto"><code>{{ convertedCode }}</code></pre>
           </div>
         </div>
       </div>

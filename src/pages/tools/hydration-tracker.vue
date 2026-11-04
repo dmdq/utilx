@@ -40,14 +40,14 @@
                 <input
                   v-model.number="weight"
                   type="number"
-                  class="w-full px-3 py-2 border rounded-lg text-sm"
+                  class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                   placeholder="体重"
                   @input="calculateGoal"
                 >
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">活动水平</label>
-                <select v-model="activityLevel" class="w-full px-3 py-2 border rounded-lg text-sm" @change="calculateGoal">
+                <select v-model="activityLevel" class="w-full px-3 py-2 border border-border rounded-lg text-sm" @change="calculateGoal">
                   <option value="low">久坐</option>
                   <option value="moderate">中度活动</option>
                   <option value="high">高度活动</option>
@@ -60,7 +60,7 @@
               <input
                 v-model.number="dailyGoal"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg text-sm font-mono"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm font-mono"
                 @input="goalFromCalculation = false"
               >
               <p v-if="goalFromCalculation" class="text-xs text-muted-foreground mt-1">
@@ -82,7 +82,7 @@
           <div class="space-y-4">
             <div>
               <label class="text-sm font-medium mb-2 block">饮品类型</label>
-              <select v-model="drinkType" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <select v-model="drinkType" class="w-full px-3 py-2 border border-border rounded-lg text-sm">
                 <option value="water">纯净水</option>
                 <option value="coffee">咖啡</option>
                 <option value="tea">茶</option>
@@ -109,7 +109,7 @@
               <input
                 v-model.number="amount"
                 type="number"
-                class="w-full px-3 py-2 border rounded-lg text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg text-sm"
                 placeholder="自定义容量"
               >
             </div>

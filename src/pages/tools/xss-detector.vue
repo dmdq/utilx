@@ -16,7 +16,7 @@
               <label class="block text-sm font-medium mb-2">输入待检测内容</label>
               <textarea
                 v-model="inputContent"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                 rows="4"
                 placeholder="请输入要检测的内容..."
                 @input="detectXSS"
@@ -74,7 +74,7 @@
               <label class="block text-sm font-medium mb-2">批量输入（每行一个）</label>
               <textarea
                 v-model="batchContent"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+                class="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
                 rows="6"
                 placeholder="请输入多个待检测内容，每行一个..."
               ></textarea>
@@ -122,7 +122,7 @@
                       {{ threat.severity }}
                     </span>
                   </div>
-                  <div class="text-xs text-gray-600 mt-1">{{ threat.description }}</div>
+                  <div class="text-xs text-muted-foreground mt-1">{{ threat.description }}</div>
                 </div>
               </div>
             </div>

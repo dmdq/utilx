@@ -25,17 +25,17 @@
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="text-sm font-medium mb-1 block">年龄（月）</label>
-                <input v-model.number="ageMonths" type="number" min="0" max="216" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="月数">
+                <input v-model.number="ageMonths" type="number" min="0" max="216" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="月数">
               </div>
               <div>
                 <label class="text-sm font-medium mb-1 block">身高 (cm)</label>
-                <input v-model.number="height" type="number" step="0.1" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="身高">
+                <input v-model.number="height" type="number" step="0.1" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="身高">
               </div>
             </div>
 
             <div>
               <label class="text-sm font-medium mb-2 block">体重 (kg)</label>
-              <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border rounded-lg text-sm" placeholder="体重">
+              <input v-model.number="weight" type="number" step="0.1" class="w-full px-3 py-2 border border-border rounded-lg text-sm" placeholder="体重">
             </div>
 
             <button @click="evaluateGrowth" class="w-full px-4 py-3 bg-primary text-primary-foreground rounded-lg text-sm">

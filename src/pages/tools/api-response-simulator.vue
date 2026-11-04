@@ -16,7 +16,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">HTTP状态码</label>
-              <select v-model="responseConfig.statusCode" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="responseConfig.statusCode" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="200">200 OK</option>
                 <option value="201">201 Created</option>
                 <option value="400">400 Bad Request</option>
@@ -29,7 +29,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">Content-Type</label>
-              <select v-model="responseConfig.contentType" class="w-full px-3 py-2 border rounded-md">
+              <select v-model="responseConfig.contentType" class="w-full px-3 py-2 border border-border rounded-md">
                 <option value="application/json">application/json</option>
                 <option value="application/xml">application/xml</option>
                 <option value="text/html">text/html</option>
@@ -61,12 +61,12 @@
                   <input
                     v-model="header.key"
                     placeholder="Header名称"
-                    class="flex-1 px-2 py-1 text-sm border rounded"
+                    class="flex-1 px-2 py-1 text-sm border border-border rounded"
                   >
                   <input
                     v-model="header.value"
                     placeholder="Header值"
-                    class="flex-1 px-2 py-1 text-sm border rounded"
+                    class="flex-1 px-2 py-1 text-sm border border-border rounded"
                   >
                   <button
                     @click="removeHeader(index)"
@@ -141,7 +141,7 @@
             <textarea
               v-model="jsonTemplate"
               @input="generateResponse"
-              class="w-full h-64 p-3 font-mono text-sm border rounded-md resize-none"
+              class="w-full h-64 p-3 font-mono text-sm border border-border rounded-md resize-none"
               placeholder='{
   "success": true,
   "data": [],
@@ -155,7 +155,7 @@
             <textarea
               v-model="xmlTemplate"
               @input="generateResponse"
-              class="w-full h-64 p-3 font-mono text-sm border rounded-md resize-none"
+              class="w-full h-64 p-3 font-mono text-sm border border-border rounded-md resize-none"
               placeholder="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;response&gt;
   &lt;success&gt;true&lt;/success&gt;
@@ -180,7 +180,7 @@
             <textarea
               v-model="textTemplate"
               @input="generateResponse"
-              class="w-full h-64 p-3 font-mono text-sm border rounded-md resize-none"
+              class="w-full h-64 p-3 font-mono text-sm border border-border rounded-md resize-none"
               placeholder="欢迎使用API模拟器！
 
 当前时间：{{timestamp}}
@@ -221,7 +221,7 @@
               </div>
 
               <div class="grid grid-cols-2 gap-2">
-                <select v-model="rule.type" class="px-2 py-1 text-sm border rounded">
+                <select v-model="rule.type" class="px-2 py-1 text-sm border border-border rounded">
                   <option value="count">数量</option>
                   <option value="random">随机值</option>
                   <option value="range">范围</option>
@@ -232,7 +232,7 @@
                 <input
                   v-model="rule.path"
                   placeholder="数据路径 (如: data.items)"
-                  class="px-2 py-1 text-sm border rounded"
+                  class="px-2 py-1 text-sm border border-border rounded"
                 >
               </div>
 
@@ -241,12 +241,12 @@
                   v-model.number="rule.value"
                   type="number"
                   placeholder="生成数量"
-                  class="w-full px-2 py-1 text-sm border rounded"
+                  class="w-full px-2 py-1 text-sm border border-border rounded"
                 >
               </div>
 
               <div v-if="rule.type === 'random'">
-                <select v-model="rule.dataType" class="w-full px-2 py-1 text-sm border rounded">
+                <select v-model="rule.dataType" class="w-full px-2 py-1 text-sm border border-border rounded">
                   <option value="number">数字</option>
                   <option value="string">字符串</option>
                   <option value="boolean">布尔值</option>
@@ -261,12 +261,12 @@
                   <input
                     v-model="rule.min"
                     placeholder="最小值"
-                    class="flex-1 px-2 py-1 text-sm border rounded"
+                    class="flex-1 px-2 py-1 text-sm border border-border rounded"
                   >
                   <input
                     v-model="rule.max"
                     placeholder="最大值"
-                    class="flex-1 px-2 py-1 text-sm border rounded"
+                    class="flex-1 px-2 py-1 text-sm border border-border rounded"
                   >
                 </div>
               </div>
@@ -275,7 +275,7 @@
                 <input
                   v-model="rule.values"
                   placeholder="枚举值 (逗号分隔)"
-                  class="w-full px-2 py-1 text-sm border rounded"
+                  class="w-full px-2 py-1 text-sm border border-border rounded"
                 >
               </div>
 
@@ -283,7 +283,7 @@
                 <input
                   v-model="rule.pattern"
                   placeholder="正则模式"
-                  class="w-full px-2 py-1 text-sm border rounded"
+                  class="w-full px-2 py-1 text-sm border border-border rounded"
                 >
               </div>
             </div>

@@ -25,7 +25,7 @@
             <textarea
               v-model="htmlInput"
               placeholder="请粘贴您的HTML代码..."
-              class="w-full h-80 px-4 py-3 bg-muted border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm text-foreground placeholder:text-muted-foreground resize-none"
+              class="w-full h-80 px-4 py-3 bg-muted border border-border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm text-foreground placeholder:text-muted-foreground resize-none"
               @input="formatHTML"
             ></textarea>
           </div>
@@ -44,7 +44,7 @@
                 <select
                   v-model="indentType"
                   @change="formatHTML"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                 >
                   <option value="spaces">空格</option>
                   <option value="tabs">制表符</option>
@@ -58,7 +58,7 @@
                   min="1"
                   max="8"
                   @input="formatHTML"
-                  class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                  class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                 >
               </div>
             </div>
@@ -69,7 +69,7 @@
                   type="checkbox"
                   v-model="removeComments"
                   @change="formatHTML"
-                  class="mr-3 h-4 w-4 text-primary rounded border-border bg-background focus:ring-primary"
+                  class="mr-3 h-4 w-4 text-primary rounded border border-border bg-background focus:ring-primary"
                 >
                 <span class="text-sm text-foreground">移除 HTML 注释</span>
               </label>
@@ -78,7 +78,7 @@
                   type="checkbox"
                   v-model="removeEmptyAttributes"
                   @change="formatHTML"
-                  class="mr-3 h-4 w-4 text-primary rounded border-border bg-background focus:ring-primary"
+                  class="mr-3 h-4 w-4 text-primary rounded border border-border bg-background focus:ring-primary"
                 >
                 <span class="text-sm text-foreground">移除空属性</span>
               </label>
@@ -150,7 +150,7 @@
           <textarea
             v-model="formattedOutput"
             readonly
-            class="w-full h-80 px-4 py-3 bg-muted border border-border rounded-lg font-mono text-sm text-foreground resize-none"
+            class="w-full h-80 px-4 py-3 bg-muted border border-border border-border rounded-lg font-mono text-sm text-foreground resize-none"
           ></textarea>
 
           <!-- 统计信息 -->

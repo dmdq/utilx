@@ -12,7 +12,7 @@
         <!-- 算法选择 -->
         <div>
           <label class="text-sm font-medium text-foreground mb-2 block">选择算法</label>
-          <select v-model="selectedAlgorithm" :disabled="isSorting" class="w-full px-3 py-2 border border-border rounded-md bg-background">
+          <select v-model="selectedAlgorithm" :disabled="isSorting" class="w-full px-3 py-2 border border-border border-border rounded-md bg-background">
             <option v-for="algo in algorithms" :key="algo.id" :value="algo.id">
               {{ algo.name }} - {{ algo.complexity }}
             </option>

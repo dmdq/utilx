@@ -26,7 +26,7 @@
           v-model="password"
           type="password"
           placeholder="请输入要验证的密码"
-          class="w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full px-4 py-3 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
           @keyup.enter="verifySingle"
         >
         <div class="text-sm text-muted-foreground">
@@ -57,7 +57,7 @@
           v-model="bcryptHash"
           type="text"
           placeholder="请输入Bcrypt哈希值 ($2b$12$...)"
-          class="w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full px-4 py-3 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
           @keyup.enter="verifySingle"
         >
         <div v-if="bcryptHash" class="text-sm space-y-1">
@@ -136,7 +136,7 @@
           <textarea
             v-model="batchPasswords"
             placeholder="输入多个密码，每行一个..."
-            class="w-full h-32 p-3 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full h-32 p-3 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
         </div>
         <div>
@@ -144,7 +144,7 @@
           <textarea
             v-model="batchHashes"
             placeholder="输入对应的Bcrypt哈希值，每行一个..."
-            class="w-full h-32 p-3 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+            class="w-full h-32 p-3 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
           ></textarea>
         </div>
         <button
@@ -192,7 +192,7 @@
             v-model="analyzeHash"
             type="text"
             placeholder="输入Bcrypt哈希值..."
-            class="w-full px-4 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
             @input="analyzeBcryptHash"
           >
         </div>
@@ -238,7 +238,7 @@
             v-model="passwordStrength"
             type="password"
             placeholder="输入密码..."
-            class="w-full px-4 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             @input="checkPasswordStrength"
           >
         </div>
@@ -248,7 +248,7 @@
               <span class="text-sm font-medium">密码强度</span>
               <span class="text-sm font-medium" :class="getStrengthColor(strengthResult.score)">{{ strengthResult.level }}</span>
             </div>
-            <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="w-full bg-muted rounded-full h-2">
               <div class="h-2 rounded-full transition-all"
                    :class="getStrengthBarColor(strengthResult.score)"
                    :style="{ width: strengthResult.score + '%' }"></div>

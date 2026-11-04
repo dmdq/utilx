@@ -25,12 +25,12 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">域名</label>
-              <input v-model="spf.domain" type="text" placeholder="example.com" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <input v-model="spf.domain" type="text" placeholder="example.com" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">版本</label>
-              <select v-model="spf.version" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <select v-model="spf.version" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
                 <option value="v=spf1">v=spf1</option>
                 <option value="v=spf2">v=spf2 (实验)</option>
               </select>
@@ -60,29 +60,29 @@
 
             <div v-if="spf.includeIp4">
               <label class="block text-sm font-medium mb-2">IPv4地址</label>
-              <input v-model="spf.ip4" type="text" placeholder="192.168.1.1 or 192.168.1.0/24" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <input v-model="spf.ip4" type="text" placeholder="192.168.1.1 or 192.168.1.0/24" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
             </div>
 
             <div v-if="spf.includeIp6">
               <label class="block text-sm font-medium mb-2">IPv6地址</label>
-              <input v-model="spf.ip6" type="text" placeholder="2001:db8::1 or 2001:db8::/32" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <input v-model="spf.ip6" type="text" placeholder="2001:db8::1 or 2001:db8::/32" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">包含其他域名 (include)</label>
-              <input v-model="spf.include" type="text" placeholder="_spf.google.com" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <input v-model="spf.include" type="text" placeholder="_spf.google.com" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">其他服务器</label>
               <div class="flex gap-2">
-                <input v-model="spf.redirect" type="text" placeholder="redirect=example.com" class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+                <input v-model="spf.redirect" type="text" placeholder="redirect=example.com" class="flex-1 px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
               </div>
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">策略</label>
-              <select v-model="spf.qualifier" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <select v-model="spf.qualifier" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
                 <option value="-all">-all (拒绝所有)</option>
                 <option value="~all">~all (软拒绝)</option>
                 <option value="?all">?all (中立)</option>
@@ -99,22 +99,22 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">选择器</label>
-              <input v-model="dkim.selector" type="text" placeholder="default" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <input v-model="dkim.selector" type="text" placeholder="default" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">域名</label>
-              <input v-model="dkim.domain" type="text" placeholder="example.com" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <input v-model="dkim.domain" type="text" placeholder="example.com" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">版本</label>
-              <input v-model="dkim.version" type="text" placeholder="DKIM1" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <input v-model="dkim.version" type="text" placeholder="DKIM1" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">哈希算法</label>
-              <select v-model="dkim.hash" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <select v-model="dkim.hash" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
                 <option value="rsa-sha256">rsa-sha256</option>
                 <option value="rsa-sha1">rsa-sha1</option>
               </select>
@@ -122,7 +122,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-2">公钥</label>
-              <textarea v-model="dkim.publicKey" placeholder="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm h-24"></textarea>
+              <textarea v-model="dkim.publicKey" placeholder="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC..." class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm h-24"></textarea>
             </div>
 
             <div>
@@ -148,17 +148,17 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">主机名</label>
-              <input v-model="custom.hostname" type="text" placeholder="@ or www" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <input v-model="custom.hostname" type="text" placeholder="@ or www" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">TXT 值</label>
-              <textarea v-model="custom.value" placeholder="v=spf1 include:example.com ~all" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm h-24"></textarea>
+              <textarea v-model="custom.value" placeholder="v=spf1 include:example.com ~all" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background font-mono text-sm h-24"></textarea>
             </div>
 
             <div>
               <label class="block text-sm font-medium mb-2">TTL (秒)</label>
-              <input v-model.number="custom.ttl" type="number" placeholder="3600" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <input v-model.number="custom.ttl" type="number" placeholder="3600" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">域名</label>
-              <input v-model="validator.domain" type="text" placeholder="example.com" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
+              <input v-model="validator.domain" type="text" placeholder="example.com" class="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background">
             </div>
 
             <button @click="validateRecord" class="w-full px-4 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity">

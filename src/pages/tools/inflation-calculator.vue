@@ -31,20 +31,20 @@
             type="number"
             min="0"
             step="10"
-            class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+            class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
           />
         </div>
 
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">起始年份</label>
-            <select v-model.number="startYear" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+            <select v-model.number="startYear" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
               <option v-for="y in yearOptions" :key="'s' + y" :value="y">{{ y }} 年</option>
             </select>
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">目标年份</label>
-            <select v-model.number="targetYear" class="w-full px-3 py-2.5 bg-background border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+            <select v-model.number="targetYear" class="w-full px-3 py-2.5 bg-background border border-border border-input rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring">
               <option v-for="y in yearOptions" :key="'t' + y" :value="y">{{ y }} 年</option>
             </select>
           </div>

@@ -24,7 +24,7 @@
               <select
                 v-model="config.format"
                 @change="updateOutput"
-                class="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
+                class="w-full px-3 py-2 bg-background border border-border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
               >
                 <option value="json">JSON</option>
                 <option value="csv">CSV</option>
@@ -90,12 +90,12 @@
                   v-model="field.name"
                   type="text"
                   placeholder="字段名"
-                  class="px-2 py-1 bg-background border border-border rounded text-sm focus:outline-none focus:ring-1 focus:ring-primary text-foreground"
+                  class="px-2 py-1 bg-background border border-border border-border rounded text-sm focus:outline-none focus:ring-1 focus:ring-primary text-foreground"
                 />
                 <select
                   v-model="field.type"
                   @change="updateOutput"
-                  class="px-2 py-1 bg-background border border-border rounded text-sm focus:outline-none focus:ring-1 focus:ring-primary text-foreground"
+                  class="px-2 py-1 bg-background border border-border border-border rounded text-sm focus:outline-none focus:ring-1 focus:ring-primary text-foreground"
                 >
                   <option value="string">字符串</option>
                   <option value="number">数字</option>
@@ -131,7 +131,7 @@
                   v-model="field.enumValues"
                   type="text"
                   placeholder="选项1,选项2,选项3"
-                  class="w-full px-2 py-1 bg-background border border-border rounded text-sm text-foreground"
+                  class="w-full px-2 py-1 bg-background border border-border border-border rounded text-sm text-foreground"
                 />
               </div>
 
@@ -141,13 +141,13 @@
                   v-model.number="field.min"
                   type="number"
                   placeholder="最小值"
-                  class="px-2 py-1 bg-background border border-border rounded text-sm text-foreground"
+                  class="px-2 py-1 bg-background border border-border border-border rounded text-sm text-foreground"
                 />
                 <input
                   v-model.number="field.max"
                   type="number"
                   placeholder="最大值"
-                  class="px-2 py-1 bg-background border border-border rounded text-sm text-foreground"
+                  class="px-2 py-1 bg-background border border-border border-border rounded text-sm text-foreground"
                 />
               </div>
 

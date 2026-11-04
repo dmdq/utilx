@@ -19,7 +19,7 @@
           <!-- 颜色格式 -->
           <div>
             <label class="text-sm font-medium mb-2 block">颜色格式</label>
-            <select v-model="colorFormat" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="colorFormat" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="hex">HEX (#RRGGBB)</option>
               <option value="rgb">RGB (r,g,b)</option>
               <option value="hsl">HSL (h,s,l)</option>
@@ -36,7 +36,7 @@
                 type="number"
                 min="1"
                 max="20"
-                class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                class="flex-1 p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <span class="px-3 py-2 bg-muted rounded-lg text-sm">个</span>
             </div>
@@ -45,7 +45,7 @@
           <!-- 配色模式 -->
           <div>
             <label class="text-sm font-medium mb-2 block">配色模式</label>
-            <select v-model="schemeMode" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="schemeMode" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="random">完全随机</option>
               <option value="complementary">互补色</option>
               <option value="analogous">类似色</option>
@@ -57,7 +57,7 @@
           <!-- 亮度范围 -->
           <div>
             <label class="text-sm font-medium mb-2 block">亮度范围</label>
-            <select v-model="brightness" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <select v-model="brightness" class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
               <option value="all">所有亮度</option>
               <option value="light">亮色系</option>
               <option value="dark">暗色系</option>

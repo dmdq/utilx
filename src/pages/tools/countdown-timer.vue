@@ -68,7 +68,7 @@
             <span class="text-sm text-muted-foreground">提醒声音</span>
             <select
               v-model="selectedSound"
-              class="px-3 py-1 border rounded-md text-sm"
+              class="px-3 py-1 border border-border rounded-md text-sm"
             >
               <option value="none">无</option>
               <option value="beep">哔哔声</option>
@@ -124,7 +124,7 @@
                   min="0"
                   max="23"
                   :disabled="isRunning"
-                  class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1 disabled:opacity-50"
+                  class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1 disabled:opacity-50"
                 />
               </div>
               <div>
@@ -135,7 +135,7 @@
                   min="0"
                   max="59"
                   :disabled="isRunning"
-                  class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1 disabled:opacity-50"
+                  class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1 disabled:opacity-50"
                 />
               </div>
               <div>
@@ -146,7 +146,7 @@
                   min="0"
                   max="59"
                   :disabled="isRunning"
-                  class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1 disabled:opacity-50"
+                  class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1 disabled:opacity-50"
                 />
               </div>
             </div>
@@ -193,7 +193,7 @@
               <input
                 v-model="eventDateTime"
                 type="datetime-local"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @input="calculateEventCountdown"
               />
             </div>
@@ -203,7 +203,7 @@
                 v-model="eventName"
                 type="text"
                 placeholder="输入事件名称"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
               />
             </div>
             <div v-if="eventCountdown" class="p-3 bg-primary/5 border border-primary/20 rounded-lg">
@@ -224,7 +224,7 @@
                 type="number"
                 min="1"
                 max="100"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
               />
             </div>
             <div>
@@ -234,7 +234,7 @@
                 type="number"
                 min="0"
                 max="60"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
               />
             </div>
             <button

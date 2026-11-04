@@ -103,7 +103,7 @@
         <textarea
           v-model="privateKeyInput"
           placeholder="请输入32字节(64个十六进制字符)的Ed25519私钥..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div v-if="privateKeyInfo" class="text-sm" :class="privateKeyInfo.valid ? 'text-green-600' : 'text-red-600'">
           {{ privateKeyInfo.valid ? '✓' : '✗' }} {{ privateKeyInfo.message }}
@@ -124,7 +124,7 @@
         <textarea
           v-model="messageInput"
           placeholder="请输入要签名的数据..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
       </div>
 
@@ -147,7 +147,7 @@
             <select
               v-model="signatureFormat"
               @change="convertSignatureFormat"
-              class="px-3 py-1 text-sm border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              class="px-3 py-1 text-sm border border-border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <option value="hex">Hex格式</option>
               <option value="base64">Base64格式</option>
@@ -221,7 +221,7 @@
         <textarea
           v-model="publicKeyInput"
           placeholder="请输入32字节(64个十六进制字符)的Ed25519公钥..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div v-if="publicKeyInfo" class="text-sm" :class="publicKeyInfo.valid ? 'text-green-600' : 'text-red-600'">
           {{ publicKeyInfo.valid ? '✓' : '✗' }} {{ publicKeyInfo.message }}
@@ -234,7 +234,7 @@
         <textarea
           v-model="verifyMessageInput"
           placeholder="请输入原始数据..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary"
         ></textarea>
       </div>
 
@@ -244,7 +244,7 @@
         <textarea
           v-model="verifySignatureInput"
           placeholder="请输入64字节(128个十六进制字符)的Ed25519签名..."
-          class="w-full h-24 p-4 border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
+          class="w-full h-24 p-4 border border-border border-border rounded-lg bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary font-mono text-sm"
         ></textarea>
         <div class="text-xs text-muted-foreground">
           支持 Hex 或 Base64 格式

@@ -180,7 +180,7 @@
           <input
             v-model="inputDate"
             type="datetime-local"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary mb-2"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary mb-2"
             @input="convertToTimestamp"
           >
           <div v-if="convertedTimestamp" class="p-3 bg-muted rounded-lg">
@@ -196,7 +196,7 @@
           <input
             v-model="inputTimestamp"
             type="number"
-            class="w-full px-4 py-2 border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary mb-2"
+            class="w-full px-4 py-2 border border-border border-border rounded-lg bg-muted focus:outline-none focus:ring-2 focus:ring-primary mb-2"
             placeholder="输入Unix时间戳(秒)"
             @input="convertToDate"
           >

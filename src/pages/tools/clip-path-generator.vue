@@ -145,8 +145,8 @@
             <div v-else class="space-y-2">
               <div v-for="(point, index) in customPoints" :key="index" class="flex items-center gap-2">
                 <span class="w-8 text-sm font-mono text-foreground">{{ index + 1 }}</span>
-                <input v-model.number="point.x" type="number" min="0" max="100" class="flex-1 px-2 py-1 border border-border rounded bg-muted text-foreground text-sm" placeholder="X%">
-                <input v-model.number="point.y" type="number" min="0" max="100" class="flex-1 px-2 py-1 border border-border rounded bg-muted text-foreground text-sm" placeholder="Y%">
+                <input v-model.number="point.x" type="number" min="0" max="100" class="flex-1 px-2 py-1 border border-border border-border rounded bg-muted text-foreground text-sm" placeholder="X%">
+                <input v-model.number="point.y" type="number" min="0" max="100" class="flex-1 px-2 py-1 border border-border border-border rounded bg-muted text-foreground text-sm" placeholder="Y%">
                 <button @click="removePoint(index)" class="p-1 text-destructive hover:bg-destructive/10 rounded">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>

@@ -13,19 +13,19 @@
         <div class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">原值</label>
-            <input v-model.number="cost" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted">
+            <input v-model.number="cost" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">残值</label>
-            <input v-model.number="salvage" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted">
+            <input v-model.number="salvage" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">使用年限 (年)</label>
-            <input v-model.number="life" type="number" class="w-full px-4 py-2 border border-border rounded bg-muted">
+            <input v-model.number="life" type="number" class="w-full px-4 py-2 border border-border border-border rounded bg-muted">
           </div>
           <div>
             <label class="block text-sm font-medium text-foreground mb-1">折旧方法</label>
-            <select v-model="method" class="w-full px-4 py-2 border border-border rounded bg-muted">
+            <select v-model="method" class="w-full px-4 py-2 border border-border border-border rounded bg-muted">
               <option value="straight">直线法</option>
               <option value="ddb">双倍余额递减法</option>
               <option value="syd">年数总和法</option>

@@ -66,7 +66,7 @@
           </div>
         </div>
 
-        <div v-if="endpoints.length === 0" class="text-center py-8 text-gray-400 text-sm">
+        <div v-if="endpoints.length === 0" class="text-center py-8 text-muted-foreground text-sm">
           点击"添加"按钮创建API端点
         </div>
       </div>

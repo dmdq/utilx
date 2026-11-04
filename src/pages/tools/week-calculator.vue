@@ -23,7 +23,7 @@
               <input
                 v-model="selectedDate"
                 type="date"
-                class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+                class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
                 @input="calculateWeekInfo"
               />
               <div class="mt-2 flex gap-2">
@@ -96,7 +96,7 @@
               type="number"
               min="1900"
               max="2100"
-              class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
+              class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-2"
               @input="calculateYearWeeks"
             />
             <button
@@ -149,7 +149,7 @@
                   type="number"
                   min="1900"
                   max="2100"
-                  class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
+                  class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
                   @input="convertWeekToDate"
                 />
               </div>
@@ -161,7 +161,7 @@
                   min="1"
                   max="53"
                   placeholder="1-53"
-                  class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
+                  class="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary mt-1"
                   @input="convertWeekToDate"
                 />
               </div>

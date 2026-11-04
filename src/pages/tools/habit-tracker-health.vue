@@ -29,7 +29,7 @@
                   <p class="text-xs text-muted-foreground">{{ habit.description }}</p>
                 </div>
                 <CheckCircle v-if="completedHabits.includes(habit.id)" class="w-6 h-6 text-green-500" />
-                <Circle v-else class="w-6 h-6 text-gray-300" />
+                <Circle v-else class="w-6 h-6 text-muted-foreground" />
               </div>
             </div>
           </div>
@@ -54,8 +54,8 @@
           <h2 class="text-lg font-semibold mb-4">添加自定义习惯</h2>
 
           <div class="grid grid-cols-2 gap-3 mb-3">
-            <input v-model="customHabit.name" class="px-3 py-2 border rounded-lg text-sm" placeholder="习惯名称">
-            <input v-model="customHabit.description" class="px-3 py-2 border rounded-lg text-sm" placeholder="简短描述">
+            <input v-model="customHabit.name" class="px-3 py-2 border border-border rounded-lg text-sm" placeholder="习惯名称">
+            <input v-model="customHabit.description" class="px-3 py-2 border border-border rounded-lg text-sm" placeholder="简短描述">
           </div>
           <button @click="addCustomHabit" class="w-full px-4 py-2 bg-muted rounded-lg text-sm">
             <Plus class="w-4 h-4 inline mr-2" />

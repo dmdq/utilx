@@ -43,7 +43,7 @@
                   type="number"
                   min="1"
                   max="120"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="25"
                 />
               </div>
@@ -55,7 +55,7 @@
                   min="50"
                   max="250"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="175"
                 />
               </div>
@@ -67,7 +67,7 @@
                   min="10"
                   max="300"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="70"
                 />
               </div>
@@ -81,7 +81,7 @@
           <div class="space-y-4">
             <div>
               <label class="block text-sm font-medium mb-2">选择计算方法</label>
-              <select v-model="selectedMethod" class="w-full px-3 py-2 border rounded-lg">
+              <select v-model="selectedMethod" class="w-full px-3 py-2 border border-border rounded-lg">
                 <option value="bmi">BMI公式法</option>
                 <option value="navy">美国海军公式法</option>
                 <option value="caliper">皮褶厚度法（简化版）</option>
@@ -98,7 +98,7 @@
                   min="20"
                   max="200"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="80"
                 />
               </div>
@@ -110,7 +110,7 @@
                   min="20"
                   max="200"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="95"
                 />
               </div>
@@ -122,7 +122,7 @@
                   min="10"
                   max="100"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="35"
                 />
               </div>
@@ -138,7 +138,7 @@
                   min="1"
                   max="50"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="12"
                 />
               </div>
@@ -150,7 +150,7 @@
                   min="1"
                   max="50"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="20"
                 />
               </div>
@@ -162,7 +162,7 @@
                   min="1"
                   max="50"
                   step="0.1"
-                  class="w-full px-3 py-2 border rounded-lg"
+                  class="w-full px-3 py-2 border border-border rounded-lg"
                   placeholder="25"
                 />
               </div>

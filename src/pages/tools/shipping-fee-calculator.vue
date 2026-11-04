@@ -47,19 +47,19 @@
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
               <label class="block">
                 <span class="text-[10px] text-muted-foreground">长 (cm)</span>
-                <input v-model.number="p.l" type="number" min="1" max="200" step="0.1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+                <input v-model.number="p.l" type="number" min="1" max="200" step="0.1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
               </label>
               <label class="block">
                 <span class="text-[10px] text-muted-foreground">宽 (cm)</span>
-                <input v-model.number="p.w" type="number" min="1" max="200" step="0.1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+                <input v-model.number="p.w" type="number" min="1" max="200" step="0.1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
               </label>
               <label class="block">
                 <span class="text-[10px] text-muted-foreground">高 (cm)</span>
-                <input v-model.number="p.h" type="number" min="1" max="200" step="0.1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+                <input v-model.number="p.h" type="number" min="1" max="200" step="0.1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
               </label>
               <label class="block">
                 <span class="text-[10px] text-muted-foreground">实重 (kg)</span>
-                <input v-model.number="p.weight" type="number" min="0.1" max="500" step="0.1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+                <input v-model.number="p.weight" type="number" min="0.1" max="500" step="0.1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
               </label>
             </div>
           </div>
@@ -87,7 +87,7 @@
           <select
             id="factor-select"
             v-model="factor"
-            class="w-full px-3 py-2 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+            class="w-full px-3 py-2 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
           >
             <option v-for="f in FACTORS" :key="f" :value="f">{{ f }} · {{ FACTOR_LABELS[f] }}</option>
           </select>
@@ -122,25 +122,25 @@
         <div v-if="mode === 'firstHeavy'" class="grid grid-cols-2 gap-2">
           <label class="block">
             <span class="text-[10px] text-muted-foreground">首重 (kg)</span>
-            <input v-model.number="firstWeight" type="number" min="0.1" max="1000" step="0.5" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+            <input v-model.number="firstWeight" type="number" min="0.1" max="1000" step="0.5" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
           </label>
           <label class="block">
             <span class="text-[10px] text-muted-foreground">首重费 (元)</span>
-            <input v-model.number="firstFee" type="number" min="0" step="1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+            <input v-model.number="firstFee" type="number" min="0" step="1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
           </label>
           <label class="block">
             <span class="text-[10px] text-muted-foreground">续重单位 (kg)</span>
-            <input v-model.number="unitWeight" type="number" min="0.1" max="1000" step="0.5" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+            <input v-model.number="unitWeight" type="number" min="0.1" max="1000" step="0.5" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
           </label>
           <label class="block">
             <span class="text-[10px] text-muted-foreground">续重单价 (元/单位)</span>
-            <input v-model.number="unitPrice" type="number" min="0" step="1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+            <input v-model.number="unitPrice" type="number" min="0" step="1" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
           </label>
         </div>
         <div v-else>
           <label class="block">
             <span class="text-xs text-muted-foreground">每公斤单价 (元/kg)</span>
-            <input v-model.number="pricePerKg" type="number" min="0" step="0.5" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+            <input v-model.number="pricePerKg" type="number" min="0" step="0.5" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
           </label>
         </div>
 
@@ -148,11 +148,11 @@
         <div class="grid grid-cols-2 gap-2">
           <label class="block">
             <span class="text-xs text-muted-foreground">燃油附加费（%，0-30）</span>
-            <input v-model.number="fuelPct" type="number" min="0" max="30" step="0.5" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+            <input v-model.number="fuelPct" type="number" min="0" max="30" step="0.5" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
           </label>
           <label class="block">
             <span class="text-xs text-muted-foreground">其他杂费（元，选填）</span>
-            <input v-model.number="extraFee" type="number" min="0" step="0.01" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
+            <input v-model.number="extraFee" type="number" min="0" step="0.01" class="w-full mt-0.5 px-2 py-1.5 bg-background border border-border border-border rounded-md text-sm text-foreground focus:outline-none focus:ring-1 focus:ring-primary" />
           </label>
         </div>
 
