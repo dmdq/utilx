@@ -337,6 +337,7 @@ const wikiIndex = wikiCategories.map(name => ({
 
 const tryQueries = ['时间戳转换', 'JSON 格式化', '扭矩换算', '混凝土配合比', '毛线用量']
 const quickLinks = [
+  { label: '按职业找', to: '/professions/' },
   { label: '标签导航', to: '/tags/' },
   { label: '工具探索', to: '/explore/' },
   { label: '收藏夹', to: '/favorites/' },

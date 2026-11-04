@@ -218,6 +218,18 @@
             <FolderHeart class="w-4 h-4" />
             <span :class="{ 'lg:hidden': collapsed }">场景专题</span>
           </NuxtLink>
+          <NuxtLink
+            to="/professions/"
+            class="nav-item w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-colors"
+            :class="[
+              $route.path.startsWith('/professions') ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+              { 'lg:justify-center lg:px-0 lg:gap-0': collapsed }
+            ]"
+            @click="handleNavClick"
+          >
+            <Briefcase class="w-4 h-4" />
+            <span :class="{ 'lg:hidden': collapsed }">按职业找</span>
+          </NuxtLink>
           <div class="pt-3 mt-2 mb-1 border-t border-sidebar-border" :class="{ 'lg:hidden': collapsed }">
             <p class="px-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">分类</p>
           </div>
@@ -263,7 +275,7 @@ import {
   FileJson, Clock, ArrowRight, MessageSquarePlus, FileText, Lock,
   Shield, Type, Wifi, Code, Image, Home, Compass, Sparkles, ChevronRight, Heart, Map, MoreHorizontal,
   Palette, Database, BarChart, Zap, Calculator, Activity, TrendingUp, Tag, Shuffle, Braces, Key,
-  Package, DollarSign, Grid3x3, BookOpen, FolderHeart
+  Package, DollarSign, Grid3x3, BookOpen, FolderHeart, Briefcase
 } from 'lucide-vue-next'
 import { categories } from '~/data/categories'
 import { useRoute } from 'vue-router'

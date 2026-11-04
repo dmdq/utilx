@@ -50,6 +50,7 @@ const config = {
     '/file': 0.8,
     '/wiki': 0.8,
     '/collections': 0.8,
+    '/professions': 0.8,
     '/tag': 0.6,
     '/blog': 0.6,
     // 工具页面默认优先级
@@ -92,6 +93,7 @@ const config = {
     '/file': 'weekly',
     '/wiki': 'weekly',
     '/collections': 'weekly',
+    '/professions': 'weekly',
     '/tag': 'weekly',
     '/blog': 'monthly',
     // 工具页面
@@ -155,7 +157,7 @@ function scanPages(dir, basePath = '') {
  */
 function getPriority(path) {
   // 全部工具分页页：低于目录首页，避免与 /all 抢权重
-  if (path.startsWith('/all/page/')) {
+  if (/^\/?all\/page\//.test(path)) {
     return 0.4;
   }
 
@@ -245,11 +247,21 @@ async function collectDynamicPaths() {
     console.warn(`⚠️ 跳过场景专题: ${e.message}`);
   }
 
-  // 全部工具目录分页 /all/page/2..N（真实静态路径，nginx 直接命中）
+  // 按职业找工具 /professions/<id>/
+  try {
+    const { personas } = await import(dataUrl('src/data/personas.js'));
+    for (const p of personas || []) {
+      if (p && p.id) extra.push(`professions/${p.id}`);
+    }
+  } catch (e) {
+    console.warn(`⚠️ 跳过职业画像: ${e.message}`);
+  }
+
+  // 全部工具目录分页 /all/page/2/..N/（真实静态目录，nginx 目录索引直接命中）
   try {
     const { tools } = await import(dataUrl('src/data/tools.js'));
     const total = Math.max(1, Math.ceil((tools || []).length / 48));
-    for (let p = 2; p <= total; p++) extra.push(`all/page/${p}`);
+    for (let p = 2; p <= total; p++) extra.push(`all/page/${p}/`);
   } catch (e) {
     console.warn(`⚠️ 跳过全部工具分页: ${e.message}`);
   }

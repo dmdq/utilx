@@ -26,108 +26,115 @@
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/10</loc>
+    <loc>https://www.util.cn/all/page/10/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/11</loc>
+    <loc>https://www.util.cn/all/page/11/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/12</loc>
+    <loc>https://www.util.cn/all/page/12/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/13</loc>
+    <loc>https://www.util.cn/all/page/13/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/14</loc>
+    <loc>https://www.util.cn/all/page/14/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/15</loc>
+    <loc>https://www.util.cn/all/page/15/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/16</loc>
+    <loc>https://www.util.cn/all/page/16/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/2</loc>
+    <loc>https://www.util.cn/all/page/17/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/3</loc>
+    <loc>https://www.util.cn/all/page/2/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/4</loc>
+    <loc>https://www.util.cn/all/page/3/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/5</loc>
+    <loc>https://www.util.cn/all/page/4/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/6</loc>
+    <loc>https://www.util.cn/all/page/5/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/7</loc>
+    <loc>https://www.util.cn/all/page/6/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/8</loc>
+    <loc>https://www.util.cn/all/page/7/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.util.cn/all/page/9</loc>
+    <loc>https://www.util.cn/all/page/8/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/all/page/9/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
   </url>
 
   <url>
@@ -901,6 +908,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/electrician-motor-compensation</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/electrician-pocket-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -964,6 +978,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/farming-seeding-fertilizer</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/file-toolbox</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -978,7 +999,21 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/find-tools-by-profession</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/fire-and-52week-savings</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/fitness-health-calculators</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1440,6 +1475,20 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/lab-buffer-and-creator-tools</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/legal-rights-calculators</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/life-three-big-accounts</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -1448,6 +1497,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/lightweight-daily-tools</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/litigation-fee-deadline</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1903,6 +1959,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/pdf-toolkit-complete-guide</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/pdf-toolkit-local-guide</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2791,6 +2854,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/workshop-tolerance-hardness</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/zero-trust-architecture</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -2980,6 +3050,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/collections/fitness-health-desk</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/collections/frontend-daily-pack</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -3015,6 +3092,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/collections/pdf-workbench</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/collections/privacy-shield</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -3023,6 +3107,13 @@
 
   <url>
     <loc>https://www.util.cn/collections/qc-inventory-desk</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/collections/rights-guard-kit</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -3100,6 +3191,216 @@
 
   <url>
     <loc>https://www.util.cn/privacy</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/agri-farmer</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/audio-music</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/chef-catering</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/construction</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/content-creator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/designer-ui</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/dev-ops</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/dev-web</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/ecommerce-seller</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/electrician</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/finance-personal</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/finance-pro</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/gamer-esports</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/health-fitness</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/hobbyist-craft</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/hr-admin</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/lab-bio</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/legal-labor</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/mechanic</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/office-clerk</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/photographer</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/pregnancy-parent</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/qc-supply</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/security-auditor</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/student-college</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/student-k12</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/teacher</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/traveler-driver</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/professions/writer-editor</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -4485,6 +4786,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/bearing-lookup</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/belt-length-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -4535,6 +4843,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/bit-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/bitrate-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -4660,6 +4975,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/buffer-ph-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/bulk-request</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -4703,6 +5025,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/cable-ampacity-lookup</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/cable-weight-tray-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -4808,6 +5137,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/case-converter</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/cell-count-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -5109,6 +5445,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/couple-avatar-splitter</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/court-fee-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -5759,6 +6102,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/fertilizer-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/festival-avatar-frame</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -5941,6 +6291,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/gear-module-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/geometry-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -6089,6 +6446,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/habit-tracker-health</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/hardness-converter</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -7195,6 +7559,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/morse-code</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/motor-power-factor-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -8314,6 +8685,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/seeding-rate-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/semester-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -8545,7 +8923,28 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/star-delta-starter-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/star-exposure-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/statistics-calculator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/statute-limitations-calculator</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -8910,6 +9309,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/token-generator</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/tolerance-fit-lookup</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

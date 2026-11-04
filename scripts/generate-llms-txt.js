@@ -63,11 +63,12 @@ async function main() {
   console.log('开始生成 llms.txt ...');
 
   const load = (rel) => import(pathToFileURL(path.join(__dirname, '..', rel)).href);
-  const [{ tools }, { categories }, { wikiTerms }, { collections }] = await Promise.all([
+  const [{ tools }, { categories }, { wikiTerms }, { collections }, { personas }] = await Promise.all([
     load('src/data/tools.js'),
     load('src/data/categories.js'),
     load('src/data/wiki-terms.js'),
     load('src/data/collections.js'),
+    load('src/data/personas.js'),
   ]);
   const posts = collectPosts();
 
@@ -94,6 +95,7 @@ async function main() {
     `- [首页](${BASE}/): 工具导航与推荐\n` +
       `- [全部工具](${BASE}/all/): ${tools.length} 款工具完整目录\n` +
       `- [场景专题](${BASE}/collections/): ${collections.length} 个按使用场景组织的工具组合\n` +
+      `- [按职业找工具](${BASE}/professions/): ${personas.length} 张职业工具卡，按任务对应工具\n` +
       `- [AI 百科](${BASE}/wiki/): ${wikiTerms.length} 条大模型相关词条\n` +
       `- [技术博客](${BASE}/blog/): ${posts.length} 篇工具教程与实践文章`
   );
@@ -126,6 +128,15 @@ async function main() {
   lines.push('');
   for (const c of collections) {
     lines.push(link(c.title, `${BASE}/collections/${c.slug}/`, c.description || c.scene));
+  }
+  lines.push('');
+
+  // ---- 按职业找工具 ----
+  lines.push(`## 按职业找工具`);
+  lines.push('');
+  for (const p of personas) {
+    const toolN = new Set(p.tasks.flatMap((t) => t.tools || [])).size;
+    lines.push(link(`${p.name}工具箱`, `${BASE}/professions/${p.id}/`, `${p.scene}：${p.tasks.length} 条核心任务对应 ${toolN} 款工具`));
   }
   lines.push('');
 
