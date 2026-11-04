@@ -263,6 +263,27 @@ concrete-mix-calculator / room-volume-calculator / pesticide-dilution-calculator
 
 ---
 
+## 十八、第二十二批：断档清零批次（2026-11-04 调研，未实施待拍板）
+
+> 详 docs/TOOL_BATCH22_RESEARCH_2026-11-04.md。画像审计断档 14 条采纳 13 + 小尾巴 2 = **16 款**，三梯队，预估零新依赖。竞争验证 9 词（cn.bing 实抓）：公差配合/功率因数补偿/缓冲液 pH/码率/星空 500=中文真空或被垃圾站语义劫持；硬度换算=仅 fuwa.org 一家工具；诉讼费=官方 4 席+独立站 5 席可竞争（差异化=组合计算）。**弃选**：eDPI（psamethod.cn/mousesensitivity.cn 等中英饱和）、押韵（押韵大师/tetiku/yayunci 84 万语料站林立）、输液滴速（第四轮已弃）。
+
+### 第一梯队（蓝领收官 9：机修 50%→100%、电工 70%→100%、农户 71%→100%）
+tolerance-fit-lookup（公差配合速查 GB/T 1800）· gear-module-calculator（齿轮模数/径节换算）· bearing-lookup（轴承型号对照+内外径反查）· hardness-converter（硬度换算 GB/T 1172 插值）· motor-power-factor（三相功率因数补偿 kvar）· star-delta-starter（星三角启动电流与接触器选型）· cable-weight-tray（导线重量+桥架填充率≤40%）· fertilizer-calculator（肥料折纯与亩用量）· seeding-rate-calculator（播种量/株距行距）
+
+### 第二梯队（专业岗 4：法律 75%→100%、实验室 78%→100%）
+statute-limitations（诉讼时效 民法典188条+特别时效）· court-fee-calculator（诉讼费组合计算：受理费8档累退+保全+执行+简易减半，锚点已验算 10万→2300、500万→46800）· buffer-ph-calculator（Henderson-Hasselbalch，Tris/磷酸盐/醋酸/碳酸盐母液+温度修正）· cell-count-calculator（血球计数板×稀释×10⁴+活率+接种密度）
+
+### 第三梯队（长尾 2）
+bitrate-calculator（视频码率/文件大小+OBS 推流档）· star-exposure-rule（星空 500/600/NPF 法则快门，内链月相工具）
+
+### 落地备注
+- 上线后跑 persona-audit：预期总覆盖 94%→99%，仅剩游戏画像 1 条断档（主动弃选），23 画像全饱和。
+- collections 复用既有「车间速查」「电工工具箱」追加收官款，不新建专题。
+- 图标复用 253 池为主，可能补 Gem/Rows3/Sprout。
+- 查表类规格（公差/硬度/轴承/诉讼费）先自核标准再写任务书（AQL 锚点教训）。
+
+---
+
 ## 批次记录
 
 ---
