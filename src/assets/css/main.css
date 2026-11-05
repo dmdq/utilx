@@ -71,6 +71,10 @@ html, body {
   --accent-foreground: 240 5.9% 10%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
+  --success: 142 72% 40%;
+  --success-foreground: 0 0% 98%;
+  --warning: 38 92% 48%;
+  --warning-foreground: 32 80% 10%;
   --border: 240 5.9% 90%;
   --input: 240 5.9% 90%;
   --ring: 221 83% 53%;
@@ -106,6 +110,10 @@ html, body {
   --accent-foreground: 0 0% 98%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
+  --success: 142 66% 46%;
+  --success-foreground: 0 0% 98%;
+  --warning: 36 92% 50%;
+  --warning-foreground: 32 80% 10%;
   --border: 240 3.7% 22%; /* 提高边框亮度以减少对比度 */
   --input: 240 3.7% 22%; /* 提高输入框边框亮度以减少对比度 */
   --ring: 221 83% 53%;

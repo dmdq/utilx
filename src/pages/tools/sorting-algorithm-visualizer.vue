@@ -104,6 +104,14 @@
           >
           显示交换次数
         </label>
+        <label class="flex items-center gap-2 text-sm text-foreground" :title="array.length > 40 ? '超过 40 个元素时自动隐藏数值以免重叠' : ''">
+          <input
+            v-model="showValues"
+            type="checkbox"
+            class="rounded"
+          >
+          显示数值<span v-if="array.length > 40" class="text-xs text-muted-foreground">（元素过多已自动隐藏）</span>
+        </label>
       </div>
     </div>
 
@@ -124,11 +132,11 @@
         </div>
       </div>
 
-      <div class="relative h-96 flex items-end justify-center gap-1 p-4 bg-muted/30 rounded">
+      <div class="relative h-96 flex items-end justify-center gap-1 p-4 pt-8 bg-muted/30 rounded">
         <div
           v-for="(bar, index) in array"
           :key="index"
-          class="flex-1 transition-all duration-300 rounded-t"
+          class="relative flex-1 transition-all duration-300 rounded-t"
           :class="{
             'bg-primary': !bar.comparing && !bar.sorted,
             'bg-destructive': bar.comparing,
@@ -141,9 +149,10 @@
           }"
           :title="`值: ${bar.value}`"
         >
-          <div v-if="array.length <= 20" class="text-xs text-white text-center pt-1">
-            {{ bar.value }}
-          </div>
+          <span
+            v-if="showValues && array.length <= 40"
+            class="absolute -top-5 left-1/2 -translate-x-1/2 text-[10px] font-medium leading-none text-muted-foreground whitespace-nowrap"
+          >{{ bar.value }}</span>
         </div>
       </div>
 
@@ -360,6 +369,7 @@ const currentStep = ref('')
 const status = ref('就绪')
 const showComparisons = ref(true)
 const showSwaps = ref(true)
+const showValues = ref(true)
 
 // SEO内容折叠状态
 const isSeoContentVisible = ref(true)
