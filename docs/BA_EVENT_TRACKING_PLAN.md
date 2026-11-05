@@ -14,19 +14,21 @@
 |---|---|---|---|
 | 工具结果 | 复制 | 工具 id | 用户复制了工具产出（结果可带走的行为信号） |
 | 工具转化 | 查询成功 | 工具 id | 查询类工具拿到有效结果（whois-lookup） |
+| 工具转化 | 连接成功 | 工具 id | 连接类工具握手成功（websocket-test） |
+| 工具转化 | 发送消息 | 工具 id | 完成一次消息收发动线（websocket-test） |
 | 工具转化 | 转换完成 | 工具 id | 转换类工具成功产出（audio-converter） |
 | 工具转化 | 打印 | 工具 id | 触发打印（id-card-print-layout） |
 | 工具转化 | 下载 | 工具 id | 触发文件下载（id-card-print-layout） |
 | 工具转化 | 录制完成 | 工具 id | 录屏产出文件（screen-recorder，空录制不报） |
 | 工具转化 | 导出图片 | 工具 id | Canvas 导出（photo-timestamp-watermark，blob 失败不报） |
 
-## 已埋页面（15 页）
+## 已埋页面（16 页）
 
 复制类：vat-calculator、ip-subnet-calculator、xingce-score-estimator、sunrise-sunset、
 decibel-meter、prepayment-calculator、mac-address-convert、unicode-convert、
-week-calculator、thread-reference-table、whois-lookup
+week-calculator、thread-reference-table、whois-lookup、websocket-test（日志行复制/复制全部）
 转化类：whois-lookup、audio-converter、id-card-print-layout（打印+下载双事件）、
-screen-recorder、photo-timestamp-watermark
+screen-recorder、photo-timestamp-watermark、websocket-test（连接成功+发送消息）
 
 ## 新工具埋点规范
 
