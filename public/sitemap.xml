@@ -145,6 +145,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/555-rc-logic-bench</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/ab-test-and-ad-metrics</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1139,6 +1146,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/fuse-mtbf-protection</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/game-automated-testing</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1287,6 +1301,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/golden-hour-photography</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/grr-cpk-msa-guide</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1951,6 +1972,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/opamp-gain-topologies</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/optics-two-frames</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1987,6 +2015,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/pcb-prototype-pre-calcs</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/pcb-trace-copper-buck</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -5115,6 +5150,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/buck-inductor-calculator</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/buffer-ph-calculator</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -5556,6 +5598,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/copper-thickness-converter</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/copybook-generator</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -5599,6 +5648,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/cover-grid-preview</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/cpk-process-capability</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -6424,6 +6480,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/fuse-selector</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/gacha-pity-calculator</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -6600,6 +6663,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/grid-system-generator</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/grr-msa-calculator</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -7467,6 +7537,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/logic-ic-truth-table</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/logo-maker</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -7789,6 +7866,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/mtbf-fit-reliability</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/mybatis-sql-restore</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -7894,6 +7978,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/opamp-gain-calculator</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/open-graph-validator</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -7986,6 +8077,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/pbkdf2-generator</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/pcb-trace-width-calculator</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -8546,6 +8644,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/random-wheel</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/rc-time-constant</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -9490,6 +9595,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/tools/timer-555-calculator</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/tools/timestamp-batch-convert</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -9526,6 +9638,13 @@
 
   <url>
     <loc>https://www.util.cn/tools/tire-size-calculator</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/tools/tl431-feedback-calculator</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -10064,6 +10183,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/wiki/555-timer</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/wiki/annual-leave-days</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -10169,6 +10295,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/wiki/fuse-i2t</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/wiki/gear-module</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -10239,6 +10372,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/wiki/mtbf-fit</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/wiki/nd-filter</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -10254,6 +10394,13 @@
 
   <url>
     <loc>https://www.util.cn/wiki/one-rep-max</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/wiki/op-amp-gain</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

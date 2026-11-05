@@ -1,20 +1,20 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：792 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：804 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 792 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 804 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 26 个按使用场景组织的工具组合
 - [按职业找工具](https://www.util.cn/professions/): 31 张职业工具卡，按任务对应工具
-- [AI 百科](https://www.util.cn/wiki/): 48 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 403 篇工具教程与实践文章
+- [AI 百科](https://www.util.cn/wiki/): 52 条大模型相关词条
+- [技术博客](https://www.util.cn/blog/): 408 篇工具教程与实践文章
 
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（111款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（122款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
@@ -25,7 +25,7 @@
 - [开发辅助（109款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（57款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（64款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [其他工具（65款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（53款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
 - [金融工具（47款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（47款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
@@ -163,6 +163,17 @@
 - [DPPM良率计算器](https://www.util.cn/tools/dppm-yield-calculator/): DPPM 与良率双向换算、置信区间上限、多工序滚动良率计算
 - [晶振负载电容计算器](https://www.util.cn/tools/crystal-load-calculator/): 晶振负载电容 CL 匹配外接电容计算，频偏 ppm 估算与标准容值吸附
 - [I2C上拉电阻计算器](https://www.util.cn/tools/i2c-pullup-calculator/): I2C 总线上拉电阻取值区间计算（TI SLVA689），标准/快速/FM+ 三档速览
+- [GR&R测量系统分析](https://www.util.cn/tools/grr-msa-calculator/): 均值极差法 GR&R 分析：EV/AV/GRR%、P/T 比与 NDC 分级数，AIAG 三档判定
+- [Cpk过程能力计算器](https://www.util.cn/tools/cpk-process-capability/): Cp/Cpk 短期与 Pp/Ppk 长期双口径过程能力分析，直方图与规格线，1.33 判定档
+- [MTBF/FIT可靠性换算](https://www.util.cn/tools/mtbf-fit-reliability/): MTBF、FIT、AFR 可靠性指标双向换算，系统串联合成与 Arrhenius 加速因子
+- [运放增益计算器](https://www.util.cn/tools/opamp-gain-calculator/): 五种运放拓扑增益计算：反相、同相、差分、仪表放大、跟随器，dB 与倍数双显示
+- [BUCK电感选型计算器](https://www.util.cn/tools/buck-inductor-calculator/): Buck 电路电感感值计算：纹波率法、CCM/DCM 判定、峰值电流与饱和电流校验
+- [PCB线宽载流计算器](https://www.util.cn/tools/pcb-trace-width-calculator/): IPC-2221 线宽-载流-温升三向计算，外层/内层系数与过孔载流，附 2152 注记
+- [铜厚与线规换算器](https://www.util.cn/tools/copper-thickness-converter/): PCB 铜厚 oz/mil/mm/µm 换算与基铜成品铜口径，AWG 线规表与载流对照
+- [稳压反馈电阻计算器](https://www.util.cn/tools/tl431-feedback-calculator/): TL431/LM317/稳压管三模式反馈电阻计算，E 系列吸附与实际输出回验
+- [RC时间常数计算器](https://www.util.cn/tools/rc-time-constant/): τ=RC 双向计算与充放电曲线可视化，63.2%/5τ 口径与延时应用注记
+- [保险丝选型计算器](https://www.util.cn/tools/fuse-selector/): 保险丝额定电流选型：UL/IEC 双口径、温度降额与浪涌 I²t 校验四步流程
+- [555定时器计算器](https://www.util.cn/tools/timer-555-calculator/): NE555 无稳态/单稳态参数正反算，SVG 电路图随参数重绘，E12 标准值吸附
 
 ## 数据格式化
 
@@ -713,6 +724,7 @@
 - [法律文书生成器](https://www.util.cn/tools/legal-doc-generator/): 租房合同、授权委托书、保密协议等 5 套文书模板填空即用，实时预览与打印，条款骨架完整
 - [公文红头排版生成器](https://www.util.cn/tools/official-document-generator/): 按 GB/T 9704 惯用口径排红头、文号、红色分隔线与正文，A4 打印即出，机关风格发文笺
 - [IC丝印解读器](https://www.util.cn/tools/ic-marking-decoder/): 芯片丝印 date code 周期解读、常见前缀厂商线索与标识说明，仅供学习参考
+- [74/4000系列速查](https://www.util.cn/tools/logic-ic-truth-table/): 常用 74 与 4000 系列逻辑芯片速查：真值表、DIP 引脚图、功能说明与代换提示
 
 ## 健康工具
 
@@ -886,16 +898,16 @@
 - [车间与工地速查](https://www.util.cn/collections/shop-floor-quickref/): 螺纹底孔、钢筋米重、空调匹数、材料算量，再到公差配合、齿轮模数、轴承型号与硬度换算——从图纸到报价的车间速查台。
 - [光影与声学问算台](https://www.util.cn/collections/optics-acoustics-bench/): 景深超焦距、频率波长、混响时间、人声分离——光路和声路里的物理账，都在浏览器本地算。
 - [实验台面换算器](https://www.util.cn/collections/lab-bench-calculators/): 梯度稀释、离心力换算、分子量、方程式配平——实验课前把台面四件计算器打开，移液枪和离心机设定不再靠估。
-- [电子维修工作台](https://www.util.cn/collections/electronics-repair-bench/): 电机电容换件、电解电容寿命、色环/标号/丝印三件解码、电池组配组——维修台上最高频的八件换算，本地计算不漏料。
+- [电子维修工作台](https://www.util.cn/collections/electronics-repair-bench/): 电机电容换件、保险丝选型、电解电容寿命、色环/标号/丝印解码、555 与 RC 排故、电池组配组——维修台上最高频的换算，本地计算不漏料。
 - [质检与库存工作台](https://www.util.cn/collections/qc-inventory-desk/): 抽多少验货、订多少省钱、库存降到多少下单——供应链最常被问的三道题的标准答案表。
 - [打工人维权计算器](https://www.util.cn/collections/rights-guard-kit/): 离职补偿 N/N+1、加班费、年假天数、社保公积金、诉讼时效与诉讼费——打工人要算的账一次算清，全部本地计算不上传。
 - [健康与运动仪表台](https://www.util.cn/collections/fitness-health-desk/): BMI、体脂、基础代谢、每日热量缺口、心率区间、饮水量、1RM 与 HIIT 计时——把身体数据算明白再练，全部本地计算。
 - [PDF 处理工作台](https://www.util.cn/collections/pdf-workbench/): 合并拆分、压缩瘦身、加水印、签名、页码、整理页序、转图片、提取文本——一套 PDF 处理流程全在浏览器本地完成，文件不出电脑。
 - [电商卖家促销工作台](https://www.util.cn/collections/seller-promo-desk/): 满减算到肉、大促到手价、SKU 组合、标题组合与评论抽奖——活动策划前后的账都在浏览器里算完，定价策略不拍脑袋。
 - [音乐与音频创作台](https://www.util.cn/collections/audio-creator-kit/): 录音降噪、剪音频、变调变速、和弦图、音程听辨、节拍器调音器——从练习到成品的音频工具全在浏览器本地跑，素材不出电脑。
-- [电子工程师设计台](https://www.util.cn/collections/electronics-design-bench/): 晶振负载电容、I2C 上拉、E 系列阻值替代、散热结温、NTC 与 ADC 测温——打样前的高频小计算，公式口径注明来源，全部本地算。
+- [电子工程师设计台](https://www.util.cn/collections/electronics-design-bench/): 晶振负载电容、I2C 上拉、E 系列阻值替代、运放增益、Buck 电感、线宽铜厚、稳压反馈、散热结温——打样前的高频小计算，公式口径注明来源，全部本地算。
 - [传感器信号链](https://www.util.cn/collections/sensor-signal-chain/): 从 PT100/NTC 感温元件到 4-20mA 变送器，再到 PLC 数字量——一条信号链上的换算一次算清，含冷端补偿与活零点口径。
-- [IC 测试质量台](https://www.util.cn/collections/ic-test-quality/): DPPM 与良率换算、置信上限、AQL 抽样对照、安全库存——把测试与品质的数字账一次算清，支撑来料判定与出货决策。
+- [IC 测试质量台](https://www.util.cn/collections/ic-test-quality/): DPPM 与良率换算、GR&R 测量系统分析、Cpk 过程能力、MTBF/FIT、AQL 抽样对照、安全库存——把测试与品质的数字账一次算清，支撑来料判定与出货决策。
 - [出行规划时间台](https://www.util.cn/collections/travel-planning-kit/): 日出日落、时区换算、日期计算与倒数日、可打印日历——出发前把"几点天亮、那边几点、还有几天"一次算清，全部本地计算。
 - [办事打印一站台](https://www.util.cn/collections/errand-print-desk/): 身份证复印件排版、证件照换底、电子章、公文红头、合同文书、请柬日历——办事窗口要的纸质材料浏览器里做好直接打印，照片不上传。
 
@@ -930,8 +942,8 @@
 - [手工/模型/3D 打印爱好者工具箱](https://www.util.cn/professions/hobbyist-craft/): 做手工、拼模型、玩 3D 打印的创客爱好者：7 条核心任务对应 10 款工具
 - [出行/司机/旅行规划工具箱](https://www.util.cn/professions/traveler-driver/): 常出差、自驾游与跑长途的出行人群：7 条核心任务对应 14 款工具
 - [孕产/新生儿家长工具箱](https://www.util.cn/professions/pregnancy-parent/): 孕期到婴幼儿阶段的父母与看护人：6 条核心任务对应 11 款工具
-- [硬件/电子工程师工具箱](https://www.util.cn/professions/hardware-engineer/): 画原理图、调传感器信号链、画 PCB 打样的硬件工程师与电子爱好者：11 条核心任务对应 13 款工具
-- [电子维修技师工具箱](https://www.util.cn/professions/electronics-repairer/): 修电源板、家电主板、功放的维修技师与电子爱好者：9 条核心任务对应 9 款工具
+- [硬件/电子工程师工具箱](https://www.util.cn/professions/hardware-engineer/): 画原理图、调传感器信号链、画 PCB 打样的硬件工程师与电子爱好者：16 条核心任务对应 19 款工具
+- [电子维修技师工具箱](https://www.util.cn/professions/electronics-repairer/): 修电源板、家电主板、功放的维修技师与电子爱好者：12 条核心任务对应 12 款工具
 
 ## AI 百科词条
 
@@ -983,9 +995,18 @@
 - [过程能力指数（Cpk）](https://www.util.cn/wiki/cpk-process-capability/): Cpk 衡量稳定过程输出落在规格限内的能力：Cpk = min(USL−μ, μ−LSL)/(3σ)，≥1.33 通常判定能力充足。
 - [电解电容寿命](https://www.util.cn/wiki/electrolytic-capacitor-life/): 铝电解电容是整机里最常坏的元件，规格书寿命（如 105℃/2000h）按 10℃ 法则换算：温度每降 10℃，寿命翻倍。
 - [芯片丝印与 Date Code](https://www.util.cn/wiki/ic-date-code/): 芯片顶面的丝印包含厂商标识、型号、日期码与批号；date code 主流格式是 YYWW（年+周），是判断生产批次与库存时间的第一线索。
+- [运放增益](https://www.util.cn/wiki/op-amp-gain/): 运放的闭环增益由反馈网络决定：反相放大为 −Rf/Ri，同相放大为 1 + Rf/Rg，增益也常用 dB 表示（20·log₁₀|A|）。
+- [MTBF 与 FIT](https://www.util.cn/wiki/mtbf-fit/): MTBF 是平均无故障时间（小时），FIT 是每十亿器件小时的失效数，两者互为倒数换算：FIT = 10⁹/MTBF。
+- [保险丝 I²t 与选型](https://www.util.cn/wiki/fuse-i2t/): I²t（焦耳积分）是保险丝熔断所需的热能口径：浪涌脉冲的 I²t 必须小于保险丝公称熔化 I²t 并留 20~30% 裕量，否则脉冲反复冲击会造成误熔断。
+- [555 定时器](https://www.util.cn/wiki/555-timer/): NE555 是最经典的通用定时芯片：无稳态模式产生方波（f = 1.44/((R1+2R2)·C)），单稳态模式输出定宽脉冲（T = 1.1·R·C）。
 
 ## 博客文章
 
+- [时序板排故三件套：555、RC 和查不到的真值表](https://www.util.cn/blog/articles/555-rc-logic-bench/): 频率不对的振荡器、延时不准的复位电路、查不到真值表的贴片逻辑——时序板排故的三板斧。新上线的 555 计算器（SVG 电路随参数重绘+反向求解）、RC 时间常数（充放电曲线）和 74/4000 系列速查把这一类活全包了。
+- [布板前的三笔账：线宽、铜厚、电感](https://www.util.cn/blog/articles/pcb-trace-copper-buck/): 电源板返工重做，三成栽在布板前的算术上：线宽扛不扛得住电流、铜厚买的什么规格、Buck 电感纹波率多少。新上线的线宽载流、铜厚线规、Buck 电感三件计算器把这三笔账一次算清，IPC-2221 公式口径全公开。
+- [保险丝不是熔丝那么简单：I²t、降额与 MTBF 的两笔账](https://www.util.cn/blog/articles/fuse-mtbf-protection/): 换保险丝看额定电流就行？误熔断和该断不断，多半栽在 I²t 校验和温度降额上。新上线的保险丝选型计算器把 UL/IEC 双口径、温度修正、浪涌 I²t 四步走完；顺手把 MTBF/FIT 换算器也补上了——保护和可靠性，一笔账的两面。
+- [运放增益五种接法：一张表选对拓扑](https://www.util.cn/blog/articles/opamp-gain-topologies/): 反相、同相、差分、仪表放大、跟随器——五种运放接法各有各的脾气。新上线的运放增益计算器按拓扑选型直算，E 系列吸附回算实际增益，反馈回路 TL431/LM317 配比一页算清，全部本地计算。
+- [GR&R 不过关，Cpk 算得再好也是白算](https://www.util.cn/blog/articles/grr-cpk-msa-guide/): 测量系统分析是过程能力的前置关卡：量具分辨不出好坏件，Cpk 就是海市蜃楼。这批上新的 GR&R 分析与 Cpk 计算器把
 - [一个 MAC 地址四种写法：网络排查里的格式坑](https://www.util.cn/blog/articles/mac-address-format-guide/): 交换机上是点分，手机里是冒号，Windows 命令行是连字符，日志里干脆没有分隔符——同一块网卡的 MAC 地址有四种长相，格式对不上是网络排查里最低级的弯路。这篇讲清四种写法各出现在哪、粘贴匹配为什么失败、随机化 MAC 让白名单怎么失效，配上一款互转工具和一组排查搭档，网管和居家排查都用得上。
 - [排班表上的第 45 周是怎么算出来的：ISO 周数速查](https://www.util.cn/blog/articles/iso-week-number-guide/): 排班表写着 W45，手机日历却标着第 44 周，谁算错了？谁都没错，是两套周历。这篇讲清 ISO 8601 周数的两条规则、跨年周怎么归属、53 周年份怎么提前判断，配上周数计算器的日期查周、周数反查日期和年度周数统计，排班、周报编号、项目排期、生产计划对表不再错位一周。
 - [想要的域名被注册了？WHOIS 三十秒查个明白](https://www.util.cn/blog/articles/whois-domain-check-guide/): 心仪的域名显示已被注册，先别急着换名字。WHOIS查询工具三十秒读出注册商、注册与到期日期和域名状态，支持批量排查仿冒域名、结果导出 JSON 留档。这篇讲清它查得到什么、查不到什么，以及蹲回头域名的正确姿势。

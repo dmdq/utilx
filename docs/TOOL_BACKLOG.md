@@ -294,7 +294,7 @@ bitrate-calculator（视频码率/文件大小+OBS 推流档）· star-exposure-
 
 **第一批 12 款（真空优先）**：signal-loop-converter（4-20mA/0-10V/PLC 数字量换算，中文交互真空）/ motor-capacitor-sizer（单相电机启动/运转电容，维修+电容导流）/ heatsink-calculator（功率器件散热，真空）/ ntc-thermistor-calculator（B 值+Steinhart-Hart 双模型）/ rtd-thermocouple-lookup（PT100 CVD+K 型 NIST 分度）/ electrolytic-cap-life（10℃ 法则+纹波注记）/ inductor-code-reader（解码三件套收官）/ ic-marking-decoder（丝印解读教学型：date code YYWW+前缀厂商线索，不做全量反查——芯查查数据库垄断）/ eseries-resistor-finder（E24/E96 最近值+两电阻串并联组合替代，独家功能）/ dppm-yield-calculator（DPPM+滚动良率+置信上限，IC 测试线）/ crystal-load-calculator / i2c-pullup-calculator（TI SLVA689）。
 
-**第二批（已于 2026-11-05 完成竞争验证并重组为第二十五批 12 款，详 docs/TOOL_BATCH25_RESEARCH_2026-11-05.md）**：grr-msa-calculator（在线交互中文零——搜索引擎都提示搜英文）/ cpk-process-capability / mtbf-fit-reliability（品牌专属垄断、通用换算无）/ opamp-gain-calculator（简体 Web 真空）/ buck-inductor-calculator（MPS/Coilcraft/TDK 品牌选型器错位：公式教学+纹波率）/ pcb-trace-width-calculator（IPC-2221+过孔）/ copper-thickness-converter（铜厚档+基铜成品铜+AWG）/ tl431-feedback-calculator（三芯片合并，吸收分压场景）/ rc-time-constant（曲线 SVG）/ **fuse-selector（新发现：保险丝选型厂商全是指南无计算器）** / **logic-ic-truth-table（新发现升格：74/4000 系列 30-40 型号零交互工具）** / timer-555-calculator（6+ 家红海，差异化三板斧不足则砍）。
+**第二批（已于 2026-11-05 完成竞争验证并重组为第二十五批 12 款，详 docs/TOOL_BATCH25_RESEARCH_2026-11-05.md；✅ 2026-11-06 全部落地，全站 804 款，见批次记录）**：grr-msa-calculator（在线交互中文零——搜索引擎都提示搜英文）/ cpk-process-capability / mtbf-fit-reliability（品牌专属垄断、通用换算无）/ opamp-gain-calculator（简体 Web 真空）/ buck-inductor-calculator（MPS/Coilcraft/TDK 品牌选型器错位：公式教学+纹波率）/ pcb-trace-width-calculator（IPC-2221+过孔）/ copper-thickness-converter（铜厚档+基铜成品铜+AWG）/ tl431-feedback-calculator（三芯片合并，吸收分压场景）/ rc-time-constant（曲线 SVG）/ **fuse-selector（新发现：保险丝选型厂商全是指南无计算器）** / **logic-ic-truth-table（新发现升格：74/4000 系列零交互工具——落地 39 型号）** / timer-555-calculator（红海差异化三板斧：SVG 电路重绘+反向求解+E12 吸附）。
 
 **弃选 4（本轮验证后定论）**：lc-resonance、impedance-reactance（各 6 家饱和）、voltage-divider（3+ 家并入 TL431）、adc-resolution（NTC 页模式三已实质覆盖）。
 
@@ -305,6 +305,10 @@ bitrate-calculator（视频码率/文件大小+OBS 推流档）· star-exposure-
 **配套**：personas 新增 hardware-engineer + electronics-repairer 两画像（客户群一比一映射，当前底账缺位）；collections 新增电子工程师设计台/传感器信号链/IC 测试质量台 3 专题+电子维修工作台 4→8 扩容；wiki 8 词条；推文 5 篇。导流形态（合作伙伴位 vs 结果区选型建议）待用户拍板，先上线积累收录再挂位。
 
 ## 批次记录
+
+---
+
+- 2026-11-06：**第二十五批落地**（电子行业线第二批·品质/模拟/保护/数字，全站 **804 款**）：12 款全部实施（GR&R/Cpk/MTBF-FIT/运放增益/Buck电感/PCB线宽/铜厚线规/TL431稳压反馈/RC时间常数/保险丝选型/555定时器/74·4000系列速查），全部零新依赖。toolIcons 补 CircuitBoard/PlugZap（总 264）。**personas 任务 16/12**（hw-engineer +5：运放/Buck/线宽铜厚/TL431/74系列；repair +3：保险丝/RC/555）；collections 电子设计台 7→13 款、IC 测试质量台 4→7 款、电子维修台 8→11 款；wiki 48→52（运放/MTBF/保险丝I²t/555 四词条）。sitemap 1506 URL、覆盖率 804/804=100%。**六 agent 三波交付，单测 400+ 全绿，规格笔误自纠 6 处**：A 组 AIAG K/d₂ 系数自核一致+c₄ 改 Lanczos 伽马精确计算+自揪空格解析真 bug；B 组**纠正规格书 Arrhenius 锚点（55→125℃/Ea0.7 实为 77.66 倍非 306）**+AFR 口径少 3 个数量级按 8.76e3 修正；C 组过孔公式恒等式证明（π·d·t）+oz 口径双源注明；D 组 AWG 5 锚点全过+纠正规格 TL431 手算误差（10.040k 非 10.020k）+"40mil/A 归 IPC 名下不准确"双列口径呈现；E 组**纠正规格 E96 锚点（98.8k 属 E192）**+INA 常数按 AD620 口径注明；F 组**勘误规格 555 测试向量 2 处（f≈986Hz 非 9.86kHz、D=53.4% 非 81.25%）**+logic-ic 39 型号以 Nexperia datasheet 一手 PDF 核验（自纠 CD4001 引脚排布与 7475 电源位两处记忆偏差，4001↔7402 不兼容警示入库）。12 页编译+SSR 200、9 关联路由 200、日志零 [500]。5 篇推文（含 fuse-mtbf 篇 Arrhenius 修正至 78 倍）覆盖率 100%。保池 3（tvs-selector/transformer-rewind/uart-baud-error）留第二十节。
 
 ---
 

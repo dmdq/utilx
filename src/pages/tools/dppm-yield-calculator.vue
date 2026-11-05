@@ -341,7 +341,8 @@
         <h2 class="text-2xl font-bold text-foreground mt-8 mb-4"><span class="text-primary mr-2">#</span>DPPM、FIT 与 AQL 的区别</h2>
         <ul class="list-disc pl-5 space-y-1.5 text-sm text-muted-foreground leading-relaxed mb-4">
           <li><span class="text-foreground font-medium">DPPM：</span>出厂缺陷率口径，管「这批货交出去之前」的质量水平，按只数计数。</li>
-          <li><span class="text-foreground font-medium">FIT：</span>现场可靠性口径，单位是每 10⁹ 器件小时的失效数，管「出货之后在用户手里」的随机失效与寿命行为，与 DPPM 不能直接换算。</li>
+          <li><span class="text-foreground font-medium">FIT：</span>现场可靠性口径，单位是每 10⁹ 器件小时的失效数，管「出货之后在用户手里」的随机失效与寿命行为，与 DPPM 不能直接换算——现场失效率换算与系统合成可用
+            <NuxtLink to="/tools/mtbf-fit-reliability" class="text-primary hover:underline">MTBF/FIT 可靠性换算</NuxtLink> 处理。</li>
           <li><span class="text-foreground font-medium">AQL：</span>抽样验收口径（GB/T 2828.1 / ISO 2859-1），管「用多大的抽检方案、按什么接收界限判定批合格」，是交易检验规则而不是质量水平本身。具体抽样方案可用
             <NuxtLink to="/tools/aql-sampling-calculator" class="text-primary hover:underline">AQL 抽样检验计算器</NuxtLink> 查询。</li>
         </ul>
@@ -689,7 +690,7 @@ const copyUpper = () => {
 const rolling = computed(() => rollingStats(rows.value))
 
 // ---------- 相关工具 ----------
-const relatedLinks = computed(() => ['aql-sampling-calculator', 'ab-sample-size-calculator', 'tolerance-fit-lookup']
+const relatedLinks = computed(() => ['aql-sampling-calculator', 'ab-sample-size-calculator', 'tolerance-fit-lookup', 'mtbf-fit-reliability']
   .map((id) => tools.find((t) => t.id === id))
   .filter(Boolean))
 </script>
