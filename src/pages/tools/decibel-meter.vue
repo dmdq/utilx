@@ -132,9 +132,18 @@
             <p class="text-xl font-mono font-bold text-primary">{{ minDbText }}</p>
           </div>
         </div>
-        <p class="text-[11px] text-muted-foreground">
-          统计为本次检测期间（自点击「开始检测」起）的累计结果；重新开始会自动清零。
-        </p>
+        <div class="flex items-center justify-between gap-2">
+          <p class="text-[11px] text-muted-foreground">
+            统计为本次检测期间（自点击「开始检测」起）的累计结果；重新开始会自动清零。
+          </p>
+          <div v-if="maxDb !== null && avgDb !== null && minDb !== null" class="flex items-center gap-2 flex-shrink-0">
+            <span v-if="copyStatus !== 'idle'" class="text-xs text-muted-foreground">{{ copyStatus === 'ok' ? '已复制' : '复制失败' }}</span>
+            <button
+              @click="copyDbStats"
+              class="px-2 py-1 border border-border text-xs text-foreground hover:bg-muted transition"
+            >复制统计</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -241,6 +250,7 @@ import {
 } from 'lucide-vue-next'
 import { useSeoMeta } from '#app'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
 import RelatedTools from '~/components/RelatedTools.vue'
 
 // ---------- SEO ----------
@@ -439,6 +449,54 @@ function tierChipClass(idx) {
   if (idx === 4) return 'bg-orange-100 text-orange-700 dark:bg-orange-950/60 dark:text-orange-300'
   if (idx === 3) return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-950/60 dark:text-yellow-300'
   return 'bg-primary/10 text-primary'
+}
+
+// ---------- 复制结果（clipboard API + execCommand fallback） ----------
+const copyStatus = ref('idle')
+
+let copyTimer = null
+function flashCopy(status) {
+  copyStatus.value = status
+  if (copyTimer !== null) clearTimeout(copyTimer)
+  copyTimer = setTimeout(() => {
+    copyStatus.value = 'idle'
+    copyTimer = null
+  }, 1600)
+}
+
+function buildStatsText() {
+  if (maxDb.value === null || avgDb.value === null || minDb.value === null) return ''
+  return [
+    '本次噪音检测统计：',
+    `最大：${maxDbText.value} dB`,
+    `平均：${avgDbText.value} dB`,
+    `最小：${minDbText.value} dB`
+  ].join('\n')
+}
+
+async function copyDbStats() {
+  const text = buildStatsText()
+  if (!text) return
+  try {
+    await navigator.clipboard.writeText(text)
+    flashCopy('ok')
+    trackEvent('工具结果', '复制', 'decibel-meter')
+  } catch (err) {
+    try {
+      const ta = document.createElement('textarea')
+      ta.value = text
+      ta.style.position = 'fixed'
+      ta.style.opacity = '0'
+      document.body.appendChild(ta)
+      ta.select()
+      const ok = document.execCommand('copy')
+      document.body.removeChild(ta)
+      flashCopy(ok ? 'ok' : 'fail')
+      if (ok) trackEvent('工具结果', '复制', 'decibel-meter')
+    } catch (err2) {
+      flashCopy('fail')
+    }
+  }
 }
 
 // ---------- 采集引擎（句柄全部非响应式） ----------

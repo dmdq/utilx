@@ -95,9 +95,18 @@
       <div class="lg:col-span-2 space-y-6">
         <!-- 核心对比 -->
         <div class="bg-card border border-border rounded-lg p-6">
-          <h2 class="text-lg font-semibold mb-4 flex items-center">
-            <BarChart3 class="w-5 h-5 mr-2 text-primary" /> 利息对比
-          </h2>
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <h2 class="text-lg font-semibold flex items-center">
+              <BarChart3 class="w-5 h-5 mr-2 text-primary" /> 利息对比
+            </h2>
+            <div v-if="plan.prepay" class="flex items-center gap-2">
+              <span v-if="copyStatus !== 'idle'" class="text-xs text-muted-foreground">{{ copyStatus === 'ok' ? '已复制' : '复制失败' }}</span>
+              <button
+                @click="copyPlanResult"
+                class="px-2 py-1 border border-border text-xs text-foreground hover:bg-muted transition"
+              >复制结果</button>
+            </div>
+          </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <div class="bg-muted/50 rounded-lg p-4 text-center">
               <p class="text-xs text-muted-foreground mb-1">不提前还款总利息</p>
@@ -194,6 +203,7 @@ import {
 import { useSeoMeta } from '#app'
 import { tools } from '~/data/tools'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
 import RelatedTools from '~/components/RelatedTools.vue'
 
 useSeoMeta({
@@ -365,4 +375,63 @@ const plan = computed(() => {
 
   return { totalInterest, currentPayment, remainingPrincipal, prepay: null, saving: null }
 })
+
+// ---------- 复制结果（clipboard API + execCommand fallback） ----------
+const copyStatus = ref('idle')
+
+let copyTimer = null
+function flashCopy(status) {
+  copyStatus.value = status
+  if (copyTimer !== null) clearTimeout(copyTimer)
+  copyTimer = setTimeout(() => {
+    copyStatus.value = 'idle'
+    copyTimer = null
+  }, 1600)
+}
+
+function buildPlanText() {
+  const p = plan.value
+  if (!p || !p.prepay) return ''
+  const typeLabel = repayType.value === 'principal' ? '等额本金' : '等额本息'
+  const modeLabel = prepayMode.value === 'shorten' ? '缩短年限' : '减少月供'
+  const lines = [
+    `提前还款对比（${typeLabel} · ${modeLabel}）`,
+    `贷款 ${loanWan.value} 万 · 年利率 ${ratePct.value}% · ${loanYears.value} 年 · 已还 ${paidMonths.value} 期 · 提前还款 ${prepayWan.value} 万`,
+    `不提前还款总利息：${fmtWan(p.totalInterest)} 万`,
+    `提前还款后总利息：${fmtWan(p.prepay.totalInterest)} 万`,
+    `节省利息：${fmtWan(p.saving)} 万`,
+    `当前月供：${fmtYuan(p.currentPayment)} 元`
+  ]
+  if (prepayMode.value === 'shorten') {
+    lines.push(`月供保持 ${fmtYuan(p.prepay.newPayment)} 元，剩余期限 ${remainingMonths.value} 期 → ${p.prepay.newMonths} 期（约 ${(p.prepay.newMonths / 12).toFixed(1)} 年）`)
+  } else {
+    lines.push(`新月供 ${fmtYuan(p.prepay.newPayment)} 元（省 ${fmtYuan(p.currentPayment - p.prepay.newPayment)} 元/月），剩余期限保持 ${remainingMonths.value} 期`)
+  }
+  return lines.join('\n')
+}
+
+async function copyPlanResult() {
+  const text = buildPlanText()
+  if (!text) return
+  try {
+    await navigator.clipboard.writeText(text)
+    flashCopy('ok')
+    trackEvent('工具结果', '复制', 'prepayment-calculator')
+  } catch (err) {
+    try {
+      const ta = document.createElement('textarea')
+      ta.value = text
+      ta.style.position = 'fixed'
+      ta.style.opacity = '0'
+      document.body.appendChild(ta)
+      ta.select()
+      const ok = document.execCommand('copy')
+      document.body.removeChild(ta)
+      flashCopy(ok ? 'ok' : 'fail')
+      if (ok) trackEvent('工具结果', '复制', 'prepayment-calculator')
+    } catch (err2) {
+      flashCopy('fail')
+    }
+  }
+}
 </script>

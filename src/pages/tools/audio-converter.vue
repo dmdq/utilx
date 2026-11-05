@@ -277,6 +277,7 @@ import {
 import { useSeoMeta } from '#app'
 import { tools } from '~/data/tools'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
 import RelatedTools from '~/components/RelatedTools.vue'
 
 // SEO
@@ -612,6 +613,7 @@ const convert = async () => {
     }
     resultBlob = blob
     resultInfo.value = { name: fileInfo.value.base + '-converted.' + fmt.ext, size: blob.size }
+    trackEvent('工具转化', '转换完成', 'audio-converter')
     statusText.value = ''
   } catch (err) {
     convertError.value = '转换失败：' + (err && err.message ? err.message : '未知错误')

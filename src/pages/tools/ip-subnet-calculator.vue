@@ -42,9 +42,18 @@
       <!-- 结果 -->
       <div v-if="result" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="bg-card border border-border rounded-lg p-6">
-          <h2 class="text-lg font-semibold mb-4 flex items-center">
-            <Info class="w-5 h-5 mr-2 text-primary" /> 网段信息
-          </h2>
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <h2 class="text-lg font-semibold flex items-center">
+              <Info class="w-5 h-5 mr-2 text-primary" /> 网段信息
+            </h2>
+            <div v-if="result" class="flex items-center gap-2">
+              <span v-if="copyStatus !== 'idle'" class="text-xs text-muted-foreground">{{ copyStatus === 'ok' ? '已复制' : '复制失败' }}</span>
+              <button
+                @click="copySubnetResult"
+                class="px-2 py-1 border border-border text-xs text-foreground hover:bg-muted transition"
+              >复制结果</button>
+            </div>
+          </div>
           <div class="space-y-2 text-sm">
             <div v-for="row in infoRows" :key="row.label" class="flex justify-between py-2 border-b border-border/50 last:border-0">
               <span class="text-muted-foreground">{{ row.label }}</span>
@@ -140,6 +149,7 @@ import {
 import { useSeoMeta } from '#app'
 import { tools } from '~/data/tools'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
 import RelatedTools from '~/components/RelatedTools.vue'
 
 useSeoMeta({
@@ -264,6 +274,60 @@ const infoRows = computed(() => {
     { label: '总地址数', value: r.total.toLocaleString() }
   ]
 })
+
+// ---------- 复制结果（clipboard API + execCommand fallback） ----------
+const copyStatus = ref('idle')
+
+let copyTimer = null
+function flashCopy(status) {
+  copyStatus.value = status
+  if (copyTimer !== null) clearTimeout(copyTimer)
+  copyTimer = setTimeout(() => {
+    copyStatus.value = 'idle'
+    copyTimer = null
+  }, 1600)
+}
+
+function buildSubnetText() {
+  const r = result.value
+  if (!r) return ''
+  return [
+    `输入：${r.input}`,
+    `网络地址：${r.network}/${r.prefix}`,
+    `广播地址：${r.broadcast}`,
+    `子网掩码：${r.mask}`,
+    `通配符：${r.wildcard}`,
+    `第一个可用主机：${r.firstHost}`,
+    `最后一个可用主机：${r.lastHost}`,
+    `总地址数：${r.total.toLocaleString()}`,
+    `可用主机数：${r.usable.toLocaleString()}`
+  ].join('\n')
+}
+
+async function copySubnetResult() {
+  const text = buildSubnetText()
+  if (!text) return
+  try {
+    await navigator.clipboard.writeText(text)
+    flashCopy('ok')
+    trackEvent('工具结果', '复制', 'ip-subnet-calculator')
+  } catch (err) {
+    try {
+      const ta = document.createElement('textarea')
+      ta.value = text
+      ta.style.position = 'fixed'
+      ta.style.opacity = '0'
+      document.body.appendChild(ta)
+      ta.select()
+      const ok = document.execCommand('copy')
+      document.body.removeChild(ta)
+      flashCopy(ok ? 'ok' : 'fail')
+      if (ok) trackEvent('工具结果', '复制', 'ip-subnet-calculator')
+    } catch (err2) {
+      flashCopy('fail')
+    }
+  }
+}
 
 // ---------- 子网划分 ----------
 const prefixOptions = computed(() => {

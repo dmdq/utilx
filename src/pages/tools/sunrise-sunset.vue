@@ -125,10 +125,19 @@
 
         <!-- 时间卡片 -->
         <div class="bg-card border border-border rounded-lg p-6">
-          <h2 class="text-lg font-semibold mb-4 flex items-center">
-            <Clock class="w-5 h-5 mr-2 text-primary" /> 计算结果
-            <span v-if="activeCity" class="text-sm font-normal text-muted-foreground ml-2">{{ activeCity }}</span>
-          </h2>
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <h2 class="text-lg font-semibold flex items-center">
+              <Clock class="w-5 h-5 mr-2 text-primary" /> 计算结果
+              <span v-if="activeCity" class="text-sm font-normal text-muted-foreground ml-2">{{ activeCity }}</span>
+            </h2>
+            <div v-if="result" class="flex items-center gap-2">
+              <span v-if="copyStatus !== 'idle'" class="text-xs text-muted-foreground">{{ copyStatus === 'ok' ? '已复制' : '复制失败' }}</span>
+              <button
+                @click="copySunResult"
+                class="px-2 py-1 border border-border text-xs text-foreground hover:bg-muted transition"
+              >复制结果</button>
+            </div>
+          </div>
 
           <div v-if="inputError" class="py-10 text-center">
             <MapPin class="w-10 h-10 mx-auto mb-3 text-muted-foreground/50" />
@@ -259,6 +268,7 @@ import {
 import { useSeoMeta } from '#app'
 import { tools } from '~/data/tools'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
 import RelatedTools from '~/components/RelatedTools.vue'
 
 // SEO
@@ -481,6 +491,53 @@ const result = computed(() => {
     return null
   }
 })
+
+// ---------- 复制结果（clipboard API + execCommand fallback） ----------
+const copyStatus = ref('idle')
+
+let copyTimer = null
+function flashCopy(status) {
+  copyStatus.value = status
+  if (copyTimer !== null) clearTimeout(copyTimer)
+  copyTimer = setTimeout(() => {
+    copyStatus.value = 'idle'
+    copyTimer = null
+  }, 1600)
+}
+
+function buildSunText() {
+  const r = result.value
+  if (!r) return ''
+  const place = activeCity.value || `${lat.value}, ${lng.value}`
+  if (r.polar === 'day') return `${place} ${dateStr.value}：极昼，全天白昼（昼长 24小时）`
+  if (r.polar === 'night') return `${place} ${dateStr.value}：极夜，全天黑夜（昼长 0小时）`
+  return `${place} ${dateStr.value}：日出 ${r.sunrise}，日落 ${r.sunset}，昼长 ${r.dayLength}`
+}
+
+async function copySunResult() {
+  const text = buildSunText()
+  if (!text) return
+  try {
+    await navigator.clipboard.writeText(text)
+    flashCopy('ok')
+    trackEvent('工具结果', '复制', 'sunrise-sunset')
+  } catch (err) {
+    try {
+      const ta = document.createElement('textarea')
+      ta.value = text
+      ta.style.position = 'fixed'
+      ta.style.opacity = '0'
+      document.body.appendChild(ta)
+      ta.select()
+      const ok = document.execCommand('copy')
+      document.body.removeChild(ta)
+      flashCopy(ok ? 'ok' : 'fail')
+      if (ok) trackEvent('工具结果', '复制', 'sunrise-sunset')
+    } catch (err2) {
+      flashCopy('fail')
+    }
+  }
+}
 
 // ---------- 图形化条段 ----------
 const pct = (min) => {

@@ -220,6 +220,7 @@ import {
 import { useSeoMeta } from '#app'
 import { tools } from '~/data/tools'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
 import RelatedTools from '~/components/RelatedTools.vue'
 
 // SEO
@@ -490,6 +491,7 @@ const finishRecording = () => {
     resultUrl.value = URL.createObjectURL(blob)
     resultSize.value = blob.size
     resultMime.value = mime
+    trackEvent('工具转化', '录制完成', 'screen-recorder')
   }
   chunks = []
   cleanupStreams()

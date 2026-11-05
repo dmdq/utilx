@@ -132,7 +132,16 @@
             <h2 class="text-lg font-semibold flex items-center">
               <Percent class="w-5 h-5 mr-2 text-primary" /> 换算结果
             </h2>
-            <span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-medium">{{ directionText }}</span>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-medium">{{ directionText }}</span>
+              <template v-if="result">
+                <span v-if="copyStatus !== 'idle'" class="text-xs text-muted-foreground">{{ copyStatus === 'ok' ? '已复制' : '复制失败' }}</span>
+                <button
+                  @click="copyVatResult"
+                  class="px-2 py-1 border border-border text-xs text-foreground hover:bg-muted transition"
+                >复制结果</button>
+              </template>
+            </div>
           </div>
 
           <!-- 三大结果卡 -->
@@ -303,6 +312,7 @@ import {
 } from 'lucide-vue-next'
 import { useSeoMeta } from '#app'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
 import RelatedTools from '~/components/RelatedTools.vue'
 
 // ---------- SEO ----------
@@ -581,6 +591,54 @@ function resetForm() {
 }
 
 const toggleSeoContent = () => { seoContentVisible.value = !seoContentVisible.value }
+
+// ---------- 复制结果（clipboard API + execCommand fallback） ----------
+const copyStatus = ref('idle')
+
+let copyTimer = null
+function flashCopy(status) {
+  copyStatus.value = status
+  if (copyTimer !== null) clearTimeout(copyTimer)
+  copyTimer = setTimeout(() => {
+    copyStatus.value = 'idle'
+    copyTimer = null
+  }, 1600)
+}
+
+function buildResultText() {
+  const r = result.value
+  if (!r) return ''
+  const rate = selectedRate.value.label
+  if (r.known === 'gross') {
+    return `含税价 → 不含税价（税率 ${rate}）：含税 ${fmtMoney(r.gross)} 元，不含税 ${fmtMoney(r.net)} 元，税额 ${fmtMoney(r.tax)} 元`
+  }
+  return `不含税价 → 含税价（税率 ${rate}）：不含税 ${fmtMoney(r.net)} 元，税额 ${fmtMoney(r.tax)} 元，含税 ${fmtMoney(r.gross)} 元`
+}
+
+async function copyVatResult() {
+  const text = buildResultText()
+  if (!text) return
+  try {
+    await navigator.clipboard.writeText(text)
+    flashCopy('ok')
+    trackEvent('工具结果', '复制', 'vat-calculator')
+  } catch (err) {
+    try {
+      const ta = document.createElement('textarea')
+      ta.value = text
+      ta.style.position = 'fixed'
+      ta.style.opacity = '0'
+      document.body.appendChild(ta)
+      ta.select()
+      const ok = document.execCommand('copy')
+      document.body.removeChild(ta)
+      flashCopy(ok ? 'ok' : 'fail')
+      if (ok) trackEvent('工具结果', '复制', 'vat-calculator')
+    } catch (err2) {
+      flashCopy('fail')
+    }
+  }
+}
 
 onMounted(() => {
   addRecentTool('vat-calculator')

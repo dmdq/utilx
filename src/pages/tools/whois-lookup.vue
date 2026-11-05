@@ -467,6 +467,8 @@
         </NuxtLink>
       </div>
     </section>
+
+    <RelatedTools :currentToolId="'whois-lookup'" :category="'network'" />
   </div>
 </template>
 
@@ -482,6 +484,8 @@ import {
 import { tools } from '~/data/tools'
 import { categories } from '~/data/categories'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
+import RelatedTools from '~/components/RelatedTools.vue'
 
 
 
@@ -492,6 +496,61 @@ useSeoMeta({
     { name: 'description', content: '免费在线WHOIS查询工具，查询域名的注册信息、注册商、DNS服务器、到期时间等详细信息。支持批量查询，数据本地处理，安全可靠。' },
     { name: 'keywords', content: 'WHOIS,域名查询,域名信息,注册商,DNS,域名到期,批量查询,域名WHOIS' }
   ]
+})
+
+// JSON-LD 结构化数据（WebApplication + BreadcrumbList + FAQPage）
+useHead({
+  script: [{
+    type: 'application/ld+json',
+    children: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebApplication',
+          name: 'WHOIS查询',
+          url: 'https://www.util.cn/tools/whois-lookup/',
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Any',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
+          featureList: [
+            '域名注册信息查询（注册人、注册商、注册/到期时间）',
+            'DNS 服务器与域名状态展示',
+            '批量查询（每行一个域名，最多 10 个）',
+            '查询结果导出 JSON',
+            '查询历史本地保存'
+          ]
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: '首页', item: 'https://www.util.cn/' },
+            { '@type': 'ListItem', position: 2, name: '网络工具', item: 'https://www.util.cn/network/' },
+            { '@type': 'ListItem', position: 3, name: 'WHOIS查询', item: 'https://www.util.cn/tools/whois-lookup/' }
+          ]
+        },
+        {
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '为什么有些域名的 WHOIS 信息不完整？',
+              acceptedAnswer: { '@type': 'Answer', text: '通常是因为域名启用了隐私保护服务（Whois Privacy Protection），注册商会在 WHOIS 数据库中显示代理信息而不是真实注册人信息，这是 ICANN 允许的合法做法。' }
+            },
+            {
+              '@type': 'Question',
+              name: 'WHOIS 查询准确吗？',
+              acceptedAnswer: { '@type': 'Answer', text: 'WHOIS 信息由域名注册商更新，可能存在一定延迟，部分信息需要 24-48 小时才能同步；不同注册商的 WHOIS 服务器返回格式也可能不同。' }
+            },
+            {
+              '@type': 'Question',
+              name: '可以查询所有域名后缀吗？',
+              acceptedAnswer: { '@type': 'Answer', text: '支持查询大多数主流通用顶级域名（gTLD）和国家代码顶级域名（ccTLD），个别特殊后缀可能需要通过专门的 WHOIS 服务器查询。' }
+            }
+          ]
+        }
+      ]
+    })
+  }]
 })
 
 const router = useRouter()
@@ -608,6 +667,7 @@ const queryWhois = async () => {
     }
 
     whoisData.value = formattedData
+    trackEvent('工具转化', '查询成功', 'whois-lookup')
 
     // 添加到历史记录
     addToHistory(fullDomain, formattedData.registrar)
@@ -778,6 +838,7 @@ const copyInfo = () => {
 
   navigator.clipboard.writeText(text).then(() => {
     // 这里可以添加复制成功的提示
+    trackEvent('工具结果', '复制', 'whois-lookup')
   })
 }
 

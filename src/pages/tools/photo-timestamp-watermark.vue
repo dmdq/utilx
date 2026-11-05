@@ -254,6 +254,7 @@ import {
 import { useSeoMeta } from '#app'
 import { tools } from '~/data/tools'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
 import RelatedTools from '~/components/RelatedTools.vue'
 
 // ---------- 纯函数（可脱离浏览器单测） ----------
@@ -589,6 +590,7 @@ const downloadResult = () => {
     const a = document.createElement('a')
     a.href = url
     a.download = `${base}-stamp.${ext}`
+    trackEvent('工具转化', '导出图片', 'photo-timestamp-watermark')
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)

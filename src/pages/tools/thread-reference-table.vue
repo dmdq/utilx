@@ -336,6 +336,7 @@ import {
 } from 'lucide-vue-next'
 import { useSeoMeta } from '#app'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
 import RelatedTools from '~/components/RelatedTools.vue'
 
 // ---------- SEO ----------
@@ -703,6 +704,7 @@ async function copyTsv() {
   try {
     await navigator.clipboard.writeText(text)
     flashCopy('ok')
+    trackEvent('工具结果', '复制', 'thread-reference-table')
   } catch (err) {
     try {
       const ta = document.createElement('textarea')
@@ -714,6 +716,7 @@ async function copyTsv() {
       const ok = document.execCommand('copy')
       document.body.removeChild(ta)
       flashCopy(ok ? 'ok' : 'fail')
+      if (ok) trackEvent('工具结果', '复制', 'thread-reference-table')
     } catch (err2) {
       flashCopy('fail')
     }

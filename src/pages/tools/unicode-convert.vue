@@ -255,13 +255,82 @@ C/C++: \u4F60\u597D 或 \U00004F60\U0000597D</pre>
         </div>
       </div>
     </div>
+
+    <!-- SEO 内容区 -->
+    <div class="relative mt-12">
+      <button
+        @click="toggleSeoContent"
+        class="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
+        aria-label="展开或收起说明"
+      >
+        <ChevronUp v-if="seoContentVisible" class="w-5 h-5" />
+        <ChevronDown v-else class="w-5 h-5" />
+      </button>
+      <div v-show="seoContentVisible" class="bg-card border border-border rounded-lg p-6 mb-12">
+        <h2 class="text-2xl font-bold text-foreground mb-4"><span class="text-primary mr-2">#</span>Unicode 码点转换是什么？</h2>
+        <p class="text-sm text-muted-foreground mb-4 leading-relaxed">
+          Unicode 给世界上每个字符分配一个唯一编号，叫「码点」，书面写法是 U+ 加四位到六位十六进制：
+          U+4E2D 就是汉字「中」，U+1F30D 是地球 Emoji 🌍，读作「U 加 4E2D」。
+          同一个码点又有十进制（20013）、十六进制（4E2D）和编程语言里的 \u 转义（\u4E2D）几种表达，
+          它们指向同一个字符。日志里出现 \uXXXX、接口返回一串数字码点、或要把文本转成转义序列写进代码时，
+          都需要在这些表示之间来回转换——本页输入任意一路，实时得到其余三路输出与每个字符的详情表。
+        </p>
+
+        <h2 class="text-2xl font-bold text-foreground mt-8 mb-4"><span class="text-primary mr-2">#</span>\u 转义序列在哪里用？</h2>
+        <p class="text-sm text-muted-foreground leading-relaxed">
+          \uXXXX 是各编程语言通用的字符转义写法：JavaScript 字符串和 JSON 文件里最常见（JSON 规范只支持 \u，不支持 \U），
+          Java 源码的资源文件、C/C++ 的宽字符串也用它。Python 同时认 \uXXXX 和八位 \UXXXXXXXX；
+          超出 BMP（U+10000 以上）的字符在 \uXXXX 四位写法里放不下，要用代理对（两个连续的 \uXXXX）或大写的 \U 写法。
+          实际场景包括：把接口返回的 \u 转义还原成中文阅读、排查 JSON 配置里的隐藏字符、
+          以及把中文写进只允许 ASCII 的旧系统配置时转成 \u 序列。
+        </p>
+
+        <h2 class="text-2xl font-bold text-foreground mt-8 mb-4"><span class="text-primary mr-2">#</span>UTF-8 与 UTF-16 有什么差别？为什么 Emoji 算两个码元？</h2>
+        <p class="text-sm text-muted-foreground leading-relaxed">
+          UTF-8 是变长字节编码：ASCII 字符占 1 字节，汉字多数占 3 字节，Emoji 占 4 字节，与互联网兼容性好，是网页和存储的主流；
+          UTF-16 用 16 位码元做单位：BMP 内字符（含常用汉字）1 个码元，之外的用高低代理对共 2 个码元。
+          所以 🌍 这类 Emoji 在 UTF-16 里是两个码元——JavaScript 的 length、charAt 按码元计数，
+          '🌍'.length === 2 就是这么来的；要用 for...of 或 codePointAt 才能按真正的码点遍历。
+          这也是为什么按 charCodeAt 拆分 Emoji 会得到 U+D83C 这类「代理区」码点，拼接回去才还原字符。
+        </p>
+
+        <h2 class="text-2xl font-bold text-foreground mt-8 mb-4"><span class="text-primary mr-2">#</span>组合字符与 ZWJ Emoji 序列</h2>
+        <p class="text-sm text-muted-foreground leading-relaxed">
+          「看起来是一个字符」不一定是一个码点：é 可以是一个预制码点 U+00E9，也可以是字母 e（U+0065）加组合重音符 U+0301，
+          后者叫组合字符序列，两种写法视觉相同但码点不同，比较字符串前通常先做 NFC 规范化。
+          复杂 Emoji 更是靠零宽连接符 ZWJ（U+200D）把多个基础 Emoji 拼成一个：👋 + ZWJ + 🏠 = 👋🏠（挥手的人），
+          家庭、国旗、职业类 Emoji 多是这种序列。判断「字符数」时先想清楚按字节、码元还是码点数，
+          三者在含中文和 Emoji 的文本里差异很大。
+        </p>
+
+        <h2 class="text-2xl font-bold text-foreground mt-8 mb-4"><span class="text-primary mr-2">#</span>常见问题 (FAQ)</h2>
+        <div class="space-y-4">
+          <div>
+            <h3 class="text-base font-semibold text-foreground">乱码是怎么产生的？</h3>
+            <p class="text-sm text-muted-foreground mt-1">绝大多数乱码是「编码与解码用了不同的字符集」：UTF-8 字节流被按 GBK 解读会变成「娴嬪搷」类天书，被按 Latin-1 解读则常见 Ã© 这类重音符组合；反过来把 GBK 文本标成 UTF-8 传输就会丢成问号。修正方向是确认源头编码再统一转换，而不是反复转码——已经按错误编码存储的文本，部分字节会永久丢失，无法完全还原。</p>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold text-foreground">一个汉字对应几个码点？</h3>
+            <p class="text-sm text-muted-foreground mt-1">常用汉字（如「中」「国」）都在 BMP 平面内，一个字就是一个码点（U+4E2D 这类）；在 UTF-8 里占 3 字节、UTF-16 里占 1 个码元。而扩展 B 区之后的生僻字（如「𠀀」、部分人名用字）在 U+20000 以上，一个字仍是一个码点，但 UTF-8 占 4 字节、UTF-16 要用一对代理码元，JavaScript 里 length 会数成 2。以 codePointAt / for...of 按「字」处理最可靠。</p>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold text-foreground">怎么把 \u 转义序列转回中文？</h3>
+            <p class="text-sm text-muted-foreground mt-1">把 \u 开头的文本粘进本页，输入格式选「JavaScript 转义」，普通文本输出栏即是还原后的中文；Python 的 \UXXXXXXXX 八位写法同样支持。代码里也可以用 JSON.parse('"\\u4F60\\u597D"') 或正则逐个把 \\u([0-9a-fA-F]{4}) 替换成 String.fromCodePoint(parseInt(m, 16)) 来还原。注意四位 \uXXXX 遇到 Emoji 这类增补平面字符时是两个连续转义，要按代理对成对解析。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <RelatedTools :currentToolId="'unicode-convert'" :category="'encode'" />
   </div>
 </template>
 
 <script setup>
 import { ref, watch, computed } from 'vue'
-import { Zap, Hash, Type, FileText, ArrowRight } from 'lucide-vue-next'
+import { Zap, Hash, Type, FileText, ArrowRight, ChevronUp, ChevronDown } from 'lucide-vue-next'
+import { trackEvent } from '~/utils/track'
 import Breadcrumb from '~/components/Breadcrumb.vue'
+import RelatedTools from '~/components/RelatedTools.vue'
 
 // 分类信息
 const category = { id: 'encode', name: '编码解码', description: '编码解码工具集合' }
@@ -283,6 +352,7 @@ const copied = ref({
   javascript: false
 })
 const unicodeDetails = ref([])
+const seoContentVisible = ref(true)
 
 // Unicode 字符分类
 const unicodeCategories = {
@@ -539,6 +609,7 @@ const copyOutput = async (type) => {
   try {
     await navigator.clipboard.writeText(outputs.value[type])
     copied.value[type] = true
+    trackEvent('工具结果', '复制', 'unicode-convert')
     setTimeout(() => {
       copied.value[type] = false
     }, 2000)
@@ -590,14 +661,76 @@ watch([inputText, inputFormat, separator], () => {
   convert()
 })
 
+const toggleSeoContent = () => { seoContentVisible.value = !seoContentVisible.value }
+
 // SEO配置
 useSeoMeta({
-  title: 'Unicode转换器 - 在线Unicode编码转换工具',
-  description: '免费在线Unicode转换工具，支持文本、Unicode码点、转义序列之间的相互转换，支持多种编程语言格式。',
-  keywords: ['unicode', '转换', 'converter', '码点', '转义序列', '在线工具', '编码转换']
+  title: 'Unicode编码转换 - 在线\\u转义转中文/码点/十六进制转换工具',
+  description: '免费在线 Unicode 编码转换工具，普通文本、十进制码点、十六进制码点与 \\uXXXX 转义序列四路实时互转，支持 JavaScript/Python/Java/C 转义格式与分隔符自定义，附每字符 UTF-8 字节与码点详情表，转中文、查 Emoji 码点必备，纯浏览器本地运行不上传',
+  keywords: 'unicode编码转换,unicode转中文,\\u转中文,unicode转十六进制,unicode码点查询,\\u4E2D\\u6587转换,unicode转义序列,编码转换在线工具,emoji码点,UTF-8 UTF-16',
+  author: '有条工具',
+  ogTitle: 'Unicode编码转换 - 在线\\u转义转中文/码点/十六进制转换工具 | 有条工具',
+  ogDescription: '文本、Unicode 码点、十六进制与 \\u 转义序列四路实时互转，支持多语言转义格式。',
+  ogUrl: 'https://www.util.cn/tools/unicode-convert',
+  ogType: 'website',
+  twitterCard: 'summary_large_image'
 })
 
-
+// JSON-LD 结构化数据
+useHead({
+  script: [{
+    type: 'application/ld+json',
+    children: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebApplication',
+          name: 'Unicode编码转换工具',
+          url: 'https://www.util.cn/tools/unicode-convert',
+          applicationCategory: 'UtilitiesApplication',
+          operatingSystem: 'Any',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
+          featureList: [
+            '普通文本 → 十进制码点 / 十六进制码点 / \\u 转义四路实时互转',
+            '支持 JavaScript、Python、Java、C/C++ 转义格式输入',
+            '码点分隔符自定义（空格、逗号等）',
+            '每字符 UTF-8 字节与 Unicode 分类详情表',
+            '中文、Emoji 代理对场景说明',
+            '本地运行不上传数据'
+          ]
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: '首页', item: 'https://www.util.cn/' },
+            { '@type': 'ListItem', position: 2, name: '编码解码', item: 'https://www.util.cn/encode/' },
+            { '@type': 'ListItem', position: 3, name: 'Unicode编码转换', item: 'https://www.util.cn/tools/unicode-convert/' }
+          ]
+        },
+        {
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '乱码是怎么产生的？',
+              acceptedAnswer: { '@type': 'Answer', text: '绝大多数乱码是编码与解码用了不同字符集：UTF-8 字节流被按 GBK 解读会变成「娴嬪搷」类天书，被按 Latin-1 解读常见 Ã© 组合；修正方向是确认源头编码再统一转换，已按错误编码存储的部分字节会永久丢失，无法完全还原。' }
+            },
+            {
+              '@type': 'Question',
+              name: '一个汉字对应几个码点？',
+              acceptedAnswer: { '@type': 'Answer', text: '常用汉字都在 BMP 平面内，一个字一个码点，UTF-8 占 3 字节、UTF-16 占 1 个码元；扩展 B 区之后的生僻字在 U+20000 以上，一个字仍是一个码点，但 UTF-8 占 4 字节、UTF-16 需要一对代理码元，JavaScript 的 length 会数成 2。' }
+            },
+            {
+              '@type': 'Question',
+              name: '怎么把 \\u 转义序列转回中文？',
+              acceptedAnswer: { '@type': 'Answer', text: '把 \\u 开头的文本粘进本页并选择「JavaScript 转义」输入格式，普通文本输出栏即还原后的中文；代码里可用 JSON.parse 或正则把 \\uXXXX 替换成 String.fromCodePoint(parseInt(m,16))。注意增补平面字符（Emoji 等）是两个连续 \\uXXXX 代理对，要成对解析。' }
+            }
+          ]
+        }
+      ]
+    })
+  }]
+})
 </script>
 
 <style scoped>

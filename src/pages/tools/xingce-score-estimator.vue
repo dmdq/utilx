@@ -77,21 +77,30 @@
       <div class="flex flex-col h-full">
         <div class="flex items-center justify-between mb-3">
           <label class="text-sm font-medium text-foreground">估分结果</label>
-          <!-- 两套分值方案切换 -->
-          <div class="flex gap-1.5">
-            <button
-              v-for="scheme in schemeOptions"
-              :key="scheme.key"
-              @click="currentScheme = scheme.key"
-              :class="[
-                'px-3 py-1.5 rounded-lg text-xs font-medium transition',
-                currentScheme === scheme.key
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-muted hover:bg-muted/80 text-muted-foreground'
-              ]"
-            >
-              {{ scheme.label }}
-            </button>
+          <!-- 两套分值方案切换 + 复制结果 -->
+          <div class="flex items-center gap-2">
+            <div class="flex gap-1.5">
+              <button
+                v-for="scheme in schemeOptions"
+                :key="scheme.key"
+                @click="currentScheme = scheme.key"
+                :class="[
+                  'px-3 py-1.5 rounded-lg text-xs font-medium transition',
+                  currentScheme === scheme.key
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-muted hover:bg-muted/80 text-muted-foreground'
+                ]"
+              >
+                {{ scheme.label }}
+              </button>
+            </div>
+            <template v-if="hasAnswered">
+              <span v-if="copyStatus !== 'idle'" class="text-xs text-muted-foreground">{{ copyStatus === 'ok' ? '已复制' : '复制失败' }}</span>
+              <button
+                @click="copyScoreResult"
+                class="px-2 py-1 border border-border text-xs text-foreground hover:bg-muted transition"
+              >复制结果</button>
+            </template>
           </div>
         </div>
 
@@ -241,6 +250,7 @@ import { AlertTriangle, ChevronUp, ChevronDown } from 'lucide-vue-next'
 import { useSeoMeta } from '#app'
 import { tools } from '~/data/tools'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
 import RelatedTools from '~/components/RelatedTools.vue'
 
 // SEO
@@ -417,4 +427,55 @@ const totalScore = computed(() => {
   }
   return (Math.round(score * 10) / 10).toFixed(1)
 })
+
+// ---------- 复制结果（clipboard API + execCommand fallback） ----------
+const copyStatus = ref('idle')
+
+let copyTimer = null
+function flashCopy(status) {
+  copyStatus.value = status
+  if (copyTimer !== null) clearTimeout(copyTimer)
+  copyTimer = setTimeout(() => {
+    copyStatus.value = 'idle'
+    copyTimer = null
+  }, 1600)
+}
+
+function buildScoreText() {
+  if (!hasAnswered.value) return ''
+  const lines = [
+    `行测估分（${currentSchemeLabel.value} · 100 分制）`,
+    `总分：${totalScore.value}`
+  ]
+  for (const item of moduleScoreRows.value) {
+    lines.push(`${item.label}：对 ${item.correct}/${item.total}，正确率 ${item.accuracy}%，得分 ${item.scoreText}`)
+  }
+  lines.push(`共答对 ${totalCorrect.value} / ${grandTotal.value} 题 · 总正确率 ${overallAccuracy.value}%`)
+  return lines.join('\n')
+}
+
+async function copyScoreResult() {
+  const text = buildScoreText()
+  if (!text) return
+  try {
+    await navigator.clipboard.writeText(text)
+    flashCopy('ok')
+    trackEvent('工具结果', '复制', 'xingce-score-estimator')
+  } catch (err) {
+    try {
+      const ta = document.createElement('textarea')
+      ta.value = text
+      ta.style.position = 'fixed'
+      ta.style.opacity = '0'
+      document.body.appendChild(ta)
+      ta.select()
+      const ok = document.execCommand('copy')
+      document.body.removeChild(ta)
+      flashCopy(ok ? 'ok' : 'fail')
+      if (ok) trackEvent('工具结果', '复制', 'xingce-score-estimator')
+    } catch (err2) {
+      flashCopy('fail')
+    }
+  }
+}
 </script>

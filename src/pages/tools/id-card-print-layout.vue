@@ -198,6 +198,7 @@ import {
 import { useSeoMeta } from '#app'
 import { tools } from '~/data/tools'
 import { addRecentTool } from '~/composables/useTools'
+import { trackEvent } from '~/utils/track'
 import RelatedTools from '~/components/RelatedTools.vue'
 
 // SEO
@@ -372,6 +373,7 @@ const onEmblemChange = async (event) => {
 // ---------- 打印与导出 ----------
 const printPage = () => {
   if (!canExport.value) return
+  trackEvent('工具转化', '打印', 'id-card-print-layout')
   window.print()
 }
 
@@ -438,6 +440,7 @@ const exportJpeg = async () => {
     link.download = '身份证复印件排版_' + stamp + '.jpg'
     link.href = canvas.toDataURL('image/jpeg', 0.92)
     link.click()
+    trackEvent('工具转化', '下载', 'id-card-print-layout')
   } finally {
     exporting.value = false
   }
