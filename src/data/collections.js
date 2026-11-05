@@ -193,7 +193,7 @@ export const collections = [
     scene: '机加工、建筑施工、家装安装的师傅与预算员',
     icon: 'Wrench',
     description: '螺纹底孔、钢筋米重、空调匹数、材料算量，再到公差配合、齿轮模数、轴承型号与硬度换算——从图纸到报价的车间速查台。',
-    tools: ['thread-reference-table', 'rebar-weight-calculator', 'ac-btu-calculator', 'tile-calculator', 'tolerance-fit-lookup', 'gear-module-calculator', 'bearing-lookup', 'hardness-converter'],
+    tools: ['thread-reference-table', 'rebar-weight-calculator', 'ac-btu-calculator', 'tile-calculator', 'tolerance-fit-lookup', 'gear-module-calculator', 'bearing-lookup', 'hardness-converter', 'bolt-torque-table', 'spring-rate', 'pneumatic-cylinder', 'hydraulic-force', 'gear-ratio-reducer', 'chain-sprocket', 'sandpaper-grit'],
     workflow: [
       '攻丝前查螺纹底孔：M8 打 6.8、英制换 TPI，NPT 和 G 别再拧一起',
       '钢筋下料按规格清单累加吨位，理论米重对照过磅偏差心里有数',
@@ -210,7 +210,7 @@ export const collections = [
     scene: '拍风光玩长焦的摄影者与折腾影音室声学的人',
     icon: 'Aperture',
     description: '景深超焦距、频率波长、混响时间、人声分离——光路和声路里的物理账，都在浏览器本地算。',
-    tools: ['depth-of-field-calculator', 'audio-frequency-calculator', 'room-reverb-calculator', 'vocal-remover'],
+    tools: ['depth-of-field-calculator', 'audio-frequency-calculator', 'room-reverb-calculator', 'vocal-remover', 'macro-magnification', 'shutter-angle', 'spl-distance', 'delay-time-ms'],
     workflow: [
       '风光片对焦：算超焦距，"对 H 得半 H 到无穷"直接按计算器验证',
       '布音箱、做倒相箱先算波长与 1/4 波长，房间驻波基频一目了然',
@@ -242,7 +242,7 @@ export const collections = [
     scene: '焊电源板、修功放、组锂电池的电子爱好者与维修工',
     icon: 'Cpu',
     description: '电机电容换件、保险丝选型、电解电容寿命、色环/标号/丝印解码、555 与 RC 排故、电池组配组——维修台上最高频的换算，本地计算不漏料。',
-    tools: ['motor-capacitor-sizer', 'fuse-selector', 'electrolytic-cap-life', 'inductor-code-reader', 'ic-marking-decoder', 'timer-555-calculator', 'rc-time-constant', 'battery-pack-calculator', 'capacitor-code-reader', 'resistor-color-code', 'ohms-law-calculator'],
+    tools: ['motor-capacitor-sizer', 'fuse-selector', 'electrolytic-cap-life', 'inductor-code-reader', 'ic-marking-decoder', 'timer-555-calculator', 'rc-time-constant', 'relay-driver-calc', 'optocoupler-resistor', 'transformer-rewind', 'uart-baud-error', 'led-array-planner', 'battery-pack-calculator', 'capacitor-code-reader', 'resistor-color-code', 'ohms-law-calculator'],
     workflow: [
       '电机嗡嗡响不转：先用电机电容选型器算启动/运转容量，按档位换 CBB60',
       '整机不通电先查保险丝：按 UL/IEC 口径与 I²t 校验选对额定值再换',
@@ -363,7 +363,7 @@ export const collections = [
     scene: '画原理图、选元件、算热设计到打样验收的硬件工程师',
     icon: 'Cpu',
     description: '晶振负载电容、I2C 上拉、E 系列阻值替代、运放增益、Buck 电感、线宽铜厚、稳压反馈、散热结温——打样前的高频小计算，公式口径注明来源，全部本地算。',
-    tools: ['crystal-load-calculator', 'i2c-pullup-calculator', 'eseries-resistor-finder', 'opamp-gain-calculator', 'buck-inductor-calculator', 'pcb-trace-width-calculator', 'copper-thickness-converter', 'tl431-feedback-calculator', 'rc-time-constant', 'heatsink-calculator', 'ntc-thermistor-calculator', 'crc-calculator', 'bit-calculator'],
+    tools: ['crystal-load-calculator', 'i2c-pullup-calculator', 'eseries-resistor-finder', 'opamp-gain-calculator', 'buck-inductor-calculator', 'pcb-trace-width-calculator', 'copper-thickness-converter', 'tl431-feedback-calculator', 'rc-time-constant', 'decoupling-cap', 'ldo-dropout', 'sallen-key-filter', 'duty-cycle-converter', 'rc-snubber', 'tvs-selector', 'heatsink-calculator', 'ntc-thermistor-calculator', 'crc-calculator', 'bit-calculator'],
     workflow: [
       '起板先定晶振：按 CL 算外接电容并吸附标准档，频偏 ppm 心里有数',
       '挂 I2C 传感器前算上拉区间，标准/快速/FM+ 三档速览一选一个准',
@@ -445,5 +445,20 @@ export const collections = [
     ],
     relatedTerms: [],
     updated: '2026-11-05',
+  },  {
+    slug: 'car-owner-kit',
+    title: '车主随车速查',
+    scene: '自己动手保养、加装与排查小问题的车主',
+    icon: 'Car',
+    description: '胎压换算、OBD 故障码、车灯型号、轮胎规格与充电成本——不动扳手也能先弄懂的随车账，全部本地查。',
+    tools: ['tire-pressure-convert', 'obd-dtc-lookup', 'headlight-bulb', 'tire-size-calculator', 'ev-charging-cost-calculator'],
+    workflow: [
+      '季节交替先核胎压：psi/bar 换算加冷热修正，冷胎压为准',
+      '仪表盘亮灯先查 OBD 故障码含义，心里有数再进修理厂',
+      '换灯泡按 H 系/900 系型号对照买件，不靠店员报价',
+      '换轮胎比规格看新旧差异，电车车主算充电成本对油钱',
+    ],
+    relatedTerms: [],
+    updated: '2026-11-06',
   },
 ]

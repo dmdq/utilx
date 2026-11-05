@@ -1,20 +1,20 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：804 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：855 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 804 款工具完整目录
-- [场景专题](https://www.util.cn/collections/): 26 个按使用场景组织的工具组合
+- [全部工具](https://www.util.cn/all/): 855 款工具完整目录
+- [场景专题](https://www.util.cn/collections/): 27 个按使用场景组织的工具组合
 - [按职业找工具](https://www.util.cn/professions/): 31 张职业工具卡，按任务对应工具
-- [AI 百科](https://www.util.cn/wiki/): 52 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 408 篇工具教程与实践文章
+- [AI 百科](https://www.util.cn/wiki/): 58 条大模型相关词条
+- [技术博客](https://www.util.cn/blog/): 419 篇工具教程与实践文章
 
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（122款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（164款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
@@ -25,8 +25,8 @@
 - [开发辅助（109款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（57款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（65款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
-- [健康工具（53款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
+- [其他工具（73款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [健康工具（54款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
 - [金融工具（47款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（47款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
@@ -174,6 +174,48 @@
 - [RC时间常数计算器](https://www.util.cn/tools/rc-time-constant/): τ=RC 双向计算与充放电曲线可视化，63.2%/5τ 口径与延时应用注记
 - [保险丝选型计算器](https://www.util.cn/tools/fuse-selector/): 保险丝额定电流选型：UL/IEC 双口径、温度降额与浪涌 I²t 校验四步流程
 - [555定时器计算器](https://www.util.cn/tools/timer-555-calculator/): NE555 无稳态/单稳态参数正反算，SVG 电路图随参数重绘，E12 标准值吸附
+- [TVS选型校验器](https://www.util.cn/tools/tvs-selector/): TVS 二极管四条件校验：VRWM/VBR/VC/IPP 与浪涌能量核对，钳位裕量判定
+- [继电器驱动电阻](https://www.util.cn/tools/relay-driver-calc/): 继电器线圈电流与晶体管基极电阻计算，续流二极管与饱和校验
+- [光耦电阻计算](https://www.util.cn/tools/optocoupler-resistor/): 光耦限流/上拉电阻与 CTR 电流传输比校验，隔离信号链配置
+- [RC吸收电路估算](https://www.util.cn/tools/rc-snubber/): 开关回路 RC 吸收电路参数估算：振铃频率反推与功率损耗
+- [去耦电容配置](https://www.util.cn/tools/decoupling-cap/): 按频段配置去耦电容组合：0.1µF/10µF/大电容分层与安放原则
+- [LDO压差与功耗](https://www.util.cn/tools/ldo-dropout/): LDO 压差、功耗与结温简算，自耗电与散热判定
+- [电容储能与放电](https://www.util.cn/tools/capacitor-energy/): 电容储能 E=½CV² 与恒阻放电时间估算，RC 放电台账
+- [PWM占空比换算](https://www.util.cn/tools/duty-cycle-converter/): PWM 占空比与平均电压、RMS 值换算，开关损耗视角注记
+- [LED串并联规划](https://www.util.cn/tools/led-array-planner/): LED 灯珠串并联规划：串数并数、限流电阻与电源电压匹配
+- [空芯电感计算](https://www.util.cn/tools/air-core-inductor/): Wheeler 公式空芯线圈电感计算：匝数/直径/长度互算
+- [Sallen-Key滤波器](https://www.util.cn/tools/sallen-key-filter/): Sallen-Key 二阶有源滤波器：截止频率/ Q 值/元件选择
+- [变压器重绕计算](https://www.util.cn/tools/transformer-rewind/): 变压器重绕参数：每伏匝数、铁芯截面、线径与压降补偿
+- [波特率误差计算](https://www.util.cn/tools/uart-baud-error/): UART 波特率与分频系数误差表，常见时钟频率容差判定
+- [天线长度计算](https://www.util.cn/tools/antenna-length/): 偶极子与单极子天线长度：λ/4、λ/2 与速度因子修正
+- [驻波比换算](https://www.util.cn/tools/swr-calculator/): SWR 与反射系数、失配损耗、反射功率百分比换算
+- [dBm瓦特换算](https://www.util.cn/tools/dbm-watts/): dBm、瓦特、毫伏/伏特（50Ω 系统三向换算，射频功率台账
+- [衰减器计算](https://www.util.cn/tools/attenuator-pad/): π 型与 T 型衰减器电阻值计算，匹配阻抗与衰减量
+- [太阳能离网配置](https://www.util.cn/tools/solar-panel-sizer/): 离网光伏配置：日耗电量→板功率/电池容量/控制器选型
+- [UPS续航估算](https://www.util.cn/tools/ups-runtime/): UPS 续航估算：VA/W 负载与电池容量→放电分钟数
+- [电池续航估算](https://www.util.cn/tools/battery-runtime/): 电池续航：容量/负载电流→工作小时，Peukert 与温ina度修正注记
+- [螺栓拧紧扭矩对照](https://www.util.cn/tools/bolt-torque-table/): 公制螺栓预紧扭矩表：M3-M24 × 8.8/10.9/12.9 级，VDI 2230 口径
+- [弹簧刚度计算](https://www.util.cn/tools/spring-rate/): 弹簧刚度 k=F/x 与串并联组合，压缩/拉伸弹簧工况注记
+- [气缸推力计算](https://www.util.cn/tools/pneumatic-cylinder/): 气缸推/拉力计算：缸径×压力×效率，行程时间与耗气量注记
+- [液压压力计算](https://www.util.cn/tools/hydraulic-force/): 液压系统 F=P×A 与压强/活塞尺寸互算，千斤顶口径注记
+- [减速比计算](https://www.util.cn/tools/gear-ratio-reducer/): 齿轮/链轮减速比：齿数比→转速/扭矩换算，多级传动级联
+- [链条长度计算](https://www.util.cn/tools/chain-sprocket/): 链传动链条节数：链轮齿数/中心距/节距→节数与中心距反算
+- [屋面坡度换算](https://www.util.cn/tools/roof-pitch/): 屋面坡度三制式换算：角度、百分比、x:12 比例与斜率
+- [温室加热估算](https://www.util.cn/tools/greenhouse-heating/): 温室加热功率：体积×温差×保温系数，燃料用量换算
+- [碎石沙土用量](https://www.util.cn/tools/gravel-sand-coverage/): 碎石/沙土用量：面积×厚度→体积与吨数、袋数换算
+- [花盆配土用量](https://www.util.cn/tools/potting-soil/): 花盆土量估算：口径×深度→升数，多盆合计与配土比例
+- [微距放大率计算](https://www.util.cn/tools/macro-magnification/): 微距放大率：传感器/放大倍率/有效光圈与曝光补偿换算
+- [快门角度换算](https://www.util.cn/tools/shutter-angle/): 视频快门角度与快门速度换算，180° 法则动作模糊基准
+- [声压距离衰减](https://www.util.cn/tools/spl-distance/): 声压级距离衰减：逆平方定律与双倍距离 -6dB 口径
+- [BPM延时换算](https://www.util.cn/tools/delay-time-ms/): BPM 到毫秒延时换算：全音符到 1/64、附点与三连音全表
+- [溶液配制计算](https://www.util.cn/tools/solution-prep/): 溶液配制：质量浓度/摩尔浓度/稀释 C1V1，试剂用量与定容
+- [骑行传动比计算](https://www.util.cn/tools/cycling-gear-ratio/): 骑行牙盘/飞轮速比与发展米数，踏频→车速换算
+- [编织密度计算](https://www.util.cn/tools/knitting-gauge/): 编织密度：10cm 标样→起针数/行数与成衣尺寸换算
+- [压力单位换算](https://www.util.cn/tools/pressure-convert/): 帕斯卡/bar/psi/atm/mmHg/inHg 六单位压力换算表
+- [流量单位换算](https://www.util.cn/tools/flow-convert/): L/min、m³/h、GPM、CFM 流量四向换算与管径提示
+- [能量单位换算](https://www.util.cn/tools/energy-convert/): 焦耳/卡路里/千瓦时/BTU/Wh 能量五向换算
+- [功率单位换算](https://www.util.cn/tools/power-units/): 千瓦/马力/PS/BTU/h 功率四向换算，电机铭牌口径注记
+- [力单位换算](https://www.util.cn/tools/force-convert/): 牛顿/千克力/磅力/达因 力单位四向换算
 
 ## 数据格式化
 
@@ -725,6 +767,14 @@
 - [公文红头排版生成器](https://www.util.cn/tools/official-document-generator/): 按 GB/T 9704 惯用口径排红头、文号、红色分隔线与正文，A4 打印即出，机关风格发文笺
 - [IC丝印解读器](https://www.util.cn/tools/ic-marking-decoder/): 芯片丝印 date code 周期解读、常见前缀厂商线索与标识说明，仅供学习参考
 - [74/4000系列速查](https://www.util.cn/tools/logic-ic-truth-table/): 常用 74 与 4000 系列逻辑芯片速查：真值表、DIP 引脚图、功能说明与代换提示
+- [胎压换算与冷热修正](https://www.util.cn/tools/tire-pressure-convert/): kPa/bar/psi/kgf 胎压四向换算，冷热胎压差与载重建议注记
+- [OBD故障码速查](https://www.util.cn/tools/obd-dtc-lookup/): 常见 OBD-II P0xxx 故障码速查：含义与常见原因，仅供线索
+- [车灯型号对照](https://www.util.cn/tools/headlight-bulb/): H 系/900 系车灯型号对照：灯座、功率与常见适配车型线索
+- [砂纸目数对照](https://www.util.cn/tools/sandpaper-grit/): 砂纸 P 目数对照表：木工/金属/漆面工序与粒度选择
+- [延摄影间隔计算](https://www.util.cn/tools/timelapse-interval/): 延时摄影间隔：目标时长/帧率/成片长度→拍摄间隔与张数
+- [巧克力毒性评估](https://www.util.cn/tools/dog-chocolate/): 犬巧克力可可碱摄入评估：体重×种类→症状分级与就医建议
+- [徒步饮水估算](https://www.util.cn/tools/hiking-water/): 徒步饮水量估算：距离/爬升/温度/负重→每日升数与补水节奏
+- [纸张克重换算](https://www.util.cn/tools/paper-weight-convert/): 纸张克重 gsm 与磅数互换：常见纸种基准与令重
 
 ## 健康工具
 
@@ -781,6 +831,7 @@
 - [戒烟账本](https://www.util.cn/tools/quit-smoking-calculator/): 戒烟天数、省下金额与身体恢复时间线，20 分钟到 15 年的里程碑正向记录
 - [情绪日记](https://www.util.cn/tools/mood-tracker/): 每日五档情绪加标签备注，月历热图、SVG 曲线与连续记录，数据仅存本地
 - [护眼提醒器](https://www.util.cn/tools/eye-rest-timer/): 20-20-20 法则循环提醒，全屏休息遮罩与防漂移计时，今日护眼统计
+- [噪声暴露剂量](https://www.util.cn/tools/sound-dose/): 噪声日暴露剂量：LAeq×时长→允许百分比与护耳建议
 
 ## 金融工具
 
@@ -910,6 +961,7 @@
 - [IC 测试质量台](https://www.util.cn/collections/ic-test-quality/): DPPM 与良率换算、GR&R 测量系统分析、Cpk 过程能力、MTBF/FIT、AQL 抽样对照、安全库存——把测试与品质的数字账一次算清，支撑来料判定与出货决策。
 - [出行规划时间台](https://www.util.cn/collections/travel-planning-kit/): 日出日落、时区换算、日期计算与倒数日、可打印日历——出发前把"几点天亮、那边几点、还有几天"一次算清，全部本地计算。
 - [办事打印一站台](https://www.util.cn/collections/errand-print-desk/): 身份证复印件排版、证件照换底、电子章、公文红头、合同文书、请柬日历——办事窗口要的纸质材料浏览器里做好直接打印，照片不上传。
+- [车主随车速查](https://www.util.cn/collections/car-owner-kit/): 胎压换算、OBD 故障码、车灯型号、轮胎规格与充电成本——不动扳手也能先弄懂的随车账，全部本地查。
 
 ## 按职业找工具
 
@@ -917,7 +969,7 @@
 - [运维/SRE/网管工具箱](https://www.util.cn/professions/dev-ops/): 管服务器、网络与可用性的运维工程师：10 条核心任务对应 46 款工具
 - [安全测试/渗透岗工具箱](https://www.util.cn/professions/security-auditor/): 做漏洞挖掘、渗透测试与加固的安全从业者：7 条核心任务对应 36 款工具
 - [UI/平面设计师工具箱](https://www.util.cn/professions/designer-ui/): 做界面、海报、品牌视觉的设计师：8 条核心任务对应 50 款工具
-- [摄影者/后期修图工具箱](https://www.util.cn/professions/photographer/): 拍照片修图片的摄影爱好者和从业者：9 条核心任务对应 24 款工具
+- [摄影者/后期修图工具箱](https://www.util.cn/professions/photographer/): 拍照片修图片的摄影爱好者和从业者：12 条核心任务对应 27 款工具
 - [K12 学生与家长工具箱](https://www.util.cn/professions/student-k12/): 小学到高中学生和陪学的家长：9 条核心任务对应 28 款工具
 - [大学生/考研考公工具箱](https://www.util.cn/professions/student-college/): 大学在读与备考深造的学生：8 条核心任务对应 20 款工具
 - [中小学教师工具箱](https://www.util.cn/professions/teacher/): 备课排课管班级的任课与班主任：9 条核心任务对应 22 款工具
@@ -930,20 +982,20 @@
 - [作家/编辑/文案工具箱](https://www.util.cn/professions/writer-editor/): 写长文、编稿子、做校对的文字工作者：9 条核心任务对应 26 款工具
 - [劳动者/法律需求个人工具箱](https://www.util.cn/professions/legal-labor/): 遇到借贷、离职、维权等法律 adjacent 事务的个人：9 条核心任务对应 11 款工具
 - [电工/电气安装工具箱](https://www.util.cn/professions/electrician/): 跑现场布线、配电、维修的电工与电气爱好者：10 条核心任务对应 12 款工具
-- [机修/机加/五金工具箱](https://www.util.cn/professions/mechanic/): 做机加工、设备维修与五金装配的技工：8 条核心任务对应 7 款工具
-- [建筑施工/装修/木工工具箱](https://www.util.cn/professions/construction/): 做施工、装修与木作的从业者与自建房主：9 条核心任务对应 9 款工具
-- [音频工程/音乐人工具箱](https://www.util.cn/professions/audio-music/): 做录音、调音、编曲与乐器练习的音乐人：9 条核心任务对应 15 款工具
-- [实验室/生物医药工具箱](https://www.util.cn/professions/lab-bio/): 做生化实验、检测与研发的实验室人员：9 条核心任务对应 11 款工具
+- [机修/机加/五金工具箱](https://www.util.cn/professions/mechanic/): 做机加工、设备维修与五金装配的技工：14 条核心任务对应 13 款工具
+- [建筑施工/装修/木工工具箱](https://www.util.cn/professions/construction/): 做施工、装修与木作的从业者与自建房主：11 条核心任务对应 11 款工具
+- [音频工程/音乐人工具箱](https://www.util.cn/professions/audio-music/): 做录音、调音、编曲与乐器练习的音乐人：11 条核心任务对应 17 款工具
+- [实验室/生物医药工具箱](https://www.util.cn/professions/lab-bio/): 做生化实验、检测与研发的实验室人员：10 条核心任务对应 12 款工具
 - [质检/供应链/物流工具箱](https://www.util.cn/professions/qc-supply/): 管验货标准、采购补货与发运配载的质量与供应链岗：6 条核心任务对应 7 款工具
-- [健身与健康管理者工具箱](https://www.util.cn/professions/health-fitness/): 减脂增肌、日常健康监测的运动人群：9 条核心任务对应 31 款工具
+- [健身与健康管理者工具箱](https://www.util.cn/professions/health-fitness/): 减脂增肌、日常健康监测的运动人群：10 条核心任务对应 32 款工具
 - [游戏/电竞玩家工具箱](https://www.util.cn/professions/gamer-esports/): 打 FPS、抽卡手游与买外设的玩家：7 条核心任务对应 11 款工具
-- [种植/养殖农户工具箱](https://www.util.cn/professions/agri-farmer/): 种大田、管果园、搞大棚的种植户与农技员：7 条核心任务对应 8 款工具
+- [种植/养殖农户工具箱](https://www.util.cn/professions/agri-farmer/): 种大田、管果园、搞大棚的种植户与农技员：8 条核心任务对应 9 款工具
 - [餐饮/厨师/烘焙咖啡工具箱](https://www.util.cn/professions/chef-catering/): 开餐饮店、做烘焙咖啡的从业者与重度爱好者：8 条核心任务对应 13 款工具
-- [手工/模型/3D 打印爱好者工具箱](https://www.util.cn/professions/hobbyist-craft/): 做手工、拼模型、玩 3D 打印的创客爱好者：7 条核心任务对应 10 款工具
-- [出行/司机/旅行规划工具箱](https://www.util.cn/professions/traveler-driver/): 常出差、自驾游与跑长途的出行人群：7 条核心任务对应 14 款工具
+- [手工/模型/3D 打印爱好者工具箱](https://www.util.cn/professions/hobbyist-craft/): 做手工、拼模型、玩 3D 打印的创客爱好者：10 条核心任务对应 13 款工具
+- [出行/司机/旅行规划工具箱](https://www.util.cn/professions/traveler-driver/): 常出差、自驾游与跑长途的出行人群：11 条核心任务对应 18 款工具
 - [孕产/新生儿家长工具箱](https://www.util.cn/professions/pregnancy-parent/): 孕期到婴幼儿阶段的父母与看护人：6 条核心任务对应 11 款工具
-- [硬件/电子工程师工具箱](https://www.util.cn/professions/hardware-engineer/): 画原理图、调传感器信号链、画 PCB 打样的硬件工程师与电子爱好者：16 条核心任务对应 19 款工具
-- [电子维修技师工具箱](https://www.util.cn/professions/electronics-repairer/): 修电源板、家电主板、功放的维修技师与电子爱好者：12 条核心任务对应 12 款工具
+- [硬件/电子工程师工具箱](https://www.util.cn/professions/hardware-engineer/): 画原理图、调传感器信号链、画 PCB 打样的硬件工程师与电子爱好者：24 条核心任务对应 32 款工具
+- [电子维修技师工具箱](https://www.util.cn/professions/electronics-repairer/): 修电源板、家电主板、功放的维修技师与电子爱好者：16 条核心任务对应 16 款工具
 
 ## AI 百科词条
 
@@ -999,10 +1051,27 @@
 - [MTBF 与 FIT](https://www.util.cn/wiki/mtbf-fit/): MTBF 是平均无故障时间（小时），FIT 是每十亿器件小时的失效数，两者互为倒数换算：FIT = 10⁹/MTBF。
 - [保险丝 I²t 与选型](https://www.util.cn/wiki/fuse-i2t/): I²t（焦耳积分）是保险丝熔断所需的热能口径：浪涌脉冲的 I²t 必须小于保险丝公称熔化 I²t 并留 20~30% 裕量，否则脉冲反复冲击会造成误熔断。
 - [555 定时器](https://www.util.cn/wiki/555-timer/): NE555 是最经典的通用定时芯片：无稳态模式产生方波（f = 1.44/((R1+2R2)·C)），单稳态模式输出定宽脉冲（T = 1.1·R·C）。
+- [TVS 瞬态抑制二极管](https://www.util.cn/wiki/tvs-diode/): TVS 是并联在电路上的电压钳位型保护器件：平时呈高阻不参与工作，浪涌到来瞬间雪崩导通把电压钳在安全值。
+- [去耦电容（Decoupling）](https://www.util.cn/wiki/decoupling-capacitor/): 去耦电容是芯片供电脚旁的"本地水库"：瞬间取流时由它就近供电，把电源阻抗与开关噪声隔离在走线之外。
+- [驻波比（SWR）](https://www.util.cn/wiki/swr-standing-wave/): SWR 衡量天线与馈线的阻抗匹配程度：1:1 全部入射无反射，SWR 越大反射越强，发射功率越多浪费在天线上甚至反灌功放。
+- [螺栓性能等级与扭矩](https://www.util.cn/wiki/bolt-grade-torque/): 螺栓头上的 8.8/10.9/12.9 是性能等级：前位数字×100 = 抗拉强度(MPa)，小数点后×10 = 屈强比。8.8 级即 800MPa、屈强比 0.8。
+- [砂纸目数与打磨工序](https://www.util.cn/wiki/sandpaper-grit-chart/): 砂纸 P 目数是磨料粒度编号：数字越大颗粒越细。P80 去量、P120 过渡、P240 精磨、P400 以上进漆面——按工序渐进，不能跳级。
+- [溶液浓度与配制](https://www.util.cn/wiki/solution-concentration/): 溶液浓度三种常用口径：质量分数（g/100g）、质量浓度（g/L）、摩尔浓度（mol/L）。配制先定口径再算，C1V1=C2V2 只管稀释。
 
 ## 博客文章
 
+- [单位换算补齐计划：压力、流量、能量、功率、力与纸张克重](https://www.util.cn/blog/articles/unit-conversion-pack/): psi 和 bar、GPM 和 L/min、BTU 和 kWh、马力和千瓦、kgf 和 N、gsm 和磅——六组最容易混的单位，新上线的六件换算器一次补齐，含行业口径注记与常用锚点值，全部本地计算。
+- [生活里的小科学：配溶液、巧克力中毒线、徒步补水、传动比与起针](https://www.util.cn/blog/articles/daily-science-calcs/): 配置消毒液、狗偷吃了巧克力、爬山带几瓶水、换牙盘爬坡轻不轻、织毛衣起多少针——五个生活场景的科学账，新上线五件工具各管一笔，全部本地计算。
+- [影音创作的五笔精确账：微距、快门、延摄、声压与延时](https://www.util.cn/blog/articles/av-creator-calcs/): 微距照片发暗、视频动作发飘、延时拍完太短、户外唱歌听不清、混音延时对不上拍——五笔影音账，新上线的微距放大率、快门角度、延摄影间隔、声压衰减与 BPM 延时五件工具一次算清。
+- [工地与庭院五笔账：坡度、砂石、温室、花土与砂纸](https://www.util.cn/blog/articles/garden-roof-grit/): 盖棚看坡度、铺路算砂石、大棚配暖气、阳台花要换土、翻新要买砂纸——五笔最容易被坑的用量账，新上线的屋面坡度、碎石沙土、温室加热、花盆配土与砂纸目数五件工具一次算清。
+- [车间六笔账：扭矩、弹簧、气缸、液压、减速比、链条](https://www.util.cn/blog/articles/workshop-six-calcs/): 拧多紧、选多大缸径、配几级减速——机修与装配的六笔高频账，新上线的螺栓扭矩表、弹簧刚度、气缸推力、液压、减速比与链条计算六件工具全部补齐，公式口径注明出处，全部本地计算。
+- [进修理厂之前，先自己算明白三件事](https://www.util.cn/blog/articles/car-owner-diy-checks/): 胎压打到多少、仪表灯亮了先查什么、换个灯泡该买哪个型号——车主最常碰到的三笔小账，新上线的胎压换算、OBD 故障码速查与车灯型号对照三件工具帮你自己先弄懂，全部本地查询。
+- [线圈、滤波与串口：三个老问题的三把新尺子](https://www.util.cn/blog/articles/rewind-filter-baud/): 变压器烧了怎么重绕、空芯线圈绕多大、有源滤波器怎么定元件、串口乱码是谁的错——四个老问题，新上线的重绕计算、空芯电感、Sallen-Key 滤波器与波特率误差四件工具给出精确答案。
+- [停电不怕的三笔账：太阳能、UPS 与电池续航](https://www.util.cn/blog/articles/offgrid-power-runtime/): 路由器停电撑几小时、屋顶光伏要铺多少板、鱼缸 LED 灯怎么配电源——离网供电的三笔账，新上线的太阳能配置、UPS 续航、电池续航与 LED 串并联四件工具一次算清，全部本地计算。
+- [玩无线电的第一笔账：天线长度、驻波比、dBm 与衰减器](https://www.util.cn/blog/articles/rf-basics-antenna-swr/): 架天线先算长度、测驻波先懂口径、对功率先统一单位——射频入门的三道门槛，新上线的天线长度、驻波比换算、dBm 瓦特换算与衰减器计算四件工具一次跨过，全部本地计算。
+- [电源完整性三件套：去耦、LDO 发热与储能放电](https://www.util.cn/blog/articles/power-integrity-decoupling-ldo/): MCU 莫名复位、LDO 烫手、掉电后数据丢失——电源完整性问题占了硬件调试的三成。新上线的去耦电容配置、LDO 压差功耗、电容储能与 PWM 占空比四件工具，把供电侧的账一次算清。
 - [时序板排故三件套：555、RC 和查不到的真值表](https://www.util.cn/blog/articles/555-rc-logic-bench/): 频率不对的振荡器、延时不准的复位电路、查不到真值表的贴片逻辑——时序板排故的三板斧。新上线的 555 计算器（SVG 电路随参数重绘+反向求解）、RC 时间常数（充放电曲线）和 74/4000 系列速查把这一类活全包了。
+- [浪涌、振铃与驱动的三笔保护账：TVS、RC 吸收、继电器光耦](https://www.util.cn/blog/articles/protection-driver-basics/): 板子炸得莫明其妙，多半是浪涌和振铃没算；三极管烧得不明不白，多半是驱动电阻抄的别人。新上线的 TVS 校验器、RC 吸收估算、继电器驱动与光耦电阻四件工具，把保护与驱动的账一次算清——全部本地计算。
 - [布板前的三笔账：线宽、铜厚、电感](https://www.util.cn/blog/articles/pcb-trace-copper-buck/): 电源板返工重做，三成栽在布板前的算术上：线宽扛不扛得住电流、铜厚买的什么规格、Buck 电感纹波率多少。新上线的线宽载流、铜厚线规、Buck 电感三件计算器把这三笔账一次算清，IPC-2221 公式口径全公开。
 - [保险丝不是熔丝那么简单：I²t、降额与 MTBF 的两笔账](https://www.util.cn/blog/articles/fuse-mtbf-protection/): 换保险丝看额定电流就行？误熔断和该断不断，多半栽在 I²t 校验和温度降额上。新上线的保险丝选型计算器把 UL/IEC 双口径、温度修正、浪涌 I²t 四步走完；顺手把 MTBF/FIT 换算器也补上了——保护和可靠性，一笔账的两面。
 - [运放增益五种接法：一张表选对拓扑](https://www.util.cn/blog/articles/opamp-gain-topologies/): 反相、同相、差分、仪表放大、跟随器——五种运放接法各有各的脾气。新上线的运放增益计算器按拓扑选型直算，E 系列吸附回算实际增益，反馈回路 TL431/LM317 配比一页算清，全部本地计算。
