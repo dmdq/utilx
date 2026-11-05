@@ -5,11 +5,12 @@ import { TOTAL_TOOL_PAGES } from './src/data/pagination.js'
 
 const isDev = process.env.NODE_ENV === 'development'
 
-// 全部工具目录的真实路径分页：/all 为第 1 页，其余预渲染为 /all/page/N。
-// 必须是静态路由，nginx 才能直接命中 all/page/N/index.html（不依赖 SPA fallback）。
+// 全部工具目录的真实目录路径分页：/all 为第 1 页，其余预渲染为 /all/page/N/。
+// 末尾斜杠是规范形式（分页即目录），nginx 才能直接命中 all/page/N/index.html，
+// 也避免 /all/page/2 -> /all/page/2/ 的 301 与 canonical 不一致。
 const toolPaginationRoutes = Array.from(
   { length: Math.max(0, TOTAL_TOOL_PAGES - 1) },
-  (_, i) => `/all/page/${i + 2}`
+  (_, i) => `/all/page/${i + 2}/`
 )
 
 export default defineNuxtConfig({
