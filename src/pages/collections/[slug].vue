@@ -64,6 +64,9 @@
       </div>
     </div>
 
+    <!-- 合作伙伴位（阶段2 基础设施：仅 col.partnerSlot 的专题页挂载，渲染与否由 partners.js 开关决定） -->
+    <PartnerLinks v-if="col.partnerSlot" />
+
     <!-- SEO 内容区 -->
     <div class="relative">
       <button @click="seoVisible = !seoVisible" class="absolute top-4 right-4 text-muted-foreground hover:text-foreground" aria-label="展开或收起说明">
@@ -95,6 +98,7 @@ import { tools } from '~/data/tools'
 import { resolveToolIcon } from '~/utils/toolIcons'
 import ToolCard from '~/components/ToolCard.vue'
 import RelatedTools from '~/components/RelatedTools.vue'
+import PartnerLinks from '~/components/PartnerLinks.vue'
 
 const route = useRoute()
 const col = collections.find(c => c.slug === route.params.slug)

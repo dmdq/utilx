@@ -248,6 +248,7 @@ export const collections = [
       '通电前用欧姆定律把整回路核一遍，知二求二排故障',
     ],
     relatedTerms: [],
+    partnerSlot: true,
     updated: '2026-11-04',
   },
   {
@@ -365,6 +366,7 @@ export const collections = [
       '固件调试挂 CRC 校验与位运算，寄存器配置不再对着表数位',
     ],
     relatedTerms: ['ic-date-code', 'current-loop-4-20ma'],
+    partnerSlot: true,
     updated: '2026-11-05',
   },
   {
@@ -381,6 +383,7 @@ export const collections = [
       '回路供电与取样电阻功耗用欧姆定律核一遍再上柜',
     ],
     relatedTerms: ['current-loop-4-20ma', 'pt100-platinum-resistance', 'ntc-thermistor', 'thermocouple'],
+    partnerSlot: true,
     updated: '2026-11-05',
   },
   {
@@ -397,6 +400,7 @@ export const collections = [
       '据测试结果调安全库存与再订货点，物料不断链',
     ],
     relatedTerms: ['dppm', 'cpk-process-capability'],
+    partnerSlot: true,
     updated: '2026-11-05',
   },
 ]
