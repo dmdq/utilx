@@ -6,10 +6,10 @@
 
 - [首页](https://www.util.cn/): 工具导航与推荐
 - [全部工具](https://www.util.cn/all/): 792 款工具完整目录
-- [场景专题](https://www.util.cn/collections/): 24 个按使用场景组织的工具组合
+- [场景专题](https://www.util.cn/collections/): 26 个按使用场景组织的工具组合
 - [按职业找工具](https://www.util.cn/professions/): 31 张职业工具卡，按任务对应工具
 - [AI 百科](https://www.util.cn/wiki/): 48 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 399 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 403 篇工具教程与实践文章
 
 ## 工具分类
 
@@ -879,8 +879,8 @@
 - [接口联调工具包](https://www.util.cn/collections/api-debug-kit/): Mock 数据生成、HTTP 响应模拟、JWT 解析、CORS 排查、时间戳转换——联调时那些"卡住半小时"的小问题，这里都有对应工具。
 - [家庭财务计算套装](https://www.util.cn/collections/family-finance-suite/): 房贷月供、提前还款怎么选、投资回报测算、订阅开支盘点——把家庭里最常见的几笔"大账"一次算清楚，计算全部在本地完成。
 - [写作者工具箱](https://www.util.cn/collections/writer-toolkit/): Markdown 编辑、多版本对比、大小写与文本清理、AI 提示词模板——写作流程里"改稿比写稿还费劲"的部分，交给工具。
-- [学习与专注套装](https://www.util.cn/collections/study-focus-kit/): 番茄钟专注计时、正倒计时器、秒表、提示词学习模板——把"开始学习"的启动成本和"学多久"的度量问题都交给工具。
-- [网络排查工具包](https://www.util.cn/collections/network-troubleshoot-kit/): 子网计算、IP 类型判定、IPv6 格式归一化、hosts 片段生成——网络问题排查中"算一算、查一查"的环节全部本地完成。
+- [学习与专注套装](https://www.util.cn/collections/study-focus-kit/): 番茄钟专注计时、正倒计时器、秒表、行测估分、口算题卡、背题卡、随机抽题、提示词学习模板——把"开始学习"的启动成本、"学多久"和"练多少"的度量都交给工具。
+- [网络排查工具包](https://www.util.cn/collections/network-troubleshoot-kit/): 子网计算、IP 类型判定、IPv6 归一化、MAC 格式与厂商、端口连通、证书链、网速、hosts 片段、访客 WiFi 二维码——网络排查中"算一算、查一查"的环节全部本地完成。
 - [文件处理流水线](https://www.util.cn/collections/file-ops-pipeline/): PDF 合并拆分、CSV 转换、目录树生成、文件加密、格式互转——处理文件不用再装软件、更不用上传第三方网站。
 - [电工随身计算尺](https://www.util.cn/collections/electrician-toolkit/): 电压降、载流量、欧姆定律、电阻色环，再到功率因数补偿、星三角选型与电缆重量——电工现场最常用的计算，手机浏览器打开就能用，全部本地计算不上传。
 - [车间与工地速查](https://www.util.cn/collections/shop-floor-quickref/): 螺纹底孔、钢筋米重、空调匹数、材料算量，再到公差配合、齿轮模数、轴承型号与硬度换算——从图纸到报价的车间速查台。
@@ -896,18 +896,20 @@
 - [电子工程师设计台](https://www.util.cn/collections/electronics-design-bench/): 晶振负载电容、I2C 上拉、E 系列阻值替代、散热结温、NTC 与 ADC 测温——打样前的高频小计算，公式口径注明来源，全部本地算。
 - [传感器信号链](https://www.util.cn/collections/sensor-signal-chain/): 从 PT100/NTC 感温元件到 4-20mA 变送器，再到 PLC 数字量——一条信号链上的换算一次算清，含冷端补偿与活零点口径。
 - [IC 测试质量台](https://www.util.cn/collections/ic-test-quality/): DPPM 与良率换算、置信上限、AQL 抽样对照、安全库存——把测试与品质的数字账一次算清，支撑来料判定与出货决策。
+- [出行规划时间台](https://www.util.cn/collections/travel-planning-kit/): 日出日落、时区换算、日期计算与倒数日、可打印日历——出发前把"几点天亮、那边几点、还有几天"一次算清，全部本地计算。
+- [办事打印一站台](https://www.util.cn/collections/errand-print-desk/): 身份证复印件排版、证件照换底、电子章、公文红头、合同文书、请柬日历——办事窗口要的纸质材料浏览器里做好直接打印，照片不上传。
 
 ## 按职业找工具
 
 - [程序员（前后端/全栈）工具箱](https://www.util.cn/professions/dev-web/): 每天和接口、数据格式、构建部署打交道的开发者：14 条核心任务对应 67 款工具
-- [运维/SRE/网管工具箱](https://www.util.cn/professions/dev-ops/): 管服务器、网络与可用性的运维工程师：9 条核心任务对应 41 款工具
+- [运维/SRE/网管工具箱](https://www.util.cn/professions/dev-ops/): 管服务器、网络与可用性的运维工程师：10 条核心任务对应 46 款工具
 - [安全测试/渗透岗工具箱](https://www.util.cn/professions/security-auditor/): 做漏洞挖掘、渗透测试与加固的安全从业者：7 条核心任务对应 36 款工具
 - [UI/平面设计师工具箱](https://www.util.cn/professions/designer-ui/): 做界面、海报、品牌视觉的设计师：8 条核心任务对应 50 款工具
 - [摄影者/后期修图工具箱](https://www.util.cn/professions/photographer/): 拍照片修图片的摄影爱好者和从业者：9 条核心任务对应 24 款工具
 - [K12 学生与家长工具箱](https://www.util.cn/professions/student-k12/): 小学到高中学生和陪学的家长：9 条核心任务对应 28 款工具
 - [大学生/考研考公工具箱](https://www.util.cn/professions/student-college/): 大学在读与备考深造的学生：8 条核心任务对应 20 款工具
-- [中小学教师工具箱](https://www.util.cn/professions/teacher/): 备课排课管班级的任课与班主任：8 条核心任务对应 21 款工具
-- [通用办公文员/行政工具箱](https://www.util.cn/professions/office-clerk/): 每天和文档表格邮件打交道的办公室职员：11 条核心任务对应 45 款工具
+- [中小学教师工具箱](https://www.util.cn/professions/teacher/): 备课排课管班级的任课与班主任：9 条核心任务对应 22 款工具
+- [通用办公文员/行政工具箱](https://www.util.cn/professions/office-clerk/): 每天和文档表格邮件打交道的办公室职员：12 条核心任务对应 46 款工具
 - [HR/行政主管工具箱](https://www.util.cn/professions/hr-admin/): 管人事、薪酬、考勤与办公室事务的人力行政：8 条核心任务对应 18 款工具
 - [个人/家庭理财工具箱](https://www.util.cn/professions/finance-personal/): 管家庭收支、存款保险与长期规划的个人：8 条核心任务对应 25 款工具
 - [财务/会计/出纳工具箱](https://www.util.cn/professions/finance-pro/): 做账开票报税的企业财务人员：7 条核心任务对应 17 款工具
@@ -984,6 +986,10 @@
 
 ## 博客文章
 
+- [一个 MAC 地址四种写法：网络排查里的格式坑](https://www.util.cn/blog/articles/mac-address-format-guide/): 交换机上是点分，手机里是冒号，Windows 命令行是连字符，日志里干脆没有分隔符——同一块网卡的 MAC 地址有四种长相，格式对不上是网络排查里最低级的弯路。这篇讲清四种写法各出现在哪、粘贴匹配为什么失败、随机化 MAC 让白名单怎么失效，配上一款互转工具和一组排查搭档，网管和居家排查都用得上。
+- [排班表上的第 45 周是怎么算出来的：ISO 周数速查](https://www.util.cn/blog/articles/iso-week-number-guide/): 排班表写着 W45，手机日历却标着第 44 周，谁算错了？谁都没错，是两套周历。这篇讲清 ISO 8601 周数的两条规则、跨年周怎么归属、53 周年份怎么提前判断，配上周数计算器的日期查周、周数反查日期和年度周数统计，排班、周报编号、项目排期、生产计划对表不再错位一周。
+- [想要的域名被注册了？WHOIS 三十秒查个明白](https://www.util.cn/blog/articles/whois-domain-check-guide/): 心仪的域名显示已被注册，先别急着换名字。WHOIS查询工具三十秒读出注册商、注册与到期日期和域名状态，支持批量排查仿冒域名、结果导出 JSON 留档。这篇讲清它查得到什么、查不到什么，以及蹲回头域名的正确姿势。
+- [小生意报价里的价内税价外税：一张算清不亏本](https://www.util.cn/blog/articles/vat-price-tax-guide/): 给客户报价，含税不含税一句没说清，一口价就差出十三个点。增值税含税换算工具双向拆算价税、内置常用税率速查与单价口径拆分，配上单价对比和报价单生成器，小微商家报价、进货拆税、开票对账一次算明白。
 - [旧板子上的认件功课：丝印、色环与标号](https://www.util.cn/blog/articles/component-marking-decode-guide/): 拆一块十年前的旧板子，丝印磨花、色环褪色、封装缩写查无此号——认件是维修的基本功。新上线的 IC 丝印解读器专管 date code 周期与批次线索，配合电容/电阻/电感三件解码器，旧板认件基本不用翻手册。
 - [零不良不等于零 DPPM：测试报告里的置信度账](https://www.util.cn/blog/articles/dppm-yield-confidence/)
 - [打样前的四个小计算：阻值替代、上拉电阻、晶振电容与散热](https://www.util.cn/blog/articles/pcb-prototype-pre-calcs/): 原理图画完到下单打样之间，隔着四个小计算：凑不出的阻值怎么用两只电阻替代、I2C 上拉取多大、晶振外接电容配多少、功率器件要不要加散热片。这批上新的设计台四件套把这四个口子全部填上，公式口径注明来源，全部本地计算。
