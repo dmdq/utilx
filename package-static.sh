@@ -72,6 +72,6 @@ step "4/4 完成"
 SIZE=$(du -h "$ZIP_PATH" | cut -f1 | tr -d ' ')
 ok "部署包: ${ZIP_PATH}（${SIZE}，${FILES} 个文件）"
 echo "  部署方式: 解压到 nginx 站点根目录"
-echo "  nginx 关键配置: try_files \$uri \$uri/index.html \$uri/ =404;"
-echo "  （\$uri/index.html 必须排在 \$uri/ 之前，否则 /all/page/2 会 301 到 /all/page/2/）"
+echo "  nginx 关键配置: try_files \$uri \$uri/ \$uri/index.html =404;   # 配合 index index.html;"
+echo "  （分页规范地址带尾斜杠 /all/page/2/，\$uri/ 命中目录索引；不带斜杠的 /all/page/2 由 nginx 301 到带斜杠形式）"
 echo "  上线后复检: TOOLS_BASE_URL=\"https://你的域名/tools/\" node scripts/test-tools.js"
