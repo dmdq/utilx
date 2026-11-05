@@ -1,20 +1,20 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：780 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：792 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 780 款工具完整目录
-- [场景专题](https://www.util.cn/collections/): 21 个按使用场景组织的工具组合
-- [按职业找工具](https://www.util.cn/professions/): 29 张职业工具卡，按任务对应工具
-- [AI 百科](https://www.util.cn/wiki/): 40 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 394 篇工具教程与实践文章
+- [全部工具](https://www.util.cn/all/): 792 款工具完整目录
+- [场景专题](https://www.util.cn/collections/): 24 个按使用场景组织的工具组合
+- [按职业找工具](https://www.util.cn/professions/): 31 张职业工具卡，按任务对应工具
+- [AI 百科](https://www.util.cn/wiki/): 48 条大模型相关词条
+- [技术博客](https://www.util.cn/blog/): 399 篇工具教程与实践文章
 
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（100款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（111款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
@@ -25,7 +25,7 @@
 - [开发辅助（109款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（57款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（63款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [其他工具（64款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（53款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
 - [金融工具（47款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（47款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
@@ -152,6 +152,17 @@
 - [细胞计数与接种密度计算器](https://www.util.cn/tools/cell-count-calculator/): 血球计数板浓度 ×稀释×10⁴、台盼蓝活率、传代取液与扩瓶面积比换算
 - [视频码率计算器](https://www.util.cn/tools/bitrate-calculator/): 分辨率帧率码率 → 文件大小正反算，YouTube/B 站/Twitch 推荐码率速查与 OBS 推流参考
 - [星空曝光计算器](https://www.util.cn/tools/star-exposure-calculator/): 星空摄影 500/600 法则快门：焦距×裁切系数反算最长曝光，银河季与月相窗口提示
+- [4-20mA信号换算器](https://www.util.cn/tools/signal-loop-converter/): 4-20mA/0-10V 与工程量、PLC 数字量双向换算，含 250Ω 采样电阻与流量开方
+- [电机电容选型器](https://www.util.cn/tools/motor-capacitor-sizer/): 单相电机启动/运转电容容量计算，无铭牌经验法、标准容值吸附与耐压建议
+- [散热热阻计算器](https://www.util.cn/tools/heatsink-calculator/): 功率器件结温与散热器热阻正反算，热阻链可视化，判定结温安全档
+- [NTC热敏电阻计算器](https://www.util.cn/tools/ntc-thermistor-calculator/): NTC B 值与 Steinhart-Hart 双模型正反算，ADC 分压测温联动，标定三点拟合
+- [PT100热电偶换算器](https://www.util.cn/tools/rtd-thermocouple-lookup/): PT100/PT1000 分度正反算与 K 型热电偶 mV 换算，含冷端补偿
+- [电解电容寿命估算器](https://www.util.cn/tools/electrolytic-cap-life/): 电解电容 10℃ 法则寿命估算，纹波电流修正与温度-寿命对照表
+- [电感标号读取器](https://www.util.cn/tools/inductor-code-reader/): 色环电感四环双向解读与贴片电感三位码换算，单位 µH 口径
+- [E系列标准阻值查找](https://www.util.cn/tools/eseries-resistor-finder/): E6-E96 标准阻值最近值匹配与两电阻串并联组合替代搜索
+- [DPPM良率计算器](https://www.util.cn/tools/dppm-yield-calculator/): DPPM 与良率双向换算、置信区间上限、多工序滚动良率计算
+- [晶振负载电容计算器](https://www.util.cn/tools/crystal-load-calculator/): 晶振负载电容 CL 匹配外接电容计算，频偏 ppm 估算与标准容值吸附
+- [I2C上拉电阻计算器](https://www.util.cn/tools/i2c-pullup-calculator/): I2C 总线上拉电阻取值区间计算（TI SLVA689），标准/快速/FM+ 三档速览
 
 ## 数据格式化
 
@@ -701,6 +712,7 @@
 - [模型比例换算器](https://www.util.cn/tools/model-scale-calculator/): 实物与模型尺寸双向换算，1:35 到 1:700 全档，铁模轨距专区
 - [法律文书生成器](https://www.util.cn/tools/legal-doc-generator/): 租房合同、授权委托书、保密协议等 5 套文书模板填空即用，实时预览与打印，条款骨架完整
 - [公文红头排版生成器](https://www.util.cn/tools/official-document-generator/): 按 GB/T 9704 惯用口径排红头、文号、红色分隔线与正文，A4 打印即出，机关风格发文笺
+- [IC丝印解读器](https://www.util.cn/tools/ic-marking-decoder/): 芯片丝印 date code 周期解读、常见前缀厂商线索与标识说明，仅供学习参考
 
 ## 健康工具
 
@@ -874,13 +886,16 @@
 - [车间与工地速查](https://www.util.cn/collections/shop-floor-quickref/): 螺纹底孔、钢筋米重、空调匹数、材料算量，再到公差配合、齿轮模数、轴承型号与硬度换算——从图纸到报价的车间速查台。
 - [光影与声学问算台](https://www.util.cn/collections/optics-acoustics-bench/): 景深超焦距、频率波长、混响时间、人声分离——光路和声路里的物理账，都在浏览器本地算。
 - [实验台面换算器](https://www.util.cn/collections/lab-bench-calculators/): 梯度稀释、离心力换算、分子量、方程式配平——实验课前把台面四件计算器打开，移液枪和离心机设定不再靠估。
-- [电子维修工作台](https://www.util.cn/collections/electronics-repair-bench/): 电池组配几串几并、电容代码怎么读、电阻色环、LED 限流电阻——维修台上最高频的四件换算，本地计算不漏料。
+- [电子维修工作台](https://www.util.cn/collections/electronics-repair-bench/): 电机电容换件、电解电容寿命、色环/标号/丝印三件解码、电池组配组——维修台上最高频的八件换算，本地计算不漏料。
 - [质检与库存工作台](https://www.util.cn/collections/qc-inventory-desk/): 抽多少验货、订多少省钱、库存降到多少下单——供应链最常被问的三道题的标准答案表。
 - [打工人维权计算器](https://www.util.cn/collections/rights-guard-kit/): 离职补偿 N/N+1、加班费、年假天数、社保公积金、诉讼时效与诉讼费——打工人要算的账一次算清，全部本地计算不上传。
 - [健康与运动仪表台](https://www.util.cn/collections/fitness-health-desk/): BMI、体脂、基础代谢、每日热量缺口、心率区间、饮水量、1RM 与 HIIT 计时——把身体数据算明白再练，全部本地计算。
 - [PDF 处理工作台](https://www.util.cn/collections/pdf-workbench/): 合并拆分、压缩瘦身、加水印、签名、页码、整理页序、转图片、提取文本——一套 PDF 处理流程全在浏览器本地完成，文件不出电脑。
 - [电商卖家促销工作台](https://www.util.cn/collections/seller-promo-desk/): 满减算到肉、大促到手价、SKU 组合、标题组合与评论抽奖——活动策划前后的账都在浏览器里算完，定价策略不拍脑袋。
 - [音乐与音频创作台](https://www.util.cn/collections/audio-creator-kit/): 录音降噪、剪音频、变调变速、和弦图、音程听辨、节拍器调音器——从练习到成品的音频工具全在浏览器本地跑，素材不出电脑。
+- [电子工程师设计台](https://www.util.cn/collections/electronics-design-bench/): 晶振负载电容、I2C 上拉、E 系列阻值替代、散热结温、NTC 与 ADC 测温——打样前的高频小计算，公式口径注明来源，全部本地算。
+- [传感器信号链](https://www.util.cn/collections/sensor-signal-chain/): 从 PT100/NTC 感温元件到 4-20mA 变送器，再到 PLC 数字量——一条信号链上的换算一次算清，含冷端补偿与活零点口径。
+- [IC 测试质量台](https://www.util.cn/collections/ic-test-quality/): DPPM 与良率换算、置信上限、AQL 抽样对照、安全库存——把测试与品质的数字账一次算清，支撑来料判定与出货决策。
 
 ## 按职业找工具
 
@@ -913,6 +928,8 @@
 - [手工/模型/3D 打印爱好者工具箱](https://www.util.cn/professions/hobbyist-craft/): 做手工、拼模型、玩 3D 打印的创客爱好者：7 条核心任务对应 10 款工具
 - [出行/司机/旅行规划工具箱](https://www.util.cn/professions/traveler-driver/): 常出差、自驾游与跑长途的出行人群：7 条核心任务对应 14 款工具
 - [孕产/新生儿家长工具箱](https://www.util.cn/professions/pregnancy-parent/): 孕期到婴幼儿阶段的父母与看护人：6 条核心任务对应 11 款工具
+- [硬件/电子工程师工具箱](https://www.util.cn/professions/hardware-engineer/): 画原理图、调传感器信号链、画 PCB 打样的硬件工程师与电子爱好者：11 条核心任务对应 13 款工具
+- [电子维修技师工具箱](https://www.util.cn/professions/electronics-repairer/): 修电源板、家电主板、功放的维修技师与电子爱好者：9 条核心任务对应 9 款工具
 
 ## AI 百科词条
 
@@ -956,9 +973,22 @@
 - [靶心率与最大心率（Target Heart Rate）](https://www.util.cn/wiki/target-heart-rate/): 最大心率常用 220 减年龄估算，靶心率是锻炼时应维持的目标心率区间，一般取最大心率的 60%-80%：燃脂偏向 60%-70%，提升心肺耐力偏向 70%-85%。
 - [1RM 最大重复重量（One Rep Max）](https://www.util.cn/wiki/one-rep-max/): 1RM 是标准动作下只能完成一次的最大重量，衡量绝对力量的通用指标。训练强度常按 1RM 百分比安排：85% 以上练力量，67%-85% 练增肌，67% 以下练耐力。
 - [每日总消耗（TDEE）](https://www.util.cn/wiki/tdee/): TDEE 是一天消耗的总能量，约等于基础代谢率乘以活动系数（1.2-1.9）。减脂期在其基础上亏空 300-500 kcal、增肌期盈余 200-300 kcal，是通用的温和调整幅度。
+- [NTC 热敏电阻](https://www.util.cn/wiki/ntc-thermistor/): NTC 是阻值随温度升高而减小的负温度系数热敏电阻，用 R25 与 B 值两个参数描述特性，是最便宜常用的测温元件。
+- [PT100 铂电阻](https://www.util.cn/wiki/pt100-platinum-resistance/): PT100 是 0℃ 时阻值为 100Ω 的铂热电阻，阻值随温度近似线性增大，按 IEC 60751 的 Callendar-Van Dusen 方程换算，是工业测温的精度基准。
+- [热电偶](https://www.util.cn/wiki/thermocouple/): 热电偶利用两种金属结点的塞贝克效应直接输出 mV 级电压信号，K 型最常见，量程宽、响应快，但输出需要冷端补偿与多项式换算。
+- [4-20mA 电流环](https://www.util.cn/wiki/current-loop-4-20ma/): 4-20mA 是工业变送器的事实标准输出：4mA 代表量程下限（活零点）、20mA 代表上限，电流信号在长距离传输中不受线路电阻与压降影响。
+- [DPPM（百万分之不良）](https://www.util.cn/wiki/dppm/): DPPM 是每百万件中的不良品数：不良数 ÷ 总数 × 1,000,000。良率 = 1 − DPPM/10⁶，两者互为镜像。
+- [过程能力指数（Cpk）](https://www.util.cn/wiki/cpk-process-capability/): Cpk 衡量稳定过程输出落在规格限内的能力：Cpk = min(USL−μ, μ−LSL)/(3σ)，≥1.33 通常判定能力充足。
+- [电解电容寿命](https://www.util.cn/wiki/electrolytic-capacitor-life/): 铝电解电容是整机里最常坏的元件，规格书寿命（如 105℃/2000h）按 10℃ 法则换算：温度每降 10℃，寿命翻倍。
+- [芯片丝印与 Date Code](https://www.util.cn/wiki/ic-date-code/): 芯片顶面的丝印包含厂商标识、型号、日期码与批号；date code 主流格式是 YYWW（年+周），是判断生产批次与库存时间的第一线索。
 
 ## 博客文章
 
+- [旧板子上的认件功课：丝印、色环与标号](https://www.util.cn/blog/articles/component-marking-decode-guide/): 拆一块十年前的旧板子，丝印磨花、色环褪色、封装缩写查无此号——认件是维修的基本功。新上线的 IC 丝印解读器专管 date code 周期与批次线索，配合电容/电阻/电感三件解码器，旧板认件基本不用翻手册。
+- [零不良不等于零 DPPM：测试报告里的置信度账](https://www.util.cn/blog/articles/dppm-yield-confidence/)
+- [打样前的四个小计算：阻值替代、上拉电阻、晶振电容与散热](https://www.util.cn/blog/articles/pcb-prototype-pre-calcs/): 原理图画完到下单打样之间，隔着四个小计算：凑不出的阻值怎么用两只电阻替代、I2C 上拉取多大、晶振外接电容配多少、功率器件要不要加散热片。这批上新的设计台四件套把这四个口子全部填上，公式口径注明来源，全部本地计算。
+- [4-20mA 到 PLC 数字量：一条温度信号链的换算全解](https://www.util.cn/blog/articles/signal-loop-4-20ma-guide/): 温度从 PT100 到 4-20mA 再到 PLC 屏幕上的一个数，中间隔着分度表、活零点和三家 PLC 各自的数字量档位。这批上新的信号链三件套——PT100/热电偶换算器、NTC 计算器、4-20mA 信号换算器——把一条链上的换算一次算清，全部本地计算。
+- [单相电机嗡嗡响不转？先换对那颗小电容](https://www.util.cn/blog/articles/motor-capacitor-repair-guide/): 风扇不转、水泵嗡嗡响、洗衣机启动无力——十次里七次是电容的锅。这批上新的电机电容选型器和电解电容寿命估算器，把
 - [排版预览最缺的就是一颗章：三种章型与一条合规边界](https://www.util.cn/blog/articles/seal-maker-preview-guide/): 文档示意稿、活动物料、设计占位，内容都齐了就差一颗章——网图带水印、截图是糊的、求设计又开不了口。新上的印章生成器用 Canvas 本地画圆章、椭圆章、姓名章三种章型，边缘做旧、512×512 实时预览、导出 1024 透明底 PNG。先把话说在前头：仅供学习与排版预览，伪造公章违法。
 - [文书别再到处求模板：租房合同、授权委托书、红头发文一次排好](https://www.util.cn/blog/articles/legal-doc-official-format/): 租房想自己拟份对等的合同，给中介开授权书不知道权限怎么写，单位让排红头文件对着格式要求抓瞎——文书这件事难的不是写字，是骨架和版式。新上的法律文书生成器五套模板填空即用，公文红头排版生成器按 GB/T 9704 惯用口径出 A4 版式，全部本地生成。模板仅供参考，不构成法律意见。
 - [PDF 处理工作台：文件不出电脑，从合并到签名一条流水线](https://www.util.cn/blog/articles/pdf-toolkit-local-guide/): 工资条、租房合同、体检报告、孩子的学籍表——这些 PDF 最常见却又最不该被上传到陌生服务器。新的「PDF 处理工作台」专题把站内十款 PDF 工具按一条流水线排好：合并拆分、压缩瘦身、加水印、签名、补页码、提取文本，全程在浏览器本地完成，文件不出电脑。这篇按真实流程走一遍。

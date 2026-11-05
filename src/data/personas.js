@@ -9,7 +9,7 @@
 //   - tasks[].tools 填 tools.js 中覆盖该任务的工具 id；空数组 = 断档任务；
 //   - 通用小工具（单位换算等）允许出现在多个画像；
 //   - 编辑后必须跑 `npm run persona-audit` 校验 id 与覆盖率。
-// 画像框架：参照《职业分类大典》大类骨架，按"工具消费力"收敛为 29 个画像。
+// 画像框架：参照《职业分类大典》大类骨架，按"工具消费力"收敛为 31 个画像。
 
 export const personas = [
   {
@@ -513,6 +513,44 @@ export const personas = [
       { task: '儿童生长曲线参考', tools: ['pediatric-growth'] },
       { task: '农历生日与节日日期', tools: ['lunar-birthday-reminder', 'lunar-calendar', 'holiday-calculator'] },
       { task: '家人健康监测', tools: ['blood-pressure-tracker', 'bmi-calculator', 'decibel-meter'] },
+    ],
+  },
+  {
+    id: 'hardware-engineer',
+    name: '硬件/电子工程师',
+    scene: '画原理图、调传感器信号链、画 PCB 打样的硬件工程师与电子爱好者',
+    icon: 'Cpu',
+    group: '工程技术',
+    tasks: [
+      { task: '晶振负载电容匹配与频偏估算', tools: ['crystal-load-calculator'] },
+      { task: 'I2C 总线上拉电阻取值', tools: ['i2c-pullup-calculator'] },
+      { task: 'E 系列标准阻值匹配与串并联替代', tools: ['eseries-resistor-finder'] },
+      { task: '功率器件结温与散热器选型', tools: ['heatsink-calculator'] },
+      { task: 'NTC 选型与 ADC 测温换算', tools: ['ntc-thermistor-calculator'] },
+      { task: 'PT100/热电偶分度换算', tools: ['rtd-thermocouple-lookup'] },
+      { task: '4-20mA/模拟量信号链换算', tools: ['signal-loop-converter'] },
+      { task: '元件丝印与生产批次识别', tools: ['ic-marking-decoder'] },
+      { task: '数字电路校验位与位运算', tools: ['crc-calculator', 'bit-calculator'] },
+      { task: '电源压降与回路粗算', tools: ['voltage-drop-calculator', 'ohms-law-calculator'] },
+      { task: '线束载流核查', tools: ['cable-ampacity-lookup'] },
+    ],
+  },
+  {
+    id: 'electronics-repairer',
+    name: '电子维修技师',
+    scene: '修电源板、家电主板、功放的维修技师与电子爱好者',
+    icon: 'Cable',
+    group: '工程技术',
+    tasks: [
+      { task: '单相电机启动/运转电容换件选容', tools: ['motor-capacitor-sizer'] },
+      { task: '电解电容鼓包失效与寿命判断', tools: ['electrolytic-cap-life'] },
+      { task: '色环电感/贴片电感识别', tools: ['inductor-code-reader'] },
+      { task: '贴片电容/电阻丝印读值', tools: ['capacitor-code-reader', 'resistor-color-code'] },
+      { task: 'IC 丝印 date code 判断生产批次', tools: ['ic-marking-decoder'] },
+      { task: '电池组换芯配组', tools: ['battery-pack-calculator'] },
+      { task: '回路电压电流功率排故', tools: ['ohms-law-calculator'] },
+      { task: 'LED 更换与限流电阻配换', tools: ['ohms-law-calculator'] },
+      { task: '三相电机功率与补偿核算', tools: ['motor-power-factor-calculator'] },
     ],
   },
 ]

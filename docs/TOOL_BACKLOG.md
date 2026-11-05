@@ -288,7 +288,25 @@ bitrate-calculator（视频码率/文件大小+OBS 推流档）· star-exposure-
 
 > 详 docs/TOOL_BATCH23_RESEARCH_2026-11-05.md。新方法：**经典 idea 全清单 × 注册表碰撞检测**（50 个高频 idea 中 28 个已有——重复造轮子是最大浪费）+ Bing 验证。主推 3 款全部落地：legal-doc-generator（法律文书 5 模板，「租房合同生成器」房源劫持真空）、official-document-generator（GB/T 9704 红头公文，语义劫持真空）、seal-maker-online（印章 Canvas 透明 PNG，8 家小站无垄断）。备选留池：derivative-calculator（MathDF/ToolV 两家成熟竞品）、五笔反查（码表重）。弃选重申：语音转文字/OCR/手写/植物辨识（云端或视觉模型违纯本地）、简历（饱和）。**本轮内容层并行**：RelatedTools 职业推荐位（组件级 777 页生效）、collections 16→21（维权/健康/PDF/电商/音频）、wiki 词条 20→40（新增工程/法律/健康三分类）。
 
+## 二十、第二十四批：电子元器件行业线（2026-11-05 调研并落地，全站 792 款）
+
+> 详 docs/TOOL_ELECTRONICS_RESEARCH_2026-11-05.md。背景：商业合作方经营元器件销售（电容/传感器/IC/PCB）+ IC 测试代工，客户=工程师+维修人员。31 个候选碰撞检测零撞车。全部零新依赖。
+
+**第一批 12 款（真空优先）**：signal-loop-converter（4-20mA/0-10V/PLC 数字量换算，中文交互真空）/ motor-capacitor-sizer（单相电机启动/运转电容，维修+电容导流）/ heatsink-calculator（功率器件散热，真空）/ ntc-thermistor-calculator（B 值+Steinhart-Hart 双模型）/ rtd-thermocouple-lookup（PT100 CVD+K 型 NIST 分度）/ electrolytic-cap-life（10℃ 法则+纹波注记）/ inductor-code-reader（解码三件套收官）/ ic-marking-decoder（丝印解读教学型：date code YYWW+前缀厂商线索，不做全量反查——芯查查数据库垄断）/ eseries-resistor-finder（E24/E96 最近值+两电阻串并联组合替代，独家功能）/ dppm-yield-calculator（DPPM+滚动良率+置信上限，IC 测试线）/ crystal-load-calculator / i2c-pullup-calculator（TI SLVA689）。
+
+**第二批 10 款**：cpk-process-capability（直方图）/ grr-msa-calculator（AIAG 三档判定）/ pcb-trace-width-calculator（IPC-2221 式+2152 注记）/ tl431-feedback-calculator（TL431/LM317/稳压管合并页）/ rc-time-constant / opamp-gain-calculator / buck-inductor-calculator / mtbf-fit-reliability / timer-555-calculator（SVG 电路+反向求解差异化）/ copper-thickness-converter（oz/mil/µm+AWG）。
+
+**第三梯队留池 6**：uart-baud-error / logic-ic-truth-table（74 系列速查）/ adc-resolution / lc-resonance / voltage-divider-calculator / impedance-reactance。
+
+**弃选**：丝印全量反查（数据库型）、datasheet/BOM 比价（数据库型）、电路仿真/示波器（工程量或精度不可达）、RF 史密斯圆图（过窄）。
+
+**配套**：personas 新增 hardware-engineer + electronics-repairer 两画像（客户群一比一映射，当前底账缺位）；collections 新增电子工程师设计台/传感器信号链/IC 测试质量台 3 专题+电子维修工作台 4→8 扩容；wiki 8 词条；推文 5 篇。导流形态（合作伙伴位 vs 结果区选型建议）待用户拍板，先上线积累收录再挂位。
+
 ## 批次记录
+
+---
+
+- 2026-11-05：**第二十四批落地**（电子元器件行业线，商业合作向，全站 **792 款**）：第二十节第一批 12 款全部实施（4-20mA信号换算/电机电容选型/散热热阻/NTC热敏/PT100热电偶/电解电容寿命/电感标号/IC丝印解读/E系列阻值组合替代/DPPM良率/晶振负载电容/I2C上拉），全部零新依赖。toolIcons 补 Fan/Magnet/ScanSearch/Sigma/ThermometerSnowflake（总 262）。**底账补缺：personas 29→31 画像**（hardware-engineer 11 任务/electronics-repairer 9 任务，两画像 100% 覆盖，审计断档仅剩主动弃选的 eDPI）；collections 21→24（电子工程师设计台/传感器信号链/IC 测试质量台 + 电子维修工作台 4→8 扩容）；wiki 40→48 词条（新分类「电子与硬件」8 条）；sitemap 1422→1479 URL、覆盖率 792/792=100%。配套 5 篇推文（posts/2026-11-05/）12 新工具全覆盖。**六 agent 三波（2 并发）交付，单测合计 500+ 项全绿**：A 组 38（PLC 档位 NAMUR 细化）、B 组 39（**自纠 S-H 拟合设计矩阵 x²→(lnR)³**）、C 组 54（**自纠 NIST c6 转写 e-15→e-16**；K 型锚点 4096µV 非 4095）、D 组 288（**自纠 YYDDD 闰年校验与 ISO 8601 周历**——2020 有 W53 而 2025 没有）、E 组 67（**纠正规格书两处算术笔误**：E6-E24 须用 IEC 60063 公布表非纯公式、滚动良率 0.95×0.98×0.99=92.169% 非 92.117%；最近值度量改对数距离、组合搜索窗口放宽到目标/25 才能命中 220Ω 这类小电阻）、F 组 61（按 NXP 分档 FM+ Cb 上限 550pF、E24 推荐用几何中点）。12 页编译+SSR 200 全过、13 条关联路由（3 专题/2 职业/wiki 词条）200、日志零 [500]。调研报告含「重要发现三条建议」附录（画像复利用法/合作方丝印数据升级路径/导流三阶段节奏）。备选池：第二批 10 款（Cpk/GR&R/线宽/TL431 合并页等）+ 第三梯队 6 款留池。
 
 ---
 
