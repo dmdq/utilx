@@ -4,7 +4,8 @@
  * 生成工具页→教程文章的反向映射 src/data/tool-tutorials.json
  * 扫描 blog/content/posts 每篇文章的工具引用（util.cn/tools/ 链接 + {{< tool id >}} shortcode），
  * 结合 front matter 的 title/summary/slug/date 输出 { toolId: [{slug,title,date,summary}] }。
- * 每个工具最多保留最近 3 篇；供工具页 TutorialLinks 组件与覆盖率门禁使用。
+ * 排序：专属优先——文章引用的工具总数越少越专注该工具，排前；同分按日期倒序。
+ * 每个工具最多保留 3 篇；供工具页 TutorialLinks 组件与覆盖率门禁使用。
  * 新文章发布后随 `npm run sitemap` 自动刷新。
  */
 
@@ -49,15 +50,15 @@ for (const f of walk(POSTS)) {
   if (!p) continue
   posts++
   for (const id of p.ids) {
-    ;(map[id] = map[id] || []).push({ slug: p.slug, title: p.title, date: p.date, summary: p.summary })
+    ;(map[id] = map[id] || []).push({ slug: p.slug, title: p.title, date: p.date, summary: p.summary, _w: p.ids.length })
   }
 }
 
-// 每工具按日期倒序取最近 3 篇；空数组键不落盘
+// 专属优先：引用工具数少的文章更专注，排前；同分按日期倒序。取前 3 篇（_w 不落盘）
 const out = {}
 for (const [id, list] of Object.entries(map)) {
-  list.sort((a, b) => (a.date < b.date ? 1 : -1))
-  out[id] = list.slice(0, MAX_PER_TOOL)
+  list.sort((a, b) => a._w - b._w || (a.date < b.date ? 1 : -1))
+  out[id] = list.slice(0, MAX_PER_TOOL).map(({ _w, ...rest }) => rest)
 }
 
 fs.writeFileSync(OUT, JSON.stringify(out, null, 0), 'utf8')

@@ -47,3 +47,13 @@ location ~* \.(png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot)$ {
    curl -sI https://www.util.cn/_nuxt/$(curl -s https://www.util.cn/ | grep -o '_nuxt/[^"]*\.js' | head -1 | cut -d/ -f2) | grep -i cache-control
    ```
    预期：HTML 返回 `no-cache, must-revalidate` 与全部安全头；`_nuxt` 资源返回 `immutable`。
+
+## 404 兜底（2026-11-05 补，配合 src/error.vue）
+
+站点已有自定义 error.vue（生成 404.html，含相近工具推荐）。nginx 默认 404 不会走它，需在 server 块加：
+
+```nginx
+error_page 404 = /404.html;
+```
+
+另有两个静态 redirect 桩随产物发布（public/tools/audio-conberter、public/tools/decibel-，meta refresh 到正确工具页），nginx 侧无需额外配置。
