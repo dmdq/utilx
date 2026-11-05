@@ -294,11 +294,13 @@ bitrate-calculator（视频码率/文件大小+OBS 推流档）· star-exposure-
 
 **第一批 12 款（真空优先）**：signal-loop-converter（4-20mA/0-10V/PLC 数字量换算，中文交互真空）/ motor-capacitor-sizer（单相电机启动/运转电容，维修+电容导流）/ heatsink-calculator（功率器件散热，真空）/ ntc-thermistor-calculator（B 值+Steinhart-Hart 双模型）/ rtd-thermocouple-lookup（PT100 CVD+K 型 NIST 分度）/ electrolytic-cap-life（10℃ 法则+纹波注记）/ inductor-code-reader（解码三件套收官）/ ic-marking-decoder（丝印解读教学型：date code YYWW+前缀厂商线索，不做全量反查——芯查查数据库垄断）/ eseries-resistor-finder（E24/E96 最近值+两电阻串并联组合替代，独家功能）/ dppm-yield-calculator（DPPM+滚动良率+置信上限，IC 测试线）/ crystal-load-calculator / i2c-pullup-calculator（TI SLVA689）。
 
-**第二批 10 款**：cpk-process-capability（直方图）/ grr-msa-calculator（AIAG 三档判定）/ pcb-trace-width-calculator（IPC-2221 式+2152 注记）/ tl431-feedback-calculator（TL431/LM317/稳压管合并页）/ rc-time-constant / opamp-gain-calculator / buck-inductor-calculator / mtbf-fit-reliability / timer-555-calculator（SVG 电路+反向求解差异化）/ copper-thickness-converter（oz/mil/µm+AWG）。
+**第二批（已于 2026-11-05 完成竞争验证并重组为第二十五批 12 款，详 docs/TOOL_BATCH25_RESEARCH_2026-11-05.md）**：grr-msa-calculator（在线交互中文零——搜索引擎都提示搜英文）/ cpk-process-capability / mtbf-fit-reliability（品牌专属垄断、通用换算无）/ opamp-gain-calculator（简体 Web 真空）/ buck-inductor-calculator（MPS/Coilcraft/TDK 品牌选型器错位：公式教学+纹波率）/ pcb-trace-width-calculator（IPC-2221+过孔）/ copper-thickness-converter（铜厚档+基铜成品铜+AWG）/ tl431-feedback-calculator（三芯片合并，吸收分压场景）/ rc-time-constant（曲线 SVG）/ **fuse-selector（新发现：保险丝选型厂商全是指南无计算器）** / **logic-ic-truth-table（新发现升格：74/4000 系列 30-40 型号零交互工具）** / timer-555-calculator（6+ 家红海，差异化三板斧不足则砍）。
 
-**第三梯队留池 6**：uart-baud-error / logic-ic-truth-table（74 系列速查）/ adc-resolution / lc-resonance / voltage-divider-calculator / impedance-reactance。
+**弃选 4（本轮验证后定论）**：lc-resonance、impedance-reactance（各 6 家饱和）、voltage-divider（3+ 家并入 TL431）、adc-resolution（NTC 页模式三已实质覆盖）。
 
-**弃选**：丝印全量反查（数据库型）、datasheet/BOM 比价（数据库型）、电路仿真/示波器（工程量或精度不可达）、RF 史密斯圆图（过窄）。
+**保池 3**：tvs-selector（TVS 四条件校验器，应用笔记多交互无）/ transformer-rewind（理想换算 5 家饱和但重绕特化无工具：每伏匝数 45/截面积+数原匝反推）/ uart-baud-error。
+
+**原弃选维持**：丝印全量反查（数据库型）、datasheet/BOM 比价（数据库型）、电路仿真/示波器（工程量或精度不可达）、RF 史密斯圆图（过窄）。
 
 **配套**：personas 新增 hardware-engineer + electronics-repairer 两画像（客户群一比一映射，当前底账缺位）；collections 新增电子工程师设计台/传感器信号链/IC 测试质量台 3 专题+电子维修工作台 4→8 扩容；wiki 8 词条；推文 5 篇。导流形态（合作伙伴位 vs 结果区选型建议）待用户拍板，先上线积累收录再挂位。
 
