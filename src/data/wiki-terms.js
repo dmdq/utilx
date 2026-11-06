@@ -1203,4 +1203,99 @@ export const wikiTerms = [
     relatedTerms: [],
     updated: '2026-11-06',
   },
+  {
+    slug: 'measurement-uncertainty',
+    term: '测量不确定度（Measurement Uncertainty）',
+    category: '工程与车间',
+    summary: '测量不确定度是对"测量结果可信范围"的定量表述，报告为 x̄ ± U。A 类来自重复观测的统计，B 类来自经验与资料（如量具证书），合成后乘包含因子 k 得扩展不确定度。',
+    body: [
+      {
+        h: 'A 类与 B 类评定',
+        paras: ['A 类用重复测量数据按贝塞尔公式算标准差再除以 √n；B 类把量具证书、分辨力、温度影响等"半宽 a"按分布假设折算，均匀分布除以 √3、三角分布除以 √6、正态按 k=2 或 3。A/B 只是评定途径不同，地位等价。'],
+      },
+      {
+        h: '合成、有效自由度与扩展',
+        paras: ['各分量不相关时按方和根合成 uc=√(Σu²)。有效自由度用 Welch–Satterthwaite 公式估计，再查 t 分布 0.975 分位得包含因子 k；实验室报告惯例也可直接取 k=2（约 95% 置信）。扩展不确定度 U=k×uc，最终写成 X=(x̄±U)。国内依据 JJF 1059.1，国际同源 GUM。'],
+      },
+    ],
+    relatedTools: ['measurement-uncertainty-calculator', 'grr-msa-calculator'],
+    relatedTerms: ['sigma-level', 'rounding-rule'],
+    updated: '2026-11-06',
+  },
+  {
+    slug: '8d-report',
+    term: '8D 报告（Eight Disciplines）',
+    category: '工程与车间',
+    summary: '8D 是汽车与电子行业客诉整改的标准八步法：D1 组队、D2 描述问题、D3 临时围堵、D4 找根因、D5 选永久对策、D6 实施验证、D7 预防再发、D8 关闭表彰，源自福特，IATF 16949 生态通用。',
+    body: [
+      {
+        h: '四步定位：围堵先行，双根因并查',
+        paras: ['8D 的骨架是"先止血再治病"：D3 临时对策要在 24-48 小时内围堵客户与在制品，D4 才进入根因。D4 必须区分"发生根因"（为什么做出来就坏了）与"流出根因"（为什么检验没拦住），两问各自闭合才算完成。'],
+      },
+      {
+        h: 'D7 是 8D 与体系文件的接口',
+        paras: ['D7 把个案整改固化到体系：更新 PFMEA 与控制计划、修订 SOP、横向展开到同类产线。评审 8D 时最常见的驳回理由是 D4 只有对策没有验证、D7 只写"加强培训"这类不可验证的措施。'],
+      },
+    ],
+    relatedTools: ['8d-report-generator', 'pfmea-risk-assessor'],
+    relatedTerms: ['pfmea', 'sigma-level'],
+    updated: '2026-11-06',
+  },
+  {
+    slug: 'pfmea',
+    term: 'PFMEA 与 AP 行动优先级',
+    category: '工程与车间',
+    summary: 'PFMEA（过程失效模式与影响分析）对每条工序的失效模式按严重度 S、频度 O、探测度 D 打 1-10 分。传统 RPN=S×O×D；2019 版 AIAG-VDA 手册改用 AP（高/中/低）查表定优先级，规避 RPN 数值可比性差的痼疾。',
+    body: [
+      {
+        h: 'RPN 的局限与 AP 的口径',
+        paras: ['RPN 把三个不同量纲的分相乘，10-5-2 与 4-5-5 同为 100 却完全不同性质，这是 RPN 被诟病的核心。AIAG-VDA 2019 用 AP 查表取代：按 S/O/D 的档位组合直接给出高/中/低，且高 S 项无论 O、D 如何都不可能落到低优先级，逻辑上强制盯住严重度。'],
+      },
+      {
+        h: '在 8D 与控制计划中的位置',
+        paras: ['PFMEA 是过程质量的"事前推演"：AP=高 的失效模式必须有探测措施进控制计划。客户审核时把 8D、控制计划、PFMEA 三者交叉对账，D7 整改后若 PFMEA 未同步更新是常见不符合项。'],
+      },
+    ],
+    relatedTools: ['pfmea-risk-assessor', '8d-report-generator'],
+    relatedTerms: ['8d-report'],
+    updated: '2026-11-06',
+  },
+  {
+    slug: 'sigma-level',
+    term: '西格玛水平（Sigma Level）',
+    category: '工程与车间',
+    summary: '西格玛水平衡量过程能力，常与 DPMO（每百万缺陷数）互换：行业惯例含 1.5σ 长期偏移，6σ 对应 3.4 DPMO；无偏移口径 6σ 对应约 0.002 DPMO。报数前先对齐口径。',
+    body: [
+      {
+        h: '两套口径差在哪',
+        paras: ['Motrola 惯例假设过程均值随时间漂移 1.5σ，用短期能力 Zst 对单边超差概率：DPMO=(1−Φ(σ−1.5))×10⁶，6σ→3.4、3σ→66807。若不做偏移假设，双侧对称规格 3σ 是 2700 DPMO，6σ 是 0.002 DPMO。合同与客户报表务必注明口径，两套数字混报会被审核挑战。'],
+      },
+      {
+        h: '与 Cpk 的换算',
+        paras: ['行业近似：短期西格玛 σst = 3×Cpk + 1.5（1.5σ 偏移口径）。Cpk=1.67 约 6σ 短期、Cpk=1.33 约 5.5σ、Cpk=1.0 约 4.5σ。这只在过程受控且近似正态时成立，不能替代实测数据计算。'],
+      },
+    ],
+    relatedTools: ['sigma-level-converter', 'cpk-process-capability', 'dppm-yield-calculator'],
+    relatedTerms: ['pfmea', 'measurement-uncertainty'],
+    updated: '2026-11-06',
+  },
+  {
+    slug: 'rounding-rule',
+    term: '数值修约规则（GB/T 8170）',
+    category: '工程与车间',
+    summary: 'GB/T 8170 规定"四舍六入五成双"：拟舍弃位小于 5 舍、大于 5 进；恰为 5 时五后非零则进、五后全零看五前，前偶舍前奇进。与四舍五入不同，它避免了大样本下系统性偏大。',
+    body: [
+      {
+        h: '五成双怎么执行',
+        paras: ['1.005 保留两位小数：第三位是 5 且后面全零，五前是 0（偶）→ 舍为 1.00；1.015 → 五前是 1（奇）→ 进为 1.02。对 0.15（保留一位）前位 1 奇 → 0.2，0.25 前位 2 偶 → 0.2。整批数据进舍概率各半，均值不漂移——这是计量与检测报告强制用它的原因。'],
+      },
+      {
+        h: '修约间隔与一次性修约',
+        paras: ['修约间隔 0.5 表示结果必须是 0.5 的整数倍（如 2.3→2.5、2.25→2.0）。标准还要求一次到位：禁止 1.549→1.55→1.6 的连续修约（应直接 1.5）。实现上要按十进制字符串处理，浮点的 1.005 实为 1.00499…，直接 toFixed 会得出错误结果。'],
+      },
+    ],
+    relatedTools: ['significant-figure-rounder', 'measurement-uncertainty-calculator'],
+    relatedTerms: ['measurement-uncertainty', 'sigma-level'],
+    updated: '2026-11-06',
+  },
 ]

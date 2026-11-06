@@ -461,4 +461,21 @@ export const collections = [
     relatedTerms: [],
     updated: '2026-11-06',
   },
+  {
+    slug: 'quality-toolkit',
+    title: '质量工具箱：从抽样到 8D',
+    scene: '管进料检验、过程控制与客诉整改的质量工程师与 QC',
+    icon: 'ClipboardCheck',
+    description: 'AQL 抽样、过程能力 Cpk、测量系统 GR&R、DPPM 良率、不确定度评定、西格玛换算、修约规则、PFMEA 风险与 8D 报告——从进料到客诉闭环的质量岗九件套，数据全部浏览器本地算。',
+    tools: ['aql-sampling-calculator', 'grr-msa-calculator', 'cpk-process-capability', 'dppm-yield-calculator', 'measurement-uncertainty-calculator', 'sigma-level-converter', 'significant-figure-rounder', 'pfmea-risk-assessor', '8d-report-generator'],
+    workflow: [
+      '来料/出货按批量与检验水平查 AQL 抽样方案，定抽样量与判定数',
+      '量产品做 Cpk 过程能力分析，客户问西格玛水平用换算器按口径报数',
+      '怀疑是"量不准"先用 GR&R 做测量系统分析，把量具变差从数据里剥出来',
+      '检测报告按 GB/T 8170 修约有效数字，必要时补测量不确定度评定',
+      '出批次质量问题走 8D：D3 围堵先行，D4 双根因，D7 把 PFMEA 和控制计划一起更新',
+    ],
+    relatedTerms: ['measurement-uncertainty', '8d-report', 'pfmea', 'sigma-level', 'rounding-rule'],
+    updated: '2026-11-06',
+  },
 ]

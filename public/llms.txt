@@ -1,20 +1,20 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：855 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：873 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 855 款工具完整目录
-- [场景专题](https://www.util.cn/collections/): 27 个按使用场景组织的工具组合
-- [按职业找工具](https://www.util.cn/professions/): 31 张职业工具卡，按任务对应工具
-- [AI 百科](https://www.util.cn/wiki/): 58 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 419 篇工具教程与实践文章
+- [全部工具](https://www.util.cn/all/): 873 款工具完整目录
+- [场景专题](https://www.util.cn/collections/): 28 个按使用场景组织的工具组合
+- [按职业找工具](https://www.util.cn/professions/): 32 张职业工具卡，按任务对应工具
+- [AI 百科](https://www.util.cn/wiki/): 63 条大模型相关词条
+- [技术博客](https://www.util.cn/blog/): 423 篇工具教程与实践文章
 
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（164款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（176款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
@@ -25,7 +25,7 @@
 - [开发辅助（109款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（57款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（73款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [其他工具（79款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（54款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
 - [金融工具（47款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（47款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
@@ -216,6 +216,18 @@
 - [能量单位换算](https://www.util.cn/tools/energy-convert/): 焦耳/卡路里/千瓦时/BTU/Wh 能量五向换算
 - [功率单位换算](https://www.util.cn/tools/power-units/): 千瓦/马力/PS/BTU/h 功率四向换算，电机铭牌口径注记
 - [力单位换算](https://www.util.cn/tools/force-convert/): 牛顿/千克力/磅力/达因 力单位四向换算
+- [测量不确定度评定](https://www.util.cn/tools/measurement-uncertainty-calculator/): A/B 类分量评定到合成与扩展不确定度（k=2），JJF 1059.1 口径
+- [西格玛水平换算](https://www.util.cn/tools/sigma-level-converter/): 西格玛水平与 DPMO/PPM/Cp/Cpk/合格率全向换算，含 1.5σ 偏移口径
+- [有效数字修约](https://www.util.cn/tools/significant-figure-rounder/): GB/T 8170 四舍六入五成双，支持修约间隔，与普通四舍五入差异对照
+- [PFMEA风险评估](https://www.util.cn/tools/pfmea-risk-assessor/): 失效模式 S/O/D 打分，RPN 与 AIAG-VDA AP 行动优先级双口径
+- [温度单位换算](https://www.util.cn/tools/temperature-converter/): 摄氏/华氏/开尔文/兰氏度四向精确换算
+- [速度单位换算](https://www.util.cn/tools/speed-unit-converter/): km/h、m/s、mph、节、马赫多向换算
+- [数据存储单位换算](https://www.util.cn/tools/data-unit-converter/): 字节到 YB 二进制与十进制双口径换算，GB 与 GiB 差异明细
+- [角度弧度换算](https://www.util.cn/tools/angle-unit-converter/): 度/弧度/梯度/角分角秒/转五向换算
+- [钣金展开计算器](https://www.util.cn/tools/sheet-metal-bend-calculator/): K 因子/折弯补偿/折弯扣除三法并列，多弯累加展开长度
+- [水产用药计算器](https://www.util.cn/tools/pond-medication-calculator/): 塘口面积水体估算到全池泼洒与拌饵药量，休药期提醒
+- [CAN位定时计算器](https://www.util.cn/tools/can-bit-timing-calculator/): 时钟与波特率求 brp/tseg/sjw 与采样点，经典 CAN 与 CAN FD
+- [步进电机计算器](https://www.util.cn/tools/stepper-pulse-calculator/): 步距角/细分/脉冲频率/转速/导程五参联算
 
 ## 数据格式化
 
@@ -775,6 +787,12 @@
 - [巧克力毒性评估](https://www.util.cn/tools/dog-chocolate/): 犬巧克力可可碱摄入评估：体重×种类→症状分级与就医建议
 - [徒步饮水估算](https://www.util.cn/tools/hiking-water/): 徒步饮水量估算：距离/爬升/温度/负重→每日升数与补水节奏
 - [纸张克重换算](https://www.util.cn/tools/paper-weight-convert/): 纸张克重 gsm 与磅数互换：常见纸种基准与令重
+- [8D报告生成器](https://www.util.cn/tools/8d-report-generator/): D1-D8 分步填写生成 8D 报告，实时预览可打印，客诉整改模板
+- [竖式计算器](https://www.util.cn/tools/vertical-arithmetic-printer/): 加减乘除竖式生成打印，进退位标注与答案页，可调位数与题型
+- [英语字帖生成器](https://www.util.cn/tools/english-copybook-generator/): 四线三格描红字帖，单词句子模板可打印
+- [认识时钟练习纸](https://www.util.cn/tools/clock-worksheet-generator/): 随机钟面 SVG 练习纸，看钟写时间与画指针双题型可打印
+- [人民币练习纸](https://www.util.cn/tools/rmb-money-worksheet/): 元角分换算与找零练习题生成打印，一二年级
+- [染膏调配计算器](https://www.util.cn/tools/hair-dye-mixer/): 染膏与双氧奶按比例用量计算，浓度档与色度引导
 
 ## 健康工具
 
@@ -962,6 +980,7 @@
 - [出行规划时间台](https://www.util.cn/collections/travel-planning-kit/): 日出日落、时区换算、日期计算与倒数日、可打印日历——出发前把"几点天亮、那边几点、还有几天"一次算清，全部本地计算。
 - [办事打印一站台](https://www.util.cn/collections/errand-print-desk/): 身份证复印件排版、证件照换底、电子章、公文红头、合同文书、请柬日历——办事窗口要的纸质材料浏览器里做好直接打印，照片不上传。
 - [车主随车速查](https://www.util.cn/collections/car-owner-kit/): 胎压换算、OBD 故障码、车灯型号、轮胎规格与充电成本——不动扳手也能先弄懂的随车账，全部本地查。
+- [质量工具箱：从抽样到 8D](https://www.util.cn/collections/quality-toolkit/): AQL 抽样、过程能力 Cpk、测量系统 GR&R、DPPM 良率、不确定度评定、西格玛换算、修约规则、PFMEA 风险与 8D 报告——从进料到客诉闭环的质量岗九件套，数据全部浏览器本地算。
 
 ## 按职业找工具
 
@@ -982,19 +1001,20 @@
 - [作家/编辑/文案工具箱](https://www.util.cn/professions/writer-editor/): 写长文、编稿子、做校对的文字工作者：9 条核心任务对应 26 款工具
 - [劳动者/法律需求个人工具箱](https://www.util.cn/professions/legal-labor/): 遇到借贷、离职、维权等法律 adjacent 事务的个人：9 条核心任务对应 11 款工具
 - [电工/电气安装工具箱](https://www.util.cn/professions/electrician/): 跑现场布线、配电、维修的电工与电气爱好者：10 条核心任务对应 12 款工具
-- [机修/机加/五金工具箱](https://www.util.cn/professions/mechanic/): 做机加工、设备维修与五金装配的技工：14 条核心任务对应 13 款工具
+- [机修/机加/五金工具箱](https://www.util.cn/professions/mechanic/): 做机加工、设备维修与五金装配的技工：15 条核心任务对应 14 款工具
 - [建筑施工/装修/木工工具箱](https://www.util.cn/professions/construction/): 做施工、装修与木作的从业者与自建房主：11 条核心任务对应 11 款工具
 - [音频工程/音乐人工具箱](https://www.util.cn/professions/audio-music/): 做录音、调音、编曲与乐器练习的音乐人：11 条核心任务对应 17 款工具
-- [实验室/生物医药工具箱](https://www.util.cn/professions/lab-bio/): 做生化实验、检测与研发的实验室人员：10 条核心任务对应 12 款工具
-- [质检/供应链/物流工具箱](https://www.util.cn/professions/qc-supply/): 管验货标准、采购补货与发运配载的质量与供应链岗：6 条核心任务对应 7 款工具
+- [实验室/生物医药工具箱](https://www.util.cn/professions/lab-bio/): 做生化实验、检测与研发的实验室人员：12 条核心任务对应 14 款工具
+- [质检/供应链/物流工具箱](https://www.util.cn/professions/qc-supply/): 管验货标准、采购补货与发运配载的质量与供应链岗：11 条核心任务对应 12 款工具
 - [健身与健康管理者工具箱](https://www.util.cn/professions/health-fitness/): 减脂增肌、日常健康监测的运动人群：10 条核心任务对应 32 款工具
 - [游戏/电竞玩家工具箱](https://www.util.cn/professions/gamer-esports/): 打 FPS、抽卡手游与买外设的玩家：7 条核心任务对应 11 款工具
-- [种植/养殖农户工具箱](https://www.util.cn/professions/agri-farmer/): 种大田、管果园、搞大棚的种植户与农技员：8 条核心任务对应 9 款工具
+- [种植/养殖农户工具箱](https://www.util.cn/professions/agri-farmer/): 种大田、管果园、搞大棚的种植户与农技员：9 条核心任务对应 10 款工具
 - [餐饮/厨师/烘焙咖啡工具箱](https://www.util.cn/professions/chef-catering/): 开餐饮店、做烘焙咖啡的从业者与重度爱好者：8 条核心任务对应 13 款工具
-- [手工/模型/3D 打印爱好者工具箱](https://www.util.cn/professions/hobbyist-craft/): 做手工、拼模型、玩 3D 打印的创客爱好者：10 条核心任务对应 13 款工具
+- [手工/模型/3D 打印爱好者工具箱](https://www.util.cn/professions/hobbyist-craft/): 做手工、拼模型、玩 3D 打印的创客爱好者：11 条核心任务对应 14 款工具
 - [出行/司机/旅行规划工具箱](https://www.util.cn/professions/traveler-driver/): 常出差、自驾游与跑长途的出行人群：11 条核心任务对应 18 款工具
 - [孕产/新生儿家长工具箱](https://www.util.cn/professions/pregnancy-parent/): 孕期到婴幼儿阶段的父母与看护人：6 条核心任务对应 11 款工具
-- [硬件/电子工程师工具箱](https://www.util.cn/professions/hardware-engineer/): 画原理图、调传感器信号链、画 PCB 打样的硬件工程师与电子爱好者：24 条核心任务对应 32 款工具
+- [硬件/电子工程师工具箱](https://www.util.cn/professions/hardware-engineer/): 画原理图、调传感器信号链、画 PCB 打样的硬件工程师与电子爱好者：25 条核心任务对应 33 款工具
+- [美发师/发型师工具箱](https://www.util.cn/professions/hair-stylist/): 在门店做染烫剪的发型师与学徒：2 条核心任务对应 1 款工具
 - [电子维修技师工具箱](https://www.util.cn/professions/electronics-repairer/): 修电源板、家电主板、功放的维修技师与电子爱好者：16 条核心任务对应 16 款工具
 
 ## AI 百科词条
@@ -1057,9 +1077,18 @@
 - [螺栓性能等级与扭矩](https://www.util.cn/wiki/bolt-grade-torque/): 螺栓头上的 8.8/10.9/12.9 是性能等级：前位数字×100 = 抗拉强度(MPa)，小数点后×10 = 屈强比。8.8 级即 800MPa、屈强比 0.8。
 - [砂纸目数与打磨工序](https://www.util.cn/wiki/sandpaper-grit-chart/): 砂纸 P 目数是磨料粒度编号：数字越大颗粒越细。P80 去量、P120 过渡、P240 精磨、P400 以上进漆面——按工序渐进，不能跳级。
 - [溶液浓度与配制](https://www.util.cn/wiki/solution-concentration/): 溶液浓度三种常用口径：质量分数（g/100g）、质量浓度（g/L）、摩尔浓度（mol/L）。配制先定口径再算，C1V1=C2V2 只管稀释。
+- [测量不确定度（Measurement Uncertainty）](https://www.util.cn/wiki/measurement-uncertainty/): 测量不确定度是对"测量结果可信范围"的定量表述，报告为 x̄ ± U。A 类来自重复观测的统计，B 类来自经验与资料（如量具证书），合成后乘包含因子 k 得扩展不确定度。
+- [8D 报告（Eight Disciplines）](https://www.util.cn/wiki/8d-report/): 8D 是汽车与电子行业客诉整改的标准八步法：D1 组队、D2 描述问题、D3 临时围堵、D4 找根因、D5 选永久对策、D6 实施验证、D7 预防再发、D8 关闭表彰，源自福特，IATF 16949 生态通用。
+- [PFMEA 与 AP 行动优先级](https://www.util.cn/wiki/pfmea/): PFMEA（过程失效模式与影响分析）对每条工序的失效模式按严重度 S、频度 O、探测度 D 打 1-10 分。传统 RPN=S×O×D；2019 版 AIAG-VDA 手册改用 AP（高/中/低）查表定优先级，规避 RPN 数值可比性差的痼疾。
+- [西格玛水平（Sigma Level）](https://www.util.cn/wiki/sigma-level/): 西格玛水平衡量过程能力，常与 DPMO（每百万缺陷数）互换：行业惯例含 1.5σ 长期偏移，6σ 对应 3.4 DPMO；无偏移口径 6σ 对应约 0.002 DPMO。报数前先对齐口径。
+- [数值修约规则（GB/T 8170）](https://www.util.cn/wiki/rounding-rule/): GB/T 8170 规定"四舍六入五成双"：拟舍弃位小于 5 舍、大于 5 进；恰为 5 时五后非零则进、五后全零看五前，前偶舍前奇进。与四舍五入不同，它避免了大样本下系统性偏大。
 
 ## 博客文章
 
+- [五个行业的冷门小账：染膏、钣金、塘口、CAN 总线与步进电机](https://www.util.cn/blog/articles/niche-trade-calcs/): 美发师配染膏、钣金工算展开、养殖户算塘口药量、嵌入式工程师调 CAN 位定时、创客算步进脉冲——五个行业各有一笔
+- [四张练习纸解决低年级家长的高频打印需求：竖式、字帖、时钟与人民币](https://www.util.cn/blog/articles/print-worksheets-for-kids/): 一二年级家长最常打印的四样东西——竖式计算题、英语四线格字帖、认识时钟练习纸、人民币元角分练习——现在浏览器里各有一张生成器：随机出题、答案页可选、种子复现同卷，A4 直接打。
+- [换算表的最后四块拼图：温度、速度、存储与角度](https://www.util.cn/blog/articles/unit-conversion-finale/): 温度、速度、数据存储、角度——四个搜索量最大的换算词，之前都藏在大杂烩换算器里。这批上线四个独立换算页：摄氏华氏开尔文、km/h 与 mph 与节、GB 与 GiB 双口径、度与弧度与角分秒，每个都带着口径注记。
+- [质量岗的五笔基础账：不确定度、西格玛、修约、8D 与 PFMEA](https://www.util.cn/blog/articles/quality-desk-basics/): 客户问
 - [单位换算补齐计划：压力、流量、能量、功率、力与纸张克重](https://www.util.cn/blog/articles/unit-conversion-pack/): psi 和 bar、GPM 和 L/min、BTU 和 kWh、马力和千瓦、kgf 和 N、gsm 和磅——六组最容易混的单位，新上线的六件换算器一次补齐，含行业口径注记与常用锚点值，全部本地计算。
 - [生活里的小科学：配溶液、巧克力中毒线、徒步补水、传动比与起针](https://www.util.cn/blog/articles/daily-science-calcs/): 配置消毒液、狗偷吃了巧克力、爬山带几瓶水、换牙盘爬坡轻不轻、织毛衣起多少针——五个生活场景的科学账，新上线五件工具各管一笔，全部本地计算。
 - [影音创作的五笔精确账：微距、快门、延摄、声压与延时](https://www.util.cn/blog/articles/av-creator-calcs/): 微距照片发暗、视频动作发飘、延时拍完太短、户外唱歌听不清、混音延时对不上拍——五笔影音账，新上线的微距放大率、快门角度、延摄影间隔、声压衰减与 BPM 延时五件工具一次算清。

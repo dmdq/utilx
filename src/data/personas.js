@@ -342,6 +342,7 @@ export const personas = [
       { task: '液压系统压力与推力', tools: ['hydraulic-force'] },
       { task: '减速比与级联传动', tools: ['gear-ratio-reducer'] },
       { task: '链传动链条节数', tools: ['chain-sprocket'] },
+      { task: '钣金折弯展开长度', tools: ['sheet-metal-bend-calculator'] },
     ],
   },
   {
@@ -401,6 +402,8 @@ export const personas = [
       { task: '缓冲液 pH 配制计算', tools: ['buffer-ph-calculator'] },
       { task: '细胞计数与接种密度', tools: ['cell-count-calculator'] },
       { task: '试剂溶液配制与稀释', tools: ['solution-prep'] },
+      { task: '实验结果不确定度评定与报告', tools: ['measurement-uncertainty-calculator'] },
+      { task: '检测结果有效数字修约', tools: ['significant-figure-rounder'] },
     ],
   },
   {
@@ -416,6 +419,11 @@ export const personas = [
       { task: '体积重运费与整车装载', tools: ['shipping-fee-calculator', 'truck-loading-calculator'] },
       { task: '集装箱/厢货装载量', tools: ['truck-loading-calculator'] },
       { task: '验货报告数据核对', tools: ['statistics-calculator', 'text-diff'] },
+      { task: '测量不确定度评定（A/B 类到扩展）', tools: ['measurement-uncertainty-calculator'] },
+      { task: '客诉整改 8D 报告编写', tools: ['8d-report-generator'] },
+      { task: 'PFMEA 失效模式 RPN 与 AP 评估', tools: ['pfmea-risk-assessor'] },
+      { task: '西格玛水平与 DPMO 换算', tools: ['sigma-level-converter'] },
+      { task: '检验数据按 GB/T 8170 修约', tools: ['significant-figure-rounder'] },
     ],
   },
   {
@@ -468,6 +476,7 @@ export const personas = [
       { task: '产量与收购价核算', tools: ['unit-price-calculator', 'recipe-cost-calculator'] },
       { task: '天气节气农事安排', tools: ['solar-term-calculator', 'holiday-calculator'] },
       { task: '温室/大棚加热功率', tools: ['greenhouse-heating'] },
+      { task: '塘口泼洒与拌饵用药量', tools: ['pond-medication-calculator'] },
     ],
   },
   {
@@ -504,6 +513,7 @@ export const personas = [
       { task: '花盆配土与种植土量', tools: ['potting-soil'] },
       { task: '编织起针与密度换算', tools: ['knitting-gauge'] },
       { task: '打磨工序与砂纸目数', tools: ['sandpaper-grit'] },
+      { task: '步进电机脉冲频率与进给速度', tools: ['stepper-pulse-calculator'] },
     ],
   },
   {
@@ -572,6 +582,18 @@ export const personas = [
       { task: '波特率分频误差核算', tools: ['uart-baud-error'] },
       { task: '电源压降与回路粗算', tools: ['voltage-drop-calculator', 'ohms-law-calculator'] },
       { task: '线束载流核查', tools: ['cable-ampacity-lookup'] },
+      { task: 'CAN 总线位定时与采样点', tools: ['can-bit-timing-calculator'] },
+    ],
+  },
+  {
+    id: 'hair-stylist',
+    name: '美发师/发型师',
+    scene: '在门店做染烫剪的发型师与学徒',
+    icon: 'Scissors',
+    group: '生活服务',
+    tasks: [
+      { task: '染膏与双氧奶按比例配量', tools: ['hair-dye-mixer'] },
+      { task: '按目标色度选双氧浓度档', tools: ['hair-dye-mixer'] },
     ],
   },
   {
