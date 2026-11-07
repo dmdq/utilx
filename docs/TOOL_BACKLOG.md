@@ -331,7 +331,20 @@ bitrate-calculator（视频码率/文件大小+OBS 推流档）· star-exposure-
 - 2026-11-07：**第三十批落地**（传感器实用件+保池清算，全站 **927 款**）：15 款全部实施（屏幕尺子/水平仪/指南针/放大镜/Q格式/锂电池充电/陶艺收缩/缝纫估料/电镀时间/焊缝强度/粘度换算/应用题/离职交接/税前税后互推/无人机续航）。传感器 4 件走 DeviceOrientation/getUserMedia 手势内授权（iOS 13+ requestPermission 坑已处理）；电镀页沉淀量纲推导（t=0.6δρ/(EηD) 面积约去）；salary-reverse 锚点自纠（12900 落 20% 档税 1170 非 1080）。死链修复：handover 页 leave-request-printer→leave-note-generator。
 - 2026-11-07：**三批配套与验证**：personas +32 任务（32 画像 353 任务）、collections 28→31（监控安防/统计检验/装修收尾）、wiki 63→69、推文 10 篇（posts/2026-11-07/ 12:00-13:10 已过去时段）、feed 433 条零跳过、sitemap 927 工具、llms 290KB、覆盖率 927/927=100%。54 页 SSR 200 + 日志零 [500] + QA 全量通过。13 agent 7 波（2 并发）交付，单测 1000+ 断言，**规格锚点自纠 40+ 处——第 5 次复训"锚点先自己精算"**。
 
+## 二十五、第三十一~三十二批：教育学习+日常办公（2026-11-07 调研，27 款，详报告 docs/TOOL_BATCH31_RESEARCH_2026-11-07.md）
+
+> 背景：用户指令定向深挖教育学习与日常办公两线（冻结的办公/教师/学生画像定向解冻）。68 idea 碰撞检测：**第五批池"教育 6 件"已全部存在**（默写挖空/听写/课程表/座位表/演讲计分/稿纸估算），点名/分队/成绩统计/艾宾浩斯/周报/会议纪要/报销单均已上线——砍 21 个撞车。WebSearch 7 组：错题本网页真空（App 拍照型为主）、SWOT/架构图竞品全需注册（免注册本地=差异位）、差旅简体真空（繁体 GSA 口径为主）、速查表类全是静态资料页（交互化=差异位）。弃选：答辩计时/头脑风暴（interval-timer 盖）、在职证明（伪造风险维持）、笔画部首（数据不可轻量）、文件命名（batch-rename 已含）。
+
+- **第三十一批 13 款（教育学习）**：mistake-notebook 错题本整理器 / reading-speed-test 阅读速度 / reading-log-tracker 读书清单 / irregular-verbs-table 不规则动词速查 / english-tense-reference 时态速查 / phonetic-chart 48音标表 / multiplication-trainer 九九乘法练习 / unit-quiz-generator 单位换算练习题 / exam-time-planner 考试时间分配 / math-symbol-reference 数学符号速查 / pinyin-practice-sheet 拼音练习纸 / teaching-plan-planner 教学进度表 / tone-pattern-checker 律诗平仄检查
+- **第三十二批 14 款（日常办公）**：meeting-agenda-generator 会议议程 / swot-analysis-generator SWOT / decision-framework-cards 5W2H·PDCA·四象限 / performance-review-outline 述职大纲 / attendance-calculator 考勤计算 / timesheet-calculator 工时表 / travel-expense-calculator 差旅费（财政部机关标准）/ business-letter-templates 商务邮件模板 / invoice-info-card 开票信息卡 / org-chart-generator 组织架构图 / one-on-one-agenda 1on1 议程 / retro-templates 复盘模板 / risk-register-generator 风险登记表 / okr-generator OKR 生成
+
+配套：teacher/student/office/hr 画像定向增补；collections +2（教师备课/职场文书）；wiki +4（WPM/SWOT/TOWS? 与 SWOT 合一→改 STAR/风险矩阵/48音标/OKR）；推文 4-5 篇。
+
 ## 批次记录
+
+---
+
+- 2026-11-08：**第三十一~三十二批落地**（教育学习+日常办公，全站 **954 款**）：27 款全部实施——教育 13（错题本/阅读速度/读书清单/不规则动词180词/16时态/48音标/九九乘法/换算组卷/考试时间分配/数学符号100/拼音四线三格/教学进度表/**律诗平仄检查（3700+字声调表+110入声字+16谱+粘对孤平三平尾）**）+办公 14（议程时间盒/SWOT-TOWS/框架卡三合一/述职STAR/考勤双口径/工时表三档加班/差旅机关标准/**商务邮件8场景中英**/开票卡GB32100校验位/**组织架构缩进转SVG树**/1on1/复盘三框架/风险登记矩阵/OKR校验）。personas +23 任务（376/32画像）；collections 33（+教师备课/职场文书）；wiki 73（+4：WPM/SWOT-TOWS/STAR/风险矩阵）。7 agent 4 波（2并发）交付，单测 700+ 断言，**规格自纠 15+ 处**：考试时间分配锚点 44/22/66 与净时间 110 自相矛盾（正确 37/18/55）、timesheet 等效工时 52 系笔误实为 44、风险矩阵阈值漏 8 分档、差旅 75% 折算实为 GSA/外企口径（非机关法定，页面三处诚实标注）、乘法口诀"一十六"→"十六"、拼音 j 占三格口径澄清、SWOT 模板 v-for 用键数组致 q.key undefined SSR 500（主会话回归修复）、双死链修复（typing-speed-test→typing-test、leave-request-printer 前批已修）。SSR 27 页 200、日志零 [500]。推文 4 篇（date 2026-11-07 21:30-23:00 已过去时段——凌晨落地踩点规避未来时刻）。
 
 ---
 

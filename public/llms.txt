@@ -1,15 +1,15 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：927 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：954 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 927 款工具完整目录
-- [场景专题](https://www.util.cn/collections/): 31 个按使用场景组织的工具组合
+- [全部工具](https://www.util.cn/all/): 954 款工具完整目录
+- [场景专题](https://www.util.cn/collections/): 33 个按使用场景组织的工具组合
 - [按职业找工具](https://www.util.cn/professions/): 32 张职业工具卡，按任务对应工具
-- [AI 百科](https://www.util.cn/wiki/): 69 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 433 篇工具教程与实践文章
+- [AI 百科](https://www.util.cn/wiki/): 73 条大模型相关词条
+- [技术博客](https://www.util.cn/blog/): 437 篇工具教程与实践文章
 
 ## 工具分类
 
@@ -19,15 +19,15 @@
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
 - [时间日期（34款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
-- [文本处理（54款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
+- [文本处理（55款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（33款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
 - [图像处理（51款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
 - [开发辅助（114款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（60款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（95款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [其他工具（119款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（56款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
-- [金融工具（52款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
+- [金融工具（54款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（47款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
@@ -442,6 +442,7 @@
 - [批量文本生成器](https://www.util.cn/tools/mail-merge-tool/): CSV 名单加 {{占位符}} 模板批量套版生成通知、邀请与话术，导出 TXT/CSV
 - [中文排版检查器](https://www.util.cn/tools/chinese-typography-linter/): 中英文空格、全半角、重复标点与的地得九条规则逐条标注，一键自动修复
 - [关键词密度检查器](https://www.util.cn/tools/keyword-density-checker/): 中英混排 n-gram 词频与密度统计，目标词四档判定与堆砌风险警示
+- [商务邮件模板库](https://www.util.cn/tools/business-letter-templates/): 催款/报价/邀约/致歉/跟进/辞谢等 8 场景商务邮件模板，参数化替换一键复制
 
 ## 网络工具
 
@@ -840,6 +841,30 @@
 - [缝纫估料计算器](https://www.util.cn/tools/sewing-fabric-estimator/): 按服装部位用量表估算用布米数：门幅×款式（裤/裙/上衣/连衣裙）与缩水率预留
 - [应用题生成器](https://www.util.cn/tools/math-word-problem-generator/): 小学应用题组卷：鸡兔同笼/行程相遇/工程合作/盈亏/年龄多题型，带答案页与种子复现
 - [离职交接清单生成器](https://www.util.cn/tools/handover-checklist-generator/): 按岗位模板勾选生成工作交接清单：账号资产/项目进度/文档/待办移交，Markdown 导出与打印
+- [错题本整理器](https://www.util.cn/tools/mistake-notebook/): 手动录入错题按科目与错因标签归档，筛选重练清单导出 A4 打印，数据存本地不上传
+- [阅读速度测试](https://www.util.cn/tools/reading-speed-test/): 粘贴文章计时默读后自评理解度，测算阅读速度 WPM 与字/分钟，给出水平区间与训练建议
+- [读书清单与阅读记录](https://www.util.cn/tools/reading-log-tracker/): 管理想读书单与在读进度，记录星级笔记与读完日期，年度阅读量统计本地保存
+- [不规则动词速查](https://www.util.cn/tools/irregular-verbs-table/): 约180个英语不规则动词按 AAA/ABB/ABC 变化分组，支持搜索、隐藏列自测与打印
+- [英语时态速查](https://www.util.cn/tools/english-tense-reference/): 16种英语时态公式结构与例句，时间轴可视化与主动被动对照，按时间体式筛选
+- [英语48音标表](https://www.util.cn/tools/phonetic-chart/): 国际音标 48 个：单元音双元音与清浊辅音分组，例词发音要点与口型说明
+- [九九乘法练习](https://www.util.cn/tools/multiplication-trainer/): 乘法口诀速查表+随机测验计时模式，错题统计与口诀闪卡，低年级乘法巩固
+- [单位换算练习题](https://www.util.cn/tools/unit-quiz-generator/): 长度重量面积时间单位换算组卷，难度分档带答案页与解题步骤，种子复现
+- [考试时间分配器](https://www.util.cn/tools/exam-time-planner/): 按考试总时长与各题型分值生成分题时间预算，含涂卡检查预留与单题下限保护
+- [数学符号速查](https://www.util.cn/tools/math-symbol-reference/): 常用数学符号的 Unicode 输入、LaTeX 写法、读法与含义示例，分类检索复制
+- [拼音练习纸生成器](https://www.util.cn/tools/pinyin-practice-sheet/): 四线三格拼音练习纸自定义生成：描灰字、声调标注格与空白格组合，A4 打印
+- [教学进度计划表](https://www.util.cn/tools/teaching-plan-planner/): 按学期起止与每周课时排教学进度，节假日自动跳过，单元内容规划导出打印
+- [律诗平仄检查器](https://www.util.cn/tools/tone-pattern-checker/): 粘贴五绝七绝五律七律逐字标注平仄，对照标准格式谱找拗句，普通话近似口径注明入声差异
+- [会议议程生成器](https://www.util.cn/tools/meeting-agenda-generator/): 议题逐条设时间盒自动汇总总时长，会前材料与参会人分工清单，导出文本或打印
+- [SWOT分析生成器](https://www.util.cn/tools/swot-analysis-generator/): 优势劣势机会威胁四象限填表，自动交叉 TOWS 策略建议，导出 SVG 或打印
+- [决策执行框架卡](https://www.util.cn/tools/decision-framework-cards/): 5W2H 追问、PDCA 循环与艾森豪威尔四象限三套框架结构化填表，导出行动清单
+- [述职报告大纲生成器](https://www.util.cn/tools/performance-review-outline/): 转正/晋升/年终三场景按 STAR 结构勾选要点生成述职大纲与讲稿时间分配
+- [工时表计算器](https://www.util.cn/tools/timesheet-calculator/): 一周逐日上下班与休息时间记工时，自动分平时/周末/节假日加班并导出 CSV
+- [开票信息卡生成器](https://www.util.cn/tools/invoice-info-card/): 录入公司开票信息生成规范抬头卡片，一键完整复制与分字段复制，可打印成卡
+- [组织架构图生成器](https://www.util.cn/tools/org-chart-generator/): 缩进文本描述层级自动生成组织架构 SVG 树图，可导出 SVG/PNG 与打印
+- [1on1沟通议程生成](https://www.util.cn/tools/one-on-one-agenda/): 一对一沟通议程模板与话题库，按阶段选主题生成提纲，行动项与记录本地保存
+- [团队复盘模板](https://www.util.cn/tools/retro-templates/): KISS/4Ls/Start-Stop-Continue 三套复盘框架结构化填表，行动项汇总导出
+- [项目风险登记表](https://www.util.cn/tools/risk-register-generator/): 风险清单按可能性×影响 5×5 矩阵自动定级，登记表导出打印，缓解措施跟踪
+- [OKR生成器](https://www.util.cn/tools/okr-generator/): 目标与关键结果结构化编写：信心值设定、0.3/0.7 评分口径校验、对齐检查导出
 
 ## 健康工具
 
@@ -954,6 +979,8 @@
 - [病假工资计算器](https://www.util.cn/tools/sick-leave-pay-calculator/): 按医疗期时长与工龄计算病假工资：60%~100% 折算规则、医疗期 3-24 个月对照与下限校验
 - [债务还款计划器](https://www.util.cn/tools/debt-payoff-planner/): 多笔债务雪球(从小到大)/雪崩(利率从高到低)双策略模拟，利息总额与清债时间对比
 - [税前税后互推计算器](https://www.util.cn/tools/salary-reverse-calculator/): 按累计预扣法反推税前工资：输入到手/税后倒算应发，五险一金三档基数联动
+- [考勤计算器](https://www.util.cn/tools/attendance-calculator/): 应出勤/实出勤/迟到分钟/事假病假多因子核算当月工资增减，21.75 计薪口径
+- [差旅费计算器](https://www.util.cn/tools/travel-expense-calculator/): 机关标准（伙食100交通80住宿城市档）与企业自定义双模式，首末日75%折算报销明细
 
 ## 文件工具
 
@@ -1038,6 +1065,8 @@
 - [监控安防工具箱：从镜头到硬盘](https://www.util.cn/collections/cctv-security-kit/): 镜头焦距选型、硬盘容量规划、PoE 供电预算三步算清一套监控系统：先按 DORI 定焦距，再按码率算存储，最后校验交换机供电预算，全部本地计算。
 - [统计检验工作台：从区间到检验](https://www.util.cn/collections/stats-workbench/): 置信区间、t 检验、卡方、方差分析、线性回归、正态分布六件套：从描述数据到推断结论的完整链路，t 分位与 p 值全部本地高精度计算。
 - [装修收尾计算器：软装与安装](https://www.util.cn/collections/renovation-finishing/): 窗帘用料、地板包数、灯具数量、地暖盘管、砂浆配比、斜切拼角：收尾阶段每一笔材料账都算得清，避免多买浪费少买跑腿。
+- [教师备课工具箱：组卷与排期](https://www.util.cn/collections/teaching-prep-kit/): 口算与乘法测验、单位换算组卷、拼音练习纸、错题本整理、教学进度排期、考试时间分配——备课到考后一整条链，全部可打印、种子复现。
+- [职场文书工具箱：从议程到述职](https://www.util.cn/collections/workplace-writing-kit/): 会议议程时间盒、SWOT 与 TOWS 策略、述职 STAR 大纲、OKR 校验、复盘三框架、风险登记、商务邮件模板——职场文书写作与会议管理一站式。
 
 ## 按职业找工具
 
@@ -1047,10 +1076,10 @@
 - [UI/平面设计师工具箱](https://www.util.cn/professions/designer-ui/): 做界面、海报、品牌视觉的设计师：8 条核心任务对应 50 款工具
 - [摄影者/后期修图工具箱](https://www.util.cn/professions/photographer/): 拍照片修图片的摄影爱好者和从业者：12 条核心任务对应 27 款工具
 - [K12 学生与家长工具箱](https://www.util.cn/professions/student-k12/): 小学到高中学生和陪学的家长：9 条核心任务对应 28 款工具
-- [大学生/考研考公工具箱](https://www.util.cn/professions/student-college/): 大学在读与备考深造的学生：8 条核心任务对应 20 款工具
-- [中小学教师工具箱](https://www.util.cn/professions/teacher/): 备课排课管班级的任课与班主任：10 条核心任务对应 23 款工具
-- [通用办公文员/行政工具箱](https://www.util.cn/professions/office-clerk/): 每天和文档表格邮件打交道的办公室职员：13 条核心任务对应 47 款工具
-- [HR/行政主管工具箱](https://www.util.cn/professions/hr-admin/): 管人事、薪酬、考勤与办公室事务的人力行政：8 条核心任务对应 18 款工具
+- [大学生/考研考公工具箱](https://www.util.cn/professions/student-college/): 大学在读与备考深造的学生：13 条核心任务对应 25 款工具
+- [中小学教师工具箱](https://www.util.cn/professions/teacher/): 备课排课管班级的任课与班主任：16 条核心任务对应 29 款工具
+- [通用办公文员/行政工具箱](https://www.util.cn/professions/office-clerk/): 每天和文档表格邮件打交道的办公室职员：21 条核心任务对应 55 款工具
+- [HR/行政主管工具箱](https://www.util.cn/professions/hr-admin/): 管人事、薪酬、考勤与办公室事务的人力行政：12 条核心任务对应 22 款工具
 - [个人/家庭理财工具箱](https://www.util.cn/professions/finance-personal/): 管家庭收支、存款保险与长期规划的个人：10 条核心任务对应 27 款工具
 - [财务/会计/出纳工具箱](https://www.util.cn/professions/finance-pro/): 做账开票报税的企业财务人员：7 条核心任务对应 17 款工具
 - [电商卖家/运营工具箱](https://www.util.cn/professions/ecommerce-seller/): 开网店做运营推广的卖家与运营：8 条核心任务对应 24 款工具
@@ -1145,9 +1174,17 @@
 - [纸张开数与开本](https://www.util.cn/wiki/paper-cut-size/): 全张纸对折几次就是几开：对开、四开、八开、十六开……但行业实际尺寸要扣光边，且书刊开本按 GB/T 788 的 A/B 系列另有标准，三种口径常被混为一谈。
 - [劳务报酬预扣预缴](https://www.util.cn/wiki/labor-remuneration-tax/): 兼职、稿费、特许权使用费等按次预扣个税：劳务报酬 ≤4000 减 800、超过减 20%，按 20%/30%/40% 三级预扣；稿酬再减按 70% 计入。预扣不等于最终税负，次年要并入综合所得汇算清缴多退少补。
 - [法拉第定律与电镀时间](https://www.util.cn/wiki/faraday-law-plating/): 电镀遵循法拉第电解定律：镀层质量 = 电化当量 × 电流 × 时间 × 电流效率。镀层时间只取决于厚度、材料与电流密度，与工件面积无关——面积只决定需要多大的总电流。
+- [阅读速度（WPM）](https://www.util.cn/wiki/wpm-reading-speed/): 阅读速度常以每分钟词数（WPM）或中文的每分钟字数计：成人默读中文约 300-500 字/分钟，精读 200-300，快速略读 600-800。只报速度不谈理解度没有意义。
+- [SWOT 与 TOWS 矩阵](https://www.util.cn/wiki/swot-tows/): SWOT 盘点内部优势劣势与外部机会威胁；TOWS 是把四个格子两两交叉成 SO 进攻、WO 补强、ST 防御、WT 规避四类策略的行动版。只做 SWOT 不做交叉，等于只体检不开方。
+- [STAR 法则](https://www.util.cn/wiki/star-method/): STAR 是把一段经历讲清楚的四段结构：情境（Situation）、任务（Task）、行动（Action）、结果（Result）。述职、面试、案例复盘通用，核心是把"我做了什么"落到可验证的行动与结果上。
+- [风险矩阵（P×I）](https://www.util.cn/wiki/risk-matrix/): 定性风险评估最常用 5×5 矩阵：可能性 P(1-5) × 影响 I(1-5) 得分定级，常见阈值 ≥15 高、8-12 中、≤6 低。它回答"先管哪个"，不回答"会损失多少"。
 
 ## 博客文章
 
+- [上班族的数字与文书：考勤、工时、差旅、邮件、架构图](https://www.util.cn/blog/articles/office-calc-templates/): 考勤有两个口径、加班费分 150/200/300% 三档、差旅标准机关与企业各一套、邮件抬头架构图述职各有格式——八件新工具把上班族的数字与文书一次配齐，全部本地计算。
+- [开会与决策：议程、SWOT、OKR、复盘](https://www.util.cn/blog/articles/meeting-framework-toolkit/): 例会开到九十分钟没结论、SWOT 填完四格就归档、OKR 写成口号、复盘变吐槽会——新上的会议议程生成器、SWOT分析生成器、决策执行框架卡、OKR生成器、团队复盘模板与项目风险登记表，把会议链条上的六个环节各配一件工具。
+- [教师备课六件：错题本、进度表、练习纸、组卷](https://www.util.cn/blog/articles/teacher-print-toolkit/): 错题本手动录入贴错因标签、学期进度表自动跳过节假日、拼音四线三格三种模式、单位换算组卷种子复现、九九乘法读法纠偏、考前 110 分钟分时段——教师备课打印向的六件新工具一次配齐。
+- [学习速查四件套：动词、时态、音标、数学符号](https://www.util.cn/blog/articles/study-toolkit-students/): 速查表网站的通病是只能看不能练。新上的不规则动词速查、英语时态速查、英语48音标表与数学符号速查把查表变成默写、测验和一键复制，再配阅读速度测试，用速度乘理解度算有效速度，速查这件事才算闭环。
 - [maker 与嵌入式：定点数、锂电、陶艺、缝纫、应用题](https://www.util.cn/blog/articles/maker-workshop-calcs/): 音频采样莫名爆音、充电最后百分之二十等不到头、出窑的盘子缩成了茶托、裁好的布拼不上衣片、出的应用题答案对不上——五个工作台各差一步换算：新上线的 Q 格式定点数转换器、锂电池充电时间、陶艺收缩率、缝纫估料与应用题生成器，把
 - [送印前三查：开数、出血、分辨率](https://www.util.cn/blog/articles/print-prepress-basics/): 设计稿好看和印出来对，中间隔着三道坎：开数按哪套口径、出血留没留够、分辨率够不够视距。纸张开数计算器、印刷出血参考生成器与喷绘写真分辨率计算器三件新工具，把送印前的自查一次过完，名片 96×60、喷绘 30-45 dpi 这些数一次记牢。
 - [手机变工具：尺子、水平仪、指南针、放大镜](https://www.util.cn/blog/articles/pocket-sensor-calcs/): 量相框卷尺在另一个房间、挂画想看歪没歪、说明书小字看不清、无人机到底能飞多久——手机里的屏幕、加速度计、磁力计和相机都能顶上：新上线的屏幕尺子、手机水平仪、网页指南针、屏幕放大镜、无人机续航计算器与碳排放计算器，把口袋里的传感器都用起来。
