@@ -1,20 +1,20 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：873 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：927 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 873 款工具完整目录
-- [场景专题](https://www.util.cn/collections/): 28 个按使用场景组织的工具组合
+- [全部工具](https://www.util.cn/all/): 927 款工具完整目录
+- [场景专题](https://www.util.cn/collections/): 31 个按使用场景组织的工具组合
 - [按职业找工具](https://www.util.cn/professions/): 32 张职业工具卡，按任务对应工具
-- [AI 百科](https://www.util.cn/wiki/): 63 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 423 篇工具教程与实践文章
+- [AI 百科](https://www.util.cn/wiki/): 69 条大模型相关词条
+- [技术博客](https://www.util.cn/blog/): 433 篇工具教程与实践文章
 
 ## 工具分类
 
 - [随机决策（17款）](https://www.util.cn/category/random/): 随机骰子、硬币、选择器等决策工具
-- [计算工具（176款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
+- [计算工具（199款）](https://www.util.cn/category/calculate/): 单位换算、科学计算、金融计算等工具
 - [数据格式化（19款）](https://www.util.cn/category/format/): JSON、XML、SQL等数据格式化工具
 - [编码解码（43款）](https://www.util.cn/category/encode/): Base64、URL、HTML等编码解码工具
 - [加密安全（26款）](https://www.util.cn/category/crypto/): MD5、SHA、AES等加密解密工具
@@ -22,12 +22,12 @@
 - [文本处理（54款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（33款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
 - [图像处理（51款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
-- [开发辅助（109款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
-- [设计工具（57款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
+- [开发辅助（114款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
+- [设计工具（60款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
-- [其他工具（79款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
-- [健康工具（54款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
-- [金融工具（47款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
+- [其他工具（95款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
+- [健康工具（56款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
+- [金融工具（52款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
 - [文件工具（47款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
@@ -228,6 +228,29 @@
 - [水产用药计算器](https://www.util.cn/tools/pond-medication-calculator/): 塘口面积水体估算到全池泼洒与拌饵药量，休药期提醒
 - [CAN位定时计算器](https://www.util.cn/tools/can-bit-timing-calculator/): 时钟与波特率求 brp/tseg/sjw 与采样点，经典 CAN 与 CAN FD
 - [步进电机计算器](https://www.util.cn/tools/stepper-pulse-calculator/): 步距角/细分/脉冲频率/转速/导程五参联算
+- [新风量计算器](https://www.util.cn/tools/fresh-air-calculator/): 人均新风量与换气次数双算法取大，住宅/办公/教室人均标准预设，m³/h 与 CFM 双单位
+- [风管尺寸计算器](https://www.util.cn/tools/duct-size-calculator/): 风量×风速反算圆形风管直径/矩形风管尺寸，主管支管常用风速区间与规格建议
+- [地暖盘管计算器](https://www.util.cn/tools/floor-heating-calculator/): 采暖面积÷管间距=盘管总长度，回路数与分水器口数规划，150/200mm 间距每平米用量对照
+- [照度计算器（流明法）](https://www.util.cn/tools/lumen-lighting-calculator/): 流明法 N=E·A/(Φ·UF·MF) 估算灯具数量，起居/办公/厨房等房间照度标准预设
+- [露点湿度计算器](https://www.util.cn/tools/dew-point-calculator/): Magnus 公式温度+相对湿度→露点/湿球温度/绝对湿度互算，结露风险判断与烘干参考
+- [太阳高度角影子计算器](https://www.util.cn/tools/shadow-length-calculator/): NOAA 太阳位置算法计算任意日期时刻的太阳高度角/方位角与影子长度，拍摄时段与采光分析
+- [焊接电流选择器](https://www.util.cn/tools/welding-amperage-calculator/): 焊条直径×35~55 系数估算电流区间，立焊横焊仰焊位置修正，J422 等常用焊条对照
+- [斜切角计算器](https://www.util.cn/tools/miter-angle-calculator/): 多段拼圆、任意角度墙角对切、画框边框拼接的斜切角计算与锯切补偿角换算
+- [砂浆配比计算器](https://www.util.cn/tools/mortar-mix-calculator/): M2.5~M15 砌筑/抹灰砂浆每立方米水泥砂用量估算，现场体积比与袋数换算
+- [窗帘用料计算器](https://www.util.cn/tools/curtain-fabric-calculator/): 窗宽×褶皱倍数÷门幅=用布米数，对花损耗、纱帘双层与轨道长度估算
+- [地板用量计算器](https://www.util.cn/tools/flooring-material-calculator/): 房间面积×损耗率→地板包数/条数，强化复合/实木规格对照与铺贴方向建议
+- [烤箱温度换算器](https://www.util.cn/tools/oven-temperature-converter/): 摄氏/华氏/Gas Mark 气体档/风扇循环档互相换算，常用烘烤温度对照与降低 20℃ 规则
+- [烘焙百分比计算器](https://www.util.cn/tools/bakers-percentage-calculator/): 以面粉为 100% 的烘焙百分比换算，配方任意份量缩放与水合度计算
+- [置信区间计算器](https://www.util.cn/tools/confidence-interval-calculator/): 均值（σ已知z分布/未知t分布自动选择）与比例的置信区间计算，95%/99% 多档与误差范围
+- [t检验计算器](https://www.util.cn/tools/t-test-calculator/): 单样本/独立两样本(Welch)/配对 t 检验，自动计算 t 值、p 值与 Cohen d 效应量
+- [卡方检验计算器](https://www.util.cn/tools/chi-square-calculator/): 拟合优度与独立性卡方检验，列联表输入自动算期望频数、χ² 值与 p 值
+- [正态分布计算器](https://www.util.cn/tools/normal-distribution-calculator/): 均值标准差→概率密度/累积概率/任意区间概率/逆Z分位数，标准分换算与可视化
+- [线性回归计算器](https://www.util.cn/tools/linear-regression-calculator/): 散点数据最小二乘拟合 y=ax+b，斜率截距、相关系数 r、R² 与逐点残差表
+- [方差分析计算器](https://www.util.cn/tools/anova-calculator/): 单因素方差分析 ANOVA：组间/组内平方和分解、F 统计量与 p 值，多组均值差异检验
+- [电镀时间计算器](https://www.util.cn/tools/electroplating-time-calculator/): 法拉第定律计算镀层时间：目标厚度×面积×密度/(电化当量×电流×效率)，常用镀层档案
+- [焊缝强度计算器](https://www.util.cn/tools/weld-strength-calculator/): 角焊缝(0.7a 有效厚度)与对接焊缝的受剪/受拉承载校核，焊脚尺寸与焊缝长度反算
+- [粘度换算器](https://www.util.cn/tools/viscosity-converter/): 运动粘度 cSt↔恩氏粘度°E↔赛氏 SSU↔雷氏秒 经验公式互算，润滑油牌号对照
+- [无人机续航计算器](https://www.util.cn/tools/drone-flight-time-calculator/): 电池容量×电压/平均功耗→悬停与巡航续航估算，留 20% 安全余量的可用飞行时间
 
 ## 数据格式化
 
@@ -621,6 +644,11 @@
 - [JSON转Pydantic](https://www.util.cn/tools/json-to-pydantic/): Pydantic v2 BaseModel 自动生成，alias、Optional 标注、datetime 识别与依赖排序
 - [EditorConfig生成器](https://www.util.cn/tools/editorconfig-generator/): 缩进、字符集、行尾可视化配置，多语言预设与分节规则，生成 .editorconfig
 - [Prettier配置生成器](https://www.util.cn/tools/prettier-config-generator/): 可视化调参生成 .prettierrc，精简/完整两模式，JSON/YAML/package.json 三格式
+- [监控镜头焦距计算器](https://www.util.cn/tools/cctv-lens-calculator/): 焦距·传感器尺寸·监控距离互算视场宽度，识别人脸/车牌场景镜头选型，2.8/3.6/4/6/8/12mm 常用档速查
+- [监控硬盘存储计算器](https://www.util.cn/tools/nvr-storage-calculator/): 摄像头码率×通道数×存储天数互算硬盘容量，H.264/H.265 编码与移动侦测触发占比换算
+- [PoE供电功率预算器](https://www.util.cn/tools/poe-power-budget/): 802.3af/at/bt 三标准 PSE/PD 端功率对照，交换机 PoE 总预算、线损与余量系数校验
+- [Q格式定点数转换器](https://www.util.cn/tools/q-format-converter/): Qm.n 定点数与浮点互转：Q7/Q15/Q31 常用格式、十六进制原码、饱和与截断行为演示
+- [锂电池充电时间计算器](https://www.util.cn/tools/lithium-charge-time/): CC-CV 分段充电时间估算：0-80% 恒流快充段+尾段恒压减速，充电倍率与效率设定
 
 ## 设计工具
 
@@ -681,6 +709,9 @@
 - [电子请柬生成器](https://www.util.cn/tools/invitation-card-maker/): 婚礼满月乔迁升学宴四场景请柬，六套配色长图导出与微信文本版一键复制
 - [海报生成器](https://www.util.cn/tools/poster-generator/): 促销招聘课程三场景海报，六套配色与三种装饰，Canvas 长图导出可带二维码
 - [印章生成器](https://www.util.cn/tools/seal-maker-online/): 圆章/椭圆章/姓名章 Canvas 绘制，弧形文字与做旧质感，导出透明底 PNG，仅供排版预览
+- [纸张开数计算器](https://www.util.cn/tools/paper-cut-size-calculator/): 正度/大度全开到64开尺寸对照与面积换算，几何开切与直线开切双方式说明
+- [印刷出血参考生成器](https://www.util.cn/tools/print-bleed-guide/): 名片/海报/画册常见印品出血 3mm 与安全区可视化参考，送印前校稿自查清单
+- [喷绘写真分辨率计算器](https://www.util.cn/tools/large-format-resolution/): 按观看距离推荐喷绘/写真 DPI 档位，幅面尺寸→输出像素与文件大小估算
 
 ## 安全工具
 
@@ -793,6 +824,22 @@
 - [认识时钟练习纸](https://www.util.cn/tools/clock-worksheet-generator/): 随机钟面 SVG 练习纸，看钟写时间与画指针双题型可打印
 - [人民币练习纸](https://www.util.cn/tools/rmb-money-worksheet/): 元角分换算与找零练习题生成打印，一二年级
 - [染膏调配计算器](https://www.util.cn/tools/hair-dye-mixer/): 染膏与双氧奶按比例用量计算，浓度档与色度引导
+- [24点求解器](https://www.util.cn/tools/twenty-four-solver/): 四张牌（1-13 或任意数）算 24 点：穷举全部解法、支持分数中间值、给出步骤表达式
+- [在线棋钟](https://www.util.cn/tools/chess-clock-online/): 双人对弈按键式双面倒计时，支持加秒(Fischer)与延期(Bronstein)规则，WebAudio 落子提示
+- [比赛记分牌](https://www.util.cn/tools/scoreboard-counter/): 大字号双队比分牌：单击加分、局分/盘分、撤销与重置，全屏投影模式适合球赛现场
+- [淘汰赛对阵表生成器](https://www.util.cn/tools/tournament-bracket-generator/): 输入队名自动生成单败淘汰赛对阵：轮空自动分配、随机或手动排序、A4 打印与 SVG 导出
+- [飞镖计分器](https://www.util.cn/tools/darts-scorer/): 501/301 飞镖计分：三镖一轮输入、爆分(BUST)判定、收镖路线提示与三镖平均分统计
+- [台球计分器](https://www.util.cn/tools/billiards-counter/): 中式黑八局数计分与斯诺克单杆得分（红球彩球分值规则）两种模式
+- [摸鱼计算器](https://www.util.cn/tools/slacking-salary-counter/): 输入月薪与工作时间，秒级实时滚动显示当日已赚工资与摸鱼进度条，21.75 计薪口径
+- [碳排放计算器](https://www.util.cn/tools/carbon-footprint-calculator/): 家庭年碳排放估算：用电/燃气/出行(车·公交·飞行)/废弃物排放因子透明可查，植树抵消换算
+- [屏幕尺子](https://www.util.cn/tools/online-ruler/): 用银行卡(85.6mm)或身份证校准 PPI 后，屏幕即成毫米/英寸双刻度直尺，支持任意长度测量
+- [手机水平仪](https://www.util.cn/tools/spirit-level-tool/): 调用设备陀螺仪的气泡水平仪：双轴倾角数显、贴墙/贴面校零、桌面找平
+- [网页指南针](https://www.util.cn/tools/online-compass/): 调用设备磁力计的在线指南针：实时方位角+罗盘方位名（东南西北），室内导航辨向
+- [屏幕放大镜](https://www.util.cn/tools/screen-magnifier/): 调用摄像头的实时放大镜：数码变焦、画面定格、对比度增强，看小字标签与远处的板书
+- [陶艺收缩率计算器](https://www.util.cn/tools/pottery-shrinkage-calculator/): 干燥收缩+烧成收缩复合计算：按目标成品尺寸反推湿坯制作尺寸，黏土收缩率档案
+- [缝纫估料计算器](https://www.util.cn/tools/sewing-fabric-estimator/): 按服装部位用量表估算用布米数：门幅×款式（裤/裙/上衣/连衣裙）与缩水率预留
+- [应用题生成器](https://www.util.cn/tools/math-word-problem-generator/): 小学应用题组卷：鸡兔同笼/行程相遇/工程合作/盈亏/年龄多题型，带答案页与种子复现
+- [离职交接清单生成器](https://www.util.cn/tools/handover-checklist-generator/): 按岗位模板勾选生成工作交接清单：账号资产/项目进度/文档/待办移交，Markdown 导出与打印
 
 ## 健康工具
 
@@ -850,6 +897,8 @@
 - [情绪日记](https://www.util.cn/tools/mood-tracker/): 每日五档情绪加标签备注，月历热图、SVG 曲线与连续记录，数据仅存本地
 - [护眼提醒器](https://www.util.cn/tools/eye-rest-timer/): 20-20-20 法则循环提醒，全屏休息遮罩与防漂移计时，今日护眼统计
 - [噪声暴露剂量](https://www.util.cn/tools/sound-dose/): 噪声日暴露剂量：LAeq×时长→允许百分比与护耳建议
+- [儿童身高预测器](https://www.util.cn/tools/child-height-predictor/): 父母身高 CMH 中亲法与欧洲遗传法则双公式预测孩子成年身高，预测区间与影响因子说明
+- [血型遗传计算器](https://www.util.cn/tools/blood-type-inheritance/): 父母 ABO 血型组合→孩子可能/不可能血型（Punnett 方格可视化），Rh 因子遗传说明
 
 ## 金融工具
 
@@ -900,6 +949,11 @@
 - [复利计算器](https://www.util.cn/tools/compound-interest-calculator/): 复利终值与年金追加、名义与实际年化 APY、72 法则翻倍年限、通胀实际购买力
 - [菜品成本核算卡](https://www.util.cn/tools/recipe-cost-calculator/): 按净料率算菜品实耗成本，目标成本率定售价、外卖抽佣对照与打印成本卡
 - [法院诉讼费计算器](https://www.util.cn/tools/court-fee-calculator/): 《诉讼费用交纳办法》10 档累退受理费 + 保全费 + 执行费组合计算，简易程序减半与非财产按件
+- [劳务报酬个税计算器](https://www.util.cn/tools/labor-remuneration-tax/): 劳务报酬/稿酬/特许权使用费预扣预缴个税：三级预扣率、稿酬减按70%计入、年度汇算提示
+- [工伤赔偿计算器](https://www.util.cn/tools/work-injury-compensation/): 按伤残等级(1-10级)估算一次性伤残补助金/伤残津贴/医疗补助金与工亡待遇，参数透明可查
+- [病假工资计算器](https://www.util.cn/tools/sick-leave-pay-calculator/): 按医疗期时长与工龄计算病假工资：60%~100% 折算规则、医疗期 3-24 个月对照与下限校验
+- [债务还款计划器](https://www.util.cn/tools/debt-payoff-planner/): 多笔债务雪球(从小到大)/雪崩(利率从高到低)双策略模拟，利息总额与清债时间对比
+- [税前税后互推计算器](https://www.util.cn/tools/salary-reverse-calculator/): 按累计预扣法反推税前工资：输入到手/税后倒算应发，五险一金三档基数联动
 
 ## 文件工具
 
@@ -981,6 +1035,9 @@
 - [办事打印一站台](https://www.util.cn/collections/errand-print-desk/): 身份证复印件排版、证件照换底、电子章、公文红头、合同文书、请柬日历——办事窗口要的纸质材料浏览器里做好直接打印，照片不上传。
 - [车主随车速查](https://www.util.cn/collections/car-owner-kit/): 胎压换算、OBD 故障码、车灯型号、轮胎规格与充电成本——不动扳手也能先弄懂的随车账，全部本地查。
 - [质量工具箱：从抽样到 8D](https://www.util.cn/collections/quality-toolkit/): AQL 抽样、过程能力 Cpk、测量系统 GR&R、DPPM 良率、不确定度评定、西格玛换算、修约规则、PFMEA 风险与 8D 报告——从进料到客诉闭环的质量岗九件套，数据全部浏览器本地算。
+- [监控安防工具箱：从镜头到硬盘](https://www.util.cn/collections/cctv-security-kit/): 镜头焦距选型、硬盘容量规划、PoE 供电预算三步算清一套监控系统：先按 DORI 定焦距，再按码率算存储，最后校验交换机供电预算，全部本地计算。
+- [统计检验工作台：从区间到检验](https://www.util.cn/collections/stats-workbench/): 置信区间、t 检验、卡方、方差分析、线性回归、正态分布六件套：从描述数据到推断结论的完整链路，t 分位与 p 值全部本地高精度计算。
+- [装修收尾计算器：软装与安装](https://www.util.cn/collections/renovation-finishing/): 窗帘用料、地板包数、灯具数量、地暖盘管、砂浆配比、斜切拼角：收尾阶段每一笔材料账都算得清，避免多买浪费少买跑腿。
 
 ## 按职业找工具
 
@@ -991,31 +1048,31 @@
 - [摄影者/后期修图工具箱](https://www.util.cn/professions/photographer/): 拍照片修图片的摄影爱好者和从业者：12 条核心任务对应 27 款工具
 - [K12 学生与家长工具箱](https://www.util.cn/professions/student-k12/): 小学到高中学生和陪学的家长：9 条核心任务对应 28 款工具
 - [大学生/考研考公工具箱](https://www.util.cn/professions/student-college/): 大学在读与备考深造的学生：8 条核心任务对应 20 款工具
-- [中小学教师工具箱](https://www.util.cn/professions/teacher/): 备课排课管班级的任课与班主任：9 条核心任务对应 22 款工具
-- [通用办公文员/行政工具箱](https://www.util.cn/professions/office-clerk/): 每天和文档表格邮件打交道的办公室职员：12 条核心任务对应 46 款工具
+- [中小学教师工具箱](https://www.util.cn/professions/teacher/): 备课排课管班级的任课与班主任：10 条核心任务对应 23 款工具
+- [通用办公文员/行政工具箱](https://www.util.cn/professions/office-clerk/): 每天和文档表格邮件打交道的办公室职员：13 条核心任务对应 47 款工具
 - [HR/行政主管工具箱](https://www.util.cn/professions/hr-admin/): 管人事、薪酬、考勤与办公室事务的人力行政：8 条核心任务对应 18 款工具
-- [个人/家庭理财工具箱](https://www.util.cn/professions/finance-personal/): 管家庭收支、存款保险与长期规划的个人：8 条核心任务对应 25 款工具
+- [个人/家庭理财工具箱](https://www.util.cn/professions/finance-personal/): 管家庭收支、存款保险与长期规划的个人：10 条核心任务对应 27 款工具
 - [财务/会计/出纳工具箱](https://www.util.cn/professions/finance-pro/): 做账开票报税的企业财务人员：7 条核心任务对应 17 款工具
 - [电商卖家/运营工具箱](https://www.util.cn/professions/ecommerce-seller/): 开网店做运营推广的卖家与运营：8 条核心任务对应 24 款工具
 - [自媒体/短视频创作者工具箱](https://www.util.cn/professions/content-creator/): 做短视频、直播、图文的内容创作者：8 条核心任务对应 24 款工具
 - [作家/编辑/文案工具箱](https://www.util.cn/professions/writer-editor/): 写长文、编稿子、做校对的文字工作者：9 条核心任务对应 26 款工具
-- [劳动者/法律需求个人工具箱](https://www.util.cn/professions/legal-labor/): 遇到借贷、离职、维权等法律 adjacent 事务的个人：9 条核心任务对应 11 款工具
+- [劳动者/法律需求个人工具箱](https://www.util.cn/professions/legal-labor/): 遇到借贷、离职、维权等法律 adjacent 事务的个人：12 条核心任务对应 14 款工具
 - [电工/电气安装工具箱](https://www.util.cn/professions/electrician/): 跑现场布线、配电、维修的电工与电气爱好者：10 条核心任务对应 12 款工具
-- [机修/机加/五金工具箱](https://www.util.cn/professions/mechanic/): 做机加工、设备维修与五金装配的技工：15 条核心任务对应 14 款工具
-- [建筑施工/装修/木工工具箱](https://www.util.cn/professions/construction/): 做施工、装修与木作的从业者与自建房主：11 条核心任务对应 11 款工具
+- [机修/机加/五金工具箱](https://www.util.cn/professions/mechanic/): 做机加工、设备维修与五金装配的技工：18 条核心任务对应 17 款工具
+- [建筑施工/装修/木工工具箱](https://www.util.cn/professions/construction/): 做施工、装修与木作的从业者与自建房主：15 条核心任务对应 16 款工具
 - [音频工程/音乐人工具箱](https://www.util.cn/professions/audio-music/): 做录音、调音、编曲与乐器练习的音乐人：11 条核心任务对应 17 款工具
-- [实验室/生物医药工具箱](https://www.util.cn/professions/lab-bio/): 做生化实验、检测与研发的实验室人员：12 条核心任务对应 14 款工具
-- [质检/供应链/物流工具箱](https://www.util.cn/professions/qc-supply/): 管验货标准、采购补货与发运配载的质量与供应链岗：11 条核心任务对应 12 款工具
+- [实验室/生物医药工具箱](https://www.util.cn/professions/lab-bio/): 做生化实验、检测与研发的实验室人员：17 条核心任务对应 19 款工具
+- [质检/供应链/物流工具箱](https://www.util.cn/professions/qc-supply/): 管验货标准、采购补货与发运配载的质量与供应链岗：12 条核心任务对应 13 款工具
 - [健身与健康管理者工具箱](https://www.util.cn/professions/health-fitness/): 减脂增肌、日常健康监测的运动人群：10 条核心任务对应 32 款工具
 - [游戏/电竞玩家工具箱](https://www.util.cn/professions/gamer-esports/): 打 FPS、抽卡手游与买外设的玩家：7 条核心任务对应 11 款工具
 - [种植/养殖农户工具箱](https://www.util.cn/professions/agri-farmer/): 种大田、管果园、搞大棚的种植户与农技员：9 条核心任务对应 10 款工具
 - [餐饮/厨师/烘焙咖啡工具箱](https://www.util.cn/professions/chef-catering/): 开餐饮店、做烘焙咖啡的从业者与重度爱好者：8 条核心任务对应 13 款工具
-- [手工/模型/3D 打印爱好者工具箱](https://www.util.cn/professions/hobbyist-craft/): 做手工、拼模型、玩 3D 打印的创客爱好者：11 条核心任务对应 14 款工具
-- [出行/司机/旅行规划工具箱](https://www.util.cn/professions/traveler-driver/): 常出差、自驾游与跑长途的出行人群：11 条核心任务对应 18 款工具
-- [孕产/新生儿家长工具箱](https://www.util.cn/professions/pregnancy-parent/): 孕期到婴幼儿阶段的父母与看护人：6 条核心任务对应 11 款工具
-- [硬件/电子工程师工具箱](https://www.util.cn/professions/hardware-engineer/): 画原理图、调传感器信号链、画 PCB 打样的硬件工程师与电子爱好者：25 条核心任务对应 33 款工具
+- [手工/模型/3D 打印爱好者工具箱](https://www.util.cn/professions/hobbyist-craft/): 做手工、拼模型、玩 3D 打印的创客爱好者：15 条核心任务对应 18 款工具
+- [出行/司机/旅行规划工具箱](https://www.util.cn/professions/traveler-driver/): 常出差、自驾游与跑长途的出行人群：12 条核心任务对应 19 款工具
+- [孕产/新生儿家长工具箱](https://www.util.cn/professions/pregnancy-parent/): 孕期到婴幼儿阶段的父母与看护人：8 条核心任务对应 13 款工具
+- [硬件/电子工程师工具箱](https://www.util.cn/professions/hardware-engineer/): 画原理图、调传感器信号链、画 PCB 打样的硬件工程师与电子爱好者：29 条核心任务对应 37 款工具
 - [美发师/发型师工具箱](https://www.util.cn/professions/hair-stylist/): 在门店做染烫剪的发型师与学徒：2 条核心任务对应 1 款工具
-- [电子维修技师工具箱](https://www.util.cn/professions/electronics-repairer/): 修电源板、家电主板、功放的维修技师与电子爱好者：16 条核心任务对应 16 款工具
+- [电子维修技师工具箱](https://www.util.cn/professions/electronics-repairer/): 修电源板、家电主板、功放的维修技师与电子爱好者：17 条核心任务对应 17 款工具
 
 ## AI 百科词条
 
@@ -1082,9 +1139,25 @@
 - [PFMEA 与 AP 行动优先级](https://www.util.cn/wiki/pfmea/): PFMEA（过程失效模式与影响分析）对每条工序的失效模式按严重度 S、频度 O、探测度 D 打 1-10 分。传统 RPN=S×O×D；2019 版 AIAG-VDA 手册改用 AP（高/中/低）查表定优先级，规避 RPN 数值可比性差的痼疾。
 - [西格玛水平（Sigma Level）](https://www.util.cn/wiki/sigma-level/): 西格玛水平衡量过程能力，常与 DPMO（每百万缺陷数）互换：行业惯例含 1.5σ 长期偏移，6σ 对应 3.4 DPMO；无偏移口径 6σ 对应约 0.002 DPMO。报数前先对齐口径。
 - [数值修约规则（GB/T 8170）](https://www.util.cn/wiki/rounding-rule/): GB/T 8170 规定"四舍六入五成双"：拟舍弃位小于 5 舍、大于 5 进；恰为 5 时五后非零则进、五后全零看五前，前偶舍前奇进。与四舍五入不同，它避免了大样本下系统性偏大。
+- [置信区间](https://www.util.cn/wiki/confidence-interval/): 置信区间是给估计量划一个"大概率罩得住真值"的范围：95% 置信指重复抽样构造的区间约有 95% 会覆盖真参数，不是"真值有 95% 概率落在这个区间里"。
+- [t 检验](https://www.util.cn/wiki/t-test/): t 检验用 t 统计量比较均值与假设值（单样本）、两组均值（独立）或前后差值（配对），p 值小于显著性水平时拒绝"无差异"的原假设。
+- [露点温度](https://www.util.cn/wiki/dew-point/): 露点是空气在水汽含量不变、气压不变时冷却到饱和开始结露的温度。表面温度低于露点就会凝水——地下室返潮、镜头起雾、管道结露都由它判定。
+- [纸张开数与开本](https://www.util.cn/wiki/paper-cut-size/): 全张纸对折几次就是几开：对开、四开、八开、十六开……但行业实际尺寸要扣光边，且书刊开本按 GB/T 788 的 A/B 系列另有标准，三种口径常被混为一谈。
+- [劳务报酬预扣预缴](https://www.util.cn/wiki/labor-remuneration-tax/): 兼职、稿费、特许权使用费等按次预扣个税：劳务报酬 ≤4000 减 800、超过减 20%，按 20%/30%/40% 三级预扣；稿酬再减按 70% 计入。预扣不等于最终税负，次年要并入综合所得汇算清缴多退少补。
+- [法拉第定律与电镀时间](https://www.util.cn/wiki/faraday-law-plating/): 电镀遵循法拉第电解定律：镀层质量 = 电化当量 × 电流 × 时间 × 电流效率。镀层时间只取决于厚度、材料与电流密度，与工件面积无关——面积只决定需要多大的总电流。
 
 ## 博客文章
 
+- [maker 与嵌入式：定点数、锂电、陶艺、缝纫、应用题](https://www.util.cn/blog/articles/maker-workshop-calcs/): 音频采样莫名爆音、充电最后百分之二十等不到头、出窑的盘子缩成了茶托、裁好的布拼不上衣片、出的应用题答案对不上——五个工作台各差一步换算：新上线的 Q 格式定点数转换器、锂电池充电时间、陶艺收缩率、缝纫估料与应用题生成器，把
+- [送印前三查：开数、出血、分辨率](https://www.util.cn/blog/articles/print-prepress-basics/): 设计稿好看和印出来对，中间隔着三道坎：开数按哪套口径、出血留没留够、分辨率够不够视距。纸张开数计算器、印刷出血参考生成器与喷绘写真分辨率计算器三件新工具，把送印前的自查一次过完，名片 96×60、喷绘 30-45 dpi 这些数一次记牢。
+- [手机变工具：尺子、水平仪、指南针、放大镜](https://www.util.cn/blog/articles/pocket-sensor-calcs/): 量相框卷尺在另一个房间、挂画想看歪没歪、说明书小字看不清、无人机到底能飞多久——手机里的屏幕、加速度计、磁力计和相机都能顶上：新上线的屏幕尺子、手机水平仪、网页指南针、屏幕放大镜、无人机续航计算器与碳排放计算器，把口袋里的传感器都用起来。
+- [厨房与成长：烤箱档位、烘焙百分比、窗帘地板、身高血型](https://www.util.cn/blog/articles/home-kitchen-growth-calcs/): 海淘食谱的 Gas Mark 档、面团的水合度、窗帘的褶皱倍数、地板的损耗包数、孩子的成年身高、血型的 Punnett 方格——厨房和成长里六笔
+- [桌游与球局的七件记分工具](https://www.util.cn/blog/articles/games-scoring-tools/): 24 点卡在 (3,3,8,8)、棋钟增时规则说不清、淘汰赛轮空不知道给谁、飞镖剩 169 打不到最后一镖、斯诺克算分算到一半忘了罚几分——七件新工具把桌局球局的
+- [车间与工地的六件随身计算器](https://www.util.cn/blog/articles/blue-collar-workshop-calcs/): 焊条选电流、墙角对切、砂浆配比、焊缝承载、粘度换算、镀层估时——车间和工地上这些
+- [劳动权益与个人财务的五笔账](https://www.util.cn/blog/articles/rights-finance-calcs/): 劳务报酬到账比谈好的少、工伤家属问能赔多少、病假期间工资怎么发、几张卡债先还哪张、谈到手价要反推税前——五笔最容易算糊涂的账，新上线的劳务报酬个税、工伤赔偿、病假工资、债务还款计划、税前税后互推与离职交接清单六件工具一次算清。
+- [装修暖通六笔账：地暖、新风、风管、灯、露点、影子](https://www.util.cn/blog/articles/renovation-hvac-toolkit/): 地暖管长怎么核、新风量够不够、风管口径多大、灯买几盏、墙面冬天会不会冒汗、楼下那栋楼影不影——收尾期的六笔账，地暖盘管、新风量、风管尺寸、照度、露点、影子六件计算器一次配齐，全部有公式可查。
+- [假设检验六件套：从置信区间到 ANOVA](https://www.util.cn/blog/articles/stats-testing-toolkit/): 论文返修被要求补统计口径、实验报告要报 p 值和效应量、A/B 测试要看显著性——新上线的置信区间、t 检验、卡方、正态分布、线性回归与方差分析六件套，把
+- [一套监控系统三笔账：焦距、硬盘、供电](https://www.util.cn/blog/articles/monitoring-security-setup/): 焦距买错看不清人脸、硬盘买小月底被覆盖、交换机 PoE 预算超载断流——装监控最常翻车的三处，对应 DORI 定档、码率×天数、PSE 端预算三笔账。新上的监控镜头焦距计算器、监控硬盘存储计算器与 PoE 供电功率预算器，把三笔账按开工顺序排好。
 - [五个行业的冷门小账：染膏、钣金、塘口、CAN 总线与步进电机](https://www.util.cn/blog/articles/niche-trade-calcs/): 美发师配染膏、钣金工算展开、养殖户算塘口药量、嵌入式工程师调 CAN 位定时、创客算步进脉冲——五个行业各有一笔
 - [四张练习纸解决低年级家长的高频打印需求：竖式、字帖、时钟与人民币](https://www.util.cn/blog/articles/print-worksheets-for-kids/): 一二年级家长最常打印的四样东西——竖式计算题、英语四线格字帖、认识时钟练习纸、人民币元角分练习——现在浏览器里各有一张生成器：随机出题、答案页可选、种子复现同卷，A4 直接打。
 - [换算表的最后四块拼图：温度、速度、存储与角度](https://www.util.cn/blog/articles/unit-conversion-finale/): 温度、速度、数据存储、角度——四个搜索量最大的换算词，之前都藏在大杂烩换算器里。这批上线四个独立换算页：摄氏华氏开尔文、km/h 与 mph 与节、GB 与 GiB 双口径、度与弧度与角分秒，每个都带着口径注记。

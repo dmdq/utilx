@@ -314,6 +314,23 @@ bitrate-calculator（视频码率/文件大小+OBS 推流档）· star-exposure-
 
 > 详 docs/TOOL_BATCH27_RESEARCH_2026-11-06.md。方法：画像断档法榨干（31 画像 100%，仅剩已弃 eDPI）→ 53 idea 碰撞检测 33 空白 → 5 误报复核 → WebSearch 12 组抽查。三梯队 18 款：**质量计量 5**（测量不确定度[真空]/8D 报告[中文交互真空]/PFMEA[RPN+AP 双模式]/有效数字修约 GB 8170/西格玛水平全向换算）+ **单位收官+打印教育 8**（温度/速度/数据存储/角度四换算 + 竖式计算器/英语四线格字帖/认识时钟/人民币练习）+ **行业新画像+嵌入式 5**（染膏双氧奶[新画像美发师，中高真空]/钣金展开[中竞争]/水产塘口用药/CAN 位定时[中竞争]/步进脉冲[中竞争]）。保池 11：Q 格式/锂电充电/陶艺收缩/缝纫估料/电镀时间/焊缝强度/粘度/转速/应用题/视力表[医疗边界待拍板]/离职交接。弃选定论 5：隐形眼镜（6 家）、配速（7 家）、轮毂 ET（5 家）、时差（7+ 家）、LUFS（测量类占位）。配套：新画像美发师、新专题「质量工具箱」（与 IC 测试质量台联动）、PFMEA AP 矩阵与修约边界一律"以官方原文为准自核"。
 
+## 二十三、第二十八~三十批：工程线深挖+统计教育+传感器实用件（2026-11-07 调研，54 款三批，详报告 docs/TOOL_BATCH28_RESEARCH_2026-11-07.md）
+
+> 方法：96 idea 两轮碰撞检测（33 撞车排除）+ WebSearch 15 组实抓。**保池核销修正：tvs-selector/transformer-rewind/uart-baud-error 已随第二十六批落地，第二十节记载过时。**真空优先：地暖盘管（只有文章无工具）/跨境电商税（网页版≈零）/PoE 预算/Q 格式/陶艺收缩/电镀时间。弃选定论：AA 分摊（记账 App 饱和）、全屏时钟/闹钟（薄）、简繁转换（OpenCC 饱和+依赖重）、视力表（医疗边界待拍板）、转速（RCF 已盖）。
+
+- **第二十八批 20 款**（安防暖通工程+印刷+蓝领家装+厨房母婴）：cctv-lens-calculator/nvr-storage-calculator/poe-power-budget/fresh-air-calculator/duct-size-calculator/floor-heating-calculator/lumen-lighting-calculator/dew-point-calculator/shadow-length-calculator/paper-cut-size-calculator/print-bleed-guide/large-format-resolution/welding-amperage-calculator/miter-angle-calculator/mortar-mix-calculator/curtain-fabric-calculator/flooring-material-calculator/oven-temperature-converter/bakers-percentage-calculator/child-height-predictor
+- **第二十九批 19 款**（统计检验+记分游戏+财务法律）：confidence-interval-calculator/t-test-calculator/chi-square-calculator/normal-distribution-calculator/linear-regression-calculator/anova-calculator/twenty-four-solver/chess-clock-online/scoreboard-counter/tournament-bracket-generator/darts-scorer/billiards-counter/labor-remuneration-tax/work-injury-compensation/sick-leave-pay-calculator/debt-payoff-planner/blood-type-inheritance/slacking-salary-counter/carbon-footprint-calculator
+- **第三十批 15 款**（传感器实用件+保池清算）：online-ruler/spirit-level-tool/online-compass/screen-magnifier/q-format-converter/lithium-charge-time/pottery-shrinkage-calculator/sewing-fabric-estimator/electroplating-time-calculator/weld-strength-calculator/viscosity-converter/math-word-problem-generator/handover-checklist-generator/salary-reverse-calculator/drone-flight-time-calculator
+
+配套：personas 硬件+3/施工+4/机修+1/手工+2/法律+3（饱和画像不加任务）；collections +3（监控安防/统计检验/装修收尾）；wiki +6；图标补约 14。锚点备忘与自核口径见报告第四节。
+
+## 二十四、第二十八~三十批落地记录（2026-11-07，全站 927 款）
+
+- 2026-11-07：**第二十八批落地**（安防暖通工程+印刷+蓝领家装+厨房母婴，全站 **893 款**）：20 款全部实施（监控镜头 DORI/监控硬盘/PoE预算/新风/风管/地暖/流明法/露点/太阳影子/纸张开数/印刷出血/喷绘分辨率/焊接电流/斜切角/砂浆配比/窗帘用料/地板用量/烤箱温度/烘焙百分比/儿童身高）。toolIcons 补 Blinds/Shirt（总 271）。自纠规格：风管回算风速锚点、露点 e_s(25) 是 20℃ 值（31.69 非 23.76）、GB/T 788 实为 A/B 系列口径、Gas Mark 用 F=250+25G 定义。
+- 2026-11-07：**第二十九批落地**（统计检验+记分游戏+财务法律，全站 **912 款**）：19 款全部实施（置信区间/t检验/卡方/正态/回归/ANOVA/24点求解（BigInt 有理数）/棋钟/记分牌/对阵表/飞镖/台球/劳务报酬个税/工伤赔偿/病假工资/债务雪球雪崩/血型遗传/摸鱼/碳排放）。toolIcons 补 Leaf（总 272）。**统计套件为高精度亮点**：erf 级数+连分式、不完全贝塔 Lentz、Anscombe/R 经典数据 1e-4 复现（Fisher 锚点 0.1147 被自纠为 0.1663）；**两处法规时效自纠**：劳社部发〔2008〕3 号已废止（21.75 不变、月工作日 20.83→20.67）、上海病假 83 号文 2026-08 已失效；Bronstein 公式自纠为加回 min(消耗,x)。
+- 2026-11-07：**第三十批落地**（传感器实用件+保池清算，全站 **927 款**）：15 款全部实施（屏幕尺子/水平仪/指南针/放大镜/Q格式/锂电池充电/陶艺收缩/缝纫估料/电镀时间/焊缝强度/粘度换算/应用题/离职交接/税前税后互推/无人机续航）。传感器 4 件走 DeviceOrientation/getUserMedia 手势内授权（iOS 13+ requestPermission 坑已处理）；电镀页沉淀量纲推导（t=0.6δρ/(EηD) 面积约去）；salary-reverse 锚点自纠（12900 落 20% 档税 1170 非 1080）。死链修复：handover 页 leave-request-printer→leave-note-generator。
+- 2026-11-07：**三批配套与验证**：personas +32 任务（32 画像 353 任务）、collections 28→31（监控安防/统计检验/装修收尾）、wiki 63→69、推文 10 篇（posts/2026-11-07/ 12:00-13:10 已过去时段）、feed 433 条零跳过、sitemap 927 工具、llms 290KB、覆盖率 927/927=100%。54 页 SSR 200 + 日志零 [500] + QA 全量通过。13 agent 7 波（2 并发）交付，单测 1000+ 断言，**规格锚点自纠 40+ 处——第 5 次复训"锚点先自己精算"**。
+
 ## 批次记录
 
 ---

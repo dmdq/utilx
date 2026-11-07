@@ -159,6 +159,7 @@ export const personas = [
       { task: '奖状/评语/批改辅助', tools: ['text-counter', 'text-diff'] },
       { task: '课堂计时与演示', tools: ['interval-timer', 'online-metronome', 'teleprompter', 'led-scroll-display'] },
       { task: '排教学周历与查周数', tools: ['week-calculator'] },
+      { task: '小学应用题组卷打印（五题型带答案页）', tools: ["math-word-problem-generator"] },
     ],
   },
   {
@@ -180,6 +181,7 @@ export const personas = [
       { task: '中英文排版与字数', tools: ['chinese-typography-linter', 'text-counter', 'text-statistics'] },
       { task: '排版红头公文与发文笺', tools: ['official-document-generator'] },
       { task: '制作电子印章与姓名章预览', tools: ['seal-maker-online'] },
+      { task: '离职工作交接清单生成与打印', tools: ["handover-checklist-generator"] },
     ],
   },
   {
@@ -214,6 +216,8 @@ export const personas = [
       { task: '汇率与跨境消费', tools: ['currency-converter', 'forex-arbitrage-calculator'] },
       { task: '保险与个税', tools: ['insurance-premium-calculator', 'tax-calculator', 'social-insurance-calculator'] },
       { task: '账单日期与分期决策', tools: ['credit-card-payment-calculator', 'bill-split-calculator', 'subscription-manager'] },
+      { task: '到手工资反推税前（累计预扣口径）', tools: ["salary-reverse-calculator"] },
+      { task: '多笔债务雪球/雪崩清债规划', tools: ["debt-payoff-planner"] },
     ],
   },
   {
@@ -300,6 +304,9 @@ export const personas = [
       { task: '诉讼时效天数计算', tools: ['statute-limitations-calculator'] },
       { task: '法院诉讼费预估', tools: ['court-fee-calculator', 'statute-limitations-calculator'] },
       { task: '起草租房合同、授权书等法律文书', tools: ['legal-doc-generator'] },
+      { task: '伤残等级一次性补助金与工亡待遇估算', tools: ["work-injury-compensation"] },
+      { task: '医疗期时长与病假工资下限核算', tools: ["sick-leave-pay-calculator"] },
+      { task: '劳务报酬/稿酬预扣预缴个税', tools: ["labor-remuneration-tax"] },
     ],
   },
   {
@@ -343,6 +350,9 @@ export const personas = [
       { task: '减速比与级联传动', tools: ['gear-ratio-reducer'] },
       { task: '链传动链条节数', tools: ['chain-sprocket'] },
       { task: '钣金折弯展开长度', tools: ['sheet-metal-bend-calculator'] },
+      { task: '焊条直径选电流与焊接位置修正', tools: ["welding-amperage-calculator"] },
+      { task: '角焊缝焊脚尺寸与承载校核', tools: ["weld-strength-calculator"] },
+      { task: '润滑油粘度牌号换算（cSt/°E/SSU）', tools: ["viscosity-converter"] },
     ],
   },
   {
@@ -363,6 +373,10 @@ export const personas = [
       { task: '油漆与乳胶漆用量', tools: ['room-volume-calculator'] },
       { task: '屋面坡度与斜屋面换算', tools: ['roof-pitch'] },
       { task: '碎石/沙土回填算量', tools: ['gravel-sand-coverage'] },
+      { task: '地暖盘管长度与分水器回路规划', tools: ["floor-heating-calculator"] },
+      { task: '砌筑/抹灰砂浆每方材料用量', tools: ["mortar-mix-calculator"] },
+      { task: '新风量双算法取大与风管尺寸', tools: ["fresh-air-calculator", "duct-size-calculator"] },
+      { task: '照度流明法估算灯具数量', tools: ["lumen-lighting-calculator"] },
     ],
   },
   {
@@ -404,6 +418,11 @@ export const personas = [
       { task: '试剂溶液配制与稀释', tools: ['solution-prep'] },
       { task: '实验结果不确定度评定与报告', tools: ['measurement-uncertainty-calculator'] },
       { task: '检测结果有效数字修约', tools: ['significant-figure-rounder'] },
+      { task: '均值/比例置信区间与 Wilson 区间', tools: ["confidence-interval-calculator"] },
+      { task: '单样本/独立/配对 t 检验与效应量', tools: ["t-test-calculator"] },
+      { task: '列联表卡方与 Fisher 精确检验', tools: ["chi-square-calculator"] },
+      { task: '多组均值单因素方差分析', tools: ["anova-calculator"] },
+      { task: '散点最小二乘回归与残差诊断', tools: ["linear-regression-calculator"] },
     ],
   },
   {
@@ -424,6 +443,7 @@ export const personas = [
       { task: 'PFMEA 失效模式 RPN 与 AP 评估', tools: ['pfmea-risk-assessor'] },
       { task: '西格玛水平与 DPMO 换算', tools: ['sigma-level-converter'] },
       { task: '检验数据按 GB/T 8170 修约', tools: ['significant-figure-rounder'] },
+      { task: '产线正态分布概率与 Z 分数查询', tools: ["normal-distribution-calculator"] },
     ],
   },
   {
@@ -514,6 +534,10 @@ export const personas = [
       { task: '编织起针与密度换算', tools: ['knitting-gauge'] },
       { task: '打磨工序与砂纸目数', tools: ['sandpaper-grit'] },
       { task: '步进电机脉冲频率与进给速度', tools: ['stepper-pulse-calculator'] },
+      { task: '陶艺湿坯放样（干燥+烧成复合收缩）', tools: ["pottery-shrinkage-calculator"] },
+      { task: '按款式门幅估用布米数与缩水预留', tools: ["sewing-fabric-estimator"] },
+      { task: '窗帘褶皱倍数与对花用料', tools: ["curtain-fabric-calculator"] },
+      { task: '手工斜切拼角角度换算', tools: ["miter-angle-calculator"] },
     ],
   },
   {
@@ -534,6 +558,7 @@ export const personas = [
       { task: 'OBD 故障码速查', tools: ['obd-dtc-lookup'] },
       { task: '车灯型号对照换件', tools: ['headlight-bulb'] },
       { task: '骑行传动比与踏频车速', tools: ['cycling-gear-ratio'] },
+      { task: '家庭年度碳足迹与植树抵消', tools: ["carbon-footprint-calculator"] },
     ],
   },
   {
@@ -549,6 +574,8 @@ export const personas = [
       { task: '儿童生长曲线参考', tools: ['pediatric-growth'] },
       { task: '农历生日与节日日期', tools: ['lunar-birthday-reminder', 'lunar-calendar', 'holiday-calculator'] },
       { task: '家人健康监测', tools: ['blood-pressure-tracker', 'bmi-calculator', 'decibel-meter'] },
+      { task: '父母身高预测孩子成年身高', tools: ["child-height-predictor"] },
+      { task: '父母血型推孩子可能血型', tools: ["blood-type-inheritance"] },
     ],
   },
   {
@@ -583,6 +610,10 @@ export const personas = [
       { task: '电源压降与回路粗算', tools: ['voltage-drop-calculator', 'ohms-law-calculator'] },
       { task: '线束载流核查', tools: ['cable-ampacity-lookup'] },
       { task: 'CAN 总线位定时与采样点', tools: ['can-bit-timing-calculator'] },
+      { task: '监控镜头焦距与视场选型（DORI 四档）', tools: ["cctv-lens-calculator"] },
+      { task: 'NVR 硬盘容量与录像天数规划', tools: ["nvr-storage-calculator"] },
+      { task: 'PoE 交换机供电预算与端口校验', tools: ["poe-power-budget"] },
+      { task: '嵌入式 Qm.n 定点数换算', tools: ["q-format-converter"] },
     ],
   },
   {
@@ -619,6 +650,7 @@ export const personas = [
       { task: '回路电压电流功率排故', tools: ['ohms-law-calculator'] },
       { task: 'LED 更换与限流电阻配换', tools: ['ohms-law-calculator'] },
       { task: '三相电机功率与补偿核算', tools: ['motor-power-factor-calculator'] },
+      { task: '锂电池充电时间与倍率评估', tools: ["lithium-charge-time"] },
     ],
   },
 ]
