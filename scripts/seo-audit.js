@@ -135,6 +135,8 @@ if (siteDir && fs.existsSync(siteDir)) {
         // 剥离 code/pre 块：示例代码里的 href 字符串不是真链接（< 已转义为 &lt;）
         const c = fs.readFileSync(fp, 'utf8').replace(/<(code|pre)[\s\S]*?<\/\1>/gi, '')
         for (const m of c.matchAll(/href="(\/[^"#?]*)"/g)) {
+          // 上下文判定：href 前紧邻 &lt;（转义标签开头）属代码示例文本，非真链接
+          if (c.slice(Math.max(0, m.index - 80), m.index).includes('&lt;')) continue
           const href = m[1]
           if (href.startsWith('//')) continue
           if (!targetExists(href)) {
