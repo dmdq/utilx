@@ -31,9 +31,11 @@ export const personas = [
       { task: 'API 设计与 Mock', tools: ['api-doc', 'openapi-spec-generator', 'api-response-mocker', 'api-contract-tester', 'api-key-manager'] },
       { task: '代码质量与安全自查', tools: ['secret-scanner', 'sql-injection-scanner', 'xss-detector', 'sql-formatter', 'code-format'] },
       { task: '识别可疑文件的真实类型（魔数）', tools: ['file-type-detector'] },
+      { task: '敏感文本密码加密传递', tools: ['text-encryptor'] },
       { task: '算法复杂度与可视化学习', tools: ['algorithm-complexity-calculator', 'sorting-algorithm-visualizer'] },
       { task: 'AI 编码规则与提示词工程', tools: ['ai-rules-generator', 'system-prompt-builder', 'prompt-diff-checker', 'token-cost-calculator', 'rag-chunk-previewer'] },
       { task: '日志快速定位报错', tools: ['log-viewer', 'nginx-log-analyzer'] },
+      { task: '文件/文本 gzip 压缩解压', tools: ['gzip-tool'] },
     ],
   },
   {
@@ -109,6 +111,7 @@ export const personas = [
       { task: '视频快门角度（180°法则）', tools: ['shutter-angle'] },
       { task: '延时摄影间隔规划', tools: ['timelapse-interval'] },
       { task: '成片去白边与打印 DPI 调整', tools: ['image-autocrop', 'image-dpi'] },
+      { task: '图库重复照片分组清理', tools: ['duplicate-file-finder'] },
     ],
   },
   {
@@ -205,6 +208,8 @@ export const personas = [
       { task: '项目风险 P×I 定级登记', tools: ["risk-register-generator"] },
       { task: '5W2H/PDCA/四象限框架填表', tools: ["decision-framework-cards"] },
       { task: 'Markdown 转 Word 与 Word 提取文字', tools: ['markdown-to-word', 'docx-to-text'] },
+      { task: 'PPT 幻灯片提取文字大纲', tools: ['pptx-to-text'] },
+      { task: '客户通讯录 CSV 转 vCard 导入手机', tools: ['vcard-converter'] },
     ],
   },
   {
@@ -298,6 +303,8 @@ export const personas = [
       { task: '水印与视频压缩', tools: ['image-watermark', 'video-compressor'] },
       { task: '手机视频旋转/静音/变速与 GIF 互转', tools: ['video-rotator', 'video-mute', 'video-speed', 'gif-to-video', 'video-to-gif'] },
       { task: '排查视频上传被平台二次压缩', tools: ['mp4-inspector', 'video-compressor'] },
+      { task: '多段素材拼接与画面构图裁剪', tools: ['video-merger', 'video-crop', 'video-trimmer'] },
+      { task: '音频配封面转视频发布', tools: ['audio-to-video'] },
       { task: '口播录音去停顿与波形封面', tools: ['audio-silence-cutter', 'audio-waveform', 'audio-reverse'] },
     ],
   },
@@ -318,6 +325,7 @@ export const personas = [
       { task: '起名与灵感', tools: ['nickname-generator', 'random-quote', 'idiom-dictionary', 'lorem-ipsum'] },
       { task: '投稿字数与时长预估', tools: ['speech-script-timer', 'lrc-check'] },
       { task: '稿件交付 Word 版本与 docx 提取', tools: ['markdown-to-word', 'docx-to-text'] },
+      { task: '书稿章节化导出 EPUB 电子书', tools: ['epub-maker'] },
     ],
   },
   {
@@ -431,6 +439,9 @@ export const personas = [
       { task: 'BPM 对齐延时/混响时间', tools: ['delay-time-ms'] },
       { task: '音频倒放实验与波形图导出', tools: ['audio-reverse', 'audio-waveform'] },
       { task: '录音素材静音切除与查看 MP4 参数', tools: ['audio-silence-cutter', 'mp4-inspector'] },
+      { task: '检测音乐曲速 BPM 并换算节拍参数', tools: ['bpm-detector', 'delay-time-ms'] },
+      { task: '整理曲库 MP3 标签与内嵌封面', tools: ['audio-metadata'] },
+      { task: '人声配乐双轨混音导出', tools: ['audio-mixer'] },
     ],
   },
   {
