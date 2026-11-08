@@ -1,15 +1,15 @@
 # 有条工具（Util.cn）
 
-> 免费在线工具箱：954 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
+> 免费在线工具箱：969 款工具覆盖 JSON与数据格式、编解码、加密哈希、图片处理、文件转换、开发辅助、设计CSS、健康与金融计算等 16 个分类，另附 AI 百科词条、场景专题与技术博客。所有计算均在浏览器本地完成，不收集、不上传任何用户数据；无广告、无需注册。
 
 本文件为站点结构化索引，全部页面均为静态 HTML，可直接抓取。按分类浏览或按需引用下述链接。
 
 - [首页](https://www.util.cn/): 工具导航与推荐
-- [全部工具](https://www.util.cn/all/): 954 款工具完整目录
+- [全部工具](https://www.util.cn/all/): 969 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 33 个按使用场景组织的工具组合
 - [按职业找工具](https://www.util.cn/professions/): 32 张职业工具卡，按任务对应工具
 - [AI 百科](https://www.util.cn/wiki/): 73 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 437 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 441 篇工具教程与实践文章
 
 ## 工具分类
 
@@ -21,14 +21,14 @@
 - [时间日期（34款）](https://www.util.cn/category/time/): 时间戳、时区、日期计算工具
 - [文本处理（55款）](https://www.util.cn/category/text/): 正则表达式、文本对比、大小写转换工具
 - [网络工具（33款）](https://www.util.cn/category/network/): IP查询、DNS查询、HTTP客户端等工具
-- [图像处理（51款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
+- [图像处理（55款）](https://www.util.cn/category/image/): 图片压缩、格式转换、水印等工具
 - [开发辅助（114款）](https://www.util.cn/category/dev/): Mock数据、API文档、代码生成等工具
 - [设计工具（60款）](https://www.util.cn/category/design/): CSS布局、颜色、SVG编辑等设计工具
 - [安全工具（27款）](https://www.util.cn/category/security/): 数据脱敏、隐私保护、安全检测工具
 - [其他工具（119款）](https://www.util.cn/category/others/): 数据采样、数据结构可视化、剪贴板管理等工具
 - [健康工具（56款）](https://www.util.cn/category/health/): BMI计算、健康指标、运动健身工具
 - [金融工具（54款）](https://www.util.cn/category/finance/): 贷款计算、投资收益、汇率换算等金融工具
-- [文件工具（47款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
+- [文件工具（58款）](https://www.util.cn/category/file/): 文件加密、PDF处理、EXIF清理、CSV转换等本地文件工具
 
 ## 随机决策
 
@@ -533,6 +533,10 @@
 - [条形码生成器](https://www.util.cn/tools/barcode-generator/): EAN-13、UPC-A、Code128 等六种条码单个或批量生成，PNG/SVG/ZIP 导出，校验位自动核算
 - [证件照换底色](https://www.util.cn/tools/id-photo-maker/): 一寸二寸证件照在线换红蓝白底，纯本地处理照片不上传，300dpi 导出与六寸排版打印
 - [打印分辨率计算器](https://www.util.cn/tools/print-resolution-calculator/): 像素与打印尺寸互查，DPI 档位、相纸判定与裁剪比例提示，冲印不翻车
+- [SVG转PNG](https://www.util.cn/tools/svg-to-png/): 上传或粘贴 SVG 源码高清导出 PNG，1x/2x/3x 多尺寸批量导出，本地渲染不上传
+- [GIF抽帧](https://www.util.cn/tools/gif-frame-extractor/): 解析 GIF 逐帧导出 PNG 图片，查看帧数与每帧延时，支持打包下载
+- [图片白边裁切](https://www.util.cn/tools/image-autocrop/): 自动检测并裁掉图片四周白边或透明边，容差可调，支持批量处理
+- [图片DPI修改](https://www.util.cn/tools/image-dpi/): 修改 PNG/JPEG 的 DPI 物理分辨率信息，像素与厘米英寸互查，字节级无损
 
 ## 开发辅助
 
@@ -1031,6 +1035,17 @@
 - [音频拼接器](https://www.util.cn/tools/audio-merger/): 多段音频按序合并加段间静音，排序调音试听，导出无损 WAV，全程本地
 - [音频变速器](https://www.util.cn/tools/audio-speed-changer/): 变速不变调时间拉伸与倍速直变双模式，语言学习试听与 WAV 导出
 - [批量重命名](https://www.util.cn/tools/batch-rename-tool/): 目录文件按五规则叠加改名：查找替换、正则、前后缀、序号模板、大小写，预览冲突可撤销
+- [视频旋转](https://www.util.cn/tools/video-rotator/): 视频旋转 90/180/270 度或镜像翻转，手机竖屏视频转横屏，本地处理不上传
+- [视频静音](https://www.util.cn/tools/video-mute/): 去除视频原声或替换为新音轨，输出无声视频，文件不出浏览器
+- [视频变速](https://www.util.cn/tools/video-speed/): 视频倍速 0.25~4 倍调整，可选音调保持，导出变速后的视频文件
+- [GIF转视频](https://www.util.cn/tools/gif-to-video/): 将 GIF 动图转为 MP4/WebM 视频，社交平台上传不再被压成糊图
+- [MP4信息查看器](https://www.util.cn/tools/mp4-inspector/): 解析 MP4/MOV 内部结构：时长、编码、分辨率、码率、帧率一目了然
+- [音频倒放](https://www.util.cn/tools/audio-reverse/): 把音频倒放生成回声彩蛋效果，支持 mp3/wav/m4a 输入导出 WAV
+- [口播静音切除](https://www.util.cn/tools/audio-silence-cutter/): 自动检测并切除录音中的停顿静音段，口播剪辑提效，本地处理不上传
+- [音频波形图生成](https://www.util.cn/tools/audio-waveform/): 上传音频生成播客封面级波形图，多种样式配色，导出高清 PNG
+- [Markdown转Word](https://www.util.cn/tools/markdown-to-word/): Markdown 一键转 Word 文档，标题表格代码块完整保留，本地转换不上传
+- [Word转文本](https://www.util.cn/tools/docx-to-text/): 上传 .docx 提取正文文字转纯文本或 Markdown，表格结构保留，不上传服务器
+- [文件类型识别](https://www.util.cn/tools/file-type-detector/): 通过文件头魔数识别文件真实格式，识破改后缀伪装，本地安全检测
 
 ## 场景专题
 
@@ -1070,26 +1085,26 @@
 
 ## 按职业找工具
 
-- [程序员（前后端/全栈）工具箱](https://www.util.cn/professions/dev-web/): 每天和接口、数据格式、构建部署打交道的开发者：14 条核心任务对应 67 款工具
+- [程序员（前后端/全栈）工具箱](https://www.util.cn/professions/dev-web/): 每天和接口、数据格式、构建部署打交道的开发者：15 条核心任务对应 68 款工具
 - [运维/SRE/网管工具箱](https://www.util.cn/professions/dev-ops/): 管服务器、网络与可用性的运维工程师：10 条核心任务对应 46 款工具
 - [安全测试/渗透岗工具箱](https://www.util.cn/professions/security-auditor/): 做漏洞挖掘、渗透测试与加固的安全从业者：7 条核心任务对应 36 款工具
-- [UI/平面设计师工具箱](https://www.util.cn/professions/designer-ui/): 做界面、海报、品牌视觉的设计师：8 条核心任务对应 50 款工具
-- [摄影者/后期修图工具箱](https://www.util.cn/professions/photographer/): 拍照片修图片的摄影爱好者和从业者：12 条核心任务对应 27 款工具
+- [UI/平面设计师工具箱](https://www.util.cn/professions/designer-ui/): 做界面、海报、品牌视觉的设计师：9 条核心任务对应 51 款工具
+- [摄影者/后期修图工具箱](https://www.util.cn/professions/photographer/): 拍照片修图片的摄影爱好者和从业者：13 条核心任务对应 29 款工具
 - [K12 学生与家长工具箱](https://www.util.cn/professions/student-k12/): 小学到高中学生和陪学的家长：9 条核心任务对应 28 款工具
 - [大学生/考研考公工具箱](https://www.util.cn/professions/student-college/): 大学在读与备考深造的学生：13 条核心任务对应 25 款工具
 - [中小学教师工具箱](https://www.util.cn/professions/teacher/): 备课排课管班级的任课与班主任：16 条核心任务对应 29 款工具
-- [通用办公文员/行政工具箱](https://www.util.cn/professions/office-clerk/): 每天和文档表格邮件打交道的办公室职员：21 条核心任务对应 55 款工具
+- [通用办公文员/行政工具箱](https://www.util.cn/professions/office-clerk/): 每天和文档表格邮件打交道的办公室职员：22 条核心任务对应 57 款工具
 - [HR/行政主管工具箱](https://www.util.cn/professions/hr-admin/): 管人事、薪酬、考勤与办公室事务的人力行政：12 条核心任务对应 22 款工具
 - [个人/家庭理财工具箱](https://www.util.cn/professions/finance-personal/): 管家庭收支、存款保险与长期规划的个人：10 条核心任务对应 27 款工具
 - [财务/会计/出纳工具箱](https://www.util.cn/professions/finance-pro/): 做账开票报税的企业财务人员：7 条核心任务对应 17 款工具
-- [电商卖家/运营工具箱](https://www.util.cn/professions/ecommerce-seller/): 开网店做运营推广的卖家与运营：8 条核心任务对应 24 款工具
-- [自媒体/短视频创作者工具箱](https://www.util.cn/professions/content-creator/): 做短视频、直播、图文的内容创作者：8 条核心任务对应 24 款工具
-- [作家/编辑/文案工具箱](https://www.util.cn/professions/writer-editor/): 写长文、编稿子、做校对的文字工作者：9 条核心任务对应 26 款工具
+- [电商卖家/运营工具箱](https://www.util.cn/professions/ecommerce-seller/): 开网店做运营推广的卖家与运营：9 条核心任务对应 26 款工具
+- [自媒体/短视频创作者工具箱](https://www.util.cn/professions/content-creator/): 做短视频、直播、图文的内容创作者：11 条核心任务对应 32 款工具
+- [作家/编辑/文案工具箱](https://www.util.cn/professions/writer-editor/): 写长文、编稿子、做校对的文字工作者：10 条核心任务对应 28 款工具
 - [劳动者/法律需求个人工具箱](https://www.util.cn/professions/legal-labor/): 遇到借贷、离职、维权等法律 adjacent 事务的个人：12 条核心任务对应 14 款工具
 - [电工/电气安装工具箱](https://www.util.cn/professions/electrician/): 跑现场布线、配电、维修的电工与电气爱好者：10 条核心任务对应 12 款工具
 - [机修/机加/五金工具箱](https://www.util.cn/professions/mechanic/): 做机加工、设备维修与五金装配的技工：18 条核心任务对应 17 款工具
 - [建筑施工/装修/木工工具箱](https://www.util.cn/professions/construction/): 做施工、装修与木作的从业者与自建房主：15 条核心任务对应 16 款工具
-- [音频工程/音乐人工具箱](https://www.util.cn/professions/audio-music/): 做录音、调音、编曲与乐器练习的音乐人：11 条核心任务对应 17 款工具
+- [音频工程/音乐人工具箱](https://www.util.cn/professions/audio-music/): 做录音、调音、编曲与乐器练习的音乐人：13 条核心任务对应 21 款工具
 - [实验室/生物医药工具箱](https://www.util.cn/professions/lab-bio/): 做生化实验、检测与研发的实验室人员：17 条核心任务对应 19 款工具
 - [质检/供应链/物流工具箱](https://www.util.cn/professions/qc-supply/): 管验货标准、采购补货与发运配载的质量与供应链岗：12 条核心任务对应 13 款工具
 - [健身与健康管理者工具箱](https://www.util.cn/professions/health-fitness/): 减脂增肌、日常健康监测的运动人群：10 条核心任务对应 32 款工具
@@ -1181,6 +1196,10 @@
 
 ## 博客文章
 
+- [SVG 导高清 PNG、GIF 拆帧、图片去白边、改 DPI：图像处理补四件](https://www.util.cn/blog/articles/image-tool-four-pack/): 设计师要的 SVG 多倍图导出、做表情包要的 GIF 拆帧、电商主图要的白边裁切、印刷要的 DPI 修改——图像线补上四件高频小工具，照例全在浏览器本地完成。
+- [Markdown 交 Word、docx 抽文字、看穿改后缀的伪装：三件文件工具](https://www.util.cn/blog/articles/markdown-word-file-type/): 稿子用 Markdown 写的，客户要 Word 版；收到 .docx 只想抽里面的文字；下载的文件后缀可疑想验明正身——三件新工具各管一段：Markdown 转 Word、Word 转文本、文件类型魔数识别，照例全程本地处理。
+- [口播录音去停顿、播客封面波形图：浏览器里的轻量音频工作台](https://www.util.cn/blog/articles/podcast-audio-workbench-local/): 口播录音里的长停顿要手动一刀刀剪？播客封面上的波形图要开专业软件？这批上线三件音频工具：口播静音切除自动找停顿、音频波形图生成器一键出封面、音频倒放做彩蛋，全部本地解码导出 WAV。
+- [手机视频转横屏、去原声、加减速：不装软件不传云的处理办法](https://www.util.cn/blog/articles/video-rotate-mute-speed-local/): 竖屏视频要转横屏、素材要消音再配乐、录屏要 2 倍速回放——这些活网上工具一大把，但几乎全要上传云端。本批上线的视频旋转、视频静音、视频变速、GIF 转视频四件，全程在浏览器里解码重录，文件不出本机。
 - [上班族的数字与文书：考勤、工时、差旅、邮件、架构图](https://www.util.cn/blog/articles/office-calc-templates/): 考勤有两个口径、加班费分 150/200/300% 三档、差旅标准机关与企业各一套、邮件抬头架构图述职各有格式——八件新工具把上班族的数字与文书一次配齐，全部本地计算。
 - [开会与决策：议程、SWOT、OKR、复盘](https://www.util.cn/blog/articles/meeting-framework-toolkit/): 例会开到九十分钟没结论、SWOT 填完四格就归档、OKR 写成口号、复盘变吐槽会——新上的会议议程生成器、SWOT分析生成器、决策执行框架卡、OKR生成器、团队复盘模板与项目风险登记表，把会议链条上的六个环节各配一件工具。
 - [教师备课六件：错题本、进度表、练习纸、组卷](https://www.util.cn/blog/articles/teacher-print-toolkit/): 错题本手动录入贴错因标签、学期进度表自动跳过节假日、拼音四线三格三种模式、单位换算组卷种子复现、九九乘法读法纠偏、考前 110 分钟分时段——教师备课打印向的六件新工具一次配齐。

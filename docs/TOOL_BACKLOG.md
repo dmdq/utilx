@@ -340,6 +340,17 @@ bitrate-calculator（视频码率/文件大小+OBS 推流档）· star-exposure-
 
 配套：teacher/student/office/hr 画像定向增补；collections +2（教师备课/职场文书）；wiki +4（WPM/SWOT/TOWS? 与 SWOT 合一→改 STAR/风险矩阵/48音标/OKR）；推文 4-5 篇。
 
+## 二十六、第三十三批：文件处理四线深挖（2026-11-08 调研，15 款）
+
+> 背景：用户指令挖掘文件处理（图像/视频/音频/文本）可补充项。idea 全清单×注册表碰撞检测：马赛克(pixelate)/取色调色板(color-picker·color-palette)/字符画(ascii-art-generator)/灰度反色(image-filter)/行操作(line-operations)/十六进制(binary-viewer)/cron 四件/视频抽帧(video-frame-extractor)等 26 个候选已存在，全剔除。真空主线=**视频处理**（现有仅转 GIF/抽帧/压缩/裁剪/去音频/录屏 6 件，线上竞品全要上传云端，与"数据不上传"品牌差异化最锐）。技术约束：MediaRecorder 输出 webm 全兼容、mp4 仅 Chrome 126+/Safari（m4r 先例）；零新依赖可落地 11 款，唯一可选新依赖 mp4-muxer 缓用。
+
+- **图像 4**：svg-to-png SVG转PNG（多尺寸批量导出zip）/ gif-frame-extractor GIF抽帧（自写LZW解码器 src/utils/gif-decoder.js，gifenc roundtrip 单测）/ image-autocrop 白边自动裁切（容差滑杆+批量）/ image-dpi DPI修改（PNG pHYs/JPEG JFIF 字节级零重编码，CRC32 锚点 123456789=0xCBF43926）
+- **视频 5**：video-rotator 旋转镜像 / video-mute 去音轨或替换音轨 / video-speed 倍速（preservesPitch 三前缀）/ gif-to-video GIF转视频（ImageDecoder 能力检测）/ mp4-inspector MP4结构查看器（自写 box 解析器 src/utils/mp4-parser.js，手工构造最小 mp4 单测）
+- **音频 3**：audio-reverse 倒放（自写 WAV 编码器）/ audio-silence-cutter 口播静音切除（RMS dBFS 门限+滞回，合成信号单测）/ audio-waveform 波形图播客封面（桶聚合峰值，PNG 导出）
+- **文本/文件 3**：markdown-to-word 转 Word（marked→Word 兼容 HTML .doc，诚实标注非 .docx）/ docx-to-text Word转文本（JSZip+字符串解析 w:p/w:t/w:tbl→Markdown，node 现场打包 docx 单测）/ file-type-detector 魔数文件类型识别（40+ 签名表+zip 中央目录细分 docx/xlsx/pptx，改后缀伪装科普）
+
+弃选：PNG→SVG 矢量化（vectorizer.ai 强）/ PSD 查看（依赖重）/ WebP 专项（image-convert 已盖）/ tar（低价值）/ jpeg-lossless-rotate（DCT 块变换工作量大，缓）。留池：video-merger 视频拼接（工作量大）/ audio-mixer 混音 / bpm-detector / audio-metadata ID3 / epub-maker / vcard-converter / gzip-tool（原生 CompressionStream）/ text-encryptor。
+
 ## 批次记录
 
 ---
