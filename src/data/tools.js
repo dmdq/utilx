@@ -797,7 +797,7 @@ export const tools = [
     sortOrder: 281,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['UTF-8', 'UTF-16', 'UTF-32', '编码转换', 'Unicode', '字符编码', '中文编码'],
-    keywords: ['utf8', 'utf-8', '编码转换', 'unicode', '字符编码', 'utf16', 'utf32']
+    keywords: ['utf8', 'utf-8', 'unicode', '字符编码', 'utf16', 'utf32']
   },
   {
     id: 'js-string-escape',
@@ -872,7 +872,7 @@ export const tools = [
     sortOrder: 286,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['IP地址', 'IPv4', '转换', '网络', '十进制', '十六进制'],
-    keywords: ['ip', 'ipv4', '地址转换', '十进制', '十六进制', '网络工具']
+    keywords: ['ip', 'ipv4', '地址转换', '十进制', '网络工具']
   },
   {
     id: 'unicode-convert',
@@ -902,7 +902,7 @@ export const tools = [
     sortOrder: 288,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['ASCII', '编码转换', '字符编码', 'ASCII表', '十进制', '十六进制'],
-    keywords: ['ascii', '编码转换', '字符编码', 'ascii表', '十进制', '十六进制']
+    keywords: ['ascii', 'ascii表']
   },
   {
     id: 'query-string-parser',
@@ -962,7 +962,7 @@ export const tools = [
     sortOrder: 292,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['XML', '转义', '特殊字符', '实体编码', '解析'],
-    keywords: ['xml', 'escape', '转义', 'xml编码', '特殊字符']
+    keywords: ['xml', 'escape', '转义', 'xml编码']
   },
   {
     id: 'color-convert',
@@ -1037,7 +1037,7 @@ export const tools = [
     sortOrder: 297,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['Base58', '编码', '比特币', '短链接', 'Bitcoin', 'URL压缩'],
-    keywords: ['base58', '编码', 'bitcoin', '比特币', '短链接']
+    keywords: ['base58', '编码', 'bitcoin', '比特币']
   },
   {
     id: 'base62-encode',
@@ -1052,7 +1052,7 @@ export const tools = [
     sortOrder: 298,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['Base62', '编码', '短链接', 'URL压缩', '解码'],
-    keywords: ['base62', '编码', '短链接', 'url压缩']
+    keywords: ['base62', '编码', 'url压缩']
   },
   {
     id: 'mac-address-convert',
@@ -1082,7 +1082,7 @@ export const tools = [
     sortOrder: 300,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['二进制', 'Hex', '查看器', '文件', '十六进制', 'ASCII'],
-    keywords: ['binary', 'hex', '查看器', '文件', '十六进制']
+    keywords: ['binary', 'hex', '查看器', '文件']
   },
 
   // 第三优先级编码解码工具 (301-310)
@@ -1114,7 +1114,7 @@ export const tools = [
     sortOrder: 302,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['UUEncode', 'Unix', '编码', '文件传输', '二进制'],
-    keywords: ['uuencode', 'unix', '编码', '文件传输', '二进制']
+    keywords: ['uuencode', 'unix', '编码', '文件传输']
   },
   {
     id: 'morse-code',
@@ -1144,7 +1144,7 @@ export const tools = [
     sortOrder: 304,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['ROT13', '加密', '凯撒密码', '字母替换'],
-    keywords: ['rot13', '加密', '解密', '凯撒密码', '字母替换']
+    keywords: ['rot13', '加密', '解密', '字母替换']
   },
   {
     id: 'caesar-cipher',
@@ -1219,7 +1219,7 @@ export const tools = [
     sortOrder: 309,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['LRC', '纵向冗余校验', '校验码', 'Modbus', '串口通信'],
-    keywords: ['lrc', '纵向冗余校验', '校验码', 'modbus', '串口通信']
+    keywords: ['lrc', '纵向冗余校验', 'modbus', '串口通信']
   },
   {
     id: 'crc-check',
@@ -1401,7 +1401,7 @@ export const tools = [
     sortOrder: 1500,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['BCrypt', '密码哈希', '密码加密', '哈希验证', '成本因子', '安全工具'],
-    keywords: ['bcrypt', 'password hash', 'hash generator', 'cost factor', 'password security', 'hash verification', '在线哈希']
+    keywords: ['bcrypt', 'password hash', 'hash generator', 'cost factor', 'password security', 'hash verification']
   },
   {
     id: 'aes-encryptor',
@@ -1416,7 +1416,7 @@ export const tools = [
     sortOrder: 1510,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['AES', 'AES-256', '加密解密', 'AES-GCM', 'AES-CBC', '对称加密', '数据安全'],
-    keywords: ['aes', 'aes-256', 'aes-gcm', 'aes-cbc', 'encrypt', 'decrypt', 'symmetric encryption', '在线加密', '数据加密']
+    keywords: ['aes', 'aes-256', 'aes-gcm', 'aes-cbc', 'encrypt', 'decrypt', 'symmetric encryption', '数据加密']
   },
   {
     id: 'rsa-key-pair',
@@ -1476,7 +1476,7 @@ export const tools = [
     sortOrder: 1550,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['Argon2', '密码哈希', 'Argon2id', '哈希验证', '内存硬哈希', '安全工具'],
-    keywords: ['argon2', 'argon2id', 'password hash', 'hash generator', 'memory hard', 'password security', '在线哈希']
+    keywords: ['argon2', 'argon2id', 'password hash', 'hash generator', 'memory hard', 'password security']
   },
   {
     id: 'hmac-generator',
@@ -1491,7 +1491,7 @@ export const tools = [
     sortOrder: 1560,
     lastUpdated: '2025-12-22 00:00:00',
     tags: ['HMAC', '消息认证码', 'SHA256', 'API签名', '数据完整性', '哈希认证'],
-    keywords: ['hmac', '消息认证码', 'hash-based mac', 'sha256', 'api签名', '数据完整性', '在线工具', '加密']
+    keywords: ['hmac', '消息认证码', 'hash-based mac', 'sha256', 'api签名', '数据完整性', '加密']
   },
   {
     id: 'otp-authenticator',
@@ -1506,7 +1506,7 @@ export const tools = [
     sortOrder: 1570,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['OTP', 'TOTP', 'HOTP', '两步验证', '2FA', 'Google Authenticator', '一次性密码'],
-    keywords: ['otp', 'totp', 'hotp', '两步验证', '2fa', 'google authenticator', '一次性密码', '认证器', '在线工具']
+    keywords: ['otp', 'totp', 'hotp', '两步验证', '2fa', 'google authenticator', '一次性密码', '认证器']
   },
   {
     id: 'cors-configurator',
@@ -1521,7 +1521,7 @@ export const tools = [
     sortOrder: 1580,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['CORS', '跨域', '跨域资源共享', 'Nginx', 'Apache', 'Node.js', '配置生成'],
-    keywords: ['cors', '跨域', '跨域资源共享', 'nginx', 'apache', 'nodejs', '配置生成', '在线工具']
+    keywords: ['cors', '跨域', '跨域资源共享', 'nginx', 'apache', 'nodejs', '配置生成']
   },
   {
     id: 'http-header-analyzer',
@@ -1536,7 +1536,7 @@ export const tools = [
     sortOrder: 1590,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['HTTP头', '安全头', 'Security Headers', 'CSP分析', 'CORS检查', '缓存策略'],
-    keywords: ['http头', '安全头', 'http header', 'security headers', 'cors检查', 'csp分析', '在线工具']
+    keywords: ['http头', 'http header', 'security headers', 'cors检查', 'csp分析']
   },
   {
     id: 'security-headers-check',
@@ -1551,7 +1551,7 @@ export const tools = [
     sortOrder: 1600,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['安全头', 'Security Headers', 'CSP检查', 'HSTS检查', '网站安全', '评分系统'],
-    keywords: ['安全头', 'security headers', 'csp检查', 'hsts检查', 'http头', '网站安全', '在线工具']
+    keywords: ['安全头', 'security headers', 'csp检查', 'hsts检查', '网站安全']
   },
   {
     id: 'certificate-validator',
@@ -1566,7 +1566,7 @@ export const tools = [
     sortOrder: 1610,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['SSL', 'TLS', '证书验证', 'Certificate', 'HTTPS', '证书链', '安全配置'],
-    keywords: ['ssl', 'tls', '证书验证', 'certificate validator', '证书检查', 'https', '安全证书', '在线工具']
+    keywords: ['ssl', 'tls', '证书验证', 'certificate validator', '证书检查', 'https', '安全证书']
   },
   {
     id: 'pii-detector',
@@ -1581,7 +1581,7 @@ export const tools = [
     sortOrder: 1620,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['PII', '个人身份信息', '身份证号', '手机号', '邮箱检测', '数据脱敏', '隐私保护'],
-    keywords: ['pii', '个人身份信息', '身份证号', '手机号', '邮箱检测', '银行卡号', '数据脱敏', '隐私保护', '在线工具']
+    keywords: ['pii', '个人身份信息', '身份证号', '手机号', '邮箱检测', '银行卡号', '数据脱敏', '隐私保护']
   },
   {
     id: 'pbkdf2-generator',
@@ -1596,7 +1596,7 @@ export const tools = [
     sortOrder: 1630,
     lastUpdated: '2025-12-31 00:00:00',
     tags: ['PBKDF2', '密码哈希', '密钥派生', '加密', '安全', '迭代次数'],
-    keywords: ['pbkdf2', '密码哈希', 'key derivation', '加密', '安全工具', '在线工具']
+    keywords: ['pbkdf2', '密码哈希', 'key derivation', '加密', '安全工具']
   },
   {
     id: 'crypto-prng',
@@ -1611,7 +1611,7 @@ export const tools = [
     sortOrder: 1640,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['随机数', 'CSPRNG', '随机密码', 'API密钥', 'UUID', '安全随机', '令牌生成'],
-    keywords: ['随机数', 'csprng', '随机密码', 'api密钥', '随机生成', '加密安全', 'web crypto', '在线工具']
+    keywords: ['随机数', 'csprng', '随机密码', 'api密钥', '随机生成', '加密安全', 'web crypto']
   },
 
   // 其他工具 (others)
@@ -1763,7 +1763,7 @@ export const tools = [
     sortOrder: 1690,
     lastUpdated: '2026-01-05 00:00:00',
     tags: ["其他工具","看板","任务管理","项目管理","效率工具"],
-    keywords: ['kanban', 'board', 'todo', 'task', '看板', '任务管理', '项目管理', '敏捷开发']
+    keywords: ['kanban', 'board', 'todo', 'task', '看板', '项目管理', '敏捷开发']
   },
   {
     id: 'todo-list-generator',
@@ -1838,7 +1838,7 @@ export const tools = [
     sortOrder: 1740,
     lastUpdated: '2026-01-05 00:00:00',
     tags: ["其他工具","HTTP","Headers","调试工具","API开发"],
-    keywords: ['http', 'headers', 'request', 'debug', '请求头', 'HTTP头', 'API调试', '网络调试']
+    keywords: ['http', 'headers', 'request', 'debug', '请求头', 'API调试', '网络调试']
   },
   {
     id: 'cookies-manager',
@@ -1868,7 +1868,7 @@ export const tools = [
     sortOrder: 1760,
     lastUpdated: '2026-01-05 00:00:00',
     tags: ["其他工具","时间管理","番茄钟","工时统计","计时器"],
-    keywords: ['time', 'tracker', 'pomodoro', 'timer', '时间跟踪', '计时', '工时', '番茄钟', '生产力']
+    keywords: ['time', 'tracker', 'pomodoro', 'timer', '时间跟踪', '计时', '工时', '生产力']
   },
   {
     id: 'bulk-request',
@@ -3046,7 +3046,7 @@ export const tools = [
     sortOrder: 893,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['图片', '边框', '圆角', '阴影', '编辑'],
-    keywords: ['图片边框', '圆角', '阴影', 'border', 'radius', 'shadow', '在线工具']
+    keywords: ['图片边框', '圆角', '阴影', 'border', 'radius', 'shadow']
   },
   {
     id: 'image-background',
@@ -3061,7 +3061,7 @@ export const tools = [
     sortOrder: 894,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['图片', '背景', '移除', '更换', '抠图', '透明'],
-    keywords: ['图片背景', '背景移除', '背景更换', '透明背景', 'background', 'remove', '在线工具']
+    keywords: ['图片背景', '背景移除', '背景更换', '透明背景', 'background', 'remove']
   },
   {
     id: 'image-split',
@@ -3076,7 +3076,7 @@ export const tools = [
     sortOrder: 895,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['图片', '分割', '九宫格', '切片', '切图'],
-    keywords: ['图片分割', '九宫格', '切片', 'split', 'grid', '在线工具']
+    keywords: ['图片分割', '九宫格', '切片', 'split', 'grid']
   },
   {
     id: 'image-text',
@@ -3091,7 +3091,7 @@ export const tools = [
     sortOrder: 896,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['图片', '文字', '水印', '标题', '标注'],
-    keywords: ['图片文字', '添加文字', '水印', 'text', 'overlay', '在线工具']
+    keywords: ['图片文字', '添加文字', '水印', 'text', 'overlay']
   },
   {
     id: 'image-meme',
@@ -3106,7 +3106,7 @@ export const tools = [
     sortOrder: 897,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['表情包', '梗图', 'meme', '制作', '搞笑'],
-    keywords: ['表情包', '梗图', 'meme', '制作器', '在线工具']
+    keywords: ['表情包', '梗图', 'meme', '制作器']
   },
   {
     id: 'image-collage',
@@ -3121,7 +3121,7 @@ export const tools = [
     sortOrder: 898,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['拼图', '图片拼接', '照片墙', 'collage', 'grid', '在线工具'],
-    keywords: ['拼图', '图片拼接', 'collage', 'grid', '照片墙', '在线工具']
+    keywords: ['拼图', '图片拼接', 'collage', 'grid', '照片墙']
   },
   {
     id: 'image-overlay',
@@ -3136,7 +3136,7 @@ export const tools = [
     sortOrder: 899,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['图片', '叠加', '混合', '图层', '合成'],
-    keywords: ['图片叠加', '混合模式', '图片合成', 'overlay', 'blend', '图层', '在线工具']
+    keywords: ['图片叠加', '混合模式', '图片合成', 'overlay', 'blend', '图层']
   },
   {
     id: 'pixelate',
@@ -3151,7 +3151,7 @@ export const tools = [
     sortOrder: 900,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['像素化', '马赛克', '像素艺术', '8-bit', '复古'],
-    keywords: ['像素化', '马赛克', '像素艺术', 'pixelate', 'mosaic', '8-bit', '在线工具']
+    keywords: ['像素化', '马赛克', '像素艺术', 'pixelate', 'mosaic', '8-bit']
   },
   {
     id: 'gif-maker',
@@ -3166,7 +3166,7 @@ export const tools = [
     sortOrder: 901,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['GIF', '动图', 'GIF制作', 'GIF生成', '动画'],
-    keywords: ['GIF', '动图', 'GIF制作', 'GIF生成', '动画', '在线工具']
+    keywords: ['GIF', '动图', 'GIF制作', 'GIF生成', '动画']
   },
   {
     id: 'image-compare',
@@ -3181,7 +3181,7 @@ export const tools = [
     sortOrder: 902,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['图片对比', '图片比较', '差异检测', '对比'],
-    keywords: ['图片对比', '图片比较', '差异检测', 'image compare', '在线工具']
+    keywords: ['图片对比', '图片比较', '差异检测', 'image compare']
   },
   {
     id: 'image-info',
@@ -3196,7 +3196,7 @@ export const tools = [
     sortOrder: 903,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['图片信息', 'EXIF', '图片属性', '图片尺寸', '查看'],
-    keywords: ['图片信息', 'EXIF', '图片属性', '图片尺寸', 'image info', '在线工具']
+    keywords: ['图片信息', 'EXIF', '图片属性', '图片尺寸', 'image info']
   },
   {
     id: 'batch-process',
@@ -3211,7 +3211,7 @@ export const tools = [
     sortOrder: 904,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['批量处理', '批量转换', '批量压缩', '批量调整'],
-    keywords: ['批量处理', '批量转换', '批量压缩', 'batch process', '在线工具']
+    keywords: ['批量处理', '批量压缩', 'batch process']
   },
   {
     id: 'image-ocr',
@@ -3226,7 +3226,7 @@ export const tools = [
     sortOrder: 905,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['OCR', '文字识别', '图片转文字', '图片识别'],
-    keywords: ['OCR', '文字识别', '图片转文字', '图片识别', 'text recognition', '在线工具']
+    keywords: ['OCR', '文字识别', '图片转文字', '图片识别', 'text recognition']
   },
   {
     id: 'avatar-generator',
@@ -3241,7 +3241,7 @@ export const tools = [
     sortOrder: 906,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['头像', 'avatar', '头像生成', '用户头像', '创建'],
-    keywords: ['头像', 'avatar', '头像生成', '用户头像', '在线工具']
+    keywords: ['头像', 'avatar', '头像生成', '用户头像']
   },
   {
     id: 'image-frame',
@@ -3256,7 +3256,7 @@ export const tools = [
     sortOrder: 907,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['相框', '边框', '图片装饰', 'frame', 'border'],
-    keywords: ['相框', '边框', '图片装饰', 'frame', 'border', '在线工具']
+    keywords: ['相框', '边框', '图片装饰', 'frame', 'border']
   },
   {
     id: 'color-palette',
@@ -3271,7 +3271,7 @@ export const tools = [
     sortOrder: 908,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['配色方案', '取色器', '色彩提取', '调色板'],
-    keywords: ['配色方案', '取色器', '色彩提取', 'color palette', '调色板', '在线工具']
+    keywords: ['配色方案', '取色器', '色彩提取', 'color palette', '调色板']
   },
   {
     id: 'image-duotone',
@@ -3286,7 +3286,7 @@ export const tools = [
     sortOrder: 909,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['双色调', 'duotone', '单色效果', '图片调色', '色彩处理'],
-    keywords: ['双色调', 'duotone', '单色效果', '图片调色', '色彩处理', '在线工具']
+    keywords: ['双色调', 'duotone', '单色效果', '图片调色', '色彩处理']
   },
   {
     id: 'bokeh-generator',
@@ -3301,7 +3301,7 @@ export const tools = [
     sortOrder: 910,
     lastUpdated: '2026-01-03 00:00:00',
     tags: ['散景', '虚化', '景深', 'bokeh', '光斑', '背景模糊'],
-    keywords: ['散景', '虚化', '景深', 'bokeh', '光斑', '背景模糊', '在线工具']
+    keywords: ['散景', '虚化', '景深', 'bokeh', '光斑', '背景模糊']
   },
 
   // 开发辅助 (dev)
@@ -3624,7 +3624,7 @@ export const tools = [
     sortOrder: 1650,
     lastUpdated: '2026-10-02 00:00:00',
     tags: ['API', 'HTTP', '模拟', '状态码', '响应头', '前端开发'],
-    keywords: ['api响应模拟', 'http mock', '接口模拟', '状态码模拟', 'api测试', '延迟模拟']
+    keywords: ['api响应模拟', 'http mock', '接口模拟', '状态码模拟', '延迟模拟']
   },
   {
     id: 'sql-query-optimizer',
@@ -5250,7 +5250,7 @@ export const tools = [
     sortOrder: 1280,
     lastUpdated: '2025-12-17 00:00:00',
     tags: ["工具","实用","在线","便捷","高效"],
-    keywords: ['百分比计算', '占比计算', '增幅计算', '折扣计算', '利率计算']
+    keywords: ['百分比计算', '占比计算', '增幅计算', '利率计算']
   },
   {
     id: 'scientific-calculator',
@@ -5295,7 +5295,7 @@ export const tools = [
     sortOrder: 1310,
     lastUpdated: '2025-12-21 00:00:00',
     tags: ["统计", "数据分析", "概率", "回归", "检验"],
-    keywords: ['统计分析', '数据分布', '回归分析', '概率计算', '假设检验']
+    keywords: ['统计分析', '数据分布', '回归分析', '假设检验']
   },
   {
     id: 'datetime-calculator',
@@ -5340,7 +5340,7 @@ export const tools = [
     sortOrder: 1340,
     lastUpdated: '2025-12-21 00:00:00',
     tags: ["进制", "转换", "二进制", "十六进制", "编程"],
-    keywords: ['进制转换', '二进制', '十六进制', '位运算', '补码']
+    keywords: ['进制转换', '二进制', '十六进制', '补码']
   },
   {
     id: 'fraction-calculator',
@@ -5445,7 +5445,7 @@ export const tools = [
     sortOrder: 1410,
     lastUpdated: '2025-12-31 00:00:00',
     tags: ["速度", "时间", "距离", "运动", "旅行"],
-    keywords: ['速度计算', '时间计算', '距离计算', '速度换算', '平均速度', '单位换算']
+    keywords: ['速度计算', '时间计算', '距离计算', '速度换算', '平均速度']
   },
   {
     id: 'loan-calculator',
@@ -5490,7 +5490,7 @@ export const tools = [
     sortOrder: 1440,
     lastUpdated: '2025-12-31 00:00:00',
     tags: ["年龄", "生日", "星座", "生肖", "计算"],
-    keywords: ['年龄计算', '周岁计算', '生日计算', '星座查询', '生肖查询', '虚岁计算', '生日倒计时']
+    keywords: ['年龄计算', '周岁计算', '生日计算', '星座查询', '生肖查询', '虚岁计算']
   },
   {
     id: 'complex-number-calculator',
@@ -5655,7 +5655,7 @@ export const tools = [
     sortOrder: 1550,
     lastUpdated: '2025-12-31 00:00:00',
     tags: ["单价", "对比", "购物", "价格", "性价比"],
-    keywords: ['单价计算', '单价对比', '价格对比', '单位换算', '购物比价', '性价比']
+    keywords: ['单价计算', '单价对比', '价格对比', '购物比价', '性价比']
   },
   {
     id: 'ovulation-calculator',
@@ -5700,7 +5700,7 @@ export const tools = [
     sortOrder: 1300,
     lastUpdated: '2025-12-21 00:00:00',
     tags: ["工具","实用","在线","便捷","高效"],
-    keywords: ['体脂率', '身体脂肪', '健康评估', '体重管理', '健身']
+    keywords: ['体脂率', '身体脂肪', '健身']
   },
   {
     id: 'bmr-calculator',
@@ -5715,7 +5715,7 @@ export const tools = [
     sortOrder: 1310,
     lastUpdated: '2025-12-21 00:00:00',
     tags: ["工具","实用","在线","便捷","高效"],
-    keywords: ['基础代谢率', 'BMR', 'TDEE', '热量消耗', '体重管理', '营养']
+    keywords: ['基础代谢率', 'BMR', 'TDEE', '热量消耗', '营养']
   },
   {
     id: 'heart-rate-calculator',
@@ -5745,7 +5745,7 @@ export const tools = [
     sortOrder: 1330,
     lastUpdated: '2025-12-21 00:00:00',
     tags: ["工具","实用","在线","便捷","高效"],
-    keywords: ['血压', '高血压', '健康监测', '心血管健康', '血压记录', '健康评估']
+    keywords: ['血压', '高血压', '健康监测', '心血管健康', '血压记录']
   },
   {
     id: 'sleep-quality-calculator',
@@ -5805,7 +5805,7 @@ export const tools = [
     sortOrder: 1370,
     lastUpdated: '2025-12-21 00:00:00',
     tags: ["工具","实用","在线","便捷","高效"],
-    keywords: ['理想体重', '体重目标', '体重管理', 'BMI', '健康体重', '体重计算']
+    keywords: ['理想体重', 'BMI', '健康体重', '体重计算']
   },
   {
     id: 'exercise-calorie-calculator',
@@ -5820,7 +5820,7 @@ export const tools = [
     sortOrder: 1380,
     lastUpdated: '2025-12-21 00:00:00',
     tags: ["工具","实用","在线","便捷","高效"],
-    keywords: ['运动消耗', '热量消耗', '卡路里', '运动减重', '健身计划', '有氧运动']
+    keywords: ['运动消耗', '运动减重', '健身计划']
   },
   {
     id: 'health-age-calculator',
@@ -5850,7 +5850,7 @@ export const tools = [
     sortOrder: 1400,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['腰臀比', 'WHR', '中心性肥胖', '腹部脂肪', '心血管风险', '健康评估'],
-    keywords: ['腰臀比', 'whr', '腰围臀围比', '中心性肥胖', '腹部脂肪', '健康评估', '心血管风险', '在线计算器']
+    keywords: ['腰臀比', 'whr', '腰围臀围比', '中心性肥胖', '腹部脂肪', '心血管风险']
   },
   {
     id: 'waist-to-height-calculator',
@@ -5865,7 +5865,7 @@ export const tools = [
     sortOrder: 1410,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['腰高比', 'WHtR', '腰围身高比', '肥胖评估', '内脏脂肪', '代谢综合征'],
-    keywords: ['腰高比', 'whtr', '腰围身高比', '肥胖评估', '内脏脂肪', '代谢综合征', '健康评估', '在线计算器']
+    keywords: ['腰高比', 'whtr', '腰围身高比', '肥胖评估', '内脏脂肪', '代谢综合征']
   },
   {
     id: 'body-measurement-tracker',
@@ -5880,7 +5880,7 @@ export const tools = [
     sortOrder: 1420,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['身体围度', '身材追踪', '健身记录', '围度测量', '塑形效果', '数据追踪'],
-    keywords: ['身体围度', '身材追踪', '健身记录', '围度测量', '塑形效果', '身材管理', '数据追踪', '在线工具']
+    keywords: ['身体围度', '身材追踪', '健身记录', '围度测量', '塑形效果', '身材管理', '数据追踪']
   },
   {
     id: 'caliper-calculator',
@@ -5895,7 +5895,7 @@ export const tools = [
     sortOrder: 1430,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['皮脂厚度', '皮脂钳', '体脂率', 'Jackson-Pollock', '身体成分', '3点法', '7点法'],
-    keywords: ['皮脂厚度', '皮脂钳', '体脂率', 'jackson-pollock', '身体成分', '3点法', '7点法', '在线计算器']
+    keywords: ['皮脂厚度', '皮脂钳', 'jackson-pollock', '身体成分', '3点法', '7点法']
   },
   {
     id: '1rm-calculator',
@@ -5940,7 +5940,7 @@ export const tools = [
     sortOrder: 1460,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['运动计划', '健身计划', '训练计划', '增肌', '减脂', '耐力训练', '力量训练'],
-    keywords: ['运动计划', '健身计划', '训练计划', '增肌', '减脂', '耐力训练', '力量训练', 'workout planner']
+    keywords: ['运动计划', '增肌', '减脂', '耐力训练', 'workout planner']
   },
   {
     id: 'flexibility-assessment',
@@ -5955,7 +5955,7 @@ export const tools = [
     sortOrder: 1470,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['柔韧性', '身体柔韧性', '拉伸测试', '坐位体前屈', '关节活动度', '体态评估'],
-    keywords: ['柔韧性', '身体柔韧性', '拉伸测试', '坐位体前屈', '关节活动度', '体态评估', 'flexibility assessment']
+    keywords: ['柔韧性', '身体柔韧性', '拉伸测试', '坐位体前屈', '关节活动度', 'flexibility assessment']
   },
   {
     id: 'calorie-counter',
@@ -5970,7 +5970,7 @@ export const tools = [
     sortOrder: 1480,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['卡路里', '热量计数', '卡路里计算', '食物热量', '减脂饮食', '热量缺口', '营养记录'],
-    keywords: ['卡路里', '热量计数', '卡路里计算', '食物热量', '减脂饮食', '热量缺口', '营养记录', 'calorie counter']
+    keywords: ['卡路里', '热量计数', '食物热量', '减脂饮食', '热量缺口', '营养记录', 'calorie counter']
   },
   {
     id: 'macro-tracker',
@@ -5985,7 +5985,7 @@ export const tools = [
     sortOrder: 1490,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['宏量营养素', '蛋白质', '碳水', '脂肪', '营养追踪', '增肌', '减脂', '营养配比'],
-    keywords: ['宏量营养素', '蛋白质', '碳水', '脂肪', '营养追踪', '增肌', '减脂', '营养配比', 'macro tracker']
+    keywords: ['宏量营养素', '碳水', '脂肪', '营养追踪', '增肌', '减脂', '营养配比', 'macro tracker']
   },
   {
     id: 'meal-planner',
@@ -6030,7 +6030,7 @@ export const tools = [
     sortOrder: 1520,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['饮水追踪', '饮水量', '水分补充', '健康饮水', '每日饮水', '饮水习惯'],
-    keywords: ['饮水追踪', '饮水量', '水分补充', '健康饮水', '每日饮水', '饮水习惯', 'hydration tracker']
+    keywords: ['饮水追踪', '水分补充', '每日饮水', '饮水习惯', 'hydration tracker']
   },
   {
     id: 'vo2max-calculator',
@@ -6075,7 +6075,7 @@ export const tools = [
     sortOrder: 1550,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['心血管年龄', '心脏年龄', 'VO2max', '心血管健康', '心脏健康', '生理年龄'],
-    keywords: ['心血管年龄', '心脏年龄', 'vo2max', '心血管健康', '心脏健康', 'fitness age', '生理年龄']
+    keywords: ['心血管年龄', '心脏年龄', 'vo2max', '心脏健康', 'fitness age']
   },
   {
     id: 'ffmi-calculator',
@@ -6120,7 +6120,7 @@ export const tools = [
     sortOrder: 1580,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['睡眠周期', '睡眠时间', '起床时间', '就寝时间', '睡眠质量', '90分钟周期'],
-    keywords: ['睡眠周期', '睡眠时间', '起床时间', '就寝时间', '睡眠质量', '90分钟周期', '睡眠计算器']
+    keywords: ['睡眠周期', '起床时间', '就寝时间', '90分钟周期', '睡眠计算器']
   },
   {
     id: 'circadian-rhythm-test',
@@ -6150,7 +6150,7 @@ export const tools = [
     sortOrder: 1600,
     lastUpdated: '2026-01-04 00:00:00',
     tags: ['压力测试', '压力水平', 'PSS量表', '感知压力', '减压', '压力管理', '心理健康'],
-    keywords: ['压力测试', '压力水平', 'pss量表', '感知压力', '减压', '压力管理', '心理健康', '在线测试']
+    keywords: ['压力水平', 'pss量表', '感知压力', '减压', '压力管理', '心理健康', '在线测试']
   },
   {
     id: 'posture-assessment',
@@ -6573,7 +6573,7 @@ export const tools = [
     sortOrder: 1350,
     lastUpdated: '2025-12-17 00:00:00',
     tags: ["随机", "数字", "生成", "抽奖", "工具", "在线"],
-    keywords: ['random', 'number', 'generate', 'lottery', 'range', '抽奖', '随机数']
+    keywords: ['random', 'number', 'generate', 'lottery', 'range', '抽奖']
   },
   {
     id: 'random-choice',
@@ -7038,7 +7038,7 @@ export const tools = [
     sortOrder: 1880,
     lastUpdated: '2026-10-03 00:00:00',
     tags: ['编码转换', 'GBK', 'UTF-8', '乱码', '批量转换'],
-    keywords: ['编码转换', 'gbk转utf8', '文件编码检测', '批量转码', '乱码修复']
+    keywords: ['编码转换', 'gbk转utf8', '文件编码检测', '批量转码']
   },
   {
     id: 'mojibake-fixer',
@@ -7098,7 +7098,7 @@ export const tools = [
     sortOrder: 1920,
     lastUpdated: '2026-10-03 00:00:00',
     tags: ['Markdown', 'HTML导出', '文档转换'],
-    keywords: ['markdown转html', 'md导出', 'markdown预览', '文档转换']
+    keywords: ['md导出', 'markdown预览', '文档转换']
   },
   {
     id: 'env-json-converter',
@@ -7458,7 +7458,7 @@ export const tools = [
     sortOrder: 2160,
     lastUpdated: '2026-10-03 00:00:00',
     tags: ['Base85', 'Ascii85', '编码', 'PDF'],
-    keywords: ['base85', 'ascii85', 'base85编码', '编码转换']
+    keywords: ['base85', 'ascii85', 'base85编码']
   },
   {
     id: 'zero-width-encoder',
@@ -7578,7 +7578,7 @@ export const tools = [
     sortOrder: 940,
     lastUpdated: '2026-10-03 00:00:00',
     tags: ['背景替换', '证件照', '换底色', '图片处理'],
-    keywords: ['证件照换底色', '背景替换', '图片换背景', '白底换蓝底', '照片换底']
+    keywords: ['背景替换', '图片换背景', '白底换蓝底', '照片换底']
   },
   {
     id: 'placeholder-text-generator',
@@ -8703,7 +8703,7 @@ export const tools = [
     sortOrder: 1740,
     lastUpdated: '2026-10-13 00:00:00',
     tags: ['阶梯电价', '电费计算', '分档电价', '家庭账单'],
-    keywords: ['阶梯电价计算', '电费计算器', '分档电价', '电费多少', '用电量电费']
+    keywords: ['阶梯电价计算', '分档电价', '电费多少', '用电量电费']
   },
   {
     id: 'ev-charging-cost-calculator',
@@ -9663,7 +9663,7 @@ export const tools = [
     sortOrder: 2270,
     lastUpdated: '2026-10-13 00:00:00',
     tags: ['农历生日', '生日换算', '提醒', '阳历农历'],
-    keywords: ['农历生日换算', '农历生日是哪天', '生日阳历农历对照', '过农历生日', '生日倒计时']
+    keywords: ['农历生日换算', '农历生日是哪天', '生日阳历农历对照', '过农历生日']
   },
   {
     id: 'mouse-test',
@@ -10158,7 +10158,7 @@ export const tools = [
     sortOrder: 2360,
     lastUpdated: '2026-11-03 00:00:00',
     tags: ['邮件合并', '批量文本', '模板', '通知群发'],
-    keywords: ['邮件合并', '批量生成文本', '通知模板', '占位符替换', '家长通知生成']
+    keywords: ['邮件合并', '批量生成文本', '通知模板', '家长通知生成']
   },
   {
     id: 'white-noise-generator',
@@ -10173,7 +10173,7 @@ export const tools = [
     sortOrder: 1980,
     lastUpdated: '2026-11-03 00:00:00',
     tags: ['白噪音', '助眠', '专注', '雨声', '放松'],
-    keywords: ['白噪音', 'white noise', '雨声助眠', '学习背景音', '粉噪音棕噪音']
+    keywords: ['white noise', '雨声助眠', '学习背景音', '粉噪音棕噪音']
   },
   {
     id: 'electronic-woodfish',
@@ -10743,7 +10743,7 @@ export const tools = [
     sortOrder: 1810,
     lastUpdated: '2026-11-03 00:00:00',
     tags: ['护眼', '休息提醒', '20-20-20', '屏幕疲劳'],
-    keywords: ['护眼提醒', '20 20 20 法则', '眼睛疲劳', '休息提醒', '屏幕时间']
+    keywords: ['护眼提醒', '20 20 20 法则', '眼睛疲劳', '休息提醒']
   },
   {
     id: 'plant-watering-tracker',
@@ -12318,7 +12318,7 @@ export const tools = [
     sortOrder: 2650,
     lastUpdated: '2026-11-06 00:00:00',
     tags: ['天线', '波长', '偶极子', 'λ/4', '速度因子'],
-    keywords: ['天线长度计算', '四分之一波长', '偶极子天线', 'antenna length calculator', '天线制作']
+    keywords: ['天线长度计算', '偶极子天线', 'antenna length calculator', '天线制作']
   },
   {
     id: 'swr-calculator',
@@ -12738,7 +12738,7 @@ export const tools = [
     sortOrder: 2380,
     lastUpdated: '2026-11-06 00:00:00',
     tags: ['徒步', '饮水', '补水', '户外', '升数'],
-    keywords: ['徒步饮水', '户外补水', '爬山带多少水', 'hiking water calculator', '饮水量']
+    keywords: ['徒步饮水', '户外补水', '爬山带多少水', 'hiking water calculator']
   },
   {
     id: 'cycling-gear-ratio',
@@ -12963,7 +12963,7 @@ export const tools = [
     sortOrder: 2950,
     lastUpdated: '2026-11-06 00:00:00',
     tags: ['速度', '时速', '马赫', '节', '换算'],
-    keywords: ['速度换算', 'kmh mph', '米每秒', '马赫数', '节换算']
+    keywords: ['kmh mph', '米每秒', '马赫数', '节换算']
   },
   {
     id: 'data-unit-converter',
@@ -14118,7 +14118,7 @@ export const tools = [
     sortOrder: 2720,
     lastUpdated: '2026-11-07 00:00:00',
     tags: ['拼音', '四线三格', '练习纸', '描红', '打印'],
-    keywords: ['拼音练习纸', '四线三格打印', '拼音描红', '拼音格生成', '声调练习']
+    keywords: ['拼音练习纸', '拼音描红', '拼音格生成', '声调练习']
   },
   {
     id: 'teaching-plan-planner',
@@ -14613,7 +14613,7 @@ export const tools = [
     sortOrder: 3450,
     lastUpdated: '2026-11-08 00:00:00',
     tags: ['视频裁剪', '画面裁切', '视频去黑边', '构图调整'],
-    keywords: ['视频裁剪', '视频画面裁剪', '视频去黑边', '裁剪视频尺寸', '视频裁切']
+    keywords: ['视频画面裁剪', '视频去黑边', '裁剪视频尺寸', '视频裁切']
   },
   {
     id: 'audio-mixer',
@@ -14733,7 +14733,7 @@ export const tools = [
     sortOrder: 3530,
     lastUpdated: '2026-11-08 00:00:00',
     tags: ['文本加密', 'AES加密', '密码加密', '保密笔记'],
-    keywords: ['文本加密', '文字加密解密', 'aes加密工具', '在线加密', '保密文本']
+    keywords: ['文本加密', '文字加密解密', 'aes加密工具', '保密文本']
   },
   {
     id: 'duplicate-file-finder',

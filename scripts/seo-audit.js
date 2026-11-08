@@ -70,6 +70,12 @@ const kwConflicts = Object.entries(kwMap).filter(([_, ids]) => ids.length >= 3).
 row(`- 共 ${kwConflicts.length} 个关键词被 ≥3 款工具声明；Top10：`)
 for (const [kw, ids] of kwConflicts.slice(0, 10)) row(`  - \`${kw}\` ×${ids.length}：${ids.slice(0, 6).join(', ')}${ids.length > 6 ? ' …' : ''}`)
 
+// 具体中文词冲突（有行动价值的蚕食）：含 CJK 且长度≥3、被 ≥2 款声明
+const cjkRe = /[\u4e00-\u9fff]/
+const cjkConflicts = Object.entries(kwMap).filter(([kw, ids]) => cjkRe.test(kw) && kw.length >= 3 && ids.length >= 2)
+row(`- **具体中文词冲突（≥2 款声明）：${cjkConflicts.length} 组**${cjkConflicts.length ? '：' + cjkConflicts.slice(0, 8).map(([kw, ids]) => `\`${kw}\`×${ids.length}`).join('、') + (cjkConflicts.length > 8 ? ' …' : '') : ''}`)
+row(`  - 治理口径：虚词（在线工具/在线计算器类）全删；具体词按「工具名含词者优先」保留一个，其余移除（2026-11-08 已治理 56 组，重跑应为 0）`)
+
 // ---------- 4. 博客内链深度 ----------
 sec('4. 博客→工具内链深度')
 const postsDir = path.join(root, 'blog/content/posts')

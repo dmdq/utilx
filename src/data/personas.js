@@ -736,4 +736,33 @@ export const personas = [
       { task: '满减档位与凑单方案', tools: ['delivery-deal-calculator'] },
     ],
   },
+  {
+    id: 'legal-assistant',
+    name: '法务/律师助理',
+    scene: '处理劳动争议、文书起草与诉讼费用核算的法务岗与律师助理',
+    icon: 'Scale',
+    group: '社会服务',
+    tasks: [
+      { task: '诉讼时效与起诉费用核算', tools: ['statute-limitations-calculator', 'court-fee-calculator'] },
+      { task: '劳动争议赔偿三项（补偿/工伤/病假工资）', tools: ['labor-severance-calculator', 'work-injury-compensation', 'sick-leave-pay-calculator'] },
+      { task: '劳务报酬个税与税前税后互推', tools: ['labor-remuneration-tax', 'salary-reverse-calculator', 'tax-calculator'] },
+      { task: '借条与法律文书起草', tools: ['iou-generator', 'legal-doc-generator'] },
+      { task: '房产交易税费测算', tools: ['house-transfer-tax-calculator'] },
+      { task: '公文与函件排版', tools: ['official-document-generator', 'business-letter-templates'] },
+    ],
+  },
+  {
+    id: 'pet-service',
+    name: '宠物服务从业者',
+    scene: '开宠物店、做寄养美容与水族服务的从业者',
+    icon: 'Cat',
+    group: '生活服务',
+    tasks: [
+      { task: '宠物年龄换算与喂食量计算', tools: ['pet-age-calculator', 'pet-food-calculator'] },
+      { task: '误食巧克力等风险初判', tools: ['dog-chocolate'] },
+      { task: '水族缸体与水质维护', tools: ['aquarium-calculator'] },
+      { task: '门店服务定价与成本卡', tools: ['pricing-calculator', 'recipe-cost-calculator'] },
+      { task: '门店活动抽奖与名单抽取', tools: ['random-wheel', 'random-name-picker'] },
+    ],
+  },
 ]

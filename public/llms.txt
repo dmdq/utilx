@@ -7,9 +7,9 @@
 - [首页](https://www.util.cn/): 工具导航与推荐
 - [全部工具](https://www.util.cn/all/): 1000 款工具完整目录
 - [场景专题](https://www.util.cn/collections/): 37 个按使用场景组织的工具组合
-- [按职业找工具](https://www.util.cn/professions/): 34 张职业工具卡，按任务对应工具
+- [按职业找工具](https://www.util.cn/professions/): 36 张职业工具卡，按任务对应工具
 - [AI 百科](https://www.util.cn/wiki/): 73 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 461 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 476 篇工具教程与实践文章
 
 ## 工具分类
 
@@ -1154,6 +1154,8 @@
 - [电子维修技师工具箱](https://www.util.cn/professions/electronics-repairer/): 修电源板、家电主板、功放的维修技师与电子爱好者：17 条核心任务对应 17 款工具
 - [外贸/跨境业务员工具箱](https://www.util.cn/professions/trade-exporter/): 做出口报价、国际物流与跨境零售进口的业务员与卖家：6 条核心任务对应 6 款工具
 - [小店与民宿经营者工具箱](https://www.util.cn/professions/shop-owner/): 开餐馆、咖啡店、民宿或小零售店，自己算账自己定价的经营者：6 条核心任务对应 6 款工具
+- [法务/律师助理工具箱](https://www.util.cn/professions/legal-assistant/): 处理劳动争议、文书起草与诉讼费用核算的法务岗与律师助理：6 条核心任务对应 13 款工具
+- [宠物服务从业者工具箱](https://www.util.cn/professions/pet-service/): 开宠物店、做寄养美容与水族服务的从业者：5 条核心任务对应 8 款工具
 
 ## AI 百科词条
 
@@ -1233,6 +1235,21 @@
 
 ## 博客文章
 
+- [查看、合并、转换、清理：13 件文件处理工具一组组备齐](https://www.util.cn/blog/articles/file-utilities-roundup/): 压缩包不敢乱解、名单要拆列、文档要转格式、硬盘被重复文件塞满——13 件文件处理工具按查看解包、表格数据、文档转换、安全清理四组各就各位，全程本地处理。
+- [SVG、开纸、出血、圈口：9 件设计与印刷工具补齐细节](https://www.util.cn/blog/articles/design-print-roundup/): 图标差两像素、名片要留出血、三米宽的喷绘不知道给多大像素——9 件设计与印刷工具按 SVG 矢量、印刷三关、实用杂件分组，把出图前后的细节账一次算清。
+- [JSON、XML、TOML 互转：20 件格式化与转换工具按场景分组](https://www.util.cn/blog/articles/format-convert-roundup/): 后端给 XML、前端要 JSON、运维甩来 TOML——这篇把 20 件格式化与转换工具分成结构化互转与编码小工具两组，从互转、排版到拆包解码一次理清。
+- [旋转、抽帧、混音、测速：15 件音视频编辑工具全在本地](https://www.util.cn/blog/articles/media-editing-roundup/): 竖拍要转正、录屏要加速、口播要切停顿、播客要转视频——15 件音视频编辑工具分成视频与音频两组，全部在浏览器本地处理，素材文件一个字节都不上传。
+- [API 联调、代码片段、文档数据：28 件开发者效率工具一次理清](https://www.util.cn/blog/articles/dev-efficiency-roundup/): 接口没文档、联调没 Mock、片段满天飞——这篇把 28 件开发者效率工具按 API 与联调、代码与片段、文档与数据、零碎小工具分成四组，每件配一个真实场景，对号入座即可。
+- [从竖式练习到护照有效期：11 件教育与家庭工具](https://www.util.cn/blog/articles/education-family-roundup/): 娃的竖式进位老出错、模考完想估个分、寒假出境游前还得看护照有效期——家里的学习和出行规划都是具体的活。这篇把站点 11 件工具分成打印练习件、学习辅助、成绩与规划三组，每件一句话，家里缺什么补什么。
+- [测速、DNSSEC、子网划分：16 件网络诊断工具清单](https://www.util.cn/blog/articles/network-diagnostics-roundup/): 用户说网页打不开、改了解析半天不生效、划子网借位借到头晕——网络问题难在定位。这篇把站点 16 件网络诊断工具分成连通与测速、DNS 与解析、地址与规划、配套四组，按排查顺序对号入座。
+- [从胎压换算到露营清单：12 件车主与户外常用工具](https://www.util.cn/blog/articles/car-outdoor-roundup/): 入冬要调胎压、故障灯亮了心里发毛、假期露营装备怕漏带——车主和户外玩家的麻烦事都有现成的解法。这篇把站点 12 件工具分成养护、户外与出行、骑行与宠物三组，每件一句话，出发前翻一遍再动身。
+- [证书、安全头、PII 检测：13 件网站安全自查工具](https://www.util.cn/blog/articles/security-checkup-roundup/): 上线前证书链全不全、响应头缺没缺、日志里有没有夹带身份证号——安全问题往往出在没检查的地方。这篇把站点 13 件安全自查工具分成传输与证书、密码学与密钥、数据合规三组，发版前对着过一遍。
+- [从外贸报价到翻台率：8 件小店与外贸经营工具](https://www.util.cn/blog/articles/smallbiz-trade-roundup/): 德国客户要求改报 CIF、包裹过海关税怎么算、周末翻台率到底还差多少——小生意和外贸的账又碎又具体。这篇把站点 8 件经营工具分成外贸跨境、实体经营、个人接单与副业三组，每件一句话，开店接单各取所需。
+- [AES、国密、Ed25519：19 件加密与哈希工具大盘点](https://www.util.cn/blog/articles/crypto-tools-roundup/): 对接第三方要验签、用户口令不能明文入库、等保整改点名用国密——加密哈希的活又多又杂。这篇把站点 19 件加密与哈希工具分成对称加密、非对称与签名、口令哈希、校验与杂项四组，每件一句话。
+- [从工伤赔偿到交接清单：8 件用工与法务实用工具](https://www.util.cn/blog/articles/labor-legal-roundup/): 工伤赔偿谈了几轮没底、长病假工资不会算、头一回提离职交接一团乱——职场里的赔偿、考勤、文书事一件比一件具体。这篇把站点 8 件用工与法务工具分成赔偿与个税、考勤与报销、纸面与文书三组，遇到什么事就翻哪一节。
+- [时间戳、闰年、值班表：15 件时间日期工具大盘点](https://www.util.cn/blog/articles/time-tools-roundup/): 服务器日志是毫秒时间戳、跨国会议要换算时区、期末复习要倒排计划——和时间沾边的麻烦每天都有。这篇把站点 15 件时间日期工具分成时间戳与时区、日历与周期、学习与排班、Cron 四组，一次理清。
+- [从养老储蓄到债务规划：14 件个人财务计算器全盘点](https://www.util.cn/blog/articles/personal-finance-roundup/): 养老要算缺口、接活要定报价、月底要还三笔债——个人财务的琐碎账散在一年到头的每个场景里。这篇把站点 14 件财务计算器分成投资与收益、接活与自由职业、账务日常三组，每件一句话，年底盘账直接对号入座。
+- [从矩阵运算到销售税：15 件通用计算器常备款](https://www.util.cn/blog/articles/general-calculators-roundup/): 报销要算折后价、作业要解三角函数、卖旧车要估残值——计算需求散落在生活的各个角落。这篇把站点 15 件通用计算器分成数学与代数、生活账、速度与时间三组，每件一句话，遇到什么算什么。
 - [血压、体脂、饮水打卡：18 件健康追踪工具备齐](https://www.util.cn/blog/articles/health-tracking-roundup/): 体检查出的数值看不懂趋势、减重不知从哪一步下手、八杯水全靠忘——这篇把站点 18 件健康追踪工具分成三组：体征记录、饮食营养、训练与目标，帮你在本地把身体台账记起来。
 - [替换、拼音、参考文献：19 件文本处理工具大盘点](https://www.util.cn/blog/articles/text-processing-roundup/): 从 PDF 复制来的稿子满是空格、API 字段要统一命名风格、论文参考文献卡在国标格式——这篇把站点 19 件文本处理工具分成四组：清洗整理、格式转换、中文向和写作向。
 - [HTML 实体、Base85、摩斯电码：22 件编码转换工具一次理清](https://www.util.cn/blog/articles/encoding-conversion-roundup/): 调试时收到一串天书不知道怎么解？这篇把站点里 22 件编码转换工具按场景分成四组：Web 转义三件套、代码转义、Base 家族，以及从二进制到摩斯电码的字符与古典编码。
