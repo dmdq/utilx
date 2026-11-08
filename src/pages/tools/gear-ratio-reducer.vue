@@ -516,7 +516,7 @@
           <li><NuxtLink to="/tools/gear-module-calculator" class="text-primary hover:underline">齿轮模数计算器</NuxtLink>：分度圆、齿顶圆与中心距几何速算；</li>
           <li><NuxtLink to="/tools/chain-sprocket" class="text-primary hover:underline">链条长度计算</NuxtLink>：链轮齿数、中心距与节距求链条节数；</li>
           <li><NuxtLink to="/tools/torque-unit-converter" class="text-primary hover:underline">扭矩单位换算器</NuxtLink>：N·m、kgf·m、lb-ft、lb-in 互算；</li>
-          <li><NuxtLink to="/tools/motor-rpm-calculator" class="text-primary hover:underline">电机转速计算</NuxtLink>：同步转速与转差速算。</li>
+          <li><span class="text-muted-foreground">电机转速与转差</span>：同步转速 = 60×频率÷极对数，转差率 =(同步转速−实际转速)÷同步转速。</li>
         </ul>
       </div>
     </div>

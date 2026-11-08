@@ -162,7 +162,7 @@
               <span class="text-muted-foreground text-xs"> — H 系/900 系灯泡型号、灯座与功率速查</span>
             </li>
             <li>
-              <NuxtLink to="/tools/tire-pressure-converter" class="text-primary hover:underline">胎压换算</NuxtLink>
+              <NuxtLink to="/tools/tire-pressure-convert" class="text-primary hover:underline">胎压换算</NuxtLink>
               <span class="text-muted-foreground text-xs"> — psi/bar/kPa 胎压冷热换算与年检参考</span>
             </li>
           </ul>

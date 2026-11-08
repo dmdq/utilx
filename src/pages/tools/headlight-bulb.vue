@@ -178,7 +178,7 @@
               <span class="text-muted-foreground text-xs"> — 常见 P0xxx 故障码含义、原因与严重度分档</span>
             </li>
             <li>
-              <NuxtLink to="/tools/tire-pressure-converter" class="text-primary hover:underline">胎压换算</NuxtLink>
+              <NuxtLink to="/tools/tire-pressure-convert" class="text-primary hover:underline">胎压换算</NuxtLink>
               <span class="text-muted-foreground text-xs"> — psi/bar/kPa 胎压冷热换算</span>
             </li>
           </ul>

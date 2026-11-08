@@ -194,7 +194,7 @@
     <div class="mt-8 p-6 bg-muted rounded-lg">
       <h3 class="text-lg font-semibold mb-4">相关工具</h3>
       <div class="flex flex-wrap gap-2">
-        <NuxtLink to="/tools/ping" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity">Ping测试</NuxtLink>
+        <NuxtLink to="/tools/route-tracer" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity">路由追踪</NuxtLink>
         <NuxtLink to="/tools/port-checker" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity">端口检测</NuxtLink>
         <NuxtLink to="/tools/dns-lookup" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity">DNS查询</NuxtLink>
       </div>

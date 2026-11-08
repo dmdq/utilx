@@ -1,308 +1,164 @@
 #!/usr/bin/env node
+/**
+ * 全站 SEO 体检（1000 款节点专项）
+ * 用法：node scripts/seo-audit.js [--site .output/public]
+ * 输出：控制台摘要 + docs/SEO_AUDIT_<date>.md
+ * 覆盖：TDK 重复度 / 标题描述长度 / 关键词蚕食 / 静态产物死链 / 博客内链深度 / 专题覆盖
+ */
+const fs = require('fs')
+const path = require('path')
 
-const fs = require('fs');
-const path = require('path');
+const root = process.cwd()
+const args = process.argv.slice(2)
+const siteIdx = args.indexOf('--site')
+const siteDir = siteIdx >= 0 ? args[siteIdx + 1] : null
+const today = new Date().toISOString().slice(0, 10)
+const outPath = path.join(root, 'docs', `SEO_AUDIT_${today}.md`)
 
-class SEOAuditor {
-  constructor() {
-    this.issues = [];
-    this.suggestions = [];
-  }
+// ---------- 数据加载 ----------
+const toolsSrc = fs.readFileSync(path.join(root, 'src/data/tools.js'), 'utf8')
+  .replace('export const tools', 'module.exports')
+fs.writeFileSync('/tmp/seo-tools.cjs', toolsSrc)
+const tools = require('/tmp/seo-tools.cjs')
 
-  // 检查工具文件的SEO优化
-  auditToolFiles() {
-    const toolsDir = path.join(__dirname, '../src/pages/tools');
-    const tools = this.getToolFiles(toolsDir);
+const lines = []
+const sec = (t) => lines.push(`\n## ${t}\n`)
+const row = (s) => lines.push(s)
 
-    console.log(`🔍 开始SEO审计 ${tools.length} 个工具...`);
+// ---------- 1. TDK 重复度 ----------
+sec('1. 注册表 TDK 重复度')
+const nameCount = {}
+const descCount = {}
+for (const t of tools) {
+  nameCount[t.name] = (nameCount[t.name] || 0) + 1
+  descCount[t.description] = (descCount[t.description] || 0) + 1
+}
+const dupNames = Object.entries(nameCount).filter(([, n]) => n > 1)
+const dupDescs = Object.entries(descCount).filter(([, n]) => n > 1)
+row(`- 工具总数：${tools.length}`)
+row(`- **重名工具：${dupNames.length} 组**${dupNames.length ? '：' + dupNames.map(([n, c]) => `${n}×${c}`).join('、') : ''}`)
+row(`- **重复描述：${dupDescs.length} 组**${dupDescs.length ? '：' + dupDescs.slice(0, 10).map(([n, c]) => `${n.slice(0, 18)}…×${c}`).join('、') : ''}`)
+// 描述前 16 字相同视为近似（同质化模板预警）
+const prefixCount = {}
+for (const t of tools) {
+  const k = t.description.slice(0, 16)
+  prefixCount[k] = (prefixCount[k] || 0) + 1
+}
+const nearDescs = Object.entries(prefixCount).filter(([, n]) => n >= 3)
+row(`- 描述前缀雷同（≥3 款同开头 16 字）：${nearDescs.length} 组${nearDescs.length ? '：' + nearDescs.slice(0, 8).map(([n, c]) => `${n}…×${c}`).join('、') : ''}`)
 
-    for (const tool of tools) {
-      this.auditSingleTool(tool, toolsDir);
-    }
+// ---------- 2. 标题/描述长度 ----------
+sec('2. 名称与描述长度分布')
+const nameLens = tools.map((t) => t.name.length)
+const descLens = tools.map((t) => t.description.length)
+const pct = (arr, p) => arr.slice().sort((a, b) => a - b)[Math.floor(arr.length * p)]
+row(`- 名称长度：中位 ${pct(nameLens, 0.5)}，P90 ${pct(nameLens, 0.9)}，最长 ${Math.max(...nameLens)}（>10 字 ${nameLens.filter((l) => l > 10).length} 款）`)
+row(`- 描述长度：中位 ${pct(descLens, 0.5)}，P90 ${pct(descLens, 0.9)}；过短(<20字) ${descLens.filter((l) => l < 20).length} 款，过长(>75字) ${descLens.filter((l) => l > 75).length} 款`)
+const shortDescs = tools.filter((t) => t.description.length < 20).slice(0, 8)
+if (shortDescs.length) row(`  - 过短示例：${shortDescs.map((t) => `${t.id}(${t.description.length}字)`).join('、')}`)
 
-    this.generateReport();
-  }
-
-  getToolFiles(dir) {
-    const files = [];
-    if (!fs.existsSync(dir)) return files;
-
-    const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      if (fs.statSync(fullPath).isDirectory()) {
-        const indexFile = path.join(fullPath, 'index.vue');
-        if (fs.existsSync(indexFile)) {
-          files.push({ name: item, path: indexFile });
-        }
-      } else if (item.endsWith('.vue')) {
-        files.push({ name: item.replace('.vue', ''), path: fullPath });
-      }
-    }
-    return files;
-  }
-
-  auditSingleTool(tool, toolsDir) {
-    try {
-      const content = fs.readFileSync(tool.path, 'utf8');
-
-      console.log(`\n📋 审计: ${tool.name}`);
-
-      // 检查SEO设置
-      this.checkSEOSettings(content, tool.name);
-
-      // 检查结构化数据
-      this.checkStructuredData(content, tool.name);
-
-      // 检查关键词优化
-      this.checkKeywords(content, tool.name);
-
-      // 检查页面性能
-      this.checkPerformance(content, tool.name);
-
-    } catch (error) {
-      this.issues.push({
-        tool: tool.name,
-        type: 'error',
-        message: `文件读取失败: ${error.message}`
-      });
-    }
-  }
-
-  checkSEOSettings(content, toolName) {
-    // 检查 useSeoMeta
-    if (!content.includes('useSeoMeta(')) {
-      this.issues.push({
-        tool: toolName,
-        type: 'seo',
-        message: '缺少 useSeoMeta 设置'
-      });
-    }
-
-    // 检查标题
-    const titleMatch = content.match(/title:\s*['"]([^'"]+)['"]/);
-    if (!titleMatch) {
-      this.issues.push({
-        tool: toolName,
-        type: 'seo',
-        message: '缺少 SEO 标题'
-      });
-    } else {
-      const title = titleMatch[1];
-      if (title.length < 10) {
-        this.suggestions.push({
-          tool: toolName,
-          type: 'seo',
-          message: '标题过短，建议至少10个字符'
-        });
-      }
-      if (title.length > 60) {
-        this.suggestions.push({
-          tool: toolName,
-          type: 'seo',
-          message: '标题过长，建议控制在60字符以内'
-        });
-      }
-    }
-
-    // 检查描述
-    const descMatch = content.match(/description:\s*['"]([^'"]+)['"]/);
-    if (!descMatch) {
-      this.issues.push({
-        tool: toolName,
-        type: 'seo',
-        message: '缺少 SEO 描述'
-      });
-    } else {
-      const description = descMatch[1];
-      if (description.length < 50) {
-        this.suggestions.push({
-          tool: toolName,
-          type: 'seo',
-          message: '描述过短，建议至少50个字符'
-        });
-      }
-      if (description.length > 160) {
-        this.suggestions.push({
-          tool: toolName,
-          type: 'seo',
-          message: '描述过长，建议控制在160字符以内'
-        });
-      }
-    }
-
-    // 检查关键词
-    if (!content.includes('keywords:')) {
-      this.suggestions.push({
-        tool: toolName,
-        type: 'seo',
-        message: '建议添加关键词标签'
-      });
-    }
-  }
-
-  checkStructuredData(content, toolName) {
-    if (!content.includes('@context') || !content.includes('schema.org')) {
-      this.issues.push({
-        tool: toolName,
-        type: 'structured_data',
-        message: '缺少结构化数据 (JSON-LD)'
-      });
-    }
-
-    // 检查必需的结构化数据字段
-    const requiredFields = ['@type', 'name', 'description', 'url'];
-    for (const field of requiredFields) {
-      if (!content.includes(`"${field}":`)) {
-        this.suggestions.push({
-          tool: toolName,
-          type: 'structured_data',
-          message: `建议添加结构化数据字段: ${field}`
-        });
-      }
-    }
-  }
-
-  checkKeywords(content, toolName) {
-    // 检查关键词密度
-    const titleMatch = content.match(/title:\s*['"]([^'"]+)['"]/);
-    const descMatch = content.match(/description:\s*['"]([^'"]+)['"]/);
-    const keywordsMatch = content.match(/keywords:\s*\[([^\]]+)\]/);
-
-    if (titleMatch && descMatch && keywordsMatch) {
-      const keywords = keywordsMatch[1].match(/'([^']+)'/g) || [];
-      const text = `${titleMatch[1]} ${descMatch[1]}`;
-
-      keywords.forEach(keyword => {
-        const cleanKeyword = keyword.replace(/'/g, '');
-        const regex = new RegExp(cleanKeyword, 'gi');
-        const matches = text.match(regex);
-        const count = matches ? matches.length : 0;
-
-        if (count === 0) {
-          this.suggestions.push({
-            tool: toolName,
-            type: 'keywords',
-            message: `关键词 "${cleanKeyword}" 未在标题或描述中出现`
-          });
-        }
-      });
-    }
-  }
-
-  checkPerformance(content, toolName) {
-    // 检查图片优化
-    if (content.includes('<img') && !content.includes('loading="lazy"')) {
-      this.suggestions.push({
-        tool: toolName,
-        type: 'performance',
-        message: '建议为图片添加 lazy loading'
-      });
-    }
-
-    // 检查异步组件
-    if (content.includes('import(') && !content.includes('defineAsyncComponent')) {
-      this.suggestions.push({
-        tool: toolName,
-        type: 'performance',
-        message: '建议使用 defineAsyncComponent 优化组件加载'
-      });
-    }
-  }
-
-  generateReport() {
-    const timestamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
-
-    console.log(`\n📊 SEO 审计报告 (${timestamp})`);
-    console.log('='.repeat(50));
-
-    // 统计
-    const issueCount = this.issues.length;
-    const suggestionCount = this.suggestions.length;
-
-    console.log(`\n📈 统计信息:`);
-    console.log(`   ❌ 问题: ${issueCount}`);
-    console.log(`   💡 建议: ${suggestionCount}`);
-
-    if (issueCount === 0 && suggestionCount === 0) {
-      console.log('\n🎉 所有工具都通过了SEO审计！');
-      return;
-    }
-
-    // 问题列表
-    if (this.issues.length > 0) {
-      console.log('\n❌ 发现的问题:');
-      this.issues.forEach((issue, index) => {
-        console.log(`${index + 1}. [${issue.tool}] ${issue.type}: ${issue.message}`);
-      });
-    }
-
-    // 建议列表
-    if (this.suggestions.length > 0) {
-      console.log('\n💡 优化建议:');
-      this.suggestions.forEach((suggestion, index) => {
-        console.log(`${index + 1}. [${suggestion.tool}] ${suggestion.type}: ${suggestion.message}`);
-      });
-    }
-
-    // 生成详细报告文件
-    this.saveDetailedReport();
-
-    // 生成修复建议
-    this.generateFixSuggestions();
-  }
-
-  saveDetailedReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        issues: this.issues.length,
-        suggestions: this.suggestions.length
-      },
-      issues: this.issues,
-      suggestions: this.suggestions
-    };
-
-    const filename = `seo-audit-${Date.now()}.json`;
-    fs.writeFileSync(filename, JSON.stringify(report, null, 2));
-    console.log(`\n💾 详细报告已保存到: ${filename}`);
-  }
-
-  generateFixSuggestions() {
-    console.log('\n🔧 自动修复建议:');
-
-    // 按问题类型分组
-    const groupedIssues = {};
-    this.issues.forEach(issue => {
-      if (!groupedIssues[issue.type]) {
-        groupedIssues[issue.type] = [];
-      }
-      groupedIssues[issue.type].push(issue);
-    });
-
-    // 为每种问题类型提供修复建议
-    Object.entries(groupedIssues).forEach(([type, issues]) => {
-      console.log(`\n${type.toUpperCase()} 问题 (${issues.length} 个):`);
-      issues.forEach(issue => {
-        console.log(`  - ${issue.tool}: ${issue.message}`);
-      });
-
-      // 提供通用修复方案
-      switch (type) {
-        case 'seo':
-          console.log('  💡 修复方案: 添加 useSeoMeta 配置，包含 title、description、keywords');
-          break;
-        case 'structured_data':
-          console.log('  💡 修复方案: 添加 JSON-LD 结构化数据，包含 @context、@type、name、description、url');
-          break;
-        case 'performance':
-          console.log('  💡 修复方案: 优化图片加载、使用异步组件、压缩资源');
-          break;
-      }
-    });
+// ---------- 3. 关键词蚕食 ----------
+sec('3. 关键词蚕食（同一关键词 ≥3 款工具声明）')
+const kwMap = {}
+for (const t of tools) {
+  for (const k of t.keywords || []) {
+    const key = k.toLowerCase().trim()
+    ;(kwMap[key] = kwMap[key] || []).push(t.id)
   }
 }
+const kwConflicts = Object.entries(kwMap).filter(([_, ids]) => ids.length >= 3).sort((a, b) => b[1].length - a[1].length)
+row(`- 共 ${kwConflicts.length} 个关键词被 ≥3 款工具声明；Top10：`)
+for (const [kw, ids] of kwConflicts.slice(0, 10)) row(`  - \`${kw}\` ×${ids.length}：${ids.slice(0, 6).join(', ')}${ids.length > 6 ? ' …' : ''}`)
 
-// 运行审计
-const auditor = new SEOAuditor();
-auditor.auditToolFiles();
+// ---------- 4. 博客内链深度 ----------
+sec('4. 博客→工具内链深度')
+const postsDir = path.join(root, 'blog/content/posts')
+const refCount = {}
+let files = 0
+const walk = (d) => {
+  for (const f of fs.readdirSync(d)) {
+    const fp = path.join(d, f)
+    if (fs.statSync(fp).isDirectory()) walk(fp)
+    else if (f.endsWith('.md')) {
+      files++
+      const c = fs.readFileSync(fp, 'utf8')
+      for (const m of c.matchAll(/tools\/([a-z0-9-]+)/g)) refCount[m[1]] = (refCount[m[1]] || 0) + 1
+    }
+  }
+}
+if (fs.existsSync(postsDir)) walk(postsDir)
+const refLens = tools.map((t) => refCount[t.id] || 0)
+const zero = tools.filter((t) => !refCount[t.id])
+const one = tools.filter((t) => refCount[t.id] === 1)
+row(`- 文章 ${files} 篇；被引中位 ${pct(refLens, 0.5)}，P90 ${pct(refLens, 0.9)}`)
+row(`- **零引用工具：${zero.length} 款**${zero.length ? '：' + zero.slice(0, 10).map((t) => t.id).join(', ') + (zero.length > 10 ? ' …' : '') : ''}`)
+row(`- 仅 1 篇引用：${one.length} 款（覆盖达标但深度单薄，持续用聚合文加深）`)
+
+// ---------- 5. 专题覆盖 ----------
+sec('5. 专题（collections）覆盖')
+const colSrc = fs.readFileSync(path.join(root, 'src/data/collections.js'), 'utf8').replace('export const collections', 'module.exports')
+fs.writeFileSync('/tmp/seo-collections.cjs', colSrc)
+const collections = require('/tmp/seo-collections.cjs')
+const covered = new Set(collections.flatMap((c) => c.tools))
+row(`- 专题 ${collections.length} 个，收录 ${covered.size} 款工具（去重），覆盖率 ${(covered.size / tools.length * 100).toFixed(1)}%`)
+row(`- 未入任何专题：${tools.length - covered.size} 款（画像关联工具不强制入专题，但聚簇潜力见 37 批实施记录）`)
+const dupInCol = {}
+for (const c of collections) for (const id of c.tools) (dupInCol[id] = dupInCol[id] || []).push(c.slug)
+const multiCol = Object.entries(dupInCol).filter(([_, s]) => s.length >= 3)
+row(`- 同时入 ≥3 个专题的工具：${multiCol.length} 款${multiCol.length ? '：' + multiCol.slice(0, 5).map(([id, s]) => `${id}(${s.length})`).join('、') : ''}`)
+
+// ---------- 6. 静态产物死链扫描 ----------
+let dead = {}
+sec('6. 静态产物死链扫描' + (siteDir ? '' : '（未传 --site，跳过）'))
+if (siteDir && fs.existsSync(siteDir)) {
+  let htmlCount = 0
+  dead = {}
+  const targetExists = (p) => {
+    const clean = decodeURIComponent(p.split('?')[0].split('#')[0])
+    if (!clean.startsWith('/')) return true
+    const fp = path.join(siteDir, clean)
+    if (fs.existsSync(fp)) {
+      if (fs.statSync(fp).isFile()) return true
+      if (fs.existsSync(path.join(fp, 'index.html'))) return true
+    }
+    if (fs.existsSync(fp + '.html')) return true
+    if (fs.existsSync(path.join(fp, 'index.html'))) return true
+    return false
+  }
+  const walkHtml = (d) => {
+    for (const f of fs.readdirSync(d)) {
+      const fp = path.join(d, f)
+      const st = fs.statSync(fp)
+      if (st.isDirectory()) walkHtml(fp)
+      else if (f.endsWith('.html')) {
+        htmlCount++
+        // 剥离 code/pre 块：示例代码里的 href 字符串不是真链接（< 已转义为 &lt;）
+        const c = fs.readFileSync(fp, 'utf8').replace(/<(code|pre)[\s\S]*?<\/\1>/gi, '')
+        for (const m of c.matchAll(/href="(\/[^"#?]*)"/g)) {
+          const href = m[1]
+          if (href.startsWith('//')) continue
+          if (!targetExists(href)) {
+            const rel = path.relative(siteDir, fp)
+            ;(dead[href] = dead[href] || []).push(rel)
+          }
+        }
+      }
+    }
+  }
+  walkHtml(siteDir)
+  const deadEntries = Object.entries(dead)
+  row(`- 扫描 HTML ${htmlCount} 个；**站内死链 ${deadEntries.length} 个目标**（引用页面数合计 ${deadEntries.reduce((a, [, v]) => a + v.length, 0)}）`)
+  for (const [href, pages] of deadEntries.slice(0, 20)) row(`  - \`${href}\` ← ${pages.slice(0, 3).join(', ')}${pages.length > 3 ? ` 等 ${pages.length} 页` : ''}`)
+} else if (siteDir) {
+  row(`- ⚠️ 目录不存在：${siteDir}`)
+}
+
+// ---------- 汇总 ----------
+const summary = [
+  `# 全站 SEO 体检报告（${today}，全站 ${tools.length} 款节点）`,
+  '',
+  `> 生成方式：npm run seo-audit（可加 --site .output/public 扫描静态产物死链）。数值为当次运行快照，修复后重跑对比。`,
+].join('\n') + '\n' + lines.join('\n') + '\n'
+fs.writeFileSync(outPath, summary)
+console.log(`✅ 报告已生成：${outPath}`)
+console.log(`   重名 ${dupNames.length} | 重描述 ${dupDescs.length} | 蚕食词 ${kwConflicts.length} | 零引用 ${zero.length} | 专题覆盖 ${(covered.size / tools.length * 100).toFixed(1)}%${siteDir ? ' | 死链 ' + Object.keys(dead || {}).length : ''}`)

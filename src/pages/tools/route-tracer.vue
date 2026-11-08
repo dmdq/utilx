@@ -148,7 +148,7 @@
       <div class="flex flex-wrap gap-2">
         <NuxtLink to="/tools/network-speed-test" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity">网络速度测试</NuxtLink>
         <NuxtLink to="/tools/dns-lookup" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity">DNS查询</NuxtLink>
-        <NuxtLink to="/tools/ping" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity">Ping测试</NuxtLink>
+        <NuxtLink to="/tools/network-speed-test" class="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity">带宽测速</NuxtLink>
       </div>
     </div>
   </div>

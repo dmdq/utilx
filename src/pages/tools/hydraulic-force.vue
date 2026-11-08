@@ -472,7 +472,7 @@
           <li><NuxtLink to="/tools/pneumatic-cylinder" class="text-primary hover:underline">气缸推力计算</NuxtLink>：气压 0.4~0.8 MPa 口径的推/拉力与行程时间；</li>
           <li><NuxtLink to="/tools/gear-ratio-reducer" class="text-primary hover:underline">减速比计算</NuxtLink>：液压马达 + 减速器选型的转速扭矩换算；</li>
           <li><NuxtLink to="/tools/torque-unit-converter" class="text-primary hover:underline">扭矩单位换算器</NuxtLink>：N·m、kgf·m、lb-ft 互算；</li>
-          <li><NuxtLink to="/tools/pressure-unit-converter" class="text-primary hover:underline">压力单位换算</NuxtLink>：MPa、bar、psi、kgf/cm² 互转。</li>
+          <li><NuxtLink to="/tools/pressure-convert" class="text-primary hover:underline">压力单位换算</NuxtLink>：MPa、bar、psi、kgf/cm² 互转。</li>
         </ul>
       </div>
     </div>
