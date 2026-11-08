@@ -82,7 +82,9 @@ const walk = (d) => {
     else if (f.endsWith('.md')) {
       files++
       const c = fs.readFileSync(fp, 'utf8')
+      // 三种引用口径：绝对/相对 URL 与 {{< tool id="x" >}} 短码（与 check-blog-coverage 同口径）
       for (const m of c.matchAll(/tools\/([a-z0-9-]+)/g)) refCount[m[1]] = (refCount[m[1]] || 0) + 1
+      for (const m of c.matchAll(/\{\{< tool id="([a-z0-9-]+)" >\}\}/g)) refCount[m[1]] = (refCount[m[1]] || 0) + 1
     }
   }
 }

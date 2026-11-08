@@ -9,7 +9,7 @@
 - [场景专题](https://www.util.cn/collections/): 37 个按使用场景组织的工具组合
 - [按职业找工具](https://www.util.cn/professions/): 34 张职业工具卡，按任务对应工具
 - [AI 百科](https://www.util.cn/wiki/): 73 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 451 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 461 篇工具教程与实践文章
 
 ## 工具分类
 
@@ -1233,6 +1233,16 @@
 
 ## 博客文章
 
+- [血压、体脂、饮水打卡：18 件健康追踪工具备齐](https://www.util.cn/blog/articles/health-tracking-roundup/): 体检查出的数值看不懂趋势、减重不知从哪一步下手、八杯水全靠忘——这篇把站点 18 件健康追踪工具分成三组：体征记录、饮食营养、训练与目标，帮你在本地把身体台账记起来。
+- [替换、拼音、参考文献：19 件文本处理工具大盘点](https://www.util.cn/blog/articles/text-processing-roundup/): 从 PDF 复制来的稿子满是空格、API 字段要统一命名风格、论文参考文献卡在国标格式——这篇把站点 19 件文本处理工具分成四组：清洗整理、格式转换、中文向和写作向。
+- [HTML 实体、Base85、摩斯电码：22 件编码转换工具一次理清](https://www.util.cn/blog/articles/encoding-conversion-roundup/): 调试时收到一串天书不知道怎么解？这篇把站点里 22 件编码转换工具按场景分成四组：Web 转义三件套、代码转义、Base 家族，以及从二进制到摩斯电码的字符与古典编码。
+- [加字、调色、切图、做 GIF：图片编辑全家桶的 25 件](https://www.util.cn/blog/articles/image-editing-roundup/): 日常修图多半是小活：截个图加两行字、给照片打个码、把长图切开发朋友圈。这篇把站点里 25 件图片编辑工具按加字合成、调整变换、裁切拆分、格式细节分成四组，不用开 PS 就能收工。
+- [字号、行高、调色板：排版与配色的 16 件细节工具](https://www.util.cn/blog/articles/design-typography-color-roundup/): 页面显得业余，多半输在字号行高没系统和颜色随手选。这篇把站点里 16 件排版与配色工具分成排版、色彩、素材资产三组，从定字号阶梯到配调色板再到备齐图标占位图，一套流程走完。
+- [23 件 CSS 效果生成器：从渐变到混合模式一站配齐](https://www.util.cn/blog/articles/css-generators-roundup/): 还原设计稿时最耗时间的往往不是布局，而是那些细碎的视觉效果。这篇把站点里 23 件 CSS 生成器按背景渐变、阴影边框、交互动效、裁切混合分成四组，拖完参数直接复制代码。
+- [质量统计与单位换算的 17 件速算器：从 t 检验到 Cpk](https://www.util.cn/blog/articles/quality-stats-unit-cheatsheet/): 改个参数要不要做 t 检验、Cpk 到多少算达标、GR&R 怎么算——质量人的日常卡在这些数上。17 件速算器按统计检验、质量体系、单位换算三组清点，每件一句话，写报告与迎审前收藏这一篇。
+- [电工与安防暖通的 12 件速算器：从新风量到充电成本](https://www.util.cn/blog/articles/electrician-hvac-cheatsheet/): 新风给多少、风管开多大、镜头焦距选几毫米、PoE 供电够不够——安装与装修现场的高频算式一次清点。12 件速算器按暖通、安防监控、光与日照三组各一句话，施工与运维照单取用。
+- [车间与机电的 13 件速算器：从拧螺栓到配电流](https://www.util.cn/blog/articles/workshop-mechanical-cheatsheet/): 拧多紧、配多大缸、皮带多长、焊电流给多大——车间里这些口算最容易出「差不多」事故。13 件机电速算器按紧固传动、流体执行、加工工艺三条线清点，每件一句话，维修与工艺师傅收藏一篇就够。
+- [电子工程师的 30 件速算器：从测温到射频的一次性清点](https://www.util.cn/blog/articles/electronics-engineer-cheatsheet/): 画板调机最贵的不是仪器，是停下来翻资料的时间。30 件电子速算器按传感测温、电源稳压、信号链、PCB 结构、射频天线五条战线清点，每件一句话说清使用场景，收藏这一篇按图索骥。
 - [光伏回本、网约车时薪：能源与出行账本两件](https://www.util.cn/blog/articles/energy-driver-calcs/): 屋顶装光伏几年回本、开网约车一小时真实挣多少——两件
 - [装修预算、婚礼预算、戒指圈口：人生大事的三笔账](https://www.util.cn/blog/articles/life-big-moments/): 装修超支、婚礼酒席装不下预算、网购戒指圈号买错——人生大事的三件新工具：装修预算分配、婚礼预算分配、戒指圈口换算，配婚礼筹备台专题一次上线。
 - [补仓成本、套餐对比、燃气阶梯、能效差价：家庭账本四件套](https://www.util.cn/blog/articles/family-ledger-calcs/): 套牢了想补仓先算回本价、换套餐先按实际用量对账、燃气阶梯怎么算的、一级能效几年省回差价——家庭小账的四件计算器，填数即出，全部本地计算。

@@ -705,6 +705,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/css-generators-roundup</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/css-grid-flexbox-guide</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -811,6 +818,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/design-toolbox-part2</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/design-typography-color-roundup</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1006,6 +1020,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/electrician-hvac-cheatsheet</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/electrician-motor-compensation</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -1027,7 +1048,21 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/electronics-engineer-cheatsheet</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/encode-toolbox</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/encoding-conversion-roundup</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1461,6 +1496,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/health-tracking-roundup</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/high-availability-system-design</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -1511,6 +1553,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/id-photo-local-guide</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/image-editing-roundup</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2392,6 +2441,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/quality-stats-unit-cheatsheet</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/quantum-computing-chips</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -2903,6 +2959,13 @@
   </url>
 
   <url>
+    <loc>https://www.util.cn/blog/articles/text-processing-roundup</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.util.cn/blog/articles/text-toolbox</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -3282,6 +3345,13 @@
 
   <url>
     <loc>https://www.util.cn/blog/articles/workplace-efficiency-tools</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.util.cn/blog/articles/workshop-mechanical-cheatsheet</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
