@@ -9,7 +9,7 @@
 - [场景专题](https://www.util.cn/collections/): 37 个按使用场景组织的工具组合
 - [按职业找工具](https://www.util.cn/professions/): 36 张职业工具卡，按任务对应工具
 - [AI 百科](https://www.util.cn/wiki/): 73 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 476 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 484 篇工具教程与实践文章
 
 ## 工具分类
 
@@ -1235,6 +1235,14 @@
 
 ## 博客文章
 
+- [节拍检测：自相关如何从波形里「听」出 BPM](https://www.util.cn/blog/articles/bpm-detection-autocorrelation/): 人耳听 BPM 靠打拍子，机器靠统计。降混单声道、能量包络、onset 半波整流、滞后自相关——四级流水线把节拍从波形里算出来，再加上八度歧义、抛物线插值与置信度，拆解 BPM 检测的每一步。
+- [浏览器视频处理管线：MediaRecorder 的能力与妥协](https://www.util.cn/blog/articles/browser-video-pipeline-mediarecorder/): 不装 ffmpeg、不上传云端，浏览器也能旋转、变速、拼接视频——代价是理解三个约束：录制实时进行、编码器可用性因浏览器而异、变速的音调需要专门兜底。拆解从 video 解码到 MediaRecorder 出片的完整管线，以及本地管线的适用边界。
+- [把 Markdown 变成 Word：一条跨越 40 年的兼容链](https://www.util.cn/blog/articles/markdown-to-word-compat-chain/): Markdown 2004 年才出生，Word 的二进制 .doc 1983 年就有了。本文拆解两代格式之间的兼容链：OLE2、OOXML 与 Word 自家的 HTML 方言——mso 命名空间、条件注释与 @page 页面参数，缺一个命名空间 Word 就按普通网页降级打开。
+- [WebAudio 的响度账本：RMS、dBFS 与静音切除](https://www.util.cn/blog/articles/webaudio-loudness-dbfs/): 口播录音里「哪段是停顿」不是听出来的，是算出来的。从 PCM 采样到 dBFS 刻度、50ms 窗 RMS、门限与最短静音时长、边缘 padding，再到 44 字节 RIFF 头的手写 WAV 编码——拆解静音切除的整条账本。
+- [MP4 文件结构：ISO-BMFF 的 box 逐层拆解](https://www.util.cn/blog/articles/mp4-box-structure-anatomy/): 播放器能在两 GB 的文件里秒级定位画面，靠的是 MP4 的 box 索引树。从 size 与 type 两个通用字段讲起，逐层拆开 moov 里的 mvhd、tkhd、stsd、stts、stsz，解释手机竖拍的旋转藏在哪个字段、分片 fMP4 长什么样，以及为什么 MP4 压不小必须重编码。
+- [文件取证入门：EXIF、魔数与改后缀的把戏](https://www.util.cn/blog/articles/exif-magic-numbers-file-forensics/): 把 .exe 改名成 .jpg 骗得过文件管理器，骗不过文件开头的魔数。本文拆解 PNG、PDF、ZIP 的签名字节、ZIP 家族的内部伪装、JPEG 里挂载的 EXIF/TIFF 结构，以及位置隐私是怎么随一张原图泄露出去的。
+- [AES-GCM 认证加密：为什么改动一个字节就全盘失效](https://www.util.cn/blog/articles/aes-gcm-authenticated-encryption/): 大量「在线加密」是 ECB 玩具：图案守恒、篡改无感。AES-GCM 把机密性和完整性绑在一起——CTR 加密、GHASH 认证，密文改一个字节就整体失败。本文拆解 GCM 机制、IV 纪律、PBKDF2 密钥派生与自描述密文格式。
+- [GIF 格式解剖：LZW、交织与帧合成的每一字节](https://www.util.cn/blog/articles/gif-format-anatomy/): 一个 1987 年的格式至今撑着表情包与客服动图，靠的是 LZW 变长码、帧增量合成与交织扫描这三板斧。逐字节拆解 GIF 的文件结构、LZW 解码的 KwKwK 特例、disposal 语义与 NETSCAPE 循环扩展，并说明为什么抽帧工具要用零依赖纯 JS 从头实现。
 - [查看、合并、转换、清理：13 件文件处理工具一组组备齐](https://www.util.cn/blog/articles/file-utilities-roundup/): 压缩包不敢乱解、名单要拆列、文档要转格式、硬盘被重复文件塞满——13 件文件处理工具按查看解包、表格数据、文档转换、安全清理四组各就各位，全程本地处理。
 - [SVG、开纸、出血、圈口：9 件设计与印刷工具补齐细节](https://www.util.cn/blog/articles/design-print-roundup/): 图标差两像素、名片要留出血、三米宽的喷绘不知道给多大像素——9 件设计与印刷工具按 SVG 矢量、印刷三关、实用杂件分组，把出图前后的细节账一次算清。
 - [JSON、XML、TOML 互转：20 件格式化与转换工具按场景分组](https://www.util.cn/blog/articles/format-convert-roundup/): 后端给 XML、前端要 JSON、运维甩来 TOML——这篇把 20 件格式化与转换工具分成结构化互转与编码小工具两组，从互转、排版到拆包解码一次理清。

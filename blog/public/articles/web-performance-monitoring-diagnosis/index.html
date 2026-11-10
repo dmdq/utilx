@@ -977,7 +977,7 @@
 </span></span><span style=display:flex><span>    <span style=color:#ff7b72>if</span> (<span style=color:#ff7b72>this</span>.events.length <span style=color:#ff7b72;font-weight:700>===</span> <span style=color:#a5d6ff>0</span>) <span style=color:#ff7b72>return</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#8b949e;font-style:italic>// 使用sendBeacon确保数据发送
-</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>    navigator.sendBeacon(<span style=color:#a5d6ff>&#39;/api/analytics&#39;</span>, JSON.stringify(<span style=color:#ff7b72>this</span>.events))
+</span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>    navigator.sendBeacon(<span style=color:#f85149>&#39;</span><span style=color:#ff7b72;font-weight:700>/</span>api<span style=color:#ff7b72;font-weight:700>/</span>analytics<span style=color:#f85149>&#39;</span>, JSON.stringify(<span style=color:#ff7b72>this</span>.events))
 </span></span><span style=display:flex><span>    <span style=color:#ff7b72>this</span>.events <span style=color:#ff7b72;font-weight:700>=</span> []
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>}

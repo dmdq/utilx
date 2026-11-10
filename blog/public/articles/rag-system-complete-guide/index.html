@@ -308,7 +308,7 @@
 </span></span><span style=display:flex><span>            <span style=color:#ff7b72>import</span> <span style=color:#ff7b72>faiss</span>
 </span></span><span style=display:flex><span>            dimension <span style=color:#ff7b72;font-weight:700>=</span> self<span style=color:#ff7b72;font-weight:700>.</span>embedder<span style=color:#ff7b72;font-weight:700>.</span>get_sentence_embedding_dimension()
 </span></span><span style=display:flex><span>            index <span style=color:#ff7b72;font-weight:700>=</span> faiss<span style=color:#ff7b72;font-weight:700>.</span>IndexFlatIP(dimension)
-</span></span><span style=display:flex><span>            <span style=color:#ff7b72>return</span> {<span style=color:#a5d6ff>&#34;type&#34;</span>: <span style=color:#a5d6ff>&#34;faiss&#34;</span>, <span style=color:#a5d6ff>&#34;index&#34;</span>: index}
+</span></span><span style=display:flex><span>            <span style=color:#ff7b72>return</span> {<span style=color:#a5d6ff>&#34;type&#34;</span>: <span style=color:#a5d6ff>&#34;faiss&#34;</span>, <span style=color:#a5d6ff>&#34;index&#34;</span>: <span style=color:#f85149>i</span>ndex}
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        <span style=color:#ff7b72>elif</span> db_type <span style=color:#ff7b72;font-weight:700>==</span> <span style=color:#a5d6ff>&#34;pinecone&#34;</span>:
 </span></span><span style=display:flex><span>            <span style=color:#ff7b72>import</span> <span style=color:#ff7b72>pinecone</span>
