@@ -6,55 +6,55 @@
 <a href=./categories/ class=cta-secondary>浏览分类</a></div></div><div class=hero-visual><div class=code-snippet><div class=code-header><div class=code-dots><span class="dot red"></span>
 <span class="dot yellow"></span>
 <span class="dot green"></span></div><span class=code-title>terminal.js</span></div><div class=code-content><pre><code id=typing-text></code></pre></div></div></div></div><div class=blog-layout><div class=main-content id=posts><div class=posts-list><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-11</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/dpi-metadata-truth/>DPI 的真相：PNG pHYs 的「像素每米」、JFIF density，与印刷尺寸的一笔账</a></h2><p class=post-excerpt>72dpi 的图改成 300dpi，文件大了吗？没有——一个像素都没变，变的只是「打印时每英寸摆多少像素」的解释权。这篇拆解 DPI 在 PNG（pHYs 块、单位竟是像素每米）与 JPEG（JFIF APP0 的 density 字段）里 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>DPI</span>
+<span class=tag>PNG</span>
+<span class=tag>JPEG</span></div><div class=post-footer><a href=/blog/articles/dpi-metadata-truth/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-11</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/duplicate-finder-funnel/>重复文件查找三级漏斗：大小分桶、首尾 64KB 快哈希与诚实的「疑似」标注</a></h2><p class=post-excerpt>找出硬盘里的重复文件，直觉做法是「每个文件算一遍哈希再比对」，但一万张照片就是上百 GB 的读取量。正确姿势是三级漏斗：先按字节大小分桶（大小不同必不重复），再对同桶文件只读首尾各 64KB 算快哈希， …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>SHA-256</span>
+<span class=tag>哈希</span>
+<span class=tag>文件处理</span></div><div class=post-footer><a href=/blog/articles/duplicate-finder-funnel/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-11</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/audio-time-stretch-wola/>音频变速的两条路：线性插值重采样，与 2048 采样窗的 WOLA 时间拉伸</a></h2><p class=post-excerpt>1.5 倍速播 podcast，声音变尖了还是没变？取决于走哪条路：重采样是按倍距重读采样、音高随速度一起变，一行循环就能写完；变速不变调则要把音频切成 2048 采样的颗粒、加 Hann 窗重叠搬移、再按窗权归一化（WOLA）。这篇把两条 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>WebAudio</span>
+<span class=tag>重采样</span>
+<span class=tag>时间拉伸</span></div><div class=post-footer><a href=/blog/articles/audio-time-stretch-wola/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-11</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/vcard-format-anatomy/>vCard 解剖：一行一属性、75 字符折行与 iPhone item1. 分组的私有方言</a></h2><p class=post-excerpt>手机通讯录导出的 .vcf 是纯文本：BEGIN:VCARD 开场、一行一个属性、分号分隔结构化字段。这篇拆解 vCard 的转义次序为什么不能乱、规范折行如何用「换行加空格」回接长行、N 与 FN 谁说了算、中文名该怎么拆， …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>vCard</span>
+<span class=tag>通讯录</span>
+<span class=tag>文件格式</span></div><div class=post-footer><a href=/blog/articles/vcard-format-anatomy/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
 <span>2026-11-10</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/audio-silence-detection-algorithm/>口播静音切除：50ms 窗 RMS、扫描线判定与切不坏句尾的收边算法</a></h2><p class=post-excerpt>口播录音里「嗯——」与句间长停顿占掉两成时长，切除它们不是波形上看一眼那么简单：按 50ms 窗算 RMS 响度、与 dBFS 阈值逐窗比较、把连续低于阈值的运行段聚成静音区、两侧各收 50ms 边防止切掉气声尾音，最后按保留段把采样逐字节 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
 有条工具团队
 </span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
 1分钟</span></div><div class=post-tags><span class=tag>RMS</span>
 <span class=tag>dBFS</span>
 <span class=tag>音频处理</span></div><div class=post-footer><a href=/blog/articles/audio-silence-detection-algorithm/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-10</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/epub-container-anatomy/>EPUB 解剖：一个 ZIP 如何装下一本书，mimetype 为何必须第一个且不压缩</a></h2><p class=post-excerpt>EPUB 3 的本质是一个改了打包规矩的 ZIP：mimetype 条目必须排第一、必须 STORE 不压缩，META-INF/container.xml 指路，OPF 清单串起章节与双目录（EPUB 3 的 nav …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>EPUB</span>
-<span class=tag>电子书</span>
-<span class=tag>ZIP</span></div><div class=post-footer><a href=/blog/articles/epub-container-anatomy/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-10</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/id3-tag-anatomy/>ID3 标签解剖：synchsafe 整数、反同步与 MP3 乱码歌名的字节级真相</a></h2><p class=post-excerpt>MP3 里显示的歌名、歌手、封面不是音频数据，是嵌在文件头部的 ID3 标签。这篇逐字节拆解 ID3v2 的帧结构：synchsafe 整数为什么要砍掉每个字节的最高位、unsynchronisation 防的是什么假警报、四种文本编码如何 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>ID3</span>
-<span class=tag>MP3</span>
-<span class=tag>元数据</span></div><div class=post-footer><a href=/blog/articles/id3-tag-anatomy/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-10</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/deflate-gzip-anatomy/>DEFLATE 解剖：LZ77 与霍夫曼如何压掉七成体积，gzip 头尾字段逐个讲</a></h2><p class=post-excerpt>gzip 文件 = 10 字节头 + DEFLATE 流 + 8 字节尾。这篇拆开三层：RFC 1952 的容器字段、RFC 1951 里 LZ77 滑窗与霍夫曼编码的接力、以及浏览器 CompressionStream 一行流式 API …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>DEFLATE</span>
-<span class=tag>gzip</span>
-<span class=tag>压缩算法</span></div><div class=post-footer><a href=/blog/articles/deflate-gzip-anatomy/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-09</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/bpm-detection-autocorrelation/>节拍检测：自相关如何从波形里「听」出 BPM</a></h2><p class=post-excerpt>人耳听 BPM 靠打拍子，机器靠统计。降混单声道、能量包络、onset 半波整流、滞后自相关——四级流水线把节拍从波形里算出来，再加上八度歧义、抛物线插值与置信度，拆解 BPM 检测的每一步。</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>BPM检测</span>
-<span class=tag>自相关</span>
-<span class=tag>音频分析</span></div><div class=post-footer><a href=/blog/articles/bpm-detection-autocorrelation/ class=read-link>阅读全文
 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article></div><div class=load-more><a href=./posts/ class=load-more-btn>查看更多文章</a></div><div class=mobile-tip><p>💡 桌面端可查看博客分类、标签等更多功能</p></div></div><div class=sidebar><div class="sidebar-card subscribe"><div class=card-header><h3>订阅更新</h3></div><div class=card-content><p>通过 RSS 订阅我们的最新文章</p><a href=./feed.xml class=rss-link><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg>
-RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-header><h3>关于博客</h3></div><div class=card-content><div class=blog-logo><img src=/logo/logo-256.png alt=Logo></div><h4>技术博客 - 有条工具</h4><p>开发者工具使用教程 & 编程技巧分享</p><div class=blog-stats><div class=stat><span class=stat-number>488</span>
+RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-header><h3>关于博客</h3></div><div class=card-content><div class=blog-logo><img src=/logo/logo-256.png alt=Logo></div><h4>技术博客 - 有条工具</h4><p>开发者工具使用教程 & 编程技巧分享</p><div class=blog-stats><div class=stat><span class=stat-number>492</span>
 <span class=stat-label>文章</span></div><div class=stat><span class=stat-number>140</span>
-<span class=stat-label>分类</span></div><div class=stat><span class=stat-number>1569</span>
+<span class=stat-label>分类</span></div><div class=stat><span class=stat-number>1578</span>
 <span class=stat-label>标签</span></div></div></div></div><div class=sidebar-card><div class=card-header><h3>最新公告</h3></div><div class=card-content><div class=announcement><div class=announcement-icon><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class=announcement-content><p>我们的技术博客正式上线，欢迎关注和分享！</p><span class=announcement-date>2025-12-15</span></div></div></div></div><div class=sidebar-card><div class=card-header><h3>文章分类</h3><a href=./categories/ class=view-all>查看全部</a></div><div class=card-content><ul class=category-list><li><a href=/blog/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/><span class=category-name>效率工具</span>
 <span class=category-count>104</span></a></li><li><a href=/blog/categories/%E7%94%9F%E6%B4%BB%E5%B7%A5%E5%85%B7/><span class=category-name>生活工具</span>
 <span class=category-count>64</span></a></li><li><a href=/blog/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/><span class=category-name>前端开发</span>
 <span class=category-count>34</span></a></li><li><a href=/blog/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/><span class=category-name>后端开发</span>
 <span class=category-count>22</span></a></li><li><a href=/blog/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/><span class=category-name>技术教程</span>
 <span class=category-count>17</span></a></li><li><a href=/blog/categories/%E8%81%8C%E5%9C%BA%E5%B7%A5%E5%85%B7/><span class=category-name>职场工具</span>
+<span class=category-count>16</span></a></li><li><a href=/blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/><span class=category-name>技术笔记</span>
 <span class=category-count>16</span></a></li><li><a href=/blog/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/><span class=category-name>架构设计</span>
 <span class=category-count>15</span></a></li><li><a href=/blog/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/><span class=category-name>人工智能</span>
 <span class=category-count>15</span></a></li><li><a href=/blog/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/><span class=category-name>游戏开发</span>
-<span class=category-count>14</span></a></li><li><a href=/blog/categories/devops/><span class=category-name>DevOps</span>
-<span class=category-count>13</span></a></li></ul></div></div><div class=sidebar-card><div class=card-header><h3>热门标签</h3></div><div class=card-content><div class=tag-cloud><a href=/blog/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/ class=sidebar-tag>性能优化
+<span class=category-count>14</span></a></li></ul></div></div><div class=sidebar-card><div class=card-header><h3>热门标签</h3></div><div class=card-content><div class=tag-cloud><a href=/blog/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/ class=sidebar-tag>性能优化
 <span class=tag-count>38</span>
 </a><a href=/blog/tags/llm/ class=sidebar-tag>LLM
 <span class=tag-count>19</span>
@@ -74,15 +74,15 @@ RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-he
 <span class=tag-count>11</span>
 </a><a href=/blog/tags/css/ class=sidebar-tag>CSS
 <span class=tag-count>10</span>
-</a><a href=/blog/tags/%E5%AE%B9%E5%99%A8%E5%8C%96/ class=sidebar-tag>容器化
-<span class=tag-count>9</span>
-</a><a href=/blog/tags/rust/ class=sidebar-tag>Rust
-<span class=tag-count>9</span>
-</a><a href=/blog/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/ class=sidebar-tag>分布式系统
+</a><a href=/blog/tags/%E5%AE%89%E5%85%A8/ class=sidebar-tag>安全
 <span class=tag-count>9</span>
 </a><a href=/blog/tags/ci/cd/ class=sidebar-tag>CI/CD
 <span class=tag-count>9</span>
 </a><a href=/blog/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/ class=sidebar-tag>开发工具
+<span class=tag-count>9</span>
+</a><a href=/blog/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/ class=sidebar-tag>分布式系统
+<span class=tag-count>9</span>
+</a><a href=/blog/tags/%E5%AE%B9%E5%99%A8%E5%8C%96/ class=sidebar-tag>容器化
 <span class=tag-count>9</span></a></div></div></div></div></div><script>const codeText=`const developer = {
   name: "Tech Explorer",
   skills: ["JavaScript", "Python", "Go"],
