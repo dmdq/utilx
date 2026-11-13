@@ -1110,7 +1110,7 @@
 </span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic>// 使用示例
 </span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span><span style=color:#ff7b72>const</span> controller <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>new</span> ConcurrencyController();
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> results <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#ff7b72>await</span> controller.executeAll(
+</span></span><span style=display:flex><span><span style=color:#ff7b72>const</span> results <span style=color:#ff7b72;font-weight:700>=</span> await controller.executeAll(
 </span></span><span style=display:flex><span>  userIds,
 </span></span><span style=display:flex><span>  <span style=color:#ff7b72>async</span> (userId) <span style=color:#ff7b72;font-weight:700>=&gt;</span> {
 </span></span><span style=display:flex><span>    <span style=color:#ff7b72>return</span> <span style=color:#ff7b72>await</span> userService.getUser(userId);
