@@ -6,50 +6,50 @@
 <a href=./categories/ class=cta-secondary>浏览分类</a></div></div><div class=hero-visual><div class=code-snippet><div class=code-header><div class=code-dots><span class="dot red"></span>
 <span class="dot yellow"></span>
 <span class="dot green"></span></div><span class=code-title>terminal.js</span></div><div class=code-content><pre><code id=typing-text></code></pre></div></div></div></div><div class=blog-layout><div class=main-content id=posts><div class=posts-list><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-16</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/mojibake-reverse-decoding/>乱码修复是逆向推理：GBK 反查表、CP1252 的弯引号陷阱与锟斤拷的诞生</a></h2><p class=post-excerpt>「浣犲ソ」其实是「你好」——乱码是「用错误编码解码、再用另一种编码保存」的历史现场，多数情况下信息还在，只是走错了路。修复即逆向：Latin1 误读每个字节都能原样找回，UTF-8 双重编码逆着解一遍即可，GBK 误读则需要一张运行时暴力构 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>乱码</span>
+<span class=tag>GBK</span>
+<span class=tag>字符编码</span></div><div class=post-footer><a href=/blog/articles/mojibake-reverse-decoding/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-16</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/gcj02-coordinate-systems/>火星坐标从哪来：GCJ-02 的非线性偏移、无官方逆变换与三系互转的工程解法</a></h2><p class=post-excerpt>GPS 拿到的 WGS-84 坐标在国内地图上偏出去几百米，这不是误差，是法规：中国电子地图强制使用 GCJ-02（俗称火星坐标），对真实坐标做与位置相关的非线性偏移，且不公开逆公式。这篇拆解克拉索夫斯基椭球偏移算法的结构、为什么逆变换只能 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>GCJ-02</span>
+<span class=tag>坐标系</span>
+<span class=tag>GPS</span></div><div class=post-footer><a href=/blog/articles/gcj02-coordinate-systems/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-16</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/equation-balancing-nullspace/>化学方程式配平的线性代数：零空间、有理数高斯消元与最小整数比</a></h2><p class=post-excerpt>配平化学方程式本质是解齐次线性方程组：每种元素一条守恒等式，每个物种一个未知系数，反应物取正生成物取负，矩阵乘零向量——求零空间。这篇拆解从化学式递归下降解析（括号嵌套、Co 与 CO 的大小写玄机）到有理数精确高斯消元，为什么浮点会翻车、 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>高斯消元</span>
+<span class=tag>线性代数</span>
+<span class=tag>化学方程式</span></div><div class=post-footer><a href=/blog/articles/equation-balancing-nullspace/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-16</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/vocal-cancel-phase-trick/>人声消除的相位把戏：L−R 减掉居中的一切，(L+R)/2 只留中间那把嗓子</a></h2><p class=post-excerpt>从一首歌里去掉人声得到伴奏，最老的办法不是 AI 分离而是减法：立体声混音里人声几乎总被摆在正中央——左右声道完全相同；把左声道逐采样减去右声道，相同成分正负相抵，人声消失，两侧的乐器留下。这篇拆解相位抵消的数学、为什么 bass 和底鼓也 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>立体声</span>
+<span class=tag>相位</span>
+<span class=tag>人声消除</span></div><div class=post-footer><a href=/blog/articles/vocal-cancel-phase-trick/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
 <span>2026-11-13</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/audio-mixing-clipping/>两轨混音的算术：为什么会削波、-12dB 配乐从哪来、OfflineAudioContext 离线渲染</a></h2><p class=post-excerpt>人声轨 90% 音量、配乐轨 90% 音量，混出来的不是「响亮的 90%」而是 180%——数字音频的满幅是 ±1.0，超出的部分被硬性削平成方波爆音。这篇拆解混音的三笔账：线性叠加与硬削波的数学、dB 刻度下 -12dB 配乐的行业经验从 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
 有条工具团队
 </span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
 1分钟</span></div><div class=post-tags><span class=tag>混音</span>
 <span class=tag>削波</span>
 <span class=tag>dBFS</span></div><div class=post-footer><a href=/blog/articles/audio-mixing-clipping/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-13</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/edge-flood-fill-bg-replace/>证件照换底色：四角取样、边缘泛洪 BFS 与只换「连到边」的背景</a></h2><p class=post-excerpt>把蓝底证件照换白底，难点不在「改颜色」而在「认定哪块是背景」：全图按颜色替换会误伤白衬衫，按固定矩形抠头又削发型。解法是边缘泛洪——从照片四边出发，只把与基准底色相近且连通到边缘的区域标记为背景，人脸衣物内部即使颜色相近也安然无恙。这篇拆解 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>证件照</span>
-<span class=tag>图像算法</span>
-<span class=tag>BFS</span></div><div class=post-footer><a href=/blog/articles/edge-flood-fill-bg-replace/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-13</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/webaudio-lookahead-scheduling/>网页节拍器为什么不漂：WebAudio lookahead 调度与两座时钟的分工</a></h2><p class=post-excerpt>用 setInterval 每拍触发一次声音做节拍器，几十秒后就会听出忽快忽慢——JS 定时器只保证「不早于」设定时刻触发，主线程一忙就整体延后且误差累积。正确做法是两座时钟分工：25ms 的 setInterval 只当轮询泵， …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>WebAudio</span>
-<span class=tag>节拍器</span>
-<span class=tag>定时器</span></div><div class=post-footer><a href=/blog/articles/webaudio-lookahead-scheduling/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-13</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/fft-spectral-subtraction/>谱减法降噪解剖：radix-2 FFT、噪声幅度谱与 5% 频谱地板的音乐噪声防线</a></h2><p class=post-excerpt>给口播录音去底噪的主流思路是谱减法：先对一小段「纯噪声」做短时傅里叶变换得到每个频点的平均幅度谱，再从整段音频的频谱里逐点减掉它。这篇拆解完整链路——radix-2 FFT 的位反转与蝶形运算、为什么只减幅度保留相位、减狠了为什么会出现「音 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>FFT</span>
-<span class=tag>谱减法</span>
-<span class=tag>降噪</span></div><div class=post-footer><a href=/blog/articles/fft-spectral-subtraction/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-11</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/dpi-metadata-truth/>DPI 的真相：PNG pHYs 的「像素每米」、JFIF density，与印刷尺寸的一笔账</a></h2><p class=post-excerpt>72dpi 的图改成 300dpi，文件大了吗？没有——一个像素都没变，变的只是「打印时每英寸摆多少像素」的解释权。这篇拆解 DPI 在 PNG（pHYs 块、单位竟是像素每米）与 JPEG（JFIF APP0 的 density 字段）里 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>DPI</span>
-<span class=tag>PNG</span>
-<span class=tag>JPEG</span></div><div class=post-footer><a href=/blog/articles/dpi-metadata-truth/ class=read-link>阅读全文
 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article></div><div class=load-more><a href=./posts/ class=load-more-btn>查看更多文章</a></div><div class=mobile-tip><p>💡 桌面端可查看博客分类、标签等更多功能</p></div></div><div class=sidebar><div class="sidebar-card subscribe"><div class=card-header><h3>订阅更新</h3></div><div class=card-content><p>通过 RSS 订阅我们的最新文章</p><a href=./feed.xml class=rss-link><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg>
-RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-header><h3>关于博客</h3></div><div class=card-content><div class=blog-logo><img src=/logo/logo-256.png alt=Logo></div><h4>技术博客 - 有条工具</h4><p>开发者工具使用教程 & 编程技巧分享</p><div class=blog-stats><div class=stat><span class=stat-number>496</span>
+RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-header><h3>关于博客</h3></div><div class=card-content><div class=blog-logo><img src=/logo/logo-256.png alt=Logo></div><h4>技术博客 - 有条工具</h4><p>开发者工具使用教程 & 编程技巧分享</p><div class=blog-stats><div class=stat><span class=stat-number>500</span>
 <span class=stat-label>文章</span></div><div class=stat><span class=stat-number>140</span>
-<span class=stat-label>分类</span></div><div class=stat><span class=stat-number>1588</span>
+<span class=stat-label>分类</span></div><div class=stat><span class=stat-number>1598</span>
 <span class=stat-label>标签</span></div></div></div></div><div class=sidebar-card><div class=card-header><h3>最新公告</h3></div><div class=card-content><div class=announcement><div class=announcement-icon><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class=announcement-content><p>我们的技术博客正式上线，欢迎关注和分享！</p><span class=announcement-date>2025-12-15</span></div></div></div></div><div class=sidebar-card><div class=card-header><h3>文章分类</h3><a href=./categories/ class=view-all>查看全部</a></div><div class=card-content><ul class=category-list><li><a href=/blog/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/><span class=category-name>效率工具</span>
 <span class=category-count>104</span></a></li><li><a href=/blog/categories/%E7%94%9F%E6%B4%BB%E5%B7%A5%E5%85%B7/><span class=category-name>生活工具</span>
 <span class=category-count>64</span></a></li><li><a href=/blog/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/><span class=category-name>前端开发</span>
-<span class=category-count>34</span></a></li><li><a href=/blog/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/><span class=category-name>后端开发</span>
-<span class=category-count>22</span></a></li><li><a href=/blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/><span class=category-name>技术笔记</span>
-<span class=category-count>20</span></a></li><li><a href=/blog/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/><span class=category-name>技术教程</span>
+<span class=category-count>34</span></a></li><li><a href=/blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/><span class=category-name>技术笔记</span>
+<span class=category-count>24</span></a></li><li><a href=/blog/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/><span class=category-name>后端开发</span>
+<span class=category-count>22</span></a></li><li><a href=/blog/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/><span class=category-name>技术教程</span>
 <span class=category-count>17</span></a></li><li><a href=/blog/categories/%E8%81%8C%E5%9C%BA%E5%B7%A5%E5%85%B7/><span class=category-name>职场工具</span>
 <span class=category-count>16</span></a></li><li><a href=/blog/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/><span class=category-name>架构设计</span>
 <span class=category-count>15</span></a></li><li><a href=/blog/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/><span class=category-name>人工智能</span>
@@ -74,15 +74,15 @@ RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-he
 <span class=tag-count>11</span>
 </a><a href=/blog/tags/css/ class=sidebar-tag>CSS
 <span class=tag-count>10</span>
-</a><a href=/blog/tags/%E5%AE%B9%E5%99%A8%E5%8C%96/ class=sidebar-tag>容器化
+</a><a href=/blog/tags/ci/cd/ class=sidebar-tag>CI/CD
+<span class=tag-count>9</span>
+</a><a href=/blog/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/ class=sidebar-tag>开发工具
 <span class=tag-count>9</span>
 </a><a href=/blog/tags/rust/ class=sidebar-tag>Rust
 <span class=tag-count>9</span>
+</a><a href=/blog/tags/%E5%AE%B9%E5%99%A8%E5%8C%96/ class=sidebar-tag>容器化
+<span class=tag-count>9</span>
 </a><a href=/blog/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/ class=sidebar-tag>分布式系统
-<span class=tag-count>9</span>
-</a><a href=/blog/tags/%E5%AE%89%E5%85%A8/ class=sidebar-tag>安全
-<span class=tag-count>9</span>
-</a><a href=/blog/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/ class=sidebar-tag>开发工具
 <span class=tag-count>9</span></a></div></div></div></div></div><script>const codeText=`const developer = {
   name: "Tech Explorer",
   skills: ["JavaScript", "Python", "Go"],

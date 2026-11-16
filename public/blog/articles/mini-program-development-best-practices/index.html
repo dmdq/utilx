@@ -887,7 +887,7 @@
 </span></span><span style=display:flex><span>    <span style=color:#ff7b72>const</span> cacheKey <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>`cache_</span><span style=color:#a5d6ff>${</span>key<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>`</span>
 </span></span><span style=display:flex><span>    <span style=color:#ff7b72>const</span> cachedData <span style=color:#ff7b72;font-weight:700>=</span> wx.getStorageSync(cacheKey)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff7b72>if</span> (cachedData <span style=color:#ff7b72;font-weight:700>&amp;&amp;</span> Date.now() <span style=color:#ff7b72;font-weight:700>-</span> cachedData.timestamp <span style=color:#ff7b72;font-weight:700>&lt;</span> expireTime) {
+</span></span><span style=display:flex><span>    if (cachedData <span style=color:#ff7b72;font-weight:700>&amp;&amp;</span> Date.now() <span style=color:#ff7b72;font-weight:700>-</span> cachedData.timestamp <span style=color:#ff7b72;font-weight:700>&lt;</span> expireTime) {
 </span></span><span style=display:flex><span>      <span style=color:#ff7b72>return</span> Promise.resolve(cachedData.data)
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
