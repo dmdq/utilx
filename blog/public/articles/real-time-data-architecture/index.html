@@ -136,7 +136,7 @@
 </span></span><span style=display:flex><span>filtered_events <span style=color:#ff7b72;font-weight:700>=</span> parsed_events<span style=color:#ff7b72;font-weight:700>.</span>filter(EventFilter())
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 窗口聚合</span>
-</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>EventAggregator</span>(KeyedProcessFunction):
+</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f85149>E</span><span style=color:#f0883e;font-weight:700>ventAggregator</span>(KeyedProcessFunction):
 </span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>open</span>(self, runtime_context):
 </span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 初始化状态</span>
 </span></span><span style=display:flex><span>        self<span style=color:#ff7b72;font-weight:700>.</span>count_state <span style=color:#ff7b72;font-weight:700>=</span> runtime_context<span style=color:#ff7b72;font-weight:700>.</span>get_state(
