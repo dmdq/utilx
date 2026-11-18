@@ -1484,7 +1484,7 @@
 </span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 定义技能（Skill）</span>
 </span></span><span style=display:flex><span><span style=color:#ff7b72>from</span> <span style=color:#ff7b72>semantic_kernel.skill_definition</span> <span style=color:#ff7b72>import</span> sk_function
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>ResearchSkills</span>:
+</span></span><span style=display:flex><span><span style=color:#ff7b72>class</span> <span style=color:#f0883e;font-weight:700>ResearchSkills</span><span style=color:#f85149>:</span>
 </span></span><span style=display:flex><span>    <span style=color:#d2a8ff;font-weight:700>@sk_function</span>(description<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;搜索信息&#34;</span>)
 </span></span><span style=display:flex><span>    <span style=color:#ff7b72>def</span> <span style=color:#d2a8ff;font-weight:700>search</span>(self, query: str) <span style=color:#ff7b72;font-weight:700>-&gt;</span> str:
 </span></span><span style=display:flex><span>        <span style=color:#ff7b72>return</span> <span style=color:#79c0ff>f</span><span style=color:#a5d6ff>&#34;搜索&#39;</span><span style=color:#a5d6ff>{</span>query<span style=color:#a5d6ff>}</span><span style=color:#a5d6ff>&#39;的结果...&#34;</span>

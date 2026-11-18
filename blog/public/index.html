@@ -6,49 +6,49 @@
 <a href=./categories/ class=cta-secondary>浏览分类</a></div></div><div class=hero-visual><div class=code-snippet><div class=code-header><div class=code-dots><span class="dot red"></span>
 <span class="dot yellow"></span>
 <span class="dot green"></span></div><span class=code-title>terminal.js</span></div><div class=code-content><pre><code id=typing-text></code></pre></div></div></div></div><div class=blog-layout><div class=main-content id=posts><div class=posts-list><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-18</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/prng-seeding-shuffling/>随机数的工程学：mulberry32 种子复现同一份卷，与为什么不该用 sort 洗牌</a></h2><p class=post-excerpt>「同一份口算卷怎么过几天还能再打一份一模一样的？」答案在伪随机数的种子机制：mulberry32 这类确定性 PRNG 同一种子产生完全相同的 [0,1) 序列——种子即复现密码。这篇拆解 PRNG 的确定性本质、Math.random 与 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>伪随机数</span>
+<span class=tag>Fisher-Yates</span>
+<span class=tag>洗牌</span></div><div class=post-footer><a href=/blog/articles/prng-seeding-shuffling/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-18</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/video-concat-gain-graph/>视频拼接的音频图：GainNode 防串音、MediaElementSource 的一对一铁律与重编码账本</a></h2><p class=post-excerpt>在浏览器里把几段视频首尾接成一段，路线是「播放 + 重录」：视频侧 canvas.captureStream 逐帧采集画面，音频侧每段视频各接一个 GainNode 组成混音矩阵——当前段增益 1、其余段增益 0，从物理上杜绝两段声音同时进 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>MediaRecorder</span>
+<span class=tag>WebAudio</span>
+<span class=tag>视频拼接</span></div><div class=post-footer><a href=/blog/articles/video-concat-gain-graph/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-18</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/svg-rasterization/>SVG 转 PNG：矢量重栅格化、viewBox 兜底推导与 canvas 的 8192 天花板</a></h2><p class=post-excerpt>SVG 转 PNG 的正确姿势不是「截图」而是「重栅格化」：矢量图形没有固定像素，导出多大就按多大重新绘制——曲线在 4x 尺寸下重新计算采样，边缘始终锐利。这篇拆解尺寸推导链（width/height 属性优先、viewBox 兜底、逗号 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>SVG</span>
+<span class=tag>Canvas</span>
+<span class=tag>光栅化</span></div><div class=post-footer><a href=/blog/articles/svg-rasterization/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+<span>2026-11-18</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/jwt-anatomy/>JWT 解剖：base64url 的三段结构、HMAC 签名验证与 alg=none 那扇没锁的门</a></h2><p class=post-excerpt>JWT 是两个点号隔开的三段字符串：header.payload.signature，前两段只是 base64url 编码的 JSON——不加密、可徒手读出；第三段才是安全性的全部来源。这篇拆解三段结构、base64url …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+有条工具团队
+</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+1分钟</span></div><div class=post-tags><span class=tag>JWT</span>
+<span class=tag>HMAC</span>
+<span class=tag>RSA</span></div><div class=post-footer><a href=/blog/articles/jwt-anatomy/ class=read-link>阅读全文
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
 <span>2026-11-17</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/pitch-detection-nsdf/>调音器怎么听出音高：归一化自相关、八度陷阱与音分表盘</a></h2><p class=post-excerpt>拨一根 E 弦（82.4Hz），麦克风里的波形每秒重复 82 次——音高检测就是找出这个周期。自相关对每个候选周期算「错开这么多采样后还像不像自己」，最像的那个滞后量就是周期；NSDF 归一化（2×相关 ÷ 双边能量）让峰值可与清晰度阈值比 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
 有条工具团队
 </span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
 1分钟</span></div><div class=post-tags><span class=tag>音高检测</span>
 <span class=tag>自相关</span>
 <span class=tag>NSDF</span></div><div class=post-footer><a href=/blog/articles/pitch-detection-nsdf/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-17</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/noise-loop-crossfade/>白噪音永不重样也不接缝：4096 采样的循环交叉淡化与粉噪的 -3dB 滤波</a></h2><p class=post-excerpt>用白噪音助眠专注，最败兴的是循环点上「咔哒」一声——随机缓冲首尾相接处波形跳变，本身就是一次全频带脉冲。解法是在接缝处做交叉淡化：额外生成一段尾部延续样本，把缓冲头部 4096 个采样改写成「原头部 × t + 回绕延续 × (1−t)」的 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>白噪音</span>
-<span class=tag>粉噪音</span>
-<span class=tag>WebAudio</span></div><div class=post-footer><a href=/blog/articles/noise-loop-crossfade/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-17</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/lunar-calendar-bitmap-table/>农历是查出来的不是算出来的：一年一个十六进制数、朔日锚点与节气的平气近似</a></h2><p class=post-excerpt>公历转农历在程序里不是公式而是查表：农历月的天文本质是「朔日」（新月时刻），由月球轨道决定，没有简单闭式解——工程做法是把 1900–2100 每年的月长信息压进一个十六进制数（低 4 位闰几月、中 12 位十二个月大小、第 17 位闰月大 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>农历</span>
-<span class=tag>节气</span>
-<span class=tag>历法</span></div><div class=post-footer><a href=/blog/articles/lunar-calendar-bitmap-table/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-17</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/id-number-checksum-mod11/>身份证号的第 18 位：加权因子 7-9-10-5…、模 11 与那个为什么是 X</a></h2><p class=post-excerpt>18 位身份证号的最后一位不是随机数：前 17 位分别乘上固定加权因子 7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2，求和后模 11，再按映射表 10X98765432 得出校验码——模 11 的余数可能是 10， …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>校验位</span>
-<span class=tag>ISO 7064</span>
-<span class=tag>身份证</span></div><div class=post-footer><a href=/blog/articles/id-number-checksum-mod11/ class=read-link>阅读全文
-<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-16</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/mojibake-reverse-decoding/>乱码修复是逆向推理：GBK 反查表、CP1252 的弯引号陷阱与锟斤拷的诞生</a></h2><p class=post-excerpt>「浣犲ソ」其实是「你好」——乱码是「用错误编码解码、再用另一种编码保存」的历史现场，多数情况下信息还在，只是走错了路。修复即逆向：Latin1 误读每个字节都能原样找回，UTF-8 双重编码逆着解一遍即可，GBK 误读则需要一张运行时暴力构 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
-有条工具团队
-</span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>乱码</span>
-<span class=tag>GBK</span>
-<span class=tag>字符编码</span></div><div class=post-footer><a href=/blog/articles/mojibake-reverse-decoding/ class=read-link>阅读全文
 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article></div><div class=load-more><a href=./posts/ class=load-more-btn>查看更多文章</a></div><div class=mobile-tip><p>💡 桌面端可查看博客分类、标签等更多功能</p></div></div><div class=sidebar><div class="sidebar-card subscribe"><div class=card-header><h3>订阅更新</h3></div><div class=card-content><p>通过 RSS 订阅我们的最新文章</p><a href=./feed.xml class=rss-link><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg>
-RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-header><h3>关于博客</h3></div><div class=card-content><div class=blog-logo><img src=/logo/logo-256.png alt=Logo></div><h4>技术博客 - 有条工具</h4><p>开发者工具使用教程 & 编程技巧分享</p><div class=blog-stats><div class=stat><span class=stat-number>504</span>
+RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-header><h3>关于博客</h3></div><div class=card-content><div class=blog-logo><img src=/logo/logo-256.png alt=Logo></div><h4>技术博客 - 有条工具</h4><p>开发者工具使用教程 & 编程技巧分享</p><div class=blog-stats><div class=stat><span class=stat-number>508</span>
 <span class=stat-label>文章</span></div><div class=stat><span class=stat-number>140</span>
-<span class=stat-label>分类</span></div><div class=stat><span class=stat-number>1606</span>
+<span class=stat-label>分类</span></div><div class=stat><span class=stat-number>1612</span>
 <span class=stat-label>标签</span></div></div></div></div><div class=sidebar-card><div class=card-header><h3>最新公告</h3></div><div class=card-content><div class=announcement><div class=announcement-icon><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class=announcement-content><p>我们的技术博客正式上线，欢迎关注和分享！</p><span class=announcement-date>2025-12-15</span></div></div></div></div><div class=sidebar-card><div class=card-header><h3>文章分类</h3><a href=./categories/ class=view-all>查看全部</a></div><div class=card-content><ul class=category-list><li><a href=/blog/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/><span class=category-name>效率工具</span>
 <span class=category-count>104</span></a></li><li><a href=/blog/categories/%E7%94%9F%E6%B4%BB%E5%B7%A5%E5%85%B7/><span class=category-name>生活工具</span>
 <span class=category-count>64</span></a></li><li><a href=/blog/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/><span class=category-name>前端开发</span>
 <span class=category-count>34</span></a></li><li><a href=/blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/><span class=category-name>技术笔记</span>
-<span class=category-count>28</span></a></li><li><a href=/blog/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/><span class=category-name>后端开发</span>
+<span class=category-count>32</span></a></li><li><a href=/blog/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/><span class=category-name>后端开发</span>
 <span class=category-count>22</span></a></li><li><a href=/blog/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/><span class=category-name>技术教程</span>
 <span class=category-count>17</span></a></li><li><a href=/blog/categories/%E8%81%8C%E5%9C%BA%E5%B7%A5%E5%85%B7/><span class=category-name>职场工具</span>
 <span class=category-count>16</span></a></li><li><a href=/blog/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/><span class=category-name>人工智能</span>
@@ -60,9 +60,9 @@ RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-he
 <span class=tag-count>19</span>
 </a><a href=/blog/tags/devops/ class=sidebar-tag>DevOps
 <span class=tag-count>18</span>
-</a><a href=/blog/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/ class=sidebar-tag>架构设计
-<span class=tag-count>15</span>
 </a><a href=/blog/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/ class=sidebar-tag>微服务
+<span class=tag-count>15</span>
+</a><a href=/blog/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/ class=sidebar-tag>架构设计
 <span class=tag-count>15</span>
 </a><a href=/blog/tags/javascript/ class=sidebar-tag>JavaScript
 <span class=tag-count>13</span>
@@ -74,13 +74,13 @@ RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-he
 <span class=tag-count>11</span>
 </a><a href=/blog/tags/css/ class=sidebar-tag>CSS
 <span class=tag-count>10</span>
-</a><a href=/blog/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/ class=sidebar-tag>开发工具
-<span class=tag-count>9</span>
-</a><a href=/blog/tags/rust/ class=sidebar-tag>Rust
-<span class=tag-count>9</span>
-</a><a href=/blog/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/ class=sidebar-tag>分布式系统
+</a><a href=/blog/tags/%E7%AE%97%E6%B3%95/ class=sidebar-tag>算法
 <span class=tag-count>9</span>
 </a><a href=/blog/tags/%E5%AE%B9%E5%99%A8%E5%8C%96/ class=sidebar-tag>容器化
+<span class=tag-count>9</span>
+</a><a href=/blog/tags/%E5%AE%89%E5%85%A8/ class=sidebar-tag>安全
+<span class=tag-count>9</span>
+</a><a href=/blog/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/ class=sidebar-tag>分布式系统
 <span class=tag-count>9</span>
 </a><a href=/blog/tags/ci/cd/ class=sidebar-tag>CI/CD
 <span class=tag-count>9</span></a></div></div></div></div></div><script>const codeText=`const developer = {
