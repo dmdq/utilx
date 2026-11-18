@@ -442,9 +442,68 @@ const exportAsJSON = () => {
   downloadFile('palette.json', json, 'application/json')
 }
 
+// ---------- 纯函数：ASE（Adobe Swatch Exchange）字节序列化，便于单测 ----------
+// colors: [{ name?: string, rgb: [r, g, b] }]（也兼容 { r, g, b, hex } 形式，色名缺省用 hex）
+// 文件结构（全部大端）：
+//   签名 'ASEF' + 版本 1.0（u16 1、u16 0）+ 色块数 u32
+//   每色块：块类型 0x0001(u16) + 块长 u32 + 色名长度含终止符(u16)
+//           + UTF-16BE 色名 + 0x0000 终止符 + 色彩模式 'RGB '(ASCII)
+//           + 3 个 float32（v/255）+ 颜色类型 u16（2 = normal）
+function buildAse(colors) {
+  const list = (colors || []).map(color => {
+    const rgb = (color.rgb || [color.r, color.g, color.b]).map(v => {
+      const n = Number(v) || 0
+      return Math.max(0, Math.min(255, Math.round(n)))
+    })
+    const name = String(color.name || color.hex || rgb.join(','))
+    return { name, rgb }
+  })
+
+  // 每块「块长」字段的值：块长 u32 之后的所有字节数
+  const blockSizes = list.map(c => 2 + (c.name.length + 1) * 2 + 4 + 12 + 2)
+  // 总长 = 12 字节文件头 + Σ(块类型 2 + 块长 4 + 块内容)
+  const total = 12 + blockSizes.reduce((sum, size) => sum + 6 + size, 0)
+
+  const bytes = new Uint8Array(total)
+  const view = new DataView(bytes.buffer)
+
+  view.setUint32(0, 0x41534546, false) // 'ASEF' 签名
+  view.setUint16(4, 1, false)          // 版本 1.0
+  view.setUint16(6, 0, false)
+  view.setUint32(8, list.length, false) // 色块数
+
+  let offset = 12
+  list.forEach((color, i) => {
+    view.setUint16(offset, 0x0001, false)                      // 块类型：颜色
+    view.setUint32(offset + 2, blockSizes[i], false)           // 块长
+    view.setUint16(offset + 6, color.name.length + 1, false)   // 色名长度（含终止符）
+    offset += 8
+    for (let j = 0; j < color.name.length; j++) {              // UTF-16BE 色名
+      view.setUint16(offset, color.name.charCodeAt(j), false)
+      offset += 2
+    }
+    view.setUint16(offset, 0x0000, false)                      // 色名终止符
+    offset += 2
+    view.setUint8(offset, 0x52)      // 'R'
+    view.setUint8(offset + 1, 0x47)  // 'G'
+    view.setUint8(offset + 2, 0x42)  // 'B'
+    view.setUint8(offset + 3, 0x20)  // ' '
+    offset += 4
+    color.rgb.forEach(v => {
+      view.setFloat32(offset, v / 255, false)
+      offset += 4
+    })
+    view.setUint16(offset, 2, false) // 颜色类型：normal
+    offset += 2
+  })
+
+  return bytes
+}
+
 const exportAsASE = () => {
-  // ASE 格式简化版
-  alert('ASE 格式导出功能开发中')
+  if (palette.value.length === 0) return
+  const bytes = buildAse(palette.value.map(c => ({ name: c.hex, rgb: c.rgb })))
+  downloadFile('palette.ase', bytes, 'application/octet-stream')
 }
 
 const exportAsImage = () => {
@@ -479,7 +538,7 @@ const downloadFile = (filename, content, type) => {
 
 useSeoMeta({
   title: '图片配色方案提取 - 在线配色方案工具',
-  description: '免费在线配色方案提取工具，从图片中提取和谐的颜色组合，支持多种配色类型。',
+  description: '免费在线配色方案提取工具，从图片中提取和谐的颜色组合，支持多种配色类型，可导出 CSS、JSON 及 ASE（Adobe Swatch Exchange）配色文件。',
   keywords: ['配色方案', '取色器', '色彩提取', 'color palette', '调色板', '在线工具']
 })
 

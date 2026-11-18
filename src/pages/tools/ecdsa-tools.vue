@@ -466,14 +466,6 @@
             <pre class="font-mono text-xs break-all">{{ generatedPublicKey }}</pre>
           </div>
         </div>
-
-        <!-- WIF格式（可选） -->
-        <div class="space-y-2">
-          <label class="text-sm font-medium">WIF格式 (Wallet Import Format，用于比特币等)</label>
-          <div class="p-3 border border-border rounded-lg bg-muted/50">
-            <div class="font-mono text-xs break-all">{{ generatedWIF || '暂不支持' }}</div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -699,7 +691,6 @@ const publicKeyInfo = ref({})
 const keygenCurve = ref('P-256')
 const generatedPrivateKey = ref('')
 const generatedPublicKey = ref('')
-const generatedWIF = ref('')
 const showPrivateKey = ref(false)
 const isGenerating = ref(false)
 
@@ -901,13 +892,6 @@ const generateKeyPair = async () => {
     generatedPublicKey.value = '04' + Array.from(new Uint8Array(rawPublicKey), b => b.toString(16).padStart(2, '0')).join('')
     generatedPrivateKey.value = Array.from(new Uint8Array(pkcs8PrivateKey), b => b.toString(16).padStart(2, '0')).join('')
 
-    // secp256k1的WIF格式（仅用于Bitcoin等）
-    if (keygenCurve.value === 'secp256k1') {
-      // 这里简化处理，实际WIF格式需要Base58Check编码
-      generatedWIF.value = 'WIF格式需要Base58Check编码，建议使用专门的比特币库'
-    } else {
-      generatedWIF.value = '仅secp256k1曲线支持WIF格式'
-    }
   } catch (error) {
     console.error('密钥生成失败:', error)
     alert('密钥生成失败: ' + error.message)

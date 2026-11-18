@@ -498,7 +498,12 @@ const createTeams = async () => {
   await new Promise(resolve => setTimeout(resolve, 800))
 
   let teams = []
-  const shuffledMembers = [...members.value].sort(() => Math.random() - 0.5)
+  // Fisher-Yates 洗牌：每个排列等概率（sort(random) 是有偏洗牌）
+  const shuffledMembers = [...members.value]
+  for (let i = shuffledMembers.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffledMembers[i], shuffledMembers[j]] = [shuffledMembers[j], shuffledMembers[i]]
+  }
 
   if (teamMode.value === 'by-count') {
     // 按队伍数量分队

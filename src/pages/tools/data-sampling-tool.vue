@@ -603,7 +603,12 @@ const updateSamplePercent = () => {
 
 // 采样方法实现
 const randomSample = (data, size) => {
-  const shuffled = [...data].sort(() => Math.random() - 0.5)
+  // Fisher-Yates 洗牌取前 size 个（等概率抽样；sort(random) 有偏）
+  const shuffled = [...data]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
   return shuffled.slice(0, size)
 }
 

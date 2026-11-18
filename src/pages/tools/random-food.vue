@@ -495,7 +495,12 @@ const recommendFood = async () => {
       })
 
       // 随机选择
-      const selected = availableFoods.sort(() => Math.random() - 0.5).slice(0, Math.ceil(foodCount / foodTypes.value))
+      const pool = [...availableFoods]
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[pool[i], pool[j]] = [pool[j], pool[i]]
+      }
+      const selected = pool.slice(0, Math.ceil(foodCount / foodTypes.value))
       selected.forEach(food => {
         food.type = type
         recommendations.push(food)
@@ -506,8 +511,15 @@ const recommendFood = async () => {
   const now = new Date()
   const timestamp = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`
 
+  // Fisher-Yates 洗牌（sort(random) 有偏）
+  const shuffledFoods = [...recommendations]
+  for (let i = shuffledFoods.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffledFoods[i], shuffledFoods[j]] = [shuffledFoods[j], shuffledFoods[i]]
+  }
+
   results.value.unshift({
-    foods: recommendations.sort(() => Math.random() - 0.5),
+    foods: shuffledFoods,
     timestamp
   })
 

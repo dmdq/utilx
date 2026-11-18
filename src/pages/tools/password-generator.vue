@@ -425,8 +425,13 @@ const generateSinglePassword = () => {
     if (options.value.noRepeating) usedChars.add(char)
   }
 
-  // 打乱密码字符顺序（为了满足长度要求）
-  return password.split('').sort(() => Math.random() - 0.5).join('')
+  // Fisher-Yates 打乱密码字符顺序（等概率排列，保住排列熵；sort(random) 有偏）
+  const shuffledChars = password.split('')
+  for (let i = shuffledChars.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffledChars[i], shuffledChars[j]] = [shuffledChars[j], shuffledChars[i]]
+  }
+  return shuffledChars.join('')
 }
 
 // 生成密码

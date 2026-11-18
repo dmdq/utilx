@@ -119,9 +119,25 @@
 
       <!-- 日期结果 -->
       <div v-if="results.length > 0" class="bg-card border border-border rounded-lg p-6">
-        <div class="flex items-center justify-between mb-4">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
           <h2 class="text-lg font-semibold">随机日期</h2>
-          <div class="flex gap-2">
+          <div class="flex items-center gap-2">
+            <div class="flex border border-border rounded-lg overflow-hidden">
+              <button
+                @click="viewMode = 'list'"
+                :class="viewMode === 'list' ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:text-foreground'"
+                class="px-3 py-1 text-sm transition-colors"
+              >
+                列表
+              </button>
+              <button
+                @click="viewMode = 'calendar'"
+                :class="viewMode === 'calendar' ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:text-foreground'"
+                class="px-3 py-1 text-sm transition-colors"
+              >
+                日历
+              </button>
+            </div>
             <button
               @click="copyDates"
               class="px-3 py-1 text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
@@ -139,7 +155,7 @@
           </div>
         </div>
 
-        <div class="space-y-4">
+        <div v-if="viewMode === 'list'" class="space-y-4">
           <div
             v-for="(result, index) in results"
             :key="index"
@@ -184,6 +200,52 @@
           </div>
         </div>
 
+        <!-- 日历视图（周一起始月历网格） -->
+        <div v-if="viewMode === 'calendar'" class="space-y-3">
+          <div class="flex items-center justify-between">
+            <button
+              @click="shiftMonth(-1)"
+              class="p-2 border border-border rounded-lg hover:bg-muted transition-colors"
+              aria-label="上一月"
+            >
+              <ChevronLeft class="w-4 h-4" />
+            </button>
+            <div class="text-center">
+              <span class="font-medium">{{ calYear }}年{{ calMonth }}月</span>
+              <span class="ml-2 text-xs text-muted-foreground">本月命中 {{ currentMonthCount }} 个随机日期</span>
+            </div>
+            <button
+              @click="shiftMonth(1)"
+              class="p-2 border border-border rounded-lg hover:bg-muted transition-colors"
+              aria-label="下一月"
+            >
+              <ChevronRight class="w-4 h-4" />
+            </button>
+          </div>
+
+          <div class="grid grid-cols-7 gap-1 text-center text-xs text-muted-foreground">
+            <div v-for="w in weekdayLabels" :key="w" class="py-1 font-medium">{{ w }}</div>
+          </div>
+
+          <div class="grid grid-cols-7 gap-1">
+            <div
+              v-for="(cell, index) in calendarCells"
+              :key="index"
+              class="aspect-square rounded-lg text-sm flex items-center justify-center transition-colors"
+              :class="cell && dateHits[cellKey(cell)]
+                ? 'bg-primary text-primary-foreground font-semibold'
+                : (cell ? 'bg-muted/30 text-foreground' : 'bg-muted/10 text-transparent')"
+              :title="cellTitle(cell)"
+            >
+              {{ cell ? cell.day : '' }}
+            </div>
+          </div>
+
+          <p class="text-xs text-muted-foreground text-center">
+            主色高亮的日期为本次生成的随机日期，可通过左右按钮切换月份查看
+          </p>
+        </div>
+
         <!-- 总统计 -->
         <div class="mt-6">
           <h3 class="font-medium mb-3">总体统计</h3>
@@ -208,34 +270,6 @@
         </div>
       </div>
 
-      <!-- 日历视图 -->
-      <div v-if="results.length > 0 && showCalendar" class="bg-card border border-border rounded-lg p-6">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="font-medium">日历视图</h3>
-          <button
-            @click="showCalendar = false"
-            class="text-sm text-muted-foreground hover:text-foreground"
-          >
-            隐藏
-          </button>
-        </div>
-
-        <div class="grid grid-cols-7 gap-1 text-center text-sm">
-          <div class="font-medium p-2">日</div>
-          <div class="font-medium p-2">一</div>
-          <div class="font-medium p-2">二</div>
-          <div class="font-medium p-2">三</div>
-          <div class="font-medium p-2">四</div>
-          <div class="font-medium p-2">五</div>
-          <div class="font-medium p-2">六</div>
-        </div>
-
-        <!-- 这里可以添加更复杂的日历组件 -->
-        <div class="text-center text-muted-foreground py-8">
-          日历视图开发中...
-        </div>
-      </div>
-
       <!-- 使用说明 -->
       <div class="bg-card border border-border rounded-lg p-6">
         <h2 class="text-lg font-semibold mb-4">使用说明</h2>
@@ -247,6 +281,7 @@
               <li>支持自定义日期范围生成</li>
               <li>多种日期格式输出</li>
               <li>详细的日期统计分析</li>
+              <li>列表/日历双视图，月历中高亮随机日期</li>
               <li>批量导出和复制功能</li>
               <li>工作日/周末识别</li>
             </ul>
@@ -318,7 +353,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { Calendar, RefreshCw, Trash2, Copy, Download, Hash, List, Users, ArrowRight } from 'lucide-vue-next'
+import { Calendar, RefreshCw, Trash2, Copy, Download, Hash, List, Users, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-vue-next'
 
 
 
@@ -337,7 +372,73 @@ const dateFormat = ref('YYYY-MM-DD')
 const isGenerating = ref(false)
 const results = ref([])
 const copied = ref(false)
-const showCalendar = ref(false)
+const viewMode = ref('list') // 'list' 列表视图 | 'calendar' 日历视图
+
+// ---------- 纯函数：月历 42 格网格（周一起始），便于单测 ----------
+// 返回固定 42 格（6 行 × 7 列）：当月日期为 { year, month, day }，格前/后补位为 null。
+// 参数 month 为 1-12；index 0 = 周一，index 6 = 周日。
+// 使用 Date.UTC 计算避免本地时区影响。
+function monthGrid(year, month) {
+  if (!Number.isFinite(year) || !Number.isInteger(month) || month < 1 || month > 12) return []
+  const firstDow = new Date(Date.UTC(year, month - 1, 1)).getUTCDay() // 0=周日
+  const lead = (firstDow - 1 + 7) % 7 // 周一起始时，月初 1 号前的空格数
+  const daysInMonth = new Date(Date.UTC(year, month, 0)).getUTCDate()
+  const cells = []
+  for (let i = 0; i < 42; i++) {
+    const day = i - lead + 1
+    cells.push(day >= 1 && day <= daysInMonth ? { year, month, day } : null)
+  }
+  return cells
+}
+
+// 日历视图状态
+const weekdayLabels = ['一', '二', '三', '四', '五', '六', '日']
+const calYear = ref(new Date().getFullYear())
+const calMonth = ref(new Date().getMonth() + 1)
+
+const calendarCells = computed(() => monthGrid(calYear.value, calMonth.value))
+
+// 全部随机日期的命中计数（key 为 YYYY-MM-DD）
+const dateHits = computed(() => {
+  const counts = {}
+  allDates.value.forEach(date => {
+    counts[date] = (counts[date] || 0) + 1
+  })
+  return counts
+})
+
+const currentMonthCount = computed(() => {
+  return calendarCells.value.reduce(
+    (sum, cell) => (cell ? sum + (dateHits.value[cellKey(cell)] || 0) : sum),
+    0
+  )
+})
+
+const cellKey = (cell) => {
+  const pad = (n) => String(n).padStart(2, '0')
+  return `${cell.year}-${pad(cell.month)}-${pad(cell.day)}`
+}
+
+const cellTitle = (cell) => {
+  if (!cell) return ''
+  const hits = dateHits.value[cellKey(cell)]
+  return hits ? `${cellKey(cell)}（命中 ${hits} 个随机日期）` : cellKey(cell)
+}
+
+// 上/下翻月（带跨年进位）
+const shiftMonth = (delta) => {
+  let month = calMonth.value + delta
+  let year = calYear.value
+  if (month < 1) {
+    month = 12
+    year -= 1
+  } else if (month > 12) {
+    month = 1
+    year += 1
+  }
+  calMonth.value = month
+  calYear.value = year
+}
 
 // 计算属性
 const totalDates = computed(() => {
@@ -521,6 +622,15 @@ const generateDates = async () => {
     timestamp,
     stats
   })
+
+  // 日历视图自动定位到最新批次首个日期所在月份
+  if (dates[0]) {
+    const [y, m] = dates[0].split('-').map(Number)
+    if (y && m) {
+      calYear.value = y
+      calMonth.value = m
+    }
+  }
 
   if (results.value.length > 10) {
     results.value = results.value.slice(0, 10)

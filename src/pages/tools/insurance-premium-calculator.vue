@@ -192,10 +192,10 @@
             重置
           </button>
           <button
-            @click="compareProducts"
+            @click="savePlan"
             class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
           >
-            产品对比
+            保存方案
           </button>
           <button
             @click="exportQuote"
@@ -266,6 +266,64 @@
                 <span>¥{{ premiumResult.finalPremium.toFixed(2) }}</span>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- 方案对比 -->
+        <div class="bg-card rounded-lg p-6 border">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold">方案对比</h3>
+            <button
+              v-if="savedPlans.length > 0"
+              @click="clearPlans"
+              class="px-3 py-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              一键清空
+            </button>
+          </div>
+
+          <div v-if="savedPlans.length === 0" class="text-sm text-muted-foreground">
+            点击左侧「保存方案」可将当前投保参数保存为方案（最多 3 个），保存后即可在此对比各方案的保费差异。
+          </div>
+
+          <div v-else class="overflow-x-auto">
+            <table class="w-full text-sm min-w-[560px]">
+              <thead>
+                <tr class="text-left text-muted-foreground">
+                  <th class="py-2 pr-3 font-medium">方案</th>
+                  <th class="py-2 pr-3 font-medium">投保年龄</th>
+                  <th class="py-2 pr-3 font-medium">保额</th>
+                  <th class="py-2 pr-3 font-medium">保障期</th>
+                  <th class="py-2 pr-3 font-medium">缴费期</th>
+                  <th class="py-2 pr-3 font-medium">年缴保费</th>
+                  <th class="py-2 pr-3 font-medium">总保费</th>
+                  <th class="py-2 font-medium">操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(plan, index) in savedPlans" :key="plan.id" class="border-t">
+                  <td class="py-2 pr-3">
+                    <div class="font-medium">方案 {{ ['A', 'B', 'C'][index] }}</div>
+                    <div class="text-xs text-muted-foreground">{{ plan.typeName }}</div>
+                  </td>
+                  <td class="py-2 pr-3">{{ plan.age === null ? '—' : plan.age + '岁' }}</td>
+                  <td class="py-2 pr-3">{{ plan.coverage }}万</td>
+                  <td class="py-2 pr-3">{{ formatPeriod(plan.period) }}</td>
+                  <td class="py-2 pr-3">{{ formatPeriod(plan.period) }}</td>
+                  <td class="py-2 pr-3 font-medium">¥{{ plan.yearlyPremium.toFixed(2) }}</td>
+                  <td class="py-2 pr-3">{{ plan.totalPremium === null ? '—' : '¥' + plan.totalPremium.toFixed(2) }}</td>
+                  <td class="py-2">
+                    <button
+                      @click="removePlan(plan.id)"
+                      class="text-xs text-muted-foreground hover:text-red-500 transition-colors"
+                    >
+                      删除
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="mt-3 text-xs text-muted-foreground">已保存 {{ savedPlans.length }}/3 个方案（数据仅保存在当前页面内存中）</p>
           </div>
         </div>
 
@@ -486,9 +544,43 @@ const resetCalculator = () => {
   premiumResult.value = null
 }
 
-// 产品对比
-const compareProducts = () => {
-  alert('产品对比功能开发中，将提供多家保险公司产品对比')
+// 方案对比（内存保存，最多 3 个）
+const savedPlans = ref([])
+const MAX_PLANS = 3
+
+const formatPeriod = (p) => (p === '终身' ? '终身' : `${p}年`)
+
+// 保存当前投保参数为对比方案
+const savePlan = () => {
+  if (!premiumResult.value) {
+    alert('请先填写有效的投保参数')
+    return
+  }
+  if (savedPlans.value.length >= MAX_PLANS) {
+    alert(`最多保存 ${MAX_PLANS} 个方案，请先删除或清空已有方案`)
+    return
+  }
+
+  savedPlans.value.push({
+    id: Date.now(),
+    type: insuranceType.value,
+    typeName: getInsuranceTypeName(insuranceType.value),
+    age: insuranceType.value === 'car' ? null : age.value,
+    coverage: coverage.value,
+    period: period.value,
+    yearlyPremium: premiumResult.value.yearlyPremium,
+    totalPremium: period.value === '终身' ? null : premiumResult.value.totalPremium
+  })
+}
+
+// 删除单个方案
+const removePlan = (id) => {
+  savedPlans.value = savedPlans.value.filter(plan => plan.id !== id)
+}
+
+// 一键清空所有方案
+const clearPlans = () => {
+  savedPlans.value = []
 }
 
 // 导出报价

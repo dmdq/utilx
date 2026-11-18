@@ -489,9 +489,14 @@ const generateQuotes = async () => {
   isGenerating.value = false
 }
 
-// 重新随机
+// 重新随机（Fisher-Yates 洗牌，sort(random) 有偏）
 const shuffleQuotes = () => {
-  currentQuotes.value = currentQuotes.value.sort(() => Math.random() - 0.5)
+  const q = [...currentQuotes.value]
+  for (let i = q.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[q[i], q[j]] = [q[j], q[i]]
+  }
+  currentQuotes.value = q
 }
 
 // 清空结果

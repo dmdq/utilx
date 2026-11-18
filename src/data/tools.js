@@ -3,7 +3,7 @@ export const tools = [
   {
     id: 'json-formatter',
     name: 'JSON格式化',
-    description: '美化、压缩、验证JSON数据',
+    description: 'JSON格式化与压缩工具，粘贴即自动校验语法，缩进宽度可调，全程浏览器本地处理',
     category: 'format',
     icon: 'FileJson',
     viewCount: 15600,
@@ -18,7 +18,7 @@ export const tools = [
   {
     id: 'json-to-xml',
     name: 'JSON转XML',
-    description: 'JSON数据转换为XML格式',
+    description: '把JSON数据一键转换为带缩进的XML文档，自动处理节点与属性映射，本地转换不上传',
     category: 'format',
     icon: 'FileText',
     viewCount: 6800,
@@ -33,7 +33,7 @@ export const tools = [
   {
     id: 'json-to-yaml',
     name: 'JSON转YAML',
-    description: 'JSON数据转换为YAML格式',
+    description: 'JSON与YAML双向转换，输出规范缩进的配置文件，适合K8s与CI场景，纯本地运算',
     category: 'format',
     icon: 'FileText',
     viewCount: 5600,
@@ -48,7 +48,7 @@ export const tools = [
   {
     id: 'json-to-csv',
     name: 'JSON转CSV',
-    description: 'JSON数据转换为CSV格式',
+    description: '将JSON数组扁平化为CSV表格，自动识别表头并转义逗号引号，一键复制导出结果',
     category: 'format',
     icon: 'Database',
     viewCount: 7200,
@@ -63,7 +63,7 @@ export const tools = [
   {
     id: 'xml-formatter',
     name: 'XML格式化',
-    description: '格式化、压缩XML数据',
+    description: 'XML代码美化与压缩利器，可自定义缩进层级，实时校验标签闭合，数据不出浏览器',
     category: 'format',
     icon: 'FileText',
     viewCount: 7200,
@@ -78,7 +78,7 @@ export const tools = [
   {
     id: 'xml-to-json',
     name: 'XML转JSON',
-    description: 'XML数据转换为JSON格式',
+    description: '解析XML文档并转为结构清晰的JSON，自动处理属性与文本节点，转换全在本地完成',
     category: 'format',
     icon: 'FileText',
     viewCount: 6400,
@@ -93,7 +93,7 @@ export const tools = [
   {
     id: 'sql-formatter',
     name: 'SQL格式化',
-    description: '美化SQL语句，支持多种数据库',
+    description: '美化SQL查询语句，兼容MySQL、Oracle等方言，缩进与关键字大小写风格可调',
     category: 'format',
     icon: 'Database',
     viewCount: 9800,
@@ -108,7 +108,7 @@ export const tools = [
   {
     id: 'css-formatter',
     name: 'CSS格式化',
-    description: '美化、压缩CSS代码',
+    description: 'CSS样式表美化与压缩一体工具，缩进风格可选，助您减小文件体积，本地快速处理',
     category: 'format',
     icon: 'FileText',
     viewCount: 8200,
@@ -123,7 +123,7 @@ export const tools = [
   {
     id: 'html-formatter',
     name: 'HTML格式化',
-    description: '格式化HTML代码',
+    description: 'HTML代码自动整理排版，缩进与标签层级清晰可读，压缩美化一键切换，不上传代码',
     category: 'format',
     icon: 'FileText',
     viewCount: 7800,
@@ -138,7 +138,7 @@ export const tools = [
   {
     id: 'csv-formatter',
     name: 'CSV格式化',
-    description: '美化CSV数据，表格预览',
+    description: 'CSV数据美化排版并生成表格预览，自动识别分隔符与引号转义，处理全程本地进行',
     category: 'format',
     icon: 'FileText',
     viewCount: 6500,
@@ -153,7 +153,7 @@ export const tools = [
   {
     id: 'yaml-formatter',
     name: 'YAML格式化',
-    description: '美化YAML配置文件',
+    description: 'YAML配置格式化助手，统一缩进与键名排序，语法错误即时提示，本地安全编辑',
     category: 'format',
     icon: 'FileText',
     viewCount: 5900,
@@ -168,7 +168,7 @@ export const tools = [
   {
     id: 'toml-formatter',
     name: 'TOML格式化',
-    description: '格式化TOML配置文件',
+    description: 'TOML配置文件格式化，规范缩进与空格风格，语法校验实时反馈，文件不出本地',
     category: 'format',
     icon: 'FileText',
     viewCount: 4200,
@@ -183,7 +183,7 @@ export const tools = [
   {
     id: 'toml-to-json',
     name: 'TOML与JSON互转',
-    description: 'TOML与JSON格式互相转换',
+    description: 'TOML与JSON双向互转，完整保留数据类型与嵌套结构，配置迁移一键完成于本地',
     category: 'format',
     icon: 'FileText',
     viewCount: 3800,
@@ -198,7 +198,7 @@ export const tools = [
   {
     id: 'html-to-markdown',
     name: 'HTML转Markdown',
-    description: 'HTML转换为Markdown格式',
+    description: '网页HTML转Markdown工具，保留标题、链接与图片语法，转换即时完成于浏览器本地',
     category: 'format',
     icon: 'FileText',
     viewCount: 4500,
@@ -230,7 +230,7 @@ export const tools = [
   {
     id: 'base64-encode',
     name: 'Base64编码',
-    description: '文本/图片Base64编码',
+    description: '文本或图片一键编码为Base64字符串，适配Data URI内联场景，编码全程本地完成',
     category: 'encode',
     icon: 'Hash',
     viewCount: 12800,
@@ -245,7 +245,7 @@ export const tools = [
   {
     id: 'base64-decode',
     name: 'Base64解码',
-    description: 'Base64数据解码还原',
+    description: '快速解码Base64字符串，还原可读文本或图片预览，兼容URL安全变体，全程本地处理',
     category: 'encode',
     icon: 'Hash',
     viewCount: 11500,
@@ -260,7 +260,7 @@ export const tools = [
   {
     id: 'url-encode',
     name: 'URL编码',
-    description: '对URL进行编码',
+    description: '对链接进行百分号编码，中文与特殊字符安全转义，避免URL传参乱码，本地即时完成',
     category: 'encode',
     icon: 'Link',
     viewCount: 8900,
@@ -275,7 +275,7 @@ export const tools = [
   {
     id: 'url-decode',
     name: 'URL解码',
-    description: '解码URL编码数据',
+    description: '还原百分号编码的URL地址，自动识别加号与%20空格写法，解码结果即刻可复制',
     category: 'encode',
     icon: 'Link',
     viewCount: 8500,
@@ -290,7 +290,7 @@ export const tools = [
   {
     id: 'html-encode',
     name: 'HTML编码',
-    description: 'HTML实体编码',
+    description: '将尖括号、引号等HTML敏感字符转义为实体，防范XSS注入风险，编码过程不出本地',
     category: 'encode',
     icon: 'FileText',
     viewCount: 6200,
@@ -305,7 +305,7 @@ export const tools = [
   {
     id: 'html-decode',
     name: 'HTML解码',
-    description: 'HTML实体解码',
+    description: 'HTML实体字符一键还原，支持命名、十进制与十六进制写法，解码全程不出浏览器',
     category: 'encode',
     icon: 'FileText',
     viewCount: 5800,
@@ -320,7 +320,7 @@ export const tools = [
   {
     id: 'hex-convert',
     name: '十六进制转换',
-    description: '文本与十六进制互转',
+    description: '文本与十六进制字符串双向互转，分隔格式多样可选，调试协议与编码学习必备，本地转换',
     category: 'encode',
     icon: 'Hash',
     viewCount: 7300,
@@ -335,7 +335,7 @@ export const tools = [
   {
     id: 'binary-convert',
     name: '二进制转换',
-    description: '文本与二进制互转',
+    description: '文本与二进制01串互相转换，按字节分组显示更易读，帮助理解编码原理，纯本地运行',
     category: 'encode',
     icon: 'Code',
     viewCount: 6900,
@@ -350,7 +350,7 @@ export const tools = [
   {
     id: 'ascii-table',
     name: 'ASCII码表',
-    description: 'ASCII字符查询表',
+    description: '完整ASCII码对照表速查，十进制、十六进制与控制字符说明并排展示，支持搜索定位',
     category: 'encode',
     icon: 'FileText',
     viewCount: 5100,
@@ -365,7 +365,7 @@ export const tools = [
   {
     id: 'qrcode-generate',
     name: '二维码生成',
-    description: '生成二维码图片',
+    description: '输入文字或链接即刻生成二维码，尺寸与容错等级可调，图片支持本地导出下载',
     category: 'encode',
     icon: 'Image',
     viewCount: 9800,
@@ -382,7 +382,7 @@ export const tools = [
   {
     id: 'md5-generator',
     name: 'MD5生成器',
-    description: '生成MD5哈希值',
+    description: '计算文本或文件的MD5哈希值，提供32位与16位摘要，校验文件完整性常用，本地运算',
     category: 'crypto',
     icon: 'Shield',
     viewCount: 11200,
@@ -397,7 +397,7 @@ export const tools = [
   {
     id: 'sha-generator',
     name: 'SHA生成器',
-    description: 'SHA-1/256/512哈希计算',
+    description: 'SHA-1、SHA-256等哈希摘要一键计算，文本与文件皆可校验，算法即时切换，本地运行',
     category: 'crypto',
     icon: 'Shield',
     viewCount: 9800,
@@ -412,7 +412,7 @@ export const tools = [
   {
     id: 'aes-encrypt',
     name: 'AES加密',
-    description: 'AES对称加密',
+    description: 'AES对称加密工具，支持128、192、256位密钥与常见分组模式，明文不出浏览器',
     category: 'crypto',
     icon: 'Lock',
     viewCount: 8500,
@@ -427,7 +427,7 @@ export const tools = [
   {
     id: 'aes-decrypt',
     name: 'AES解密',
-    description: 'AES对称解密',
+    description: '输入密文与密钥即可AES本地解密，自动适配CBC、ECB等分组模式，还原原始文本',
     category: 'crypto',
     icon: 'Lock',
     viewCount: 8000,
@@ -442,7 +442,7 @@ export const tools = [
   {
     id: 'rsa-generate',
     name: 'RSA密钥生成',
-    description: '生成RSA公私钥对',
+    description: '快速生成RSA公私钥对，1024至4096位密钥长度可选，输出标准PEM格式，本地完成',
     category: 'crypto',
     icon: 'Key',
     viewCount: 7600,
@@ -457,7 +457,7 @@ export const tools = [
   {
     id: 'rsa-encrypt',
     name: 'RSA加密',
-    description: 'RSA非对称加密',
+    description: '使用RSA公钥加密短文本，保障敏感信息传输安全，支持PEM密钥格式，加密在本地进行',
     category: 'crypto',
     icon: 'Lock',
     viewCount: 6800,
@@ -472,7 +472,7 @@ export const tools = [
   {
     id: 'rsa-decrypt',
     name: 'RSA解密',
-    description: 'RSA非对称解密',
+    description: '以RSA私钥解密公钥加密的数据，还原原始明文内容，兼容PEM格式密钥，本地安全解密',
     category: 'crypto',
     icon: 'Lock',
     viewCount: 6500,
@@ -487,7 +487,7 @@ export const tools = [
   {
     id: 'bcrypt-generate',
     name: 'Bcrypt加密',
-    description: '密码Bcrypt哈希',
+    description: '为密码生成带随机盐的Bcrypt哈希，计算成本因子可调，广泛用于登录鉴权，本地计算',
     category: 'crypto',
     icon: 'Shield',
     viewCount: 9200,
@@ -502,7 +502,7 @@ export const tools = [
   {
     id: 'bcrypt-verify',
     name: 'Bcrypt验证',
-    description: '验证Bcrypt哈希',
+    description: '校验明文密码与Bcrypt哈希是否匹配，登录逻辑调试利器，验证过程纯本地完成',
     category: 'crypto',
     icon: 'Check',
     viewCount: 6400,
@@ -517,7 +517,7 @@ export const tools = [
   {
     id: 'jwt-decode',
     name: 'JWT解析器',
-    description: '解析JWT令牌',
+    description: '解析JWT令牌的Header与Payload内容，过期时间一目了然，全部解析在本地完成',
     category: 'crypto',
     icon: 'FileCode',
     viewCount: 11200,
@@ -532,7 +532,7 @@ export const tools = [
   {
     id: 'jwt-verify',
     name: 'JWT验证器',
-    description: '验证JWT签名',
+    description: '验证JWT签名有效性与过期状态，支持HS256等常见算法，调试接口鉴权必备，本地校验',
     category: 'crypto',
     icon: 'Check',
     viewCount: 8500,
@@ -547,7 +547,7 @@ export const tools = [
   {
     id: 'uuid-generator',
     name: 'UUID生成器',
-    description: '生成UUID/GUID',
+    description: '批量生成UUID与GUID标识符，v1时间戳、v4随机等多种版本可选，一键复制取用',
     category: 'crypto',
     icon: 'Hash',
     viewCount: 13500,
@@ -562,7 +562,7 @@ export const tools = [
   {
     id: 'gmsm-tools',
     name: '国密算法工具',
-    description: 'SM2/SM3/SM4国密算法',
+    description: 'SM2、SM3、SM4国密算法套件，覆盖签名、摘要与对称加密，适配信创场景，本地完成',
     category: 'crypto',
     icon: 'Shield',
     viewCount: 4500,
@@ -1072,7 +1072,7 @@ export const tools = [
   {
     id: 'binary-viewer',
     name: '二进制查看器',
-    description: '以十六进制和ASCII格式查看文件内容',
+    description: '以十六进制与ASCII双栏查看文件内容，偏移量定位精准，分析二进制文件更直观',
     category: 'encode',
     icon: 'FileSearch',
     viewCount: 4700,
@@ -1256,7 +1256,7 @@ export const tools = [
   {
     id: 'password-strength-checker',
     name: '密码强度检测器',
-    description: '检测密码强度，分析安全性，提供改进建议',
+    description: '评估密码强度等级，从长度、字符多样性与常见弱口令库分析安全性并给出改进建议',
     category: 'security',
     icon: 'Shield',
     viewCount: 7600,
@@ -1361,7 +1361,7 @@ export const tools = [
   {
     id: 'jwt-parser',
     name: 'JWT令牌解析器',
-    description: '解析JWT令牌，验证签名，检查有效性',
+    description: '逐段拆解JWT令牌，展示签名算法与声明字段，验证有效期与签名状态，本地完成解析',
     category: 'security',
     icon: 'FileCode',
     viewCount: 6200,
@@ -1618,7 +1618,7 @@ export const tools = [
   {
     id: 'data-sampling-tool',
     name: '数据采样工具',
-    description: '对数据集进行采样、分桶、分组操作',
+    description: '对数据集执行随机采样、分桶与分组统计，比例与数量灵活可控，快速抽样洞察全貌',
     category: 'others',
     icon: 'Filter',
     viewCount: 5620,
@@ -1633,7 +1633,7 @@ export const tools = [
   {
     id: 'data-structure-builder',
     name: '数据结构构建器',
-    description: '可视化构建和操作数据结构',
+    description: '可视化构建树、图等常见数据结构，节点增删与遍历演示直观呈现，助力算法学习',
     category: 'others',
     icon: 'Network',
     viewCount: 2130,
@@ -1648,7 +1648,7 @@ export const tools = [
   {
     id: 'sorting-algorithm-visualizer',
     name: '排序算法可视化',
-    description: '可视化展示冒泡、快速、归并等排序过程',
+    description: '动画演示冒泡、快速、归并等排序算法执行过程，步进调速观察比较与交换细节',
     category: 'others',
     icon: 'BarChart2',
     viewCount: 2390,
@@ -1663,7 +1663,7 @@ export const tools = [
   {
     id: 'clipboard-manager-pro',
     name: '增强剪贴板管理器',
-    description: '支持分类、搜索、格式化的剪贴板历史',
+    description: '剪贴板历史增强管理，分类归档与全文搜索兼备，常用片段一键复用，效率翻倍',
     category: 'others',
     icon: 'Clipboard',
     viewCount: 4210,
@@ -1920,7 +1920,7 @@ export const tools = [
   {
     id: 'timestamp-convert',
     name: '时间戳转换',
-    description: 'Unix时间戳与日期互转',
+    description: 'Unix时间戳与标准日期时间双向互转，毫秒秒级自适应，多时区结果同屏对照',
     category: 'time',
     icon: 'Clock',
     viewCount: 14200,
@@ -1935,7 +1935,7 @@ export const tools = [
   {
     id: 'cron-parser',
     name: 'Cron解析器',
-    description: '解析Cron表达式',
+    description: '解析Cron表达式为人类可读的执行计划，列出未来触发时间，定时任务配置不再费解',
     category: 'time',
     icon: 'Calendar',
     viewCount: 7500,
@@ -1950,7 +1950,7 @@ export const tools = [
   {
     id: 'cron-generator',
     name: 'Cron生成器',
-    description: '可视化生成Cron表达式',
+    description: '可视化配置分时日月周字段，即时生成标准Cron表达式并预览执行时间',
     category: 'time',
     icon: 'Calendar',
     viewCount: 8000,
@@ -1965,7 +1965,7 @@ export const tools = [
   {
     id: 'timezone-convert',
     name: '时区转换',
-    description: '不同时区时间转换',
+    description: '覆盖全球主要时区的时间换算器，多城市时刻同屏对照，会议排期不再算错时差',
     category: 'time',
     icon: 'Globe',
     viewCount: 6800,
@@ -1980,7 +1980,7 @@ export const tools = [
   {
     id: 'date-calculator',
     name: '日期计算器',
-    description: '日期加减计算',
+    description: '日期加减天数一键计算，起点任选，工作日与自然日结果一并呈现，日程推算更省心',
     category: 'time',
     icon: 'Calculator',
     viewCount: 7200,
@@ -1995,7 +1995,7 @@ export const tools = [
   {
     id: 'date-diff',
     name: '日期差计算',
-    description: '计算两个日期差值',
+    description: '精确计算两个日期间隔的天数、周数与月数，纪念日与工期核算即取即用',
     category: 'time',
     icon: 'Calculator',
     viewCount: 6500,
@@ -2010,7 +2010,7 @@ export const tools = [
   {
     id: 'week-calculator',
     name: '周数计算器',
-    description: '计算日期所在周数',
+    description: '查询任意日期的ISO周数与所在周起止日，跨年周归属清晰标注，排期对表更方便',
     category: 'time',
     icon: 'Calendar',
     viewCount: 4200,
@@ -2025,7 +2025,7 @@ export const tools = [
   {
     id: 'countdown-timer',
     name: '倒计时器',
-    description: '倒计时工具',
+    description: '设定目标时间的倒计时器，天数时分秒实时跳动，重要节点与活动提醒一目了然',
     category: 'time',
     icon: 'Timer',
     viewCount: 6200,
@@ -2040,7 +2040,7 @@ export const tools = [
   {
     id: 'stopwatch',
     name: '秒表计时器',
-    description: '秒表计时工具',
+    description: '秒表计时工具，支持多次计次与分段统计，毫秒级精度满足运动与实验计时需求',
     category: 'time',
     icon: 'Activity',
     viewCount: 4800,
@@ -2055,7 +2055,7 @@ export const tools = [
   {
     id: 'workday-calculator',
     name: '工作日计算',
-    description: '排除周末计算工作日',
+    description: '灵活排除周末与节假日，精确计算两日期间的工作日天数，项目排期依据更可靠',
     category: 'time',
     icon: 'Calendar',
     viewCount: 3800,
@@ -2267,7 +2267,7 @@ export const tools = [
   {
     id: 'regex-tester',
     name: '正则表达式测试',
-    description: '在线测试正则',
+    description: '正则表达式在线测试台，实时高亮匹配结果与捕获组，多旗标组合即点即试',
     category: 'text',
     icon: 'Regex',
     viewCount: 7600,
@@ -2282,7 +2282,7 @@ export const tools = [
   {
     id: 'regex-generator',
     name: '正则生成器',
-    description: '可视化生成正则',
+    description: '按常见场景可视化拼装正则表达式，手机号邮箱等模板即选即用，附语法说明',
     category: 'text',
     icon: 'Regex',
     viewCount: 6200,
@@ -2297,7 +2297,7 @@ export const tools = [
   {
     id: 'text-diff',
     name: '文本对比',
-    description: '比较两个文本差异',
+    description: '逐行比对两段文本差异，新增删除与修改处颜色标注，代码与文档校对利器',
     category: 'text',
     icon: 'FileDiff',
     viewCount: 6800,
@@ -2312,7 +2312,7 @@ export const tools = [
   {
     id: 'case-converter',
     name: '大小写转换',
-    description: '文本大小写转换',
+    description: '英文大小写与命名风格转换器，驼峰、下划线、连字符一键互转，代码重构好帮手',
     category: 'text',
     icon: 'Type',
     viewCount: 5200,
@@ -2327,7 +2327,7 @@ export const tools = [
   {
     id: 'markdown-editor',
     name: 'Markdown编辑器',
-    description: '实时预览编辑器',
+    description: '所见即所得的Markdown编辑器，左右分屏实时预览，支持导出HTML与文档',
     category: 'text',
     icon: 'FileText',
     viewCount: 8500,
@@ -2342,7 +2342,7 @@ export const tools = [
   {
     id: 'text-counter',
     name: '字数统计',
-    description: '统计字数、字符数',
+    description: '统计文本字数、字符数与行数，中英文分别计数，写作投稿与限制字数场景常用',
     category: 'text',
     icon: 'FileText',
     viewCount: 4800,
@@ -2357,7 +2357,7 @@ export const tools = [
   {
     id: 'text-replace',
     name: '文本替换',
-    description: '批量文本查找替换',
+    description: '文本批量查找替换，支持正则与大小写选项，预览确认后一次生效，处理在本地完成',
     category: 'text',
     icon: 'FileText',
     viewCount: 5800,
@@ -2372,7 +2372,7 @@ export const tools = [
   {
     id: 'line-operations',
     name: '行操作工具',
-    description: '行排序、去重、过滤',
+    description: '按行处理文本利器：排序、去重、过滤、打乱一应俱全，批量整理日志与清单更高效',
     category: 'text',
     icon: 'List',
     viewCount: 4500,
@@ -2387,7 +2387,7 @@ export const tools = [
   {
     id: 'json-path',
     name: 'JSON路径查询',
-    description: 'JSONPath查询工具',
+    description: '使用JSONPath语法快速提取JSON数据字段，路径表达式实时验证，接口调试提效',
     category: 'text',
     icon: 'FileJson',
     viewCount: 3800,
@@ -2402,7 +2402,7 @@ export const tools = [
   {
     id: 'xpath-tester',
     name: 'XPath测试器',
-    description: 'XML XPath测试',
+    description: 'XPath表达式测试工具，XML节点选取结果即时预览，编写爬虫与解析规则更顺手',
     category: 'text',
     icon: 'FileText',
     viewCount: 3500,
@@ -2417,7 +2417,7 @@ export const tools = [
   {
     id: 'lorem-ipsum',
     name: '随机文本生成',
-    description: '生成Lorem Ipsum文本',
+    description: '生成指定段落与词数的Lorem Ipsum占位文本，排版设计填充素材即取即用',
     category: 'text',
     icon: 'FileText',
     viewCount: 4200,
@@ -2432,7 +2432,7 @@ export const tools = [
   {
     id: 'code-format',
     name: '代码格式化',
-    description: '格式化代码片段',
+    description: '多语言代码片段格式化，统一缩进与括号风格，贴入即整理，复制即带走',
     category: 'text',
     icon: 'Code',
     viewCount: 7200,
@@ -2464,7 +2464,7 @@ export const tools = [
   {
     id: 'ip-info',
     name: 'IP信息查询',
-    description: '查询IP地址信息',
+    description: '查询IP地址的归属地、运营商与ASN信息，支持IPv4与IPv6，定位结果清晰呈现',
     category: 'network',
     icon: 'Wifi',
     viewCount: 9300,
@@ -2479,7 +2479,7 @@ export const tools = [
   {
     id: 'whois-lookup',
     name: 'WHOIS查询',
-    description: '查询域名WHOIS信息',
+    description: '查询域名WHOIS注册信息，注册商、到期时间与DNS服务器一目了然',
     category: 'network',
     icon: 'Globe',
     viewCount: 6800,
@@ -2494,7 +2494,7 @@ export const tools = [
   {
     id: 'dns-lookup',
     name: 'DNS查询',
-    description: '查询DNS记录',
+    description: '检索域名的A、CNAME、MX等各类DNS记录，解析链路一键查明，排查域名问题更高效',
     category: 'network',
     icon: 'Wifi',
     viewCount: 7200,
@@ -2509,7 +2509,7 @@ export const tools = [
   {
     id: 'http-client',
     name: 'HTTP客户端',
-    description: '发送HTTP请求',
+    description: '网页版HTTP请求调试客户端，GET/POST等方法与请求头自定义，响应详情完整展示',
     category: 'network',
     icon: 'Globe',
     viewCount: 8500,
@@ -2524,7 +2524,7 @@ export const tools = [
   {
     id: 'websocket-test',
     name: 'WebSocket测试',
-    description: 'WebSocket连接测试',
+    description: '建立WebSocket连接在线联调，实时收发消息并记录帧日志，长连接调试看得见',
     category: 'network',
     icon: 'Wifi',
     viewCount: 5200,
@@ -2539,7 +2539,7 @@ export const tools = [
   {
     id: 'ssl-checker',
     name: 'SSL证书检查',
-    description: '检查SSL证书信息',
+    description: '检查网站SSL/TLS证书状态，颁发机构、有效期与加密套件一览，过期提前预警',
     category: 'network',
     icon: 'Shield',
     viewCount: 6200,
@@ -2554,7 +2554,7 @@ export const tools = [
   {
     id: 'subnet-calculator',
     name: '子网计算器',
-    description: 'IP子网划分计算',
+    description: 'IP子网划分计算器，CIDR与掩码换算、可用主机数统计一站完成',
     category: 'network',
     icon: 'Wifi',
     viewCount: 4800,
@@ -2569,7 +2569,7 @@ export const tools = [
   {
     id: 'port-checker',
     name: '端口扫描器',
-    description: '检查端口开放状态',
+    description: '检测目标主机端口开放状态，TCP连通性快速验证，服务排查与安全检查好帮手',
     category: 'network',
     icon: 'Wifi',
     viewCount: 5500,
@@ -2584,7 +2584,7 @@ export const tools = [
   {
     id: 'curl-to-code',
     name: 'cURL转代码',
-    description: 'cURL命令转编程语言代码',
+    description: '把cURL命令转换成Python、JavaScript等多语言请求代码，复制即用于项目',
     category: 'network',
     icon: 'Code',
     viewCount: 6800,
@@ -2599,7 +2599,7 @@ export const tools = [
   {
     id: 'request-analysis',
     name: '请求分析器',
-    description: '分析HTTP请求头',
+    description: '拆解HTTP请求头字段含义，UA、Cookie与鉴权信息逐项解释，接口调试更明白',
     category: 'network',
     icon: 'FileText',
     viewCount: 4200,
@@ -2614,7 +2614,7 @@ export const tools = [
   {
     id: 'user-agent-parser',
     name: 'UserAgent解析',
-    description: '解析浏览器UA信息',
+    description: '解析浏览器User-Agent字符串，内核版本、操作系统与设备类型一次看清',
     category: 'network',
     icon: 'Globe',
     viewCount: 3800,
@@ -2629,7 +2629,7 @@ export const tools = [
   {
     id: 'mime-types',
     name: 'MIME类型查询',
-    description: '查询文件MIME类型',
+    description: '文件扩展名与MIME类型对照查询，Content-Type设置参考，Web开发常备速查',
     category: 'network',
     icon: 'FileText',
     viewCount: 3200,
@@ -2659,7 +2659,7 @@ export const tools = [
   {
     id: 'network-speed-test',
     name: '网络速度测试',
-    description: '测试网络下载/上传速度、延迟和抖动',
+    description: '测量网络下载上传速度、延迟与抖动，多节点对照让带宽状况心中有数',
     category: 'network',
     icon: 'Wifi',
     viewCount: 8500,
@@ -2689,7 +2689,7 @@ export const tools = [
   {
     id: 'dns-cache-flusher',
     name: 'DNS缓存刷新',
-    description: 'DNS缓存刷新命令和指导',
+    description: '各系统DNS缓存清理命令速查，Windows、macOS步骤详细，刷新解析即刻生效',
     category: 'network',
     icon: 'RefreshCw',
     viewCount: 2900,
@@ -2704,7 +2704,7 @@ export const tools = [
   {
     id: 'cors-tester',
     name: 'CORS测试工具',
-    description: 'CORS跨域测试和配置代码生成',
+    description: '检测接口CORS跨域配置，预检请求模拟与响应头分析，附服务端配置代码生成',
     category: 'network',
     icon: 'Globe',
     viewCount: 4500,
@@ -2734,7 +2734,7 @@ export const tools = [
   {
     id: 'open-graph-validator',
     name: 'Open Graph验证器',
-    description: 'OG标签验证、社交媒体预览模拟',
+    description: '校验网页Open Graph标签完整性，模拟社交平台分享卡片预览，提升传播效果',
     category: 'network',
     icon: 'Share',
     viewCount: 2700,
@@ -2811,7 +2811,7 @@ export const tools = [
   {
     id: 'image-compress',
     name: '图片压缩',
-    description: '在线压缩图片',
+    description: '智能压缩JPG、PNG等图片体积，质量参数可视调节，清晰度与大小平衡掌控',
     category: 'image',
     icon: 'Image',
     viewCount: 12500,
@@ -2826,7 +2826,7 @@ export const tools = [
   {
     id: 'image-convert',
     name: '图片格式转换',
-    description: '转换图片格式',
+    description: 'JPG、PNG、WebP等图片格式互转，批量上传排队处理，输出画质可预先设定',
     category: 'image',
     icon: 'Image',
     viewCount: 9800,
@@ -2841,7 +2841,7 @@ export const tools = [
   {
     id: 'image-to-pdf',
     name: '图片转PDF',
-    description: '将多张图片合并导出为PDF文档',
+    description: '多张图片按序合并导出为一份PDF文档，页面方向与排序自由调整，整理扫描件轻松',
     category: 'image',
     icon: 'FileText',
     viewCount: 8500,
@@ -2856,7 +2856,7 @@ export const tools = [
   {
     id: 'image-resize',
     name: '图片尺寸调整',
-    description: '调整图片尺寸',
+    description: '按像素或百分比调整图片宽高尺寸，等比锁定防止变形，批量处理省时省力',
     category: 'image',
     icon: 'Image',
     viewCount: 8500,
@@ -2871,7 +2871,7 @@ export const tools = [
   {
     id: 'base64-image',
     name: 'Base64图片',
-    description: '图片与Base64互转',
+    description: '图片与Base64编码互转，Data URI直接内嵌CSS或HTML，省去图片请求',
     category: 'image',
     icon: 'Hash',
     viewCount: 6800,
@@ -2886,7 +2886,7 @@ export const tools = [
   {
     id: 'color-picker',
     name: '颜色选择器',
-    description: '取色器、颜色转换',
+    description: '屏幕取色与颜色格式转换一体，HEX、RGB、HSL即时互转，配色灵感随手留存',
     category: 'image',
     icon: 'Palette',
     viewCount: 11200,
@@ -2901,7 +2901,7 @@ export const tools = [
   {
     id: 'qrcode-scan',
     name: '二维码识别',
-    description: '识别二维码内容',
+    description: '上传或粘贴二维码图片即识别内容，链接与文本一键提取，扫码结果秒回',
     category: 'image',
     icon: 'Image',
     viewCount: 6200,
@@ -2916,7 +2916,7 @@ export const tools = [
   {
     id: 'exif-viewer',
     name: 'EXIF查看器',
-    description: '查看图片EXIF信息',
+    description: '读取照片EXIF元数据，拍摄参数、GPS位置与设备型号一览，隐私检查必备',
     category: 'image',
     icon: 'Image',
     viewCount: 4800,
@@ -2931,7 +2931,7 @@ export const tools = [
   {
     id: 'icon-generator',
     name: '图标生成器',
-    description: '生成favicon等图标',
+    description: '上传一张图即可生成多尺寸favicon图标，覆盖16到512像素，站点图标一站配齐',
     category: 'image',
     icon: 'Image',
     viewCount: 5500,
@@ -2946,7 +2946,7 @@ export const tools = [
   {
     id: 'image-watermark',
     name: '图片水印',
-    description: '添加文字/图片水印',
+    description: '批量给图片打上文字或Logo水印，透明度角度位置可调，版权保护更省心',
     category: 'image',
     icon: 'Image',
     viewCount: 6200,
@@ -2961,7 +2961,7 @@ export const tools = [
   {
     id: 'image-crop',
     name: '图片裁剪',
-    description: '在线裁剪图片',
+    description: '自由裁剪图片至目标比例，常用社交尺寸模板即选即用，构图由你决定',
     category: 'image',
     icon: 'Image',
     viewCount: 7800,
@@ -2976,7 +2976,7 @@ export const tools = [
   {
     id: 'image-merge',
     name: '图片合并',
-    description: '合并多张图片',
+    description: '多张图片拼接为长图或网格组合，横竖方向与间距可设，素材整理更顺手',
     category: 'image',
     icon: 'Image',
     viewCount: 4500,
@@ -2991,7 +2991,7 @@ export const tools = [
   {
     id: 'screenshot-tool',
     name: '网页截图',
-    description: '生成网页截图',
+    description: '输入网址生成整页网页截图，长图与视口模式可选，配图存档一键搞定',
     category: 'image',
     icon: 'Image',
     viewCount: 8800,
@@ -3036,7 +3036,7 @@ export const tools = [
   {
     id: 'image-border',
     name: '图片边框圆角',
-    description: '为图片添加边框、圆角和阴影效果',
+    description: '为图片添加边框、圆角与阴影效果，颜色宽度自由设定，美化配图一步完成',
     category: 'image',
     icon: 'Frame',
     viewCount: 6200,
@@ -3216,7 +3216,7 @@ export const tools = [
   {
     id: 'image-ocr',
     name: 'OCR图片文字识别',
-    description: '从图片中提取文字，支持多语言识别',
+    description: '识别图片中的文字并提取为可编辑文本，多语言混排支持，告别手动誊录',
     category: 'image',
     icon: 'Type',
     viewCount: 9200,
@@ -3246,7 +3246,7 @@ export const tools = [
   {
     id: 'image-frame',
     name: '相框效果工具',
-    description: '为图片添加相框、边框和装饰效果',
+    description: '相框与装饰边框在线添加，多种艺术样式模板任选，普通照片秒变精致作品',
     category: 'image',
     icon: 'Frame',
     viewCount: 4200,
@@ -3308,7 +3308,7 @@ export const tools = [
   {
     id: 'mock-data',
     name: 'Mock数据生成',
-    description: '生成模拟数据',
+    description: '按模板批量生成姓名、地址等模拟数据，字段规则自定义，前端联调不缺测试料',
     category: 'dev',
     icon: 'Database',
     viewCount: 9200,
@@ -3323,7 +3323,7 @@ export const tools = [
   {
     id: 'api-doc',
     name: 'API文档生成',
-    description: '生成API文档',
+    description: '依据接口定义快速产出API文档，Swagger与OpenAPI规范兼容，协作沟通更顺畅',
     category: 'dev',
     icon: 'FileText',
     viewCount: 6800,
@@ -3353,7 +3353,7 @@ export const tools = [
   {
     id: 'sql-to-model',
     name: 'SQL转Model类',
-    description: 'SQL转编程语言Model类',
+    description: '建表SQL一键转为Java、Go等语言的Model实体类，字段类型自动映射，省去手写',
     category: 'dev',
     icon: 'Database',
     viewCount: 5500,
@@ -3368,7 +3368,7 @@ export const tools = [
   {
     id: 'json-to-model',
     name: 'JSON转Model类',
-    description: 'JSON转编程语言类',
+    description: 'JSON结构自动生成TypeScript等语言类型定义，字段注释一并带上，开发提效明显',
     category: 'dev',
     icon: 'FileJson',
     viewCount: 6200,
@@ -3383,7 +3383,7 @@ export const tools = [
   {
     id: 'xml-to-model',
     name: 'XML转Model类',
-    description: 'XML转编程语言类',
+    description: '由XML结构推导各语言Model类代码，节点属性映射字段，接口对接少写样板代码',
     category: 'dev',
     icon: 'FileText',
     viewCount: 4200,
@@ -3398,7 +3398,7 @@ export const tools = [
   {
     id: 'swagger-viewer',
     name: 'Swagger查看器',
-    description: '查看Swagger文档',
+    description: '在线渲染Swagger与OpenAPI接口文档，结构目录清晰导航，联调查阅两相宜',
     category: 'dev',
     icon: 'FileText',
     viewCount: 7500,
@@ -3413,7 +3413,7 @@ export const tools = [
   {
     id: 'git-command',
     name: 'Git命令生成',
-    description: '生成Git操作命令',
+    description: '按操作场景检索Git命令用法，分支、回滚与子模块示例齐全，附参数说明',
     category: 'dev',
     icon: 'Code',
     viewCount: 5800,
@@ -3428,7 +3428,7 @@ export const tools = [
   {
     id: 'docker-command',
     name: 'Docker命令生成',
-    description: '生成Docker命令',
+    description: '场景化生成Docker与Compose命令，镜像容器操作模板即选即用，运维效率升级',
     category: 'dev',
     icon: 'Package',
     viewCount: 4800,
@@ -3443,7 +3443,7 @@ export const tools = [
   {
     id: 'linux-command',
     name: 'Linux命令生成',
-    description: '生成Linux命令',
+    description: '依任务场景速查Linux常用命令，文件、进程与网络分类清晰，示例可直接套用',
     category: 'dev',
     icon: 'Terminal',
     viewCount: 5200,
@@ -3458,7 +3458,7 @@ export const tools = [
   {
     id: 'regex-cheatsheet',
     name: '正则备忘单',
-    description: '正则表达式速查表',
+    description: '正则表达式语法速查手册，元字符、断言与贪婪匹配逐项讲解，随查随用',
     category: 'dev',
     icon: 'Regex',
     viewCount: 6500,
@@ -3473,7 +3473,7 @@ export const tools = [
   {
     id: 'charset-convert',
     name: '字符集转换',
-    description: '文本字符集转换',
+    description: '文本在UTF-8、GBK、GB2312等字符集间转换，乱码一键修复，编码信息透明呈现',
     category: 'dev',
     icon: 'Type',
     viewCount: 3800,
@@ -3488,7 +3488,7 @@ export const tools = [
   {
     id: 'crontab-generator',
     name: 'Crontab生成',
-    description: '生成Crontab配置',
+    description: '交互式生成Crontab定时任务配置，常用周期模板即选即改，语法错误提前规避',
     category: 'dev',
     icon: 'Clock',
     viewCount: 6800,
@@ -3503,7 +3503,7 @@ export const tools = [
   {
     id: 'json-schema',
     name: 'JSON Schema生成',
-    description: '生成JSON Schema',
+    description: '根据JSON样例自动推导JSON Schema结构，校验规则一键生成，接口契约更规范',
     category: 'dev',
     icon: 'FileJson',
     viewCount: 4200,
@@ -3567,7 +3567,7 @@ export const tools = [
   {
     id: 'json-php-converter',
     name: 'JSON与PHP数组转换',
-    description: 'JSON数据与PHP数组语法互相转换',
+    description: 'JSON字符串与PHP数组语法双向转换，关联数组结构保持完整，Laravel调试顺手',
     category: 'format',
     icon: 'Code',
     viewCount: 4560,
@@ -3629,7 +3629,7 @@ export const tools = [
   {
     id: 'sql-query-optimizer',
     name: 'SQL查询优化器',
-    description: '分析SQL查询并提供优化建议',
+    description: '分析SQL查询语句性能短板，索引与改写建议逐条给出，慢查询优化有的放矢',
     category: 'dev',
     icon: 'Database',
     viewCount: 8720,
@@ -3659,7 +3659,7 @@ export const tools = [
   {
     id: 'svg-path-editor',
     name: 'SVG路径编辑器',
-    description: '可视化编辑SVG path数据',
+    description: '可视化编辑SVG路径数据，贝塞尔曲线拖拽调点，Path代码实时同步更新',
     category: 'design',
     icon: 'Image',
     viewCount: 7120,
@@ -3689,7 +3689,7 @@ export const tools = [
   {
     id: 'data-format-validator',
     name: '数据格式验证器',
-    description: '验证身份证号、手机号、邮箱等格式',
+    description: '校验身份证号、手机号、邮箱等常见格式合法性，批量检测即时反馈结果',
     category: 'text',
     icon: 'Check',
     viewCount: 3560,
@@ -3704,7 +3704,7 @@ export const tools = [
   {
     id: 'data-masking-tool',
     name: '数据脱敏工具',
-    description: '对敏感数据进行脱敏处理',
+    description: '对手机号、身份证等敏感数据批量脱敏，掩码规则灵活组合，隐私合规更省心',
     category: 'security',
     icon: 'EyeOff',
     viewCount: 8190,
@@ -3719,7 +3719,7 @@ export const tools = [
   {
     id: 'algorithm-complexity-calculator',
     name: '算法复杂度计算器',
-    description: '分析代码片段的时间/空间复杂度',
+    description: '估算代码片段的时间与空间复杂度，Big-O结果附推导说明，算法学习面试皆可用',
     category: 'dev',
     icon: 'Cpu',
     viewCount: 1290,
@@ -3734,7 +3734,7 @@ export const tools = [
   {
     id: 'regex-debugger',
     name: '正则表达式调试器',
-    description: '逐步调试正则表达式匹配过程',
+    description: '逐步回放正则表达式的匹配过程，回溯与捕获组状态可视，定位低效模式更容易',
     category: 'text',
     icon: 'Bug',
     viewCount: 5690,
@@ -3764,7 +3764,7 @@ export const tools = [
   {
     id: 'roman-numeral-converter',
     name: '罗马数字转换',
-    description: '罗马数字与阿拉伯数字互转',
+    description: '罗马数字与阿拉伯数字双向换算，对照步骤清晰展示，历史与习题查询两相宜',
     category: 'text',
     icon: 'Hash',
     viewCount: 6420,
@@ -3779,7 +3779,7 @@ export const tools = [
   {
     id: 'rmb-capital-converter',
     name: '人民币大写转换',
-    description: '数字转换为人民币大写金额',
+    description: '数字金额一键转为人民币大写，符合财务票据规范，发票合同填写零差错',
     category: 'text',
     icon: 'Banknote',
     viewCount: 1230,
@@ -3974,7 +3974,7 @@ export const tools = [
   {
     id: 'html-to-text',
     name: 'HTML转纯文本工具',
-    description: '去除HTML标签，提取纯文本内容',
+    description: '剥离HTML标签提取纯文本内容，保留段落换行结构，网页正文抓取整理利器',
     category: 'text',
     icon: 'FileText',
     viewCount: 1000,
@@ -4004,7 +4004,7 @@ export const tools = [
   {
     id: 'text-indent',
     name: '文本缩进格式化工具',
-    description: '调整文本缩进，支持空格和Tab互转',
+    description: '文本缩进批量调整，Tab与空格互转并支持自定义宽度，代码粘贴排版整齐',
     category: 'text',
     icon: 'Indent',
     viewCount: 1000,
@@ -4019,7 +4019,7 @@ export const tools = [
   {
     id: 'env-variable-manager',
     name: '环境变量管理器',
-    description: '.env文件格式转换、验证和管理',
+    description: '.env环境变量文件在线管理，格式校验、键值排序与多环境转换一并支持',
     category: 'dev',
     icon: 'Settings',
     viewCount: 1230,
@@ -4049,7 +4049,7 @@ export const tools = [
   {
     id: 'nginx-config-generator',
     name: 'Nginx配置生成器',
-    description: '根据需求生成Nginx配置文件',
+    description: '按场景生成Nginx配置文件，反向代理、HTTPS与负载均衡模板开箱即用',
     category: 'network',
     icon: 'Server',
     viewCount: 7260,
@@ -4064,7 +4064,7 @@ export const tools = [
   {
     id: 'test-data-generator',
     name: '测试数据生成器',
-    description: '根据业务规则生成测试数据',
+    description: '依据字段规则批量生成测试数据，手机号、姓名与时间格式随心定义，联调提速',
     category: 'dev',
     icon: 'TestTube',
     viewCount: 2130,
@@ -4079,7 +4079,7 @@ export const tools = [
   {
     id: 'web-component-analyzer',
     name: 'Web组件分析器',
-    description: '分析HTML元素的可访问属性和事件',
+    description: '解析HTML元素的可访问属性、ARIA标注与事件绑定，无障碍合规检查更轻松',
     category: 'dev',
     icon: 'Code',
     viewCount: 1230,
@@ -4094,7 +4094,7 @@ export const tools = [
   {
     id: 'api-contract-tester',
     name: 'API契约测试器',
-    description: '验证API请求响应是否符合契约',
+    description: '校验API请求响应是否符合契约定义，差异字段精确定位，接口联调风险前置',
     category: 'dev',
     icon: 'FileCheck',
     viewCount: 2300,
@@ -4109,7 +4109,7 @@ export const tools = [
   {
     id: 'performance-benchmark',
     name: '性能基准测试',
-    description: '对代码片段进行性能测试和对比',
+    description: '多段代码片段性能对比测试，执行耗时统计排行，优化前后差距一目了然',
     category: 'dev',
     icon: 'Zap',
     viewCount: 1020,
@@ -4124,7 +4124,7 @@ export const tools = [
   {
     id: 'color-contrast-checker',
     name: '颜色对比度检查',
-    description: '检查颜色对比度是否符合WCAG标准',
+    description: '检测前景与背景色对比度是否满足WCAG无障碍标准，分级达标情况清晰标注',
     category: 'design',
     icon: 'Palette',
     viewCount: 2030,
@@ -4712,7 +4712,7 @@ export const tools = [
   {
     id: 'logo-maker',
     name: 'Logo制作器',
-    description: '使用几何图形组合设计专业Logo',
+    description: '以几何图形自由拼组Logo标志，配色与字体随调随看，品牌形象快速成型',
     category: 'design',
     icon: 'PenTool',
     viewCount: 8900,
@@ -4864,7 +4864,7 @@ export const tools = [
   {
     id: 'golden-ratio-calculator',
     name: '黄金比例计算器',
-    description: '计算黄金比例分割，用于版式设计和排版',
+    description: '计算黄金比例分割数值，版式与界面布局按1:1.618优雅分配，设计更有秩序',
     category: 'design',
     icon: 'Ruler',
     viewCount: 1000,
@@ -4909,7 +4909,7 @@ export const tools = [
   {
     id: 'letter-spacing-tool',
     name: '字间距工具',
-    description: '调整字母间距，预览效果',
+    description: '调整文字字间距与词间距，CSS属性代码同步生成，排版效果实时预览',
     category: 'design',
     icon: 'Minus',
     viewCount: 1000,
@@ -4939,7 +4939,7 @@ export const tools = [
   {
     id: 'text-shadow-generator',
     name: '文字阴影生成器',
-    description: '生成多层text-shadow效果',
+    description: '多层文字阴影效果可视化制作，偏移、模糊与颜色逐层调节，CSS代码即时复制',
     category: 'design',
     icon: 'Type',
     viewCount: 1000,
@@ -4999,7 +4999,7 @@ export const tools = [
   {
     id: 'css-counter-generator',
     name: 'CSS计数器生成器',
-    description: '生成自动编号样式',
+    description: '生成CSS计数器自动编号样式，列表序号与嵌套层级规则即配即得',
     category: 'design',
     icon: 'Hash',
     viewCount: 1000,
@@ -5015,7 +5015,7 @@ export const tools = [
   {
     id: 'placeholder-image-generator',
     name: '占位图生成器',
-    description: '生成指定尺寸的占位图片，可添加文字',
+    description: '生成指定尺寸与文字的占位图片，颜色自选即调即用，前端原型搭建提速',
     category: 'design',
     icon: 'Image',
     viewCount: 1000,
@@ -5030,7 +5030,7 @@ export const tools = [
   {
     id: 'favicon-generator',
     name: 'Favicon生成器',
-    description: '上传图片生成各尺寸favicon和图标',
+    description: '上传图标源图自动产出多尺寸favicon套装，ico与png格式齐备，网站图标一次配齐',
     category: 'design',
     icon: 'Star',
     viewCount: 1000,
@@ -5045,7 +5045,7 @@ export const tools = [
   {
     id: 'qr-code-generator',
     name: '二维码生成器',
-    description: '生成自定义样式的二维码',
+    description: '自定义二维码在线制作，前景底色与码点样式随意搭配，扫码效果实时预览',
     category: 'design',
     icon: 'QrCode',
     viewCount: 1000,
@@ -5060,7 +5060,7 @@ export const tools = [
   {
     id: 'svg-icon-library',
     name: 'SVG图标库',
-    description: '常用SVG图标，支持导出和定制',
+    description: '常用SVG图标在线检索与预览，颜色尺寸定制后一键导出代码，项目引入即用',
     category: 'design',
     icon: 'Icons',
     viewCount: 1000,
@@ -5075,7 +5075,7 @@ export const tools = [
   {
     id: 'icon-font-generator',
     name: '图标字体生成器',
-    description: '将SVG图标转换为Web字体使用',
+    description: '把SVG图标批量转换为Web字体文件，Unicode码点自动分配，字体图标即得',
     category: 'design',
     icon: 'Font',
     viewCount: 1000,
@@ -5090,7 +5090,7 @@ export const tools = [
   {
     id: 'color-blindness-simulator',
     name: '色盲模拟器',
-    description: '模拟不同类型的色盲视觉效果',
+    description: '模拟红绿色盲等视觉类型下的画面表现，无障碍设计自检，配色方案更包容',
     category: 'design',
     icon: 'Eye',
     viewCount: 1000,
@@ -5105,7 +5105,7 @@ export const tools = [
   {
     id: 'em-breakpoint-generator',
     name: 'EM断点生成器',
-    description: 'px转em计算，响应式断点生成',
+    description: '像素与em/rem数值互算，响应式断点与媒体查询代码一并生成，切图适配提速',
     category: 'design',
     icon: 'Zap',
     viewCount: 1000,
@@ -5120,7 +5120,7 @@ export const tools = [
   {
     id: 'aspect-ratio-calculator',
     name: '宽高比计算器',
-    description: '计算和锁定元素宽高比',
+    description: '输入原始宽高快速换算等比尺寸，16:9等常见比例锁定，告别拉伸变形',
     category: 'design',
     icon: 'AspectRatio',
     viewCount: 1000,
@@ -5135,7 +5135,7 @@ export const tools = [
   {
     id: 'grid-system-generator',
     name: '网格系统生成器',
-    description: '生成12/16/24列网格系统',
+    description: '生成12、16、24列网格系统，列宽间距与断点参数化输出，布局开发标准化',
     category: 'design',
     icon: 'Grid',
     viewCount: 1000,
@@ -5150,7 +5150,7 @@ export const tools = [
   {
     id: 'spacing-calculator',
     name: '间距计算器',
-    description: '基于基准单位生成间距系统',
+    description: '以基准字号或间距单位推算整套刻度，8点网格系统即刻生成，设计协作统一',
     category: 'design',
     icon: 'Gap',
     viewCount: 1000,
@@ -5165,7 +5165,7 @@ export const tools = [
   {
     id: 'color-naming-tool',
     name: '色彩命名工具',
-    description: '为颜色值生成语义化名称',
+    description: '为任意色值匹配语义化命名建议，设计令牌命名不再纠结，色板沟通更顺畅',
     category: 'design',
     icon: 'Tag',
     viewCount: 1000,
@@ -5195,7 +5195,7 @@ export const tools = [
   {
     id: 'tailwind-color-palette',
     name: 'Tailwind色板生成器',
-    description: '生成Tailwind风格的色阶',
+    description: '依据主色自动生成Tailwind风格色阶，50至950全档位输出，设计系统开箱可用',
     category: 'design',
     icon: 'Feather',
     viewCount: 1000,
@@ -5210,7 +5210,7 @@ export const tools = [
   {
     id: 'gradient-text-generator',
     name: '渐变文字生成器',
-    description: '生成文字渐变效果和背景裁剪代码',
+    description: '制作渐变文字并生成background-clip样式代码，色彩过渡逐字呈现，标题更吸睛',
     category: 'design',
     icon: 'Type',
     viewCount: 1000,
@@ -5420,7 +5420,7 @@ export const tools = [
   {
     id: 'tip-calculator',
     name: '小费计算器',
-    description: '餐厅小费计算、分账计算、税率支持',
+    description: '餐厅小费与AA分账一起算，比例税率自定义，人均金额即时呈现，聚餐结账不纠结',
     category: 'calculate',
     icon: 'DollarSign',
     viewCount: 950,
@@ -5450,7 +5450,7 @@ export const tools = [
   {
     id: 'loan-calculator',
     name: '贷款计算器',
-    description: '等额本息/等额本金还款计算、利息分析',
+    description: '房贷车贷月供一键测算，等额本息与等额本金两种口径并排对比，利息总额清晰',
     category: 'calculate',
     icon: 'Landmark',
     viewCount: 1300,
@@ -5465,7 +5465,7 @@ export const tools = [
   {
     id: 'gpa-calculator',
     name: 'GPA计算器',
-    description: '成绩绩点计算、加权平均、目标GPA规划',
+    description: '学分绩点加权平均计算，四分制五分制任选，目标GPA差距测算，学业规划有据',
     category: 'calculate',
     icon: 'GraduationCap',
     viewCount: 1200,
@@ -5480,7 +5480,7 @@ export const tools = [
   {
     id: 'age-calculator',
     name: '年龄计算器',
-    description: '精确年龄计算、生日倒计时、星座生肖',
+    description: '精确到天的年龄计算，周岁虚岁同屏对照，生日倒计时与星座生肖信息一并奉上',
     category: 'calculate',
     icon: 'CalendarClock',
     viewCount: 1050,
@@ -5495,7 +5495,7 @@ export const tools = [
   {
     id: 'complex-number-calculator',
     name: '复数计算器',
-    description: '复数四则运算、模幅角计算、极坐标转换',
+    description: '复数四则运算与模幅角计算，代数式极坐标形式互转，工科作业好帮手',
     category: 'calculate',
     icon: 'FunctionSquare',
     viewCount: 900,
@@ -5525,7 +5525,7 @@ export const tools = [
   {
     id: 'fuel-calculator',
     name: '油耗计算器',
-    description: '百公里油耗、油费计算、行程成本估算',
+    description: '输入里程与加油量算出百公里油耗，油费与行程成本同步估算，用车账目明白',
     category: 'calculate',
     icon: 'Fuel',
     viewCount: 1000,
@@ -5555,7 +5555,7 @@ export const tools = [
   {
     id: 'depreciation-calculator',
     name: '折旧计算器',
-    description: '直线法、双倍余额递减法、年数总和法',
+    description: '固定资产折旧一键测算，直线法、双倍余额递减与年数总和法结果并排比较',
     category: 'calculate',
     icon: 'TrendingDown',
     viewCount: 800,
@@ -5570,7 +5570,7 @@ export const tools = [
   {
     id: 'calories-calculator',
     name: '卡路里计算器',
-    description: '基础代谢率、每日消耗、饮食热量计算',
+    description: '计算基础代谢率与每日总消耗，减重增重热量目标定制，饮食计划有数可依',
     category: 'calculate',
     icon: 'Flame',
     viewCount: 950,
@@ -5585,7 +5585,7 @@ export const tools = [
   {
     id: 'big-number-calculator',
     name: '大数计算器',
-    description: '超大整数精确计算、阶乘、幂运算',
+    description: '超大整数精确运算，加减乘除与阶乘幂次不丢精度，科学计算结果可靠',
     category: 'calculate',
     icon: 'Hashtag',
     viewCount: 750,
@@ -5600,7 +5600,7 @@ export const tools = [
   {
     id: 'sequence-calculator',
     name: '数列计算器',
-    description: '等差等比数列求和、通项公式、数列生成',
+    description: '等差等比数列通项与求和公式计算，前N项一键生成，数学作业验证利器',
     category: 'calculate',
     icon: 'ListOrdered',
     viewCount: 700,
@@ -5615,7 +5615,7 @@ export const tools = [
   {
     id: 'proportion-calculator',
     name: '比例计算器',
-    description: '正比例/反比例计算、比例缩放、配方调整',
+    description: '正反比例与按比例缩放计算，配方用量、地图比例尺换算即填即得，实用性强',
     category: 'calculate',
     icon: 'Scale',
     viewCount: 800,
@@ -5630,7 +5630,7 @@ export const tools = [
   {
     id: 'sales-tax-calculator',
     name: '销售税计算器',
-    description: '增值税计算、含税价/不含税价转换',
+    description: '增值税与销售税一键计算，含税价与不含税价双向换算，价税分离一步到位',
     category: 'calculate',
     icon: 'Receipt',
     viewCount: 850,
@@ -5645,7 +5645,7 @@ export const tools = [
   {
     id: 'unit-price-calculator',
     name: '单价计算器',
-    description: '单价对比、按重量/体积/尺寸换算',
+    description: '按重量、体积或数量折算商品单价，比价购物一目了然，囤货决策更精明',
     category: 'calculate',
     icon: 'Tag',
     viewCount: 900,
@@ -5660,7 +5660,7 @@ export const tools = [
   {
     id: 'ovulation-calculator',
     name: '排卵期计算器',
-    description: '排卵期预测、受孕窗口、安全期计算',
+    description: '依据月经周期预测排卵日与易受孕窗口，安全期参考日历同步生成，备孕更从容',
     category: 'calculate',
     icon: 'Baby',
     viewCount: 950,
@@ -6503,7 +6503,7 @@ export const tools = [
   {
     id: 'random-dice',
     name: '随机骰子',
-    description: '投掷虚拟骰子，支持多种面数和多个骰子',
+    description: '虚拟骰子在线投掷，面数与个数自由设置，历史点数统计呈现，桌游决策都用得上',
     category: 'random',
     icon: 'Dice6',
     viewCount: 8270,
@@ -6518,7 +6518,7 @@ export const tools = [
   {
     id: 'random-cards',
     name: '随机扑克牌',
-    description: '从牌堆中随机抽取扑克牌，支持多种玩法',
+    description: '从标准牌堆随机抽牌发牌，副牌张数与抽法可设，桌游与聚会暖场随取随用',
     category: 'random',
     icon: 'Heart',
     viewCount: 8270,
@@ -6533,7 +6533,7 @@ export const tools = [
   {
     id: 'random-coin',
     name: '随机硬币',
-    description: '抛硬币做决定，支持多次抛掷和统计',
+    description: '抛硬币快速决断正反面，支持连抛与结果统计，选择困难时的小助手',
     category: 'random',
     icon: 'Circle',
     viewCount: 8270,
@@ -6548,7 +6548,7 @@ export const tools = [
   {
     id: 'random-food',
     name: '随机吃什么',
-    description: '解决"吃什么"难题，随机推荐美食',
+    description: '随机帮你决定今天吃什么，菜系口味偏好可选，从此点单不再纠结',
     category: 'random',
     icon: 'Utensils',
     viewCount: 8270,
@@ -6563,7 +6563,7 @@ export const tools = [
   {
     id: 'random-number-generator',
     name: '随机数字生成器',
-    description: '生成随机数字，支持范围、排除、抽奖模式',
+    description: '随机数字生成器，范围与位数自定义，排除指定数与抽奖模式齐备，公平可复现',
     category: 'random',
     icon: 'Hash',
     viewCount: 5270,
@@ -6578,7 +6578,7 @@ export const tools = [
   {
     id: 'random-choice',
     name: '随机选择器',
-    description: '从列表中随机选择一个或多个选项',
+    description: '名单选项随机抽取一个或多个，去重与权重可设，抽签决策快人一步',
     category: 'random',
     icon: 'List',
     viewCount: 8270,
@@ -6593,7 +6593,7 @@ export const tools = [
   {
     id: 'random-color',
     name: '随机颜色生成',
-    description: '生成随机颜色和配色方案',
+    description: '一键生成随机颜色与和谐配色方案，HEX与RGB值即取即用，设计找色不愁',
     category: 'random',
     icon: 'Palette',
     viewCount: 5270,
@@ -6608,7 +6608,7 @@ export const tools = [
   {
     id: 'random-team',
     name: '随机分队工具',
-    description: '随机将人员分成多个队伍',
+    description: '参与者名单一键随机分队，队伍数量与规模可控，团建比赛分组公平省事',
     category: 'random',
     icon: 'Users',
     viewCount: 6270,
@@ -6623,7 +6623,7 @@ export const tools = [
   {
     id: 'random-password-game',
     name: '随机密码生成（游戏版）',
-    description: '用游戏化的方式生成易记的随机密码',
+    description: '游戏化方式生成好记又安全的随机密码，难度可调，寓教于乐记牢密码',
     category: 'random',
     icon: 'Lock',
     viewCount: 4270,
@@ -6638,7 +6638,7 @@ export const tools = [
   {
     id: 'random-quote',
     name: '随机名言/句子',
-    description: '随机显示名言警句、电影台词或有趣句子',
+    description: '随机抽取名言警句与电影台词，写作素材与朋友圈文案灵感即时获取',
     category: 'random',
     icon: 'Quote',
     viewCount: 3270,
@@ -6653,7 +6653,7 @@ export const tools = [
   {
     id: 'random-date',
     name: '随机日期生成',
-    description: '生成随机日期，用于测试、创意或决策',
+    description: '按起止范围生成随机日期，格式与数量可选，测试造数与灵感抽签皆宜',
     category: 'random',
     icon: 'Calendar',
     viewCount: 3270,
@@ -6668,7 +6668,7 @@ export const tools = [
   {
     id: 'random-name-picker',
     name: '随机姓名抽取',
-    description: '从名单中随机抽取姓名，支持点名、抽奖',
+    description: '花名册随机点名抽取，避免重复中奖，课堂提问与年会抽奖即开即用',
     category: 'random',
     icon: 'User',
     viewCount: 5270,
@@ -12938,7 +12938,7 @@ export const tools = [
   {
     id: 'temperature-converter',
     name: '温度单位换算',
-    description: '摄氏/华氏/开尔文/兰氏度四向精确换算',
+    description: '摄氏、华氏、开尔文与兰氏度四向温度换算，输入即得全表结果，精度可靠',
     category: 'calculate',
     icon: 'Thermometer',
     viewCount: 500,
@@ -12983,7 +12983,7 @@ export const tools = [
   {
     id: 'angle-unit-converter',
     name: '角度弧度换算',
-    description: '度/弧度/梯度/角分角秒/转五向换算',
+    description: '度、弧度、梯度与角分角秒互相换算，输入任意角度即刻得到全单位结果',
     category: 'calculate',
     icon: 'Compass',
     viewCount: 500,
@@ -13088,7 +13088,7 @@ export const tools = [
   {
     id: 'english-copybook-generator',
     name: '英语字帖生成器',
-    description: '四线三格描红字帖，单词句子模板可打印',
+    description: '生成四线三格英语描红字帖，单词句子模板任选，打印即可练习书写',
     category: 'others',
     icon: 'Languages',
     viewCount: 500,

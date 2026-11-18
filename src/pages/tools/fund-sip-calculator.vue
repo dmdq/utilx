@@ -162,10 +162,10 @@
             重置
           </button>
           <button
-            @click="compareScenarios"
+            @click="addScenario"
             class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
           >
-            方案对比
+            加入对比
           </button>
           <button
             @click="exportReport"
@@ -241,13 +241,88 @@
 
         <!-- 收益增长图表 -->
         <div class="bg-card rounded-lg p-6 border">
-          <h3 class="text-lg font-semibold mb-4">收益增长趋势</h3>
-          <div class="h-64 bg-muted/50 rounded-lg flex items-center justify-center">
-            <div class="text-center text-muted-foreground">
-              <TrendingUp class="w-12 h-12 mx-auto mb-2" />
-              <p class="text-sm">图表功能开发中</p>
-              <p class="text-xs">将显示定投收益增长曲线</p>
+          <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
+            <h3 class="text-lg font-semibold">收益增长趋势</h3>
+            <div class="flex items-center gap-4 text-xs text-muted-foreground">
+              <span class="flex items-center gap-1.5">
+                <span class="inline-block w-4 h-0.5 rounded bg-primary"></span>账户市值
+              </span>
+              <span class="flex items-center gap-1.5">
+                <span class="inline-block w-4 h-0.5 rounded bg-muted-foreground"></span>本金累计
+              </span>
             </div>
+          </div>
+          <div v-if="chartGeom" class="relative">
+            <svg
+              :viewBox="`0 0 ${chartGeom.vbW} ${chartGeom.vbH}`"
+              class="w-full h-auto block"
+              role="img"
+              aria-label="定投本金累计与账户市值增长曲线"
+            >
+              <!-- 网格与 Y 轴刻度 -->
+              <g v-for="g in chartGeom.gridY" :key="'gy' + g.label">
+                <line
+                  :x1="chartGeom.padL" :y1="g.y"
+                  :x2="chartGeom.padL + chartGeom.plotW" :y2="g.y"
+                  class="stroke-border" stroke-width="1"
+                />
+                <text :x="chartGeom.padL - 8" :y="g.y + 3" text-anchor="end" font-size="10" class="fill-muted-foreground">{{ g.label }}</text>
+              </g>
+              <!-- X 轴与刻度 -->
+              <line
+                :x1="chartGeom.padL" :y1="chartGeom.padT + chartGeom.plotH"
+                :x2="chartGeom.padL + chartGeom.plotW" :y2="chartGeom.padT + chartGeom.plotH"
+                class="stroke-border" stroke-width="1"
+              />
+              <text
+                v-for="t in chartGeom.gridX"
+                :key="'gx' + t.label"
+                :x="t.x" :y="chartGeom.padT + chartGeom.plotH + 18"
+                text-anchor="middle" font-size="10" class="fill-muted-foreground"
+              >{{ t.label }}</text>
+              <!-- 市值面积与双曲线（主题色类：primary / muted-foreground） -->
+              <path :d="chartGeom.areaPath" class="fill-primary" opacity="0.08" />
+              <polyline
+                :points="chartGeom.principalPoly"
+                fill="none" class="stroke-muted-foreground"
+                stroke-width="2" stroke-dasharray="6 4"
+                stroke-linejoin="round" stroke-linecap="round"
+              />
+              <polyline
+                :points="chartGeom.valuePoly"
+                fill="none" class="stroke-primary"
+                stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+              />
+              <!-- 悬停辅助线与数据点 -->
+              <g v-if="hoverPoint">
+                <line
+                  :x1="chartGeom.xs(hoverPoint.year)" :y1="chartGeom.padT"
+                  :x2="chartGeom.xs(hoverPoint.year)" :y2="chartGeom.padT + chartGeom.plotH"
+                  class="stroke-muted-foreground" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"
+                />
+                <circle :cx="chartGeom.xs(hoverPoint.year)" :cy="chartGeom.ys(hoverPoint.principal)" r="4" class="fill-background stroke-muted-foreground" stroke-width="2" />
+                <circle :cx="chartGeom.xs(hoverPoint.year)" :cy="chartGeom.ys(hoverPoint.value)" r="4" class="fill-background stroke-primary" stroke-width="2" />
+              </g>
+              <!-- 悬停捕获层 -->
+              <rect
+                :x="chartGeom.padL" :y="chartGeom.padT"
+                :width="chartGeom.plotW" :height="chartGeom.plotH"
+                fill="transparent" pointer-events="all" class="cursor-crosshair"
+                @mousemove="onChartMove" @mouseleave="hoverIdx = -1"
+              />
+            </svg>
+            <div
+              v-if="hoverPoint"
+              class="absolute z-10 pointer-events-none bg-popover text-popover-foreground border border-border rounded-lg shadow-md px-3 py-2 text-xs leading-relaxed whitespace-nowrap"
+              :style="tipStyle"
+            >
+              <div class="font-medium mb-0.5">第 {{ fmtYearLabel(hoverPoint.year) }} 年</div>
+              <div>本金累计：¥{{ fmtNum(hoverPoint.principal) }}</div>
+              <div class="text-primary font-medium">账户市值：¥{{ fmtNum(hoverPoint.value) }}</div>
+            </div>
+          </div>
+          <div v-else class="h-64 bg-muted/50 rounded-lg flex items-center justify-center">
+            <p class="text-sm text-muted-foreground">请输入有效的定投参数后查看收益增长曲线</p>
           </div>
         </div>
 
@@ -297,12 +372,63 @@
         </div>
       </div>
     </div>
+
+    <!-- 方案对比（无方案时不渲染，数据仅保存在内存中） -->
+    <div v-if="scenarios.length" class="bg-card rounded-lg p-6 border mt-6">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg font-semibold">方案对比</h3>
+        <button
+          @click="clearScenarios"
+          class="px-3 py-1.5 text-sm bg-muted hover:bg-muted/80 text-muted-foreground rounded-lg"
+        >
+          清空方案
+        </button>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm whitespace-nowrap">
+          <thead>
+            <tr class="text-left text-xs text-muted-foreground border-b border-border">
+              <th class="py-2 pr-4 font-medium">方案</th>
+              <th class="py-2 pr-4 font-medium">定投金额</th>
+              <th class="py-2 pr-4 font-medium">年化收益</th>
+              <th class="py-2 pr-4 font-medium">期限</th>
+              <th class="py-2 pr-4 font-medium">期末市值</th>
+              <th class="py-2 pr-4 font-medium">总收益</th>
+              <th class="py-2 pr-4 font-medium">收益率</th>
+              <th class="py-2 font-medium"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="s in scenarios" :key="s.id" class="border-b border-border last:border-b-0">
+              <td class="py-2.5 pr-4 font-medium">方案{{ s.id }}</td>
+              <td class="py-2.5 pr-4">¥{{ s.amount }}/{{ s.frequencyLabel }}</td>
+              <td class="py-2.5 pr-4">{{ s.annualRate }}%</td>
+              <td class="py-2.5 pr-4">{{ s.years }}年</td>
+              <td class="py-2.5 pr-4 font-semibold text-primary">¥{{ s.finalAmount.toFixed(2) }}</td>
+              <td class="py-2.5 pr-4" :class="s.totalReturn >= 0 ? 'text-green-600' : 'text-red-500'">¥{{ s.totalReturn.toFixed(2) }}</td>
+              <td class="py-2.5 pr-4">{{ s.totalReturnRate.toFixed(2) }}%</td>
+              <td class="py-2.5 text-right">
+                <button
+                  @click="removeScenario(s.id)"
+                  class="px-2 py-1 text-xs bg-muted hover:bg-muted/80 text-muted-foreground rounded"
+                >
+                  移除
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-muted-foreground mt-3">
+        最多可保存 3 个方案：调整左侧参数后点击「加入对比」继续添加；数据仅在当前页面内存中保存。
+      </p>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
-import { CheckCircle, AlertCircle, TrendingUp } from 'lucide-vue-next'
+import { CheckCircle, AlertCircle } from 'lucide-vue-next'
 
 // SEO设置
 useSeoMeta({
@@ -371,6 +497,116 @@ const getPeriodsPerYear = () => {
   return periods[frequency.value] || 12
 }
 
+// ==== 纯函数区（无组件依赖，可整体提取单测）====
+/**
+ * 逐期累计定投序列（期末年金口径，每期复利）：
+ * 递推 value_k = value_{k-1} × (1 + r) + periodAmount，
+ * 与页面终值公式 FV = PMT × ((1+r)^n − 1) / r 数学等价。
+ * @param {number} periodAmount 每期投入金额
+ * @param {number} annualRatePercent 年化收益率（百分数，如 8 表示 8%）
+ * @param {number} years 投资年数
+ * @param {number} [periodsPerYear] 每年期数（月投 12 / 季投 4 / 周投 52）
+ * @returns {Array<{year:number, principal:number, value:number}>} 每年（含不满整年的期末）累计本金与账户市值
+ */
+function periodSeries(periodAmount, annualRatePercent, years, periodsPerYear) {
+  const ppy = periodsPerYear || 12
+  const totalPeriods = Math.max(0, Math.round(Number(years) * ppy))
+  const r = Number(annualRatePercent) / 100 / ppy
+  const pts = []
+  let value = 0
+  for (let k = 1; k <= totalPeriods; k++) {
+    value = value * (1 + r) + periodAmount
+    if (k % ppy === 0 || k === totalPeriods) {
+      pts.push({ year: k / ppy, principal: periodAmount * k, value })
+    }
+  }
+  return pts
+}
+
+/** 月投年序列（yearlySeries 便捷封装，供单测与图表使用） */
+function yearlySeries(monthly, annualRatePercent, years) {
+  return periodSeries(monthly, annualRatePercent, years, 12)
+}
+
+/** 向上取整到 1/2/4/5/10 × 10^k 的“好看”坐标上限 */
+function niceCeil(v) {
+  if (!(v > 0)) return 1
+  const exp = Math.floor(Math.log10(v))
+  const base = Math.pow(10, exp)
+  const m = v / base
+  const step = m <= 1 ? 1 : m <= 2 ? 2 : m <= 4 ? 4 : m <= 5 ? 5 : 10
+  return step * base
+}
+
+/** 金额紧凑格式（万 / 亿） */
+function fmtCompact(v) {
+  const abs = Math.abs(v)
+  if (abs >= 1e8) return (v / 1e8).toFixed(2) + '亿'
+  if (abs >= 1e4) return (v / 1e4).toFixed(1) + '万'
+  return String(Math.round(v))
+}
+
+/** 千分位两位小数（悬停数值用） */
+function fmtNum(v) {
+  return Number(v).toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+}
+
+/** 年份标签（整数不带小数点，小数保留 1~2 位） */
+function fmtYearLabel(y) {
+  return Number.isInteger(y) ? String(y) : y.toFixed(2).replace(/0$/, '')
+}
+
+/** X 轴刻度步长 */
+function niceStepYears(maxYear) {
+  if (maxYear <= 1) return 0.25
+  if (maxYear <= 6) return 1
+  if (maxYear <= 12) return 2
+  if (maxYear <= 30) return 5
+  if (maxYear <= 60) return 10
+  return 20
+}
+
+/** 由数据点生成内联 SVG 折线图几何信息（viewBox 坐标） */
+function buildChartGeometry(pts) {
+  const vbW = 640
+  const vbH = 300
+  const padL = 56
+  const padR = 20
+  const padT = 20
+  const padB = 34
+  const plotW = vbW - padL - padR
+  const plotH = vbH - padT - padB
+  const maxYear = Math.max(pts[pts.length - 1].year, 1e-9)
+  let peak = 0
+  for (const p of pts) peak = Math.max(peak, p.value, p.principal)
+  const maxY = niceCeil(peak * 1.05 || 1)
+  const xs = year => padL + (year / maxYear) * plotW
+  const ys = v => padT + plotH - (v / maxY) * plotH
+  const toPoly = key => pts.map(p => `${xs(p.year).toFixed(1)},${ys(p[key]).toFixed(1)}`).join(' ')
+  const baseY = padT + plotH
+  const areaPath =
+    `M ${xs(pts[0].year).toFixed(1)},${baseY}` +
+    pts.map(p => ` L ${xs(p.year).toFixed(1)},${ys(p.value).toFixed(1)}`).join('') +
+    ` L ${xs(pts[pts.length - 1].year).toFixed(1)},${baseY} Z`
+  const gridY = []
+  for (let i = 0; i <= 4; i++) {
+    const v = (maxY * i) / 4
+    gridY.push({ y: +ys(v).toFixed(1), label: fmtCompact(v) })
+  }
+  const gridX = []
+  const step = niceStepYears(maxYear)
+  for (let y = 0; y <= maxYear + 1e-9; y += step) {
+    gridX.push({ x: +xs(y).toFixed(1), label: fmtYearLabel(+y.toFixed(4)) })
+  }
+  return {
+    vbW, vbH, padL, padR, padT, padB, plotW, plotH, maxY, maxYear,
+    valuePoly: toPoly('value'),
+    principalPoly: toPoly('principal'),
+    areaPath, gridY, gridX, xs, ys
+  }
+}
+// ==== 纯函数区结束 ====
+
 // 计算定投收益
 const calculateSIP = () => {
   const periodsPerYear = getPeriodsPerYear()
@@ -424,6 +660,65 @@ const calculateSIP = () => {
   }
 }
 
+// ---------- 定投增长曲线（内联 SVG，无第三方库） ----------
+// 数据源：与页面终值同口径的逐期序列（费后年化 = 预期年化 - 管理费率），原点补 (0,0)
+const chartSeries = computed(() => {
+  const years = Number(investmentYears.value)
+  const amount = Number(frequency.value === 'monthly' ? monthlyAmount.value : periodicAmount.value)
+  if (!Number.isFinite(years) || years <= 0 || !Number.isFinite(amount) || amount <= 0) return []
+  const netAnnualRate = Number(expectedReturn.value) - Number(managementFee.value)
+  const pts = periodSeries(amount, Number.isFinite(netAnnualRate) ? netAnnualRate : 0, years, getPeriodsPerYear())
+  return [{ year: 0, principal: 0, value: 0 }, ...pts]
+})
+
+const chartGeom = computed(() => {
+  const pts = chartSeries.value
+  if (pts.length < 2) return null
+  return buildChartGeometry(pts)
+})
+
+// 悬停交互：根据鼠标在绘图区的位置找最近年份的数据点
+const hoverIdx = ref(-1)
+const hoverPoint = computed(() => {
+  const pts = chartSeries.value
+  return hoverIdx.value >= 0 && hoverIdx.value < pts.length ? pts[hoverIdx.value] : null
+})
+
+const onChartMove = ev => {
+  const geom = chartGeom.value
+  if (!geom) return
+  const svg = ev.currentTarget.ownerSVGElement
+  if (!svg) return
+  const rect = svg.getBoundingClientRect()
+  if (!rect.width) return
+  const vbX = ((ev.clientX - rect.left) / rect.width) * geom.vbW
+  const yearFloat = ((vbX - geom.padL) / geom.plotW) * geom.maxYear
+  let best = 0
+  let bestDist = Infinity
+  chartSeries.value.forEach((p, i) => {
+    const d = Math.abs(p.year - yearFloat)
+    if (d < bestDist) {
+      bestDist = d
+      best = i
+    }
+  })
+  hoverIdx.value = best
+}
+
+// 悬停提示框位置（相对图表容器，边缘自动钳制）
+const tipStyle = computed(() => {
+  const geom = chartGeom.value
+  const p = hoverPoint.value
+  if (!geom || !p) return {}
+  const leftPct = Math.min(Math.max((geom.xs(p.year) / geom.vbW) * 100, 16), 84)
+  const topPct = (Math.min(geom.ys(p.value), geom.ys(p.principal)) / geom.vbH) * 100
+  return {
+    left: leftPct + '%',
+    top: topPct + '%',
+    transform: 'translate(-50%, calc(-100% - 8px))'
+  }
+})
+
 // 重置计算
 const resetCalculation = () => {
   monthlyAmount.value = 1000
@@ -438,9 +733,41 @@ const resetCalculation = () => {
   sipResult.value = null
 }
 
-// 方案对比
-const compareScenarios = () => {
-  alert('方案对比功能开发中，将提供多种投资方案对比分析')
+// ---------- 方案对比（内存存储，最多 3 个） ----------
+const scenarios = ref([])
+let scenarioSeq = 0
+
+// 把当前参数与计算结果快照保存为一个方案
+const addScenario = () => {
+  if (!sipResult.value) calculateSIP()
+  if (!sipResult.value) {
+    alert('请先输入有效的定投参数')
+    return
+  }
+  if (scenarios.value.length >= 3) {
+    alert('最多保存 3 个方案，请先移除或清空后再添加')
+    return
+  }
+  const periodAmount = frequency.value === 'monthly' ? monthlyAmount.value : periodicAmount.value
+  const freqLabels = { monthly: '月', quarterly: '季', weekly: '周' }
+  scenarios.value.push({
+    id: ++scenarioSeq,
+    frequencyLabel: freqLabels[frequency.value] || '月',
+    amount: periodAmount,
+    annualRate: expectedReturn.value,
+    years: investmentYears.value,
+    finalAmount: sipResult.value.finalAmount,
+    totalReturn: sipResult.value.totalReturn,
+    totalReturnRate: sipResult.value.totalReturnRate
+  })
+}
+
+const removeScenario = id => {
+  scenarios.value = scenarios.value.filter(s => s.id !== id)
+}
+
+const clearScenarios = () => {
+  scenarios.value = []
 }
 
 // 导出报告

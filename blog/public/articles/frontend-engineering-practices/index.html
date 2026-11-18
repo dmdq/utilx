@@ -1094,7 +1094,7 @@
 </span></span><span style=display:flex><span><span style=color:#ff7b72>export</span> <span style=color:#ff7b72>const</span> useUserStore <span style=color:#ff7b72;font-weight:700>=</span> defineStore(<span style=color:#a5d6ff>&#39;user&#39;</span>, () <span style=color:#ff7b72;font-weight:700>=&gt;</span> {
 </span></span><span style=display:flex><span>  <span style=color:#8b949e;font-style:italic>// State
 </span></span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic></span>  <span style=color:#ff7b72>const</span> currentUser <span style=color:#ff7b72;font-weight:700>=</span> ref&lt;<span style=color:#7ee787>User</span> <span style=color:#f85149>|</span> null&gt;(<span style=color:#79c0ff>null</span>)
-</span></span><span style=display:flex><span>  <span style=color:#ff7b72>const</span> users <span style=color:#ff7b72;font-weight:700>=</span> ref<span style=color:#ff7b72;font-weight:700>&lt;</span>User[]<span style=color:#ff7b72;font-weight:700>&gt;</span>([])
+</span></span><span style=display:flex><span>  <span style=color:#ff7b72>const</span> users <span style=color:#ff7b72;font-weight:700>=</span> ref&lt;<span style=color:#7ee787>User</span><span style=color:#f85149>[]</span>&gt;([])
 </span></span><span style=display:flex><span>  <span style=color:#ff7b72>const</span> loading <span style=color:#ff7b72;font-weight:700>=</span> ref(<span style=color:#79c0ff>false</span>)
 </span></span><span style=display:flex><span>  <span style=color:#ff7b72>const</span> error <span style=color:#ff7b72;font-weight:700>=</span> ref&lt;<span style=color:#7ee787>string</span> <span style=color:#f85149>|</span> null&gt;(<span style=color:#79c0ff>null</span>)
 </span></span><span style=display:flex><span>

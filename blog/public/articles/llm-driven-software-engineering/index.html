@@ -935,7 +935,7 @@ class ModernWebAppArchitecture:
 </span></span><span style=display:flex><span>        <span style=color:#8b949e;font-style:italic># 根据问题严重程度扣分</span>
 </span></span><span style=display:flex><span>        score <span style=color:#ff7b72;font-weight:700>=</span> <span style=color:#a5d6ff>1.0</span>
 </span></span><span style=display:flex><span>        <span style=color:#ff7b72>for</span> issue <span style=color:#ff7b72;font-weight:700>in</span> issues:
-</span></span><span style=display:flex><span>            <span style=color:#ff7b72>if</span> issue[<span style=color:#a5d6ff>&#39;severity&#39;</span>] <span style=color:#ff7b72;font-weight:700>==</span> <span style=color:#a5d6ff>&#39;</span><span style=color:#f85149>C</span><span style=color:#a5d6ff>RITICAL&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#ff7b72>if</span> issue[<span style=color:#a5d6ff>&#39;severity&#39;</span>] <span style=color:#ff7b72;font-weight:700>==</span> <span style=color:#a5d6ff>&#39;CRITICAL&#39;</span>:
 </span></span><span style=display:flex><span>                score <span style=color:#ff7b72;font-weight:700>-=</span> <span style=color:#a5d6ff>0.3</span>
 </span></span><span style=display:flex><span>            <span style=color:#ff7b72>elif</span> issue[<span style=color:#a5d6ff>&#39;severity&#39;</span>] <span style=color:#ff7b72;font-weight:700>==</span> <span style=color:#a5d6ff>&#39;HIGH&#39;</span>:
 </span></span><span style=display:flex><span>                score <span style=color:#ff7b72;font-weight:700>-=</span> <span style=color:#a5d6ff>0.15</span>

@@ -438,7 +438,11 @@ const sortLines = (mode) => {
       sorted.sort((a, b) => a.length - b.length)
       break
     case 'random':
-      sorted.sort(() => Math.random() - 0.5)
+      // Fisher-Yates 洗牌（sort(random) 有偏）
+      for (let i = sorted.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[sorted[i], sorted[j]] = [sorted[j], sorted[i]]
+      }
       break
   }
 

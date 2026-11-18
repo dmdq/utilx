@@ -185,6 +185,7 @@
           <div class="flex-auto">
             <slot />
             <TutorialLinks />
+            <AutoToolSeo :route-path="route.path" />
           </div>
           <Footer />
         </div>

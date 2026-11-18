@@ -306,42 +306,11 @@ const compareResult = ref(null)
 const benchmarking = ref(false)
 const benchmarkResults = ref([])
 
-// BCrypt哈希实现（使用Web Crypto API + PBKDF2模拟）
+// 真正的 BCrypt 哈希（bcryptjs：EksBlowfish 密钥编排 + 2^cost 轮，输出标准 $2b$ 格式，
+// 与后端 bcrypt 库互验兼容；动态 import 只在用户回调内触发）
 async function bcryptHash(password, cost) {
-  const encoder = new TextEncoder()
-  const data = encoder.encode(password)
-
-  // 生成盐值
-  const salt = crypto.getRandomValues(new Uint8Array(16))
-
-  // 使用PBKDF2模拟BCrypt的迭代
-  const keyMaterial = await crypto.subtle.importKey(
-    'raw',
-    data,
-    'PBKDF2',
-    false,
-    ['deriveBits']
-  )
-
-  const iterations = Math.pow(2, cost)
-  const derivedBits = await crypto.subtle.deriveBits(
-    {
-      name: 'PBKDF2',
-      salt: salt,
-      iterations: iterations,
-      hash: 'SHA-256'
-    },
-    keyMaterial,
-    256
-  )
-
-  // 转换为Base64
-  const hashArray = new Uint8Array(derivedBits)
-  const saltBase64 = btoa(String.fromCharCode(...salt))
-  const hashBase64 = btoa(String.fromCharCode(...hashArray))
-
-  // 生成BCrypt格式哈希
-  return `$2b$${cost}$${saltBase64.substring(0, 22)}${hashBase64.substring(0, 31)}`
+  const bcrypt = await import('bcryptjs')
+  return bcrypt.hashSync(password, cost)
 }
 
 // 生成哈希
@@ -387,13 +356,13 @@ function clearAll() {
   compareResult.value = null
 }
 
-// 验证密码
+// 验证密码（真 bcrypt 比对：从哈希串自带盐与成本因子重算比对）
 async function verifyPasswordHash() {
   if (!verifyPassword.value || !verifyHash.value) return
 
   try {
-    const newHash = await bcryptHash(verifyPassword.value, extractCostFromHash(verifyHash.value))
-    verifyResult.value = newHash === verifyHash.value
+    const bcrypt = await import('bcryptjs')
+    verifyResult.value = bcrypt.compareSync(verifyPassword.value, verifyHash.value)
   } catch (error) {
     verifyResult.value = false
   }

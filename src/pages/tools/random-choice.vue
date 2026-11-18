@@ -408,7 +408,13 @@ const makeChoice = async () => {
     }
   } else if (selectMode.value === 'unique') {
     // 不重复选择
-    selected = available.sort(() => Math.random() - 0.5).slice(0, selectCount.value)
+    // Fisher-Yates 洗牌取前 N（等概率；sort(random) 有偏）
+    const pool = [...available]
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[pool[i], pool[j]] = [pool[j], pool[i]]
+    }
+    selected = pool.slice(0, selectCount.value)
   }
 
   const now = new Date()

@@ -373,9 +373,9 @@ const formatViewCount = (count) => {
   return `${count}`
 }
 
-// 加载示例哈希
+// 加载示例哈希（真实的 $2b$ 哈希串，由 bcryptjs 对 'password123' 计算）
 const loadExampleHash = () => {
-  bcryptHash.value = '$2b$12$rNSeS9JLGPY5YI6HxGjEoe.rNSeS9JLGPY5YI6HxGjEoe.'
+  bcryptHash.value = '$2b$10$lqruVA2GJgk4qM5ith9riOCAPVq54zQNuv6t/95W6giPcEfK3.Jk6'
   password.value = 'password123'
 }
 
@@ -386,7 +386,7 @@ const verifySingle = async () => {
   const startTime = Date.now()
 
   try {
-    // 模拟Bcrypt验证（实际应该使用专门的库）
+    // 真 Bcrypt 验证（bcryptjs 库，与后端 bcrypt 互验兼容）
     const valid = await simulateBcryptVerify(password.value, bcryptHash.value)
     const endTime = Date.now()
 
@@ -408,23 +408,14 @@ const verifySingle = async () => {
   }
 }
 
-// 模拟Bcrypt验证
-const simulateBcryptVerify = (password, hash) => {
-  return new Promise((resolve) => {
-    const cost = extractCost(hash)
-
-    // 模拟计算延迟
-    setTimeout(() => {
-      // 简单的验证模拟（不是真正的Bcrypt）
-      // 示例验证
-      if (password === 'password123' && hash === '$2b$12$rNSeS9JLGPY5YI6HxGjEoe.rNSeS9JLGPY5YI6HxGjEoe.') {
-        resolve(true)
-      } else {
-        // 模拟其他验证
-        resolve(password.length > 0 && hash.length > 50)
-      }
-    }, Math.pow(2, cost - 10))
-  })
+// 真正的 Bcrypt 验证（bcryptjs compareSync：从哈希串自带盐与成本因子重算比对）
+const simulateBcryptVerify = async (password, hash) => {
+  const bcrypt = await import('bcryptjs')
+  try {
+    return bcrypt.compareSync(password, hash)
+  } catch (e) {
+    return false
+  }
 }
 
 // 批量验证

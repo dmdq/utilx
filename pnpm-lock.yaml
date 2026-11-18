@@ -29,6 +29,9 @@ importers:
       '@vueuse/integrations':
         specifier: ^14.1.0
         version: 14.1.0(async-validator@4.2.5)(fuse.js@7.1.0)(jwt-decode@4.0.0)(qrcode@1.5.4)(sortablejs@1.15.6)(vue@3.5.43(typescript@5.9.3))
+      bcryptjs:
+        specifier: ^3.0.3
+        version: 3.0.3
       crypto-js:
         specifier: ^4.2.0
         version: 4.2.0
@@ -2103,6 +2106,10 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
+  bcryptjs@3.0.3:
+    resolution: {integrity: sha512-GlF5wPWnSa/X5LKM1o0wz0suXIINz1iHRLvTS+sLyi7XPbe5ycmYI3DlZqVGZZtDgl4DmasFg7gOB3JYbphV5g==}
+    hasBin: true
+
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
@@ -2994,6 +3001,7 @@ packages:
   glob@11.1.0:
     resolution: {integrity: sha512-vuNwKSaKiqm7g0THUBu2x7ckSs3XJLXE+2ssL7/MfTGPLLcrJQ/4Uq1CjPTtO5cCIiRxqvN6Twy1qOwhL0Xjcw==}
     engines: {node: 20 || >=22}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@13.0.0:
@@ -7915,6 +7923,8 @@ snapshots:
   baseline-browser-mapping@2.11.27: {}
 
   baseline-browser-mapping@2.11.28: {}
+
+  bcryptjs@3.0.3: {}
 
   binary-extensions@2.3.0: {}
 

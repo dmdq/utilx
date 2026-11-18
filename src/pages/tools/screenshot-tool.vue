@@ -226,13 +226,6 @@
                 <Copy class="h-4 w-4 mr-1" />
                 复制
               </button>
-              <button
-                @click="editCurrent"
-                class="px-3 py-1 bg-muted text-foreground rounded-md hover:bg-muted/80 transition-colors text-sm flex items-center"
-              >
-                <Edit class="h-4 w-4 mr-1" />
-                编辑
-              </button>
             </div>
           </div>
 
@@ -444,7 +437,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useSeoMeta } from 'nuxt/app'
 import { 
   Settings, Camera, MousePointer, ChevronUp, ChevronDown, Loader2,
-  Image, Download, Copy, Edit, History, Trash2, HelpCircle
+  Image, Download, Copy, History, Trash2, HelpCircle
 } from 'lucide-vue-next'
 import { tools } from '~/data/tools'
 import { categories } from '~/data/categories'
@@ -487,7 +480,7 @@ const copyToClipboard = ref(false)
 // 图标映射
 const iconMap = {
   Settings, Camera, MousePointer, ChevronUp, ChevronDown, Loader2,
-  Image, Download, Copy, Edit, History, Trash2, HelpCircle
+  Image, Download, Copy, History, Trash2, HelpCircle
 }
 
 // 相关工具
@@ -787,12 +780,6 @@ const copyCurrent = () => {
   if (currentScreenshot.value) {
     copyScreenshot(currentScreenshot.value)
   }
-}
-
-const editCurrent = () => {
-  // 跳转到图片编辑器
-  // window.open(`/editor?image=${encodeURIComponent(currentScreenshot.value.data)}`, '_blank')
-  alert('图片编辑功能正在开发中')
 }
 
 const deleteScreenshot = (index) => {

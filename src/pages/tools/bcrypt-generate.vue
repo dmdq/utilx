@@ -355,66 +355,34 @@ const getCalculationTime = (rounds) => {
 const generateHash = async () => {
   if (!password.value) return
 
-  // 模拟Bcrypt哈希生成（实际应使用后端API或专门的库）
-  // 这里使用一个简化的模拟
-  const salt = generateSalt()
-  const hash = await simulateBcrypt(password.value, salt, saltRounds.value)
-  hashResult.value = hash
+  // 真 BCrypt（bcryptjs：盐与成本因子由库按标准生成，输出 $2b$ 完整 60 字符格式）
+  const bcrypt = await import('bcryptjs')
+  hashResult.value = bcrypt.hashSync(password.value, saltRounds.value)
 }
 
-// 生成salt
-const generateSalt = () => {
-  const chars = './ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-  let salt = ''
-  for (let i = 0; i < 22; i++) {
-    salt += chars.charAt(Math.floor(Math.random() * chars.length))
-  }
-  return salt
-}
-
-// 模拟Bcrypt哈希计算
-const simulateBcrypt = (password, salt, rounds) => {
-  return new Promise((resolve) => {
-    // 模拟计算延迟
-    setTimeout(() => {
-      // 简化的哈希模拟（不是真正的Bcrypt）
-      // 实际应该使用WebAssembly调用Bcrypt库
-      const hash = `$2b$${String(rounds).padStart(2, '0')}$${salt}.${btoa(password + salt).substring(0, 31)}`
-      resolve(hash)
-    }, Math.pow(2, rounds - 4))
-  })
-}
-
-// 验证Bcrypt哈希
+// 验证Bcrypt哈希（真比对：哈希串自带盐与轮数，库内部重算比对）
 const verifyBcrypt = async () => {
   if (!verifyPassword.value || !verifyHash.value) return
 
-  // 解析哈希获取salt和rounds
-  const parts = verifyHash.value.split('$')
-  if (parts.length < 4) {
-    alert('无效的Bcrypt哈希格式')
-    return
+  const bcrypt = await import('bcryptjs')
+  let valid = false
+  try {
+    valid = bcrypt.compareSync(verifyPassword.value, verifyHash.value)
+  } catch (e) {
+    valid = false
   }
-
-  const rounds = parseInt(parts[2])
-  const salt = parts[3].substring(0, 22)
-
-  // 重新计算哈希并比较
-  const computedHash = await simulateBcrypt(verifyPassword.value, salt, rounds)
-  verifyResult.value = {
-    valid: computedHash === verifyHash.value
-  }
+  verifyResult.value = { valid }
 }
 
 // 批量哈希
 const batchHash = async () => {
   const passwords = batchPasswords.value.split('\n').filter(p => p.trim())
+  const bcrypt = await import('bcryptjs')
   const results = []
 
   for (const pwd of passwords) {
     if (pwd.trim()) {
-      const salt = generateSalt()
-      const hash = await simulateBcrypt(pwd.trim(), salt, saltRounds.value)
+      const hash = bcrypt.hashSync(pwd.trim(), saltRounds.value)
       results.push({ hash })
     }
   }
