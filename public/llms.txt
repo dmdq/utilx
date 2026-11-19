@@ -9,7 +9,7 @@
 - [场景专题](https://www.util.cn/collections/): 41 个按使用场景组织的工具组合
 - [按职业找工具](https://www.util.cn/professions/): 36 张职业工具卡，按任务对应工具
 - [AI 百科](https://www.util.cn/wiki/): 73 条大模型相关词条
-- [技术博客](https://www.util.cn/blog/): 508 篇工具教程与实践文章
+- [技术博客](https://www.util.cn/blog/): 514 篇工具教程与实践文章
 
 ## 工具分类
 
@@ -1239,6 +1239,12 @@
 
 ## 博客文章
 
+- [到手工资倒推税前：超额累进的数学、累计预扣的逐月节奏，与二分法反推](https://www.util.cn/blog/articles/salary-reverse-bisection/): 「想到手 2 万，税前要谈多少？」这个问题没有比例换算的捷径：五险一金按税前工资算基数、个税按扣除后的应纳税所得额查七级累进表，两层依赖咬合成一个无法一步倒推的函数。这篇拆解工资单的完整数学：速算扣除数为什么存在、月度表与年度表除以 12 的等价关系、累计预扣法下逐月扣税从低到高的真实节奏（税前 2 万实证：首月 387、跨档后 1290、末月 2370），以及用二分法反推税前的工程实现——净额函数单调递增，50 次迭代把误差压到一分钱以内。
+- [从 NTC 到 PT100：三条测温曲线的数学，和热电偶的冷端补偿](https://www.util.cn/blog/articles/temperature-sensor-three-models/): 温度传感器是把「电阻或电压」翻译成「温度」的机器，但三种主流传感器的翻译方式完全不同：NTC 是负指数曲线，B 值模型是它的两点线性近似，Steinhart-Hart 用三项多项式补曲率；PT100 铂电阻近乎线性，Callendar-Van Dusen 方程正温区是二次方程有解析解、负温区加四次项只能数值反解；K 型热电偶干脆非线性到要用 NIST 十阶多项式分段逼近。这篇拆解三条曲线的数学，以及冷端补偿为什么是热电偶的生死线。
+- [色环电阻与 E 系列：IEC 60063 的对数刻度，和「最近标准值」的正确度量](https://www.util.cn/blog/articles/resistor-color-eseries/): 黄紫红金为什么是 4.7kΩ？金色环到底是 ×0.1 倍率还是 ±5% 误差？电阻为什么没有 4.9k 这个档位，全是 4.7k、5.1k 这种「跳着来」的数？这篇拆两个高频问题：色环编码的方向判别与解码规则，以及 E 系列标准值的数学本质——按对数刻度等分一个十倍程，误差带刚好首尾相接不留缝；顺便讲清「最近标准值」为什么要用对数距离而不是算术距离度量。
+- [p 值是怎么算出来的：erf 级数、Lentz 连分式，和 t 分位的二分加牛顿](https://www.util.cn/blog/articles/p-value-numeric-engine/): 统计教科书教你查 t 分布表，但浏览器里没有表也没有科学计算库——p 值是现场用数值方法算出来的。这篇拆解一个零依赖 t 检验计算器的数学内核：erf 的幂级数在哪段收敛、erfc 的连分式为什么要倒着算、Lanczos 近似怎么求 logGamma、Lentz 算法评估不完全贝塔函数的收敛判停，以及 t 分位数「倍增定界 + 二分 + 牛顿精化」的三段式求根，最后是 Welch 自由度为什么必须支持非整数。
+- [24 点的数学与工程：BigInt 有理数精确求值，浮点工具为什么漏掉 8÷(3−8÷3)](https://www.util.cn/blog/articles/twenty-four-point-rational/): (3,3,8,8) 算 24 点的唯一解是 8÷(3−8÷3)=24——它必须经过 8÷3 这个分数中间值，而双精度浮点算出来是 23.99999999999999。这篇拆解 24 点求解器的完整工程：24 种排列 × 5 种括号树形 × 64 种运算符共 7680 个算式的穷举空间、BigInt 分数类的精确运算与精确判等、按交换律拉平排序的去重规范式，以及最小括号打印的优先级规则。
+- [BCrypt 解剖：$2b$ 串里的盐与成本因子，EksBlowfish 为什么天生抗暴力破解](https://www.util.cn/blog/articles/bcrypt-hash-anatomy/): 一条 BCrypt 哈希长这样：$2b$10$ 后面跟 22 字符盐和 31 字符哈希，总共固定 60 个字符。这篇拆开这 60 个字符：bcrypt 自带的 base64 变体字母表、128 位盐如何防彩虹表、成本因子 2^cost 次密钥编排的指数级涨价、$2a/$2b/$2y 三个版本号的来历、72 字节截断的坑，以及它为什么不挑 GPU 的物理原因——S 盒数据依赖访问让并行加速失效。
 - [随机数的工程学：mulberry32 种子复现同一份卷，与为什么不该用 sort 洗牌](https://www.util.cn/blog/articles/prng-seeding-shuffling/): 「同一份口算卷怎么过几天还能再打一份一模一样的？」答案在伪随机数的种子机制：mulberry32 这类确定性 PRNG 同一种子产生完全相同的 0,1) 序列——种子即复现密码。这篇拆解 PRNG 的确定性本质、Math.random 与种子化的取舍、抽牌不放回的正确姿势，以及那个流传极广的错误写法 sort(() => Math.random() - 0.5) 为什么洗出一副有偏的牌。
 - [视频拼接的音频图：GainNode 防串音、MediaElementSource 的一对一铁律与重编码账本](https://www.util.cn/blog/articles/video-concat-gain-graph/): 在浏览器里把几段视频首尾接成一段，路线是「播放 + 重录」：视频侧 canvas.captureStream 逐帧采集画面，音频侧每段视频各接一个 GainNode 组成混音矩阵——当前段增益 1、其余段增益 0，从物理上杜绝两段声音同时进入输出；全部汇入 MediaRecorder 重编码。这篇拆解 GainNode 矩阵防串音的原理、MediaElementSource 与 video 元素一对一绑定不可复用的坑、mp4/webm 的能力协商，以及「拼接必重编码」的码率账。
 - [SVG 转 PNG：矢量重栅格化、viewBox 兜底推导与 canvas 的 8192 天花板](https://www.util.cn/blog/articles/svg-rasterization/): SVG 转 PNG 的正确姿势不是「截图」而是「重栅格化」：矢量图形没有固定像素，导出多大就按多大重新绘制——曲线在 4x 尺寸下重新计算采样，边缘始终锐利。这篇拆解尺寸推导链（width/height 属性优先、viewBox 兜底、逗号分隔与负 min-x 的宽容解析）、倍率导出的用途、浏览器 canvas 约 8192px 的安全上限，以及为什么位图放大必糊而矢量不会。
