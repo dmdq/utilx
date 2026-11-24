@@ -6,53 +6,53 @@
 <a href=./categories/ class=cta-secondary>浏览分类</a></div></div><div class=hero-visual><div class=code-snippet><div class=code-header><div class=code-dots><span class="dot red"></span>
 <span class="dot yellow"></span>
 <span class="dot green"></span></div><span class=code-title>terminal.js</span></div><div class=code-content><pre><code id=typing-text></code></pre></div></div></div></div><div class=blog-layout><div class=main-content id=posts><div class=posts-list><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-19</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/salary-reverse-bisection/>到手工资倒推税前：超额累进的数学、累计预扣的逐月节奏，与二分法反推</a></h2><p class=post-excerpt>「想到手 2 万，税前要谈多少？」这个问题没有比例换算的捷径：五险一金按税前工资算基数、个税按扣除后的应纳税所得额查七级累进表，两层依赖咬合成一个无法一步倒推的函数。这篇拆解工资单的完整数学：速算扣除数为什么存在、月度表与年度表除以 12 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+<span>2026-11-24</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/gacha-pity-probability/>抽卡保底的数学：概率递推、条件期望，和「中位数比期望更晚」的反直觉</a></h2><p class=post-excerpt>「原神五星期望 62 抽，但我 76 抽才出货，是非酋吗？」——不是，中位数本来就是 76。这篇拆保底系统的概率结构：基础概率 + 软保底线性递增 + 硬保底封顶的通用模型，如何用一个 survive 生存概率递推出完整的「第 k 抽首次出 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
 有条工具团队
 </span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>个税</span>
-<span class=tag>累计预扣</span>
-<span class=tag>超额累进</span></div><div class=post-footer><a href=/blog/articles/salary-reverse-bisection/ class=read-link>阅读全文
+1分钟</span></div><div class=post-tags><span class=tag>抽卡</span>
+<span class=tag>保底</span>
+<span class=tag>概率</span></div><div class=post-footer><a href=/blog/articles/gacha-pity-probability/ class=read-link>阅读全文
 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-19</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/temperature-sensor-three-models/>从 NTC 到 PT100：三条测温曲线的数学，和热电偶的冷端补偿</a></h2><p class=post-excerpt>温度传感器是把「电阻或电压」翻译成「温度」的机器，但三种主流传感器的翻译方式完全不同：NTC 是负指数曲线，B 值模型是它的两点线性近似，Steinhart-Hart 用三项多项式补曲率；PT100 铂电阻近乎线 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+<span>2026-11-24</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/diff-dynamic-programming/>文本 Diff 的动态规划：编辑距离、最长公共子序列，与三方合并的冲突判定</a></h2><p class=post-excerpt>「两个文本差在哪」是一个教科书级的动态规划问题。这篇拆文本对比工具的算法内核：字符级编辑距离的 DP 表（只有插入和删除、没有替换操作——替换一个字的代价是 2）、行级 LCS 的反向 DP 与贪心回溯、为什么行级对比要远胜于逐行位置比对（ …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
 有条工具团队
 </span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>NTC</span>
-<span class=tag>PT100</span>
-<span class=tag>热电偶</span></div><div class=post-footer><a href=/blog/articles/temperature-sensor-three-models/ class=read-link>阅读全文
+1分钟</span></div><div class=post-tags><span class=tag>Diff</span>
+<span class=tag>动态规划</span>
+<span class=tag>LCS</span></div><div class=post-footer><a href=/blog/articles/diff-dynamic-programming/ class=read-link>阅读全文
 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-19</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/resistor-color-eseries/>色环电阻与 E 系列：IEC 60063 的对数刻度，和「最近标准值」的正确度量</a></h2><p class=post-excerpt>黄紫红金为什么是 4.7kΩ？金色环到底是 ×0.1 倍率还是 ±5% 误差？电阻为什么没有 4.9k 这个档位，全是 4.7k、5.1k 这种「跳着来」的数？这篇拆两个高频问题：色环编码的方向判别与解码规则，以及 E 系列标准值的数学本 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+<span>2026-11-24</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/color-space-math/>颜色空间数学：HEX 之外的三个坐标系，HSL 与 HSV 为什么是两个东西</a></h2><p class=post-excerpt>设计稿里的 #FF5733、CSS 里的 hsl(11,100%,60%)、取色器上的 HSV 滑块——同一个颜色活在三套坐标系里。这篇拆 RGB↔HSL↔HSV 的转换数学：色相是从「最大通道是哪一个」推出来的 120° 扇区角、饱和度公 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
 有条工具团队
 </span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>色环电阻</span>
-<span class=tag>E系列</span>
-<span class=tag>IEC 60063</span></div><div class=post-footer><a href=/blog/articles/resistor-color-eseries/ class=read-link>阅读全文
+2分钟</span></div><div class=post-tags><span class=tag>颜色空间</span>
+<span class=tag>HSL</span>
+<span class=tag>HSV</span></div><div class=post-footer><a href=/blog/articles/color-space-math/ class=read-link>阅读全文
 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-19</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/p-value-numeric-engine/>p 值是怎么算出来的：erf 级数、Lentz 连分式，和 t 分位的二分加牛顿</a></h2><p class=post-excerpt>统计教科书教你查 t 分布表，但浏览器里没有表也没有科学计算库——p 值是现场用数值方法算出来的。这篇拆解一个零依赖 t 检验计算器的数学内核：erf 的幂级数在哪段收敛、erfc 的连分式为什么要倒着算、Lanczos …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+<span>2026-11-24</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/barcode-checksum-family/>条形码校验位家族：EAN 的模 10 与权重 3，为什么它抓不住差 5 的换位错</a></h2><p class=post-excerpt>超市收银台「滴」一声扫过的 EAN-13，最后一位是前 12 位算出来的校验位：交替权重 1、3 乘一遍求和，模 10 取补。这篇拆商品码家族（EAN-13/EAN-8/UPC-A/ITF-14 共用的 GS1 mod-10 算法，只是起始 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
 有条工具团队
 </span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>t检验</span>
-<span class=tag>p值</span>
-<span class=tag>erf</span></div><div class=post-footer><a href=/blog/articles/p-value-numeric-engine/ class=read-link>阅读全文
+2分钟</span></div><div class=post-tags><span class=tag>条形码</span>
+<span class=tag>EAN-13</span>
+<span class=tag>校验位</span></div><div class=post-footer><a href=/blog/articles/barcode-checksum-family/ class=read-link>阅读全文
 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class=post-item><div class=post-item-header><div class=post-date><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-<span>2026-11-19</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/twenty-four-point-rational/>24 点的数学与工程：BigInt 有理数精确求值，浮点工具为什么漏掉 8÷(3−8÷3)</a></h2><p class=post-excerpt>(3,3,8,8) 算 24 点的唯一解是 8÷(3−8÷3)=24——它必须经过 8÷3 这个分数中间值，而双精度浮点算出来是 23.99999999999999。这篇拆解 24 点求解器的完整工程：24 种排列 × 5 种括号树形 × …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
+<span>2026-11-24</span></div><div class=post-category><span class=category-tag>技术笔记</span></div></div><h2 class=post-title><a href=/blog/articles/wav-file-format-anatomy/>WAV 文件格式解剖：44 字节 RIFF 头、小端整数，和 int16 量化的不对称</a></h2><p class=post-excerpt>WAV 是音频世界的「裸格式」：44 字节的 RIFF 头加一坨原始 PCM 采样，没有任何压缩。这篇逐字节拆开这 44 个字节——chunk 链式结构、为什么所有整数都是小端、fmt 块里 16 个字节如何描述位深/声道/采样率，以及浮点 …</p><div class=post-meta><span class=post-author><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="13" r="4"/></svg>
 有条工具团队
 </span><span class=post-read-time><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-1分钟</span></div><div class=post-tags><span class=tag>24点</span>
-<span class=tag>有理数</span>
-<span class=tag>BigInt</span></div><div class=post-footer><a href=/blog/articles/twenty-four-point-rational/ class=read-link>阅读全文
+2分钟</span></div><div class=post-tags><span class=tag>WAV</span>
+<span class=tag>RIFF</span>
+<span class=tag>PCM</span></div><div class=post-footer><a href=/blog/articles/wav-file-format-anatomy/ class=read-link>阅读全文
 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article></div><div class=load-more><a href=./posts/ class=load-more-btn>查看更多文章</a></div><div class=mobile-tip><p>💡 桌面端可查看博客分类、标签等更多功能</p></div></div><div class=sidebar><div class="sidebar-card subscribe"><div class=card-header><h3>订阅更新</h3></div><div class=card-content><p>通过 RSS 订阅我们的最新文章</p><a href=./feed.xml class=rss-link><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg>
-RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-header><h3>关于博客</h3></div><div class=card-content><div class=blog-logo><img src=/logo/logo-256.png alt=Logo></div><h4>技术博客 - 有条工具</h4><p>开发者工具使用教程 & 编程技巧分享</p><div class=blog-stats><div class=stat><span class=stat-number>514</span>
+RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-header><h3>关于博客</h3></div><div class=card-content><div class=blog-logo><img src=/logo/logo-256.png alt=Logo></div><h4>技术博客 - 有条工具</h4><p>开发者工具使用教程 & 编程技巧分享</p><div class=blog-stats><div class=stat><span class=stat-number>520</span>
 <span class=stat-label>文章</span></div><div class=stat><span class=stat-number>140</span>
-<span class=stat-label>分类</span></div><div class=stat><span class=stat-number>1634</span>
+<span class=stat-label>分类</span></div><div class=stat><span class=stat-number>1658</span>
 <span class=stat-label>标签</span></div></div></div></div><div class=sidebar-card><div class=card-header><h3>最新公告</h3></div><div class=card-content><div class=announcement><div class=announcement-icon><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class=announcement-content><p>我们的技术博客正式上线，欢迎关注和分享！</p><span class=announcement-date>2025-12-15</span></div></div></div></div><div class=sidebar-card><div class=card-header><h3>文章分类</h3><a href=./categories/ class=view-all>查看全部</a></div><div class=card-content><ul class=category-list><li><a href=/blog/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/><span class=category-name>效率工具</span>
 <span class=category-count>104</span></a></li><li><a href=/blog/categories/%E7%94%9F%E6%B4%BB%E5%B7%A5%E5%85%B7/><span class=category-name>生活工具</span>
 <span class=category-count>64</span></a></li><li><a href=/blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/><span class=category-name>技术笔记</span>
-<span class=category-count>38</span></a></li><li><a href=/blog/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/><span class=category-name>前端开发</span>
+<span class=category-count>44</span></a></li><li><a href=/blog/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/><span class=category-name>前端开发</span>
 <span class=category-count>34</span></a></li><li><a href=/blog/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/><span class=category-name>后端开发</span>
 <span class=category-count>22</span></a></li><li><a href=/blog/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/><span class=category-name>技术教程</span>
 <span class=category-count>17</span></a></li><li><a href=/blog/categories/%E8%81%8C%E5%9C%BA%E5%B7%A5%E5%85%B7/><span class=category-name>职场工具</span>
-<span class=category-count>16</span></a></li><li><a href=/blog/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/><span class=category-name>架构设计</span>
-<span class=category-count>15</span></a></li><li><a href=/blog/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/><span class=category-name>人工智能</span>
+<span class=category-count>16</span></a></li><li><a href=/blog/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/><span class=category-name>人工智能</span>
+<span class=category-count>15</span></a></li><li><a href=/blog/categories/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/><span class=category-name>架构设计</span>
 <span class=category-count>15</span></a></li><li><a href=/blog/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/><span class=category-name>游戏开发</span>
 <span class=category-count>14</span></a></li></ul></div></div><div class=sidebar-card><div class=card-header><h3>热门标签</h3></div><div class=card-content><div class=tag-cloud><a href=/blog/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/ class=sidebar-tag>性能优化
 <span class=tag-count>38</span>
@@ -64,25 +64,25 @@ RSS 订阅</a></div></div><div class="sidebar-card blog-info"><div class=card-he
 <span class=tag-count>15</span>
 </a><a href=/blog/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/ class=sidebar-tag>微服务
 <span class=tag-count>15</span>
-</a><a href=/blog/tags/javascript/ class=sidebar-tag>JavaScript
-<span class=tag-count>13</span>
 </a><a href=/blog/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/ class=sidebar-tag>前端开发
+<span class=tag-count>13</span>
+</a><a href=/blog/tags/javascript/ class=sidebar-tag>JavaScript
 <span class=tag-count>13</span>
 </a><a href=/blog/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/ class=sidebar-tag>最佳实践
 <span class=tag-count>12</span>
+</a><a href=/blog/tags/%E7%AE%97%E6%B3%95/ class=sidebar-tag>算法
+<span class=tag-count>11</span>
 </a><a href=/blog/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/ class=sidebar-tag>用户体验
 <span class=tag-count>11</span>
 </a><a href=/blog/tags/css/ class=sidebar-tag>CSS
 <span class=tag-count>10</span>
 </a><a href=/blog/tags/%E5%AE%89%E5%85%A8/ class=sidebar-tag>安全
 <span class=tag-count>10</span>
-</a><a href=/blog/tags/%E7%AE%97%E6%B3%95/ class=sidebar-tag>算法
-<span class=tag-count>10</span>
-</a><a href=/blog/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/ class=sidebar-tag>开发工具
-<span class=tag-count>9</span>
 </a><a href=/blog/tags/ci/cd/ class=sidebar-tag>CI/CD
 <span class=tag-count>9</span>
 </a><a href=/blog/tags/rust/ class=sidebar-tag>Rust
+<span class=tag-count>9</span>
+</a><a href=/blog/tags/webaudio/ class=sidebar-tag>WebAudio
 <span class=tag-count>9</span></a></div></div></div></div></div><script>const codeText=`const developer = {
   name: "Tech Explorer",
   skills: ["JavaScript", "Python", "Go"],
